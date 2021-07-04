@@ -1,0 +1,36 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{6}{c}{Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals}                      \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+$ \text{FCA*} $ &   0.0284\sym{***}&   0.0237\sym{***}&   0.0207\sym{***}&   0.0103         &  0.00914         &  0.00686         \\
+                &   (5.92)         &   (5.74)         &   (4.81)         &   (1.98)         &   (1.73)         &   (1.30)         \\
+[1em]
+Same Group      &                  &                  &                  &   0.0154\sym{***}&   0.0153\sym{**} &   0.0136\sym{**} \\
+                &                  &                  &                  &   (3.63)         &   (3.23)         &   (2.87)         \\
+[1em]
+ $ {\rho_t} $   &                  &    0.148\sym{***}&    0.148\sym{***}&    0.147\sym{***}&    0.147\sym{***}&    0.146\sym{***}\\
+                &                  &   (6.59)         &   (6.60)         &   (6.55)         &   (6.54)         &   (6.56)         \\
+[1em]
+SameIndustry    &                  &                  &  0.00645\sym{**} &  0.00289         &  0.00118         &  0.00317         \\
+                &                  &                  &   (2.76)         &   (0.94)         &   (0.43)         &   (1.00)         \\
+[1em]
+SameSize        &                  &                  &                  &                  &  0.00672         &  0.00651         \\
+                &                  &                  &                  &                  &   (1.32)         &   (1.25)         \\
+[1em]
+SameBookToMarket&                  &                  &                  &                  &   0.0165\sym{***}&   0.0139\sym{*}  \\
+                &                  &                  &                  &                  &   (3.57)         &   (2.62)         \\
+[1em]
+CrossOwnership  &                  &                  &                  &                  &   0.0114         &   0.0107         \\
+                &                  &                  &                  &                  &   (0.53)         &   (0.50)         \\
+\hline
+Observations    &   110827         &   110387         &   110387         &   110387         &   110387         &   110387         \\
+Group FE        &       No         &       No         &       No         &       No         &       No         &      Yes         \\
+$ R^2 $         &  0.00119         &   0.0389         &   0.0397         &   0.0408         &   0.0429         &   0.0660         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

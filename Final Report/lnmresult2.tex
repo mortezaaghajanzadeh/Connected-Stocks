@@ -1,0 +1,47 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{6}{c}{Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals}                      \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+$\ln(FCA)$      &  0.00420\sym{***}&  0.00351\sym{***}& 0.000907         &-0.000249         &-0.0000972         &-0.000260         \\
+                &   (5.55)         &   (5.88)         &   (1.24)         &  (-0.32)         &  (-0.13)         &  (-0.36)         \\
+[1em]
+ $ {\rho\_t} $   &                  &    0.124\sym{***}&    0.124\sym{***}&    0.124\sym{***}&    0.124\sym{***}&    0.124\sym{***}\\
+                &                  &   (4.92)         &   (4.90)         &   (4.90)         &   (4.90)         &   (4.90)         \\
+[1em]
+SameGroup       &                  &                  &   0.0176\sym{***}&   0.0269\sym{***}&   0.0284\sym{***}&   0.0286\sym{***}\\
+                &                  &                  &   (7.84)         &   (7.11)         &   (6.76)         &   (6.92)         \\
+[1em]
+$ (\ln(FCA)) \times {\text{SameGroup} }  $ &                  &                  &                  &  0.00582\sym{**} &  0.00589\sym{**} &  0.00574\sym{**} \\
+                &                  &                  &                  &   (3.43)         &   (3.41)         &   (3.34)         \\
+[1em]
+SameIndustry    &                  &                  &                  &                  & -0.00417\sym{*}  & -0.00518\sym{*}  \\
+                &                  &                  &                  &                  &  (-2.13)         &  (-2.64)         \\
+[1em]
+SameSize        &                  &                  &                  &                  &                  &   0.0116\sym{***}\\
+                &                  &                  &                  &                  &                  &   (4.58)         \\
+[1em]
+SameBookToMarket&                  &                  &                  &                  &                  &  0.00428         \\
+                &                  &                  &                  &                  &                  &   (1.27)         \\
+[1em]
+Constant        &   0.0167\sym{***}&   0.0141\sym{***}&  0.00420         & 0.000755         &  0.00159         &  0.00563\sym{*}  \\
+                &   (7.38)         &   (7.77)         &   (1.92)         &   (0.32)         &   (0.74)         &   (2.61)         \\
+\hline
+Observations    &   249030         &   248118         &   248118         &   248118         &   248118         &   248118         \\
+\(R^{2}\)       &    0.001         &    0.034         &    0.034         &    0.035         &    0.035         &    0.036         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize This table reports Fama and MacBeth (1973) estimates of monthly cross-sectional}\\
+\multicolumn{7}{l}{\footnotesize  regressions forecasting the correlation of daily 4Factor+Industry residuals in month t + 1 for each pairs.}\\
+\multicolumn{7}{l}{\footnotesize The independent variables are updated monthly and include our measure of institutional connectedness,}\\
+\multicolumn{7}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{7}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{7}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{7}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{7}{l}{\footnotesize  We calculate Newey and West (1987) standard errors (Four lags) of the Fama and MacBeth (1973) estimates }\\
+\multicolumn{7}{l}{\footnotesize  that take into account autocorrelation in the cross-sectional slopes}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

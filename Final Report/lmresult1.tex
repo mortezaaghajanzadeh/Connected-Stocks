@@ -1,0 +1,57 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+$\ln(FCA)$          &     0.00736\sym{***}&     0.00690\sym{***}&     0.00512\sym{***}&     0.00489\sym{***}&     0.00497\sym{***}&     0.00490\sym{***}\\
+                    &     (10.53)         &     (10.72)         &      (8.94)         &      (8.61)         &      (8.75)         &      (8.68)         \\
+[1em]
+ $ \rho\_t $         &                     &      0.0780\sym{***}&      0.0774\sym{***}&      0.0769\sym{***}&      0.0769\sym{***}&      0.0769\sym{***}\\
+                    &                     &     (33.22)         &     (32.99)         &     (32.67)         &     (32.70)         &     (32.67)         \\
+[1em]
+sgroup              &                     &                     &      0.0183\sym{***}&      0.0175\sym{***}&      0.0167\sym{***}&      0.0170\sym{***}\\
+                    &                     &                     &      (5.75)         &      (5.47)         &      (5.26)         &      (5.28)         \\
+[1em]
+Samesize            &                     &                     &      0.0189\sym{***}&                     &      0.0344\sym{***}&                     \\
+                    &                     &                     &      (7.28)         &                     &     (12.08)         &                     \\
+[1em]
+SameBookToMarket    &                     &                     &     0.00922\sym{***}&                     &     0.00735\sym{**} &                     \\
+                    &                     &                     &      (3.56)         &                     &      (2.68)         &                     \\
+[1em]
+Size1               &                     &                     &                     &     -0.0432\sym{***}&                     &     -0.0387\sym{***}\\
+                    &                     &                     &                     &    (-13.24)         &                     &     (-7.59)         \\
+[1em]
+Size2               &                     &                     &                     &     0.00793\sym{**} &                     &      0.0216         \\
+                    &                     &                     &                     &      (2.76)         &                     &      (1.71)         \\
+[1em]
+$ BookToMarketMarket\_1 $&                     &                     &                     &   -0.000139         &                     &     -0.0126\sym{**} \\
+                    &                     &                     &                     &     (-0.07)         &                     &     (-2.81)         \\
+[1em]
+$ BookToMarketMarket\_2 $&                     &                     &                     &   0.0000734         &                     &     -0.0127\sym{**} \\
+                    &                     &                     &                     &      (0.03)         &                     &     (-2.70)         \\
+[1em]
+$ BookToMarketMarket\_1 \times BookToMarketMarket\_2 $&                     &                     &                     &                     &    0.000954         &      0.0245\sym{**} \\
+                    &                     &                     &                     &                     &      (0.33)         &      (3.13)         \\
+[1em]
+$ Size1 \times Size2 $&                     &                     &                     &                     &     -0.0310\sym{***}&     -0.0162         \\
+                    &                     &                     &                     &                     &    (-10.55)         &     (-1.10)         \\
+[1em]
+Constant            &      0.0330\sym{***}&      0.0308\sym{***}&      0.0320\sym{***}&      0.0513\sym{***}&      0.0465\sym{***}&      0.0542\sym{***}\\
+                    &     (14.50)         &     (14.75)         &     (14.72)         &     (15.44)         &     (16.70)         &     (10.61)         \\
+\hline
+Observations        &      479898         &      475485         &      475485         &      475485         &      475485         &      475485         \\
+\(R^{2}\)           &       0.001         &       0.007         &       0.007         &       0.008         &       0.008         &       0.008         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize This table reports OLS estimates of monthly cross-sectional}\\
+\multicolumn{7}{l}{\footnotesize  regressions forecasting the correlation of daily 4Factor+Industry residuals in month t + 1 for each pairs.}\\
+\multicolumn{7}{l}{\footnotesize The independent variables are updated monthly and include our measure of institutional connectedness,}\\
+\multicolumn{7}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{7}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{7}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{7}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{7}{l}{\footnotesize  We calculate standard errors by clustering on each pair}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{5}{c}{Dependent Variable:Future Monthly Correlation of 4F+Industry Residuals}    \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\hline
+$ \text{FCA*} $ &0.0000477         &0.0000477         &0.0000477         &0.0000477         &0.0000477         \\
+                &   (0.06)         &   (0.06)         &   (0.06)         &   (0.06)         &   (0.06)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &  0.00782\sym{***}&  0.00782\sym{***}&  0.00782\sym{***}&                  &                  \\
+                &   (3.56)         &   (3.56)         &   (3.56)         &                  &                  \\
+[1em]
+SameGroup       &   0.0133\sym{***}&  0.00848\sym{***}&                  &  0.00848\sym{***}&                  \\
+                &   (4.72)         &   (3.81)         &                  &   (3.81)         &                  \\
+[1em]
+$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ &                  &  0.00485\sym{*}  &  0.00485\sym{*}  &  0.00485\sym{*}  &  0.00485\sym{*}  \\
+                &                  &   (2.35)         &   (2.35)         &   (2.35)         &   (2.35)         \\
+[1em]
+$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ &                  &                  &  0.00848\sym{***}&                  &  0.00848\sym{***}\\
+                &                  &                  &   (3.81)         &                  &   (3.81)         \\
+[1em]
+$ (\text{FCA}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ &                  &                  &                  &  0.00427\sym{*}  &  0.00427\sym{*}  \\
+                &                  &                  &                  &   (2.52)         &   (2.52)         \\
+[1em]
+$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ &                  &                  &                  &  0.00355\sym{**} &  0.00355\sym{**} \\
+                &                  &                  &                  &   (2.85)         &   (2.85)         \\
+\hline
+Observations    &   253818         &   253818         &   253818         &   253818         &   253818         \\
+\(R^{2}\)       &    0.037         &    0.037         &    0.037         &    0.037         &    0.037         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

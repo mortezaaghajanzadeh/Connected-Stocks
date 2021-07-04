@@ -1,0 +1,28 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{6}{c}{Future Monthly Correlation of 4F+Industry Residuals}                                          \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+ $ (\text{FCA} > Q3[\text{FCA}]) $ &                  &  0.00543\sym{***}&  0.00549\sym{***}&  0.00695\sym{*}  &                  &  0.00539\sym{***}\\
+                &                  &   (4.12)         &   (4.17)         &   (2.10)         &                  &   (4.04)         \\
+[1em]
+SameGroup       &   0.0122\sym{***}&                  &   0.0124\sym{***}&                  &                  &  0.00901\sym{*}  \\
+                &   (5.81)         &                  &   (5.97)         &                  &                  &   (2.62)         \\
+[1em]
+ $ (\text{FCA} > Q3[\text{FCA}]) \times  {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &  0.00392         \\
+                &                  &                  &                  &                  &                  &   (1.20)         \\
+[1em]
+$ \text{FCA*} $ &                  &                  &                  &                  &  0.00174\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (2.43)         &                  \\
+\hline
+Observations    &  5148109         &  5148109         &  5148109         &    76240         &    76240         &  5148109         \\
+Sub Sample      &    Total         &    Total         &    Total         &SameGroups         &SameGroups         &    Total         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         & 0.000455         & 0.000457         & 0.000501         &   0.0133         &   0.0135         & 0.000512         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

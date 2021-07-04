@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                &\multicolumn{3}{c}{Fu. Monthly Cor. of 4F+Ind. Residuals}\\\cmidrule(lr){2-4}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\hline
+$ \text{FCA*} $ & 0.000548         & 0.000548         & 0.000704         \\
+                &   (0.80)         &   (0.80)         &   (1.04)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &  0.00744\sym{**} &  0.00744\sym{**} &                  \\
+                &   (3.32)         &   (3.32)         &                  \\
+[1em]
+SameGroup       &  0.00952\sym{**} &  0.00266         &  0.00495\sym{*}  \\
+                &   (2.73)         &   (1.45)         &   (2.14)         \\
+[1em]
+$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ &                  & 0.000595         & 0.000595         \\
+                &                  &   (0.53)         &   (0.53)         \\
+[1em]
+$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ &                  &  0.00626\sym{**} &  0.00626\sym{**} \\
+                &                  &   (2.81)         &   (2.81)         \\
+[1em]
+$ (\text{FCA}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ &                  &                  &  0.00294         \\
+                &                  &                  &   (1.99)         \\
+[1em]
+$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ &                  &                  &  0.00228\sym{*}  \\
+                &                  &                  &   (2.51)         \\
+\hline
+Observations    &   434850         &   434850         &   434850         \\
+\(R^{2}\)       &    0.037         &    0.037         &    0.037         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

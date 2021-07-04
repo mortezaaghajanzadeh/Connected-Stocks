@@ -1,0 +1,8 @@
+ \begin{equation*}
+ \scriptsize
+ \begin{split}
+ \rho_{ij,t+1} = & \text{ 	}\beta_0   + \beta_1* \text{FCA}_{ij,t}^*  + \beta_2 * \text{SameGroup}_{ij} + \sum_1^G \lambda_{1,g} *\gamma_{g}\\
+ &   + \sum_1^G \lambda_{2,g} * \text{SameGroup}_{ij} * \gamma_g + \sum_1^G \lambda_{3,g} *  \gamma_g  * \text{FCA}_{ij,t}^*  \\
+  & + \sum_1^G \lambda_{4,g} \text{SameGroup}_{ij} * \gamma_g  * \text{FCA}_{ij,t}^*  + \sum_{k=1} ^{n} \alpha_k*\text{Control}_{ij,t} + \varepsilon_{ij,t+1}
+ \end{split}
+ \end{equation*}

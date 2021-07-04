@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{5}{c}{Future Monthly Correlation of 4F+Industry Residuals}                       \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\hline
+$ \text{FCA*} $ & -0.00188         &-0.000238         & -0.00153         &-0.000218         &-0.000510         \\
+                &  (-1.44)         &  (-0.28)         &  (-1.14)         &  (-0.26)         &  (-0.39)         \\
+[1em]
+ $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{FCA} ^*}  $ &  0.00591\sym{*}  &                  &  0.00309         &                  & 0.000740         \\
+                &   (2.42)         &                  &   (1.07)         &                  &   (0.25)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &                  &  0.00816\sym{**} &  0.00734\sym{*}  & -0.00796         & -0.00767         \\
+                &                  &   (3.20)         &   (2.58)         &  (-1.14)         &  (-1.12)         \\
+[1em]
+ $ (\text{FCA}^* > Median[\text{FCA}^*]) \times  (\text{FCA}^*) \times {\text{Sa&                  &                  &                  &   0.0241\sym{*}  &   0.0234\sym{*}  \\
+                &                  &                  &                  &   (2.49)         &   (2.37)         \\
+\hline
+Observations    &   248118         &   248118         &   248118         &   248118         &   248118         \\
+\(R^{2}\)       &    0.036         &    0.036         &    0.036         &    0.036         &    0.036         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize This table reports Fama and MacBeth (1973) estimates of monthly cross-sectional}\\
+\multicolumn{6}{l}{\footnotesize  regressions forecasting the correlation of daily 4Factor+Industry residuals in month t + 1 for each pairs.}\\
+\multicolumn{6}{l}{\footnotesize The independent variables are updated monthly and include our measure of institutional connectedness,}\\
+\multicolumn{6}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{6}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{6}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{6}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{6}{l}{\footnotesize  We calculate Newey and West (1987) standard errors (four lags) of the Fama and MacBeth (1973) estimates }\\
+\multicolumn{6}{l}{\footnotesize  that take into account autocorrelation in the cross-sectional slopes}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

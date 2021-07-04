@@ -1,0 +1,30 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{4}{c}{Dependent Variable: $\Delta \text{TurnOver}_{i} $ }                 \\\cmidrule(lr){2-5}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+\hline
+ $ \Delta \text{TurnOver}_{\text{Market}} $ &       0.448\sym{***}&       0.387\sym{***}&       0.445\sym{***}&       0.353\sym{***}\\
+                    &      (5.61)         &      (7.80)         &     (11.13)         &     (10.18)         \\
+[1em]
+ $ \Delta \text{TurnOver}_{\text{Group}} $ &                     &       0.231\sym{**} &       0.234\sym{*}  &       0.245\sym{***}\\
+                    &                     &      (2.67)         &      (2.07)         &      (8.22)         \\
+[1em]
+ $ \Delta \text{TurnOver}_{\text{Industry}} $ &      0.0993         &     -0.0558         &     -0.0970         &      0.0365         \\
+                    &      (1.55)         &     (-0.61)         &     (-0.84)         &      (0.68)         \\
+[1em]
+ $ \ln(\text{size})_{i,t} $ &    -0.00571         &     -0.0136\sym{***}&     -0.0210\sym{**} &     -0.0119\sym{**} \\
+                    &     (-0.03)         &     (-5.21)         &     (-3.06)         &     (-3.24)         \\
+[1em]
+Constant            &      -0.303         &       0.380\sym{***}&       0.610\sym{**} &       0.334\sym{**} \\
+                    &     (-0.05)         &      (5.03)         &      (2.86)         &      (3.11)         \\
+\hline
+Observations        &      293264         &      184699         &      184699         &      184699         \\
+Group Weight        &           -         & $ \text{MC} \times \text{CR} $          & $ \text{MC} $          &$ \text{Equal} $         \\
+$ R^2 $             &       0.111         &       0.213         &       0.215         &       0.124         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

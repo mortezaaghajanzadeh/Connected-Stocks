@@ -1,0 +1,39 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+ & \multicolumn{6}{c}{Dependent Variable: Monthly Correlation of 4F+Industry Residuals}                 \\
+ \cline{2-6}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+$ \text{FCA*} $     &     0.00845\sym{***}&     0.00793\sym{***}&     0.00542\sym{***}&     0.00477\sym{***}&     0.00488\sym{***}&     0.00474\sym{***}\\
+                    &      (6.87)         &      (7.33)         &      (7.27)         &      (7.71)         &      (7.82)         &      (7.59)         \\
+[1em]
+ $ \rho\_t $         &                     &      0.0538\sym{***}&      0.0528\sym{***}&      0.0508\sym{***}&      0.0509\sym{***}&      0.0508\sym{***}\\
+                    &                     &      (7.21)         &      (7.53)         &      (8.90)         &      (8.79)         &      (8.83)         \\
+[1em]
+sgroup              &                     &                     &      0.0216\sym{***}&      0.0197\sym{***}&      0.0195\sym{***}&      0.0198\sym{***}\\
+                    &                     &                     &      (6.40)         &      (7.09)         &      (7.08)         &      (7.10)         \\
+[1em]
+Samesize            &                     &                     &      0.0215\sym{***}&                     &      0.0425\sym{**} &                     \\
+                    &                     &                     &      (4.26)         &                     &      (3.25)         &                     \\
+[1em]
+Size1               &                     &                     &                     &     -0.0536\sym{**} &                     &     -0.0533\sym{**} \\
+                    &                     &                     &                     &     (-3.15)         &                     &     (-3.18)         \\
+[1em]
+Size2               &                     &                     &                     &      0.0105\sym{***}&                     &      0.0111         \\
+                    &                     &                     &                     &      (3.71)         &                     &      (0.90)         \\
+[1em]
+$ Size1 \times Size2 $&                     &                     &                     &                     &     -0.0366\sym{**} &   -0.000445         \\
+                    &                     &                     &                     &                     &     (-2.86)         &     (-0.03)         \\
+[1em]
+Constant            &      0.0140\sym{***}&      0.0130\sym{***}&      0.0162\sym{***}&      0.0458\sym{**} &      0.0366\sym{**} &      0.0455\sym{**} \\
+                    &      (5.51)         &      (5.91)         &      (5.48)         &      (3.27)         &      (3.43)         &      (3.29)         \\
+\hline
+Observations        &      486533         &      482009         &      482009         &      482009         &      482009         &      482009         \\
+\(R^{2}\)           &       0.001         &       0.005         &       0.006         &       0.008         &       0.008         &       0.008         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

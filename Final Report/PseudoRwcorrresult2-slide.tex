@@ -1,0 +1,27 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+\hline
+$ \text{FCA}^* $    &    0.000606         &     0.00333\sym{**} &     0.00261\sym{**} &     0.00206\sym{*}  &     0.00244\sym{*}  &     0.00202\sym{*}  &     0.00190         \\
+                    &      (0.99)         &      (2.60)         &      (2.71)         &      (2.11)         &      (2.49)         &      (2.04)         &      (1.94)         \\
+[1em]
+ $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{FCA} ^*}  $ &                     &    -0.00559\sym{*}  &    -0.00427\sym{*}  &    -0.00316         &    -0.00377\sym{*}  &    -0.00314         &    -0.00274         \\
+                    &                     &     (-2.57)         &     (-2.56)         &     (-1.84)         &     (-2.19)         &     (-1.82)         &     (-1.63)         \\
+[1em]
+ActiveHolder        &                     &                     &   0.0000628         &   -0.000258         &   -0.000307         &   -0.000319         &   0.0000163         \\
+                    &                     &                     &      (0.06)         &     (-0.23)         &     (-0.27)         &     (-0.28)         &      (0.01)         \\
+[1em]
+Constant            &      0.0219\sym{***}&      0.0243\sym{***}&      0.0173\sym{***}&      0.0666\sym{***}&       0.121\sym{***}&      0.0508\sym{***}&      0.0299\sym{***}\\
+                    &      (5.27)         &      (5.75)         &      (6.82)         &     (11.33)         &     (18.46)         &     (10.35)         &      (8.12)         \\
+\hline
+Main                &          No         &          No         &          No         &         Yes         &         Yes         &          No         &          No         \\
+Interaction         &          No         &          No         &          No         &          No         &         Yes         &         Yes         &          No         \\
+N                   &     1105543         &     1105543         &     1067554         &     1067554         &     1067554         &     1067554         &     1067554         \\
+r2                  &    0.000237         &    0.000448         &       0.223         &       0.227         &       0.228         &       0.226         &       0.225         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

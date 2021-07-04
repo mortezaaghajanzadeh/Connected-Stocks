@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Connected Stocks - Draft.aux
+The style file: apalike.bst
+Database file #1: Ref.bib
+Warning--empty note in Aliabadi2022
+Warning--empty note in azar2011new
+Warning--there's a number but no volume in freeman2019effects
+Warning--empty note in newham2018common
+You've used 16 entries,
+            1935 wiz_defined-function locations,
+            569 strings with 6260 characters,
+and the built_in function-call counts, 6061 in all, are:
+= -- 597
+> -- 235
+< -- 9
++ -- 82
+- -- 76
+* -- 539
+:= -- 1072
+add.period$ -- 45
+call.type$ -- 16
+change.case$ -- 118
+chr.to.int$ -- 16
+cite$ -- 20
+duplicate$ -- 214
+empty$ -- 416
+format.name$ -- 102
+if$ -- 1161
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 13
+newline$ -- 80
+num.names$ -- 48
+pop$ -- 83
+preamble$ -- 1
+purify$ -- 118
+quote$ -- 0
+skip$ -- 171
+stack$ -- 0
+substring$ -- 456
+swap$ -- 20
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 96
+warning$ -- 4
+while$ -- 51
+width$ -- 0
+write$ -- 200
+(There were 4 warnings)

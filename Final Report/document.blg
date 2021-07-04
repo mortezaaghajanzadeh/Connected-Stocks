@@ -1,0 +1,5 @@
+[1] Config.pm:304> INFO - This is Biber 2.14
+[1] Config.pm:307> INFO - Logfile is 'document.blg'
+[247] biber-MSWIN32:322> INFO - === 
+[1832] Utils.pm:320> ERROR - Cannot find 'document.bcf'!
+[1832] Biber.pm:132> INFO - ERRORS: 1

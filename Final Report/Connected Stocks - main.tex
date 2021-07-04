@@ -1,0 +1,166 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{subcaption}
+
+
+\captionsetup{font=footnotesize,labelfont=footnotesize}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=blue,      
+	urlcolor=blue,
+	citecolor=blue
+}
+
+\usepackage{natbib}
+\usepackage[title]{appendix}
+
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+	April\or May \or June\or July\or August\or September\or October\or November\or %
+	December\fi, \number \year} 
+
+\title{Connected Stocks: Evidence from Tehran Stock Exchange}
+%\subtitle{}
+\author{S.M. Aghajanzadeh\sym{*} \qquad M. Heidari\sym{*} \qquad M. Mohseni\sym{*} \\
+	\sym{*} \footnotesize  Tehran Institute for Advanced Studies, Khatam University, Tehran, Iran
+}
+
+\def\boxit#1{%
+	\smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+		\llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
+\begin{document}
+	\maketitle
+
+\textbf{Hypothesis 1:} Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger when pairs are in the same business groups
+
+		\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\input{mresult2-slide.tex}
+	}
+\end{table}
+
+	\FloatBarrier
+	\newpage
+	
+\textbf{Hypothesis 2:} Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
+		\begin{table}[htbp]
+	\centering
+	\caption{one of these tables}
+	\resizebox{\textwidth}{!}{
+		\input{Q2mresultAllPairs.tex}
+	}
+\newline
+\resizebox{\textwidth}{!}{
+	\input{mresultAllPairs.tex}
+}
+\end{table}
+
+\newpage
+\textbf{Hypothesis 3:} Return of business group improve forecasts of cross-sectional variation in stocks' return.
+
+			\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{BGReturn.tex}
+		}
+	\end{table}
+
+
+\newpage
+\textbf{Channels:} 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\input{Imbalance.tex}
+	}
+\end{table}
+
+
+
+	\begin{table}[htbp]
+	\centering
+	\caption{Estimate regression for
+		each stock across trading days  }
+	\resizebox{0.75\textheight}{!}{
+		\input{turnover.tex}
+	}
+\end{table}
+
+
+	\begin{table}[htbp]
+	\centering
+	\caption{first table:‌Estimate regression for
+		each stock across trading days  }
+	\resizebox{0.75\textheight}{!}{
+		\input{Amihud.tex}
+	}
+\newline
+	\resizebox{0.6\textheight}{!}{
+		\input{AmihudValue.tex}
+	}
+\end{table}
+
+\newpage
+		\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"FCAtimeSeries.eps"}
+	
+\end{figure} 
+
+			\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"FCAtimeSeriesBG.eps"}
+\end{figure}    
+
+\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"FCAtimeSeriesPairType.eps"}
+\end{figure}
+
+
+
+
+	\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"BGtimeSeries.eps"}
+	
+\end{figure}  
+
+\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"BGMarketCaptimeSeries.eps"}
+	
+\end{figure}
+ 
+\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"CorrtimeSeries.eps"}
+\end{figure}    
+
+\begin{figure}
+	\centering  
+	\includegraphics[width=\linewidth]{"BGCorrtimeSeries.eps"}
+\end{figure}
+\end{document}

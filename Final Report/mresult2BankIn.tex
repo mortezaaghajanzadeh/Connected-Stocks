@@ -1,0 +1,32 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                &\multicolumn{4}{c}{De. Variable:Future  Corr. of 4F+Industry Residuals}    \\\cmidrule(lr){2-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+\hline
+$ \text{FCA*} $ & 0.000548         & 0.000510         & 0.000514         & 0.000511         \\
+                &   (0.80)         &   (0.73)         &   (0.75)         &   (0.75)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &  0.00744\sym{**} &  0.00595\sym{*}  &  0.00605\sym{*}  &  0.00573\sym{*}  \\
+                &   (3.32)         &   (2.27)         &   (2.30)         &   (2.08)         \\
+[1em]
+SameGroup       &  0.00952\sym{**} &   0.0120\sym{***}&   0.0122\sym{**} &   0.0125\sym{**} \\
+                &   (2.73)         &   (3.95)         &   (3.40)         &   (3.27)         \\
+[1em]
+ $  {\text{Bank in group} } $ &                  & -0.00333\sym{***}& -0.00323\sym{***}& -0.00324\sym{***}\\
+                &                  &  (-3.83)         &  (-4.08)         &  (-4.06)         \\
+[1em]
+ $ {\text{Bank in group}  } \times {\text{SameGroup}}  $ &                  &                  & -0.00230         & -0.00793         \\
+                &                  &                  &  (-0.36)         &  (-0.78)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{Bank in group} }  \times {\text{SameGroup}}$ &                  &                  &                  &  0.00458         \\
+                &                  &                  &                  &   (0.69)         \\
+\hline
+Observations    &   434850         &   434850         &   434850         &   434850         \\
+\(R^{2}\)       &    0.037         &    0.037         &    0.037         &    0.037         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

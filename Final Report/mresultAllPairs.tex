@@ -1,0 +1,28 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                &\multicolumn{6}{c}{Future Monthly Correlation of 4F+Industry Residuals}                                          \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+ Common Ownership &                  & -0.00350\sym{**} & -0.00445\sym{***}&  0.00651\sym{*}  &                  & -0.00527\sym{***}\\
+                &                  &  (-3.30)         &  (-4.22)         &   (2.48)         &                  &  (-4.72)         \\
+[1em]
+SameGroup       &   0.0122\sym{***}&                  &   0.0140\sym{***}&                  &                  &  0.00607\sym{*}  \\
+                &   (5.81)         &                  &   (7.01)         &                  &                  &   (2.09)         \\
+[1em]
+ $ \text{Common Ownership} \times  {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &   0.0157\sym{***}\\
+                &                  &                  &                  &                  &                  &   (5.51)         \\
+[1em]
+$ \text{FCA*} $ &                  &                  &                  &                  &  0.00174\sym{*}  &                  \\
+                &                  &                  &                  &                  &   (2.43)         &                  \\
+\hline
+Observations    &  5148109         &  5148109         &  5148109         &    76240         &    76240         &  5148109         \\
+Sub Sample      &    Total         &    Total         &    Total         &SameGroups         &SameGroups         &    Total         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         & 0.000455         & 0.000456         & 0.000504         &   0.0135         &   0.0135         & 0.000528         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
