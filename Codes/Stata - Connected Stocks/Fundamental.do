@@ -12,23 +12,24 @@ generate  earning_group = earning1_group
 generate  earning_ind = earning1_ind
 generate  earning_market = earning1_market
 
-rename v34 return
+rename v34 r
 
 
-eststo v1 : quietly asreg return  earning earning_group earning_ind earning_market  , fmb newey(4)
+
+eststo v1 : quietly asreg r  earning earning_group earning_ind earning_market  , fmb newey(4)
 
 replace  earning = earning2
 replace  earning_group = earning2_group
 replace  earning_ind = earning2_ind
 replace  earning_market = earning2_market
 
-eststo v2 :  quietly asreg return  earning earning_group earning_ind earning_market  , fmb newey(4)
+eststo v2 :  quietly asreg r  earning earning_group earning_ind earning_market  , fmb newey(4)
 
 replace  earning = earning4
 replace  earning_group = earning4_group
 replace  earning_ind = earning4_ind
 replace  earning_market = earning4_market
 
-eststo v3 : quietly asreg return  earning earning_group earning_ind earning_market  , fmb newey(4)
+eststo v3 : quietly asreg r  earning earning_group earning_ind earning_market  , fmb newey(4)
 
 esttab v1 v2 v3 , mgroups("Earning1" "Earning2" "Earning4",pattern(1 1 1 )) 

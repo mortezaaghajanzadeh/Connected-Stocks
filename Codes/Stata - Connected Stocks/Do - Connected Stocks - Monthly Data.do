@@ -277,10 +277,7 @@ replace monthlycrossownership = monthlycrossownership/100
 
  label variable monthlycrossownership "CrossOwnership"
 
- 
- gen interaction = samebgchange * becomesamebg
- 
- 
+
  asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup  , fmb newey(4)
 
 cor  monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup 

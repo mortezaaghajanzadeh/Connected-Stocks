@@ -34,7 +34,7 @@ path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\
 n1 = path + "MonthlyNormalzedFCAP7.1" + ".parquet"
 df1 = pd.read_parquet(n1)
 df = pd.read_parquet(path + "Holder_Residual.parquet")
-time = df[['date','jalaliDate']].drop_duplicates() 
+time = df[["date", "jalaliDate"]].drop_duplicates()
 #%%
 df["id"] = df.id.astype(int)
 mapdict = dict(zip(df.id, df.symbol))
@@ -521,14 +521,16 @@ df1["Monthlyρ_5_3"] = df1.groupby("id").Monthlyρ_5.shift(3)
 df1["Monthlyρ_5_4"] = df1.groupby("id").Monthlyρ_5.shift(4)
 df1["Monthlyρ_5_5"] = df1.groupby("id").Monthlyρ_5.shift(5)
 #%%
-df1['sameBgChange'] = 0
-df1['becomeSameBG'] = 0 
+df1["sameBgChange"] = 0
+df1["becomeSameBG"] = 0
 gg = df1.groupby("id")
+df1["changedBG"] = 0
 
 
 def changedBg(t):
     print(t.name)
     if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
+        t["changedBG"] = 1
         if t.sBgroup.iloc[0] == 1:
             ind = t.loc[t.sBgroup == 0].index[0]
             t.loc[t.index >= ind, "sameBgChange"] = 1
@@ -540,6 +542,8 @@ def changedBg(t):
 
 
 df1 = gg.apply(changedBg)
+
+
 #%%
 df1["2rdQarter"] = 0
 df1["4rdQarter"] = 0
@@ -561,21 +565,23 @@ df1 = gg.apply(quarter)
 
 #%%
 
+
 def Normalize(df_sub):
     col = df_sub
     return (col - col.mean()) / col.std()
 
-df1['NMFCA2'] = df1['NMFCA'] * df1['NMFCA']
+
+df1["NMFCA2"] = df1["NMFCA"] * df1["NMFCA"]
 
 gg = df1.groupby(["t_Month"])
-df1['NMFCA2'] = gg['NMFCA2'].apply(Normalize)
+df1["NMFCA2"] = gg["NMFCA2"].apply(Normalize)
 df1.groupby(["t_Month"]).NMFCA2.std()
 #%%
 
-mapdict = dict(zip(time.jalaliDate,time.date))
+mapdict = dict(zip(time.jalaliDate, time.date))
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 df = pd.read_csv(path + "Stock Trade details.csv")
-df['date'] = df.jalali.map(mapdict)
+df["date"] = df.jalali.map(mapdict)
 df = df[~df.ind_buy_count.isnull()].drop(
     columns=[
         "baseVol",
@@ -595,6 +601,8 @@ df = df[~df.ind_buy_count.isnull()].drop(
 df["year"] = round(df.jalali / 10000)
 df["year"] = df["year"].astype(int)
 df = df[df.year >= 1394]
+
+
 def vv4(row):
     row = str(row)
     X = [1, 1, 1]
@@ -602,11 +610,15 @@ def vv4(row):
     X[1] = row[4:6]
     X[2] = row[6:8]
     return X[0] + "-" + X[1] + "-" + X[2]
+
+
 df["date1"] = df["date"].apply(vv4)
 df["date1"] = pd.to_datetime(df["date1"])
 df["week_of_year"] = df["date1"].dt.week
 df["Month_of_year"] = df["date1"].dt.month
 df["year_of_year"] = df["date1"].dt.year
+
+
 def BG(df):
     pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
     # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
@@ -660,14 +672,12 @@ mlist = [
 ]
 df["yearMonth"] = round(df.jalali / 100)
 df["yearMonth"] = df["yearMonth"].astype(int)
-df['yearWeek'] = df["year_of_year"].astype(str)+ '-' + df["week_of_year"].astype(str)
+df["yearWeek"] = df["year_of_year"].astype(str) + "-" + df["week_of_year"].astype(str)
 
 #%%
 frequency = "yearMonth"
-mdf = df.groupby(['symbol',frequency]).first().drop(
-    columns = ['jalali']
-)
-mdf[mlist] = df.groupby(['symbol',frequency])[mlist].sum()
+mdf = df.groupby(["symbol", frequency]).first().drop(columns=["jalali"])
+mdf[mlist] = df.groupby(["symbol", frequency])[mlist].sum()
 mdf = mdf.reset_index()
 mdf["InsImbalance_count"] = (mdf.ins_buy_count - mdf.ins_sell_count) / (
     mdf.ins_buy_count + mdf.ins_sell_count
@@ -724,17 +734,16 @@ def daily(g):
 
 result = gg.apply(daily)
 result = result.reset_index().rename(columns={"level_1": "uo"})
-a = result.groupby('uo')[Imbalances[:-1]].mean()
-a = a.sort_values(by = Imbalances[:-1]).dropna()
+a = result.groupby("uo")[Imbalances[:-1]].mean()
+a = a.sort_values(by=Imbalances[:-1]).dropna()
 a
-lowlist = list(a[a.InsImbalance_value<=a.InsImbalance_value.median()].index)
-df1['lowImbalanceStd'] = 0
-df1.loc[df1.uo_x.isin(lowlist),'lowImbalanceStd'] = 1
-df1.loc[df1.uo_y.isin(lowlist),'lowImbalanceStd'] = 1
+lowlist = list(a[a.InsImbalance_value <= a.InsImbalance_value.median()].index)
+df1["lowImbalanceStd"] = 0
+df1.loc[df1.uo_x.isin(lowlist), "lowImbalanceStd"] = 1
+df1.loc[df1.uo_y.isin(lowlist), "lowImbalanceStd"] = 1
 
 #%%
-df1 = df1.rename(columns = {'4rdQarter' : 'ForthQuarter',
-                            '2rdQarter':'SecondQuarter'})
+df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 n1 = path + "MonthlyNormalzedFCAP7.2" + ".csv"
 print(len(df1))
