@@ -141,11 +141,7 @@ def BG(df):
     mapingdict = dict(zip(names, ids))
     BG["BGId"] = BG["uo"].map(mapingdict)
 
-    tt = BG[BG.year == 1397]
-    tt["year"] = 1398
-    BG = BG.append(tt).reset_index(drop=True)
-    tt = BG[BG.year == 1398]
-
+    BG = BG[BG.listed == 1]
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
     for i in ["uo", "cfr", "cr"]:
         print(i)
@@ -220,8 +216,39 @@ quarterdata = quarterdata.reset_index()
 quarterdata.isnull().sum()
 # %%
 quarterdata = quarterdata[~quarterdata.netProfit.isnull()]
-# %%
+gg  = quarterdata.groupby('name')
+quarterdata['Earning1'] = gg.netProfit.shift()
+quarterdata['Earning1'] = quarterdata['Earning1'] - quarterdata.netProfit
+quarterdata['Earning2'] = gg.netProfit.shift(2)
+quarterdata['Earning2'] = quarterdata['Earning2'] - quarterdata.netProfit
+quarterdata['Earning4'] = gg.netProfit.shift(4)
+quarterdata['Earning4'] = quarterdata['Earning4'] - quarterdata.netProfit
+
+def vv2(row):
+    X = row.split('/')
+    return X[0]
+balance = balance.iloc[:,[0,4,13,-7]]
+balance.rename(columns={ balance.columns[0]: "symbol" ,balance.columns[1]: "date" ,balance.columns[2]: "BookValue" ,balance.columns[3] : "Capital"}, inplace = True)
+balance['shrout'] = balance['Capital'] * 100
+balance['Year'] = balance['date'].apply(vv2)
+balance['Year'] = balance['Year'].astype(str)
+balance = balance.drop(columns = ['date','Capital'])
+col = 'symbol'
+balance[col] = balance[col].apply(lambda x: convert_ar_characters(x))
+balance['year']= balance.Year.astype(int)
+balance = balance.set_index(['symbol','year'])
+mapdict = dict(zip(balance.index,balance.BookValue))
+quarterdata['BookValue'] = quarterdata.set_index(
+    ['name','year']
+    ).index.map(mapdict)
+balance = balance.reset_index()
 quarterdata["MarketCap"] = quarterdata.close_price * quarterdata.shrout
+
+for i in ['1','2','4']:
+    t = 'Earning' + i
+    quarterdata[t] = quarterdata[t] /quarterdata['BookValue']
+quarterdata    
+# %%
 
 
 def UoWeight(sg):
@@ -234,33 +261,54 @@ def UoWeight(sg):
     return sg
 
 
-def DailyCalculation(g):
+def QuarterCalculation(g):
     print(g.name)
-    # Weight in Uo's portfolio
-    Sg = g.groupby("uo")
-    t = Sg.apply(UoWeight)
-    t = t.iloc[:, [0, 1, 2, -3,-1]].dropna().set_index(["name"])
-    
-    print(t.columns)
-    for i in ["WinUoP",  "UoPEarning"]:
-        mapdict = dict(zip(t.index, t[i]))
-        g[i] = g.set_index(
-            ["name"]).index.map(mapdict)
-    
-    
-    
+    uoMean = g.groupby(['uo'])[
+        ['Earning1',	'Earning2',	'Earning4']
+        ].mean()
+    for i in uoMean:
+        mapdict = dict(zip(uoMean.index,uoMean[i]))
+        g[i + "_group"] = g.uo.map(mapdict)
+    t = g.groupby(['uo']).size().to_frame()
+    mapdict = dict(zip(t.index,t[0]))
+    g['number' + "_group"] = g.uo.map(mapdict)
+
+    indMean = g.groupby(['group_id'])[
+        ['Earning1',	'Earning2',	'Earning4']
+        ].mean()
+    for i in indMean:
+        mapdict = dict(zip(indMean.index,indMean[i]))
+        g[i + "_ind"] = g.group_id.map(mapdict)
+    t = g.groupby(['group_id']).size().to_frame()
+    mapdict = dict(zip(t.index,t[0]))
+    g['number' + "_ind"] = g.group_id.map(mapdict)
+
+    for i in ['Earning1',	'Earning2',	'Earning4']:
+        for j in ["_group","_ind"]:
+            g[i+j] = (g[i+j] - g[i]/g['number'+j])/(1-1/g['number'+j])
+
+
+    for i in ['Earning1',	'Earning2',	'Earning4']:
+        g[i + '_market'] = g[i].mean()
     return g
 gg = quarterdata.groupby(["year", "quarter"])
-data = gg.apply(DailyCalculation)
+g = gg.get_group((1395,4))
+data = gg.apply(QuarterCalculation)
+# %%
+names = sorted(data.name.unique())
+ids = range(len(names))
+mapingdict = dict(zip(names, ids))
+data["id"] = data["name"].map(mapingdict)
+data['yearQuarter'] = data.year.astype(str) + '-' + data.quarter.astype(str)
+times = sorted(data.yearQuarter.unique())
+ids = range(len(times))
+mapingdict = dict(zip(times, ids))
+data["t"] = data["yearQuarter"].map(mapingdict)
 #%%
-Sg = g.groupby("uo")
-t = Sg.apply(UoWeight)
-t = t.iloc[:, [0, 1, 2, -3,-1]].dropna().set_index(["name"])
-print(t.columns)
-for i in ["WinUoP",  "UoPEarning"]:
-    mapdict = dict(zip(t.index, t[i]))
-    g[i] = g.set_index(
-        ["name"]).index.map(mapdict)
-# .dropna().set_index(["name", "year", "quarter"])
-    
+gg=data.groupby('name')
+data['return']= gg.close_price.pct_change()
+data
+#%%
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+data.to_csv(path + "Earnings.csv",index = False)
 # %%
