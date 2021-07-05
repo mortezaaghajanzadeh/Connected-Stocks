@@ -3,7 +3,7 @@ clear
 import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP7.2.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Final Report"
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 label define sgroup 0 "No" 1 "Yes"
 

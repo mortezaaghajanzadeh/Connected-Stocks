@@ -92,9 +92,7 @@ BG = BG[BG.listed == 1]
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
 df1["year"] = round(df1.jalaliDate / 10000, 0)
 df1["year"] = df1["year"].astype(int)
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
+
 
 for t in BG.year.unique():
     print(t)
@@ -241,7 +239,6 @@ BG = BG[BG.listed == 1]
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
 BG = BG[BG.year >= 1394]
 tt = BG[BG.year == 1397]
-tt["year"] = 1398
 BG = BG.append(tt).reset_index(drop=True)
 
 # %%
