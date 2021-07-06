@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  6 JUL 2021 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  6 JUL 2021 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -747,13 +747,18 @@ LaTeX Info: Redefining \nameref on input line 51.
 (./mresult2-slide.tex) [1
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Q2mresultAll
-Pairs.tex) (./mresultAllPairs.tex) [2] (./BGReturn.tex) [3] (./Imbalance.tex) (
-./turnover.tex) (./Amihud.tex)
-Overfull \hbox (24.40817pt too wide) in paragraph at lines 116--120
+Pairs.tex) (./mresultAllPairs.tex) [2] (./BGReturn.tex) [3]
+<GroupedSTD.png, id=39, 491.8375pt x 311.1625pt>
+File: GroupedSTD.png Graphic file (type png)
+<use GroupedSTD.png>
+Package pdftex.def Info: GroupedSTD.png  used on input line 124.
+(pdftex.def)             Requested size: 312.00119pt x 197.39607pt.
+ (./Imbalance.tex) [4 <./GroupedSTD.png>] (./turnover.tex) (./Amihud.tex)
+Overfull \hbox (24.40817pt too wide) in paragraph at lines 160--164
  [][] 
  []
 
-[4] [5]
+[5] [6]
 Package epstopdf Info: Source file: <FCAtimeSeries.eps>
 (epstopdf)                    date: 2021-06-27 08:28:20
 (epstopdf)                    size: 13516015 bytes
@@ -762,13 +767,13 @@ Package epstopdf Info: Source file: <FCAtimeSeries.eps>
 (epstopdf)                    size: 131864 bytes
 (epstopdf)             Command: <repstopdf --outfile=FCAtimeSeries-eps-converte
 d-to.pdf FCAtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 125.
+(epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeries-eps-converted-to.pdf, id=46, 578.16pt x 289.08pt>
+<FCAtimeSeries-eps-converted-to.pdf, id=62, 578.16pt x 289.08pt>
 File: FCAtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeries-eps-converted-to.pdf  used on input line
- 125.
+ 169.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <FCAtimeSeriesBG.eps>
 (epstopdf)                    date: 2021-06-16 12:29:34
@@ -778,13 +783,13 @@ Package epstopdf Info: Source file: <FCAtimeSeriesBG.eps>
 (epstopdf)                    size: 112593 bytes
 (epstopdf)             Command: <repstopdf --outfile=FCAtimeSeriesBG-eps-conver
 ted-to.pdf FCAtimeSeriesBG.eps>
-(epstopdf)             \includegraphics on input line 131.
+(epstopdf)             \includegraphics on input line 175.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeriesBG-eps-converted-to.pdf, id=47, 578.16pt x 289.08pt>
+<FCAtimeSeriesBG-eps-converted-to.pdf, id=63, 578.16pt x 289.08pt>
 File: FCAtimeSeriesBG-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeriesBG-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeriesBG-eps-converted-to.pdf  used on input li
-ne 131.
+ne 175.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <FCAtimeSeriesPairType.eps>
 (epstopdf)                    date: 2021-06-27 08:28:46
@@ -795,13 +800,13 @@ Package epstopdf Info: Source file: <FCAtimeSeriesPairType.eps>
 (epstopdf)                    size: 249320 bytes
 (epstopdf)             Command: <repstopdf --outfile=FCAtimeSeriesPairType-eps-
 converted-to.pdf FCAtimeSeriesPairType.eps>
-(epstopdf)             \includegraphics on input line 136.
+(epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeriesPairType-eps-converted-to.pdf, id=48, 578.16pt x 289.08pt>
+<FCAtimeSeriesPairType-eps-converted-to.pdf, id=64, 578.16pt x 289.08pt>
 File: FCAtimeSeriesPairType-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeriesPairType-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeriesPairType-eps-converted-to.pdf  used on in
-put line 136.
+put line 180.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <BGtimeSeries.eps>
 (epstopdf)                    date: 2021-06-26 12:02:06
@@ -811,13 +816,13 @@ Package epstopdf Info: Source file: <BGtimeSeries.eps>
 (epstopdf)                    size: 66493 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGtimeSeries-eps-converted
 -to.pdf BGtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
-<BGtimeSeries-eps-converted-to.pdf, id=49, 578.16pt x 289.08pt>
+<BGtimeSeries-eps-converted-to.pdf, id=65, 578.16pt x 289.08pt>
 File: BGtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGtimeSeries-eps-converted-to.pdf  used on input line 
-144.
+188.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <BGMarketCaptimeSeries.eps>
 (epstopdf)                    date: 2021-06-26 12:15:00
@@ -828,13 +833,13 @@ Package epstopdf Info: Source file: <BGMarketCaptimeSeries.eps>
 (epstopdf)                    size: 15895 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGMarketCaptimeSeries-eps-
 converted-to.pdf BGMarketCaptimeSeries.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 194.
 Package epstopdf Info: Output file is already uptodate.
-<BGMarketCaptimeSeries-eps-converted-to.pdf, id=50, 578.16pt x 289.08pt>
+<BGMarketCaptimeSeries-eps-converted-to.pdf, id=66, 578.16pt x 289.08pt>
 File: BGMarketCaptimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGMarketCaptimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGMarketCaptimeSeries-eps-converted-to.pdf  used on in
-put line 150.
+put line 194.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <CorrtimeSeries.eps>
 (epstopdf)                    date: 2021-06-23 16:37:06
@@ -844,13 +849,13 @@ Package epstopdf Info: Source file: <CorrtimeSeries.eps>
 (epstopdf)                    size: 123189 bytes
 (epstopdf)             Command: <repstopdf --outfile=CorrtimeSeries-eps-convert
 ed-to.pdf CorrtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 156.
+(epstopdf)             \includegraphics on input line 200.
 Package epstopdf Info: Output file is already uptodate.
-<CorrtimeSeries-eps-converted-to.pdf, id=51, 578.16pt x 289.08pt>
+<CorrtimeSeries-eps-converted-to.pdf, id=67, 578.16pt x 289.08pt>
 File: CorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use CorrtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: CorrtimeSeries-eps-converted-to.pdf  used on input lin
-e 156.
+e 200.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
 Package epstopdf Info: Source file: <BGCorrtimeSeries.eps>
 (epstopdf)                    date: 2021-06-23 16:57:56
@@ -860,51 +865,52 @@ Package epstopdf Info: Source file: <BGCorrtimeSeries.eps>
 (epstopdf)                    size: 259218 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGCorrtimeSeries-eps-conve
 rted-to.pdf BGCorrtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 161.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
-<BGCorrtimeSeries-eps-converted-to.pdf, id=52, 578.16pt x 289.08pt>
+<BGCorrtimeSeries-eps-converted-to.pdf, id=68, 578.16pt x 289.08pt>
 File: BGCorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGCorrtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGCorrtimeSeries-eps-converted-to.pdf  used on input l
-ine 161.
+ine 205.
 (pdftex.def)             Requested size: 390.0pt x 194.99706pt.
- [6 <./FCAtimeSeries-eps-converted-to.pdf> <./FCAtimeSeriesBG-eps-converted-to.
-pdf>] [7 <./FCAtimeSeriesPairType-eps-converted-to.pdf> <./BGtimeSeries-eps-con
-verted-to.pdf>] [8 <./BGMarketCaptimeSeries-eps-converted-to.pdf> <./CorrtimeSe
-ries-eps-converted-to.pdf>] [9 <./BGCorrtimeSeries-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+ [7 <./FCAtimeSeries-eps-converted-to.pdf> <./FCAtimeSeriesBG-eps-converted-to.
+pdf>] [8 <./FCAtimeSeriesPairType-eps-converted-to.pdf> <./BGtimeSeries-eps-con
+verted-to.pdf>] [9 <./BGMarketCaptimeSeries-eps-converted-to.pdf> <./CorrtimeSe
+ries-eps-converted-to.pdf>] [10 <./BGCorrtimeSeries-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
  (./Connected Stocks - main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
 Package rerunfilecheck Info: File `"Connected Stocks - main".out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
  ) 
 Here is how much of TeX's memory you used:
- 19207 strings out of 480608
- 362534 string characters out of 5907536
- 623952 words of memory out of 5000000
- 34678 multiletter control sequences out of 15000+600000
- 538291 words of font info for 45 fonts, out of 8000000 for 9000
+ 19230 strings out of 480608
+ 362855 string characters out of 5907536
+ 625097 words of memory out of 5000000
+ 34691 multiletter control sequences out of 15000+600000
+ 539204 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,60p,427b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,60p,427b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Connected Stocks - main.pdf" (9 pages, 1078199 bytes).
+/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Connected Stocks - main.pdf" (10 pages, 1120514 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

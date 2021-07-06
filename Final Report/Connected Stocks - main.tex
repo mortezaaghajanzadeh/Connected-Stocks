@@ -50,8 +50,9 @@
 }
 \begin{document}
 	\maketitle
-
-\textbf{Hypothesis 1:} Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger when pairs are in the same business groups
+\section*{Effects}
+\subsection*{\textbf{Hypothesis 1}}
+ Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger when pairs are in the same business groups
 
 		\begin{table}[htbp]
 	\centering
@@ -63,7 +64,8 @@
 	\FloatBarrier
 	\newpage
 	
-\textbf{Hypothesis 2:} Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
+\subsection*{\textbf{Hypothesis 2}}
+ Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
 		\begin{table}[htbp]
 	\centering
 	\caption{one of these tables}
@@ -77,7 +79,8 @@
 \end{table}
 
 \newpage
-\textbf{Hypothesis 3:} Return of business group improve forecasts of cross-sectional variation in stocks' return.
+\subsection*{\textbf{Hypothesis 3}} 
+Return of business group improve forecasts of cross-sectional variation in stocks' return.
 
 			\begin{table}[htbp]
 		\centering
@@ -88,15 +91,56 @@
 
 
 \newpage
-\textbf{Channels:} 
 
+\section*{Channels} 
+\subsection*{Trading}
+ 
+For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total trade on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
+We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them. As we expected grouped standard error is  13.1\% lower with t-stat of 12.57 than ungrouped firms. 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.75\textwidth}{!}{
+\begin{tabular}{lcccccc}
+	\hline\hline
+	& \multicolumn{1}{l}{count} & \multicolumn{1}{l}{mean} &
+	
+	 \multicolumn{1}{l}{std} & \multicolumn{1}{l}{min} &
+	  \multicolumn{1}{l}{median} & \multicolumn{1}{l}{max} \\
+	  \midrule
+	Ungrouped & 60    & 0.645 & 0.063 & 0.492 & 0.653 & 0.784 \\
+	\addlinespace
+	Grouped & 60    & 0.514 & 0.050 & 0.406 & 0.514 & 0.625 \\
+	\hline\hline
+\end{tabular}%	
+}
+	\label{tab:addlabel}%
+\end{table}%
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{GroupedSTD}
+	\label{fig:groupedstd}
+\end{figure}
+
+According to the main hypothesis, we need to compare comovement between pairs in groups with low standard error and other pairs.
+ For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
+So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{
 		\input{Imbalance.tex}
 	}
 \end{table}
+\FloatBarrier
 
+Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We estimate changes in firm's turnover on changes of turnover in market, industry, or business groups. we aggregate turnover by using weighted average of firms turnover in that day.
+\begin{equation*}
+	\Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
+	\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
+\end{equation*}
 
 
 	\begin{table}[htbp]

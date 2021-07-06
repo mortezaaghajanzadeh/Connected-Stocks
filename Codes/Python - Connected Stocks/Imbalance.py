@@ -1,9 +1,22 @@
 #%%
 import pandas as pd
+import matplotlib.pyplot as plt
+import jdatetime
+from matplotlib.ticker import FuncFormatter
 from scipy import stats
 import seaborn as sns
-
+from pandas_jalali.converter import get_gregorian_date_from_jalali_date
+#%%
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+def vv1(row):
+    row = str(row)
+    return int(row[0:4]) 
+def vv2(row):
+    row = str(row)
+    return int(row[4:6])
+def vv3(row):
+    row = str(row) 
+    return int(row[6:8])
 df = pd.read_csv(path + "Stock Trade details.csv")
 df = df[~df.ind_buy_count.isnull()].drop(
     columns=[
@@ -21,10 +34,20 @@ df = df[~df.ind_buy_count.isnull()].drop(
         "Adjusted price",
     ]
 )
-df["year"] = round(df.jalali / 10000)
-df["year"] = df["year"].astype(int)
-df = df[df.year >= 1393]
+df['jalali'] = df.jalali.astype(int)
+df["year"] = df["jalali"].apply(vv1)
+df["month"] = df["jalali"].apply(vv2)
+df["day"] = df["jalali"].apply(vv3)
+df = df[df.year >= 1394]
 #%%
+
+df["year_of_year"] = df["year"]
+df["Month_of_year"] = df["month"].astype(int)
+df["day"] = df["day"].astype(int)
+#%%
+
+
+
 def BG(df):
     pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
     # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
@@ -46,10 +69,6 @@ def BG(df):
     mapingdict = dict(zip(names, ids))
     BG["BGId"] = BG["uo"].map(mapingdict)
 
-    tt = BG[BG.year == 1397]
-    tt["year"] = 1398
-    BG = BG.append(tt).reset_index(drop=True)
-
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
     for i in ["uo", "cfr", "cr"]:
         print(i)
@@ -62,7 +81,6 @@ def BG(df):
 df = BG(df)
 df["Grouped"] = 1
 df.loc[df.uo.isnull(), "Grouped"] = 0
-# %%
 mlist = [
     "ind_buy_count",
     "ins_buy_count",
@@ -79,7 +97,13 @@ mlist = [
 ]
 df["yearMonth"] = round(df.jalali / 100)
 df["yearMonth"] = df["yearMonth"].astype(int)
-mdf = df
+# df["yearWeek"] = df["year_of_year"].astype(str) + "-" + df["week_of_year"].astype(str)
+
+#%%
+frequency = "yearMonth"
+mdf = df.groupby(["symbol", frequency]).first().drop(columns=["jalali"])
+mdf[mlist] = df.groupby(["symbol", frequency])[mlist].sum()
+mdf = mdf.reset_index()
 mdf["InsImbalance_count"] = (mdf.ins_buy_count - mdf.ins_sell_count) / (
     mdf.ins_buy_count + mdf.ins_sell_count
 )
@@ -91,7 +115,7 @@ mdf["InsImbalance_value"] = (mdf.ins_buy_value - mdf.ins_sell_value) / (
 )
 mdf = mdf[
     [
-        "jalali",
+        frequency,
         "symbol",
         "group_name",
         "year",
@@ -99,25 +123,21 @@ mdf = mdf[
         "cfr",
         "cr",
         "Grouped",
-        "yearMonth",
         "InsImbalance_count",
         "InsImbalance_volume",
         "InsImbalance_value",
     ]
-].sort_values(by=["symbol", "jalali"])
+].sort_values(by=["symbol", frequency])
 mdf = mdf.reset_index(drop=True)
 mdf = mdf[~mdf.InsImbalance_count.isnull()]
 mdf
-
-# %%
 Imbalances = [
     "InsImbalance_count",
     "InsImbalance_volume",
     "InsImbalance_value",
     "Grouped",
 ]
-gg = mdf.groupby("jalali")
-g = gg.get_group(13930116)
+gg = mdf.groupby([frequency])
 
 
 def daily(g):
@@ -138,12 +158,58 @@ def daily(g):
 
 result = gg.apply(daily)
 result = result.reset_index().rename(columns={"level_1": "uo"})
+#%%
+
+def togreforian(row):
+    row = str(row)
+    time = jdatetime.date(int(row[0:4]),int(row[4:6]),28).togregorian()
+    return str(time.year)+'-' + str(time.month)
+result['date'] = result.yearMonth.apply(togreforian)
+result
+#%%
+
+a = result.groupby("uo")[Imbalances[:-1]].mean()
+a = a.sort_values(by=Imbalances[-2]).dropna()
+a
 
 # %%
-result.groupby("Grouped")[Imbalances].mean()
+b = result.groupby(['yearMonth','Grouped']).mean().reset_index()
 #%%
-result
+b.groupby("Grouped")[Imbalances[-2]].describe().T
+#%%
+result = result.dropna()
+result['yearMonth'] = result.yearMonth.astype(str)
+fig = plt.figure(figsize=(8, 4))
+g = sns.lineplot(data = result,x='yearMonth',y = 'InsImbalance_value',
+         hue = 'Grouped', ci=0)
+a = result.yearMonth.unique()
+labels = list(result.date.unique())
+tickvalues = a
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Monthly standard errors' Time Series")
+plt.legend(['Ungrouped','Grouped'])
+fig.set_rasterized(True)
+plt.savefig(pathS + "\\GroupedSTD.eps", rasterized=True, dpi=300)
+plt.savefig(pathS + "\\GroupedSTD.png", bbox_inches="tight")
+
+
+stats.ttest_ind(
+    b[b.Grouped == 1].InsImbalance_value,
+    b[b.Grouped == 0].InsImbalance_value,
+)
+
+
+
+
+
+
+#%%
 pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
 # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
 n = pathBG + "Grouping_CT.xlsx"
@@ -157,9 +223,7 @@ uolist = (
 BG = BG[BG.listed == 1]
 print(len(BG))
 BG = BG[BG.uo.isin(uolist)]
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
+
 #%%
 a = (
     BG.groupby(["uo", "year"])
@@ -184,15 +248,17 @@ result2 = result.set_index(["year", "uo"])
 result2 = result2[result2.index.isin(BGlist)]
 # .sort_values(by=Imbalances)
 result2 = result2.reset_index()
-a = result2.groupby('uo')[Imbalances[:-1]].mean()
-a.append(result[result.Grouped == 0][
-    Imbalances[:-1]
-    ].mean().to_frame().rename(columns = {0:'NotGroup'}).T).sort_values(by = Imbalances[:-1])
+a = result2.groupby("uo")[Imbalances[:-1]].mean()
+a.append(
+    result[result.Grouped == 0][Imbalances[:-1]]
+    .mean()
+    .to_frame()
+    .rename(columns={0: "NotGroup"})
+    .T
+).sort_values(by=Imbalances[:-1])
 #%%
-a = result.groupby('uo')[Imbalances[:-1]].mean()
-a.sort_values(by = Imbalances[:-1]).dropna()
-
-
+a = result.groupby("uo")[Imbalances[:-1]].mean()
+a.sort_values(by=Imbalances[:-1]).dropna()
 
 
 # #%%

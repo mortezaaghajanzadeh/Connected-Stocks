@@ -640,10 +640,6 @@ def BG(df):
     mapingdict = dict(zip(names, ids))
     BG["BGId"] = BG["uo"].map(mapingdict)
 
-    tt = BG[BG.year == 1397]
-    tt["year"] = 1398
-    BG = BG.append(tt).reset_index(drop=True)
-
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
     for i in ["uo", "cfr", "cr"]:
         print(i)
@@ -690,7 +686,7 @@ mdf["InsImbalance_value"] = (mdf.ins_buy_value - mdf.ins_sell_value) / (
 )
 mdf = mdf[
     [
-        "yearWeek",
+        frequency,
         "symbol",
         "group_name",
         "year",
@@ -698,7 +694,6 @@ mdf = mdf[
         "cfr",
         "cr",
         "Grouped",
-        "yearMonth",
         "InsImbalance_count",
         "InsImbalance_volume",
         "InsImbalance_value",
