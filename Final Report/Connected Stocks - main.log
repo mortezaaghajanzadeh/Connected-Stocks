@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  6 JUL 2021 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  6 JUL 2021 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -764,7 +764,7 @@ Package epstopdf Info: Source file: <FCAtimeSeries.eps>
 d-to.pdf FCAtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeries-eps-converted-to.pdf, id=47, 578.16pt x 289.08pt>
+<FCAtimeSeries-eps-converted-to.pdf, id=46, 578.16pt x 289.08pt>
 File: FCAtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeries-eps-converted-to.pdf  used on input line
@@ -780,7 +780,7 @@ Package epstopdf Info: Source file: <FCAtimeSeriesBG.eps>
 ted-to.pdf FCAtimeSeriesBG.eps>
 (epstopdf)             \includegraphics on input line 131.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeriesBG-eps-converted-to.pdf, id=48, 578.16pt x 289.08pt>
+<FCAtimeSeriesBG-eps-converted-to.pdf, id=47, 578.16pt x 289.08pt>
 File: FCAtimeSeriesBG-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeriesBG-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeriesBG-eps-converted-to.pdf  used on input li
@@ -797,7 +797,7 @@ Package epstopdf Info: Source file: <FCAtimeSeriesPairType.eps>
 converted-to.pdf FCAtimeSeriesPairType.eps>
 (epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
-<FCAtimeSeriesPairType-eps-converted-to.pdf, id=49, 578.16pt x 289.08pt>
+<FCAtimeSeriesPairType-eps-converted-to.pdf, id=48, 578.16pt x 289.08pt>
 File: FCAtimeSeriesPairType-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeriesPairType-eps-converted-to.pdf>
 Package pdftex.def Info: FCAtimeSeriesPairType-eps-converted-to.pdf  used on in
@@ -813,7 +813,7 @@ Package epstopdf Info: Source file: <BGtimeSeries.eps>
 -to.pdf BGtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 144.
 Package epstopdf Info: Output file is already uptodate.
-<BGtimeSeries-eps-converted-to.pdf, id=50, 578.16pt x 289.08pt>
+<BGtimeSeries-eps-converted-to.pdf, id=49, 578.16pt x 289.08pt>
 File: BGtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGtimeSeries-eps-converted-to.pdf  used on input line 
@@ -830,7 +830,7 @@ Package epstopdf Info: Source file: <BGMarketCaptimeSeries.eps>
 converted-to.pdf BGMarketCaptimeSeries.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
-<BGMarketCaptimeSeries-eps-converted-to.pdf, id=51, 578.16pt x 289.08pt>
+<BGMarketCaptimeSeries-eps-converted-to.pdf, id=50, 578.16pt x 289.08pt>
 File: BGMarketCaptimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGMarketCaptimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGMarketCaptimeSeries-eps-converted-to.pdf  used on in
@@ -846,7 +846,7 @@ Package epstopdf Info: Source file: <CorrtimeSeries.eps>
 ed-to.pdf CorrtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
-<CorrtimeSeries-eps-converted-to.pdf, id=52, 578.16pt x 289.08pt>
+<CorrtimeSeries-eps-converted-to.pdf, id=51, 578.16pt x 289.08pt>
 File: CorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use CorrtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: CorrtimeSeries-eps-converted-to.pdf  used on input lin
@@ -862,7 +862,7 @@ Package epstopdf Info: Source file: <BGCorrtimeSeries.eps>
 rted-to.pdf BGCorrtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
-<BGCorrtimeSeries-eps-converted-to.pdf, id=53, 578.16pt x 289.08pt>
+<BGCorrtimeSeries-eps-converted-to.pdf, id=52, 578.16pt x 289.08pt>
 File: BGCorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGCorrtimeSeries-eps-converted-to.pdf>
 Package pdftex.def Info: BGCorrtimeSeries-eps-converted-to.pdf  used on input l
@@ -883,30 +883,28 @@ ed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 19210 strings out of 480608
- 362575 string characters out of 5907536
- 622952 words of memory out of 5000000
- 34680 multiletter control sequences out of 15000+600000
- 539054 words of font info for 46 fonts, out of 8000000 for 9000
+ 19207 strings out of 480608
+ 362534 string characters out of 5907536
+ 623952 words of memory out of 5000000
+ 34678 multiletter control sequences out of 15000+600000
+ 538291 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,60p,427b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1000.pfb>
-Output written on "Connected Stocks - main.pdf" (9 pages, 1080174 bytes).
+ 60i,15n,60p,427b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Connected Stocks - main.pdf" (9 pages, 1078199 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 180 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  23 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

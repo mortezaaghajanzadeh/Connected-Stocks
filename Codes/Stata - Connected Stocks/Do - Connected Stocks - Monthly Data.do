@@ -79,17 +79,19 @@ gen NMFCAPA = holder_act * NMFCAP
 label variable NMFCAPA " $ (\text{FCAP}^*) \times {\text{ActiveHolder} }  $ "
 
 
-label variable lowimbalancestd "Low Imbalance"
+label variable lowimbalancestd "Low Imbalance std"
 
 gen ImbalanceSbgroup = lowimbalancestd * sbgroup
 
-label variable ImbalanceSbgroup  " $ \text{Low Imbalance} \times {\text{SameGroup} } $ "
+label variable ImbalanceSbgroup  " $ \text{Low Imbalance std} \times {\text{SameGroup} } $ "
 
 gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
-label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance} \times {\text{SameGroup} } \times \text{FCA}^*  $ "
+label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times \text{FCA}^*  $ "
 
+gen ImbalanceNMFCA = lowimbalancestd * NMFCA
 
+label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{FCA}^* } $ "
 
 label variable sbgroup "Same Group"
 

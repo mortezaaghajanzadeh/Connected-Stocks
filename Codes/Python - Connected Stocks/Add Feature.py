@@ -741,6 +741,9 @@ lowlist = list(a[a.InsImbalance_value <= a.InsImbalance_value.median()].index)
 df1["lowImbalanceStd"] = 0
 df1.loc[df1.uo_x.isin(lowlist), "lowImbalanceStd"] = 1
 df1.loc[df1.uo_y.isin(lowlist), "lowImbalanceStd"] = 1
+mapdict = dict(zip(a.index,a.InsImbalance_value))
+df1['InsImbalance_value_x'] = df1.uo_x.map(mapdict)
+df1['InsImbalance_value_y'] = df1.uo_y.map(mapdict)
 
 #%%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
