@@ -281,3 +281,6 @@ replace monthlycrossownership = monthlycrossownership/100
  asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup  , fmb newey(4)
 
 cor  monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup 
+
+reg MFCA c.t_month##sbgroup ,robust
+
