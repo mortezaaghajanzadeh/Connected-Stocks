@@ -3,7 +3,7 @@ clear
 import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\BGReturn.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Final Report"
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 xtset id jalalidate  
  
@@ -26,6 +26,7 @@ label variable hml " $ HML $ "
 label variable smb " $ SMB $ "
 
 summ euopr egreturn_firmout
+
 
 
 
