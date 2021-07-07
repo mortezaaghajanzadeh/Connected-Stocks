@@ -4,22 +4,19 @@
 \beamer@subsectionintoc {2}{2}{Main Effect}{9}{0}{2}
 \beamer@sectionintoc {3}{Empirical Studies}{16}{0}{3}
 \beamer@subsectionintoc {3}{1}{Measuring Common-ownership}{17}{0}{3}
-\beamer@subsectionintoc {3}{2}{Correlation Calculation}{46}{0}{3}
-\beamer@subsectionintoc {3}{3}{Controls}{49}{0}{3}
-\beamer@sectionintoc {4}{Methodology}{53}{0}{4}
-\beamer@sectionintoc {5}{Results}{57}{0}{5}
-\beamer@subsectionintoc {5}{1}{Normalized Rank-Transformed}{58}{0}{5}
-\beamer@subsectionintoc {5}{2}{Discontinuity}{64}{0}{5}
-\beamer@sectionintoc {6}{Robustness Check}{70}{0}{6}
-\beamer@subsectionintoc {6}{1}{Random Pairs from Same Business Group}{71}{0}{6}
-\beamer@subsectionintoc {6}{2}{Random Pairs from Same Size}{72}{0}{6}
-\beamer@subsectionintoc {6}{3}{Random Pairs from Same Industry}{73}{0}{6}
-\beamer@sectionintoc {7}{Business Group Effect}{74}{0}{7}
-\beamer@subsectionintoc {7}{1}{Trade Analyze}{76}{0}{7}
-\beamer@sectionintoc {8}{Conclusion}{85}{0}{8}
-\beamer@sectionintoc {10}{Appendix I}{89}{1}{9}
-\beamer@sectionintoc {11}{Appendix II}{91}{1}{10}
-\beamer@subsectionintoc {11}{1}{Synchronicity and firm interlocks}{93}{1}{10}
-\beamer@subsectionintoc {11}{2}{Large controlling shareholder and stock price synchronicity}{94}{1}{10}
-\beamer@subsectionintoc {11}{3}{Connected Stocks}{95}{1}{10}
-\beamer@subsectionintoc {11}{4}{Measures' Detail}{96}{1}{10}
+\beamer@subsectionintoc {3}{2}{Correlation Calculation}{43}{0}{3}
+\beamer@subsectionintoc {3}{3}{Controls}{46}{0}{3}
+\beamer@sectionintoc {4}{Methodology}{50}{0}{4}
+\beamer@sectionintoc {5}{Results}{54}{0}{5}
+\beamer@subsectionintoc {5}{1}{Normalized Rank-Transformed}{55}{0}{5}
+\beamer@subsectionintoc {5}{2}{Discontinuity}{61}{0}{5}
+\beamer@sectionintoc {6}{Further Evidence}{66}{0}{6}
+\beamer@sectionintoc {7}{Business Group Effect}{70}{0}{7}
+\beamer@subsectionintoc {7}{1}{Trade Analyze}{71}{0}{7}
+\beamer@sectionintoc {8}{Conclusion}{75}{0}{8}
+\beamer@sectionintoc {10}{Appendix I}{79}{1}{9}
+\beamer@sectionintoc {11}{Appendix II}{81}{1}{10}
+\beamer@subsectionintoc {11}{1}{Synchronicity and firm interlocks}{83}{1}{10}
+\beamer@subsectionintoc {11}{2}{Large controlling shareholder and stock price synchronicity}{84}{1}{10}
+\beamer@subsectionintoc {11}{3}{Connected Stocks}{85}{1}{10}
+\beamer@subsectionintoc {11}{4}{Measures' Detail}{86}{1}{10}

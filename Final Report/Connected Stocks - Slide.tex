@@ -374,42 +374,42 @@
 	
 	
 	
-	\begin{frame}{Measuring Common Ownership}{Example}
-		
-		\begin{figure}[htbp]
-			\begin{tikzpicture}[node distance=1cm]
-				
-				
-				\node (Firm) [startstop3] {\tiny Firm X};
-				\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
-				\node (Owner) [startstop3,right of = Firm , yshift=0cm , xshift=-3.25cm ] {\tiny Common owner };
-				
-				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
-				
-				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
-				%
-				%\node() at (3,0)
-				%    {$ \alpha + \beta = 100 $}; 
-			\end{tikzpicture}
-			
-		\end{figure}\bigskip
-		\pause
-		\begin{itemize}
-			\item[] For better observation, assume that 
-			\begin{itemize}
-				\item $ \alpha + \beta = 100 $\\
-				\item both firm have equal market cap
-			\end{itemize} 
-		\end{itemize}
-	\pause
-		\begin{figure}[htbp]
-			\includegraphics[width=0.47\linewidth]{1.png}
-			\includegraphics[width=0.47\linewidth]{2.png}
-			\captionsetup{labelformat=empty}
-			\caption{\scriptsize Comparison of three methods for calculating common ownership}
-		\end{figure}
-	\end{frame}
-	
+%	\begin{frame}{Measuring Common Ownership}{Example}
+%		
+%		\begin{figure}[htbp]
+%			\begin{tikzpicture}[node distance=1cm]
+%				
+%				
+%				\node (Firm) [startstop3] {\tiny Firm X};
+%				\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+%				\node (Owner) [startstop3,right of = Firm , yshift=0cm , xshift=-3.25cm ] {\tiny Common owner };
+%				
+%				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+%				
+%				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+%				%
+%				%\node() at (3,0)
+%				%    {$ \alpha + \beta = 100 $}; 
+%			\end{tikzpicture}
+%			
+%		\end{figure}\bigskip
+%		\pause
+%		\begin{itemize}
+%			\item[] For better observation, assume that 
+%			\begin{itemize}
+%				\item $ \alpha + \beta = 100 $\\
+%				\item both firm have equal market cap
+%			\end{itemize} 
+%		\end{itemize}
+%	\pause
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.47\linewidth]{1.png}
+%			\includegraphics[width=0.47\linewidth]{2.png}
+%			\captionsetup{labelformat=empty}
+%			\caption{\scriptsize Comparison of three methods for calculating common ownership}
+%		\end{figure}
+%	\end{frame}
+%	
 	
 	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
 		\begin{tikzpicture}[node distance=1cm]
@@ -1239,7 +1239,7 @@
 		\label{Monthly15} 
 		\begin{table}[htbp]
 			\centering
-			\resizebox{1\textheight}{!}{
+			\resizebox{1\textwidth}{!}{
 				\input{mresult2-slide.tex}
 			}
 		\end{table}
@@ -1252,7 +1252,7 @@
 \begin{frame}{Business group \& Common-ownership}{regression}
 	\begin{table}[htbp]
 		\centering
-		\resizebox{0.7\textwidth}{!}{
+		\resizebox{1\textwidth}{!}{
 			\input{Q2mresultAllPairs.tex}
 		}
 	\end{table}
@@ -1261,7 +1261,7 @@
 \begin{frame}{Business group \& Common-ownership}{regression}
 	\begin{table}[htbp]
 		\centering
-		\resizebox{0.7\textwidth}{!}{
+		\resizebox{1\textwidth}{!}{
 			\input{mresultAllPairs.tex}
 		}
 	\end{table}
@@ -1305,16 +1305,16 @@
 
 	
 	
-	\begin{frame}{Estimation model}
-		\begin{itemize}
-			\item Use Fama-MacBeth to estimate this model
-			
-			\input{Model12}
-			
-			\item Estimate that model on a monthly frequency 
-		\end{itemize}
-	\end{frame}
-	
+%	\begin{frame}{Estimation model}
+%		\begin{itemize}
+%			\item Use Fama-MacBeth to estimate this model
+%			
+%			\input{Model12}
+%			
+%			\item Estimate that model on a monthly frequency 
+%		\end{itemize}
+%	\end{frame}
+%	
 	
 	
 	
@@ -1525,34 +1525,33 @@
 	
 	
 	
-	\section{Robustness Check}
+	\section{Further Evidence}
 	
-	\subsection{Random Pairs from Same Business Group}
+%	\subsection{Random Pairs from Same Business Group}
 	
 	
 	\begin{frame}{Random Pairs from Same Business Group}
 		
 		\begin{columns}\centering
-			\column{.35\textwidth}
+			\column{\textwidth}
 			\begin{center}
 				$ \beta_3 $ in model \ref{model1}
 			\end{center}
 			
 			\begin{figure}
 				\centering
-				\includegraphics[width=\linewidth]{BusinessPseudoSBFCA.eps}\\
-				
-				\includegraphics[width=\linewidth]{BusinessPseudoSBFCA_t.eps}
+				\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA.eps}
+				\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA_t.eps}
 			\end{figure}
-			\column{.35\textwidth}
-			\begin{center}
-				$ \beta_2 $ in model \ref{model2}
-			\end{center}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\linewidth]{BusinessPseudoMNMFCA.eps}\\
-				\includegraphics[width=\linewidth]{BusinessPseudoMNMFCA_t.eps}
-			\end{figure}
+%			\column{.35\textwidth}
+%			\begin{center}
+%				$ \beta_2 $ in model \ref{model2}
+%			\end{center}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=\linewidth]{BusinessPseudoMNMFCA.eps}\\
+%				\includegraphics[width=\linewidth]{BusinessPseudoMNMFCA_t.eps}
+%			\end{figure}
 %			\column{.32\textwidth}
 %			\begin{center}
 %				$ \beta_4 $ in model \ref{model3}
@@ -1569,30 +1568,29 @@
 	
 	
 	
-	\subsection{Random Pairs from Same Size}
+%	\subsection{Random Pairs from Same Size}
 	
 	\begin{frame}{Random Pairs from Same Size}
 		
 		\begin{columns}\centering
-			\column{.32\textwidth}
+			\column{\textwidth}
 			\begin{center}
 				$ \beta_3 $ in model \ref{model1}
 			\end{center}
 			\begin{figure}
 				\centering
-				\includegraphics[width=\linewidth]{SizePseudoSBFCA.eps}\\
-				
-				\includegraphics[width=\linewidth]{SizePseudoSBFCA_t.eps}
+				\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA.eps}
+				\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA_t.eps}
 			\end{figure}
-			\column{.32\textwidth}
-			\begin{center}
-				$ \beta_2 $ in model \ref{model2}
-			\end{center}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\linewidth]{SizePseudoMNMFCA.eps}\\
-				\includegraphics[width=\linewidth]{SizePseudoMNMFCA_t.eps}
-			\end{figure}
+%			\column{.32\textwidth}
+%			\begin{center}
+%				$ \beta_2 $ in model \ref{model2}
+%			\end{center}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=\linewidth]{SizePseudoMNMFCA.eps}\\
+%				\includegraphics[width=\linewidth]{SizePseudoMNMFCA_t.eps}
+%			\end{figure}
 %			\column{.32\textwidth}
 %			\begin{center}
 %				$ \beta_4 $ in model \ref{model3}
@@ -1608,30 +1606,29 @@
 	\end{frame}
 	
 	
-	\subsection{Random Pairs from Same Industry}
+%	\subsection{Random Pairs from Same Industry}
 	
 	\begin{frame}{Random Pairs from Same Industry}
 		
 		\begin{columns}\centering
-			\column{.35\textwidth}
+			\column{\textwidth}
 			\begin{center}
 				$ \beta_3 $ in model \ref{model1}
 			\end{center}
 			\begin{figure}
 				\centering
-				\includegraphics[width=\linewidth]{IndustryPseudoSBFCA.eps}\\
-				
-				\includegraphics[width=\linewidth]{IndustryPseudoSBFCA_t.eps}
+				\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA.eps}
+				\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA_t.eps}
 			\end{figure}
-			\column{.35\textwidth}
-			\begin{center}
-				$ \beta_2 $ in model \ref{model2}
-			\end{center}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\linewidth]{IndustryPseudoMNMFCA.eps}\\
-				\includegraphics[width=\linewidth]{IndustryPseudoMNMFCA_t.eps}
-			\end{figure}
+%			\column{.35\textwidth}
+%			\begin{center}
+%				$ \beta_2 $ in model \ref{model2}
+%			\end{center}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=\linewidth]{IndustryPseudoMNMFCA.eps}\\
+%				\includegraphics[width=\linewidth]{IndustryPseudoMNMFCA_t.eps}
+%			\end{figure}
 %			\column{.32\textwidth}
 %			\begin{center}
 %				$ \beta_4 $ in model \ref{model3}
@@ -1848,21 +1845,21 @@
 	
 	
 	\section{Business Group Effect}
-	\begin{frame}{Business group \& Common-ownership}{graphs}
-		\begin{itemize}
-			\item Generate pairs  that they don't have common-owner 
-			\item Pseudo pairs' $ FCA_{ij,t} $ equal to zero
-			\item 
-		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.45\linewidth]{mcorr5AllPairs.eps}
-			\includegraphics[width=0.45\linewidth]{mcorr5bgAllPairs.eps}
-
-			\label{fig:zeropbgsample}
-		\end{figure}
-		
-	\end{frame}
+%	\begin{frame}{Business group \& Common-ownership}{graphs}
+%		\begin{itemize}
+%			\item Generate pairs  that they don't have common-owner 
+%			\item Pseudo pairs' $ FCA_{ij,t} $ equal to zero
+%			\item 
+%		\end{itemize}
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.45\linewidth]{mcorr5AllPairs.eps}
+%			\includegraphics[width=0.45\linewidth]{mcorr5bgAllPairs.eps}
+%
+%			\label{fig:zeropbgsample}
+%		\end{figure}
+%		
+%	\end{frame}
 
 
 
@@ -1872,69 +1869,69 @@
 	
 	
 	\subsection{Trade Analyze}
-	\begin{frame}{Trading}{\cite{greenwood2011stock}}
-		\begin{itemize}
-			\item Trading index for business groups:
-			\begin{itemize}
-				\item For business group of k: 	\[ BGTI_{kt} = \sum w_{ikt} \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} \]
-				\item   which $  w_{ikt} $ is  $ \frac{\text{MarketCap}_{it} \times \text{CR}_k}
-				{\sum \text{MarketCap}_{jt} \times \text{CR}_k } $		
-			\end{itemize}
-			\item Calculate correlation of $ \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} $ with $ BGTI_{kt} $ for each firm in group
-			
-		\end{itemize}
-		
-	\end{frame}
-
-
-	
-	\begin{frame}{Average correlation between Index and symbols}{
-			$ \rho(\frac{\Delta BlockOwnership_{it}}{BlockOwnership_{it}},
-			BGTI_{kt}	) $}
-		
-		
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndexSymbol}
-			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndex}
-			\label{fig:corrindex}
-		\end{figure}
-	\end{frame}
-	
-	
-	\begin{frame}{Trading Index correlation \&  FCA} {Group Level}
-		
-		
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\linewidth]{../Trade/CorrFCA}
-			\label{fig:CorrFCA}
-		\end{figure}
-	\end{frame}
-	
-	
-	\begin{frame}{Trading Index correlation \&  return correlation} {Group Level}
-		
-		
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\linewidth]{../Trade/CorrIndexCorr}
-			\label{fig:CorrIndexCorr}
-		\end{figure}
-	\end{frame}
-	
-	\begin{frame}{Simultaneous Trade}{Group Level}
-		
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.45\linewidth]{../Trade/MorethanOneProb}
-			\includegraphics[width=0.45\linewidth]{../Trade/Buy-SellMorethanOneProb}
-			
-			\label{fig:morethanoneprob}
-		\end{figure}
-		
-	\end{frame}
-	
+%	\begin{frame}{Trading}{\cite{greenwood2011stock}}
+%		\begin{itemize}
+%			\item Trading index for business groups:
+%			\begin{itemize}
+%				\item For business group of k: 	\[ BGTI_{kt} = \sum w_{ikt} \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} \]
+%				\item   which $  w_{ikt} $ is  $ \frac{\text{MarketCap}_{it} \times \text{CR}_k}
+%				{\sum \text{MarketCap}_{jt} \times \text{CR}_k } $		
+%			\end{itemize}
+%			\item Calculate correlation of $ \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} $ with $ BGTI_{kt} $ for each firm in group
+%			
+%		\end{itemize}
+%		
+%	\end{frame}
+%
+%
+%	
+%	\begin{frame}{Average correlation between Index and symbols}{
+%			$ \rho(\frac{\Delta BlockOwnership_{it}}{BlockOwnership_{it}},
+%			BGTI_{kt}	) $}
+%		
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndexSymbol}
+%			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndex}
+%			\label{fig:corrindex}
+%		\end{figure}
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Trading Index correlation \&  FCA} {Group Level}
+%		
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.75\linewidth]{../Trade/CorrFCA}
+%			\label{fig:CorrFCA}
+%		\end{figure}
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Trading Index correlation \&  return correlation} {Group Level}
+%		
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.75\linewidth]{../Trade/CorrIndexCorr}
+%			\label{fig:CorrIndexCorr}
+%		\end{figure}
+%	\end{frame}
+%	
+%	\begin{frame}{Simultaneous Trade}{Group Level}
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.45\linewidth]{../Trade/MorethanOneProb}
+%			\includegraphics[width=0.45\linewidth]{../Trade/Buy-SellMorethanOneProb}
+%			
+%			\label{fig:morethanoneprob}
+%		\end{figure}
+%		
+%	\end{frame}
+%	
 	
 	\begin{frame}{Ins Imbalance}
 

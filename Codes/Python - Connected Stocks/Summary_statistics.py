@@ -37,7 +37,7 @@ from matplotlib.ticker import FuncFormatter
 
 g.yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("")
 plt.xlabel("Year")
@@ -80,7 +80,7 @@ df = df.drop_duplicates(subset=["symbol", "year_Month"])
 fig = plt.figure(figsize=(8, 4))
 g = sns.lineplot(data=df, x="year_Month", y="5-Residual", hue="Grouped")
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 labels = df.year_Month.to_list()
 tickvalues = df.year_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -106,7 +106,7 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("Monthly Correlation")
 plt.xlabel("Year-Month")
@@ -125,7 +125,7 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("Monthly Correlation")
 plt.xlabel("Year-Month")
@@ -151,7 +151,7 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("")
 plt.xlabel("Year-Month")
@@ -176,7 +176,7 @@ g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.legend(["Others", "In the same BG"])
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.ylabel("")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
@@ -198,7 +198,7 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("")
 plt.xlabel("Year-Month")
@@ -535,7 +535,7 @@ plt.ylabel("Number")
 plt.xlabel("Year-Month")
 plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 # plt.title("Number of unique pair in each month")
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.savefig(pathS + "\\idMonth.eps", bbox_inches="tight")
 plt.savefig(pathS + "\\idMonth.png", bbox_inches="tight")
 
@@ -632,7 +632,7 @@ ax1.pie(
 ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.title("Pairs in the same business groups")
 plt.savefig(pathS + "\\sameIndustryinBG.eps", bbox_inches="tight")
 plt.savefig(pathS + "\\sameIndustryinBG.jpg", bbox_inches="tight")
@@ -692,7 +692,7 @@ ax1.pie(
 ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.title("Other pairs")
 plt.savefig(pathS + "\\sameIndustryNoinBG.eps", bbox_inches="tight")
 plt.savefig(pathS + "\\sameIndustryNoinBG.jpg", bbox_inches="tight")
@@ -897,7 +897,7 @@ data = [
     ],
 ]
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 x = [0, 1, 2]
 
@@ -997,7 +997,7 @@ ax1.pie(
 ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.title("Pairs in the forth quarter")
 plt.savefig(pathS + "\\sameIndustryinQuarter.eps", bbox_inches="tight")
 plt.savefig(pathS + "\\sameIndustryinQuarter.jpg", bbox_inches="tight")
@@ -1020,7 +1020,7 @@ ax1.pie(
 ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 
-pathS = r"D:\Dropbox\Connected Stocks\Final Report"
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.title("Pairs in the forth quarter")
 plt.savefig(pathS + "\\sameIBGinQuarter.eps", bbox_inches="tight")
 plt.savefig(pathS + "\\sameIBGinQuarter.jpg", bbox_inches="tight")

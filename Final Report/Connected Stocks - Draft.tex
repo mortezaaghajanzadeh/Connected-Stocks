@@ -693,8 +693,6 @@ We calculate our controls daily and then report the average of these variables f
 \subsection{Modeling Cross-Sectional Variation in Comovement}
 
 
-\subsubsection{Model and estimation }
-
 \input{Model11}
 
 \begin{itemize}
@@ -704,14 +702,6 @@ We calculate our controls daily and then report the average of these variables f
 \item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $)
 \item we use current period's correlation as a control variable for controlling omitted variable bias
 \end{itemize}
-
-\subsubsection{Results}
-
-\begin{itemize}
-\item Use group fixed effect and no change in our results
-\item 
-\end{itemize}
-\FloatBarrier
 
 
 \begin{table}[htbp]
@@ -723,59 +713,103 @@ We calculate our controls daily and then report the average of these variables f
 }
 \end{table}
 
+Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
+
+
+		\begin{table}[htbp]
+	\centering
+	\caption{one of these tables}
+	\resizebox{\textwidth}{!}{
+		\input{Q2mresultAllPairs.tex}
+	}
+	\newline
+	\resizebox{\textwidth}{!}{
+		\input{mresultAllPairs.tex}
+	}
+\end{table}
 
 \FloatBarrier
-%\subsubsection{Bearish/Bullish Market }
-%
-%
-%\input{BulishModel.tex}
-%
-%
-%
-%\begin{itemize}
-%\item Use Fama macbeth to estimate 
-%
-%\item Estimate that model on a monthly frequency 
-%\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $)
-%\item we use current period's correlation as a control variable for controlling omitted variable bias
-%\end{itemize}
-%
-%\subsubsection{Results}
-%
-%\begin{itemize}
-%\item 37\% of observations are in bearish market
-%\item In table \ref{mresult2Down} we use a time dummy for a bearish market and a bullish market in the next period. We also interact with these dummies with our interested controls. According to results, in a bearish market, only high common ownerships in the business group affect the pair's correlation. However, in a bullish market, all level of common ownership that happens in the same business group has a great effect on the pair's correlation
-%\end{itemize}
-%
-%
-%
-%
-%\begin{table}[htbp]
-%\centering
-%\caption{text}
-%\label{mresult2Down}
-%    \resizebox{1\textwidth}{!}{
-%\input{mresult2Down-slide2.tex}
-%}
-%\end{table}
-%
-%
-%\FloatBarrier
-\subsection{Discontinuity}
+
+Stock returns of group affiliated firms exhibit robustly positive comovement even after controlling for both market and industry effects. Group betas
+($ \beta_{Businussgroup} $) are highly significant across all models.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Cross-sectional average of the time-series coefficients}
+	\resizebox{\textwidth}{!}{
+		\input{BGReturn.tex}
+	}
+\end{table}
+
+\FloatBarrier
+
+
+
+
+		
+		\begin{figure}
+			\centering
+			\caption{Random Pairs from Same Business Group}
+			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA.eps}
+			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA_t.eps}
+		\end{figure}
+
+
+
+
+
+
+
+		\begin{figure}
+			\centering
+			\caption{Random Pairs from Same Size}
+			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA.eps}
+			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA_t.eps}
+		\end{figure}
+
+
+
+
+
+		
+
+
+		\begin{figure}
+			\centering
+			\caption{Random Pairs from Same Industry}
+			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA.eps}	
+			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA_t.eps}
+		\end{figure}
+
+
+
+
+\FloatBarrier
+
+
+
+
+
+
+
+
+
+
+\subsection{High level of common ownership}
 
  \begin{figure}[htbp]
  \centering  
-\includegraphics[width=0.85\linewidth]{"Qmcorr5lrd.eps"}
+\includegraphics[width=0.8\linewidth]{"Qmcorr5lrd.eps"}
 \end{figure}
 
  \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=0.85\linewidth]{"Qmcorr5subsample.eps"}
+	\includegraphics[width=0.8\linewidth]{"Qmcorr5subsample.eps"}
 \end{figure}
 
  \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=0.85\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
+	\includegraphics[width=0.8\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
 \end{figure}
 
 
@@ -791,65 +825,21 @@ We calculate our controls daily and then report the average of these variables f
 \end{figure}
 \FloatBarrier
 
-\subsubsection{Model and estimation}
-
-\input{Model12}
-
-\begin{itemize}
-\item refer to table \ref{ControlsCorr} high correlation between $ (\text{FCA}^* > Q3[\text{FCA}^*]) \times  (\text{FCA}^*) \times {\text{SameGroup}} $ and $ (\text{FCA}^*) \times {\text{SameGroup}} $
-\end{itemize}
-
-%\begin{table}[htbp]
-%\centering
-%\caption{text}
-%\label{ControlsCorr}
-%\resizebox{1\textwidth}{!}{
-%\input{ControlsCorr.tex}
-%}
-%\end{table}
-
-\subsubsection{Results}
-\begin{table}[htbp]
-\centering
-\caption{\scriptsize}
-\label{Qmresult2}
-    \resizebox{0.8\textwidth}{!}{
-\input{Qmresult2-slide.tex}
-}
-\end{table}
-%\begin{table}[htbp]
-%\centering
-%\caption{\scriptsize}
-%\label{Qmresult3}
-%    \resizebox{0.8\textwidth}{!}{
-%\input{Qmresult3-slide.tex}
-%}
-%\end{table}
 
 \begin{table}[htbp]
 	\centering
 	\caption{\scriptsize}
 	\label{Qmresult2subsanple}
-	\resizebox{0.8\textwidth}{!}{
+	\resizebox{0.85\textwidth}{!}{
 		\input{Qmresult2subsanple-slide.tex}
 	}
 \end{table}
 
 
 
-%\begin{landscape}
-%
-%\begin{table}[p]
-%\caption{\scriptsize}
-%\label{Qmresult4}
-%    \resizebox{1.5\textwidth}{!}{
-%\input{Qmresult4-slide.tex}
-%}
-%\end{table}
-%\end{landscape}
 
 \FloatBarrier
-\section{Forecasting Comovement the Presence of Business Groups}
+\section{Comovement in Business Groups}
 \FloatBarrier
 \subsection{Overview of Business Groups in Tehran Stock Exchange}
 
@@ -857,9 +847,6 @@ There is no difference between emerging markets (such as  Chile, India, Indonesi
 These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
 There is a complex ownership network in TSE as an emerging market. 
 This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
-
-
-
 
 The reason for many of these business groups back to the 1979 revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
 some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s.  (IDRO was a state-owned holding company for investing in capital-intensive industries) 
@@ -870,97 +857,71 @@ semi-governmental groups and were the main driver of the formation of business g
 (\cite{Aliabadi2022})
 
 In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and creat large business groups that govern primary  industries.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \FloatBarrier
-\subsection{Modeling Cross-Sectional Variation in Comovement in Business Groups}
-  \begin{figure}   
- \centering
-\includegraphics[width=0.85\linewidth]{"mcorr5bg.eps"}     \end{figure}    
+\subsection{Evidence for correlated trading }
 
- \begin{figure}
- \centering  
-\includegraphics[width=0.85\linewidth]{"Qmcorr5lrdbg.eps"}
+ 
+For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
+We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.75\textwidth}{!}{
+		\input{ImbalanceSummary.tex}
+	}
+	\label{tab:ImbalanceSummary}%
+\end{table}%
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{GroupedSTD}
+	\label{fig:GroupedSTD}
 \end{figure}
-%
-%\subsubsection{Effective Business Group}
-%\input{GroupModel.tex}
-%
-%
-%
-%
-%
-%\subsubsection{Check presence of Banks in Groups}
-%
-%\input{BanckCheck}
-%
-%\FloatBarrier
-%\subsection{Results}
 
-%\subsubsection{Effective Business GRoup}
-%%\begin{landscape}
-%%\begin{table}[p]
-%%\caption{text}
-%%\centering
-%%\label{EffectiveGroup}
-%%\input{lambda23.tex} 
-%%\input{lambda4.tex}
-%%\input{lambda1.tex}  
-%%\end{table}
-%%\end{landscape}
-%
-%\FloatBarrier
-%
-%\subsubsection{Check presence of Banks in Groups}
-%
-%\begin{itemize}
-%\footnotesize
-%\item \textbf{Bank is Uo}  Groups that their ultimate owner is bank
-%\item \textbf{Bank In Group:} Groups that ,at least, consist of one bank
-%\end{itemize}
-%
-%
-%\begin{table}[htbp]
-%\centering
-%    \resizebox{0.7\textheight}{!}{
-%\input{mresult2BankIn-slide.tex}
-%}
-%\end{table}
-%\FloatBarrier
-\section{Robustness Check}
+According to the main hypothesis, we need to compare comovement between pairs in groups with low standard error and other pairs.
+For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
+So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\input{Imbalance.tex}
+	}
+\end{table}
+\FloatBarrier
+
+Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
+
+We compute the daily change of measure by this definition $ \Delta \text{Measure}_{i,t} = \ln(\frac{\text{Measure}_{i,t}}{\text{Measure}_{i,t-1}}) $. 
+We estimate the following regression for each stock across trading days and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
+
+\begin{equation*}
+	\begin{split}
+		\Delta \text{Measure}_{i,t} =  & \text{	}\alpha + \beta_{Market,t} \Delta \text{Measure}_{Market,t}  
+		+ \beta_{Ind,t} \Delta \text{Measure}_{Ind,t} \\ & + \beta_{Group,t} \Delta \text{Measure}_{Group,t} + \delta\text{Controls} + \varepsilon_{i,t}
+	\end{split}
+\end{equation*}
+
+We use the turnover and Amihud measure as a daily trading measures separately. For turnover measure, we use size of the firm as a control variable and for Amihud, we include lead, lag, and contemporaneous market returns, contemporaneous firm return squared, and lead and lag changes in the two portfolio illiquidity measures.
+
+\begin{table}[htbp]
+	\centering
+	\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
+	\resizebox{0.6\textheight}{!}{
+		\input{turnover.tex}
+	}
+\end{table}
+
+
+\begin{table}[htbp]
+	\centering
+	\caption{cross-sectional average of the time-series coefficients for daily changes in illiquidity  }
+	\resizebox{0.7\textheight}{!}{
+		\centering
+		\input{Amihud.tex}
+	}
+\end{table}
 
 
 \FloatBarrier
-
 \section{Conclusion}
 
 
@@ -1002,9 +963,7 @@ In conclusion, the multiple waves of privatization with the development of the s
 \end{table}
 \FloatBarrier
 
-\section{Fortnightly Frequency}
 
-\FloatBarrier
 \end{appendices}
 
 
@@ -1016,20 +975,5 @@ In conclusion, the multiple waves of privatization with the development of the s
 
 
 
-%
-%\begin{thebibliography}{100}
-%\label{Aliabadi}\bibitem{Aliabadi}Esmaeil Aliabadi, 2021, \emph{Internal Capital Markets in Business Groups:
-%Evidence from an Emerging Market} 
-%
-%
-%
-%
-%
-%\label{Almeida}\bibitem{Almeida}Almeida, H., Park, S. Y., Subrahmanyam, M. G., and Wolfenzon, D., 2011, \emph{The structure and formation of business groups: Evidence from korean chaebols}, Jornal of Finance
-%
-%
-%\label{a1}\bibitem{a1}Anton, Polk, 2014, \emph{Connected Stocks} ,Jornal of Finance
-%
-%\end{thebibliography}
 
 \end{document}
