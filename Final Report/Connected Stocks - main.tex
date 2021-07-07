@@ -52,7 +52,7 @@
 	\maketitle
 \section*{Effects}
 \subsection*{\textbf{Hypothesis 1}}
- Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger when pairs are in the same business groups
+ Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger for pairs that are in the same business groups.
 
 		\begin{table}[htbp]
 	\centering
@@ -80,10 +80,12 @@
 
 \newpage
 \subsection*{\textbf{Hypothesis 3}} 
-Return of business group improve forecasts of cross-sectional variation in stocks' return.
+Stock returns of group affiliated firms exhibit robustly positive comovement even after controlling for both market and industry effects. Group betas
+($ \beta_{Businussgroup} $) are highly significant across all models.
 
 			\begin{table}[htbp]
 		\centering
+		\caption{Cross-sectional average of the time-series coefficients}
 		\resizebox{\textwidth}{!}{
 			\input{BGReturn.tex}
 		}
@@ -95,8 +97,8 @@ Return of business group improve forecasts of cross-sectional variation in stock
 \section*{Channels} 
 \subsection*{Trading}
  
-For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total trade on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
-We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them. As we expected grouped standard error is  13.1\% lower with t-stat of 12.57 than ungrouped firms. 
+For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
+We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
 
 \begin{table}[htbp]
 	\centering
@@ -136,17 +138,23 @@ So, this dummy is equal to one if at least one pair's firms belong to the low im
 \end{table}
 \FloatBarrier
 
-Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We estimate changes in firm's turnover on changes of turnover in market, industry, or business groups. we aggregate turnover by using weighted average of firms turnover in that day.
+Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
+
+ We compute the daily change of measure by this definition $ \Delta \text{Measure}_{i,t} = \ln(\frac{\text{Measure}_{i,t}}{\text{Measure}_{i,t-1}}) $. 
+We estimate the following regression for each stock across trading days and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
+
 \begin{equation*}
-	\Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
-	\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
+	\begin{split}
+			\Delta \text{Measure}_{i,t} =  & \text{	}\alpha + \beta_{Market,t} \Delta \text{Measure}_{Market,t}  
+		+ \beta_{Ind,t} \Delta \text{Measure}_{Ind,t} \\ & + \beta_{Group,t} \Delta \text{Measure}_{Group,t} + \delta\text{Controls} + \varepsilon_{i,t}
+	\end{split}
 \end{equation*}
 
+We use the turnover and Amihud measure as a daily trading measures separately. For turnover measure, we use size of the firm as a control variable and for Amihud, we include lead, lag, and contemporaneous market returns, contemporaneous firm return squared, and lead and lag changes in the two portfolio illiquidity measures.
 
 	\begin{table}[htbp]
 	\centering
-	\caption{Estimate regression for
-		each stock across trading days  }
+	\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
 	\resizebox{0.6\textheight}{!}{
 		\input{turnover.tex}
 	}
@@ -155,8 +163,7 @@ Furthermore, we should show that stocks in groups have a similar daily trading b
 
 	\begin{table}[htbp]
 	\centering
-	\caption{Estimate regression for
-		each stock across trading days  }
+	\caption{cross-sectional average of the time-series coefficients for daily changes in illiquidity  }
 	\resizebox{0.7\textheight}{!}{
 		\centering
 		\input{Amihud.tex}
@@ -166,17 +173,20 @@ Furthermore, we should show that stocks in groups have a similar daily trading b
 \newpage
 		\begin{figure}
 	\centering  
+	\caption{Time series of average common ownership measure with 95 percent interval for all pairs}
 	\includegraphics[width=\linewidth]{"FCAtimeSeries.eps"}
 	
 \end{figure} 
 
 			\begin{figure}
 	\centering  
+	\caption{Time series of average common ownership measure with 95 percent interval in pairs in the same business group and others}
 	\includegraphics[width=\linewidth]{"FCAtimeSeriesBG.eps"}
 \end{figure}    
 
 \begin{figure}
 	\centering  
+	\caption{Time series of average common ownership measure with 95 percent interval which is grouped based on pairs' size}
 	\includegraphics[width=\linewidth]{"FCAtimeSeriesPairType.eps"}
 \end{figure}
 
@@ -185,23 +195,25 @@ Furthermore, we should show that stocks in groups have a similar daily trading b
 
 	\begin{figure}
 	\centering  
+	\caption{Percent of group affiliated firms from listed firms}
 	\includegraphics[width=\linewidth]{"BGtimeSeries.eps"}
 	
 \end{figure}  
 
 \begin{figure}
 	\centering  
+	\caption{Percent of group affiliated firms from marketcap}
 	\includegraphics[width=\linewidth]{"BGMarketCaptimeSeries.eps"}
 	
 \end{figure}
  
-\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"CorrtimeSeries.eps"}
-\end{figure}    
-
-\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"BGCorrtimeSeries.eps"}
-\end{figure}
+%\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"CorrtimeSeries.eps"}
+%\end{figure}    
+%
+%\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"BGCorrtimeSeries.eps"}
+%\end{figure}
 \end{document}

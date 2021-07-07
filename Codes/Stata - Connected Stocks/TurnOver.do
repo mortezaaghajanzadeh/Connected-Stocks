@@ -3,7 +3,7 @@ clear
 import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\TurnOver.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Final Report"
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 xtset t id 
 gen lnmarketcap = ln(marketcap)
@@ -11,6 +11,7 @@ label variable lnmarketcap " $ \ln(\text{size})_{i,t} $ "
 
 label variable deltatrun " $ \Delta \text{TurnOver} $ "
 
+replace return = return * return
 
 label variable deltagroup " $ \Delta \text{TurnOver}_{\text{Group}} $ "
 label variable deltamarket " $ \Delta \text{TurnOver}_{\text{Market}} $ "

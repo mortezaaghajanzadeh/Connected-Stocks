@@ -5,7 +5,7 @@ import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\BGReturn.
 
 cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
-xtset id jalalidate  
+xtset jalalidate id   
  
 rename eret ereturn
 
@@ -35,10 +35,6 @@ eststo v1 : quietly asreg ereturn egreturn_firmout emarketret ,fmb newey(7)
 eststo v2 : quietly asreg ereturn egreturn_firmout euopr emarketret,fmb newey(7)
 eststo v3 : quietly asreg ereturn egreturn_firmout emarketret smb winner_loser hml,fmb newey(7)
 eststo v4 : quietly asreg ereturn egreturn_firmout euopr emarketret smb winner_loser hml,fmb newey(7)
-esttab v0 v1 v3 v2  v4 , n r2 nomtitle label order( emarketret egreturn_firmout euopr smb winner_loser hml ) compress
-
-
-
- mgroups(" $ \text{Return}_i - r_f = R_i$ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using BGReturn.tex ,replace
+esttab v0 v1 v3 v2  v4 , n r2 nomtitle label order( emarketret egreturn_firmout euopr smb winner_loser hml ) compress mgroups(" $ \text{Return}_i - r_f = R_i$ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using BGReturn.tex ,replace
 
 
