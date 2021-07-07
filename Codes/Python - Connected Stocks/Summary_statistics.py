@@ -46,14 +46,12 @@ fig.set_rasterized(True)
 plt.savefig(pathS + "\\BGtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\BGtimeSeries.png", bbox_inches="tight")
 #%%
-te = df.groupby(['year','Grouped']).MarketCap.sum().to_frame().reset_index()
-te = te[te.Grouped == 0].merge(te[te.Grouped == 1],on = 'year')
-te['Group affiliated'] = te.MarketCap_y /(te.MarketCap_y + te.MarketCap_x)
-te['Not Group affiliated'] = te.MarketCap_x /(te.MarketCap_y + te.MarketCap_x)
+te = df.groupby(["year", "Grouped"]).MarketCap.sum().to_frame().reset_index()
+te = te[te.Grouped == 0].merge(te[te.Grouped == 1], on="year")
+te["Group affiliated"] = te.MarketCap_y / (te.MarketCap_y + te.MarketCap_x)
+te["Not Group affiliated"] = te.MarketCap_x / (te.MarketCap_y + te.MarketCap_x)
 te
-g = te.plot(
-    y=["Group affiliated", "Not Group affiliated"] ,x = 'year', figsize=(8, 4)
-)
+g = te.plot(y=["Group affiliated", "Not Group affiliated"], x="year", figsize=(8, 4))
 from matplotlib.ticker import FuncFormatter
 
 g.yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
@@ -67,8 +65,6 @@ plt.savefig(pathS + "\\BGMarketCaptimeSeries.png", bbox_inches="tight")
 #%%
 n = path + "Holder_Residual" + ".parquet"
 df = pd.read_parquet(n)
-
-
 
 
 #%%
@@ -116,7 +112,7 @@ plt.savefig(pathS + "\\CorrtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\CorrtimeSeries.png", bbox_inches="tight")
 #%%
 fig = plt.figure(figsize=(8, 4))
-g = sns.lineplot(data=df3, x="t_Month", y="Monthlyρ_5",hue ="sBgroup" )
+g = sns.lineplot(data=df3, x="t_Month", y="Monthlyρ_5", hue="sBgroup")
 time = timeId.drop_duplicates(subset=["t_Month"], keep="last")[["date", "t_Month"]]
 time["date"] = round(time.date / 100).astype(int)
 time
@@ -130,7 +126,7 @@ pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 plt.ylabel("Monthly Correlation")
 plt.xlabel("Year-Month")
 plt.title("Correlation Time Series")
-plt.legend(['Others','Same Group'])
+plt.legend(["Others", "Same Group"])
 fig.set_rasterized(True)
 plt.savefig(pathS + "\\BGCorrtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\BGCorrtimeSeries.png", bbox_inches="tight")
@@ -157,9 +153,33 @@ plt.ylabel("")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
+fig.tight_layout()
 plt.savefig(pathS + "\\FCAtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\FCAtimeSeries.png", bbox_inches="tight")
 
+#%%
+#%%
+
+df2["PairType"] = "Hybrid"
+df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
+df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
+fig = plt.figure(figsize=(8, 4))
+
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="PairType")
+labels = time.date.to_list()
+tickvalues = time.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Common Ownership Time Series")
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathS + "\\FCAtimeSeriesPairType.eps", rasterized=True, dpi=300)
+plt.savefig(pathS + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 #%%
 fig = plt.figure(figsize=(8, 4))
@@ -181,6 +201,7 @@ plt.ylabel("")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
+fig.tight_layout()
 plt.savefig(pathS + "\\FCAtimeSeriesBG.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
 # %%
@@ -205,6 +226,7 @@ plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 plt.legend(["FCA", "FCAP"])
 fig.set_rasterized(True)
+fig.tight_layout()
 plt.savefig(pathS + "\\FCAComparetimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathS + "\\FCAComparetimeSeries.png", bbox_inches="tight")
 
@@ -220,9 +242,6 @@ BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
 
 df["year"] = round(df.jalaliDate / 10000, 0)
 df["year"] = df["year"].astype(int)
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
 
 
 # %%
