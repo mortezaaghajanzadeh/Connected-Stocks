@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{caption}
 \usepackage{tikz}
 \usetikzlibrary{shapes.multipart}
@@ -45,7 +46,11 @@
 \AtBeginSection[]
 {
 	\begin{frame}{Table of Contents}
-		\tableofcontents[hideallsubsections,currentsection,hideothersubsections]
+		\scriptsize
+		
+			\tableofcontents[hideallsubsections,hideothersubsections,currentsection]
+
+		
 	\end{frame}
 }	
 
@@ -1234,16 +1239,16 @@
 	
 	
 
-\begin{frame}{Business group \& Common-ownership}{regression}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textwidth}{!}{
-			\input{Q2mresultAllPairs.tex}
-		}
-	\end{table}
-\end{frame}
+%\begin{frame}{Business group \& Common-ownership}{regression}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textwidth}{!}{
+%			\input{Q2mresultAllPairs.tex}
+%		}
+%	\end{table}
+%\end{frame}
 
-\begin{frame}{Business group \& Common-ownership}{regression}
+\begin{frame}{All non-common owner pairs}{regression}
 	\begin{table}[htbp]
 		\centering
 		\resizebox{1\textwidth}{!}{
@@ -1332,7 +1337,7 @@
 		
 	\end{frame}
 		
-			\begin{frame}{Quarter summary}\label{Monthly22}
+			\begin{frame}{Forth quarter summary}\label{Monthly22}
 		
 \begin{columns}
 	\column{.5\textwidth}  
@@ -1351,7 +1356,7 @@
 			
 		\end{frame}
 		
-\begin{frame}{Quarter summary}\label{Monthly21}
+\begin{frame}{Forth quarter summary}\label{Monthly21}
 	
 	
 	
@@ -1852,8 +1857,7 @@
 
 	
 	
-	
-	\subsection{Trade Analyze}
+
 %	\begin{frame}{Trading}{\cite{greenwood2011stock}}
 %		\begin{itemize}
 %			\item Trading index for business groups:
