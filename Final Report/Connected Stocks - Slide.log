@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  7 JUL 2021 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  7 JUL 2021 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1569,15 +1569,20 @@ Package pdftex.def Info: idMonth-eps-converted-to.pdf  used on input line 848.
 
 ]
 Package epstopdf Info: Source file: <FCAtimeSeries.eps>
-(epstopdf)                    date: 2021-06-27 08:28:20
-(epstopdf)                    size: 13516015 bytes
+(epstopdf)                    date: 2021-07-07 10:33:49
+(epstopdf)                    size: 13516032 bytes
 (epstopdf)             Output file: <FCAtimeSeries-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-06-27 16:00:23
 (epstopdf)                    size: 131864 bytes
 (epstopdf)             Command: <repstopdf --outfile=FCAtimeSeries-eps-converte
 d-to.pdf FCAtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 875.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=FCAtimeSeries-eps-converted-to.pdf FCAtimeSeries.
+eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <FCAtimeSeries-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-07-07 10:34:22
+(epstopdf)                    size: 132390 bytes.
 <FCAtimeSeries-eps-converted-to.pdf, id=1352, 578.16pt x 289.08pt>
 File: FCAtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use FCAtimeSeries-eps-converted-to.pdf>
@@ -1642,15 +1647,20 @@ ut line 893.
  <./FCAtimeSeriesBG-eps-converted-to.pdf> <./FCAtimeSeriesPairType-eps-converte
 d-to.pdf> <./FCAComparetimeSeries-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <BGtimeSeries.eps>
-(epstopdf)                    date: 2021-06-26 12:02:06
-(epstopdf)                    size: 13129524 bytes
+(epstopdf)                    date: 2021-07-07 10:20:38
+(epstopdf)                    size: 13129541 bytes
 (epstopdf)             Output file: <BGtimeSeries-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-06-26 12:13:18
 (epstopdf)                    size: 66493 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGtimeSeries-eps-converted
 -to.pdf BGtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 911.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=BGtimeSeries-eps-converted-to.pdf BGtimeSeries.ep
+s)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <BGtimeSeries-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-07-07 10:34:28
+(epstopdf)                    size: 64048 bytes.
 <BGtimeSeries-eps-converted-to.pdf, id=1426, 578.16pt x 289.08pt>
 File: BGtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGtimeSeries-eps-converted-to.pdf>
@@ -1658,8 +1668,8 @@ Package pdftex.def Info: BGtimeSeries-eps-converted-to.pdf  used on input line
 911.
 (pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
 Package epstopdf Info: Source file: <BGMarketCaptimeSeries.eps>
-(epstopdf)                    date: 2021-06-26 12:15:00
-(epstopdf)                    size: 26228 bytes
+(epstopdf)                    date: 2021-07-07 10:20:45
+(epstopdf)                    size: 26245 bytes
 (epstopdf)             Output file: <BGMarketCaptimeSeries-eps-converted-to.pdf
 >
 (epstopdf)                    date: 2021-06-27 16:00:34
@@ -1667,7 +1677,13 @@ Package epstopdf Info: Source file: <BGMarketCaptimeSeries.eps>
 (epstopdf)             Command: <repstopdf --outfile=BGMarketCaptimeSeries-eps-
 converted-to.pdf BGMarketCaptimeSeries.eps>
 (epstopdf)             \includegraphics on input line 911.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=BGMarketCaptimeSeries-eps-converted-to.pdf BGMark
+etCaptimeSeries.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <BGMarketCaptimeSeries-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2021-07-07 10:34:33
+(epstopdf)                    size: 15930 bytes.
 <BGMarketCaptimeSeries-eps-converted-to.pdf, id=1427, 578.16pt x 289.08pt>
 File: BGMarketCaptimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGMarketCaptimeSeries-eps-converted-to.pdf>
@@ -1679,15 +1695,20 @@ put line 911.
  <./BGtimeSeries-eps-converted-to.pdf> <./BGMarketCaptimeSeries-eps-converted-t
 o.pdf>]
 Package epstopdf Info: Source file: <CorrtimeSeries.eps>
-(epstopdf)                    date: 2021-06-23 16:37:06
-(epstopdf)                    size: 13919518 bytes
+(epstopdf)                    date: 2021-07-07 10:26:58
+(epstopdf)                    size: 13919535 bytes
 (epstopdf)             Output file: <CorrtimeSeries-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-06-23 16:54:44
 (epstopdf)                    size: 123189 bytes
 (epstopdf)             Command: <repstopdf --outfile=CorrtimeSeries-eps-convert
 ed-to.pdf CorrtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 930.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=CorrtimeSeries-eps-converted-to.pdf CorrtimeSerie
+s.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <CorrtimeSeries-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-07-07 10:34:37
+(epstopdf)                    size: 123224 bytes.
 <CorrtimeSeries-eps-converted-to.pdf, id=1498, 578.16pt x 289.08pt>
 File: CorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use CorrtimeSeries-eps-converted-to.pdf>
@@ -1695,15 +1716,20 @@ Package pdftex.def Info: CorrtimeSeries-eps-converted-to.pdf  used on input lin
 e 930.
 (pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
 Package epstopdf Info: Source file: <BGCorrtimeSeries.eps>
-(epstopdf)                    date: 2021-06-23 16:57:56
-(epstopdf)                    size: 13919520 bytes
+(epstopdf)                    date: 2021-07-07 10:31:33
+(epstopdf)                    size: 13919537 bytes
 (epstopdf)             Output file: <BGCorrtimeSeries-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-06-23 17:06:54
 (epstopdf)                    size: 259218 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGCorrtimeSeries-eps-conve
 rted-to.pdf BGCorrtimeSeries.eps>
 (epstopdf)             \includegraphics on input line 930.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=BGCorrtimeSeries-eps-converted-to.pdf BGCorrtimeS
+eries.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <BGCorrtimeSeries-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-07-07 10:34:43
+(epstopdf)                    size: 259253 bytes.
 <BGCorrtimeSeries-eps-converted-to.pdf, id=1499, 578.16pt x 289.08pt>
 File: BGCorrtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
 <use BGCorrtimeSeries-eps-converted-to.pdf>
@@ -2508,7 +2534,7 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (87 pages, 2171366 bytes).
+Output written on "Connected Stocks - Slide.pdf" (87 pages, 2169381 bytes).
 PDF statistics:
  3407 PDF objects out of 3580 (max. 8388607)
  3002 compressed objects within 31 object streams
