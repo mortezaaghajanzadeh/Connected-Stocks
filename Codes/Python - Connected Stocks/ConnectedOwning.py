@@ -189,11 +189,6 @@ df = (
     .rename(columns={"name": "symbol"})
 )
 df = DriveYearMonthDay(df)
-
-df.columns
-
-
-# %%
 PriceData = pd.DataFrame()
 PriceData = PriceData.append(
     df[
@@ -226,10 +221,9 @@ n = path + "Factors-Daily.xlsx"
 Factors = pd.read_excel(n)
 Factors.tail()
 PriceData = (
-    PriceData.merge(Factors, on=["jalaliDate", "date"])
+    PriceData.merge(Factors, on=["jalaliDate", "date"], how="left")
     .sort_values(by=["symbol", "date"])
     .reset_index(drop=True)
-    .dropna()
 )
 
 PriceData.head()
@@ -274,7 +268,7 @@ df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="backfill")
 
 pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+# pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
 n = pathBG + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
 uolist = (
@@ -291,10 +285,6 @@ names = sorted(BGroup)
 ids = range(len(names))
 mapingdict = dict(zip(names, ids))
 BG["BGId"] = BG["uo"].map(mapingdict)
-
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
 tt = BG[BG.year == 1398]
 tt["year"] = 1399
 BG = BG.append(tt).reset_index(drop=True)
@@ -633,7 +623,9 @@ re = wg.apply(ResidualFactor)
 re = re.reset_index(drop=True)
 col = "symbol"
 re[col] = re[col].apply(lambda x: convert_ar_characters(x))
-
+HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
+re["date"] = re.date.astype(int)
+HolderData["date"] = HolderData.date.astype(int)
 
 # %%
 residuals = re[re.jalaliDate > 13940000]
@@ -789,10 +781,6 @@ ids = range(len(names))
 mapingdict = dict(zip(names, ids))
 BG["BGId"] = BG["uo"].map(mapingdict)
 
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
-
 
 # %%
 fkey = zip(list(BG.symbol), list(BG.year))
@@ -834,7 +822,6 @@ df.to_parquet(path + "Holder_Residual.parquet")
 df = pd.read_parquet(path + "Holder_Residual.parquet")
 df.head()
 #%%
-
 
 
 # %%
