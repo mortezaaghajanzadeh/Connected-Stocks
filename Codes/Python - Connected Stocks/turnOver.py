@@ -155,8 +155,9 @@ df["volume"] = df["volume"].astype(float)
 df["value"] = df["value"].astype(float)
 df["marketCap"] = df.close_price * df.shrout
 df["return"] = df.groupby("symbol").close_price.pct_change()
-df["TurnOver"] = ln(df.volume / df.marketCap)
+
 df["Amihud_volume"] = ln(abs(df["return"]) / df.volume)
+df["TurnOver"] = ln(df.volume / df.marketCap)
 df["Amihud_value"] = ln(abs(df["return"]) / df.value)
 df = df[(df.Amihud_value < 1e10) & (df.Amihud_value > 0)]
 gg = df.groupby("symbol")
