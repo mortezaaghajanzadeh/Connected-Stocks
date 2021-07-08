@@ -5,7 +5,7 @@ import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected
 
 cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
-xtset t id 
+xtset  t regidyear
 gen lnmarketcap = ln(marketcap)
 label variable lnmarketcap " $ \ln(\text{size})_{i,t} $ "
 
@@ -15,32 +15,60 @@ replace return = return * return
 
 label variable deltagroup " $ \Delta \text{TurnOver}_{\text{Group}} $ "
 label variable deltamarket " $ \Delta \text{TurnOver}_{\text{Market}} $ "
-
-
-
 label variable deltaindustry " $ \Delta \text{TurnOver}_{\text{Industry}} $ "
 
-eststo v1: quietly asreg deltatrun deltamarket deltaindustry  lnmarketcap  , fmb newey(7)
+
+
+
+
+eststo v1: quietly asreg deltatrun deltamarket deltaindustry   , fmb newey(7)
 estadd loc weight "-" , replace
+estadd loc control "No",replace
+
+eststo v11: quietly asreg deltatrun deltamarket deltaindustry   lnmarketcap lagdeltamarket leaddeltamarket  lagdeltaindustry leaddeltaindustry , fmb newey(7)
+estadd loc weight "-" , replace
+estadd loc control "Yes",replace
+
+
 
 
 eststo v2: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   , fmb newey(7)
 estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
+estadd loc control "No",replace
+
+eststo v21: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket, fmb newey(7)
+estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
+estadd loc control "Yes",replace
+
+
+cd "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks"
+
+quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket,fmb newey(7) first  save(FirstStageTurnover)
+
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+
 
 
 replace deltagroup = delta_justmarketgroup
+
 eststo v3: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   , fmb newey(7)
 estadd loc weight " $ \text{MC} $ " , replace
+estadd loc control "No",replace
 
-replace deltagroup = deltagroup_equall
-eststo v4: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    , fmb newey(7)
-estadd loc weight "$ \text{Equal} $" , replace
+replace lagdeltagroup = lagdelta_justmarketgroup 
+replace leaddeltagroup = leaddelta_justmarketgroup
+
+eststo v31: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket, fmb newey(7)
+estadd loc weight " $ \text{MC} $ " , replace
+estadd loc control "Yes",replace
+
+
   
 
   
   
 
-esttab v1 v2 v3 v4, n r2 label s( N weight  r2 ,  lab("Observations" "Group Weight " "$ R^2 $")) nomtitle order(deltamarket deltagroup deltaindustry lnmarketcap) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using turnover.tex ,replace
+esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using turnover.tex ,replace
 
 
 
@@ -73,6 +101,12 @@ estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "Yes" , replace
 
 
+cd "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks"
+
+quietly asreg delta_amihud delta_amihud_market delta_amihud_group lnmarketcap delta_amihud_industry mreturn lagmreturn leadmreturn return lagdelta_amihud_market leaddelta_amihud_market leaddelta_amihud_marketgroup lagdelta_amihud_marketgroup lagdelta_amihud_industry leaddelta_amihud_industry,fmb newey(7) first  save(FirstStageAmihud)
+
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+
 
 replace delta_amihud_group = delta_amihud_justmarketgr
 
@@ -89,6 +123,7 @@ estadd loc control "Yes" , replace
   
 
 esttab v1 v11 v2 v21 v3 v31,n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle order(delta_amihud_market delta_amihud_group delta_amihud_industry lnmarketcap) keep(delta_amihud_market delta_amihud_group delta_amihud_industry) mgroups("Dependent Variable: $\Delta \text{Amihud}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Amihud.tex ,replace
+
 
 
 

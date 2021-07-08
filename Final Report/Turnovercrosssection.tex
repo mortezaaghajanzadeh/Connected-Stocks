@@ -1,0 +1,31 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{10}{c}}
+\hline\hline
+                &\multicolumn{10}{c}{Dependent Variable: $ \beta_{Group} $ }                                                                                                                                  \\\cmidrule(lr){2-11}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         &\multicolumn{1}{c}{(10)}         \\
+\hline
+Excess          &    0.681\sym{***}&    0.787\sym{***}&                  &                  &                  &                  &                  &                  &                  &                  \\
+                &   (5.59)         &   (6.55)         &                  &                  &                  &                  &                  &                  &                  &                  \\
+[1em]
+ExcessDummy     &                  &                  &   0.0711         &    0.103\sym{*}  &                  &                  &                  &                  &                  &                  \\
+                &                  &                  &   (1.15)         &   (1.98)         &                  &                  &                  &                  &                  &                  \\
+[1em]
+ExcessDiff      &                  &                  &                  &                  &    1.152\sym{***}&    0.889\sym{***}&                  &                  &                  &                  \\
+                &                  &                  &                  &                  &   (6.31)         &   (7.03)         &                  &                  &                  &                  \\
+[1em]
+ExcessHigh      &                  &                  &                  &                  &                  &                  &    0.641\sym{***}&    0.481\sym{***}&                  &                  \\
+                &                  &                  &                  &                  &                  &                  &   (7.20)         &   (6.81)         &                  &                  \\
+[1em]
+Low Imbalance std&                  &                  &                  &                  &                  &                  &                  &                  &    0.300\sym{***}&   0.0929         \\
+                &                  &                  &                  &                  &                  &                  &                  &                  &   (4.51)         &   (1.47)         \\
+\hline
+Observations    &      720         &      720         &      727         &      727         &      720         &      720         &      727         &      727         &      707         &      707         \\
+Time FE         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         &   0.0595         &    0.115         &  0.00376         &   0.0524         &   0.0776         &    0.116         &   0.0962         &    0.132         &   0.0274         &   0.0515         \\
+\hline\hline
+\multicolumn{11}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{11}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

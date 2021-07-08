@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import re as ree
 from itertools import islice
-
+from numpy import log as ln
 
 # %%
 def vv4(row):
@@ -833,6 +833,8 @@ df.to_parquet(path + "Holder_Residual.parquet")
 # df = pd.read_csv(path + 'Holder_Residual.csv')
 df = pd.read_parquet(path + "Holder_Residual.parquet")
 df.head()
+#%%
+
 
 
 # %%

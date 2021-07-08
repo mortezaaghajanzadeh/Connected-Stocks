@@ -138,11 +138,6 @@ def BG(df):
     mapingdict = dict(zip(names, ids))
     BG["BGId"] = BG["uo"].map(mapingdict)
 
-    tt = BG[BG.year == 1397]
-    tt["year"] = 1398
-    BG = BG.append(tt).reset_index(drop=True)
-    tt = BG[BG.year == 1398]
-
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] > 3)
     for i in ["uo", "cfr", "cr"]:
         print(i)
@@ -303,7 +298,7 @@ for i in ["Mreturn", "lagMreturn", "leadMreturn"]:
     result[i] = result.date.map(mapdict)
 #%%
 result = result.rename(
-    columns= {
+    columns={
         "Delta_Amihud_valueIndustry": "Delta_Amihud_Industry",
         "Delta_Amihud_valueGroup": "Delta_Amihud_Group",
         "Delta_Amihud_value_JustMarketGroup": "Delta_Amihud_JustMarketGroup",
@@ -329,9 +324,9 @@ for i in mlist:
     result["lead" + i] = gg[i].shift(-1)
 #%%
 result = result.rename(
-    columns = {
-        'lagDelta_Amihud_JustMarketGroup':'lagDelta_Amihud_MarketGroup',
-        'leadDelta_Amihud_JustMarketGroup':'leadDelta_Amihud_MarketGroup',
+    columns={
+        "lagDelta_Amihud_JustMarketGroup": "lagDelta_Amihud_MarketGroup",
+        "leadDelta_Amihud_JustMarketGroup": "leadDelta_Amihud_MarketGroup",
     }
 )
 
@@ -342,12 +337,15 @@ result["id"] = result.symbol.map(mapdict)
 mlist = result.date.unique()
 mapdict = dict(zip(mlist, range(len(mlist))))
 result["t"] = result.date.map(mapdict)
-
+# %%
+result["idyear"] = result["id"].astype(str) + "-" + result["year"].astype(str)
+mlist = result.idyear.unique()
+mapdict = dict(zip(mlist, range(len(mlist))))
+result["regidyear"] = result.idyear.map(mapdict)
+result
 # %%
 
-result.to_csv(path + "Connected stocks\TurnOver.csv", index=False)
-# %%
-result = pd.read_csv(path + "Connected stocks\TurnOver.csv")
-# %%
 
 #%%
+result.to_csv(path + "Connected stocks\TurnOver.csv", index=False)
+# %%

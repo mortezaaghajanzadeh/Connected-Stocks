@@ -729,6 +729,8 @@ def daily(g):
 
 result = gg.apply(daily)
 result = result.reset_index().rename(columns={"level_1": "uo"})
+#%%
+#%%
 a = result.groupby("uo")[Imbalances[:-1]].mean()
 a = a.sort_values(by=Imbalances[:-1]).dropna()
 a
@@ -746,17 +748,26 @@ path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\
 n1 = path + "MonthlyNormalzedFCAP7.2" + ".csv"
 print(len(df1))
 df1.to_csv(n1)
-# %%
-import pandas as pd
-import numpy as np
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-n1 = path + "MonthlyNormalzedFCAP6.1" + ".csv"
-df = pd.read_csv(n1)
 # %%
-df[["BGId_x", "uo_x"]].drop_duplicates().sort_values(by="BGId_x")
-# %%
-df1["PairType"] = 0
-df1.loc[(df1.GRank_x >= 5) & (df1.GRank_y >= 5), "PairType"] = 2
-df1.loc[(df1.GRank_x < 5) & (df1.GRank_y < 5), "PairType"] = 1
-df1.groupby("PairType").NMFCA.describe()
+a = result.groupby("uo")[Imbalances[:-1]].mean()
+a = a.sort_values(by=Imbalances[:-1]).dropna()
+lowlist = list(a[a.InsImbalance_value <= a.InsImbalance_value.median()].index)
+a["lowImbalanceStd"] = 0
+a.loc[a.index.isin(lowlist), "lowImbalanceStd"] = 1
+a.to_csv(path + "lowImbalanceUO.csv")
+#%%
+result['year'] = result.yearMonth/100
+result['year'] = result.year.astype(int)
+gg = result.groupby(['year'])
+def lowdummy(g):
+    t = g.groupby('uo')[Imbalances[:-1]].mean()
+    t = t.sort_values(by=Imbalances[:-1]).dropna()
+    lowlist = list(t[t.InsImbalance_value <= t.InsImbalance_value.median()].index)
+    t["lowImbalanceStd"] = 0
+    t.loc[t.index.isin(lowlist), "lowImbalanceStd"] = 1
+    t
+    return t
+
+a = gg.apply(lowdummy).reset_index()
+a.to_csv(path + "lowImbalanceUO-Annual.csv",index = False)
