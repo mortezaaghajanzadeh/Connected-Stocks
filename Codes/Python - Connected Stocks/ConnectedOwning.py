@@ -4,7 +4,7 @@ import pandas as pd
 
 # %%
 # path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 df = pd.read_parquet(path + "Holder_Residual.parquet")
 
@@ -13,8 +13,22 @@ df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
 )
 
 df = df[df.jalaliDate < 13990000]
+try:
+    df = df.drop(columns = ['Delta_Trunover'])
+except:
+    1+2
+#%%
+df = df.rename(columns = 
+    {
+        '4_Residual' : '4-Residual',
+        '5_Residual' : '5-Residual',
+        '6_Residual' : '6-Residual',
+        '2_Residual' : '2-Residual',
+        '5Lag_Residual' : '5Lag-Residual',
+        'Delta_TurnOver':'Delta_Trunover'
+    }
+)
 df.head()
-
 # %%
 def FCAPf(S_g, g):
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
@@ -62,47 +76,64 @@ def Calculation(g, S_g):
         return f
     a["SizeRatio"] = (a["MarketCap_x"]) / (a["MarketCap_y"])
 
+    glist = [
+        "date",
+        "jalaliDate",
+        "id_x",
+        "id_y",
+        "week_of_year",
+        "month_of_year",
+        "year_of_year",
+        "group_name_x",
+        "group_name_y",
+        "Ret_x",
+        "Ret_y",
+        "SizeRatio",
+        "MarketCap_x",
+        "MarketCap_y",
+        "Percentile_Rank_x",
+        "Percentile_Rank_y",
+        "BookToMarket_x",
+        "BookToMarket_y",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
+        
+    ]
     f = (
-        a.groupby(
-            [
-                "date",
-                "jalaliDate",
-                "id_x",
-                "id_y",
-                "week_of_year",
-                "month_of_year",
-                "year_of_year",
-                "group_name_x",
-                "group_name_y",
-                "Ret_x",
-                "Ret_y",
-                "SizeRatio",
-                "MarketCap_x",
-                "MarketCap_y",
-                "2-Residual_x",
-                "2-Residual_y",
-                "4_Residual_x",
-                "4_Residual_y",
-                "5-Residual_x",
-                "5-Residual_y",
-                "6-Residual_x",
-                "6-Residual_y",
-                "5Lag_Residual_x",
-                "5Lag_Residual_y",
-                "Percentile_Rank_x",
-                "Percentile_Rank_y",
-                "BookToMarket_x",
-                "BookToMarket_y",
-                "BGId_x",
-                "BGId_y",
-                "position_x",
-                "position_y",
-            ]
-        )[["FCAPf", "FCA", "Holder_act_y", "Holder_act_x", "Holder_x"]]
+        a.groupby(glist)[["FCAPf", "FCA", "Holder_act_y", "Holder_act_x", "Holder_x"]]
         .sum()
         .reset_index()
     )
+    mlist = [
+        "BGId_x",
+        "BGId_y",
+        "position_x",
+        "position_y",
+        "2-Residual_x",
+        "2-Residual_y",
+        "4-Residual_x",
+        "4-Residual_y",
+        "5-Residual_x",
+        "5-Residual_y",
+        "6-Residual_x",
+        "6-Residual_y",
+        "5Lag-Residual_x",
+        "5Lag-Residual_y",
+        "Delta_Trunover_x",
+        "Delta_Trunover_y",
+        "Delta_Amihud_x",
+        "Delta_Amihud_y",
+    ]
 
+    for col in mlist:
+        mapdict = dict(zip(a.date, a[col]))
+        f[col] = f.date.map(mapdict)
     a = a[["type_x", "type_y"]].drop_duplicates()
     a["Sametype"] = 0
     a.loc[a.type_x == a.type_y, "Sametype"] = 1
@@ -197,6 +228,14 @@ def MonthlyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
+                'TurnOver_x',
+                'Amihud_x',
+                'volume_x',
+                'value_x',
+                'TurnOver_y',
+                'Amihud_y',
+                'volume_y',
+                'value_y',
             ]
         ]
         .mean()
@@ -216,6 +255,14 @@ def MonthlyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
     ]
 
     for i in vlist:
@@ -245,7 +292,9 @@ def MonthlyCalculation(f):
     f["Monthlyρ_4_f"] = f["Monthlyρ_4"].shift(-1)
     f["Monthlyρ_5_f"] = f["Monthlyρ_5"].shift(-1)
     f["Monthlyρ_6_f"] = f["Monthlyρ_6"].shift(-1)
-    f["MonthlyρLag_5_f"] = f["MonthlyρLag_5"].shift(-1)
+    f["MonthlyρLag_5_f"] = f["Monthlyρ_5Lag"].shift(-1)
+    f["Monthlyρ_turn_f"] = f["Monthlyρ_turn"].shift(-1)
+    f["Monthlyρ_amihud_f"] = f["Monthlyρ_amihud"].shift(-1)
     return f
 
 
@@ -256,63 +305,57 @@ def MonthlyCorr(f):
             [
                 "2-Residual_x",
                 "2-Residual_y",
-                "4_Residual_x",
-                "4_Residual_y",
+                "4-Residual_x",
+                "4-Residual_y",
                 "5-Residual_x",
                 "5-Residual_y",
                 "6-Residual_x",
                 "6-Residual_y",
-                "5Lag_Residual_x",
-                "5Lag_Residual_y",
+                "5Lag-Residual_x",
+                "5Lag-Residual_y",
+                "Delta_Trunover_x",
+                "Delta_Trunover_y",
+                "Delta_Amihud_x",
+                "Delta_Amihud_y",
             ]
         ]
         .corr()
         .reset_index()
     )
 
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "month_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
-    FourCor = fc.loc[fc.level_2 == "4_Residual_y"][
-        ["year_of_year", "month_of_year", "4_Residual_x"]
-    ].rename(columns={"4_Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "month_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "month_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
-    FiveCor = fc.loc[fc.level_2 == "5Lag_Residual_y"][
-        ["year_of_year", "month_of_year", "5Lag_Residual_x"]
-    ].rename(columns={"5Lag_Residual_x": "ρLag_5"})
+    for i in [
+        "2-Residual",
+        "4-Residual",
+        "5-Residual",
+        "6-Residual",
+        "5Lag-Residual",
+                ]:
+        cor = fc.loc[fc.level_2 == i + "_y"][
+            ["year_of_year", "month_of_year", i + "_x"]
+        ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
+        TimeId = zip(list(cor.year_of_year), list(cor.month_of_year))
+        mapingdict = dict(zip(TimeId, list(cor["ρ_" + i.split("-")[0]])))
+        f["Monthly" + "ρ_" + i.split("-")[0]] = f.set_index(
+            ["year_of_year", "month_of_year"]
+        ).index.map(mapingdict)
 
-    TimeId = zip(list(TwoCor.year_of_year), list(TwoCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(TwoCor.ρ_2)))
-    f["Monthlyρ_2"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
+    turncor = fc.loc[fc.level_2 == "Delta_Trunover_y"][
+        ["year_of_year", "month_of_year", "Delta_Trunover_x"]
+    ].rename(columns={"Delta_Trunover_x": "ρ_turn"})
+    TimeId = zip(list(turncor.year_of_year), list(turncor.month_of_year))
+    mapingdict = dict(zip(TimeId, list(turncor.ρ_turn)))
+    f["Monthlyρ_turn"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
+        mapingdict
+    )
+    amihudcor = fc.loc[fc.level_2 == "Delta_Amihud_y"][
+        ["year_of_year", "month_of_year", "Delta_Amihud_x"]
+    ].rename(columns={"Delta_Amihud_x": "ρ_amihud"})
+    TimeId = zip(list(amihudcor.year_of_year), list(amihudcor.month_of_year))
+    mapingdict = dict(zip(TimeId, list(amihudcor.ρ_amihud)))
+    f["Monthlyρ_amihud"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
         mapingdict
     )
 
-    TimeId = zip(list(FourCor.year_of_year), list(FourCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(FourCor.ρ_4)))
-    f["Monthlyρ_4"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-
-    TimeId = zip(list(ThreeCor.year_of_year), list(ThreeCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(ThreeCor.ρ_5)))
-    f["Monthlyρ_5"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-    TimeId = zip(list(SixCor.year_of_year), list(SixCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(SixCor.ρ_6)))
-    f["Monthlyρ_6"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-    TimeId = zip(list(FiveCor.year_of_year), list(FiveCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(FiveCor.ρLag_5)))
-    f["MonthlyρLag_5"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
     return f
 
 
@@ -336,6 +379,14 @@ def WeeklyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
+                'TurnOver_x',
+                'Amihud_x',
+                'volume_x',
+                'value_x',
+                'TurnOver_y',
+                'Amihud_y',
+                'volume_y',
+                'value_y',
             ]
         ]
         .mean()
@@ -355,6 +406,14 @@ def WeeklyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
     ]
 
     for i in vlist:
@@ -381,7 +440,9 @@ def WeeklyCalculation(f):
     f["Weeklyρ_4_f"] = f["Weeklyρ_4"].shift(-1)
     f["Weeklyρ_5_f"] = f["Weeklyρ_5"].shift(-1)
     f["Weeklyρ_6_f"] = f["Weeklyρ_6"].shift(-1)
-    f["WeeklyρLag_5_f"] = f["WeeklyρLag_5"].shift(-1)
+    f["WeeklyρLag_5_f"] = f["Weeklyρ_5Lag"].shift(-1)
+    f["Weeklyρ_turn_f"] = f["Weeklyρ_turn"].shift(-1)
+    f["Weeklyρ_amihud_f"] = f["Weeklyρ_amihud"].shift(-1)
     return f
 
 
@@ -391,56 +452,55 @@ def WeeklyCorr(f):
             [
                 "2-Residual_x",
                 "2-Residual_y",
-                "4_Residual_x",
-                "4_Residual_y",
+                "4-Residual_x",
+                "4-Residual_y",
                 "5-Residual_x",
                 "5-Residual_y",
                 "6-Residual_x",
                 "6-Residual_y",
-                "5Lag_Residual_x",
-                "5Lag_Residual_y",
+                "5Lag-Residual_x",
+                "5Lag-Residual_y",
+                "Delta_Trunover_x",
+                "Delta_Trunover_y",
+                "Delta_Amihud_x",
+                "Delta_Amihud_y",
             ]
         ]
         .corr()
         .reset_index()
     )
-
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "week_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
-    FourCor = fc.loc[fc.level_2 == "4_Residual_y"][
-        ["year_of_year", "week_of_year", "4_Residual_x"]
-    ].rename(columns={"4_Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "week_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "week_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
-    FiveCor = fc.loc[fc.level_2 == "5Lag_Residual_y"][
-        ["year_of_year", "week_of_year", "5Lag_Residual_x"]
-    ].rename(columns={"5Lag_Residual_x": "ρLag_5"})
-
-    TimeId = zip(list(TwoCor.year_of_year), list(TwoCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(TwoCor.ρ_2)))
-    f["Weeklyρ_2"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(FourCor.year_of_year), list(FourCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(FourCor.ρ_4)))
-    f["Weeklyρ_4"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(ThreeCor.year_of_year), list(ThreeCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(ThreeCor.ρ_5)))
-    f["Weeklyρ_5"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-    TimeId = zip(list(SixCor.year_of_year), list(SixCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(SixCor.ρ_6)))
-    f["Weeklyρ_6"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(FiveCor.year_of_year), list(FiveCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(FiveCor.ρLag_5)))
-    f["WeeklyρLag_5"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
+    for i in [
+        "2-Residual",
+        "4-Residual",
+        "5-Residual",
+        "6-Residual",
+        "5Lag-Residual",
+                ]:
+        cor = fc.loc[fc.level_2 == i + "_y"][
+            ["year_of_year", "week_of_year", i + "_x"]
+        ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
+        TimeId = zip(list(cor.year_of_year), list(cor.week_of_year))
+        mapingdict = dict(zip(TimeId, list(cor["ρ_" + i.split("-")[0]])))
+        f["Weekly" + "ρ_" + i.split("-")[0]] = f.set_index(
+            ["year_of_year", "week_of_year"]
+        ).index.map(mapingdict)
+    turncor = fc.loc[fc.level_2 == "Delta_Trunover_y"][
+        ["year_of_year", "week_of_year", "Delta_Trunover_x"]
+    ].rename(columns={"Delta_Trunover_x": "ρ_turn"})
+    TimeId = zip(list(turncor.year_of_year), list(turncor.week_of_year))
+    mapingdict = dict(zip(TimeId, list(turncor.ρ_turn)))
+    f["Weeklyρ_turn"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
         mapingdict
     )
+    amihudcor = fc.loc[fc.level_2 == "Delta_Amihud_y"][
+        ["year_of_year", "week_of_year", "Delta_Amihud_x"]
+    ].rename(columns={"Delta_Amihud_x": "ρ_amihud"})
+    TimeId = zip(list(amihudcor.year_of_year), list(amihudcor.week_of_year))
+    mapingdict = dict(zip(TimeId, list(amihudcor.ρ_amihud)))
+    f["Weeklyρ_amihud"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
+        mapingdict
+    )    
+    
 
     return f
 
@@ -451,11 +511,11 @@ df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(149)
-S_g = gdata.get_group(139)
+g = gdata.get_group(152)
+S_g = gdata.get_group(142)
 
 
-FCAPf(S_g, g)
+a = FCAPf(S_g, g)
 
 
 # %%
