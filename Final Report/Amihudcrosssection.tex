@@ -1,31 +1,37 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{10}{c}}
+\begin{tabular}{l*{14}{c}}
 \hline\hline
-                &\multicolumn{10}{c}{Dependent Variable: $ \beta_{Group} $ }                                                                                                                                  \\\cmidrule(lr){2-11}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         &\multicolumn{1}{c}{(10)}         \\
+                &\multicolumn{14}{c}{Dependent Variable: $ \beta_{Group} $ }                                                                                                                                                                                                              \\\cmidrule(lr){2-15}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         &\multicolumn{1}{c}{(10)}         &\multicolumn{1}{c}{(11)}         &\multicolumn{1}{c}{(12)}         &\multicolumn{1}{c}{(13)}         &\multicolumn{1}{c}{(14)}         \\
 \hline
-Excess          &    0.412\sym{***}&    0.587\sym{***}&                  &                  &                  &                  &                  &                  &                  &                  \\
-                &   (4.29)         &   (6.24)         &                  &                  &                  &                  &                  &                  &                  &                  \\
+Excess          &    0.174\sym{*}  &    0.354\sym{***}&                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  \\
+                &   (2.55)         &   (4.78)         &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  \\
 [1em]
-ExcessDummy     &                  &                  &  0.00742         &    0.103\sym{*}  &                  &                  &                  &                  &                  &                  \\
-                &                  &                  &   (0.14)         &   (1.98)         &                  &                  &                  &                  &                  &                  \\
+ExcessDummy     &                  &                  &  -0.0190         &   0.0764\sym{*}  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  \\
+                &                  &                  &  (-0.48)         &   (1.99)         &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  \\
 [1em]
-ExcessDiff      &                  &                  &                  &                  &    0.621\sym{***}&    0.889\sym{***}&                  &                  &                  &                  \\
-                &                  &                  &                  &                  &   (4.67)         &   (7.03)         &                  &                  &                  &                  \\
+ExcessDiff      &                  &                  &                  &                  &    0.285\sym{**} &    0.554\sym{***}&                  &                  &                  &                  &                  &                  &                  &                  \\
+                &                  &                  &                  &                  &   (2.86)         &   (5.59)         &                  &                  &                  &                  &                  &                  &                  &                  \\
 [1em]
-ExcessHigh      &                  &                  &                  &                  &                  &                  &    0.403\sym{***}&    0.481\sym{***}&                  &                  \\
-                &                  &                  &                  &                  &                  &                  &   (5.80)         &   (6.81)         &                  &                  \\
+ExcessHigh      &                  &                  &                  &                  &                  &                  &    0.242\sym{***}&    0.346\sym{***}&                  &                  &                  &                  &                  &                  \\
+                &                  &                  &                  &                  &                  &                  &   (4.39)         &   (5.52)         &                  &                  &                  &                  &                  &                  \\
 [1em]
-Low Imbalance std&                  &                  &                  &                  &                  &                  &                  &                  &    0.167\sym{**} &   0.0929         \\
-                &                  &                  &                  &                  &                  &                  &                  &                  &   (3.09)         &   (1.47)         \\
+Low Imbalance std&                  &                  &                  &                  &                  &                  &                  &                  &    0.126\sym{**} &   0.0471         &                  &                  &                  &                  \\
+                &                  &                  &                  &                  &                  &                  &                  &                  &   (3.15)         &   (1.20)         &                  &                  &                  &                  \\
+[1em]
+Position        &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &  -0.0102         &   0.0312         &                  &                  \\
+                &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &  (-0.62)         &   (1.81)         &                  &                  \\
+[1em]
+Centrality      &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &    0.684\sym{***}&    0.271         \\
+                &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &                  &   (4.02)         &   (1.58)         \\
 \hline
-Observations    &      720         &      720         &      727         &      727         &      720         &      720         &      727         &      727         &      707         &      707         \\
-Time FE         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-$ R^2 $         &   0.0381         &    0.111         &  0.00203         &   0.0524         &   0.0397         &    0.116         &   0.0659         &    0.132         &   0.0153         &   0.0515         \\
+Observations    &     1153         &     1153         &     1168         &     1168         &     1153         &     1153         &     1168         &     1168         &     1145         &     1145         &     1153         &     1153         &     1113         &     1113         \\
+Time FE         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Controls        &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         &       No         &      Yes         \\
+$ R^2 $         &  0.00898         &   0.0857         &  0.00196         &   0.0607         &   0.0102         &   0.0882         &   0.0266         &    0.104         &   0.0107         &   0.0648         &  0.00260         &   0.0641         &   0.0117         &   0.0438         \\
 \hline\hline
-\multicolumn{11}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{11}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{15}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{15}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

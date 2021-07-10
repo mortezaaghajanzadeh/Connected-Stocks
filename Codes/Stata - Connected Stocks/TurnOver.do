@@ -68,7 +68,7 @@ estadd loc control "Yes",replace
   
   
 
-esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using turnover.tex ,replace
+// esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using turnover.tex ,replace
 
 
 
@@ -122,7 +122,7 @@ estadd loc control "Yes" , replace
   
   
 
-esttab v1 v11 v2 v21 v3 v31,n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle order(delta_amihud_market delta_amihud_group delta_amihud_industry lnmarketcap) keep(delta_amihud_market delta_amihud_group delta_amihud_industry) mgroups("Dependent Variable: $\Delta \text{Amihud}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Amihud.tex ,replace
+// esttab v1 v11 v2 v21 v3 v31,n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle order(delta_amihud_market delta_amihud_group delta_amihud_industry lnmarketcap) keep(delta_amihud_market delta_amihud_group delta_amihud_industry) mgroups("Dependent Variable: $\Delta \text{Amihud}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Amihud.tex ,replace
 
 
 

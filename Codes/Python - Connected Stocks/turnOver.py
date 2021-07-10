@@ -139,7 +139,7 @@ def BG(df):
     BG["BGId"] = BG["uo"].map(mapingdict)
 
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] > 3)
-    for i in ["uo", "cfr", "cr"]:
+    for i in ["uo", "cfr", "cr","position","centrality"]:
         print(i)
         fkey = zip(list(BG.symbol), list(BG.year))
         mapingdict = dict(zip(fkey, BG[i]))
@@ -148,6 +148,7 @@ def BG(df):
 
 
 df = BG(df)
+#%%
 df["Grouped"] = 1
 df.loc[df.uo.isnull(), "Grouped"] = 0
 # %%
@@ -159,7 +160,7 @@ df["return"] = df.groupby("symbol").close_price.pct_change()
 df["Amihud_volume"] = ln(abs(df["return"]) / df.volume)
 df["TurnOver"] = ln(df.volume / df.marketCap)
 df["Amihud_value"] = ln(abs(df["return"]) / df.value)
-df = df[(df.Amihud_value < 1e10) & (df.Amihud_value > 0)]
+df = df[(df.Amihud_value < 1e10) & (df.Amihud_value > -1e10)]
 gg = df.groupby("symbol")
 df["DeltaTrun"] = gg["TurnOver"].diff()
 # df["Delta_Amihud_volume"] = gg["Amihud_volume"].diff()
@@ -177,9 +178,9 @@ def groupDaily(sg):
 
     for i in ["", "_JustMarket"]:
         sg["Delta" + i] = (sg["weight" + i] * sg["DeltaTrun"]).sum()
-        sg["Delta_Amihud_volume" + i] = (
-            sg["weight" + i] * sg["Delta_Amihud_volume"]
-        ).sum()
+        # sg["Delta_Amihud_volume" + i] = (
+        #     sg["weight" + i] * sg["Delta_Amihud_volume"]
+        # ).sum()
         sg["Delta_Amihud_value" + i] = (
             sg["weight" + i] * sg["Delta_Amihud_value"]
         ).sum()
@@ -264,14 +265,7 @@ result["Delta_Amihud_value_JustMarketGroup"] = (
     - result.weight_JustMarketGroup * result.Delta_Amihud_value
 ) / (1 - result.weight_JustMarketGroup)
 
-# result["Delta_Amihud_volumeGroup"] = (
-#     result.Delta_Amihud_volumeGroup - result.weightGroup * result.Delta_Amihud_volume
-# ) / (1 - result.weightGroup)
-# result["Delta_Amihud_volume_JustMarketGroup"] = (
-#     result.Delta_Amihud_volume_JustMarketGroup
-#     - result.weight_JustMarketGroup * result.Delta_Amihud_volume
-# ) / (1 - result.weight_JustMarketGroup)
-#
+
 
 result["DeltaIndustry"] = (
     result.DeltaIndustry - result.weightIndustry * result.DeltaTrun
@@ -281,10 +275,6 @@ result["Delta_Amihud_valueIndustry"] = (
     df.Delta_Amihud_valueIndustry - result.weightIndustry * result.Delta_Amihud_value
 ) / (1 - result.weightIndustry)
 
-# result["Delta_Amihud_volumeIndustry"] = (
-#     result.Delta_Amihud_volumeIndustry
-#     - result.weightIndustry * result.Delta_Amihud_volume
-# ) / (1 - result.weightIndustry)
 #%%
 market = pd.read_excel(path + "IRX6XTPI0009.xls").rename(
     columns={"<DTYYYYMMDD>": "date", "<CLOSE>": "index"}
@@ -308,28 +298,7 @@ result = result.rename(
     }
 )
 #%%
-mlist = [
-    "DeltaMarket",
-    "Delta_Amihud_Market",
-    "DeltaGroup",
-    "Delta_JustMarketGroup",
-    "Delta_Amihud_Group",
-    "Delta_Amihud_JustMarketGroup",
-    "DeltaIndustry",
-    "Delta_Amihud_Industry",
-]
-gg = result.groupby("id")
-for i in mlist:
-    print(i)
-    result["lag" + i] = gg[i].shift()
-    result["lead" + i] = gg[i].shift(-1)
-#%%
-result = result.rename(
-    columns={
-        "lagDelta_Amihud_JustMarketGroup": "lagDelta_Amihud_MarketGroup",
-        "leadDelta_Amihud_JustMarketGroup": "leadDelta_Amihud_MarketGroup",
-    }
-)
+
 
 #%%
 mlist = result.symbol.unique()
@@ -345,7 +314,27 @@ mapdict = dict(zip(mlist, range(len(mlist))))
 result["regidyear"] = result.idyear.map(mapdict)
 result
 # %%
-
+mlist = [
+    "DeltaMarket",
+    "Delta_Amihud_Market",
+    "DeltaGroup",
+    "Delta_JustMarketGroup",
+    "Delta_Amihud_Group",
+    "Delta_Amihud_JustMarketGroup",
+    "DeltaIndustry",
+    "Delta_Amihud_Industry",
+]
+gg = result.groupby("id")
+for i in mlist:
+    print(i)
+    result["lag" + i] = gg[i].shift()
+    result["lead" + i] = gg[i].shift(-1)
+result = result.rename(
+    columns={
+        "lagDelta_Amihud_JustMarketGroup": "lagDelta_Amihud_MarketGroup",
+        "leadDelta_Amihud_JustMarketGroup": "leadDelta_Amihud_MarketGroup",
+    }
+)
 
 #%%
 result.to_csv(path + "Connected stocks\TurnOver.csv", index=False)

@@ -57,6 +57,8 @@ df = df[
         "uo",
         "cfr",
         "cr",
+        "centrality",
+        "position",
         "Grouped",
         "marketCap",
         "regidyear",
