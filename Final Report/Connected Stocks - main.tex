@@ -74,7 +74,7 @@
 	}
 \newline
 \resizebox{\textwidth}{!}{
-	\input{mresultAllPairs.tex}
+	\input{Q3mresultAllPairs.tex}
 }
 \end{table}
 
@@ -96,36 +96,36 @@ Stock returns of group affiliated firms exhibit robustly positive comovement eve
 
 \section*{Channels} 
 \subsection*{Trading}
- 
-For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
-We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
-
-\begin{table}[htbp]
-	\centering
-	\resizebox{0.75\textwidth}{!}{
-\input{ImbalanceSummary.tex}
-}
-	\label{tab:addlabel}%
-\end{table}%
-
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.8\linewidth]{GroupedSTD}
-	\label{fig:groupedstd}
-\end{figure}
-
-According to the main hypothesis, we need to compare comovement between pairs in groups with low standard error and other pairs.
- For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
-So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.
-\begin{table}[htbp]
-	\centering
-	\resizebox{\textwidth}{!}{
-		\input{Imbalance.tex}
-	}
-\end{table}
-\FloatBarrier
+% 
+%For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
+%We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
+%
+%\begin{table}[htbp]
+%	\centering
+%	\resizebox{0.75\textwidth}{!}{
+%\input{ImbalanceSummary.tex}
+%}
+%	\label{tab:addlabel}%
+%\end{table}%
+%
+%
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.8\linewidth]{GroupedSTD}
+%	\label{fig:groupedstd}
+%\end{figure}
+%
+%According to the main hypothesis, we need to compare comovement between pairs in groups with low standard error and other pairs.
+% For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
+%So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.
+%\begin{table}[htbp]
+%	\centering
+%	\resizebox{\textwidth}{!}{
+%		\input{Imbalance.tex}
+%	}
+%\end{table}
+%\FloatBarrier
 
 Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
 
@@ -160,56 +160,56 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 \label{Amihud}
 \end{table}
 
-In a second test of our proposed channel, we control for stock  characteristics in a multivariate regression. we regress $ \beta_{Group} $
-on the previous year's excess control right from cash flow right, controlling for firm size and average of trading measure. In our main
-specification, we include time-fixed effects and cluster the standard errors at the firm and time-dimension level to account for time-series and cross-sectional dependence. [Table \ref{Turnovercrosssection},\ref{Amihudcrosssection}]  The specification is :
-\begin{equation*}
-	\begin{split}
-		\beta_{Group,i,t} =& \alpha + \beta_1 \text{GroupVariable}_{i,t-1} + \beta_2 \ln(\text{Size})_{i,t-1} \\
-		&+ \beta_3 \text{trading measure}(avg)_{i,t-1} + \text{time effects} + \varepsilon_{i,t-1}
-	\end{split}
-\end{equation*}
-which our group variables are:
-	\begin{enumerate}
-	\item $ \text{Excess} = (\text{cr} - \text{cfr})/\text{cr} $
-	\item $ \text{ExcessDiff} = \text{cr} - \text{cfr} $
-	\item $ \text{ExcessDummy} = \left\{\begin{array}{ll}
-		1 & \text{cr} - \text{cfr}>0\\
-		0 & \text{cr} - \text{cfr}\leq 0
-	\end{array}\right.  $
-	\item $ \text{ExcessHigh} = \left\{\begin{array}{ll}
-		1 & \text{Excess}\geq\text{Q3}(\text{Excess})\\
-		0 & \text{Excess}<\text{Q3}(\text{Excess})
-	\end{array}\right.  $
-\item $ \text{Low Imbalance std} = \left\{\begin{array}{ll}
-	1 & std_{InsImb,t}\leq\text{Median}(std_{InsImb,t})\\
-	0 & std_{InsImb,t}>\text{Median}(std_{InsImb,t})
-\end{array}\right.  $
-
-\end{enumerate}
-
-
-
-	\begin{table}[htbp]
-	\centering
-	\caption{$ \beta_{Group} $ of daily changes in the turnover on Excess control right ($ (cr - cf)/cr $) and other measures   }
-	\resizebox{0.7\textheight}{!}{
-		\centering
-		\input{Turnovercrosssection.tex}
-	}
-\label{Turnovercrosssection}
-\end{table}
-
-
-	\begin{table}[htbp]
-	\centering
-	\caption{$ \beta_{Group} $ of daily changes in the Amihud measure  on Excess control right ($ (cr - cf)/cr $) and other measures   }
-	\resizebox{0.7\textheight}{!}{
-		\centering
-		\input{Amihudcrosssection.tex}
-	}
-\label{Amihudcrosssection}
-\end{table}
+%In a second test of our proposed channel, we control for stock  characteristics in a multivariate regression. we regress $ \beta_{Group} $
+%on the previous year's excess control right from cash flow right, controlling for firm size and average of trading measure. In our main
+%specification, we include time-fixed effects and cluster the standard errors at the firm and time-dimension level to account for time-series and cross-sectional dependence. [Table \ref{Turnovercrosssection},\ref{Amihudcrosssection}]  The specification is :
+%\begin{equation*}
+%	\begin{split}
+%		\beta_{Group,i,t} =& \alpha + \beta_1 \text{GroupVariable}_{i,t-1} + \beta_2 \ln(\text{Size})_{i,t-1} \\
+%		&+ \beta_3 \text{trading measure}(avg)_{i,t-1} + \text{time effects} + \varepsilon_{i,t-1}
+%	\end{split}
+%\end{equation*}
+%which our group variables are:
+%	\begin{enumerate}
+%	\item $ \text{Excess} = (\text{cr} - \text{cfr})/\text{cr} $
+%	\item $ \text{ExcessDiff} = \text{cr} - \text{cfr} $
+%	\item $ \text{ExcessDummy} = \left\{\begin{array}{ll}
+%		1 & \text{cr} - \text{cfr}>0\\
+%		0 & \text{cr} - \text{cfr}\leq 0
+%	\end{array}\right.  $
+%	\item $ \text{ExcessHigh} = \left\{\begin{array}{ll}
+%		1 & \text{Excess}\geq\text{Q3}(\text{Excess})\\
+%		0 & \text{Excess}<\text{Q3}(\text{Excess})
+%	\end{array}\right.  $
+%\item $ \text{Low Imbalance std} = \left\{\begin{array}{ll}
+%	1 & std_{InsImb,t}\leq\text{Median}(std_{InsImb,t})\\
+%	0 & std_{InsImb,t}>\text{Median}(std_{InsImb,t})
+%\end{array}\right.  $
+%
+%\end{enumerate}
+%
+%
+%
+%	\begin{table}[htbp]
+%	\centering
+%	\caption{$ \beta_{Group} $ of daily changes in the turnover on Excess control right ($ (cr - cf)/cr $) and other measures   }
+%	\resizebox{0.7\textheight}{!}{
+%		\centering
+%		\input{Turnovercrosssection.tex}
+%	}
+%\label{Turnovercrosssection}
+%\end{table}
+%
+%
+%	\begin{table}[htbp]
+%	\centering
+%	\caption{$ \beta_{Group} $ of daily changes in the Amihud measure  on Excess control right ($ (cr - cf)/cr $) and other measures   }
+%	\resizebox{0.7\textheight}{!}{
+%		\centering
+%		\input{Amihudcrosssection.tex}
+%	}
+%\label{Amihudcrosssection}
+%\end{table}
 
 \begin{table}[htbp]
 	\centering

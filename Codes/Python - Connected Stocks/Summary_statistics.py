@@ -12,7 +12,7 @@ path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\
 
 # %%
 
-n2 = path + "MonthlyNormalzedFCAP7.2" + ".csv"
+n2 = path + "MonthlyNormalzedFCAP8.2" + ".csv"
 df2 = pd.read_csv(n2)
 print("n2 Done")
 
@@ -73,24 +73,24 @@ df.loc[df.uo.isnull(), "Grouped"] = 0
 df["year_Month"] = round(df.date / 100).astype(int).astype(str)
 df = df[df.jalaliDate < 13990000]
 df = df.drop_duplicates(subset=["symbol", "year_Month"])
-fig = plt.figure(figsize=(8, 4))
-g = sns.lineplot(data=df, x="year_Month", y="5-Residual", hue="Grouped")
+# fig = plt.figure(figsize=(8, 4))
+# g = sns.lineplot(data=df, x="year_Month", y="5-Residual", hue="Grouped")
 
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-labels = df.year_Month.to_list()
-tickvalues = df.year_Month
-g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
-g.set_xticklabels(labels[::-5], rotation="vertical")
-plt.margins(x=0.01)
-plt.ylabel("")
-plt.xlabel("Year-Month")
-plt.title("Residuals Time Series")
-plt.legend(["Others", "Group affiliated"])
-fig.set_rasterized(True)
-plt.savefig(pathS + "\\ResidualtimeSeries.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\ResidualtimeSeries.png", bbox_inches="tight")
-n = path + "Holder_Residual" + ".parquet"
-df = pd.read_parquet(n)
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# labels = df.year_Month.to_list()
+# tickvalues = df.year_Month
+# g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+# g.set_xticklabels(labels[::-5], rotation="vertical")
+# plt.margins(x=0.01)
+# plt.ylabel("")
+# plt.xlabel("Year-Month")
+# plt.title("Residuals Time Series")
+# plt.legend(["Others", "Group affiliated"])
+# fig.set_rasterized(True)
+# plt.savefig(pathS + "\\ResidualtimeSeries.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\ResidualtimeSeries.png", bbox_inches="tight")
+# n = path + "Holder_Residual" + ".parquet"
+# df = pd.read_parquet(n)
 #%%
 fig = plt.figure(figsize=(8, 4))
 g = sns.lineplot(data=df3, x="t_Month", y="Monthlyρ_5")
