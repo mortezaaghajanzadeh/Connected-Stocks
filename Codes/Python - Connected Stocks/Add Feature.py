@@ -31,7 +31,7 @@ def _multiple_replace(mapping, text):
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 
-n1 = path + "MonthlyNormalzedFCAP7.1" + ".parquet"
+n1 = path + "MonthlyNormalzedFCAP8.1" + ".parquet"
 df1 = pd.read_parquet(n1)
 df = pd.read_parquet(path + "Holder_Residual.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
@@ -191,6 +191,9 @@ pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - 
 # pathBG = path
 n = pathBG + "Grouping_CT.xlsx"
 DD = pd.read_excel(n)
+DD = pd.read_excel(n)
+DD = DD[DD.listed == 1]
+DD = DD.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
 bankinGroup = list(DD[DD.symbol.isin(bankingSymbol)]["uo"].unique())
 invinGroup = list(DD[DD.symbol.isin(investmentSymbol)]["uo"].unique())
 
@@ -215,8 +218,8 @@ df1["invinGroup_y"] = df1.BGId_y.map(mapdict)
 df1.isnull().sum()
 
 # %%
-
-df1 = df1[(df1.MonthlyFCAPf < 1) & (df1.WeeklyFCAPf < 1) & (df1.FCAPf < 1)]
+print(len(df1[(df1.MonthlyFCAPf >= 1)]))
+df1 = df1[(df1.MonthlyFCAPf < 1)]
 gg = df1.groupby(["t_Month"])
 
 
@@ -238,8 +241,7 @@ BG = pd.read_excel(n)
 BG = BG[BG.listed == 1]
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
 BG = BG[BG.year >= 1394]
-tt = BG[BG.year == 1397]
-BG = BG.append(tt).reset_index(drop=True)
+
 
 # %%
 
@@ -412,7 +414,7 @@ for t in [
 #     df1[t+"_y"] = df1.groupby('id')[t+"_y"].fillna(method = 'ffill')
 
 #%%
-
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 n = path + "Holder_Residual.parquet"
 df = pd.read_parquet(n)
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
@@ -462,31 +464,6 @@ df1 = df1.rename(columns={"MonthlyFCA*": "NMFCA"})
 df1["MonthlyCrossOwnership"] = df1.MonthlyCrossOwnership.replace(np.nan, 0)
 df1 = df1.drop(
     columns=[
-        "Weeklyρ_2",
-        "Weeklyρ_4",
-        "Weeklyρ_5",
-        "WeeklyρLag_5",
-        "WeeklySizeRatio",
-        "WeeklyMarketCap_x",
-        "WeeklyMarketCap_y",
-        "WeeklyPercentile_Rank_x",
-        "WeeklyPercentile_Rank_y",
-        "Weeklysize1",
-        "Weeklysize2",
-        "WeeklySameSize",
-        "WeeklyB/M1",
-        "WeeklyB/M2",
-        "WeeklySameB/M",
-        "WeeklyFCAPf",
-        "WeeklyFCA",
-        "Weeklyρ_2_f",
-        "Weeklyρ_4_f",
-        "Weeklyρ_5_f",
-        "WeeklyρLag_5_f",
-        "FCAP*",
-        "FCA*",
-        "WeeklyFCAP*",
-        "WeeklyFCA*",
         "Ret_x",
         "Ret_y",
         "SizeRatio",
@@ -494,17 +471,16 @@ df1 = df1.drop(
         "MarketCap_y",
         "2-Residual_x",
         "2-Residual_y",
-        "4_Residual_x",
-        "4_Residual_y",
+        "4-Residual_x",
+        "4-Residual_y",
         "5-Residual_x",
         "5-Residual_y",
-        "5Lag_Residual_x",
-        "5Lag_Residual_y",
+        "5Lag-Residual_x",
+        "5Lag-Residual_y",
         "Percentile_Rank_x",
         "Percentile_Rank_y",
         "BookToMarket_x",
         "BookToMarket_y",
-        "WeeklyCrossOwnership",
     ]
 )
 #%%
@@ -631,6 +607,7 @@ def BG(df):
         .uo.unique()
     )
     BG = BG[BG.listed == 1]
+    BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
     print(len(BG))
     BG = BG[BG.uo.isin(uolist)]
     print(len(BG))
@@ -738,14 +715,14 @@ lowlist = list(a[a.InsImbalance_value <= a.InsImbalance_value.median()].index)
 df1["lowImbalanceStd"] = 0
 df1.loc[df1.uo_x.isin(lowlist), "lowImbalanceStd"] = 1
 df1.loc[df1.uo_y.isin(lowlist), "lowImbalanceStd"] = 1
-mapdict = dict(zip(a.index,a.InsImbalance_value))
-df1['InsImbalance_value_x'] = df1.uo_x.map(mapdict)
-df1['InsImbalance_value_y'] = df1.uo_y.map(mapdict)
+mapdict = dict(zip(a.index, a.InsImbalance_value))
+df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
+df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 
 #%%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-n1 = path + "MonthlyNormalzedFCAP7.2" + ".csv"
+n1 = path + "MonthlyNormalzedFCAP8.2" + ".csv"
 print(len(df1))
 df1.to_csv(n1)
 
@@ -757,11 +734,13 @@ a["lowImbalanceStd"] = 0
 a.loc[a.index.isin(lowlist), "lowImbalanceStd"] = 1
 a.to_csv(path + "lowImbalanceUO.csv")
 #%%
-result['year'] = result.yearMonth/100
-result['year'] = result.year.astype(int)
-gg = result.groupby(['year'])
+result["year"] = result.yearMonth / 100
+result["year"] = result.year.astype(int)
+gg = result.groupby(["year"])
+
+
 def lowdummy(g):
-    t = g.groupby('uo')[Imbalances[:-1]].mean()
+    t = g.groupby("uo")[Imbalances[:-1]].mean()
     t = t.sort_values(by=Imbalances[:-1]).dropna()
     lowlist = list(t[t.InsImbalance_value <= t.InsImbalance_value.median()].index)
     t["lowImbalanceStd"] = 0
@@ -769,5 +748,6 @@ def lowdummy(g):
     t
     return t
 
+
 a = gg.apply(lowdummy).reset_index()
-a.to_csv(path + "lowImbalanceUO-Annual.csv",index = False)
+a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)

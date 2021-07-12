@@ -1,6 +1,6 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP7.2.csv", encoding(UTF-8) 
+import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP8.2.csv", encoding(UTF-8) 
 
 
 cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
@@ -89,13 +89,17 @@ gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
 label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times \text{FCA}^*  $ "
 
-gen ImbalanceNMFCA = lowimbalancestd * NMFCA
-
-label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{FCA}^* } $ "
 
 label variable sbgroup "Same Group"
 
 rename nmfca NMFCA
+
+label variable NMFCA "$ \text{FCA*} $"
+
+
+gen ImbalanceNMFCA = lowimbalancestd * NMFCA
+
+label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{FCA}^* } $ "
 
 
 
@@ -103,10 +107,9 @@ generate msize1size2 =  monthlysize1 * monthlysize2
 label variable msize1size2 "$ Size1 \times Size2 $"
 
 
-rename nmfca NMFCA2
+rename nmfca2 NMFCA2
 
 
-label variable NMFCA "$ \text{FCA*} $"
 
 
 label variable NMFCA2 "$ \text{QuardaticTr}(\text{FCA}^ *) $"
