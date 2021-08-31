@@ -1,0 +1,161 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]
+
+\title[FamaMacbeth regression vs. Fixed effect]{FamaMacbeth regression vs. Fixed effect}
+%\subtitle{}
+\author[S.M.Aghajanzadeh]{Presentation:  \\ Seyyed Morteza Aghajanzadeh}
+\institute[TeIAS]{Tehran Institute for Advanced Studies \\ TeIAS}
+\centering
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}	
+\begin{document}
+\maketitle
+
+\begin{frame}{Intro}
+\begin{itemize}
+\item  Two general forms of dependence
+\begin{itemize}
+\item {Firm Effect} 
+\begin{itemize}
+\item The residuals of a regression can be cross sectionally
+correlated\\
+ (e.g. the observations of a firm in different years are correlated)
+\end{itemize}
+
+\item {Time Effect}
+\begin{itemize}
+\item  The residuals of a given year may be correlated across firms.
+\\
+ (e.g. the observations of a year in different firms are correlated)
+\end{itemize}
+
+
+\end{itemize}
+\item  An important statistical issue is that firm returns are cross-sectionall correlated: $ \text{Cov}(r_{it},r_{jt}) $ is far from zero.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Fama Macbeth (1973)}
+\begin{itemize}
+
+\item Two Step Regression
+\begin{itemize}
+ \item First Step
+ \begin{equation*}
+\begin{array}{c}
+Y_{i1} = \delta_{0,1} + \delta_{1,1}^1 X^1_{i,1} + \dots  + \delta_{k,1}^k X^k_{i,1}  + \varepsilon_{i,1}\\
+\vdots\\
+Y_{iT} = \delta_{0,1} + \delta_{1,T}^1 X^1_{i,T} + \dots  + \delta_{k,T}^k X^k_{i,T}  + \varepsilon_{i,T}
+\end{array}
+\end{equation*}
+
+
+
+\item Second Step
+\begin{equation*}
+\left[\begin{matrix}
+\bar{Y_1}\\
+\vdots\\
+\bar{Y_T}
+\end{matrix}\right]_{T\times 1} =
+ \left[\begin{matrix}
+1 &  \delta_1^0 &  \delta_1^1 & \dots  &  \delta_1^k\\
+\vdots&  \vdots &  \vdots &  \dots &  \vdots\\
+1 &  \delta_T^0 &  \delta_T^1 & \dots &  \delta_T^k
+\end{matrix}\right]_{T\times (k+2)}
+\times \left[\begin{matrix}
+\lambda\\
+\lambda_0\\
+\lambda_1\\
+\vdots\\
+\lambda_k
+\end{matrix}\right] _{(k+2)\times 1}
+\end{equation*}
+
+
+\end{itemize}
+\item Fama-MacBeth technique was
+developed to account for correlation between observations on different firms in the same year
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fama Macbeth (1973)}
+\begin{itemize}
+\item Fama-MacBeth approach was designed to deal with time effects in a panel data set,
+not firm effects.
+
+\item The firm effect may be less important in regressions where the dependent variable is returns
+(and excess returns are serially uncorrelated) than in corporate finance applications where
+unobserved firm effects can be very important
+
+\item FM method is used for the estimation of factor risk premia in the analysis of linear factor models
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Newey and West (1987)}
+\begin{itemize}
+\item Newey and West (1987) adjustment to the results of the
+regression, however, produces a new standard error for the estimated mean that is
+adjusted for autocorrelation and heteroscedasticity.
+\begin{itemize}
+\item Only input is the number of lags to use when performing the adjustment
+\begin{equation*}
+Lag = 4(T/100)^{\frac{2}{9}}
+\end{equation*}
+where T is the number of periods in the time series
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fixed Effect}
+\begin{equation*}
+y_{i,t} = \alpha + \beta x_{it} + \varepsilon_{it} \rightarrow \left\{
+\begin{array}{lr}
+y_{i,t} = \alpha + \beta x_{it} + (a_i + u_{it}) & \text{ Firm Fixed effect}\\\\
+y_{i,t} = \alpha + \beta x_{it} + (a_t + \nu_{it}) & \text{ Time Fixed effect}
+\end{array}
+\right.
+\end{equation*}
+
+\begin{itemize}
+\item Assumptions about unobserved terms: \textbf{strict exogeneity}
+\begin{enumerate}
+\item Firm Fixed effect:
+$ E(x_{it}u_{is}) = 0 \text{ for } s = 1, 2, \dots , T $
+\item Time Fixed effect:
+$ E(x_{it}\nu_{st}) = 0 \text{ for } s = 1, 2, \dots , n $
+\end{enumerate}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Both methods rely on zero correlation between the error terms of non-contemporaneous periods. A difference is weighting: 
+\begin{itemize}
+\item The Fama-Macbeth procedure weights each time period equally.
+\item A panel regression will effectively give greater weight to periods with more observations or greater variation in right hand side variables
+\end{itemize}
+\item The econometric analysis of panel data depends in a crucial way on the cross-sectional and timeseries correlation of the regression residuals
+\end{itemize}
+\end{frame}
+\begin{frame}{Estimation Results }{By different methods}
+\begin{table}[htbp]
+\centering
+    \resizebox{\textheight}{!}{
+\input{FMFE.tex}
+}
+\end{table}
+\end{frame}
+
+\end{document}
