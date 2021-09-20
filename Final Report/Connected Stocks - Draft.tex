@@ -97,247 +97,6 @@ Ownership; Indexing
 
 
 
-\section{Measurement of cross-ownership}
-
-
-In table \ref{maasurmentsSummary} we summarize common ownership measurements which are used in literature. There are two groups of measurement for common ownership.
-First of all, model-based measures that capture common ownership base on a proper  model. These measures have a better economic interpretation, but most of them are bi-directional or industry-level measures.(e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s})
-
- In addition to model-based measures, some ad hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})
-
-
-\begin{table}[htbp]
-\centering
-\scriptsize
-\caption{ This table summarizes common ownership measurements in the literature.}
-\label{maasurmentsSummary}
-\resizebox{\textwidth}{!}{
-    \begin{tabular}{cllc}
-    \hline\hline
-    \multicolumn{1}{c}{Group}      & \multicolumn{1}{c}{Paper} & \multicolumn{1}{c}{measurment} & \multicolumn{1}{c}{Flaws} \\
-          \hline\hline
-           \addlinespace
-    \multicolumn{1}{c}{\multirow{5}[2]{*}{Model Based}} &  \cite{harford2011institutional}     &  \scriptsize  $
-       \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $     & Bi-directional \\
-      \addlinespace 
-          &  \cite{azar2018anticompetitive}     &  $   \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $     & Industry level \\
-          \addlinespace
-          &  \cite{gilje2020s}     &    $ \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}    $   & Bi-directional  \\
-          \midrule
-    \addlinespace 
-    \multicolumn{1}{c}{\multirow{7}[5]{*}{Ad hoc}} & \cite{he2017product};      &  \multirow{2}{*}{$ \sum_{i\in I^{A,B}} 1 $}     & invariant to the level   \\
-          & \cite{he2019internalizing} & & of ‌common ownership \\
-          \addlinespace
-          &  \cite{newham2018common}     &   $ \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $    & ? \\
-          \addlinespace
-          & \multirow{2}{*}{   \cite{AntonPolk} }  &  \multirow{2}{*}{ $ \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B }  $ }   &  Invariant to the  \\
-           & & & decomposition of ownership \\
-          \addlinespace
-          & \cite{freeman2019effects}; & \multirow{2}{*}{ $ \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $ }&?\\
-                    &  \cite{hansen1996externalities} & & ?\\
-                    \hline\hline
-    \end{tabular}
-    }
-\end{table}
-
-
-
-In our primary analysis, we estimate the impact of common ownership on pair's correlation. For this purpose, we need a pair-level measure with a good economic interpretation that is not bi-directional. As a result, we propose a modification for Anton's measure (\cite{AntonPolk}) that captures the extent of common ownership distribution and apply this measure in this study.
-
-\subsection{Modified Anton's measure }
-We reformulate mentioned Anton's measure in table \ref{maasurmentsSummary}. This factor measure common ownership as the total value of
-stock held by the F common-holders of the two stocks, scaled by the total market capitalization of the two stocks
-\begin{equation}
-\text{Overlap}_{Sum}(i, j) = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}
-\label{Sum}
-\end{equation}
- where $ S^f_{i,t}$ is the number of shares held by owner f
-at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t} $, and similarly for stock j. 
-As shown in equation \ref{Sum}, this measure neglects different distribution of common owners and represents the percent of joint-held market capitalization from the total market capitalization of the two stocks.
-
-We reweight this formula to capture the difference between ownership distribution. Our proposed measures are shown in equation \ref{sqrt} and \ref{Quadratic} where all variables as the same Anton's measure. Both modified measures represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to number of holders.\footnote{ \tiny
-\begin{itemize}
-\item Each holder owns $ 1/n $ of each firm ,Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $, So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i/n $\\
- $
-[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
-= [\frac{\sqrt{n}(\sqrt{\alpha_1} +\sqrt{\alpha_2 })}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 = n $
-\\
-$
-[\frac{\sum_{f=1}^{n} {(\alpha_1/n)^2}+\sum_{f=1}^{n} {(\alpha_2/n)^2}}{\alpha_1^2 +{\alpha_2}^2}]^{-1} = [\frac{{\alpha_1^2 + \alpha_2^2 }}{n(\alpha_1^2 + \alpha_2^2)}]^{-1} = n
-$
-\end{itemize}}
-
-
-
-\begin{equation}
-       \text{Overlap}_{Sqrt}(i, j) =  [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 
-            \label{sqrt}
-\end{equation}
-
-\begin{equation}
-\text{Overlap}_{Quadratic}(i, j) =  [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}
-\label{Quadratic}
-\end{equation}
-
-There are some numeric examples for better comparison. Two firms (X and Y) have one common owner who has $ \alpha $ and $ \beta $ from each market capitalization, respectively. (illustrated in figure \ref{gExample1}) 
-for better illustration, assume that the sum of holder's ownership equal to 100 percent ($ \alpha + \beta  = 100$), and two firms' market cap is equal. 
-
-
-\begin{figure}[htbp]
-\centering
-\caption{ Numeric example 1 }
-\label{gExample1}
-\begin{tikzpicture}[node distance=1cm]
-
-\node (Firm) [startstop3] {\tiny Firm X};
-\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
-\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
-
-
-\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
-
-\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
-%
-%\node() at (3,0)
-%    {$ \alpha + \beta = 100 $}; 
-\end{tikzpicture}
-\end{figure}\bigskip
-
-
-
-We  calculate common ownership measures base on equations \ref{Sum} (Sum), \ref{sqrt} (SQRT), and \ref{Quadratic} (Quadratic) for different ownership distributions.  Figure \ref{example1Results}  reports calculations results. As we expected, Anton's measure is constant at a fixed level of aggregate common ownership, but SQRT and  Quadratic vary from concentrated to dispersed ownership.  Concentrated ownership (50-50) has a greater common ownership measure than dispersed (10-90).
-
-\begin{figure}[htbp]
-  \caption{ Comparison of three measure for common ownership}
-  \label{example1Results}
-\includegraphics[width=0.47\linewidth]{1.png}
-\includegraphics[width=0.47\linewidth]{2.png}
-
-\end{figure}
-
-
-Now assume that there are three common owners for the two mentioned firms. First holder's ownership from firm X and Y are respectively $\alpha_1$ and $\beta_1$. It is similar for other holders. (illustrated in figure \ref{gExample2}). As before, the firm's market cap is equal. We calculate measures for concentrated or disparate ownership and ownerships that are less than the aggregate of the firm's market cap. Table \ref{Example2} reports calculation results. For ownerships that consist of total market cap,  results are consistent with the first example. Although, when aggregate ownership decreases, the Quadratic measure denotes unrealistic numbers. We conclude that our Quadratic measure is not a good measure for common ownership.
-
-
-\begin{figure}[htbp]  \centering
-  \caption{ Numeric example 2}
-  \label{gExample2}
-  
-\centering
-
-\begin{tikzpicture}[node distance=1cm]
-
-
-\node (Firm) [startstop3] {\tiny Firm X};
-\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
-
-\node (Owner) [startstop3,above of = Firm , yshift=1.25cm , xshift=-3.5cm ] {\tiny Common owner 1 };
-
-
-\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
-
-\node (Owner3) [startstop3,below of = Firm , yshift=-1.25cm , xshift=-3.5cm ] {\tiny Common owner 3 };
-
-
-
-
-
-\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
-
-\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
-
-
-
-\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
-
-\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
-
-
-
-\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
-
-\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
-
-
-
-\end{tikzpicture}
-
-\end{figure}
-
-
-\begin{table}[htbp]
-\centering
-
-\caption{ text}
-\label{Example2}
- \resizebox{1\textwidth}{!}
-          {
-\input{Example2.tex}
-    }
-\end{table}
-
-
-
-
-A fundamental assumption in previous examples is equality of firms' market cap. In the last example, we relax this assumption. Table \ref{marketcap} reports calculated measures for fixed aggregate ownership on different relative market cap ratios. We extend our analysis to higher market cap ratios and report our results in figure \ref{sqrtMarket} and \ref{sumMarket}. In this setting, the SQRT measure has a better variation relative to Anton's measure. 
-
-
-
-
-
-
-\begin{figure}[htbp]
-\centering
- \caption{ SQRT measure for fixed aggregate ownership on different relative market cap ratios}
-  \label{sqrtMarket}
-\includegraphics[width=0.85\linewidth]{3.png}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
- \caption{ Sum measure for fixed aggregate ownership on different relative market cap ratios}
- \label{sumMarket}
-\includegraphics[width=0.85\linewidth]{4.png}
-\end{figure}
-
-\begin{table}[htbp]
-\centering
-\caption{text }
-\label{marketcap}
-\resizebox{!}{!}
-{
-\input{marketcap}
-}
-\end{table}
-
-
-
-In conclusion, We use the SQRT measure for our main study. This measure has an acceptable variation within different distributions and relative market caps. Also, it has a fair value at a lower level of aggregate common ownership. 
-
-On each day, we measure common ownership by SQRT measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of
-common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
-
-
- \begin{table}[htbp]
-      \centering
-      \caption{ text}
-      \label{measureResults}
-      \resizebox{1\textwidth}{!}
-      {
-      \input{FCACal.tex}
-          }
-    \end{table}%
-
-
-
-
-
-\FloatBarrier
-
-
-
-
-
 \section{Data and Methodology}
 
 
@@ -362,7 +121,7 @@ We do not have pre-specified Iranian business groups despite other countries lik
 For defining business groups, we use data provided by {\cite{Aliabadi2022}}.
 They use \cite{almeida2011structure} algorithm with a 40\% threshold for defining groups. 
 
-\color{red}
+
 Table \ref{t2-1} reports summary statistics of ownership data and business groups. As shown in the table, 494 firms on average have five block-holders that own 73 percent of them. There are 43 business groups on average, with seven members which own 314 (63\%) firms. 
 \normalcolor
 
@@ -376,13 +135,13 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
          }
       \end{table}
 
-\subsubsection{Pair composition }
-\color{red}
+\subsection{Pair composition }
+
   If two firms have at least one common block-holder, We consider them as a pair. By this definition, there are 9336  unique pairs in entire periods, which is 18\% of possible pairs (597*596/2 = 177906). As we expected, stocks in pairs have concentrated ownership relative to the total sample, and pairs have one common owner.
   
   \normalcolor
   
-As one of our empirical studies, we study the impact of being in the same business group relative to being in two distinct groups on pair's correlation.
+As one of our empirical studies, we study the impact of being in the same business group relative to being in two distinct groups on pair's correlation. (Further explanations about business groups are in section \ref{BGDef} )
    For assigning one pair to a group, both firms should belong to one ultimate owner. Another possibility is that each firm belongs to a different ultimate owner or one of them, or both of them do not belong to any groups, which all of them illustrated in figure \ref{g2-1}.
     By classifying pairs, on average, 15\% of them  belong to one business group, and 74\% of them are not in the same business groups  each year. We report summary statistics of ownership features for all pairs in table \ref{t2-2}.
      
@@ -566,7 +325,7 @@ As one of our empirical studies, we study the impact of being in the same busine
    }
     \end{table}% 
 
-\color{red}
+
  Figure \ref{g2-2} shows the time series of unique pairs' number in each month. The pattern shows that the portion of pairs that are in one business group is roughly stable. The number of pairs in each period is between 322 to 5101 pairs which, on average, there are 4325 pairs.
  
  \normalcolor
@@ -581,7 +340,7 @@ As one of our empirical studies, we study the impact of being in the same busine
   
   
   
-\subsubsection{Stock Return comovement}
+\subsection{Stock Return comovement}
 
 We calculate the monthly correlation of each pair from stocks' daily abnormal returns. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return due to the importance of industries on stocks' return in the Tehran stock exchange (TSE) :
 \begin{equation}
@@ -611,12 +370,12 @@ As we expected,  models that include industry returns remove pairs' correlation.
       
 
 \FloatBarrier
-\subsubsection{Controls}
+\subsection{Controls}
 We are interested in the effects of common ownership on pair's comovement.
 Our prediction of a higher correlation for a higher level of common ownership dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
 
 The first group of controls is pair controls. These controls include
-a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}. As shown in table \ref{SameGroupIndustry}, 12\% and 11\%  of pairs are in the same industry and business group. 
+a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}. As shown in table \ref{SameGroupIndustry}, 10\% and 6\%  of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
 
 
 \begin{table}[htbp]
@@ -650,25 +409,289 @@ We calculate our controls daily and then report the average of these variables f
              \end{table}
          
          
-         
- \begin{figure}[htbp]
- 	\caption{}
- 	\label{sameIndustryinBG}
- 	\centering
- 	\includegraphics[width=0.48\linewidth]{sameIndustryinBG.eps}
- 	\includegraphics[width=0.48\linewidth]{sameIndustryNoinBG.eps}
- \end{figure}
+ 
 
- \begin{figure}[htbp]
+
+\FloatBarrier
+
+\subsection{Measurement of cross-ownership}
+
+
+In table \ref{maasurmentsSummary} we summarize common ownership measurements which are used in literature. There are two groups of measurement for common ownership.
+First of all, model-based measures that capture common ownership base on a proper  model. These measures have a better economic interpretation, but most of them are bi-directional or industry-level measures.(e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s})
+
+In addition to model-based measures, some ad hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})
+
+
+\begin{table}[htbp]
+	\centering
+	\scriptsize
+	\caption{ This table summarizes common ownership measurements in the literature.}
+	\label{maasurmentsSummary}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{cllc}
+			\hline\hline
+			\multicolumn{1}{c}{Group}      & \multicolumn{1}{c}{Paper} & \multicolumn{1}{c}{measurment} & \multicolumn{1}{c}{Flaws} \\
+			\hline\hline
+			\addlinespace
+			\multicolumn{1}{c}{\multirow{5}[2]{*}{Model Based}} &  \cite{harford2011institutional}     &  \scriptsize  $
+			\sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $     & Bi-directional \\
+			\addlinespace 
+			&  \cite{azar2018anticompetitive}     &  $   \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $     & Industry level \\
+			\addlinespace
+			&  \cite{gilje2020s}     &    $ \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}    $   & Bi-directional  \\
+			\midrule
+			\addlinespace 
+			\multicolumn{1}{c}{\multirow{7}[5]{*}{Ad hoc}} & \cite{he2017product};      &  \multirow{2}{*}{$ \sum_{i\in I^{A,B}} 1 $}     & invariant to the level   \\
+			& \cite{he2019internalizing} & & of ‌common ownership \\
+			\addlinespace
+			&  \cite{newham2018common}     &   $ \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $    & ? \\
+			\addlinespace
+			& \multirow{2}{*}{   \cite{AntonPolk} }  &  \multirow{2}{*}{ $ \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B }  $ }   &  Invariant to the  \\
+			& & & decomposition of ownership \\
+			\addlinespace
+			& \cite{freeman2019effects}; & \multirow{2}{*}{ $ \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $ }&?\\
+			&  \cite{hansen1996externalities} & & ?\\
+			\hline\hline
+		\end{tabular}
+	}
+\end{table}
+
+
+
+In our primary analysis, we estimate the impact of common ownership on pair's correlation. For this purpose, we need a pair-level measure with a good economic interpretation that is not bi-directional. As a result, we propose a modification for Anton's measure (\cite{AntonPolk}) that captures the extent of common ownership distribution and apply this measure in this study.
+
+\subsubsection{Modified Anton's measure }
+We reformulate mentioned Anton's measure in table \ref{maasurmentsSummary}. This factor measure common ownership as the total value of
+stock held by the F common-holders of the two stocks, scaled by the total market capitalization of the two stocks
+\begin{equation}
+	\text{Overlap}_{Sum}(i, j) = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}
+	\label{Sum}
+\end{equation}
+where $ S^f_{i,t}$ is the number of shares held by owner f
+at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t} $, and similarly for stock j. 
+As shown in equation \ref{Sum}, this measure neglects different distribution of common owners and represents the percent of joint-held market capitalization from the total market capitalization of the two stocks.
+
+We reweight this formula to capture the difference between ownership distribution. Our proposed measures are shown in equation \ref{sqrt} and \ref{Quadratic} where all variables as the same Anton's measure. Both modified measures represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to number of holders.\footnote{ \tiny
+	Each holder owns $ 1/n $ of each firm ,Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $, So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i/n $\\
+	$
+	[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
+	= [\frac{\sqrt{n}(\sqrt{\alpha_1} +\sqrt{\alpha_2 })}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 = n $
+	\\
+	$
+	[\frac{\sum_{f=1}^{n} {(\alpha_1/n)^2}+\sum_{f=1}^{n} {(\alpha_2/n)^2}}{\alpha_1^2 +{\alpha_2}^2}]^{-1} = [\frac{{\alpha_1^2 + \alpha_2^2 }}{n(\alpha_1^2 + \alpha_2^2)}]^{-1} = n
+	$
+}
+
+
+
+\begin{equation}
+	\text{Overlap}_{Sqrt}(i, j) =  [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 
+	\label{sqrt}
+\end{equation}
+
+\begin{equation}
+	\text{Overlap}_{Quadratic}(i, j) =  [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}
+	\label{Quadratic}
+\end{equation}
+
+There are some numeric examples for better comparison. Two firms (X and Y) have one common owner who has $ \alpha $ and $ \beta $ from each market capitalization, respectively. (illustrated in figure \ref{gExample1}) 
+for better illustration, assume that the sum of holder's ownership equal to 100 percent ($ \alpha + \beta  = 100$), and two firms' market cap is equal. 
+
+
+\begin{figure}[htbp]
+	\centering
+	\caption{ Numeric example 1 }
+	\label{gExample1}
+	\begin{tikzpicture}[node distance=1cm]
+		
+		\node (Firm) [startstop3] {\tiny Firm X};
+		\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+		\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+		
+		
+		\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+		
+		\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+		%
+		%\node() at (3,0)
+		%    {$ \alpha + \beta = 100 $}; 
+	\end{tikzpicture}
+\end{figure}\bigskip
+
+
+
+We  calculate common ownership measures base on equations \ref{Sum} (Sum), \ref{sqrt} (SQRT), and \ref{Quadratic} (Quadratic) for different ownership distributions.  Figure \ref{example1Results}  reports calculations results. As we expected, Anton's measure is constant at a fixed level of aggregate common ownership, but SQRT and  Quadratic vary from concentrated to dispersed ownership.  Concentrated ownership (50-50) has a greater common ownership measure than dispersed (10-90).
+
+\begin{figure}[htbp]
+	\caption{ Comparison of three measure for common ownership}
+	\label{example1Results}
+	\includegraphics[width=0.47\linewidth]{1.png}
+	\includegraphics[width=0.47\linewidth]{2.png}
+	
+\end{figure}
+
+
+Now assume that there are three common owners for the two mentioned firms. First holder's ownership from firm X and Y are respectively $\alpha_1$ and $\beta_1$. It is similar for other holders. (illustrated in figure \ref{gExample2}). As before, the firm's market cap is equal. We calculate measures for concentrated or disparate ownership and ownerships that are less than the aggregate of the firm's market cap. Table \ref{Example2} reports calculation results. For ownerships that consist of total market cap,  results are consistent with the first example. Although, when aggregate ownership decreases, the Quadratic measure denotes unrealistic numbers. We conclude that our Quadratic measure is not a good measure for common ownership.
+
+
+\begin{figure}[htbp]  \centering
+	\caption{ Numeric example 2}
+	\label{gExample2}
+	
+	\centering
+	
+	\begin{tikzpicture}[node distance=1cm]
+		
+		
+		\node (Firm) [startstop3] {\tiny Firm X};
+		\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+		
+		\node (Owner) [startstop3,above of = Firm , yshift=1.25cm , xshift=-3.5cm ] {\tiny Common owner 1 };
+		
+		
+		\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
+		
+		\node (Owner3) [startstop3,below of = Firm , yshift=-1.25cm , xshift=-3.5cm ] {\tiny Common owner 3 };
+		
+		
+		
+		
+		
+		\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
+		
+		\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
+		
+		
+		
+		\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
+		
+		\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
+		
+		
+		
+		\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
+		
+		\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+		
+		
+		
+	\end{tikzpicture}
+	
+\end{figure}
+
+
+\begin{table}[htbp]
+	\centering
+	
+	\caption{ text}
+	\label{Example2}
+	\resizebox{1\textwidth}{!}
+	{
+		\input{Example2.tex}
+	}
+\end{table}
+
+
+
+
+A fundamental assumption in previous examples is equality of firms' market cap. In the last example, we relax this assumption. Table \ref{marketcap} reports calculated measures for fixed aggregate ownership on different relative market cap ratios. We extend our analysis to higher market cap ratios and report our results in figure \ref{sqrtMarket} and \ref{sumMarket}. In this setting, the SQRT measure has a better variation relative to Anton's measure. 
+
+
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\caption{ SQRT measure for fixed aggregate ownership on different relative market cap ratios}
+	\label{sqrtMarket}
+	\includegraphics[width=0.85\linewidth]{3.png}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\caption{ Sum measure for fixed aggregate ownership on different relative market cap ratios}
+	\label{sumMarket}
+	\includegraphics[width=0.85\linewidth]{4.png}
+\end{figure}
+
+\begin{table}[htbp]
+	\centering
+	\caption{text }
+	\label{marketcap}
+	\resizebox{!}{!}
+	{
+		\input{marketcap}
+	}
+\end{table}
+
+
+
+In conclusion, We use the SQRT measure for our main study. This measure has an acceptable variation within different distributions and relative market caps. Also, it has a fair value at a lower level of aggregate common ownership. 
+
+On each day, we measure common ownership by SQRT measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of
+common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
+
+
+\begin{table}[htbp]
+	\centering
+	\caption{ text}
+	\label{measureResults}
+	\resizebox{1\textwidth}{!}
+	{
+		\input{FCACal.tex}
+	}
+\end{table}%
+
+
+
+
+
+\FloatBarrier
+
+
+
+\subsection{Overview of Business Groups in TSE} \label{BGDef}
+
+There is no difference between emerging markets (such as  Chile, India, Indonesia, South Korea, Pakistan, and many more) and developed ones (like Italy and Sweden); business groups present everywhere. However, group-affiliated firms are relatively large and economically important in emerging markets. 
+These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
+There is a complex ownership network in TSE as an emerging market. 
+This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
+
+The reason for many of these business groups back to the 1979 revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
+some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s.  (IDRO was a state-owned holding company for investing in capital-intensive industries) 
+
+The business groups are formed from mentioned ancestors due to two related forces; A multi-phased privatization by the state and the development of the domestic stock market. In the first wave of privatization, more than 300 companies were fully or partially privatized. In the second one, approximately  \$150 billion ownership of State-Owned Enterprises (SOEs) and assets were transferred.  
+Pension funds, military institutions, cultural and religious foundations, and revolutionary foundations (pseudo-government groups) primary customers in the second wave of privatization. These waves of privatization transferred control of hundreds of SOEs to
+semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s enhances this effect. The government tried to develop the stock market as a tool for better privatization. 
+(\cite{Aliabadi2022})
+
+In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and creat large business groups that govern primary  industries.
+
+
+
+\begin{figure}[htbp]
+	\caption{}
+	\label{sameIndustryinBG}
+	\centering
+	\includegraphics[width=0.48\linewidth]{sameIndustryinBG.eps}
+	\includegraphics[width=0.48\linewidth]{sameIndustryNoinBG.eps}
+\end{figure}
+
+\begin{figure}[htbp]
 	\caption{}
 	\label{BGSummary}
 	\centering
 	\includegraphics[width=0.85\linewidth]{BGSummary.eps}
 \end{figure}
-
-
-
 \FloatBarrier
+
+
+
+
+
+
 \section{Forecasting Comovement}
 
 
@@ -841,23 +864,7 @@ Stock returns of group affiliated firms exhibit robustly positive comovement eve
 \FloatBarrier
 \section{Comovement in Business Groups}
 \FloatBarrier
-\subsection{Overview of Business Groups in Tehran Stock Exchange}
 
-There is no difference between emerging markets (such as  Chile, India, Indonesia, South Korea, Pakistan, and many more) and developed ones (like Italy and Sweden); business groups present everywhere. However, group-affiliated firms are relatively large and economically important in emerging markets. 
-These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
-There is a complex ownership network in TSE as an emerging market. 
-This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
-
-The reason for many of these business groups back to the 1979 revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
-some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s.  (IDRO was a state-owned holding company for investing in capital-intensive industries) 
-
-The business groups are formed from mentioned ancestors due to two related forces; A multi-phased privatization by the state and the development of the domestic stock market. In the first wave of privatization, more than 300 companies were fully or partially privatized. In the second one, approximately  \$150 billion ownership of State-Owned Enterprises (SOEs) and assets were transferred.  
-Pension funds, military institutions, cultural and religious foundations, and revolutionary foundations (pseudo-government groups) primary customers in the second wave of privatization. These waves of privatization transferred control of hundreds of SOEs to
-semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s enhances this effect. The government tried to develop the stock market as a tool for better privatization. 
-(\cite{Aliabadi2022})
-
-In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and creat large business groups that govern primary  industries.
-\FloatBarrier
 \subsection{Evidence for correlated trading }
 
  
