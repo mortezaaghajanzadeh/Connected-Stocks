@@ -56,6 +56,7 @@
 
 		\begin{table}[htbp]
 	\centering
+	\caption{text}
 	\resizebox{\textwidth}{!}{
 		\input{mresult2-slide.tex}
 	}
@@ -68,11 +69,10 @@
  Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
 		\begin{table}[htbp]
 	\centering
-	\caption{one of these tables}
-	\resizebox{\textwidth}{!}{
-		\input{Q2mresultAllPairs.tex}
-	}
-\newline
+	\caption{All pairs}
+%	\resizebox{\textwidth}{!}{
+%		\input{Q2mresultAllPairs.tex}
+%	}
 \resizebox{\textwidth}{!}{
 	\input{Q3mresultAllPairs.tex}
 }
@@ -139,7 +139,7 @@ We estimate the following regression for each stock across trading days in given
 	\end{split}
 \end{equation*}
 
-We use the turnover and Amihud measure as a daily trading measures separately. For both measures we control for lead and lag changes in the two portfolio  and market's measures. In addition,for turnover measure, we use size of the firm and  Amihud, we include lead, lag, and contemporaneous market returns, contemporaneous firm return squared. [Table \ref{turnover},\ref{Amihud}]
+We use the turnover measure as a daily trading measures. We control for lead and lag changes in the two portfolio  and market's measures. In addition, we use size of the firm. [Table \ref{turnover}]
 
 	\begin{table}[htbp]
 	\centering
@@ -150,15 +150,15 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 \end{table}
 
 
-	\begin{table}[htbp]
-	\centering
-	\caption{cross-sectional average of the time-series coefficients for daily changes in illiquidity  }
-	\resizebox{0.7\textheight}{!}{
-		\centering
-		\input{Amihud.tex}
-	}
-\label{Amihud}
-\end{table}
+%	\begin{table}[htbp]
+%	\centering
+%	\caption{cross-sectional average of the time-series coefficients for daily changes in illiquidity  }
+%	\resizebox{0.7\textheight}{!}{
+%		\centering
+%		\input{Amihud.tex}
+%	}
+%\label{Amihud}
+%\end{table}
 
 %In a second test of our proposed channel, we control for stock  characteristics in a multivariate regression. we regress $ \beta_{Group} $
 %on the previous year's excess control right from cash flow right, controlling for firm size and average of trading measure. In our main
@@ -221,15 +221,15 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 	\label{mresult2-turnover}
 \end{table}
 
-\begin{table}[htbp]
-	\centering
-	\caption{Pairwise correlations in liquidity}
-	\resizebox{0.7\textheight}{!}{
-		\centering
-		\input{mresult2-liquidity.tex}
-	}
-	\label{mresult2-liquidity}
-	\end{table}
+%\begin{table}[htbp]
+%	\centering
+%	\caption{Pairwise correlations in liquidity}
+%	\resizebox{0.7\textheight}{!}{
+%		\centering
+%		\input{mresult2-liquidity.tex}
+%	}
+%	\label{mresult2-liquidity}
+%	\end{table}
 
 
 
