@@ -64,8 +64,8 @@ def vv3(row):
 
 
 # %%
-path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+# path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 #%%
 n = path + "Cleaned_Stocks_Holders_99_From94.parquet"
@@ -123,10 +123,9 @@ df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل م
 df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
 HolderData = df
 #%%
-n1 = path + "Stocks_Prices_1399-09-12" + ".csv"
-df1 = pd.read_csv(n1)
-
-df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
+n1 = path + "Cleaned_Stock_Prices_1400_06_16" + ".parquet"
+df1 = pd.read_parquet(n1)
+# df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
 df = df1
 symbols = [
     "سپرده",
@@ -201,6 +200,7 @@ PriceData["Amihud"] = abs(PriceData["Ret"]) / PriceData["value"]
 PriceData.head()
 
 
+
 # %%
 n = path + "Factors-Daily.xlsx"
 Factors = pd.read_excel(n)
@@ -251,8 +251,8 @@ df["shrout"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="backfill")
 
-# pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
+# pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
 n = pathBG + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
 uolist = (
