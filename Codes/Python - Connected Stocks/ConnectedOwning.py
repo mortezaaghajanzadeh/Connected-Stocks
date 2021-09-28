@@ -74,13 +74,13 @@ def vv5(row):
 
 
 # %%
-# path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"E:\RA_Aghajanzadeh\Data\\"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 
 # %%
 
-n = path + "Cleaned_Stocks_Holders_1399-09-12_From94.csv"
+n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
 df = pd.read_csv(n)
 
 df = df.drop(df.loc[df["Holder"] == "شخص حقیقی"].index)
@@ -138,10 +138,10 @@ df.head()
 
 
 # %%
-n1 = path + "Stocks_Prices_1399-09-12" + ".csv"
-df1 = pd.read_csv(n1)
+n1 = path + "Cleaned_Stock_Prices_1400_06_29" + ".parquet"
+df1 = pd.read_parquet(n1)
 
-df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
+# df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
 df = df1
 symbols = [
     "سپرده",
