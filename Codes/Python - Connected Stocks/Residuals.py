@@ -1,5 +1,7 @@
 #%%
+# Clean Industry Return and Check return for all the pairs
 
+#%%
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -164,7 +166,6 @@ PriceData["Amihud"] = abs(PriceData["Ret"]) / PriceData["value"]
 PriceData.head()
 
 
-
 # %%
 n = path + "Factors-Daily.xlsx"
 Factors = pd.read_excel(n)
@@ -268,27 +269,42 @@ df = df[
 df["MarketCap"] = df["shrout"] * df["close_price"]
 
 
-def UoWeight(sg):
-    sg["WinUoP"] = sg["MarketCap"] * sg["cr"]
-    sg["UoP"] = sg["WinUoP"].sum()
-    sg["WinUoP"] = sg["WinUoP"] / (sg["WinUoP"].sum()) * 100
+# def UoWeight(sg):
+#     sg["WinUoP"] = sg["MarketCap"] * sg["cr"]
+#     sg["UoP"] = sg["WinUoP"].sum()
+#     sg["WinUoP"] = sg["WinUoP"] / (sg["WinUoP"].sum()) * 100
 
-    sg["UoPR"] = sg["WinUoP"] * sg["Return"]
-    sg["UoPR"] = sg["UoPR"].sum()
-    return sg
-
-
-def DailyCalculation(g):
-    print(g.name)
-    # Weight in Uo's portfolio
-    Sg = g.groupby("uo")
-    t = Sg.apply(UoWeight)
-    t = t[["date", "uo", "UoP", "UoPR"]]
-    return t
+#     sg["UoPR"] = sg["WinUoP"] * sg["Return"]
+#     sg["UoPR"] = sg["UoPR"].sum()
+    
+#     return sg
 
 
-gg = df.groupby("date")
-data = gg.apply(DailyCalculation)
+# def DailyCalculation(g):
+#     print(g.name)
+#     # Weight in Uo's portfolio
+#     Sg = g.groupby("uo")
+#     t = Sg.apply(UoWeight)
+#     t = t[["date", "uo", "UoP", "UoPR"]]
+#     return t
+
+
+df["WinUoP"] = df["MarketCap"] * df["cr"]
+mapdf = df.groupby(['uo','date']).WinUoP.sum().to_frame()
+mapingdict = dict(zip(
+    mapdf.index,mapdf.WinUoP
+    ))
+df['UoP'] = df.set_index(['uo','date']).index.map(mapingdict)
+df["WinUoP"] = df.WinUoP / df.UoP
+df["UoPR"] = df["WinUoP"] * df["Return"]
+mapdf = df.groupby(['uo','date']).UoPR.sum().to_frame()
+mapingdict = dict(zip(
+    mapdf.index,mapdf.UoPR
+    ))
+df['UoPR'] = df.set_index(['uo','date']).index.map(mapingdict)
+df['UoPR'] = (df.UoPR - df.WinUoP * df.Return)/(1-df.WinUoP)
+
+data = df.set_index(['symbol','date'])
 #%%
 
 PriceData["jalaliDate"] = PriceData["jalaliDate"].astype(int)
@@ -299,28 +315,24 @@ fkey = zip(list(BG.symbol), list(BG.year))
 mapingdict = dict(zip(fkey, BG["uo"]))
 PriceData["uo"] = PriceData.set_index(["symbol", "year"]).index.map(mapingdict)
 
-fkey = zip(list(data.uo), list(data.date))
-mapingdict = dict(zip(fkey, data.UoPR))
-PriceData["UoPR"] = PriceData.set_index(["uo", "date"]).index.map(mapingdict)
 
-PriceData["UoPR"] = PriceData["UoPR"].fillna(0)
-
-PriceData = PriceData[PriceData.year >= BG.year.min()]
+mapingdict = dict(zip(data.index, data.UoPR))
+PriceData["UoPR"] = PriceData.set_index(["symbol", "date"]).index.map(mapingdict)
+# PriceData = PriceData[PriceData.year >= BG.year.min()]
 PriceData["EUoPR"] = PriceData.UoPR - PriceData.RiskFree
 
 
 # %%
 
-n1 = path + "IndustryIndexes_1400-04-27.csv"
+n1 = path + "IndustryIndexes_1400_06_28.csv"
 df1 = pd.read_csv(n1)
+df1 = df1[df1.industry_size > 2]
 df1.group_id = df1.group_id.astype(int)
 df1.date = df1.date.astype(int)
 
 fkey = zip(list(df1.group_id), list(df1.date))
 mapingdict = dict(zip(fkey, df1["industry_return"]))
-PriceData["gReturn"] = PriceData.set_index(["group_id", "date"]).index.map(
-    mapingdict
-)
+PriceData["gReturn"] = PriceData.set_index(["group_id", "date"]).index.map(mapingdict)
 PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 PriceData["year_of_year"] = PriceData["year_of_year"].astype(str)
 PriceData["Month_of_year"] = PriceData["Month_of_year"].astype(str)
@@ -337,28 +349,43 @@ PriceData["YearMonth"] = PriceData["year_of_year"] + PriceData["Month_of_year"]
 PriceData.head()
 
 
-
-
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
 n = path + "SymbolShrout_1400_06_28.csv"
 df3 = pd.read_csv(n)
 col = "symbol"
 df3[col] = df3[col].apply(lambda x: convert_ar_characters(x))
-df3 = df3.set_index(['symbol','date'])
-mapingdict = dict(zip(
-    df3.index,df3.shrout
-    ))
+df3 = df3.set_index(["symbol", "date"])
+mapingdict = dict(zip(df3.index, df3.shrout))
 
 
 col = "symbol"
 PriceData[col] = PriceData[col].apply(lambda x: convert_ar_characters(x))
-PriceData['shrout'] = PriceData.set_index(['symbol','date']).index.map(mapingdict)
-
+PriceData["shrout"] = PriceData.set_index(["symbol", "date"]).index.map(mapingdict)
+PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="ffill")
+PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="backfill")
+mapdf = PriceData.groupby(['group_id','date']).size().to_frame()
+mapingdict = dict(zip(
+    mapdf.index,mapdf[0]
+))
+PriceData['industry_size'] = PriceData.set_index(['group_id','date']).index.map(mapingdict)
+#%%
+PriceData = PriceData[PriceData.industry_size>2]
+PriceData["MarketCap"] = PriceData.close_price * PriceData.shrout
+gdf = PriceData.groupby(["group_id", "date"]).MarketCap.sum().to_frame()
+mapingdict = dict(zip(gdf.index, gdf.MarketCap))
+PriceData["weight_industry"] = PriceData.set_index(["group_id", "date"]).index.map(
+    mapingdict
+)
+PriceData["weight_industry"] = PriceData["MarketCap"] / PriceData["weight_industry"]
+PriceData["gReturn"] = (
+    PriceData.gReturn - PriceData.weight_industry * PriceData.Ret
+) / (1 - PriceData.weight_industry)
+PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 #%%
 
 
-PriceData.to_csv(path + "PriceData.csv", index=False)
+PriceData.to_csv(path + "Connected_Stocks\PriceData.csv", index=False)
 
 # %%
 
@@ -367,7 +394,7 @@ def ResidualFactor(g):
     print(g.name)
     t = pd.DataFrame()
     t = t.append(g)
-    if len(t) < 20:
+    if len(t) < 50:
         print("NO")
         return pd.DataFrame()
     gg2 = g.groupby("YearMonth")
@@ -591,4 +618,6 @@ re = re.reset_index(drop=True)
 col = "symbol"
 re[col] = re[col].apply(lambda x: convert_ar_characters(x))
 #%%
-re.to_csv(path + "residuals.csv", index=False)
+re.to_csv(path + "Connected_Stocks\residuals.csv", index=False)
+
+# %%

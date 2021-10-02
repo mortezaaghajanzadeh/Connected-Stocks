@@ -3,8 +3,8 @@ import pandas as pd
 
 
 # %%
-# path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 df = pd.read_parquet(path + "Holder_Residual.parquet")
 
@@ -12,7 +12,7 @@ df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
     df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
 )
 
-df = df[df.jalaliDate < 13990000]
+df = df[df.jalaliDate < 14000000]
 try:
     df = df.drop(columns = ['Delta_Trunover'])
 except:
