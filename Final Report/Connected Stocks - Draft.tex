@@ -103,7 +103,8 @@ ownership; Indexing
 	\end{itemize}
 \item Table \ref{AllPairs}:
 \begin{itemize}
-	\item 
+	\item For all the pairs, same business groups have an greater effect on co-movement.
+	\item Common ownership increases co-movement for the pairs in the same business group  
 \end{itemize}
 \end{itemize}
 
@@ -678,8 +679,7 @@ Pension funds, military institutions, cultural and religious foundations, and re
 semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s enhances this effect. The government tried to develop the stock market as a tool for better privatization. 
 (\cite{Aliabadi2022})
 
-In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and creat large business groups that govern primary  industries.
-
+In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations. They created large business groups that govern primary industries. As a result, we expect that pairs in the business groups belong to the same sector, and figure \ref{sameIndustryinBG} confirms that. As you can see, only 8\% of our pairs belong to the same industry, but 43\% of pairs in the same group are in the same industry. Pairs in the business groups are the same size and book to market as other pairs. However, as said before, the common ownership level in these pairs is much greater, and cross-ownership is higher in business group pairs. Figure \ref{BGSummary} reports an average of control variables in these two types of groups.
 
 
 \begin{figure}[htbp]
@@ -703,39 +703,25 @@ In conclusion, the multiple waves of privatization with the development of the s
 
 \section{Results}
 
-\subsection{Forecasting Comovement}
+\subsection{Forecasting Co-movement}
 
+Our specific interest is how common ownership affects a pair's co-movement. As you can see in figure \ref{mcorr50} higher level of common ownership in the current period will come with a higher level of correlation in the following month. We examine whether common ownership is related to future correlation or not. More specifically, we examine the impact of current measured common ownership on the next period's co-movement. 
 
-
- \begin{figure}
+ \begin{figure}[htbp]
  \centering  
-\includegraphics[width=0.85\linewidth]{"mcorr50.eps"}
+        \centering
+        \includegraphics[width=0.75\linewidth]{"mcorr50.eps"} 
+    \caption{Future monthly correlation for different level of common ownership at this period }
+    \label{mcorr50}
 \end{figure}
 
- \begin{figure}
- \centering  
-\includegraphics[width=0.85\linewidth]{"mcorr5l.eps"}
-\end{figure}
-
-
-
-
-        
-
-
-\FloatBarrier
-\subsection{Modeling Cross-Sectional Variation in Comovement}
+For this purpose, we estimate cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each stock pair's daily four-factor plus industry abnormal returns with $\text{FCA}^*_{ij,t}$, $\text{SameGroup}_{ij}$, and a host of pair characteristic that we use as controls:
 
 
 \input{Model11}
 
-\begin{itemize}
-\item Use Fama macbeth to estimate 
+We estimate these regressions monthly and report the time-series average as in \cite{FamaMacBeth} as a robust way to avoid any issues with cross-correlation in the residuals of equation \ref{model1}. We then calculate \cite{newey1987hypothesis} standard errors of the Fama-MacBeth estimates that tale into autocorrelation in the time series of cross-sectional estimates out to four lag ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $). Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
 
-\item Estimate that model on a monthly frequency 
-\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $)
-\item we use current period's correlation as a control variable for controlling omitted variable bias
-\end{itemize}
 
 
 \begin{table}[htbp]
@@ -833,23 +819,23 @@ Stock returns of group affiliated firms exhibit robustly positive comovement eve
 
  \begin{figure}[htbp]
  \centering  
-\includegraphics[width=0.8\linewidth]{"Qmcorr5lrd.eps"}
+\includegraphics[width=0.6\linewidth]{"Qmcorr5lrd.eps"}
 \end{figure}
 
  \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=0.8\linewidth]{"Qmcorr5subsample.eps"}
+	\includegraphics[width=0.6\linewidth]{"Qmcorr5subsample.eps"}
 \end{figure}
 
  \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=0.8\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
+	\includegraphics[width=0.6\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
 \end{figure}
 
 
  \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=\linewidth]{"QarterSummary.eps"}
+	\includegraphics[width=0.85\linewidth]{"QarterSummary.eps"}
 \end{figure}
 
 	\begin{figure}   
@@ -873,7 +859,7 @@ Stock returns of group affiliated firms exhibit robustly positive comovement eve
 
 
 \FloatBarrier
-\section{Comovement in Business Groups}
+\subsection{Comovement in Business Groups}
 \FloatBarrier
 
 \subsection{Evidence for correlated trading }

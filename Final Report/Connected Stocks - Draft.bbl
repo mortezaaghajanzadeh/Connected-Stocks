@@ -31,6 +31,11 @@ Carhart, M.~M. (1997).
 \newblock On persistence in mutual fund performance.
 \newblock {\em The Journal of Finance}, 52(1):57--82.
 
+\bibitem[Fama and MacBeth, 1973]{FamaMacBeth}
+Fama, E.~F. and MacBeth, J.~D. (1973).
+\newblock Risk, return, and equilibrium: Empirical tests.
+\newblock {\em Journal of Political Economy}, 81(3):607--636.
+
 \bibitem[Farajpour et~al., 2019]{FirmInterlock}
 Farajpour, M., Fatemi, F., and Ebrahimnejad, A. (2019).
 \newblock Firm interlock and stock price synchronicity: Evidence from the
@@ -81,6 +86,11 @@ Khanna, T. and Yafeh, Y. (2007).
 Lewellen, K. and Lowry, M. (2021).
 \newblock Does common ownership really increase firm coordination?
 \newblock {\em Journal of Financial Economics}.
+
+\bibitem[Newey and West, 1987]{newey1987hypothesis}
+Newey, W.~K. and West, K.~D. (1987).
+\newblock Hypothesis testing with efficient method of moments estimation.
+\newblock {\em International Economic Review}, pages 777--787.
 
 \bibitem[Newham et~al., 2018]{newham2018common}
 Newham, M., Seldeslachts, J., and Banal-Estanol, A. (2018).
