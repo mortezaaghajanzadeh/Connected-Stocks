@@ -705,7 +705,7 @@ In conclusion, the multiple waves of privatization with the development of the s
 
 \subsection{Forecasting Co-movement}
 
-Our specific interest is how common ownership affects a pair's co-movement. As you can see in figure \ref{mcorr50} higher level of common ownership in the current period will come with a higher level of correlation in the following month. We examine whether common ownership is related to future correlation or not. More specifically, we examine the impact of current measured common ownership on the next period's co-movement. 
+Our specific interest is how common ownership affects a pair's co-movement. As you can see in figure \ref{mcorr50} higher level of common ownership in the current period will come with a higher level of correlation in the following month. We examine whether common ownership is related to future correlation or not. More specifically, we examine the impact of current measured common ownership on the next period's co-movement.
 
  \begin{figure}[htbp]
  \centering  
@@ -715,18 +715,18 @@ Our specific interest is how common ownership affects a pair's co-movement. As y
     \label{mcorr50}
 \end{figure}
 
-For this purpose, we estimate cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each stock pair's daily four-factor plus industry abnormal returns with $\text{FCA}^*_{ij,t}$, $\text{SameGroup}_{ij}$, and a host of pair characteristic that we use as controls:
+For this purpose, we estimate cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each stock pair's daily four-factor plus industry abnormal returns with $\text{FCA}^*_{ij,t}$, $\text{SameGroup}_{ij}$, their interaction, and other pair characteristics that we use as controls:
 
 
 \input{Model11}
 
-We estimate these regressions monthly and report the time-series average as in \cite{FamaMacBeth} as a robust way to avoid any issues with cross-correlation in the residuals of equation \ref{model1}. We then calculate \cite{newey1987hypothesis} standard errors of the Fama-MacBeth estimates that tale into autocorrelation in the time series of cross-sectional estimates out to four lag ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $). Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
+We estimate these regressions monthly and report the time-series average as in \cite{FamaMacBeth} as a robust way to don't have any problem with cross-correlation in the residuals. We then calculate \cite{newey1987hypothesis} standard errors of the Fama-MacBeth estimates that take into autocorrelation in the time series of cross-sectional estimates out to four lag ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $). Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
 
-
+Table \ref{mresult2} reports results from forecasting cross-sectional variation in pair's co-movement. In the two first columns, we estimate a simplified version of equation \ref{model1} with only Same Group as a control variable. In the first column, we estimate the model without control variables. We find that Same Group is highly significant, with a coefficient of 0.0128 and a t-statistic of 6.29, in the presence of control variables.
 
 \begin{table}[htbp]
 \centering
-\caption{text}
+\caption{Connected Co-movement}
 \label{mresult2}
     \resizebox{1\textwidth}{!}{
 \input{mresult2-slide.tex}
