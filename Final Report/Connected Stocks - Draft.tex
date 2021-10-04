@@ -69,7 +69,8 @@ December\fi, \number \year}
 }
 
 
-
+\usepackage{lipsum}
+\linespread{2}
 
 
 
@@ -353,6 +354,7 @@ As one of our empirical studies, we study the impact of being in the same busine
   
   
 \subsection{Stock Return comovement}
+\label{comovement}
 
 We calculate the monthly correlation of each pair from stocks' daily abnormal returns. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return due to the importance of industries on stocks' return in the Tehran stock exchange (TSE) :
 \begin{equation}
@@ -705,7 +707,7 @@ In conclusion, the multiple waves of privatization with the development of the s
 
 \subsection{Forecasting Co-movement}
 
-Our specific interest is how common ownership affects a pair's co-movement. As you can see in figure \ref{mcorr50} higher level of common ownership in the current period will come with a higher level of correlation in the following month. We examine whether common ownership is related to future correlation or not. More specifically, we examine the impact of current measured common ownership on the next period's co-movement.
+Our specific interest is how the common ownership affects a pair of stocks return co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common ownership in the current period is associated with a higher level of correlation in the following month. We empirically test the impact of current measured common ownership on the next period's co-movement.
 
  \begin{figure}[htbp]
  \centering  
@@ -715,17 +717,15 @@ Our specific interest is how common ownership affects a pair's co-movement. As y
     \label{mcorr50}
 \end{figure}
 
-For this purpose, we estimate cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each stock pair's daily four-factor plus industry abnormal returns with $\text{FCA}^*_{ij,t}$, $\text{SameGroup}_{ij}$, their interaction, and other pair characteristics that we use as controls:
-
-
+For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{FCA}^*_{ij,t}$, $\textit{SameGroup}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
 \input{Model11}
 
-We estimate these regressions monthly and report the time-series average as in \cite{FamaMacBeth} as a robust way to don't have any problem with cross-correlation in the residuals. We then calculate \cite{newey1987hypothesis} standard errors of the Fama-MacBeth estimates that take into autocorrelation in the time series of cross-sectional estimates out to four lag ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $). Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
+We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $). Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
 
-Table \ref{mresult2} reports results from forecasting cross-sectional variation in pair's co-movement. In the two first columns, we estimate a simplified version of equation \ref{model1} with only the Same Group as a control variable. In the first column, we estimate the model without control variables. Recall that our control variables are Same Industry, Same Size, Same Book to Market, and Cross-Ownership. The Same Size and the Same Book to Market are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity. We find that the Same Group has a highly statically significant effect, with a coefficient of $0.0128$ and a t-statistic of $6.29$, in the presence of control variables. 
-In the following two columns, we estimate our simplified model with only common ownership,$\text{FCA}^*_{ij,t}$, as a forecasting variable. We find that $\text{FCA}^*_{ij,t}$ significantly improves our forecasting, with a coefficient of $0.0038$ and a t-statistic of $5.12$, but the impact of the Same Group is three times bigger than this. 
+Table \ref{mresult2} shows that results from forecasting cross-sectional variation in pair's co-movement. In the first two columns, we estimate a simplified version of equation \ref{model1} with only the \textit{Same Group} as an independent variable. In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, \textit{Cross-Ownership}, and the current realized correlation ($\rho_{i,j,t}$). The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity. We find that the \textit{Same Group} has a highly statically significant effect, with a coefficient of $0.0128$ and a t-statistic of $6.29$, in the presence of control variables. 
+In columns three and four, we estimate our simplified model with only common ownership, $\text{FCA}^*_{ij,t}$, as a forecasting variable. We find that $\text{FCA}^*_{ij,t}$ significantly improves our forecast, with a coefficient of $0.0038$ and a t-statistic of $5.12$, but the impact of the \textit{Same Group}   is three times bigger than this. 
 
-In the fifth specification of table \ref{mresult2}, we use both Same Group and $\text{FCA}^*_{ij,t}$ as a forecasting variable. Both control variables still have a significant effect on our estimation, and also, the Same Group still has a greater impact than common ownership in this specification. Furthermore, the sixth and final column of table \ref{mresult2}, include these interactions. We include the business group fixed effect to capture the group's characteristics for the last column. These results show that $\text{FCA}^*_{ij,t}$ has a greater effect for the pairs in the same business group. However, Same Group do not have significant effect on our estimation. It seems that Same group affects co-movement through virtual common ownership which is happened due to the same ultimate owner.
+In the fifth specification of table \ref{mresult2}, we use both \textit{Same Group}  and $\text{FCA}^*_{ij,t}$ as a forecasting variable. Both variables still have a significant effect on our estimation, and also, the $\textit{SameGroup}_{ij} $ still has a greater impact than common ownership in this specification. Furthermore, the sixth and final column of table \ref{mresult2}, include these interactions. We include the business group fixed effect to capture the group's characteristics for the last column. These results show that $\text{FCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. However, \textit{Same Group}  do not have a significant effect on our estimation. It suggests that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. On the other hand, as shown in figure \ref{BGSummary}, pairs in the same business group have a higher level of common ownership than others. This evidence imply that higher level
 
 
 \begin{table}[htbp]
@@ -738,8 +738,11 @@ In the fifth specification of table \ref{mresult2}, we use both Same Group and $
 \end{table}
 
 
+% % % % % 
+% 		%
+% % % % %
 
-We extend our investigation by constructing all the pairs in the market. For this purpose, we include stocks in the pair if they have two months in common. In this definition, we do not restrict our investigation to commonly hold stocks. We set $\text{FCA}^*_{ij,t}$ to zero if two stocks do not have any common owner.
+We extend our investigation in order to separate effect of business groups and common ownership by constructing all the pairs in the market. For this purpose, we include stocks in the one pair if they have, at least, two months in common. In this definition, we do not restrict our investigation to commonly hold stocks and set $\text{FCA}^*_{ij,t}$ to zero for two stocks that do not have any common owner.
 
 Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
 

@@ -131,9 +131,47 @@ df1 = pd.read_parquet(n1)
 # df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
 df = df1
 df = df.drop_duplicates()
-df = df[df.volume != 0]
-df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
+# df = df[df.volume = 0]
 
+df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
+df = df.drop(df[(df["symbol"] == "وقوام") & (df["close_price"] == 1000)].index)
+symbols = [
+    "سپرده",
+    "هما",
+    "وهنر-پذیره",
+    "نکالا",
+    "تکالا",
+    "اکالا",
+    "توسعه گردشگری ",
+    "وآفر",
+    "ودانا",
+    "نشار",
+    "نبورس",
+    "چبسپا",
+    "بدکو",
+    "چکارم",
+    "تراک",
+    "کباده",
+    "فبستم",
+    "تولیددارو",
+    "قیستو",
+    "خلیبل",
+    "پشاهن",
+    "قاروم",
+    "هوایی سامان",
+    "کورز",
+    "شلیا",
+    "دتهران",
+    "نگین",
+    "کایتا",
+    "غیوان",
+    "تفیرو",
+    "سپرمی",
+    "بتک",
+]
+df = df.drop(df[df["symbol"].isin(symbols)].index)
+df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل معامله"].index)
+df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
 df = DriveYearMonthDay(df)
 PriceData = pd.DataFrame()
 PriceData = PriceData.append(
@@ -158,7 +196,6 @@ PriceData["week_of_year"] = PriceData["date1"].dt.week
 PriceData["Month_of_year"] = PriceData["date1"].dt.month
 PriceData["year_of_year"] = PriceData["date1"].dt.year
 gg = PriceData.groupby("symbol")
-# PriceData["Ret"] = gg["close_price"].pct_change(periods=1) * 100
 PriceData = PriceData.rename(
     columns={"return": "Ret", "close_price_Adjusted": "close_price"}
 )
@@ -167,7 +204,7 @@ PriceData.head()
 
 
 # %%
-n = path + "Factors-Daily.xlsx"
+n = path + "Factors_Daily_1400_06_28.xlsx"
 Factors = pd.read_excel(n)
 Factors.tail()
 PriceData = (
@@ -209,13 +246,17 @@ df = df.append(PriceData)
 df["year"] = round(df.jalaliDate / 10000, 0)
 df["year"] = df["year"].astype(int)
 
+#%%
+shrout = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
+shrout
 
+#%%
 fkey = zip(list(HolderData.symbol), list(HolderData.date))
 mapingdict = dict(zip(fkey, HolderData.shrout))
 df["shrout"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="backfill")
-
+#%%
 # pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
 # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
 n = path + "Grouping_CT.xlsx"
@@ -240,6 +281,7 @@ tt["year"] = 1399
 BG = BG.append(tt).reset_index(drop=True)
 
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+#%%
 for i in ["uo", "cfr", "cr"]:
     print(i)
     fkey = zip(list(BG.symbol), list(BG.year))
@@ -247,8 +289,10 @@ for i in ["uo", "cfr", "cr"]:
     df[i] = df.set_index(["symbol", "year"]).index.map(mapingdict)
 
 df = df[~df.uo.isnull()]
-pdf = df[["date", "symbol", "close_price"]].drop_duplicates()
-pdf["Return"] = pdf.groupby("symbol").close_price.pct_change()
+pdf = df[["date", "symbol", "Ret"]].drop_duplicates().rename(
+    columns = {"Ret":"Return"}
+    )
+    
 
 fkey = zip(list(pdf.symbol), list(pdf.date))
 mapingdict = dict(zip(fkey, pdf.Return))
@@ -268,25 +312,6 @@ df = df[
 ].drop_duplicates()
 df["MarketCap"] = df["shrout"] * df["close_price"]
 
-
-# def UoWeight(sg):
-#     sg["WinUoP"] = sg["MarketCap"] * sg["cr"]
-#     sg["UoP"] = sg["WinUoP"].sum()
-#     sg["WinUoP"] = sg["WinUoP"] / (sg["WinUoP"].sum()) * 100
-
-#     sg["UoPR"] = sg["WinUoP"] * sg["Return"]
-#     sg["UoPR"] = sg["UoPR"].sum()
-    
-#     return sg
-
-
-# def DailyCalculation(g):
-#     print(g.name)
-#     # Weight in Uo's portfolio
-#     Sg = g.groupby("uo")
-#     t = Sg.apply(UoWeight)
-#     t = t[["date", "uo", "UoP", "UoPR"]]
-#     return t
 
 
 df["WinUoP"] = df["MarketCap"] * df["cr"]
