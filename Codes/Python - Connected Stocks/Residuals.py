@@ -348,7 +348,7 @@ PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 
 #%%
 
-PriceData.to_csv(path + "Connected_Stocks\PriceData.csv", index=False)
+PriceData.to_csv(path + "Connected_Stocks\PriceData_1400_06_28.csv", index=False)
 
 # %%
 
@@ -581,6 +581,6 @@ re = re.reset_index(drop=True)
 col = "symbol"
 re[col] = re[col].apply(lambda x: convert_ar_characters(x))
 #%%
-re.to_csv(path + "Connected_Stocks\residuals.csv", index=False)
+re.to_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv", index=False)
 
 # %%

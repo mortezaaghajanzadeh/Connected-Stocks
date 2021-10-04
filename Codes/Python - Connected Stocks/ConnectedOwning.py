@@ -3,10 +3,10 @@ import pandas as pd
 
 
 # %%
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
-df = pd.read_parquet(path + "Holder_Residual.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 
 df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
     df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
@@ -511,8 +511,8 @@ df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(152)
-S_g = gdata.get_group(142)
+g = gdata.get_group(158)
+S_g = gdata.get_group(148)
 
 
 a = FCAPf(S_g, g)
@@ -525,14 +525,15 @@ counter = 0
 for i in list(gg.groups.keys()):
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
-    print("Id " + str(F_id))
+    print("Id " + str(F_id) , len(data))
     Next_df = df[df.id > F_id]
     S_gg = Next_df.groupby(["id"])
     data = data.append(S_gg.apply(FCAPf, g=g))
-    if len(data) > 2e6:
+    if len(data) > 3e6:
         counter += 1
-        data.to_parquet(path + "NormalzedFCAP8.1-part%s.parquet" % counter)
+        data.to_parquet(path + "NormalzedFCAP9.1-part%s.parquet" % counter)
         data = pd.DataFrame()
 
 counter += 1
-data.to_parquet(path + "NormalzedFCAP8.1-part%s.parquet" % counter)
+data.to_parquet(path + "NormalzedFCAP9.1-part%s.parquet" % counter)
+#%%

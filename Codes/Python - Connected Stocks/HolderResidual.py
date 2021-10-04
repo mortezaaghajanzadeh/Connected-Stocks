@@ -115,7 +115,7 @@ df.head()
 
 
 #%%
-re = pd.read_csv(path + "Connected_Stocks\residuals.csv")
+re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv")
 col = "symbol"
 HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
 re["date"] = re.date.astype(int)
@@ -124,7 +124,7 @@ HolderData["date"] = HolderData.date.astype(int)
 # %%
 residuals = re[re.jalaliDate > 13880000]
 del re
-for i in ["4_Residual","6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
+for i in ["4_Residual", "6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
     fkey = zip(list(residuals.symbol), list(residuals.date))
     mapingdict = dict(zip(fkey, residuals[i]))
     HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
@@ -136,7 +136,7 @@ for i in ["Ret", "volume", "value", "Amihud"]:
     fkey = zip(list(residuals.symbol), list(residuals.date))
     mapingdict = dict(zip(fkey, residuals[i]))
     HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
-    print(i + "is done")
+    print(i + " is done")
 
 HolderData.head()
 # %%
@@ -146,14 +146,14 @@ df["volume"] = df["volume"].astype(float)
 df["value"] = df["value"].astype(float)
 df["TurnOver"] = ln(df.value / df.marketCap)
 df["Amihud_ln"] = ln(df["Amihud"])
-g = df.groupby(['symbol','date'])
+g = df.groupby(["symbol", "date"])
 t = g.first().reset_index()
 gg = t.groupby("symbol")
 #%%
-for i in ['TurnOver','Amihud']:
-    t['Delta_'+ i] = gg[i].diff()
-    mapdict = dict(zip(t.set_index(['symbol','date']).index,t['Delta_'+ i]))
-    df['Delta_'+ i]  = df.set_index(['symbol','date']).index.map(mapdict)
+for i in ["TurnOver", "Amihud"]:
+    t["Delta_" + i] = gg[i].diff()
+    mapdict = dict(zip(t.set_index(["symbol", "date"]).index, t["Delta_" + i]))
+    df["Delta_" + i] = df.set_index(["symbol", "date"]).index.map(mapdict)
 
 
 # %%
@@ -270,7 +270,7 @@ BG["BGId"] = BG["uo"].map(mapingdict)
 
 
 # %%
-for i in ['BGId','position','uo']:
+for i in ["BGId", "position", "uo"]:
     fkey = zip(list(BG.symbol), list(BG.year))
     mapingdict = dict(zip(fkey, BG[i]))
     df[i] = df.set_index(["symbol", "year"]).index.map(mapingdict)
@@ -278,9 +278,9 @@ for i in ['BGId','position','uo']:
 # %%
 del mapingdict
 del gg
-len(df),list(df)
+len(df), list(df)
 
 # %%
-df.to_parquet(path + "Holder_Residual.parquet")
+df.to_parquet(path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet")
 
 # %%
