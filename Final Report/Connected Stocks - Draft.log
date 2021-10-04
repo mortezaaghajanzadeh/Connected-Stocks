@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  3 OCT 2021 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  4 OCT 2021 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,8 +873,8 @@ File: mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: mcorr50-eps-converted-to.pdf  used on input line 715.
 (pdftex.def)             Requested size: 292.5pt x 212.73369pt.
  (./Model11.tex
-[25 <./mcorr50-eps-converted-to.pdf>]) [26] (./mresult2-slide.tex) [27]
-[28] (./Q3mresultAllPairs.tex) [29] [30] (./BGReturn.tex)
+[25 <./mcorr50-eps-converted-to.pdf>]) [26] [27] (./mresult2-slide.tex)
+(./Model12.tex [28]) (./Q3mresultAllPairs.tex) [29] [30] (./BGReturn.tex)
 
 LaTeX Warning: Float too large for page by 133.08023pt on input line 773.
 
@@ -889,7 +889,7 @@ Package epstopdf Info: Source file: <BusinessPseudoSBFCA.eps>
 nverted-to.pdf BusinessPseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 784.
 Package epstopdf Info: Output file is already uptodate.
-<BusinessPseudoSBFCA-eps-converted-to.pdf, id=522, 397.485pt x 289.08pt>
+<BusinessPseudoSBFCA-eps-converted-to.pdf, id=524, 397.485pt x 289.08pt>
 File: BusinessPseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use BusinessPseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: BusinessPseudoSBFCA-eps-converted-to.pdf  used on inpu
@@ -906,7 +906,7 @@ Package epstopdf Info: Source file: <BusinessPseudoSBFCA_t.eps>
 converted-to.pdf BusinessPseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 785.
 Package epstopdf Info: Output file is already uptodate.
-<BusinessPseudoSBFCA_t-eps-converted-to.pdf, id=523, 397.485pt x 289.08pt>
+<BusinessPseudoSBFCA_t-eps-converted-to.pdf, id=525, 397.485pt x 289.08pt>
 File: BusinessPseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use BusinessPseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: BusinessPseudoSBFCA_t-eps-converted-to.pdf  used on in
@@ -922,7 +922,7 @@ Package epstopdf Info: Source file: <SizePseudoSBFCA.eps>
 ted-to.pdf SizePseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 797.
 Package epstopdf Info: Output file is already uptodate.
-<SizePseudoSBFCA-eps-converted-to.pdf, id=524, 397.485pt x 289.08pt>
+<SizePseudoSBFCA-eps-converted-to.pdf, id=526, 397.485pt x 289.08pt>
 File: SizePseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use SizePseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: SizePseudoSBFCA-eps-converted-to.pdf  used on input li
@@ -938,7 +938,7 @@ Package epstopdf Info: Source file: <SizePseudoSBFCA_t.eps>
 erted-to.pdf SizePseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 798.
 Package epstopdf Info: Output file is already uptodate.
-<SizePseudoSBFCA_t-eps-converted-to.pdf, id=525, 397.485pt x 289.08pt>
+<SizePseudoSBFCA_t-eps-converted-to.pdf, id=527, 397.485pt x 289.08pt>
 File: SizePseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use SizePseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: SizePseudoSBFCA_t-eps-converted-to.pdf  used on input 
@@ -954,7 +954,7 @@ Package epstopdf Info: Source file: <IndustryPseudoSBFCA.eps>
 nverted-to.pdf IndustryPseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 811.
 Package epstopdf Info: Output file is already uptodate.
-<IndustryPseudoSBFCA-eps-converted-to.pdf, id=526, 397.485pt x 289.08pt>
+<IndustryPseudoSBFCA-eps-converted-to.pdf, id=528, 397.485pt x 289.08pt>
 File: IndustryPseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use IndustryPseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: IndustryPseudoSBFCA-eps-converted-to.pdf  used on inpu
@@ -971,7 +971,7 @@ Package epstopdf Info: Source file: <IndustryPseudoSBFCA_t.eps>
 converted-to.pdf IndustryPseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 812.
 Package epstopdf Info: Output file is already uptodate.
-<IndustryPseudoSBFCA_t-eps-converted-to.pdf, id=527, 397.485pt x 289.08pt>
+<IndustryPseudoSBFCA_t-eps-converted-to.pdf, id=529, 397.485pt x 289.08pt>
 File: IndustryPseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use IndustryPseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: IndustryPseudoSBFCA_t-eps-converted-to.pdf  used on in
@@ -991,7 +991,7 @@ Package epstopdf Info: Source file: <Qmcorr5lrd.eps>
 o.pdf Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 833.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5lrd-eps-converted-to.pdf, id=569, 397.485pt x 289.08pt>
+<Qmcorr5lrd-eps-converted-to.pdf, id=571, 397.485pt x 289.08pt>
 File: Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5lrd-eps-converted-to.pdf  used on input line 83
@@ -1007,7 +1007,7 @@ Package epstopdf Info: Source file: <Qmcorr5subsample.eps>
 rted-to.pdf Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 838.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5subsample-eps-converted-to.pdf, id=570, 397.485pt x 289.08pt>
+<Qmcorr5subsample-eps-converted-to.pdf, id=572, 397.485pt x 289.08pt>
 File: Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5subsample-eps-converted-to.pdf  used on input l
@@ -1024,7 +1024,7 @@ Package epstopdf Info: Source file: <Qmcorr5lrdbgsubsample.eps>
 converted-to.pdf Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 843.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=571, 397.485pt x 289.08pt>
+<Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=573, 397.485pt x 289.08pt>
 File: Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5lrdbgsubsample-eps-converted-to.pdf  used on in
@@ -1040,7 +1040,7 @@ Package epstopdf Info: Source file: <QarterSummary.eps>
 d-to.pdf QarterSummary.eps>
 (epstopdf)             \includegraphics on input line 849.
 Package epstopdf Info: Output file is already uptodate.
-<QarterSummary-eps-converted-to.pdf, id=572, 1084.05pt x 722.7pt>
+<QarterSummary-eps-converted-to.pdf, id=574, 1084.05pt x 722.7pt>
 File: QarterSummary-eps-converted-to.pdf Graphic file (type pdf)
 <use QarterSummary-eps-converted-to.pdf>
 Package pdftex.def Info: QarterSummary-eps-converted-to.pdf  used on input line
@@ -1057,7 +1057,7 @@ Package epstopdf Info: Source file: <sameIndustryinQuarter.eps>
 converted-to.pdf sameIndustryinQuarter.eps>
 (epstopdf)             \includegraphics on input line 854.
 Package epstopdf Info: Output file is already uptodate.
-<sameIndustryinQuarter-eps-converted-to.pdf, id=573, 350.5095pt x 247.88611pt>
+<sameIndustryinQuarter-eps-converted-to.pdf, id=575, 350.5095pt x 247.88611pt>
 File: sameIndustryinQuarter-eps-converted-to.pdf Graphic file (type pdf)
 <use sameIndustryinQuarter-eps-converted-to.pdf>
 Package pdftex.def Info: sameIndustryinQuarter-eps-converted-to.pdf  used on in
@@ -1073,7 +1073,7 @@ Package epstopdf Info: Source file: <sameIBGinQuarter.eps>
 rted-to.pdf sameIBGinQuarter.eps>
 (epstopdf)             \includegraphics on input line 855.
 Package epstopdf Info: Output file is already uptodate.
-<sameIBGinQuarter-eps-converted-to.pdf, id=574, 392.03464pt x 247.88611pt>
+<sameIBGinQuarter-eps-converted-to.pdf, id=576, 392.03464pt x 247.88611pt>
 File: sameIBGinQuarter-eps-converted-to.pdf Graphic file (type pdf)
 <use sameIBGinQuarter-eps-converted-to.pdf>
 Package pdftex.def Info: sameIBGinQuarter-eps-converted-to.pdf  used on input l
@@ -1086,7 +1086,7 @@ ine 855.
 ted-to.pdf> <./sameIndustryinQuarter-eps-converted-to.pdf> <./sameIBGinQuarter-
 eps-converted-to.pdf>]
 (./Qmresult2subsanple-slide.tex) [36] (./ImbalanceSummary.tex)
-<GroupedSTD.png, id=686, 491.8375pt x 311.1625pt>
+<GroupedSTD.png, id=688, 491.8375pt x 311.1625pt>
 File: GroupedSTD.png Graphic file (type png)
 <use GroupedSTD.png>
 Package pdftex.def Info: GroupedSTD.png  used on input line 891.
@@ -1122,7 +1122,7 @@ Package epstopdf Info: Source file: <mcorr50bg.eps>
 .pdf mcorr50bg.eps>
 (epstopdf)             \includegraphics on input line 955.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr50bg-eps-converted-to.pdf, id=715, 397.485pt x 289.08pt>
+<mcorr50bg-eps-converted-to.pdf, id=717, 397.485pt x 289.08pt>
 File: mcorr50bg-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr50bg-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr50bg-eps-converted-to.pdf  used on input line 955
@@ -1147,7 +1147,7 @@ Package epstopdf Info: Source file: <mcorr5Polk.eps>
 o.pdf mcorr5Polk.eps>
 (epstopdf)             \includegraphics on input line 971.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr5Polk-eps-converted-to.pdf, id=742, 397.485pt x 289.08pt>
+<mcorr5Polk-eps-converted-to.pdf, id=744, 397.485pt x 289.08pt>
 File: mcorr5Polk-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr5Polk-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr5Polk-eps-converted-to.pdf  used on input line 97
@@ -1174,13 +1174,13 @@ ged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 994.
  ) 
 Here is how much of TeX's memory you used:
- 20368 strings out of 480608
- 390110 string characters out of 5907536
+ 20373 strings out of 480608
+ 390161 string characters out of 5907536
  811466 words of memory out of 5000000
- 35656 multiletter control sequences out of 15000+600000
+ 35658 multiletter control sequences out of 15000+600000
  542659 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,17n,60p,1075b,1067s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,60p,1181b,1067s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dis
@@ -1206,10 +1206,10 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft.pdf" (49 pages, 974603 bytes).
+Output written on "Connected Stocks - Draft.pdf" (49 pages, 975492 bytes).
 PDF statistics:
- 894 PDF objects out of 1000 (max. 8388607)
- 619 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 137 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

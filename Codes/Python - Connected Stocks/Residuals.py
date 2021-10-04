@@ -68,70 +68,11 @@ def vv3(row):
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-
-#%%
-
-n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
-df = pd.read_csv(n)
-
-df = df.drop(df.loc[df["Holder"] == "شخص حقیقی"].index)
-df = df.drop(
-    df[
-        (df["Trade"] == "No")
-        & (
-            (df["close_price"] == 10)
-            | (df["close_price"] == 1000)
-            | (df["close_price"] == 10000)
-            | (df["close_price"] == 100000)
-        )
-    ].index
-)
-df = df.drop(df[(df["symbol"] == "وقوام") & (df["close_price"] == 1000)].index)
-symbols = [
-    "سپرده",
-    "هما",
-    "وهنر-پذیره",
-    "نکالا",
-    "تکالا",
-    "اکالا",
-    "توسعه گردشگری ",
-    "وآفر",
-    "ودانا",
-    "نشار",
-    "نبورس",
-    "چبسپا",
-    "بدکو",
-    "چکارم",
-    "تراک",
-    "کباده",
-    "فبستم",
-    "تولیددارو",
-    "قیستو",
-    "خلیبل",
-    "پشاهن",
-    "قاروم",
-    "هوایی سامان",
-    "کورز",
-    "شلیا",
-    "دتهران",
-    "نگین",
-    "کایتا",
-    "غیوان",
-    "تفیرو",
-    "سپرمی",
-    "بتک",
-]
-df = df.drop(df[df["symbol"].isin(symbols)].index)
-df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل معامله"].index)
-df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
-HolderData = df
 #%%
 n1 = path + "Cleaned_Stock_Prices_1400_06_29" + ".parquet"
 df1 = pd.read_parquet(n1)
-# df1["jalaliDate"] = df1["jalaliDate"].apply(vv)
 df = df1
 df = df.drop_duplicates()
-# df = df[df.volume = 0]
 
 df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
 df = df.drop(df[(df["symbol"] == "وقوام") & (df["close_price"] == 1000)].index)
@@ -169,9 +110,9 @@ symbols = [
     "سپرمی",
     "بتک",
 ]
-df = df.drop(df[df["symbol"].isin(symbols)].index)
-df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل معامله"].index)
-df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
+df = df[~(df["symbol"].isin(symbols))]
+df = df[df.group_name != "صندوق سرمایه گذاری قابل معامله"]
+df = df[~((df.symbol == "اتکای") & (df.close_price == 1000))]
 df = DriveYearMonthDay(df)
 PriceData = pd.DataFrame()
 PriceData = PriceData.append(
@@ -230,35 +171,25 @@ for i in df3.YM:
     df4.loc[df4.jalaliDate >= i, "RiskFree"] = (
         df3.loc[df3["YM"] == i].iloc[0, 1] / 12 / 52 / 7
     )
-
-
 PriceData = df4
 del df4
 PriceData["EMarketRet"] = PriceData["Market_return"] - PriceData["RiskFree"]
 PriceData["ERet"] = PriceData["Ret"] - PriceData["RiskFree"]
 
 PriceData.head()
-
 df = pd.DataFrame()
 df = df.append(PriceData)
-
-
 df["year"] = round(df.jalaliDate / 10000, 0)
 df["year"] = df["year"].astype(int)
 
 #%%
-shrout = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
-shrout
-
-#%%
-fkey = zip(list(HolderData.symbol), list(HolderData.date))
-mapingdict = dict(zip(fkey, HolderData.shrout))
+df2 = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
+mapingdict = dict(zip(df2.set_index(["symbol", "date"]).index, df2.shrout))
 df["shrout"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="backfill")
 #%%
-# pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-# pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+
 n = path + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
 uolist = (
@@ -371,6 +302,8 @@ def v2(X):
 
 PriceData["Month_of_year"] = PriceData["Month_of_year"].apply(v2)
 PriceData["YearMonth"] = PriceData["year_of_year"] + PriceData["Month_of_year"]
+
+
 PriceData.head()
 
 
@@ -389,11 +322,14 @@ PriceData[col] = PriceData[col].apply(lambda x: convert_ar_characters(x))
 PriceData["shrout"] = PriceData.set_index(["symbol", "date"]).index.map(mapingdict)
 PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="ffill")
 PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="backfill")
+PriceData = PriceData[~PriceData.shrout.isnull()]
+PriceData = PriceData[~PriceData.close_price.isnull()]
 mapdf = PriceData.groupby(['group_id','date']).size().to_frame()
 mapingdict = dict(zip(
     mapdf.index,mapdf[0]
 ))
 PriceData['industry_size'] = PriceData.set_index(['group_id','date']).index.map(mapingdict)
+
 #%%
 PriceData = PriceData[PriceData.industry_size>2]
 PriceData["MarketCap"] = PriceData.close_price * PriceData.shrout
@@ -409,6 +345,8 @@ PriceData["gReturn"] = (
 PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 #%%
 
+
+#%%
 
 PriceData.to_csv(path + "Connected_Stocks\PriceData.csv", index=False)
 

@@ -52,14 +52,14 @@ def vv5(row):
 
 
 # %%
-path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+path = r"E:\RA_Aghajanzadeh\Data\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 
 # %%
 
-n = path + "Cleaned_Stocks_Holders_99_From94.parquet"
-df = pd.read_parquet(n)
+n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
+df = pd.read_csv(n)
 df = df.drop(df.loc[df["Holder"] == "شخص حقیقی"].index)
 df = df.drop(
     df[
@@ -115,14 +115,14 @@ df.head()
 
 
 #%%
-re = pd.read_csv(path + "residuals.csv")
+re = pd.read_csv(path + "Connected_Stocks\residuals.csv")
 col = "symbol"
 HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
 re["date"] = re.date.astype(int)
 HolderData["date"] = HolderData.date.astype(int)
 
 # %%
-residuals = re[re.jalaliDate > 13940000]
+residuals = re[re.jalaliDate > 13880000]
 del re
 for i in ["4_Residual","6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
     fkey = zip(list(residuals.symbol), list(residuals.date))
@@ -258,6 +258,9 @@ n = pathBG + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
 BG = BG[BG.listed == 1]
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+tt = BG[BG.year == 1398]
+tt["year"] = 1399
+BG = BG.append(tt).reset_index(drop=True)
 
 BGroup = set(BG["uo"])
 names = sorted(BGroup)
