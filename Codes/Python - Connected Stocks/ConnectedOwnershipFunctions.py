@@ -1,6 +1,7 @@
 import pandas as pd
 import pickle
 
+
 def FCAPf_allPair(S_g, g):
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
     if len(intersection) == 0:
@@ -167,6 +168,8 @@ def AfterCal(f, g, S_g, intersection):
 def Calculation_allPair(g, S_g, intersection):
     a = FirstCal(g, S_g, intersection)
     a = FCalculation_allPair(a, g, S_g)
+    if len(a) == 0:
+        return a
     f = SecondCal(a)
     return f
 
@@ -174,6 +177,8 @@ def Calculation_allPair(g, S_g, intersection):
 def Calculation(g, S_g, intersection):
     a = FirstCal(g, S_g, intersection)
     a = FCalculation(a)
+    if len(a) == 0:
+        return a
     f = SecondCal(a)
     return f
 
