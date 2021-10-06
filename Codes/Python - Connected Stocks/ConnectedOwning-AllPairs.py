@@ -71,7 +71,7 @@ def vv5(row):
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 
