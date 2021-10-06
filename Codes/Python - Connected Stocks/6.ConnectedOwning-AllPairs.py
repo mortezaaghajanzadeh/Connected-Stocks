@@ -70,7 +70,7 @@ def vv5(row):
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 
@@ -120,8 +120,10 @@ for i in list(gg.groups.keys()):
     df = df[df.id > F_id]
     S_gg = df.groupby(["id"])
     # data = data.append(S_gg.apply(FCAPf, g=g))
-    pickle.dump(S_gg.apply(FCAPf, g=g),
+    pickle.dump(S_gg.apply(FCAPf_allPair, g=g),
                     open(
                         path + "NormalzedFCAP9.1_AllPairs\\NormalzedFCAP9.1_AllPairs_{}.p".format(i), "wb")
                     )
 
+
+# %%
