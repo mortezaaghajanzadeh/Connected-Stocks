@@ -206,7 +206,9 @@ names = sorted(BGroup)
 ids = range(len(names))
 mapingdict = dict(zip(names, ids))
 BG["BGId"] = BG["uo"].map(mapingdict)
-
+BG[["BGId", "uo"]].drop_duplicates().to_csv(
+    path + "Connected_Stocks\\BGId.csv", index=False
+)
 tt = BG[BG.year == 1398]
 tt["year"] = 1399
 BG = BG.append(tt).reset_index(drop=True)
@@ -220,10 +222,8 @@ for i in ["uo", "cfr", "cr"]:
     df[i] = df.set_index(["symbol", "year"]).index.map(mapingdict)
 
 df = df[~df.uo.isnull()]
-pdf = df[["date", "symbol", "Ret"]].drop_duplicates().rename(
-    columns = {"Ret":"Return"}
-    )
-    
+pdf = df[["date", "symbol", "Ret"]].drop_duplicates().rename(columns={"Ret": "Return"})
+
 
 fkey = zip(list(pdf.symbol), list(pdf.date))
 mapingdict = dict(zip(fkey, pdf.Return))
@@ -244,23 +244,18 @@ df = df[
 df["MarketCap"] = df["shrout"] * df["close_price"]
 
 
-
 df["WinUoP"] = df["MarketCap"] * df["cr"]
-mapdf = df.groupby(['uo','date']).WinUoP.sum().to_frame()
-mapingdict = dict(zip(
-    mapdf.index,mapdf.WinUoP
-    ))
-df['UoP'] = df.set_index(['uo','date']).index.map(mapingdict)
+mapdf = df.groupby(["uo", "date"]).WinUoP.sum().to_frame()
+mapingdict = dict(zip(mapdf.index, mapdf.WinUoP))
+df["UoP"] = df.set_index(["uo", "date"]).index.map(mapingdict)
 df["WinUoP"] = df.WinUoP / df.UoP
 df["UoPR"] = df["WinUoP"] * df["Return"]
-mapdf = df.groupby(['uo','date']).UoPR.sum().to_frame()
-mapingdict = dict(zip(
-    mapdf.index,mapdf.UoPR
-    ))
-df['UoPR'] = df.set_index(['uo','date']).index.map(mapingdict)
-df['UoPR'] = (df.UoPR - df.WinUoP * df.Return)/(1-df.WinUoP)
+mapdf = df.groupby(["uo", "date"]).UoPR.sum().to_frame()
+mapingdict = dict(zip(mapdf.index, mapdf.UoPR))
+df["UoPR"] = df.set_index(["uo", "date"]).index.map(mapingdict)
+df["UoPR"] = (df.UoPR - df.WinUoP * df.Return) / (1 - df.WinUoP)
 
-data = df.set_index(['symbol','date'])
+data = df.set_index(["symbol", "date"])
 #%%
 
 PriceData["jalaliDate"] = PriceData["jalaliDate"].astype(int)
@@ -324,14 +319,14 @@ PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="ffill
 PriceData["shrout"] = PriceData.groupby("symbol")["shrout"].fillna(method="backfill")
 PriceData = PriceData[~PriceData.shrout.isnull()]
 PriceData = PriceData[~PriceData.close_price.isnull()]
-mapdf = PriceData.groupby(['group_id','date']).size().to_frame()
-mapingdict = dict(zip(
-    mapdf.index,mapdf[0]
-))
-PriceData['industry_size'] = PriceData.set_index(['group_id','date']).index.map(mapingdict)
+mapdf = PriceData.groupby(["group_id", "date"]).size().to_frame()
+mapingdict = dict(zip(mapdf.index, mapdf[0]))
+PriceData["industry_size"] = PriceData.set_index(["group_id", "date"]).index.map(
+    mapingdict
+)
 
 #%%
-PriceData = PriceData[PriceData.industry_size>2]
+PriceData = PriceData[PriceData.industry_size > 2]
 PriceData["MarketCap"] = PriceData.close_price * PriceData.shrout
 gdf = PriceData.groupby(["group_id", "date"]).MarketCap.sum().to_frame()
 mapingdict = dict(zip(gdf.index, gdf.MarketCap))

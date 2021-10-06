@@ -28,12 +28,12 @@ def _multiple_replace(mapping, text):
 
 #%%
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
 
-n1 = path + "MonthlyNormalzedFCAP8.1" + ".parquet"
+n1 = path + "MonthlyNormalzedFCAP9.1" + ".parquet"
 df1 = pd.read_parquet(n1)
-df = pd.read_parquet(path + "Holder_Residual.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
 #%%
 df["id"] = df.id.astype(int)
@@ -47,34 +47,64 @@ df1[["symbol_x", "symbol_y"]].isnull().sum()
 
 df1 = df1[df1.id_x != df1.id_y]
 # %%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-n = path + "IRX6XTPI0009.xls"
-Index = pd.read_excel(n)
 
-Index["YearMonth"] = (Index["<DTYYYYMMDD>"] / 100).round(0)
+import requests
+
+
+def removeSlash(row):
+    X = row.split("/")
+    if len(X[1]) < 2:
+        X[1] = "0" + X[1]
+    if len(X[2]) < 2:
+        X[2] = "0" + X[2]
+
+    return int(X[0] + X[1] + X[2])
+
+def Overall_index():
+    url = r"http://www.tsetmc.com/tsev2/chart/data/Index.aspx?i=32097828799138957&t=value"
+    r = requests.get(
+                url
+            )
+    jalaliDate = []
+    Value = []
+    for i in r.text.split(";"):
+        x = i.split(',')
+        jalaliDate.append(x[0])
+        Value.append(float(x[1]))
+    df = pd.DataFrame({'jalaliDate' :jalaliDate,
+                'Value' : Value,
+                }, 
+                columns=['jalaliDate','Value'])
+    df["jalaliDate"] = df.jalaliDate.apply(removeSlash)
+    return df
+
+Index = Overall_index()
+a = df1[['date','jalaliDate']].drop_duplicates()
+mapingdict = dict(zip(
+    a.jalaliDate,a.date
+))
+Index['jalaliDate'] = Index.jalaliDate.map(mapingdict)
+Index = Index.dropna()
+Index["YearMonth"] = (Index["jalaliDate"] / 100).round(0)
 Index["YearMonth"] = Index["YearMonth"].astype(int)
 Index["YearMonth"] = Index["YearMonth"].astype(str)
-Index = Index[["YearMonth", "<CLOSE>"]]
+Index = Index[["YearMonth", "Value"]]
 Index = Index.drop_duplicates(subset="YearMonth", keep="last")
-Index["change"] = Index["<CLOSE>"].pct_change() * 100
+Index["change"] = Index["Value"].pct_change() * 100
 Index["Bullish"] = 0
 Index["Bearish"] = 0
-Index = Index.replace(np.nan, -1.709737)
 Index["change"] = Index.change.shift(-1)
 
 Index.loc[Index.change >= 2, "Bullish"] = 1
 Index.loc[Index.change <= -2, "Bearish"] = 1
-
 mapdict = dict(zip(Index.YearMonth, Index.Bullish))
 df1["Bullish"] = df1["Year_Month"].map(mapdict)
 mapdict = dict(zip(Index.YearMonth, Index.Bearish))
 df1["Bearish"] = df1["Year_Month"].map(mapdict)
 print(len(df1))
-df1 = df1[df1.jalaliDate < 13990000]
+df1 = df1[df1.jalaliDate < 14000000]
 df1.isnull().sum()
-print(len(df1))
 # %%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 BGId = pd.read_csv(path + "BGId.csv")
 mapdict = dict(zip(BGId.BGId, BGId.uo))
 df1["uo_x"] = df1["BGId_x"].map(mapdict)
@@ -84,12 +114,15 @@ df1[["BGId_x", "BGId_y", "uo_x", "uo_y"]].isnull().sum()
 
 
 #%%
-pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-# pathBG = path
+pathBG = r"E:\RA_Aghajanzadeh\Data\\"
 n = pathBG + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
+
 BG = BG[BG.listed == 1]
-BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
+BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+tt = BG[BG.year == 1398]
+tt["year"] = 1399
+BG = BG.append(tt).reset_index(drop=True)
 df1["year"] = round(df1.jalaliDate / 10000, 0)
 df1["year"] = df1["year"].astype(int)
 
@@ -187,8 +220,6 @@ investmentSymbol = [
     "وایرا",
     "وآذر",
 ]
-pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-# pathBG = path
 n = pathBG + "Grouping_CT.xlsx"
 DD = pd.read_excel(n)
 DD = pd.read_excel(n)
@@ -234,20 +265,16 @@ df1["MonthlyFCA*"] = gg["MonthlyFCA"].apply(NormalTransform)
 
 #%%
 
-pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-# pathBG = path
 n = pathBG + "Grouping_CT.xlsx"
 BG = pd.read_excel(n)
 BG = BG[BG.listed == 1]
 BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3.0)
-BG = BG[BG.year >= 1394]
+# BG = BG[BG.year >= 1394]
 
 
 # %%
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-
-n2 = path + "\\balance sheet - 9811" + ".xlsx"
+n2 = pathBG + "\\balance sheet - 9811" + ".xlsx"
 df2 = pd.read_excel(n2)
 df2 = df2.iloc[:, [0, 4, 18]]
 
@@ -272,23 +299,10 @@ df2["symbol"] = df2.symbol.apply(convert_ar_characters)
 fkey = zip(df2.symbol, df2.year)
 mapdict = dict(zip(fkey, df2.Capital))
 BG["shrOut"] = BG.set_index(["symbol", "year"]).index.map(mapdict)
-#%%
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-# holder = pd.read_csv(path + "BlockHolders - 800308-990528 - Annual" + ".csv")
-# gg = holder.groupby(['symbol','jalaliDate'])
-# def s(g):
-#     return g.nshares.sum()
-# holder = gg.last()
-# holder['shrOut'] = gg.apply(s)
-# holder = holder.reset_index()
-# holder = holder [['symbol', 'jalaliDate', 'year', 'shrOut']]
-# fkey = zip(holder.symbol,holder.year)
-# mapdict = dict(zip(fkey,holder.shrOut))
-# BG['shrOut2'] = BG.set_index(['symbol','year']).index.map(mapdict)
 
 #%%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-price = pd.read_csv(path + "Stocks_Prices_1399-09-24" + ".csv")
+path = r"E:\RA_Aghajanzadeh\Data\\"
+price = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
 
 price = price[["jalaliDate", "date", "name", "close_price"]]
 
@@ -298,7 +312,7 @@ def vv(row):
     return int(X[0])
 
 
-price["year"] = price["jalaliDate"].apply(vv)
+price["year"] = round(price["jalaliDate"]/100,0)
 price = price.groupby(["name", "year"]).last().reset_index()
 price["name"] = price.name.apply(convert_ar_characters)
 fkey = zip(price.name, price.year)
@@ -414,8 +428,8 @@ for t in [
 #     df1[t+"_y"] = df1.groupby('id')[t+"_y"].fillna(method = 'ffill')
 
 #%%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-n = path + "Holder_Residual.parquet"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+n = path + "Holder_Residual_1400_06_28.parquet"
 df = pd.read_parquet(n)
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
@@ -488,7 +502,8 @@ df1["sBgroup"] = 0
 df1.loc[df1.uo_x == df1.uo_y, "sBgroup"] = 1
 df1.loc[df1.uo_x.isnull(), "sBgroup"] = 0
 df1.loc[df1.uo_y.isnull(), "sBgroup"] = 0
-df1.sBgroup.isnull().sum()
+df1.loc[df1.year<BG.year.min(),'sBgroup'] = np.nan
+df1.sBgroup.isnull().sum() 
 #%%
 df1 = df1.sort_values(by=["id", "t_Month"])
 df1["Monthlyρ_5_1"] = df1.groupby("id").Monthlyρ_5.shift(1)
@@ -555,28 +570,44 @@ df1.groupby(["t_Month"]).NMFCA2.std()
 #%%
 
 mapdict = dict(zip(time.jalaliDate, time.date))
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-df = pd.read_csv(path + "Stock Trade details.csv")
+path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
+df = pd.read_parquet(path + "mergerdallData_cleaned.parquet")
+def removedash(row):
+    X = row.split("-")
+    if len(X[1]) < 2:
+        X[1] = "0" + X[1]
+    if len(X[2]) < 2:
+        X[2] = "0" + X[2]
+    return int(X[0] + X[1] + X[2])
+def convert_ar_characters(input_str):
+    mapping = {
+        "ك": "ک",
+        "گ": "گ",
+        "دِ": "د",
+        "بِ": "ب",
+        "زِ": "ز",
+        "ذِ": "ذ",
+        "شِ": "ش",
+        "سِ": "س",
+        "ى": "ی",
+        "ي": "ی",
+    }
+    return _multiple_replace(mapping, input_str)
+import re
+
+def _multiple_replace(mapping, text):
+    pattern = "|".join(map(re.escape, mapping.keys()))
+    return re.sub(pattern, lambda m: mapping[m.group()], str(text))
+
+df["jalali"] = df.jalaliDate.apply(removedash)
+df["name"] = df["name"].apply(lambda x: convert_ar_characters(x))
+#%%
 df["date"] = df.jalali.map(mapdict)
-df = df[~df.ind_buy_count.isnull()].drop(
-    columns=[
-        "baseVol",
-        "max_price",
-        "min_price",
-        "close_price",
-        "last_price",
-        "open_price",
-        "value",
-        "volume",
-        "quantity",
-        "Price",
-        "open_Adjprice",
-        "Adjusted price",
-    ]
-)
+
+df = df[~df.ind_buy_count.isnull()].dropna()
 df["year"] = round(df.jalali / 10000)
 df["year"] = df["year"].astype(int)
-df = df[df.year >= 1394]
+df = df[df.year >= df1.year.min()]
 
 
 def vv4(row):
@@ -596,8 +627,8 @@ df["year_of_year"] = df["date1"].dt.year
 
 
 def BG(df):
-    pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-    # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+    # pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
+    pathBG = r"E:\RA_Aghajanzadeh\Data\\"
     n = pathBG + "Grouping_CT.xlsx"
     BG = pd.read_excel(n)
     uolist = (
@@ -622,7 +653,7 @@ def BG(df):
         print(i)
         fkey = zip(list(BG.symbol), list(BG.year))
         mapingdict = dict(zip(fkey, BG[i]))
-        df[i] = df.set_index(["symbol", "year"]).index.map(mapingdict)
+        df[i] = df.set_index(["name", "year"]).index.map(mapingdict)
     return df
 
 
@@ -649,8 +680,8 @@ df["yearWeek"] = df["year_of_year"].astype(str) + "-" + df["week_of_year"].astyp
 
 #%%
 frequency = "yearMonth"
-mdf = df.groupby(["symbol", frequency]).first().drop(columns=["jalali"])
-mdf[mlist] = df.groupby(["symbol", frequency])[mlist].sum()
+mdf = df.groupby(["name", frequency]).first().drop(columns=["jalali"])
+mdf[mlist] = df.groupby(["name", frequency])[mlist].sum()
 mdf = mdf.reset_index()
 mdf["InsImbalance_count"] = (mdf.ins_buy_count - mdf.ins_sell_count) / (
     mdf.ins_buy_count + mdf.ins_sell_count
@@ -664,8 +695,7 @@ mdf["InsImbalance_value"] = (mdf.ins_buy_value - mdf.ins_sell_value) / (
 mdf = mdf[
     [
         frequency,
-        "symbol",
-        "group_name",
+        "name",
         "year",
         "uo",
         "cfr",
@@ -675,7 +705,7 @@ mdf = mdf[
         "InsImbalance_volume",
         "InsImbalance_value",
     ]
-].sort_values(by=["symbol", frequency])
+].sort_values(by=["name", frequency])
 mdf = mdf.reset_index(drop=True)
 mdf = mdf[~mdf.InsImbalance_count.isnull()]
 mdf
@@ -721,8 +751,8 @@ df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 
 #%%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-n1 = path + "MonthlyNormalzedFCAP8.2" + ".csv"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+n1 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
 print(len(df1))
 df1.to_csv(n1)
 
@@ -751,3 +781,5 @@ def lowdummy(g):
 
 a = gg.apply(lowdummy).reset_index()
 a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)
+
+# %%

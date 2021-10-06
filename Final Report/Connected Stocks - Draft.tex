@@ -70,7 +70,7 @@ December\fi, \number \year}
 
 
 \usepackage{lipsum}
-\linespread{2}
+\linespread{1.5}
 
 
 
@@ -740,13 +740,12 @@ In the fifth specification of table \ref{mresult2}, we use both \textit{Same Gro
 % % % % % 
 % 		%
 % % % % %
-
-We extend our investigation in order to separate effect of business groups and high level of common ownership by constructing all the pairs in the market. For this purpose, we include stocks in one pair if they have, at least, two months in common. By this definition, we do not restrict our investigation to commonly hold stocks and set $\text{FCA}^*_{ij,t}$ to zero for two stocks that do not have any common owner. We define a dummy variable for that equals to one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is higher  than third quarter of that period and use it as our variable of interest. Other controls are as before:
+We extend our investigation to separate the effect of business groups and a high level of common ownership by constructing all the pairs in the market. For this purpose, we include stocks in one pair if they have two months in common. By this definition, we do not restrict our investigation to commonly hold stocks and set $\text{FCA}^*_{ij,t}$ to zero for two stocks that do not have any common owner. We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
 \input{Model12}
 
-We used the same methodology as used for estimating equation \ref{model1}. Table \ref{AllPairs} 
-Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
+In table \ref{AllPairs}, we show that pairs in the same group co-move with each other more than stocks that are not in the same group. In addition, as we expected, pairs by the high level of common ownership co-move greater than others (columns 1 and 2). In the third specification, we used both variables and supported our previous results from table \ref{mresult2} that \textit{Same Group} and $\text{FCA}^*$ are both critical for forecasting future co-movement. 
 
+In columns four and five of the table \ref{AllPairs},  we estimate our variable of interest for the subsample of pairs in the same business group. These specifications help us to separate common ownership and the group effect. The results confirm that common ownership will increase the co-movement of the stocks' abnormal return for the pairs in the same group. Furthermore, we estimate model \ref{model2} for the full sample. The last column of table \ref{AllPairs} reports the result of this estimation. Contrary to previous results of table \ref{mresult2}, the interaction of \textit{Same Group} and the high level of common ownership is not significantly improved our forecasts. According to figure \ref{BGSummary} and table \ref{measureResults}, pairs in the same group have higher measures of common ownership which make the interaction correlated with \textit{Same Group} ($ \rho =  $). When we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.It seems that 
 
 		\begin{table}[htbp]
 	\centering
@@ -762,18 +761,7 @@ Pairs of companies belonging to the same business group have a higher correlatio
 
 \FloatBarrier
 
-Stock returns of group affiliated firms exhibit robustly positive comovement even after controlling for both market and industry effects. Group betas
-($ \beta_{Businussgroup} $) are highly significant across all models.
 
-\begin{table}[htbp]
-	\centering
-	\caption{Cross-sectional average of the time-series coefficients}
-	\resizebox{\textwidth}{!}{
-		\input{BGReturn.tex}
-	}
-\end{table}
-
-\FloatBarrier
 
 
 
@@ -871,8 +859,7 @@ Stock returns of group affiliated firms exhibit robustly positive comovement eve
 
 
 \FloatBarrier
-\subsection{Comovement in Business Groups}
-\FloatBarrier
+
 
 \subsection{Evidence for correlated trading }
 
@@ -942,6 +929,21 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 
 
 \begin{appendices}
+\section{Further group analysis}
+Stock returns of group affiliated firms exhibit robustly positive comovement even after controlling for both market and industry effects. Group betas
+($ \beta_{Businussgroup} $) are highly significant across all models.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Cross-sectional average of the time-series coefficients}
+	\resizebox{\textwidth}{!}{
+		\input{BGReturn.tex}
+	}
+\end{table}
+
+\FloatBarrier
+
+
 \section{Logaritmic Transformation}
 
 
@@ -965,7 +967,7 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 
 \FloatBarrier
 
-\section{ %\hyperref[a1] 
+\section{ \hyperref[a1] 
 {Anton Polk}'s measure}
   \begin{figure}   
  \centering

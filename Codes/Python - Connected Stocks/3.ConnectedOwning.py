@@ -526,8 +526,8 @@ for i in list(gg.groups.keys()):
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
     print("Id " + str(F_id))
-    Next_df = df[df.id > F_id]
-    S_gg = Next_df.groupby(["id"])
+    df = df[df.id > F_id]
+    S_gg = df.groupby(["id"])
     # data = data.append(S_gg.apply(FCAPf, g=g))
     pickle.dump(S_gg.apply(FCAPf, g=g),
                     open(

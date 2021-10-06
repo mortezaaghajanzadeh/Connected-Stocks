@@ -116,16 +116,16 @@ graph export mcorr5lrdbg.png,replace
 summ Q
 sum NMFCA if Q == 4
 
-binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.8659166)
+binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.6255978)
 graph export Qmcorr5lrd.eps,replace
 graph export Qmcorr5lrd.png,replace
 
-binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.8659166) by(holder_act)  legend( ring(1) col(2) label(2 "Active Holder") label(1 "Passive Holder") ) msymbol(Th S) 
+binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.6255978) by(holder_act)  legend( ring(1) col(2) label(2 "Active Holder") label(1 "Passive Holder") ) msymbol(Th S) 
 
 graph export Qmcorr5lrda.eps,replace
 graph export Qmcorr5lrda.png,replace
 
-binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.8659166) by(sbgroup)  legend( ring(1) col(2) label(1 "Separate Group") label(2 "Same Group") ) msymbol(Th S) 
+binscatter monthlyρ_5_f NMFCA , ytitle("{&rho} {sub:ij,t+1}") nquantiles(100) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness. Allow for discontinuity in fourth quarter") xtitle("FCA*")  title("Common Pairs") rd(0.6255978) by(sbgroup)  legend( ring(1) col(2) label(1 "Separate Group") label(2 "Same Group") ) msymbol(Th S) 
 graph export Qmcorr5lrdbg.eps,replace
 graph export Qmcorr5lrdbg.png,replace
 

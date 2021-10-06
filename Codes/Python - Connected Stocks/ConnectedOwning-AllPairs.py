@@ -70,20 +70,20 @@ def vv5(row):
 
 
 # %%
-path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-df = pd.read_parquet(path + "Holder_Residual.parquet")
-df.head()
 
-
-# %%
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 
 df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
     df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
 )
-df.head()
-df = df[df.jalaliDate < 13990000]
 
+df = df[df.jalaliDate < 14000000]
+try:
+    df = df.drop(columns=["Delta_Trunover"])
+except:
+    1 + 2
 
 # %%
 def FCAPf(S_g, g):
@@ -147,14 +147,14 @@ def Calculation(g, S_g):
                 "SizeRatio",
                 "MarketCap_x",
                 "MarketCap_y",
-                "2-Residual_x",
-                "2-Residual_y",
+                "2_Residual_x",
+                "2_Residual_y",
                 "4_Residual_x",
                 "4_Residual_y",
-                "5-Residual_x",
-                "5-Residual_y",
-                "6-Residual_x",
-                "6-Residual_y",
+                "5_Residual_x",
+                "5_Residual_y",
+                "6_Residual_x",
+                "6_Residual_y",
                 "5Lag_Residual_x",
                 "5Lag_Residual_y",
                 "Percentile_Rank_x",
@@ -333,14 +333,14 @@ def MonthlyCorr(f):
     fc = (
         f.groupby(["year_of_year", "month_of_year"])[
             [
-                "2-Residual_x",
-                "2-Residual_y",
+                "2_Residual_x",
+                "2_Residual_y",
                 "4_Residual_x",
                 "4_Residual_y",
-                "5-Residual_x",
-                "5-Residual_y",
-                "6-Residual_x",
-                "6-Residual_y",
+                "5_Residual_x",
+                "5_Residual_y",
+                "6_Residual_x",
+                "6_Residual_y",
                 "5Lag_Residual_x",
                 "5Lag_Residual_y",
             ]
@@ -349,18 +349,18 @@ def MonthlyCorr(f):
         .reset_index()
     )
 
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "month_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
+    TwoCor = fc.loc[fc.level_2 == "2_Residual_y"][
+        ["year_of_year", "month_of_year", "2_Residual_x"]
+    ].rename(columns={"2_Residual_x": "ρ_2"})
     FourCor = fc.loc[fc.level_2 == "4_Residual_y"][
         ["year_of_year", "month_of_year", "4_Residual_x"]
     ].rename(columns={"4_Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "month_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "month_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
+    ThreeCor = fc.loc[fc.level_2 == "5_Residual_y"][
+        ["year_of_year", "month_of_year", "5_Residual_x"]
+    ].rename(columns={"5_Residual_x": "ρ_5"})
+    SixCor = fc.loc[fc.level_2 == "6_Residual_y"][
+        ["year_of_year", "month_of_year", "6_Residual_x"]
+    ].rename(columns={"6_Residual_x": "ρ_6"})
     FiveCor = fc.loc[fc.level_2 == "5Lag_Residual_y"][
         ["year_of_year", "month_of_year", "5Lag_Residual_x"]
     ].rename(columns={"5Lag_Residual_x": "ρLag_5"})
@@ -468,14 +468,14 @@ def WeeklyCorr(f):
     fc = (
         f.groupby(["year_of_year", "week_of_year"])[
             [
-                "2-Residual_x",
-                "2-Residual_y",
+                "2_Residual_x",
+                "2_Residual_y",
                 "4_Residual_x",
                 "4_Residual_y",
-                "5-Residual_x",
-                "5-Residual_y",
-                "6-Residual_x",
-                "6-Residual_y",
+                "5_Residual_x",
+                "5_Residual_y",
+                "6_Residual_x",
+                "6_Residual_y",
                 "5Lag_Residual_x",
                 "5Lag_Residual_y",
             ]
@@ -484,18 +484,18 @@ def WeeklyCorr(f):
         .reset_index()
     )
 
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "week_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
+    TwoCor = fc.loc[fc.level_2 == "2_Residual_y"][
+        ["year_of_year", "week_of_year", "2_Residual_x"]
+    ].rename(columns={"2_Residual_x": "ρ_2"})
     FourCor = fc.loc[fc.level_2 == "4_Residual_y"][
         ["year_of_year", "week_of_year", "4_Residual_x"]
     ].rename(columns={"4_Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "week_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "week_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
+    ThreeCor = fc.loc[fc.level_2 == "5_Residual_y"][
+        ["year_of_year", "week_of_year", "5_Residual_x"]
+    ].rename(columns={"5_Residual_x": "ρ_5"})
+    SixCor = fc.loc[fc.level_2 == "6_Residual_y"][
+        ["year_of_year", "week_of_year", "6_Residual_x"]
+    ].rename(columns={"6_Residual_x": "ρ_6"})
     FiveCor = fc.loc[fc.level_2 == "5Lag_Residual_y"][
         ["year_of_year", "week_of_year", "5Lag_Residual_x"]
     ].rename(columns={"5Lag_Residual_x": "ρLag_5"})
@@ -525,13 +525,13 @@ def WeeklyCorr(f):
 
 
 # %%
-df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
+df[df.symbol == "شستا"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
 
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(140)
-S_g = gdata.get_group(139)
+g = gdata.get_group(297)
+S_g = gdata.get_group(148)
 
 
 FCAPf(S_g, g)
@@ -664,7 +664,7 @@ result["4rdQarter"] = 0
 gg = result.groupby(["t_Month"])
 g = gg.get_group(2)
 
-g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75),g.MonthlyFCA.quantile(0.75)
+g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75), g.MonthlyFCA.quantile(0.75)
 
 #%%
 def quarter(g):

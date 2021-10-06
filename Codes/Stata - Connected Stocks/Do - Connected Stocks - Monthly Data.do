@@ -1,9 +1,10 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP8.2.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "C:\Users\RA_Aghajanzadeh\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 label define sgroup 0 "No" 1 "Yes"
 
@@ -283,9 +284,11 @@ replace monthlycrossownership = monthlycrossownership/100
  label variable monthlycrossownership "CrossOwnership"
 
 
- asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup  , fmb newey(4)
+ asreg monthlyρ_5_f NMFCA monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 
 cor  monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup 
+
+cor NMFCAG NMFCA sbgroup
 
 reg MFCA c.t_month##sbgroup ,robust
 
