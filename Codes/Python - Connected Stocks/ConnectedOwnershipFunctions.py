@@ -88,6 +88,20 @@ def SecondCal(a):
         "BGId_y",
         "position_x",
         "position_y",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
+        "BGId_x",
+        "BGId_y",
+        "Delta_Trunover_x",
+        "Delta_Trunover_y",
+        "Delta_Amihud_x",
+        "Delta_Amihud_y",
     ]
     for i in mlist:
         mapingdict = dict(zip(a.date, a[i]))
@@ -229,7 +243,6 @@ def FCalculation(a):
         )
     return a
 
-
 def MonthlyCalculation(f):
 
     f = MonthlyCorr(f)
@@ -249,6 +262,14 @@ def MonthlyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
+                'TurnOver_x',
+                'Amihud_x',
+                'volume_x',
+                'value_x',
+                'TurnOver_y',
+                'Amihud_y',
+                'volume_y',
+                'value_y',
             ]
         ]
         .mean()
@@ -268,6 +289,14 @@ def MonthlyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
     ]
 
     for i in vlist:
@@ -297,7 +326,9 @@ def MonthlyCalculation(f):
     f["Monthlyρ_4_f"] = f["Monthlyρ_4"].shift(-1)
     f["Monthlyρ_5_f"] = f["Monthlyρ_5"].shift(-1)
     f["Monthlyρ_6_f"] = f["Monthlyρ_6"].shift(-1)
-    f["MonthlyρLag-5_f"] = f["MonthlyρLag-5"].shift(-1)
+    f["MonthlyρLag_5_f"] = f["Monthlyρ_5Lag"].shift(-1)
+    f["Monthlyρ_turn_f"] = f["Monthlyρ_turn"].shift(-1)
+    f["Monthlyρ_amihud_f"] = f["Monthlyρ_amihud"].shift(-1)
     return f
 
 
@@ -316,58 +347,53 @@ def MonthlyCorr(f):
                 "6-Residual_y",
                 "5Lag-Residual_x",
                 "5Lag-Residual_y",
+                "Delta_Trunover_x",
+                "Delta_Trunover_y",
+                "Delta_Amihud_x",
+                "Delta_Amihud_y",
             ]
         ]
         .corr()
         .reset_index()
     )
 
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "month_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
-    FourCor = fc.loc[fc.level_2 == "4-Residual_y"][
-        ["year_of_year", "month_of_year", "4-Residual_x"]
-    ].rename(columns={"4-Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "month_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "month_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
-    FiveCor = fc.loc[fc.level_2 == "5Lag-Residual_y"][
-        ["year_of_year", "month_of_year", "5Lag-Residual_x"]
-    ].rename(columns={"5Lag-Residual_x": "ρLag_5"})
+    for i in [
+        "2-Residual",
+        "4-Residual",
+        "5-Residual",
+        "6-Residual",
+        "5Lag-Residual",
+                ]:
+        cor = fc.loc[fc.level_2 == i + "_y"][
+            ["year_of_year", "month_of_year", i + "_x"]
+        ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
+        TimeId = zip(list(cor.year_of_year), list(cor.month_of_year))
+        mapingdict = dict(zip(TimeId, list(cor["ρ_" + i.split("-")[0]])))
+        f["Monthly" + "ρ_" + i.split("-")[0]] = f.set_index(
+            ["year_of_year", "month_of_year"]
+        ).index.map(mapingdict)
 
-    TimeId = zip(list(TwoCor.year_of_year), list(TwoCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(TwoCor.ρ_2)))
-    f["Monthlyρ_2"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
+    turncor = fc.loc[fc.level_2 == "Delta_Trunover_y"][
+        ["year_of_year", "month_of_year", "Delta_Trunover_x"]
+    ].rename(columns={"Delta_Trunover_x": "ρ_turn"})
+    TimeId = zip(list(turncor.year_of_year), list(turncor.month_of_year))
+    mapingdict = dict(zip(TimeId, list(turncor.ρ_turn)))
+    f["Monthlyρ_turn"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
+        mapingdict
+    )
+    amihudcor = fc.loc[fc.level_2 == "Delta_Amihud_y"][
+        ["year_of_year", "month_of_year", "Delta_Amihud_x"]
+    ].rename(columns={"Delta_Amihud_x": "ρ_amihud"})
+    TimeId = zip(list(amihudcor.year_of_year), list(amihudcor.month_of_year))
+    mapingdict = dict(zip(TimeId, list(amihudcor.ρ_amihud)))
+    f["Monthlyρ_amihud"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
         mapingdict
     )
 
-    TimeId = zip(list(FourCor.year_of_year), list(FourCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(FourCor.ρ_4)))
-    f["Monthlyρ_4"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-
-    TimeId = zip(list(ThreeCor.year_of_year), list(ThreeCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(ThreeCor.ρ_5)))
-    f["Monthlyρ_5"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-    TimeId = zip(list(SixCor.year_of_year), list(SixCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(SixCor.ρ_6)))
-    f["Monthlyρ_6"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
-    TimeId = zip(list(FiveCor.year_of_year), list(FiveCor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(FiveCor.ρLag_5)))
-    f["MonthlyρLag-5"] = f.set_index(["year_of_year", "month_of_year"]).index.map(
-        mapingdict
-    )
     return f
 
 
+# %%
 def WeeklyCalculation(f):
 
     f = WeeklyCorr(f)
@@ -387,6 +413,14 @@ def WeeklyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
+                'TurnOver_x',
+                'Amihud_x',
+                'volume_x',
+                'value_x',
+                'TurnOver_y',
+                'Amihud_y',
+                'volume_y',
+                'value_y',
             ]
         ]
         .mean()
@@ -406,6 +440,14 @@ def WeeklyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
+        'TurnOver_x',
+        'Amihud_x',
+        'volume_x',
+        'value_x',
+        'TurnOver_y',
+        'Amihud_y',
+        'volume_y',
+        'value_y',
     ]
 
     for i in vlist:
@@ -432,7 +474,9 @@ def WeeklyCalculation(f):
     f["Weeklyρ_4_f"] = f["Weeklyρ_4"].shift(-1)
     f["Weeklyρ_5_f"] = f["Weeklyρ_5"].shift(-1)
     f["Weeklyρ_6_f"] = f["Weeklyρ_6"].shift(-1)
-    f["WeeklyρLag-5_f"] = f["WeeklyρLag-5"].shift(-1)
+    f["WeeklyρLag_5_f"] = f["Weeklyρ_5Lag"].shift(-1)
+    f["Weeklyρ_turn_f"] = f["Weeklyρ_turn"].shift(-1)
+    f["Weeklyρ_amihud_f"] = f["Weeklyρ_amihud"].shift(-1)
     return f
 
 
@@ -450,47 +494,46 @@ def WeeklyCorr(f):
                 "6-Residual_y",
                 "5Lag-Residual_x",
                 "5Lag-Residual_y",
+                "Delta_Trunover_x",
+                "Delta_Trunover_y",
+                "Delta_Amihud_x",
+                "Delta_Amihud_y",
             ]
         ]
         .corr()
         .reset_index()
     )
-
-    TwoCor = fc.loc[fc.level_2 == "2-Residual_y"][
-        ["year_of_year", "week_of_year", "2-Residual_x"]
-    ].rename(columns={"2-Residual_x": "ρ_2"})
-    FourCor = fc.loc[fc.level_2 == "4-Residual_y"][
-        ["year_of_year", "week_of_year", "4-Residual_x"]
-    ].rename(columns={"4-Residual_x": "ρ_4"})
-    ThreeCor = fc.loc[fc.level_2 == "5-Residual_y"][
-        ["year_of_year", "week_of_year", "5-Residual_x"]
-    ].rename(columns={"5-Residual_x": "ρ_5"})
-    SixCor = fc.loc[fc.level_2 == "6-Residual_y"][
-        ["year_of_year", "week_of_year", "6-Residual_x"]
-    ].rename(columns={"6-Residual_x": "ρ_6"})
-    FiveCor = fc.loc[fc.level_2 == "5Lag-Residual_y"][
-        ["year_of_year", "week_of_year", "5Lag-Residual_x"]
-    ].rename(columns={"5Lag-Residual_x": "ρLag_5"})
-
-    TimeId = zip(list(TwoCor.year_of_year), list(TwoCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(TwoCor.ρ_2)))
-    f["Weeklyρ_2"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(FourCor.year_of_year), list(FourCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(FourCor.ρ_4)))
-    f["Weeklyρ_4"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(ThreeCor.year_of_year), list(ThreeCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(ThreeCor.ρ_5)))
-    f["Weeklyρ_5"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-    TimeId = zip(list(SixCor.year_of_year), list(SixCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(SixCor.ρ_6)))
-    f["Weeklyρ_6"] = f.set_index(["year_of_year", "week_of_year"]).index.map(mapingdict)
-
-    TimeId = zip(list(FiveCor.year_of_year), list(FiveCor.week_of_year))
-    mapingdict = dict(zip(TimeId, list(FiveCor.ρLag_5)))
-    f["WeeklyρLag-5"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
+    for i in [
+        "2-Residual",
+        "4-Residual",
+        "5-Residual",
+        "6-Residual",
+        "5Lag-Residual",
+                ]:
+        cor = fc.loc[fc.level_2 == i + "_y"][
+            ["year_of_year", "week_of_year", i + "_x"]
+        ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
+        TimeId = zip(list(cor.year_of_year), list(cor.week_of_year))
+        mapingdict = dict(zip(TimeId, list(cor["ρ_" + i.split("-")[0]])))
+        f["Weekly" + "ρ_" + i.split("-")[0]] = f.set_index(
+            ["year_of_year", "week_of_year"]
+        ).index.map(mapingdict)
+    turncor = fc.loc[fc.level_2 == "Delta_Trunover_y"][
+        ["year_of_year", "week_of_year", "Delta_Trunover_x"]
+    ].rename(columns={"Delta_Trunover_x": "ρ_turn"})
+    TimeId = zip(list(turncor.year_of_year), list(turncor.week_of_year))
+    mapingdict = dict(zip(TimeId, list(turncor.ρ_turn)))
+    f["Weeklyρ_turn"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
         mapingdict
     )
+    amihudcor = fc.loc[fc.level_2 == "Delta_Amihud_y"][
+        ["year_of_year", "week_of_year", "Delta_Amihud_x"]
+    ].rename(columns={"Delta_Amihud_x": "ρ_amihud"})
+    TimeId = zip(list(amihudcor.year_of_year), list(amihudcor.week_of_year))
+    mapingdict = dict(zip(TimeId, list(amihudcor.ρ_amihud)))
+    f["Weeklyρ_amihud"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
+        mapingdict
+    )    
+    
 
     return f

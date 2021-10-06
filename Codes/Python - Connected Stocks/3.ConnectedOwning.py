@@ -4,7 +4,7 @@ import pickle
 from ConnectedOwnershipFunctions import *
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
@@ -41,7 +41,7 @@ g = gdata.get_group(158)
 S_g = gdata.get_group(148)
 
 
-FCAPf(S_g, g)
+a = FCAPf(S_g, g)
 
 
 # %%
