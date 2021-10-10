@@ -1,35 +1,36 @@
+#%%
 import os
 import pandas as pd
-path = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\AllPairs\\"
-
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
+path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
 #%%
-tt = pd.read_parquet(path[:-10] + "Holder_Residual.parquet")
+tt = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
 tt["id"] = tt.id.astype(int)
 tt = tt[["symbol", "id"]].drop_duplicates()
 mapdict = dict(zip(tt.id, tt.symbol))
 
-monthId = pd.read_csv(path[:-10] + "timeId.csv")[["t_Month", "date"]]
+monthId = pd.read_csv(path2 + "timeId.csv")[["t_Month", "date"]]
 monthId["date"] = round(monthId.date / 100).astype(int)
 monthId = monthId.drop_duplicates("t_Month")
 mapingdict = dict(zip(monthId.date, monthId.t_Month))
-#%%
 
 # %%
 result = pd.DataFrame()
 counter = 0
 for i, name in enumerate(arr):
     print(i)
-    df = (
-        pd.read_parquet(path + name)
-        .reset_index(drop=True)
-        .drop(
+    df = pd.read_pickle(
+        path + name
+        ).reset_index(drop=True)
+    if len(df) <1:
+        continue
+    df = df.drop(
             columns=[
                 "Weeklyρ_2",
                 "Weeklyρ_4",
                 "Weeklyρ_5",
                 "Weeklyρ_6",
-                "WeeklyρLag_5",
                 "WeeklySizeRatio",
                 "WeeklyMarketCap_x",
                 "WeeklyMarketCap_y",
@@ -51,7 +52,7 @@ for i, name in enumerate(arr):
                 "WeeklyρLag_5_f",
             ]
         )
-    )
+    
     df["id_x"] = df.id_x.astype(int)
     df["id_y"] = df.id_y.astype(int)
     df["symbol_x"] = df.id_x.map(mapdict)
@@ -70,10 +71,10 @@ for i, name in enumerate(arr):
     dt = df.drop_duplicates(["id", "t_Month"], keep="last")
 
     result = result.append(dt)
-    if len(result) > 3e6:
-        counter += 1
-        result.to_parquet(path + "MonthlyAllPairs-part%s.parquet" % counter)
-        result = pd.DataFrame()
+    # if len(result) > 3e6:
+    #     counter += 1
+    #     result.to_parquet(path2 + "MonthlyAllPairs-part%s.parquet" % counter)
+    #     result = pd.DataFrame()
 # %%
 result[result.t_Month.isnull()].yearMonth.unique()
 
@@ -85,9 +86,6 @@ mapingdict1 = dict(zip(ids, id))
 result["id"] = result["id"].map(mapingdict1)
 # %%
 
-# %%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-result = pd.read_csv(path + "MonthlyAllPairs.csv")
 #%%
 
 
