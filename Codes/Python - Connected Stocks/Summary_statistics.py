@@ -7,18 +7,18 @@ import seaborn as sns
 import re as ree
 import numpy as np
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
 
 # %%
 
-n2 = path + "MonthlyNormalzedFCAP8.2" + ".csv"
+n2 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
 df2 = pd.read_csv(n2)
 print("n2 Done")
 
 timeId = pd.read_csv(path + "timeId.csv")
 
-n = path + "Holder_Residual" + ".parquet"
+n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
 #%%
 n3 = path + "MonthlyAllPairs" + ".csv"
@@ -37,14 +37,14 @@ from matplotlib.ticker import FuncFormatter
 
 g.yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
 
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
 plt.ylabel("")
 plt.xlabel("Year")
 plt.title("Group affiliated firms' Time Series")
 fig.set_rasterized(True)
-plt.savefig(pathS + "\\BGtimeSeries.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\BGtimeSeries.png", bbox_inches="tight")
+# plt.savefig(pathS + "\\BGtimeSeries.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\BGtimeSeries.png", bbox_inches="tight")
 #%%
 te = df.groupby(["year", "Grouped"]).MarketCap.sum().to_frame().reset_index()
 te = te[te.Grouped == 0].merge(te[te.Grouped == 1], on="year")
@@ -102,14 +102,14 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
-plt.ylabel("Monthly Correlation")
-plt.xlabel("Year-Month")
-plt.title("Correlation Time Series")
-fig.set_rasterized(True)
-plt.savefig(pathS + "\\CorrtimeSeries.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\CorrtimeSeries.png", bbox_inches="tight")
+# plt.ylabel("Monthly Correlation")
+# plt.xlabel("Year-Month")
+# plt.title("Correlation Time Series")
+# fig.set_rasterized(True)
+# plt.savefig(pathS + "\\CorrtimeSeries.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\CorrtimeSeries.png", bbox_inches="tight")
 #%%
 fig = plt.figure(figsize=(8, 4))
 g = sns.lineplot(data=df3, x="t_Month", y="Monthlyρ_5", hue="sBgroup")
@@ -121,15 +121,15 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
-plt.ylabel("Monthly Correlation")
-plt.xlabel("Year-Month")
-plt.title("Correlation Time Series")
-plt.legend(["Others", "Same Group"])
-fig.set_rasterized(True)
-plt.savefig(pathS + "\\BGCorrtimeSeries.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\BGCorrtimeSeries.png", bbox_inches="tight")
+# plt.ylabel("Monthly Correlation")
+# plt.xlabel("Year-Month")
+# plt.title("Correlation Time Series")
+# plt.legend(["Others", "Same Group"])
+# fig.set_rasterized(True)
+# plt.savefig(pathS + "\\BGCorrtimeSeries.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\BGCorrtimeSeries.png", bbox_inches="tight")
 
 #%%
 n = path + "Holder_Residual" + ".parquet"
@@ -147,15 +147,15 @@ tickvalues = time.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
 
-plt.ylabel("")
-plt.xlabel("Year-Month")
-plt.title("Common Ownership Time Series")
-fig.set_rasterized(True)
-fig.tight_layout()
-plt.savefig(pathS + "\\FCAtimeSeries.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\FCAtimeSeries.png", bbox_inches="tight")
+# plt.ylabel("")
+# plt.xlabel("Year-Month")
+# plt.title("Common Ownership Time Series")
+# fig.set_rasterized(True)
+# fig.tight_layout()
+# plt.savefig(pathS + "\\FCAtimeSeries.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\FCAtimeSeries.png", bbox_inches="tight")
 
 #%%
 #%%
@@ -196,14 +196,14 @@ g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.legend(["Others", "In the same BG"])
 plt.margins(x=0.01)
-pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-plt.ylabel("")
-plt.xlabel("Year-Month")
-plt.title("Common Ownership Time Series")
-fig.set_rasterized(True)
-fig.tight_layout()
-plt.savefig(pathS + "\\FCAtimeSeriesBG.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
+# pathS = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+# plt.ylabel("")
+# plt.xlabel("Year-Month")
+# plt.title("Common Ownership Time Series")
+# fig.set_rasterized(True)
+# fig.tight_layout()
+# plt.savefig(pathS + "\\FCAtimeSeriesBG.eps", rasterized=True, dpi=300)
+# plt.savefig(pathS + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
 # %%
 fig = plt.figure(figsize=(8, 4))
 

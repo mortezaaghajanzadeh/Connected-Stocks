@@ -78,6 +78,7 @@ for i, name in enumerate(arr):
 # %%
 result[result.t_Month.isnull()].yearMonth.unique()
 
+
 #%%
 result["id"] = result["symbol_x"] + "-" + result["symbol_y"]
 ids = list(set(result.id))
@@ -93,11 +94,12 @@ def NormalTransform(df_sub):
     col = df_sub.transform("rank")
     return (col - col.mean()) / col.std()
 
-
+result = result.reset_index(drop=True)
 gg = result.groupby(["t_Month"])
-result["MonthlyFCAP*"] = gg["MonthlyFCAPf"].apply(NormalTransform)
+
+result["MonthlyFCAP*"]  = gg["MonthlyFCAPf"].apply(NormalTransform)
 result["NMFCA"] = gg["MonthlyFCA"].apply(NormalTransform)
-# %%
+#%%
 result["4rdQarterTotal"] = 0
 result["2rdQarter"] = 0
 result["4rdQarter"] = 0
@@ -121,6 +123,8 @@ def quarter(g):
 gg = result.groupby(["t_Month"])
 result = gg.apply(quarter)
 # %%
-result.to_csv(path + "MonthlyAllPairs.csv", index=False)
+result.to_csv(path + "MonthlyAllPairs_1400_06_28.csv", index=False)
 # %%
 result.groupby("t_Month").size()
+
+# %%

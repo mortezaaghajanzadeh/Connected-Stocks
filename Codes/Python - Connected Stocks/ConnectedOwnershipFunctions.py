@@ -22,6 +22,25 @@ def FCAPf(S_g, g):
     return f
 
 
+def Calculation_allPair(g, S_g, intersection):
+    a = FirstCal(g, S_g, intersection)
+    a = FCalculation(a, g, S_g)
+    if len(a) == 0:
+        return a
+    f = SecondCal(a)
+    return f
+
+
+def Calculation(g, S_g, intersection):
+    a = FirstCal(g, S_g, intersection)
+    a = FCalculation(a, g, S_g)
+    a = a[a.FCAPf > 0]
+    if len(a) == 0:
+        return a
+    f = SecondCal(a)
+    return f
+
+
 def FirstCal(g, S_g, intersection):
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
     g = g.loc[g.date.isin(intersection)]
@@ -88,14 +107,14 @@ def SecondCal(a):
         "BGId_y",
         "position_x",
         "position_y",
-        'TurnOver_x',
-        'Amihud_x',
-        'volume_x',
-        'value_x',
-        'TurnOver_y',
-        'Amihud_y',
-        'volume_y',
-        'value_y',
+        "TurnOver_x",
+        "Amihud_x",
+        "volume_x",
+        "value_x",
+        "TurnOver_y",
+        "Amihud_y",
+        "volume_y",
+        "value_y",
         "BGId_x",
         "BGId_y",
         "Delta_Trunover_x",
@@ -179,69 +198,56 @@ def AfterCal(f, g, S_g, intersection):
     return f
 
 
-def Calculation_allPair(g, S_g, intersection):
-    a = FirstCal(g, S_g, intersection)
-    a = FCalculation_allPair(a, g, S_g)
-    if len(a) == 0:
-        return a
-    f = SecondCal(a)
-    return f
-
-
-def Calculation(g, S_g, intersection):
-    a = FirstCal(g, S_g, intersection)
-    a = FCalculation(a)
-    if len(a) == 0:
-        return a
-    f = SecondCal(a)
-    return f
-
-
-def FCalculation_allPair(a, g, S_g):
-    if len(a) == 0:
-        a = g.merge(
-            S_g,
-            on=[
-                "date",
-                "jalaliDate",
-                "week_of_year",
-                "month_of_year",
-                "year_of_year",
-            ],
-        )
-        a["FCAPf"] = 0
-        a["FCA"] = 0
-        return a
-    else:
-        a["FCAPf"] = (
-            a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
-        ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
-        a["FCA"] = (
-            (a["nshares_x"] * a["close_price_x"]) ** 0.5
-            + (a["nshares_y"] * a["close_price_y"]) ** 0.5
-        ) / (
-            (a["shrout_x"] * a["close_price_x"]) ** 0.5
-            + (a["shrout_y"] * a["close_price_y"]) ** 0.5
-        )
+def FCalculation(a, g, S_g):
+    a = g.merge(
+        S_g,
+        on=[
+            "date",
+            "jalaliDate",
+            "week_of_year",
+            "month_of_year",
+            "year_of_year",
+        ],
+    )
+    a["FCAPf"] = 0
+    a["FCA"] = 0
+    tempt = a.loc[a.Holder_id_x == a.Holder_id_y]
+    tempt["FCAPf"] = (
+        tempt["nshares_x"] * tempt["close_price_x"]
+        + tempt["nshares_y"] * tempt["close_price_y"]
+    ) / (
+        tempt["shrout_x"] * tempt["close_price_x"]
+        + tempt["shrout_y"] * tempt["close_price_y"]
+    )
+    tempt["FCA"] = (
+        (tempt["nshares_x"] * tempt["close_price_x"]) ** 0.5
+        + (tempt["nshares_y"] * tempt["close_price_y"]) ** 0.5
+    ) / (
+        (tempt["shrout_x"] * tempt["close_price_x"]) ** 0.5
+        + (tempt["shrout_y"] * tempt["close_price_y"]) ** 0.5
+    )
+    a.loc[a.Holder_id_x == a.Holder_id_x, "FCAPf"] = tempt["FCAPf"]
+    a.loc[a.Holder_id_x == a.Holder_id_x, "FCA"] = tempt["FCA"]
     return a
 
 
-def FCalculation(a):
-    if len(a) == 0:
-        a = pd.DataFrame()
-        return a
-    else:
-        a["FCAPf"] = (
-            a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
-        ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
-        a["FCA"] = (
-            (a["nshares_x"] * a["close_price_x"]) ** 0.5
-            + (a["nshares_y"] * a["close_price_y"]) ** 0.5
-        ) / (
-            (a["shrout_x"] * a["close_price_x"]) ** 0.5
-            + (a["shrout_y"] * a["close_price_y"]) ** 0.5
-        )
-    return a
+# def FCalculation(a):
+#     if len(a) == 0:
+#         a = pd.DataFrame()
+#         return a
+#     else:
+#         a["FCAPf"] = (
+#             a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
+#         ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
+#         a["FCA"] = (
+#             (a["nshares_x"] * a["close_price_x"]) ** 0.5
+#             + (a["nshares_y"] * a["close_price_y"]) ** 0.5
+#         ) / (
+#             (a["shrout_x"] * a["close_price_x"]) ** 0.5
+#             + (a["shrout_y"] * a["close_price_y"]) ** 0.5
+#         )
+#     return a
+
 
 def MonthlyCalculation(f):
 
@@ -262,14 +268,14 @@ def MonthlyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
-                'TurnOver_x',
-                'Amihud_x',
-                'volume_x',
-                'value_x',
-                'TurnOver_y',
-                'Amihud_y',
-                'volume_y',
-                'value_y',
+                "TurnOver_x",
+                "Amihud_x",
+                "volume_x",
+                "value_x",
+                "TurnOver_y",
+                "Amihud_y",
+                "volume_y",
+                "value_y",
             ]
         ]
         .mean()
@@ -289,14 +295,14 @@ def MonthlyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
-        'TurnOver_x',
-        'Amihud_x',
-        'volume_x',
-        'value_x',
-        'TurnOver_y',
-        'Amihud_y',
-        'volume_y',
-        'value_y',
+        "TurnOver_x",
+        "Amihud_x",
+        "volume_x",
+        "value_x",
+        "TurnOver_y",
+        "Amihud_y",
+        "volume_y",
+        "value_y",
     ]
 
     for i in vlist:
@@ -363,7 +369,7 @@ def MonthlyCorr(f):
         "5-Residual",
         "6-Residual",
         "5Lag-Residual",
-                ]:
+    ]:
         cor = fc.loc[fc.level_2 == i + "_y"][
             ["year_of_year", "month_of_year", i + "_x"]
         ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
@@ -413,14 +419,14 @@ def WeeklyCalculation(f):
                 "B/M2",
                 "SameB/M",
                 "CrossOwnership",
-                'TurnOver_x',
-                'Amihud_x',
-                'volume_x',
-                'value_x',
-                'TurnOver_y',
-                'Amihud_y',
-                'volume_y',
-                'value_y',
+                "TurnOver_x",
+                "Amihud_x",
+                "volume_x",
+                "value_x",
+                "TurnOver_y",
+                "Amihud_y",
+                "volume_y",
+                "value_y",
             ]
         ]
         .mean()
@@ -440,14 +446,14 @@ def WeeklyCalculation(f):
         "B/M2",
         "SameB/M",
         "CrossOwnership",
-        'TurnOver_x',
-        'Amihud_x',
-        'volume_x',
-        'value_x',
-        'TurnOver_y',
-        'Amihud_y',
-        'volume_y',
-        'value_y',
+        "TurnOver_x",
+        "Amihud_x",
+        "volume_x",
+        "value_x",
+        "TurnOver_y",
+        "Amihud_y",
+        "volume_y",
+        "value_y",
     ]
 
     for i in vlist:
@@ -509,7 +515,7 @@ def WeeklyCorr(f):
         "5-Residual",
         "6-Residual",
         "5Lag-Residual",
-                ]:
+    ]:
         cor = fc.loc[fc.level_2 == i + "_y"][
             ["year_of_year", "week_of_year", i + "_x"]
         ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
@@ -533,7 +539,6 @@ def WeeklyCorr(f):
     mapingdict = dict(zip(TimeId, list(amihudcor.ρ_amihud)))
     f["Weeklyρ_amihud"] = f.set_index(["year_of_year", "week_of_year"]).index.map(
         mapingdict
-    )    
-    
+    )
 
     return f

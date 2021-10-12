@@ -1,6 +1,7 @@
 # %%
 import pickle
-
+import psutil
+from threading import Thread
 from ConnectedOwnershipFunctions import *
 
 # %%
@@ -42,70 +43,33 @@ g = gdata.get_group(158)
 S_g = gdata.get_group(148)
 
 
-a = FCAPf(S_g, g)
-
+FCAPf(S_g, g)
 
 # %%
 data = pd.DataFrame()
 gg = df.groupby(["id"])
 counter = 0
-for i in list(gg.groups.keys()):
-    g = gg.get_group(i)
-    F_id = g.id.iloc[0]
-    print("Id " + str(F_id))
-    df = df[df.id > F_id]
+def genFile(df,path,g,i):
     S_gg = df.groupby(["id"])
     # data = data.append(S_gg.apply(FCAPf, g=g))
     pickle.dump(
         S_gg.apply(FCAPf, g=g),
         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
     )
-#     if len(data) > 3e6:
-#         counter += 1
-#         data.to_parquet(path + "NormalzedFCAP9.1-part%s.parquet" % counter)
-#         data = pd.DataFrame()
-
-# counter += 1
-# data.to_parquet(path + "NormalzedFCAP9.1-part%s.parquet" % counter)
+threads = {}
+for i in list(gg.groups.keys()):
+    g = gg.get_group(i)
+    F_id = g.id.iloc[0]
+    print("Id " + str(F_id))
+    df = df[df.id > F_id]
+    gg = df.groupby(["id"])
+    while psutil.virtual_memory().percent > 75:
+        1+2     
+    threads[i] = Thread(
+            target=genFile,
+            args=(df,path,g,i),
+        )
+    threads[i].start()
+threads[i].join()
 #%%
 
-# from threading import Thread
-# import threading
-# def excepthook(args):
-#     3 == 1 + 2
-
-
-# threading.excepthook = excepthook
-
-# def creat_for_id(i,result,df,gg):
-#     g = gg.get_group(i)
-#     F_id = g.id.iloc[0]
-#     print("Id " + str(F_id))
-#     Next_df = df[df.id > F_id]
-#     S_gg = Next_df.groupby(["id"])
-#     result[i] = S_gg.apply(FCAPf, g=g)
-# j=0
-# nums = 5
-# ids = list(gg.groups.keys())
-# tot = int(len(ids)/nums) + 1
-# for i in range(tot):
-#     k = min(j + nums, len(ids))
-#     print(j, k)
-#     NoId = ids[j:k]
-#     threads = {}
-#     result = {}
-#     for id in NoId:
-#         threads[id] = Thread(
-#             target=creat_for_id,
-#             args=(id,result,df,gg),
-#         )
-#         threads[id].start()
-#     for i in threads:
-#         threads[i].join()
-#         pickle.dump(result[i],
-#                     open(
-#                         path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb")
-#                     )
-#     j = k
-
-# %%

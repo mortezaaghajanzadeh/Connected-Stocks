@@ -112,8 +112,6 @@ df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل م
 df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
 HolderData = df
 df.head()
-
-
 #%%
 re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv")
 col = "symbol"
@@ -139,6 +137,15 @@ for i in ["Ret", "volume", "value", "Amihud"]:
     print(i + " is done")
 
 HolderData.head()
+#%%
+a = HolderData.groupby(
+    'date'
+    ).size().to_frame().reset_index()
+a.plot(y = 0, use_index = True)
+a[a[0] > 1500]
+a[a.index > 1965]
+
+
 # %%
 df = HolderData
 df["marketCap"] = df.close_price * df.shrout
