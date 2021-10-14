@@ -113,30 +113,30 @@ df = df.drop(df[(df.symbol == "اتکای") & (df.close_price == 1000)].index)
 HolderData = df
 df.head()
 #%%
-re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv")
-col = "symbol"
-HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
-re["date"] = re.date.astype(int)
-HolderData["date"] = HolderData.date.astype(int)
+# re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv")
+# col = "symbol"
+# HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
+# re["date"] = re.date.astype(int)
+# HolderData["date"] = HolderData.date.astype(int)
 
 # %%
-residuals = re[re.jalaliDate > 13880000]
-del re
-for i in ["4_Residual", "6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
-    fkey = zip(list(residuals.symbol), list(residuals.date))
-    mapingdict = dict(zip(fkey, residuals[i]))
-    HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
-    print(i + "is done")
+# residuals = re[re.jalaliDate > 13880000]
+# del re
+# for i in ["4_Residual", "6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
+#     fkey = zip(list(residuals.symbol), list(residuals.date))
+#     mapingdict = dict(zip(fkey, residuals[i]))
+#     HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
+#     print(i + "is done")
 
 
-for i in ["Ret", "volume", "value", "Amihud"]:
+# for i in ["Ret", "volume", "value", "Amihud"]:
 
-    fkey = zip(list(residuals.symbol), list(residuals.date))
-    mapingdict = dict(zip(fkey, residuals[i]))
-    HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
-    print(i + " is done")
+#     fkey = zip(list(residuals.symbol), list(residuals.date))
+#     mapingdict = dict(zip(fkey, residuals[i]))
+#     HolderData[i] = HolderData.set_index(["symbol", "date"]).index.map(mapingdict)
+#     print(i + " is done")
 
-HolderData.head()
+# HolderData.head()
 #%%
 a = HolderData.groupby(
     'date'
@@ -146,6 +146,11 @@ a[a[0] > 1500]
 a[a.index > 1965]
 
 
+#%%
+t1 = df[df.date == 20170325]
+t2 = df[df.date == 20180325]
+
+set(t2.symbol) - set(t1.symbol)
 # %%
 df = HolderData
 df["marketCap"] = df.close_price * df.shrout

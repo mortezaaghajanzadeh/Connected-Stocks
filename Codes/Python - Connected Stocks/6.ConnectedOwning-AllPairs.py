@@ -111,30 +111,6 @@ S_g = gdata.get_group(148)
 a1 = FCAPf_allPair(S_g, g)
 a2 = FCAPf(S_g, g)
 #%%
-data = pd.DataFrame()
-gg = df.groupby(["id"])
-counter = 0
-def genFile(df,path,g,i):
-    S_gg = df.groupby(["id"])
-    # data = data.append(S_gg.apply(FCAPf, g=g))
-    pickle.dump(
-        S_gg.apply(FCAPf_allPair, g=g),
-        open(path + "NormalzedFCAP9.1_AllPairs\\NormalzedFCAP9.1_AllPairs_{}.p".format(i), "wb")
-    )
-threads = {}
-for i in list(gg.groups.keys()):
-    g = gg.get_group(i)
-    F_id = g.id.iloc[0]
-    print("Id " + str(F_id))
-    df = df[df.id > F_id]
-    gg = df.groupby(["id"])
-    while psutil.virtual_memory().percent > 75:
-        1+2     
-    threads[i] = Thread(
-            target=genFile,
-            args=(df,path,g,i),
-        )
-    threads[i].start()
-threads[i].join()
+
 
 # %%

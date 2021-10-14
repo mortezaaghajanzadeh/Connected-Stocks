@@ -2,39 +2,19 @@ import pandas as pd
 import pickle
 
 
-def FCAPf_allPair(S_g, g):
+def FCAPf(S_g, g, AllPair):
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
     if len(intersection) == 0:
         #         print('0')
         return
-    f = Calculation_allPair(g, S_g, intersection)
+    f = Calculation(g, S_g, intersection, AllPair)
     f = AfterCal(f, g, S_g, intersection)
     return f
 
 
-def FCAPf(S_g, g):
-    intersection = list(set.intersection(set(S_g.date), set(g.date)))
-    if len(intersection) == 0:
-        #         print('0')
-        return
-    f = Calculation(g, S_g, intersection)
-    f = AfterCal(f, g, S_g, intersection)
-    return f
-
-
-def Calculation_allPair(g, S_g, intersection):
+def Calculation(g, S_g, intersection, AllPair):
     a = FirstCal(g, S_g, intersection)
-    a = FCalculation(a, g, S_g)
-    if len(a) == 0:
-        return a
-    f = SecondCal(a)
-    return f
-
-
-def Calculation(g, S_g, intersection):
-    a = FirstCal(g, S_g, intersection)
-    a = FCalculation(a, g, S_g)
-    a = a[a.FCAPf > 0]
+    a = FCalculation(a, g, S_g, AllPair)
     if len(a) == 0:
         return a
     f = SecondCal(a)
@@ -43,13 +23,15 @@ def Calculation(g, S_g, intersection):
 
 def FirstCal(g, S_g, intersection):
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
-    g = g.loc[g.date.isin(intersection)]
-    g["Holder"] = 1
-    S_g = S_g.loc[S_g.date.isin(intersection)]
-    S_g["Holder"] = 1
+    t1 = pd.DataFrame()
+    t1 = t1.append(g.loc[g.date.isin(intersection)])
+    t1["Holder"] = 1
+    t2 = pd.DataFrame()
+    t2 = t2.append(S_g.loc[S_g.date.isin(intersection)])
+    t2["Holder"] = 1
 
-    a = g.merge(
-        S_g,
+    a = t1.merge(
+        t2,
         on=[
             "Holder_id",
             "date",
@@ -198,36 +180,49 @@ def AfterCal(f, g, S_g, intersection):
     return f
 
 
-def FCalculation(a, g, S_g):
-    a = g.merge(
-        S_g,
-        on=[
-            "date",
-            "jalaliDate",
-            "week_of_year",
-            "month_of_year",
-            "year_of_year",
-        ],
-    )
-    a["FCAPf"] = 0
-    a["FCA"] = 0
-    tempt = a.loc[a.Holder_id_x == a.Holder_id_y]
-    tempt["FCAPf"] = (
-        tempt["nshares_x"] * tempt["close_price_x"]
-        + tempt["nshares_y"] * tempt["close_price_y"]
-    ) / (
-        tempt["shrout_x"] * tempt["close_price_x"]
-        + tempt["shrout_y"] * tempt["close_price_y"]
-    )
-    tempt["FCA"] = (
-        (tempt["nshares_x"] * tempt["close_price_x"]) ** 0.5
-        + (tempt["nshares_y"] * tempt["close_price_y"]) ** 0.5
-    ) / (
-        (tempt["shrout_x"] * tempt["close_price_x"]) ** 0.5
-        + (tempt["shrout_y"] * tempt["close_price_y"]) ** 0.5
-    )
-    a.loc[a.Holder_id_x == a.Holder_id_x, "FCAPf"] = tempt["FCAPf"]
-    a.loc[a.Holder_id_x == a.Holder_id_x, "FCA"] = tempt["FCA"]
+def FCalculation(a, g, S_g, AllPair):
+    if AllPair:
+        a = g.merge(
+            S_g,
+            on=[
+                "date",
+                "jalaliDate",
+                "week_of_year",
+                "month_of_year",
+                "year_of_year",
+            ],
+        )
+        a["FCAPf"] = 0
+        a["FCA"] = 0
+        tempt = pd.DataFrame()
+        tempt = tempt.append(a.loc[a.Holder_id_x == a.Holder_id_y])
+        tempt["FCAPf"] = (
+            tempt["nshares_x"] * tempt["close_price_x"]
+            + tempt["nshares_y"] * tempt["close_price_y"]
+        ) / (
+            tempt["shrout_x"] * tempt["close_price_x"]
+            + tempt["shrout_y"] * tempt["close_price_y"]
+        )
+        tempt["FCA"] = (
+            (tempt["nshares_x"] * tempt["close_price_x"]) ** 0.5
+            + (tempt["nshares_y"] * tempt["close_price_y"]) ** 0.5
+        ) / (
+            (tempt["shrout_x"] * tempt["close_price_x"]) ** 0.5
+            + (tempt["shrout_y"] * tempt["close_price_y"]) ** 0.5
+        )
+        a.loc[a.Holder_id_x == a.Holder_id_x, "FCAPf"] = tempt["FCAPf"]
+        a.loc[a.Holder_id_x == a.Holder_id_x, "FCA"] = tempt["FCA"]
+    else:
+        a["FCAPf"] = (
+            a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
+        ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
+        a["FCA"] = (
+            (a["nshares_x"] * a["close_price_x"]) ** 0.5
+            + (a["nshares_y"] * a["close_price_y"]) ** 0.5
+        ) / (
+            (a["shrout_x"] * a["close_price_x"]) ** 0.5
+            + (a["shrout_y"] * a["close_price_y"]) ** 0.5
+        )
     return a
 
 
