@@ -33,6 +33,10 @@ path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
 n1 = path + "MonthlyNormalzedFCAP9.1" + ".parquet"
 df1 = pd.read_parquet(n1)
+df1 = df1[df1.jalaliDate <13990000]
+df1 = df1[df1.jalaliDate >13930000]
+df1 = df1[df1.FCA >0]
+
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
 #%%
@@ -571,7 +575,7 @@ df1.groupby(["t_Month"]).NMFCA2.std()
 
 mapdict = dict(zip(time.jalaliDate, time.date))
 path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
-df = pd.read_parquet(path + "mergerdallData_cleaned.parquet")
+df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
 def removedash(row):
     X = row.split("-")
     if len(X[1]) < 2:
@@ -781,5 +785,7 @@ def lowdummy(g):
 
 a = gg.apply(lowdummy).reset_index()
 a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)
+
+# %%
 
 # %%

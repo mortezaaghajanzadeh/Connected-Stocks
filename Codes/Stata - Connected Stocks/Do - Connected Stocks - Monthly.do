@@ -1,15 +1,17 @@
-corr monthlyρ_5_f monthlyρ_turn_f NMFCA sbgroup
-capture drop t222 t223
-gen t222 = monthlyρ_turn * sgroup
-gen t223 = monthlyρ_turn * NMFCA
-asreg monthlyρ_5_f NMFCA sbgroup monthlyρ_turn t222 t223 monthlysamesize monthlysamebm monthlycrossownership  , fmb newey(5)
 
 
-asreg monthlyρ_turn_f monthlyρ_5 NMFCAP  sbgroup, fmb newey(4)
+asreg monthlyρ_5_f NMFCAP sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCA sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
+asreg monthlyρ_5_f NMFCAP    sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
-binscatter  monthlyρ_5_f monthlyρ_turn, nquantiles(100) by(sbgroup) controls (NMFCA monthlysamesize monthlysamebm monthlycrossownership) rd(0)
+summ MFCA monthlyfcapf
 
+cor NMFCA NMFCAP sbgroup NMFCAG
+
+histogram MFCA 
+histogram monthlyfcapf 
 /*
 
 eststo v0 : asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
@@ -52,18 +54,8 @@ cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM    sbgroup   sgroup monthly
 
 /**/
 
-eststo v0: quietly asreg monthlyρ_5_f NMFCA if sbgroup == 1, fmb newey(4)
-estadd loc SubSample "SameGroup" , replace
-eststo v1: quietly asreg monthlyρ_5_f NMFCA  if sbgroup == 0, fmb newey(4)
-estadd loc SubSample "Others" , replace
-
-eststo v2: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
-estadd loc SubSample "SameGroup" , replace
-eststo v3: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   if sbgroup == 0, fmb newey(4)
-estadd loc SubSample "Others" , replace
 
 
-esttab v0 v1 v2 v3  , nomtitle label n r2  compress s( N SubSample  r2 ,  lab("Observations" "Sub-sample"  "$ R^2 $")) mgroups("Future Monthly Corr. of 4F+Industry Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using subsampleBGmresult-slide.tex ,replace
 
 /*NMFCA*/
 eststo clear
@@ -71,47 +63,62 @@ eststo clear
 eststo v1: quietly asreg monthlyρ_5_f  NMFCA , fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "No" , replace
+estadd loc SubSample "All" , replace
 
-eststo v2: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v2: quietly asreg monthlyρ_5_f NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "Yes" , replace
-
+estadd loc SubSample "All" , replace
 
 eststo v3: quietly asreg monthlyρ_5_f  sbgroup  , fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "No" , replace
+estadd loc SubSample "All" , replace
 
-eststo v4: quietly asreg monthlyρ_5_f sbgroup  monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+eststo v4: quietly asreg monthlyρ_5_f sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
 
 
 eststo v5: quietly asreg monthlyρ_5_f NMFCA sbgroup , fmb newey(4) 
 estadd loc GroupFE "No" , replace
 estadd loc controll "No" , replace
+estadd loc SubSample "All" , replace
 
-eststo v6: quietly asreg monthlyρ_5_f NMFCA sbgroup monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+eststo v6: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
 
 eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG, fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "No" , replace
+estadd loc SubSample "All" , replace
 
-eststo v8: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v8: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc GroupFE "No" , replace
 estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
 
 
-eststo v9: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
+eststo v9: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
 estadd loc GroupFE "Yes" , replace
 estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
 
 
 
-esttab   v3 v4 v1 v2 /*v5*/ v6 /*v7*/ v8 v9 ,nomtitle label   s( N GroupFE controll r2 ,  lab("Observations" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA    ) mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+eststo v10: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
+estadd loc GroupFE "No" , replace
+estadd loc controll "Yes" , replace
+estadd loc SubSample "SameGroup" , replace
+eststo v11: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership   if sbgroup == 0, fmb newey(4)
+estadd loc GroupFE "No" , replace
+estadd loc controll "Yes" , replace
+estadd loc SubSample "Others" , replace
 
-,using mresult2-slide.tex ,replace
+esttab   v3 v4 v1 v2 /*v5*/ v6 v10 v11 /*v7*/ v8 v9   ,nomtitle label   s( N  SubSample GroupFE controll r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA    ) mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  star(* 0.10 ** 0.05 *** 0.01) ,using mresult2-slide.tex ,replace
 
 /*Quadratic*/
 
@@ -206,7 +213,9 @@ eststo v5: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 monthlyρ_5_1-monthlyρ
 estadd loc GroupFE "Yes" , replace
 estadd loc FiveLag "5" , replace
 
-esttab   v0 v1 v11 v111   v13  v2 v4  v3 v5, nomtitle label   s( N GroupFE FiveLag r2 ,  lab("Observations" "Group FE" "Number of lag" "$ R^2 $"))  keep(NMFCA monthlyρ_5 sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership )drop( monthlyρ_5_1 monthlyρ_5_2 monthlyρ_5_3  monthlyρ_5_4 monthlyρ_5_5) order(NMFCA NMFCAG sbgroup) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-5Lag-slide.tex ,replace
+esttab   v0 v1 v11 v111   v13  v2 v4  v3 v5, nomtitle label   s( N GroupFE FiveLag r2 ,  lab("Observations" "Group FE" "Number of lag" "$ R^2 $"))  keep(NMFCA monthlyρ_5 sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership )drop( monthlyρ_5_1 monthlyρ_5_2 monthlyρ_5_3  monthlyρ_5_4 monthlyρ_5_5) order(NMFCA NMFCAG sbgroup) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+
+,using mresult2-5Lag-slide.tex ,replace
 
 
 
