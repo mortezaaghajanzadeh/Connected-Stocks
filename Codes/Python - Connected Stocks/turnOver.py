@@ -3,6 +3,7 @@ from numpy.lib.shape_base import split
 import pandas as pd
 import re
 from numpy import log as ln
+import numpy as np
 
 
 def convert_ar_characters(input_str):
@@ -28,100 +29,37 @@ def _multiple_replace(mapping, text):
 
 
 #%%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-sdf = pd.read_csv(path + "SymbolShrout.csv")
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"E:\RA_Aghajanzadeh\Data\\"
 # %%
-df = pd.read_parquet(path + "Stocks_Prices_1400-02-07.parquet")
-symbols = [
-    "سپرده",
-    "هما",
-    "وهنر-پذيره",
-    "نکالا",
-    "تکالا",
-    "اکالا",
-    "توسعه گردشگری ",
-    "وآفر",
-    "ودانا",
-    "نشار",
-    "نبورس",
-    "چبسپا",
-    "بدکو",
-    "چکارم",
-    "تراک",
-    "کباده",
-    "فبستم",
-    "تولیددارو",
-    "قیستو",
-    "خلیبل",
-    "پشاهن",
-    "قاروم",
-    "هوایی سامان",
-    "کورز",
-    "شلیا",
-    "دتهران",
-    "نگین",
-    "کایتا",
-    "غیوان",
-    "تفیرو",
-    "سپرمی",
-    "بتک",
-]
-df = df.drop(df[df["name"].isin(symbols)].index)
-df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل معامله"].index)
-
-
-df = df.drop(df[(df.name == "اتکای") & (df.close_price == 1000)].index)
-df = df.drop_duplicates()
-df = (
-    df.drop(df.loc[(df["volume"] == 0)].index)
-    .sort_values(by=["name", "jalaliDate"])
-    .rename(columns={"name": "symbol"})
-)
+df = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
+df = df[df.group_name != "صندوق سرمایه گذاری قابل معامله"]
+df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
 df["stock_id"] = df.stock_id.astype(float)
 df["close_price"] = df.close_price.astype(float)
 df["date"] = df.date.astype(int)
-df = df[(df.date < 20200324) & (df.date > 20150325)]
 df["volume"] = df.volume.astype(float)
 df = df[df.volume > 0]
 df = df[~df.title.str.startswith("ح .")]
 df = df[~df.title.str.startswith("ح.")]
-col = "symbol"
-df[col] = df[col].apply(lambda x: convert_ar_characters(x))
 
 # %%
-sdf = pd.read_csv(path + "SymbolShrout.csv")
+sdf = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
 sdf = sdf.set_index(["date", "symbol"])
 mapdict = dict(zip(sdf.index, sdf.shrout))
 df["date"] = df.date.astype(int)
 df["shrout"] = df.set_index(["date", "symbol"]).index.map(mapdict)
 df.isnull().sum()
 # %%
-sdf = pd.read_csv(path + "SymbolShrout.csv")
-sdf = sdf.set_index(["date", "stock_id"])
-mapdict = dict(zip(sdf.index, sdf.shrout))
-df["shrout_2"] = df.set_index(["date", "stock_id"]).index.map(mapdict)
-df.loc[(df.shrout.isnull()) & (~df.shrout_2.isnull()), "shrout"] = df.loc[
-    (df.shrout.isnull()) & (~df.shrout_2.isnull())
-].shrout_2
-df = df.drop(columns="shrout_2")
-df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
-df.isnull().sum()
-# %%
 df = df[~df.shrout.isnull()]
-
-
-def yearGen(x):
-    X = x.split("-")
-    return int(X[0])
-
-
-df["year"] = df.jalaliDate.apply(yearGen)
+df["year"] = round(df.jalaliDate / 1e4, 0)
+df["year"] = df["year"].astype(int)
 
 # %%
-def BG(df):
-    pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
+def BG(df, path):
+    # pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
     # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-    n = pathBG + "Grouping_CT.xlsx"
+    n = path + "Grouping_CT.xlsx"
     BG = pd.read_excel(n)
     uolist = (
         BG[BG.listed == 1]
@@ -139,7 +77,7 @@ def BG(df):
     BG["BGId"] = BG["uo"].map(mapingdict)
 
     BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] > 3)
-    for i in ["uo", "cfr", "cr","position","centrality"]:
+    for i in ["uo", "cfr", "cr", "position", "centrality"]:
         print(i)
         fkey = zip(list(BG.symbol), list(BG.year))
         mapingdict = dict(zip(fkey, BG[i]))
@@ -147,7 +85,7 @@ def BG(df):
     return df
 
 
-df = BG(df)
+df = BG(df, path)
 #%%
 df["Grouped"] = 1
 df.loc[df.uo.isnull(), "Grouped"] = 0
@@ -167,8 +105,10 @@ df["DeltaTrun"] = gg["TurnOver"].diff()
 df["Delta_Amihud_value"] = gg["Amihud_value"].diff()
 
 # %%
+
 gg = df.groupby("date")
-g = gg.get_group(20200318)
+g = gg.get_group(20081207)
+# print(g.name)
 
 
 def groupDaily(sg):
@@ -178,9 +118,6 @@ def groupDaily(sg):
 
     for i in ["", "_JustMarket"]:
         sg["Delta" + i] = (sg["weight" + i] * sg["DeltaTrun"]).sum()
-        # sg["Delta_Amihud_volume" + i] = (
-        #     sg["weight" + i] * sg["Delta_Amihud_volume"]
-        # ).sum()
         sg["Delta_Amihud_value" + i] = (
             sg["weight" + i] * sg["Delta_Amihud_value"]
         ).sum()
@@ -210,20 +147,32 @@ def Daily(g):
     g["DeltaMarket_Equall"] = g["DeltaTrun"].mean()
     sgg = g.groupby("uo")
     t = sgg.apply(groupDaily).set_index("uo")
-    for i in [
-        "weight",
-        "weight_JustMarket",
-        "number",
-        "Delta",
-        "Delta_JustMarket",
-        "Delta_Amihud_value",
-        "Delta_Amihud_value_JustMarket",
-    ]:
+    if len(t) > 0:
+        for i in [
+            "weight",
+            "weight_JustMarket",
+            "number",
+            "Delta",
+            "Delta_JustMarket",
+            "Delta_Amihud_value",
+            "Delta_Amihud_value_JustMarket",
+        ]:
 
-        # "Delta_Amihud_volume",
-        # "Delta_Amihud_volume_JustMarket",
-        mapdict = dict(zip(t.index, t[i]))
-        g[i + "Group"] = g.uo.map(mapdict)
+            # "Delta_Amihud_volume",
+            # "Delta_Amihud_volume_JustMarket",
+            mapdict = dict(zip(t.index, t[i]))
+            g[i + "Group"] = g.uo.map(mapdict)
+    else:
+        for i in [
+            "weight",
+            "weight_JustMarket",
+            "number",
+            "Delta",
+            "Delta_JustMarket",
+            "Delta_Amihud_value",
+            "Delta_Amihud_value_JustMarket",
+        ]:
+            g[i + "Group"] = np.nan
     t = sgg.DeltaTrun.mean().to_frame()
     mapdict = dict(zip(t.index, t["DeltaTrun"]))
     g["DeltaGroup_Equall"] = g.uo.map(mapdict)
@@ -242,7 +191,9 @@ def Daily(g):
 
 
 # Daily(g)
-df = gg.apply(Daily)
+a = gg.apply(Daily)
+#%%
+df = a
 df = df[~df.DeltaTrun.isnull()]
 # %%
 result = pd.DataFrame()
@@ -264,7 +215,6 @@ result["Delta_Amihud_value_JustMarketGroup"] = (
     result.Delta_Amihud_value_JustMarketGroup
     - result.weight_JustMarketGroup * result.Delta_Amihud_value
 ) / (1 - result.weight_JustMarketGroup)
-
 
 
 result["DeltaIndustry"] = (

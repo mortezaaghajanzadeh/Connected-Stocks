@@ -1,4 +1,14 @@
+corr monthlyρ_5_f monthlyρ_turn_f NMFCA sbgroup
+capture drop t222 t223
+gen t222 = monthlyρ_turn * sgroup
+gen t223 = monthlyρ_turn * NMFCA
+asreg monthlyρ_5_f NMFCA sbgroup monthlyρ_turn t222 t223 monthlysamesize monthlysamebm monthlycrossownership  , fmb newey(5)
 
+
+asreg monthlyρ_turn_f monthlyρ_5 NMFCAP  sbgroup, fmb newey(4)
+
+
+binscatter  monthlyρ_5_f monthlyρ_turn, nquantiles(100) by(sbgroup) controls (NMFCA monthlysamesize monthlysamebm monthlycrossownership) rd(0)
 
 /*
 

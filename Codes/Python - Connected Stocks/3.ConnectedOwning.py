@@ -76,7 +76,7 @@ for i in list(gg.groups.keys()):
             args=(df,path,g,i),
         )
     threads[i].start()
-threads[i].join()
+# threads[i].join()
 #%%
 # All pairs 
 data = pd.DataFrame()
@@ -103,4 +103,5 @@ for i in list(gg.groups.keys()):
             args=(df,path,g,i),
         )
     threads[i].start()
-threads[i].join()
+
+# %%
