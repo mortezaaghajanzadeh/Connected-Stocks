@@ -74,11 +74,13 @@ esttab   v3 v4 v1 v2 /*v5*/ v6 v10 v11 /*v7*/ v8 v9   ,nomtitle label   s( N  Su
 
 /**/
 
-eststo v1: quietly asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 eststo v2: quietly asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+
+eststo v1: quietly asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+
 
 eststo v3: quietly asreg monthlyρ_5_f NMFCAP NMFCAPG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 eststo v4: quietly asreg monthlyρ_5_f NMFCA NMFCAG sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
-esttab v1 v2 v3 v4 , label
+esttab v1 v3 v2  v4 , label star(* 0.10 ** 0.05 *** 0.01) keep( NMFCAP NMFCAPG NMFCAG NMFCA   sbgroup) order( NMFCAP NMFCAPG NMFCAG NMFCA   sbgroup) s(N r2)
 
