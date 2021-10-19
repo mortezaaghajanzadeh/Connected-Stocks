@@ -1,17 +1,16 @@
 
 
-asreg monthlyρ_5_f NMFCAP sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-asreg monthlyρ_5_f NMFCA sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
-asreg monthlyρ_5_f NMFCAP    sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCAP NMFCAPG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg monthlyρ_5_f NMFCA NMFCAG sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+
 
 summ MFCA monthlyfcapf
 
-cor NMFCA NMFCAP sbgroup NMFCAG
+cor NMFCA NMFCAP sbgroup NMFCAG NMFCAPG
 
-histogram MFCA 
-histogram monthlyfcapf 
 /*
 
 eststo v0 : asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)

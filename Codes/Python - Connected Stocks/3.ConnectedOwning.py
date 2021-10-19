@@ -3,7 +3,7 @@ import pickle
 import psutil
 from threading import Thread
 from ConnectedOwnershipFunctions import *
-
+import time
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
@@ -16,6 +16,7 @@ df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
 )
 
 df = df[df.jalaliDate < 14000000]
+df = df[df.jalaliDate > 13930000]
 
 try:
     df = df.drop(columns=["Delta_Trunover"])
@@ -44,12 +45,16 @@ g = gdata.get_group(158)
 S_g = gdata.get_group(148)
 
 AllPair = True
+
+n = time.time()
 FCAPf(S_g, g,AllPair)
+print(time.time() - n)
 
-# %%
+AllPair = False
 
-
-
+n = time.time()
+FCAPf(S_g, g,AllPair)
+print(time.time() - n)
 
 #%%
 data = pd.DataFrame()
@@ -69,14 +74,14 @@ for i in list(gg.groups.keys()):
     print("Id " + str(F_id))
     df = df[df.id > F_id]
     gg = df.groupby(["id"])
-    while psutil.virtual_memory().percent > 70:
+    while psutil.virtual_memory().percent > 80:
         1+2     
     threads[i] = Thread(
             target=genFile,
             args=(df,path,g,i),
         )
     threads[i].start()
-# threads[i].join()
+threads[i-1].join()
 #%%
 # All pairs 
 data = pd.DataFrame()
@@ -91,17 +96,32 @@ def genFile(df,path,g,i):
     )
 threads = {}
 for i in list(gg.groups.keys()):
+    n = time.time()
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
     print("Id " + str(F_id))
     df = df[df.id > F_id]
     gg = df.groupby(["id"])
-    while psutil.virtual_memory().percent > 50:
-        1+2     
-    threads[i] = Thread(
-            target=genFile,
-            args=(df,path,g,i),
-        )
-    threads[i].start()
-
+    genFile(df,path,g,i)
+    print(time.time() - n)
+    
+    
+    
+#     while psutil.virtual_memory().percent > 80:
+#         1+2   
+#     try:  
+#         threads[i] = Thread(
+#                 target=genFile,
+#                 args=(df,path,g,i),
+#             )
+#         threads[i].start()
+#     except:  
+#         while psutil.virtual_memory().percent > 80:
+#             1+2 
+#         threads[i] = Thread(
+#                 target=genFile,
+#                 args=(df,path,g,i),
+#             )
+#         threads[i].start()
+# threads[i-1].join()
 # %%
