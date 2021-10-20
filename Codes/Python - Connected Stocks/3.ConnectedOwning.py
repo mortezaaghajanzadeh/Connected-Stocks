@@ -17,11 +17,18 @@ df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
 
 df = df[df.jalaliDate < 14000000]
 df = df[df.jalaliDate > 13930000]
-
+df = df[~df['5_Residual'].isnull()]
 try:
     df = df.drop(columns=["Delta_Trunover"])
 except:
     1 + 2
+    
+    
+#%%
+len(df)
+
+
+
 #%%
 df = df.rename(
     columns={
@@ -36,13 +43,13 @@ df = df.rename(
 df.head()
 
 # %%
-df[df.symbol == "آبادا"].id.iloc[0], df[df.symbol == "اوان"].id.iloc[0]
+df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
 
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(1)
-S_g = gdata.get_group(19)
+g = gdata.get_group(167)
+S_g = gdata.get_group(157)
 
 AllPair = True
 

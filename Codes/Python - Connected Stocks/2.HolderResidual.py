@@ -59,14 +59,16 @@ path = r"E:\RA_Aghajanzadeh\Data\\"
 # %%
 
 n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
-df = pd.read_csv(n).drop_duplicates().rename(
-    columns = {'name':'symbol'}
-)
+df = pd.read_csv(n).drop_duplicates().rename(columns={"name": "symbol"})
 df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
 a = df.groupby("date").size().to_frame().reset_index()
+
+t = a[a[0] < 1000].date.to_list()
+df = df[~df.date.isin(t)]
+a = df.groupby("date").size().to_frame().reset_index()
 a.plot(y=0, use_index=True)
-a[a[0] > 1500]
-a[a.index > 1968].head(10)
+
+#%%
 
 #%%
 dropholders = [
@@ -141,6 +143,11 @@ for i in ["Ret", "volume", "value", "Amihud"]:
 
 HolderData.head()
 
+
+#%%
+df[df.symbol == "آ س پ"].drop_duplicates(subset=["symbol", "date"]).isnull().sum()
+
+
 # %%
 df = HolderData
 df["marketCap"] = df.close_price * df.shrout
@@ -177,8 +184,9 @@ df["date1"] = df["date"].apply(vv4)
 df["date1"] = pd.to_datetime(df["date1"])
 df["shamsi"] = df["date1"].apply(JalaliDate)
 df["week_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
-df["week_of_year"] = df["date1"].dt.week
-df["month_of_year"] = df["date1"].dt.month
+# df["week_of_year"] = df["date1"].dt.week
+# df["month_of_year"] = df["date1"].dt.month
+df["month_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
 df["year_of_year"] = df["date1"].dt.year
 
 
@@ -293,8 +301,13 @@ df.drop(columns=["shamsi"]).to_parquet(
 )
 
 # %%
-len(df[(df.symbol == "فولاد")][[
-    'date','week_of_year',
- 'month_of_year',
- 'year_of_year',
-]])
+len(
+    df[(df.symbol == "فولاد")][
+        [
+            "date",
+            "week_of_year",
+            "month_of_year",
+            "year_of_year",
+        ]
+    ]
+)
