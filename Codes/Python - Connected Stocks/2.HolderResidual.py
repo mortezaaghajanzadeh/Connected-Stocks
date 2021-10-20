@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import re as ree
-
+from persiantools.jdatetime import JalaliDate
 from numpy import log as ln
 
 # %%
@@ -179,6 +179,8 @@ df["id"] = genereate_id(df.symbol)
 # %%
 df["date1"] = df["date"].apply(vv4)
 df["date1"] = pd.to_datetime(df["date1"])
+df["shamsi"] = df["date1"].apply(JalaliDate)
+df["week_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
 df["week_of_year"] = df["date1"].dt.week
 df["month_of_year"] = df["date1"].dt.month
 df["year_of_year"] = df["date1"].dt.year
