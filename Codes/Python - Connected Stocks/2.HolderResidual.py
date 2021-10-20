@@ -300,14 +300,5 @@ df.drop(columns=["shamsi"]).to_parquet(
     path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
 )
 
-# %%
-len(
-    df[(df.symbol == "فولاد")][
-        [
-            "date",
-            "week_of_year",
-            "month_of_year",
-            "year_of_year",
-        ]
-    ]
-)
+#%%
+HolderData[HolderData.symbol == 'فولاد']
