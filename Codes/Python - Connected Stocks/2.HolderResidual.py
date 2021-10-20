@@ -59,13 +59,12 @@ path = r"E:\RA_Aghajanzadeh\Data\\"
 # %%
 
 n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
-df = pd.read_csv(n).drop_duplicates()
-df[(df.symbol == 'آرمان')&
-    (df.date >= 20170325)].sort_values(by='date').head()
-a = df.groupby(
-    'date'
-    ).size().to_frame().reset_index()
-a.plot(y = 0, use_index = True)
+df = pd.read_csv(n).drop_duplicates().rename(
+    columns = {'name':'symbol'}
+)
+df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
+a = df.groupby("date").size().to_frame().reset_index()
+a.plot(y=0, use_index=True)
 a[a[0] > 1500]
 a[a.index > 1968].head(10)
 
@@ -100,21 +99,18 @@ df = df[df.group_name != "صندوق سرمایه گذاری قابل معامل
 
 HolderData = df
 df.head()
-df[(df.symbol == 'آرمان')&
-    (df.date >= 20170325)].sort_values(by='date').head()
+df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
 
 
 #%%
-a = HolderData.groupby(
-    'date'
-    ).size().to_frame().reset_index()
-a.plot(y = 0, use_index = True)
+a = HolderData.groupby("date").size().to_frame().reset_index()
+a.plot(y=0, use_index=True)
 a[a[0] > 1500]
 a[a.index > 1968].head(10)
 
 
 #%%
-df['year'] = round(df.date/ 1e4,0)
+df["year"] = round(df.date / 1e4, 0)
 t1 = df[df.date == 20170326]
 t2 = df[df.date == 20170327]
 
@@ -289,6 +285,16 @@ del gg
 len(df), list(df)
 
 # %%
-df.to_parquet(path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet")
+
+
+#%%
+df.drop(columns=["shamsi"]).to_parquet(
+    path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
+)
 
 # %%
+len(df[(df.symbol == "فولاد")][[
+    'date','week_of_year',
+ 'month_of_year',
+ 'year_of_year',
+]])
