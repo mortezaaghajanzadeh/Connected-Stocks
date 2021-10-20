@@ -36,25 +36,32 @@ df = df.rename(
 df.head()
 
 # %%
-df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
+df[df.symbol == "آبادا"].id.iloc[0], df[df.symbol == "اوان"].id.iloc[0]
 
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(158)
-S_g = gdata.get_group(148)
+g = gdata.get_group(1)
+S_g = gdata.get_group(19)
 
 AllPair = True
 
 n = time.time()
-FCAPf(S_g, g,AllPair)
+t1 = FCAPf(S_g, g,AllPair)
 print(time.time() - n)
+
 
 AllPair = False
-
 n = time.time()
-FCAPf(S_g, g,AllPair)
+t2 = FCAPf(S_g, g,AllPair)
 print(time.time() - n)
+
+#%%
+len(t1[t1.MonthlyFCAPf>0]),len(t2)
+# t1[t1.WeeklyFCAPf>0]
+
+
+
 
 #%%
 data = pd.DataFrame()

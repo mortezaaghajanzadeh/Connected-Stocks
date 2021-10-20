@@ -1,6 +1,7 @@
 #%%
 import os
 import pandas as pd
+
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
@@ -18,41 +19,53 @@ mapingdict = dict(zip(monthId.date, monthId.t_Month))
 # %%
 result = pd.DataFrame()
 counter = 0
+arr.remove("MonthlyAllPairs_1400_06_28.csv")
 for i, name in enumerate(arr):
     print(i)
-    df = pd.read_pickle(
-        path + name
-        ).reset_index(drop=True)
-    if len(df) <1:
+    df = pd.read_pickle(path + name).reset_index(drop=True)
+    if len(df) < 1:
         continue
     df = df.drop(
-            columns=[
-                "Weeklyρ_2",
-                "Weeklyρ_4",
-                "Weeklyρ_5",
-                "Weeklyρ_6",
-                "WeeklySizeRatio",
-                "WeeklyMarketCap_x",
-                "WeeklyMarketCap_y",
-                "WeeklyPercentile_Rank_x",
-                "WeeklyPercentile_Rank_y",
-                "Weeklysize1",
-                "Weeklysize2",
-                "WeeklySameSize",
-                "WeeklyB/M1",
-                "WeeklyB/M2",
-                "WeeklySameB/M",
-                "WeeklyCrossOwnership",
-                "WeeklyFCAPf",
-                "WeeklyFCA",
-                "Weeklyρ_2_f",
-                "Weeklyρ_4_f",
-                "Weeklyρ_5_f",
-                "Weeklyρ_6_f",
-                "WeeklyρLag_5_f",
-            ]
-        )
-    
+        columns=[
+            "Weeklyρ_2",
+            "Weeklyρ_4",
+            "Weeklyρ_5",
+            "Weeklyρ_6",
+            "WeeklySizeRatio",
+            "WeeklyMarketCap_x",
+            "WeeklyMarketCap_y",
+            "WeeklyPercentile_Rank_x",
+            "WeeklyPercentile_Rank_y",
+            "Weeklysize1",
+            "Weeklysize2",
+            "WeeklySameSize",
+            "WeeklyB/M1",
+            "WeeklyB/M2",
+            "WeeklySameB/M",
+            "WeeklyCrossOwnership",
+            "WeeklyFCAPf",
+            "WeeklyFCA",
+            "Weeklyρ_2_f",
+            "Weeklyρ_4_f",
+            "Weeklyρ_5_f",
+            "Weeklyρ_6_f",
+            "WeeklyρLag_5_f",
+            "Weeklyρ_5Lag",
+            "Weeklyρ_turn",
+            "Weeklyρ_amihud",
+            "WeeklyTurnOver_x",
+            "WeeklyAmihud_x",
+            "Weeklyvolume_x",
+            "Weeklyvalue_x",
+            "WeeklyTurnOver_y",
+            "WeeklyAmihud_y",
+            "Weeklyvolume_y",
+            "Weeklyvalue_y",
+            "Weeklyρ_turn_f",
+            "Weeklyρ_amihud_f",
+        ]
+    )
+
     df["id_x"] = df.id_x.astype(int)
     df["id_y"] = df.id_y.astype(int)
     df["symbol_x"] = df.id_x.map(mapdict)
@@ -78,6 +91,10 @@ for i, name in enumerate(arr):
 # %%
 result[result.t_Month.isnull()].yearMonth.unique()
 
+#%%
+result[
+    (result.symbol_x == "آبادا") & (result.symbol_y == "اوان")
+].isnull().sum().to_frame().tail(15)
 
 #%%
 result["id"] = result["symbol_x"] + "-" + result["symbol_y"]
@@ -94,10 +111,11 @@ def NormalTransform(df_sub):
     col = df_sub.transform("rank")
     return (col - col.mean()) / col.std()
 
+
 result = result.reset_index(drop=True)
 gg = result.groupby(["t_Month"])
 
-result["MonthlyFCAP*"]  = gg["MonthlyFCAPf"].apply(NormalTransform)
+result["MonthlyFCAP*"] = gg["MonthlyFCAPf"].apply(NormalTransform)
 result["NMFCA"] = gg["MonthlyFCA"].apply(NormalTransform)
 #%%
 result["4rdQarterTotal"] = 0
