@@ -62,7 +62,7 @@ n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
 df = pd.read_csv(n).drop_duplicates().rename(columns={"name": "symbol"})
 df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
 a = df.groupby("date").size().to_frame().reset_index()
-
+a.plot(y=0, use_index=True)
 t = a[a[0] < 1000].date.to_list()
 df = df[~df.date.isin(t)]
 a = df.groupby("date").size().to_frame().reset_index()
@@ -102,13 +102,15 @@ df = df[df.group_name != "صندوق سرمایه گذاری قابل معامل
 HolderData = df
 df.head()
 df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
-
+a = df.groupby("date").size().to_frame().reset_index()
+a.plot(y=0, use_index=True)
 
 #%%
 a = HolderData.groupby("date").size().to_frame().reset_index()
 a.plot(y=0, use_index=True)
 a[a[0] > 1500]
 a[a.index > 1968].head(10)
+
 
 
 #%%
@@ -142,10 +144,6 @@ for i in ["Ret", "volume", "value", "Amihud"]:
     print(i + " is done")
 
 HolderData.head()
-
-
-#%%
-df[df.symbol == "آ س پ"].drop_duplicates(subset=["symbol", "date"]).isnull().sum()
 
 
 # %%
@@ -302,3 +300,5 @@ df.drop(columns=["shamsi"]).to_parquet(
 
 #%%
 HolderData[HolderData.symbol == 'فولاد']
+
+# %%

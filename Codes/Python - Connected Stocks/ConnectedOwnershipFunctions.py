@@ -3,6 +3,7 @@ import pickle
 
 
 def FCAPf(S_g, g, AllPair):
+    print(S_g.name)
     intersection = list(set.intersection(set(S_g.date), set(g.date)))
     if len(intersection) == 0:
         #         print('0')

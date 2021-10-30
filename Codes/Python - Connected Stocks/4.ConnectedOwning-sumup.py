@@ -141,47 +141,47 @@ for counter, i in enumerate(arrs):
         ]
     )
     Monthly = Monthly.append(m)
-    w = d.drop_duplicates(["id", "t_Week"], keep="last").drop(
-        columns=[
-            "Monthlyρ_2",
-            "Monthlyρ_4",
-            "Monthlyρ_5",
-            "Monthlyρ_6",
-            "Monthlyρ_5Lag",
-            "Monthlyρ_turn",
-            "Monthlyρ_amihud",
-            "MonthlySizeRatio",
-            "MonthlyMarketCap_x",
-            "MonthlyMarketCap_y",
-            "MonthlyPercentile_Rank_x",
-            "MonthlyPercentile_Rank_y",
-            "Monthlysize1",
-            "Monthlysize2",
-            "MonthlySameSize",
-            "MonthlyB/M1",
-            "MonthlyB/M2",
-            "MonthlySameB/M",
-            "MonthlyCrossOwnership",
-            "MonthlyTurnOver_x",
-            "MonthlyAmihud_x",
-            "Monthlyvolume_x",
-            "Monthlyvalue_x",
-            "MonthlyTurnOver_y",
-            "MonthlyAmihud_y",
-            "Monthlyvolume_y",
-            "Monthlyvalue_y",
-            "MonthlyFCAPf",
-            "MonthlyFCA",
-            "Monthlyρ_2_f",
-            "Monthlyρ_4_f",
-            "Monthlyρ_5_f",
-            "Monthlyρ_6_f",
-            "MonthlyρLag_5_f",
-            "Monthlyρ_turn_f",
-            "Monthlyρ_amihud_f",
-        ]
-    )
-    Weekly = Weekly.append(w)
+    # w = d.drop_duplicates(["id", "t_Week"], keep="last").drop(
+    #     columns=[
+    #         "Monthlyρ_2",
+    #         "Monthlyρ_4",
+    #         "Monthlyρ_5",
+    #         "Monthlyρ_6",
+    #         "Monthlyρ_5Lag",
+    #         "Monthlyρ_turn",
+    #         "Monthlyρ_amihud",
+    #         "MonthlySizeRatio",
+    #         "MonthlyMarketCap_x",
+    #         "MonthlyMarketCap_y",
+    #         "MonthlyPercentile_Rank_x",
+    #         "MonthlyPercentile_Rank_y",
+    #         "Monthlysize1",
+    #         "Monthlysize2",
+    #         "MonthlySameSize",
+    #         "MonthlyB/M1",
+    #         "MonthlyB/M2",
+    #         "MonthlySameB/M",
+    #         "MonthlyCrossOwnership",
+    #         "MonthlyTurnOver_x",
+    #         "MonthlyAmihud_x",
+    #         "Monthlyvolume_x",
+    #         "Monthlyvalue_x",
+    #         "MonthlyTurnOver_y",
+    #         "MonthlyAmihud_y",
+    #         "Monthlyvolume_y",
+    #         "Monthlyvalue_y",
+    #         "MonthlyFCAPf",
+    #         "MonthlyFCA",
+    #         "Monthlyρ_2_f",
+    #         "Monthlyρ_4_f",
+    #         "Monthlyρ_5_f",
+    #         "Monthlyρ_6_f",
+    #         "MonthlyρLag_5_f",
+    #         "Monthlyρ_turn_f",
+    #         "Monthlyρ_amihud_f",
+    #     ]
+    # )
+    # Weekly = Weekly.append(w)
     d = pd.DataFrame()
 
 
