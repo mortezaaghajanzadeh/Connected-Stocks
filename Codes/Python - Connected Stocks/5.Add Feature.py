@@ -29,7 +29,7 @@ def _multiple_replace(mapping, text):
 #%%
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-
+#%%
 
 n1 = path + "MonthlyNormalzedFCAP9.1" + ".parquet"
 df1 = pd.read_parquet(n1)
@@ -251,7 +251,12 @@ df1["invinGroup_x"] = df1.BGId_x.map(mapdict)
 df1["invinGroup_y"] = df1.BGId_y.map(mapdict)
 
 df1.isnull().sum()
-
+#%%
+print(len(df1))
+df1 = df1.drop_duplicates(subset = [
+    'id','t_Month'
+])
+print(len(df1))
 # %%
 print(len(df1[(df1.MonthlyFCAPf >= 1)]))
 df1 = df1[(df1.MonthlyFCAPf < 1)]
@@ -322,7 +327,7 @@ price["name"] = price.name.apply(convert_ar_characters)
 fkey = zip(price.name, price.year)
 mapdict = dict(zip(fkey, price.close_price))
 BG["close"] = BG.set_index(["symbol", "year"]).index.map(mapdict)
-
+del price, df2
 #%%
 len(BG[BG.close.isnull()].symbol.unique())
 BG["MarketCap"] = BG["close"] * BG["shrOut"]
@@ -480,35 +485,23 @@ for i in set(BGId.BGId.dropna()):
     df1.loc[(df1.bankinGroup_y == i) & (df1.bankinGroup_y == 1), "BankInGroup"] = 1
 
 #%%
+df1.to_parquet(path + "tempt.parquet")
+#%%
+import pandas as pd
+import numpy as np
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+df1 = pd.read_parquet(path + "tempt.parquet")
+
+#%%
 df1 = df1.rename(columns={"MonthlyFCA*": "NMFCA"})
 df1["MonthlyCrossOwnership"] = df1.MonthlyCrossOwnership.replace(np.nan, 0)
-df1 = df1.drop(
-    columns=[
-        "Ret_x",
-        "Ret_y",
-        "SizeRatio",
-        "MarketCap_x",
-        "MarketCap_y",
-        "2-Residual_x",
-        "2-Residual_y",
-        "4-Residual_x",
-        "4-Residual_y",
-        "5-Residual_x",
-        "5-Residual_y",
-        "5Lag-Residual_x",
-        "5Lag-Residual_y",
-        "Percentile_Rank_x",
-        "Percentile_Rank_y",
-        "BookToMarket_x",
-        "BookToMarket_y",
-    ]
-)
+
 #%%
 df1["sBgroup"] = 0
 df1.loc[df1.uo_x == df1.uo_y, "sBgroup"] = 1
 df1.loc[df1.uo_x.isnull(), "sBgroup"] = 0
 df1.loc[df1.uo_y.isnull(), "sBgroup"] = 0
-df1.loc[df1.year<BG.year.min(),'sBgroup'] = np.nan
+# df1.loc[df1.year<BG.year.min(),'sBgroup'] = np.nan
 df1.sBgroup.isnull().sum() 
 #%%
 df1 = df1.sort_values(by=["id", "t_Month"])
@@ -518,48 +511,48 @@ df1["Monthlyρ_5_3"] = df1.groupby("id").Monthlyρ_5.shift(3)
 df1["Monthlyρ_5_4"] = df1.groupby("id").Monthlyρ_5.shift(4)
 df1["Monthlyρ_5_5"] = df1.groupby("id").Monthlyρ_5.shift(5)
 #%%
-df1["sameBgChange"] = 0
-df1["becomeSameBG"] = 0
-gg = df1.groupby("id")
-df1["changedBG"] = 0
+# df1["sameBgChange"] = 0
+# df1["becomeSameBG"] = 0
+# gg = df1.groupby("id")
+# df1["changedBG"] = 0
 
 
-def changedBg(t):
-    print(t.name)
-    if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
-        t["changedBG"] = 1
-        if t.sBgroup.iloc[0] == 1:
-            ind = t.loc[t.sBgroup == 0].index[0]
-            t.loc[t.index >= ind, "sameBgChange"] = 1
-        else:
-            ind = t.loc[t.sBgroup == 1].index[0]
-            t.loc[t.index >= ind, "sameBgChange"] = 1
-            t["becomeSameBG"] = 1
-    return t
+# def changedBg(t):
+#     print(t.name)
+#     if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
+#         t["changedBG"] = 1
+#         if t.sBgroup.iloc[0] == 1:
+#             ind = t.loc[t.sBgroup == 0].index[0]
+#             t.loc[t.index >= ind, "sameBgChange"] = 1
+#         else:
+#             ind = t.loc[t.sBgroup == 1].index[0]
+#             t.loc[t.index >= ind, "sameBgChange"] = 1
+#             t["becomeSameBG"] = 1
+#     return t
 
 
-df1 = gg.apply(changedBg)
+# df1 = gg.apply(changedBg)
 
 
 #%%
-df1["2rdQarter"] = 0
-df1["4rdQarter"] = 0
-gg = df1.groupby(["t_Month"])
-g = gg.get_group(2)
+# df1["2rdQarter"] = 0
+# df1["4rdQarter"] = 0
+# gg = df1.groupby(["t_Month"])
+# # g = gg.get_group(2)
 
 
-def quarter(g):
-    print(g.name)
-    q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
-    mt = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.5)
-    g.loc[g.MonthlyFCA > q1, "4rdQarter"] = 1
-    g.loc[g.MonthlyFCA > mt, "2rdQarter"] = 1
-    return g
+# def quarter(g):
+#     print(g.name)
+#     q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
+#     mt = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.5)
+#     g.loc[g.MonthlyFCA > q1, "4rdQarter"] = 1
+#     g.loc[g.MonthlyFCA > mt, "2rdQarter"] = 1
+#     return g
 
 
-gg = df1.groupby(["t_Month"])
-df1 = gg.apply(quarter)
-del gg
+# del df1
+# df1 = gg.apply(quarter)
+# del gg
 #%%
 
 
@@ -575,7 +568,11 @@ df1["NMFCA2"] = gg["NMFCA2"].apply(Normalize)
 df1.groupby(["t_Month"]).NMFCA2.std()
 del gg
 #%%
+time = df1.drop_duplicates(subset = ['jalaliDate','date'])[
+    ['jalaliDate','date']
+]
 
+#%%
 mapdict = dict(zip(time.jalaliDate, time.date))
 path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
 df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
@@ -755,9 +752,12 @@ df1.loc[df1.uo_y.isin(lowlist), "lowImbalanceStd"] = 1
 mapdict = dict(zip(a.index, a.InsImbalance_value))
 df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
 df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
+#%%
+del result ,a
+
 
 #%%
-df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
+# df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 n1 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
 print(len(df1))

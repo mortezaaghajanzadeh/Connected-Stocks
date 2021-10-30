@@ -1,9 +1,14 @@
 #%%
 import pandas as pd
 path = "E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-df1 = pd.read_csv(path + "MonthlyNormalzedFCAP9.2.csv")
+# df1 = pd.read_csv(path + "MonthlyNormalzedFCAP9.2.csv")
 df2 = pd.read_csv(path + "MonthlyAllPairs_1400_06_28.csv")
 # %%
+
+
+len(df2),len(df2[df2.FCA>0])
+
+#%%
 df = df2[df2.FCA>0]
 len(df1),len(df1[df1.FCA>0]),len(df)
 # %%

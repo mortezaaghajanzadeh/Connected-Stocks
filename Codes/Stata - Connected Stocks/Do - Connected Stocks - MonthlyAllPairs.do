@@ -127,7 +127,7 @@ replace median = 1 if Q > 3
 
 summ Q median
 
-replace median = v118
+replace median = v104
 
 
 label variable median " $ (\text{FCA} > Q3[\text{FCA}]) $ "
