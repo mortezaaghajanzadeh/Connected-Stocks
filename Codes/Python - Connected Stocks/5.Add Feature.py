@@ -404,7 +404,8 @@ for t in [
     fkey = zip(sResult.uo, sResult.year)
     mapdict = dict(zip(fkey, sResult[t]))
     BG[t] = BG.set_index(["uo", "year"]).index.map(mapdict)
-
+del sResult
+del gg
 #%%
 df1["year"] = round(df1.jalaliDate / 10000, 0)
 df1["year"] = df1["year"].astype(int)
@@ -423,7 +424,7 @@ for t in [
     mapdict = dict(zip(fkey, BG[t]))
     df1[t + "_y"] = df1.set_index(["uo_y", "year"]).index.map(mapdict)
 
-
+del t
 # for t in ['QuantileNumber',
 #           'QuantileGroupMarketCap',
 #           'QuantileTotalcfr',
@@ -451,7 +452,7 @@ for i in range(9):
     tempt = (SData["Rank"].max()) / 10
     SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
 
-
+del df
 for a in [df1]:
     mapingdict = dict(zip(SData.id, SData.GRank))
     a["id_x"] = a["id_x"].astype(int)
@@ -460,6 +461,7 @@ for a in [df1]:
     a["GRank_y"] = a["id_y"].map(mapingdict)
     a["SameGRank"] = 0
     a.loc[a.GRank_x == a.GRank_y, "SameGRank"] = 1
+del a
 #%%
 df1.head()
 df1["InvInGroup"] = 0
@@ -557,7 +559,7 @@ def quarter(g):
 
 gg = df1.groupby(["t_Month"])
 df1 = gg.apply(quarter)
-
+del gg
 #%%
 
 
@@ -571,6 +573,7 @@ df1["NMFCA2"] = df1["NMFCA"] * df1["NMFCA"]
 gg = df1.groupby(["t_Month"])
 df1["NMFCA2"] = gg["NMFCA2"].apply(Normalize)
 df1.groupby(["t_Month"]).NMFCA2.std()
+del gg
 #%%
 
 mapdict = dict(zip(time.jalaliDate, time.date))
