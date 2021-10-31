@@ -25,16 +25,16 @@ g = gg.get_group(2019)
 
 def summary(g):
     rdf = g.iloc[0, :1].to_frame().T
-    rdf["No. of Firms"] = len(set(g.id))
-    rdf["No. of Holders"] = len(set(g.Holder_id))
+    rdf["No. of Firms"] = int(len(set(g.id)))
+    rdf["No. of Holders"] = int(len(set(g.Holder_id)))
     rdf = rdf.drop(columns=["BGId"])
     g = g.drop_duplicates(subset=["BGId", "id", "year_of_year"])
-    rdf["No. of Groups"] = len(set(g.dropna().BGId))
-    rdf["No. of Firms not in Groups"] = len(set(g[g.BGId.isnull()].id))
-    rdf["No. of Firms in Groups"] = len(set(g[~g.BGId.isnull()].id))
-    rdf["Avg. Number of Members"] = round(g.groupby("BGId").size().mean(), 0)
-    rdf["Max. Number of Members"] = g.groupby("BGId").size().max()
-    rdf["Med. of  Number of Members"] = round(g.groupby("BGId").size().median(), 0)
+    rdf["No. of Groups"] = int(len(set(g.dropna().BGId)))
+    rdf["No. of Firms not in Groups"] = int(len(set(g[g.BGId.isnull()].id)))
+    rdf["No. of Firms in Groups"] = int(len(set(g[~g.BGId.isnull()].id)))
+    rdf["Avg. Number of Members"] = int(round(g.groupby("BGId").size().mean(), 0))
+    rdf["Max. Number of Members"] = int(g.groupby("BGId").size().max())
+    rdf["Med. of  Number of Members"] = int(round(g.groupby("BGId").size().median(), 0))
     return rdf
 
 
@@ -86,17 +86,6 @@ a2 = gg.apply(summary).reset_index().drop(columns=["level_1"]).T
 tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
-for i in [
-    "Year",
-    "No. of Holders",
-    "No. of Groups",
-    "No. of Firms not in Groups",
-    "No. of Firms in Groups",
-    "Av. Number of Owners",
-    "Med. Number of Owners",
-    "Avg. Number of Members",
-]:
-    tempt[i] = tempt[i].astype(int)
 tempt = tempt.drop(
     columns=["Max. Number of Members", "Max. Number of Owners", "Max. Block. Ownership"]
 ).rename(
@@ -109,6 +98,22 @@ tempt = tempt.drop(
     }
 )
 tempt = tempt.set_index("Year").T
+for i in [
+    "No. of Firms",
+    "No. of Blockholders",
+    "No. of Groups",
+    "No. of Firms not in Groups",
+    "No. of Firms in Groups",
+    "Mean Number of Blockholders",
+    "Med. Number of Owners",
+    "Mean Number of Members",
+]:
+    tempt.loc[tempt.index == i] = tempt.loc[tempt.index == i].astype(int)
+tempt 
+
+
+#%%
+
 tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
 # %%
