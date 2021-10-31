@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  18 OCT 2021 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  31 OCT 2021 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,47 +759,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 [1
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./summaryOfOwnership.tex) [3] (./summaryOfPairs.tex) [4] [5]
+(./Output/summaryOfOwnership.tex) [3] (./summaryOfPairs.tex)
 Package epstopdf Info: Source file: <idMonth.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-16 11:21:58
 (epstopdf)                    size: 52106 bytes
 (epstopdf)             Output file: <idMonth-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-16 11:23:46
 (epstopdf)                    size: 18949 bytes
 (epstopdf)             Command: <repstopdf --outfile=idMonth-eps-converted-to.p
 df idMonth.eps>
 (epstopdf)             \includegraphics on input line 349.
 Package epstopdf Info: Output file is already uptodate.
-<idMonth-eps-converted-to.pdf, id=136, 904.89067pt x 510.0154pt>
+<idMonth-eps-converted-to.pdf, id=125, 904.89067pt x 510.0154pt>
 File: idMonth-eps-converted-to.pdf Graphic file (type pdf)
 <use idMonth-eps-converted-to.pdf>
 Package pdftex.def Info: idMonth-eps-converted-to.pdf  used on input line 349.
 (pdftex.def)             Requested size: 390.0pt x 219.80818pt.
- [6] [7 <./idMonth-eps-converted-to.pdf>] (./CorrelationsResultsText.tex)
+ [4] [5 <./idMonth-eps-converted-to.pdf>] [6] (./CorrelationsResultsText.tex) [
+7]
 (./SameGroupSameIndustry.tex) [8] (./ControlsSummary.tex) [9] [10] [11]
-<1.png, id=295, 494.8086pt x 299.6796pt>
+<1.png, id=298, 494.8086pt x 299.6796pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
 Package pdftex.def Info: 1.png  used on input line 543.
 (pdftex.def)             Requested size: 183.30048pt x 111.01689pt.
-<2.png, id=297, 494.3268pt x 300.1614pt>
+<2.png, id=300, 494.3268pt x 300.1614pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 544.
 (pdftex.def)             Requested size: 183.30048pt x 111.30072pt.
 
-[12] (./Example2.tex) [13 <./1.png> <./2.png>]
-<3.png, id=321, 722.7pt x 360.3864pt>
+[12 <./1.png> <./2.png>] (./Example2.tex)
+<3.png, id=314, 722.7pt x 360.3864pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 623.
 (pdftex.def)             Requested size: 331.50238pt x 165.30682pt.
-<4.png, id=322, 723.1818pt x 359.9046pt>
+<4.png, id=315, 723.1818pt x 359.9046pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 630.
 (pdftex.def)             Requested size: 331.50238pt x 164.98149pt.
- (./marketcap.tex) [14 <./3.png>] [15 <./4.png>] (./FCACal.tex)
+ (./marketcap.tex) [13] [14 <./3.png>] [15 <./4.png>] (./FCACal.tex)
 Overfull \hbox (30.77202pt too wide) in paragraph at lines 671--675
 \OT1/cmr/m/n/12 grouped by per-sis-tent for-mal (e.g., eq-uity) and in-for-mal 
 (e.g., fam-ily) links.([][]Khanna
@@ -807,10 +808,10 @@ Overfull \hbox (30.77202pt too wide) in paragraph at lines 671--675
 
 [16] [17]
 Package epstopdf Info: Source file: <sameIndustryinBG.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-07 09:13:00
 (epstopdf)                    size: 18937 bytes
 (epstopdf)             Output file: <sameIndustryinBG-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-07 09:16:40
 (epstopdf)                    size: 13660 bytes
 (epstopdf)             Command: <repstopdf --outfile=sameIndustryinBG-eps-conve
 rted-to.pdf sameIndustryinBG.eps>
@@ -823,10 +824,10 @@ Package pdftex.def Info: sameIndustryinBG-eps-converted-to.pdf  used on input l
 ine 691.
 (pdftex.def)             Requested size: 187.19833pt x 117.12679pt.
 Package epstopdf Info: Source file: <sameIndustryNoinBG.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-07 09:12:56
 (epstopdf)                    size: 16927 bytes
 (epstopdf)             Output file: <sameIndustryNoinBG-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-07 09:16:43
 (epstopdf)                    size: 12468 bytes
 (epstopdf)             Command: <repstopdf --outfile=sameIndustryNoinBG-eps-con
 verted-to.pdf sameIndustryNoinBG.eps>
@@ -839,10 +840,10 @@ Package pdftex.def Info: sameIndustryNoinBG-eps-converted-to.pdf  used on input
  line 692.
 (pdftex.def)             Requested size: 187.19833pt x 116.93767pt.
 Package epstopdf Info: Source file: <BGSummary.eps>
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-06-07 09:10:31
 (epstopdf)                    size: 36225602 bytes
 (epstopdf)             Output file: <BGSummary-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-06-07 09:16:48
 (epstopdf)                    size: 105649 bytes
 (epstopdf)             Command: <repstopdf --outfile=BGSummary-eps-converted-to
 .pdf BGSummary.eps>
@@ -857,11 +858,11 @@ Package pdftex.def Info: BGSummary-eps-converted-to.pdf  used on input line 699
  [18 <./sameIndustryinBG-eps-converted-to.pdf> <./sameIndustryNoinBG-eps-conver
 ted-to.pdf>] [19 <./BGSummary-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2021-10-18 08:56:51
-(epstopdf)                    size: 26573 bytes
+(epstopdf)                    date: 2021-10-30 15:22:10
+(epstopdf)                    size: 26063 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-18 08:57:59
-(epstopdf)                    size: 23514 bytes
+(epstopdf)                    date: 2021-10-31 13:47:37
+(epstopdf)                    size: 23389 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 715.
@@ -876,98 +877,98 @@ e 715.
 [20 <./Output/mcorr50-eps-converted-to.pdf>]) [21] (./Output/mresult2-slide.tex
 ) (./Model12.tex [22]) [23] (./Q3mresultAllPairs.tex)
 Package epstopdf Info: Source file: <BusinessPseudoSBFCA.eps>
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-03-28 14:07:31
 (epstopdf)                    size: 22727 bytes
 (epstopdf)             Output file: <BusinessPseudoSBFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-03-28 14:08:09
 (epstopdf)                    size: 10461 bytes
 (epstopdf)             Command: <repstopdf --outfile=BusinessPseudoSBFCA-eps-co
 nverted-to.pdf BusinessPseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 776.
 Package epstopdf Info: Output file is already uptodate.
-<BusinessPseudoSBFCA-eps-converted-to.pdf, id=493, 397.485pt x 289.08pt>
+<BusinessPseudoSBFCA-eps-converted-to.pdf, id=492, 397.485pt x 289.08pt>
 File: BusinessPseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use BusinessPseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: BusinessPseudoSBFCA-eps-converted-to.pdf  used on inpu
 t line 776.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <BusinessPseudoSBFCA_t.eps>
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-03-28 14:07:29
 (epstopdf)                    size: 23716 bytes
 (epstopdf)             Output file: <BusinessPseudoSBFCA_t-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2021-08-31 15:06:06
+(epstopdf)                    date: 2021-03-28 14:08:12
 (epstopdf)                    size: 10821 bytes
 (epstopdf)             Command: <repstopdf --outfile=BusinessPseudoSBFCA_t-eps-
 converted-to.pdf BusinessPseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 777.
 Package epstopdf Info: Output file is already uptodate.
-<BusinessPseudoSBFCA_t-eps-converted-to.pdf, id=494, 397.485pt x 289.08pt>
+<BusinessPseudoSBFCA_t-eps-converted-to.pdf, id=493, 397.485pt x 289.08pt>
 File: BusinessPseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use BusinessPseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: BusinessPseudoSBFCA_t-eps-converted-to.pdf  used on in
 put line 777.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <SizePseudoSBFCA.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-28 14:07:43
 (epstopdf)                    size: 21371 bytes
 (epstopdf)             Output file: <SizePseudoSBFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-28 14:08:31
 (epstopdf)                    size: 10059 bytes
 (epstopdf)             Command: <repstopdf --outfile=SizePseudoSBFCA-eps-conver
 ted-to.pdf SizePseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 789.
 Package epstopdf Info: Output file is already uptodate.
-<SizePseudoSBFCA-eps-converted-to.pdf, id=495, 397.485pt x 289.08pt>
+<SizePseudoSBFCA-eps-converted-to.pdf, id=494, 397.485pt x 289.08pt>
 File: SizePseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use SizePseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: SizePseudoSBFCA-eps-converted-to.pdf  used on input li
 ne 789.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <SizePseudoSBFCA_t.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-28 14:07:41
 (epstopdf)                    size: 24899 bytes
 (epstopdf)             Output file: <SizePseudoSBFCA_t-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-28 14:08:34
 (epstopdf)                    size: 11096 bytes
 (epstopdf)             Command: <repstopdf --outfile=SizePseudoSBFCA_t-eps-conv
 erted-to.pdf SizePseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 790.
 Package epstopdf Info: Output file is already uptodate.
-<SizePseudoSBFCA_t-eps-converted-to.pdf, id=496, 397.485pt x 289.08pt>
+<SizePseudoSBFCA_t-eps-converted-to.pdf, id=495, 397.485pt x 289.08pt>
 File: SizePseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use SizePseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: SizePseudoSBFCA_t-eps-converted-to.pdf  used on input 
 line 790.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <IndustryPseudoSBFCA.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-31 10:00:03
 (epstopdf)                    size: 21807 bytes
 (epstopdf)             Output file: <IndustryPseudoSBFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-31 10:04:20
 (epstopdf)                    size: 10330 bytes
 (epstopdf)             Command: <repstopdf --outfile=IndustryPseudoSBFCA-eps-co
 nverted-to.pdf IndustryPseudoSBFCA.eps>
 (epstopdf)             \includegraphics on input line 803.
 Package epstopdf Info: Output file is already uptodate.
-<IndustryPseudoSBFCA-eps-converted-to.pdf, id=497, 397.485pt x 289.08pt>
+<IndustryPseudoSBFCA-eps-converted-to.pdf, id=496, 397.485pt x 289.08pt>
 File: IndustryPseudoSBFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use IndustryPseudoSBFCA-eps-converted-to.pdf>
 Package pdftex.def Info: IndustryPseudoSBFCA-eps-converted-to.pdf  used on inpu
 t line 803.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <IndustryPseudoSBFCA_t.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-31 09:59:46
 (epstopdf)                    size: 24880 bytes
 (epstopdf)             Output file: <IndustryPseudoSBFCA_t-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-03-31 10:04:23
 (epstopdf)                    size: 11134 bytes
 (epstopdf)             Command: <repstopdf --outfile=IndustryPseudoSBFCA_t-eps-
 converted-to.pdf IndustryPseudoSBFCA_t.eps>
 (epstopdf)             \includegraphics on input line 804.
 Package epstopdf Info: Output file is already uptodate.
-<IndustryPseudoSBFCA_t-eps-converted-to.pdf, id=498, 397.485pt x 289.08pt>
+<IndustryPseudoSBFCA_t-eps-converted-to.pdf, id=497, 397.485pt x 289.08pt>
 File: IndustryPseudoSBFCA_t-eps-converted-to.pdf Graphic file (type pdf)
 <use IndustryPseudoSBFCA_t-eps-converted-to.pdf>
 Package pdftex.def Info: IndustryPseudoSBFCA_t-eps-converted-to.pdf  used on in
@@ -978,98 +979,98 @@ put line 804.
 FCA_t-eps-converted-to.pdf> <./IndustryPseudoSBFCA-eps-converted-to.pdf> <./Ind
 ustryPseudoSBFCA_t-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Qmcorr5lrd.eps>
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:29:05
 (epstopdf)                    size: 32656 bytes
 (epstopdf)             Output file: <Qmcorr5lrd-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:29:35
 (epstopdf)                    size: 26108 bytes
 (epstopdf)             Command: <repstopdf --outfile=Qmcorr5lrd-eps-converted-t
 o.pdf Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 825.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5lrd-eps-converted-to.pdf, id=546, 397.485pt x 289.08pt>
+<Qmcorr5lrd-eps-converted-to.pdf, id=545, 397.485pt x 289.08pt>
 File: Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5lrd-eps-converted-to.pdf  used on input line 82
 5.
 (pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
 Package epstopdf Info: Source file: <Qmcorr5subsample.eps>
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:30:18
 (epstopdf)                    size: 24268 bytes
 (epstopdf)             Output file: <Qmcorr5subsample-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:30:53
 (epstopdf)                    size: 16327 bytes
 (epstopdf)             Command: <repstopdf --outfile=Qmcorr5subsample-eps-conve
 rted-to.pdf Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 830.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5subsample-eps-converted-to.pdf, id=547, 397.485pt x 289.08pt>
+<Qmcorr5subsample-eps-converted-to.pdf, id=546, 397.485pt x 289.08pt>
 File: Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5subsample-eps-converted-to.pdf  used on input l
 ine 830.
 (pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
 Package epstopdf Info: Source file: <Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:30:14
 (epstopdf)                    size: 30170 bytes
 (epstopdf)             Output file: <Qmcorr5lrdbgsubsample-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2021-10-17 19:54:12
+(epstopdf)                    date: 2021-07-12 13:30:57
 (epstopdf)                    size: 15112 bytes
 (epstopdf)             Command: <repstopdf --outfile=Qmcorr5lrdbgsubsample-eps-
 converted-to.pdf Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 835.
 Package epstopdf Info: Output file is already uptodate.
-<Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=548, 397.485pt x 289.08pt>
+<Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=547, 397.485pt x 289.08pt>
 File: Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Qmcorr5lrdbgsubsample-eps-converted-to.pdf  used on in
 put line 835.
 (pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
 Package epstopdf Info: Source file: <QarterSummary.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:20:21
 (epstopdf)                    size: 53124425 bytes
 (epstopdf)             Output file: <QarterSummary-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:20:49
 (epstopdf)                    size: 157003 bytes
 (epstopdf)             Command: <repstopdf --outfile=QarterSummary-eps-converte
 d-to.pdf QarterSummary.eps>
 (epstopdf)             \includegraphics on input line 841.
 Package epstopdf Info: Output file is already uptodate.
-<QarterSummary-eps-converted-to.pdf, id=549, 1084.05pt x 722.7pt>
+<QarterSummary-eps-converted-to.pdf, id=548, 1084.05pt x 722.7pt>
 File: QarterSummary-eps-converted-to.pdf Graphic file (type pdf)
 <use QarterSummary-eps-converted-to.pdf>
 Package pdftex.def Info: QarterSummary-eps-converted-to.pdf  used on input line
  841.
 (pdftex.def)             Requested size: 331.50238pt x 221.00212pt.
 Package epstopdf Info: Source file: <sameIndustryinQuarter.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:29:38
 (epstopdf)                    size: 18154 bytes
 (epstopdf)             Output file: <sameIndustryinQuarter-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:29:59
 (epstopdf)                    size: 13108 bytes
 (epstopdf)             Command: <repstopdf --outfile=sameIndustryinQuarter-eps-
 converted-to.pdf sameIndustryinQuarter.eps>
 (epstopdf)             \includegraphics on input line 846.
 Package epstopdf Info: Output file is already uptodate.
-<sameIndustryinQuarter-eps-converted-to.pdf, id=550, 350.5095pt x 247.88611pt>
+<sameIndustryinQuarter-eps-converted-to.pdf, id=549, 350.5095pt x 247.88611pt>
 File: sameIndustryinQuarter-eps-converted-to.pdf Graphic file (type pdf)
 <use sameIndustryinQuarter-eps-converted-to.pdf>
 Package pdftex.def Info: sameIndustryinQuarter-eps-converted-to.pdf  used on in
 put line 846.
 (pdftex.def)             Requested size: 175.49881pt x 124.11673pt.
 Package epstopdf Info: Source file: <sameIBGinQuarter.eps>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:29:39
 (epstopdf)                    size: 19234 bytes
 (epstopdf)             Output file: <sameIBGinQuarter-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-08-31 15:06:07
+(epstopdf)                    date: 2021-06-15 08:30:04
 (epstopdf)                    size: 13517 bytes
 (epstopdf)             Command: <repstopdf --outfile=sameIBGinQuarter-eps-conve
 rted-to.pdf sameIBGinQuarter.eps>
 (epstopdf)             \includegraphics on input line 847.
 Package epstopdf Info: Output file is already uptodate.
-<sameIBGinQuarter-eps-converted-to.pdf, id=551, 392.03464pt x 247.88611pt>
+<sameIBGinQuarter-eps-converted-to.pdf, id=550, 392.03464pt x 247.88611pt>
 File: sameIBGinQuarter-eps-converted-to.pdf Graphic file (type pdf)
 <use sameIBGinQuarter-eps-converted-to.pdf>
 Package pdftex.def Info: sameIBGinQuarter-eps-converted-to.pdf  used on input l
@@ -1080,7 +1081,7 @@ df>] [27 <./Qmcorr5lrdbgsubsample-eps-converted-to.pdf> <./QarterSummary-eps-co
 nverted-to.pdf> <./sameIndustryinQuarter-eps-converted-to.pdf> <./sameIBGinQuar
 ter-eps-converted-to.pdf>] (./Qmresult2subsanple-slide.tex)
 (./ImbalanceSummary.tex)
-<GroupedSTD.png, id=658, 491.8375pt x 311.1625pt>
+<GroupedSTD.png, id=657, 491.8375pt x 311.1625pt>
 File: GroupedSTD.png Graphic file (type png)
 <use GroupedSTD.png>
 Package pdftex.def Info: GroupedSTD.png  used on input line 882.
@@ -1093,31 +1094,31 @@ Overfull \hbox (24.41644pt too wide) in paragraph at lines 923--927
 
 [31] (./BGReturn.tex) [32] [33]
 Package epstopdf Info: Source file: <mcorr50.eps>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-07-12 13:29:43
 (epstopdf)                    size: 27040 bytes
 (epstopdf)             Output file: <mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-07-12 13:30:47
 (epstopdf)                    size: 23706 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr50-eps-converted-to.p
 df mcorr50.eps>
 (epstopdf)             \includegraphics on input line 956.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr50-eps-converted-to.pdf, id=692, 397.485pt x 289.08pt>
+<mcorr50-eps-converted-to.pdf, id=691, 397.485pt x 289.08pt>
 File: mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr50-eps-converted-to.pdf  used on input line 956.
 (pdftex.def)             Requested size: 312.00119pt x 226.91505pt.
 Package epstopdf Info: Source file: <mcorr50bg.eps>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-07-12 13:29:37
 (epstopdf)                    size: 38831 bytes
 (epstopdf)             Output file: <mcorr50bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-09-19 15:15:26
 (epstopdf)                    size: 20476 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr50bg-eps-converted-to
 .pdf mcorr50bg.eps>
 (epstopdf)             \includegraphics on input line 961.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr50bg-eps-converted-to.pdf, id=693, 397.485pt x 289.08pt>
+<mcorr50bg-eps-converted-to.pdf, id=692, 397.485pt x 289.08pt>
 File: mcorr50bg-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr50bg-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr50bg-eps-converted-to.pdf  used on input line 961
@@ -1138,16 +1139,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 974.
 
 Package epstopdf Info: Source file: <mcorr5Polk.eps>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-07-12 13:28:15
 (epstopdf)                    size: 27355 bytes
 (epstopdf)             Output file: <mcorr5Polk-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-10-17 19:54:13
+(epstopdf)                    date: 2021-09-19 15:15:30
 (epstopdf)                    size: 23727 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr5Polk-eps-converted-t
 o.pdf mcorr5Polk.eps>
 (epstopdf)             \includegraphics on input line 977.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr5Polk-eps-converted-to.pdf, id=730, 397.485pt x 289.08pt>
+<mcorr5Polk-eps-converted-to.pdf, id=729, 397.485pt x 289.08pt>
 File: mcorr5Polk-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr5Polk-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr5Polk-eps-converted-to.pdf  used on input line 97
@@ -1179,7 +1180,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1000.
  ) 
 Here is how much of TeX's memory you used:
  20374 strings out of 480608
- 390373 string characters out of 5907536
+ 390394 string characters out of 5907536
  818466 words of memory out of 5000000
  35666 multiletter control sequences out of 15000+600000
  542659 words of font info for 57 fonts, out of 8000000 for 9000
@@ -1210,10 +1211,10 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft.pdf" (41 pages, 995357 bytes).
+Output written on "Connected Stocks - Draft.pdf" (41 pages, 995112 bytes).
 PDF statistics:
- 881 PDF objects out of 1000 (max. 8388607)
- 611 compressed objects within 7 object streams
+ 880 PDF objects out of 1000 (max. 8388607)
+ 610 compressed objects within 7 object streams
  129 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
