@@ -7,8 +7,8 @@ from ConnectedOwnershipFunctions import *
 import time
 
 # %%
-# path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
@@ -40,10 +40,10 @@ df = df.rename(
 df.head()
 
 # %%
-df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
+df[df.symbol == "فولاد"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
 
 
-# %%
+# # %%
 # gdata = df.groupby(["id"])
 # g = gdata.get_group(167)
 # S_g = gdata.get_group(157)
@@ -61,24 +61,32 @@ df[df.symbol == "خگستر"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[
 # print(time.time() - n)
 
 # #%%
-# len(t1[t1.MonthlyFCAPf>0]),len(t2)
-# t1[t1.WeeklyFCAPf>0]
+# len(t1[t1.FCAPf>0]),len(t2)
 
 
 #%%
-# data = pd.DataFrame()
-# gg = df.groupby(["id"])
-# counter = 0
+data = pd.DataFrame()
+gg = df.groupby(["id"])
+counter = 0
 
 
-# def genFile(df, path, g, i):
-#     S_gg = df.groupby(["id"])
-#     # data = data.append(S_gg.apply(FCAPf, g=g))
-#     pickle.dump(
-#         S_gg.apply(FCAPf, g=g, AllPair=False),
-#         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
-#     )
+def genFile(df, path, g, i):
+    S_gg = df.groupby(["id"])
+    # data = data.append(S_gg.apply(FCAPf, g=g))
+    pickle.dump(
+        S_gg.apply(FCAPf, g=g, AllPair=False),
+        open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
+    )
 
+for i in list(gg.groups.keys()):
+    n = time.time()
+    g = gg.get_group(i)
+    F_id = g.id.iloc[0]
+    print("Id " + str(F_id))
+    df = df[df.id > F_id]
+    gg = df.groupby(["id"])
+    genFile(df, path, g, i)
+    print(time.time() - n)
 
 # threads = {}
 # for i in list(gg.groups.keys()):
