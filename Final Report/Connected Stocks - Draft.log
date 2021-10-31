@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  31 OCT 2021 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  31 OCT 2021 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,7 +759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 [1
 
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./Output/summaryOfOwnership.tex) [3] (./summaryOfPairs.tex)
+(./Output/summaryOfOwnership.tex) [3] (./summaryOfPairs.tex) [4] [5]
 Package epstopdf Info: Source file: <idMonth.eps>
 (epstopdf)                    date: 2021-06-16 11:21:58
 (epstopdf)                    size: 52106 bytes
@@ -770,37 +770,37 @@ Package epstopdf Info: Source file: <idMonth.eps>
 df idMonth.eps>
 (epstopdf)             \includegraphics on input line 349.
 Package epstopdf Info: Output file is already uptodate.
-<idMonth-eps-converted-to.pdf, id=125, 904.89067pt x 510.0154pt>
+<idMonth-eps-converted-to.pdf, id=136, 904.89067pt x 510.0154pt>
 File: idMonth-eps-converted-to.pdf Graphic file (type pdf)
 <use idMonth-eps-converted-to.pdf>
 Package pdftex.def Info: idMonth-eps-converted-to.pdf  used on input line 349.
 (pdftex.def)             Requested size: 390.0pt x 219.80818pt.
- [4] [5 <./idMonth-eps-converted-to.pdf>] [6] (./CorrelationsResultsText.tex) [
-7]
+ [6]
+[7 <./idMonth-eps-converted-to.pdf>] (./CorrelationsResultsText.tex)
 (./SameGroupSameIndustry.tex) [8] (./ControlsSummary.tex) [9] [10] [11]
-<1.png, id=298, 494.8086pt x 299.6796pt>
+<1.png, id=295, 494.8086pt x 299.6796pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
 Package pdftex.def Info: 1.png  used on input line 543.
 (pdftex.def)             Requested size: 183.30048pt x 111.01689pt.
-<2.png, id=300, 494.3268pt x 300.1614pt>
+<2.png, id=297, 494.3268pt x 300.1614pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 544.
 (pdftex.def)             Requested size: 183.30048pt x 111.30072pt.
 
-[12 <./1.png> <./2.png>] (./Example2.tex)
-<3.png, id=314, 722.7pt x 360.3864pt>
+[12] (./Example2.tex) [13 <./1.png> <./2.png>]
+<3.png, id=321, 722.7pt x 360.3864pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 623.
 (pdftex.def)             Requested size: 331.50238pt x 165.30682pt.
-<4.png, id=315, 723.1818pt x 359.9046pt>
+<4.png, id=322, 723.1818pt x 359.9046pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 630.
 (pdftex.def)             Requested size: 331.50238pt x 164.98149pt.
- (./marketcap.tex) [13] [14 <./3.png>] [15 <./4.png>] (./FCACal.tex)
+ (./marketcap.tex) [14 <./3.png>] [15 <./4.png>] (./FCACal.tex)
 Overfull \hbox (30.77202pt too wide) in paragraph at lines 671--675
 \OT1/cmr/m/n/12 grouped by per-sis-tent for-mal (e.g., eq-uity) and in-for-mal 
 (e.g., fam-ily) links.([][]Khanna
@@ -1211,7 +1211,7 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft.pdf" (41 pages, 995112 bytes).
+Output written on "Connected Stocks - Draft.pdf" (41 pages, 995327 bytes).
 PDF statistics:
  880 PDF objects out of 1000 (max. 8388607)
  610 compressed objects within 7 object streams
