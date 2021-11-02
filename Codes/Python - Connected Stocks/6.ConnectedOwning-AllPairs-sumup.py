@@ -19,7 +19,7 @@ mapingdict = dict(zip(monthId.date, monthId.t_Month))
 # %%
 result = pd.DataFrame()
 counter = 0
-# arr.remove("MonthlyAllPairs_1400_06_28.csv")
+arr.remove("MonthlyAllPairs_1400_06_28.csv")
 for i, name in enumerate(arr):
     print(i)
     df = pd.read_pickle(path + name).reset_index(drop=True)
