@@ -53,7 +53,7 @@ def vv5(row):
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 
 # %%
