@@ -35,6 +35,7 @@ df = df.rename(
         "2_Residual": "2-Residual",
         "5Lag_Residual": "5Lag-Residual",
         "Delta_TurnOver": "Delta_Trunover",
+        "Month_of_year":"month_of_year"
     }
 )
 df.head()
@@ -65,28 +66,28 @@ df[df.symbol == "فولاد"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[
 
 
 #%%
-# data = pd.DataFrame()
-# gg = df.groupby(["id"])
-# counter = 0
+data = pd.DataFrame()
+gg = df.groupby(["id"])
+counter = 0
 
 
-# def genFile(df, path, g, i):
-#     S_gg = df.groupby(["id"])
-#     # data = data.append(S_gg.apply(FCAPf, g=g))
-#     pickle.dump(
-#         S_gg.apply(FCAPf, g=g, AllPair=False),
-#         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
-#     )
+def genFile(df, path, g, i):
+    S_gg = df.groupby(["id"])
+    # data = data.append(S_gg.apply(FCAPf, g=g))
+    pickle.dump(
+        S_gg.apply(FCAPf, g=g, AllPair=False),
+        open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
+    )
 
-# for i in list(gg.groups.keys()):
-#     n = time.time()
-#     g = gg.get_group(i)
-#     F_id = g.id.iloc[0]
-#     print("Id " + str(F_id))
-#     df = df[df.id > F_id]
-#     gg = df.groupby(["id"])
-#     genFile(df, path, g, i)
-#     print(time.time() - n)
+for i in list(gg.groups.keys()):
+    n = time.time()
+    g = gg.get_group(i)
+    F_id = g.id.iloc[0]
+    print("Id " + str(F_id))
+    df = df[df.id > F_id]
+    gg = df.groupby(["id"])
+    genFile(df, path, g, i)
+    print(time.time() - n)
 
 # threads = {}
 # for i in list(gg.groups.keys()):
