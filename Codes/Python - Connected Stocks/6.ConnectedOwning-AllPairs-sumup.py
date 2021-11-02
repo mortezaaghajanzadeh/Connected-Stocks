@@ -1,10 +1,76 @@
 #%%
 import os
 import pandas as pd
+import pickle
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
+
+
+def add(row):
+    if len(row) < 2:
+        row = "0" + row
+    return row
+
+
+def firstStep(d, mapingdict):
+    d["symbol_x"] = d["id_x"].map(mapingdict)
+    d["symbol_y"] = d["id_y"].map(mapingdict)
+
+    d["month_of_year"] = d["month_of_year"].astype(str).apply(add)
+    d["week_of_year"] = d["week_of_year"].astype(str).apply(add)
+
+    d["year_of_year"] = d["year_of_year"].astype(str)
+
+    d["Year_Month_week"] = d["year_of_year"] + d["week_of_year"]
+    d["Year_Month"] = d["year_of_year"] + d["month_of_year"]
+
+    days = list(set(d.date))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t"] = d["date"].map(mapingdict)
+
+    days = list(set(d.Year_Month_week))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t_Week"] = d["Year_Month_week"].map(mapingdict)
+
+    days = list(set(d.Year_Month))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t_Month"] = d["Year_Month"].map(mapingdict)
+
+    d["id_x"] = d.id_x.astype(str)
+    d["id_y"] = d.id_y.astype(str)
+    d["id"] = d["id_x"] + "-" + d["id_y"]
+    ids = list(set(d.id))
+    id = list(range(len(ids)))
+    mapingdict = dict(zip(ids, id))
+    d["id"] = d["id"].map(mapingdict)
+    return d
+
+
+def NormalTransform(df_sub):
+    col = df_sub.transform("rank")
+    return (col - col.mean()) / col.std()
+
+
+def SecondStep(a):
+    a = a.reset_index(drop=True)
+    a["id_x"] = a.id_x.astype(str)
+    a["id_y"] = a.id_y.astype(str)
+    a["id"] = a["id_x"] + "-" + a["id_y"]
+    ids = list(set(a.id))
+    id = list(range(len(ids)))
+    mapingdict = dict(zip(ids, id))
+    a["id"] = a["id"].map(mapingdict)
+    return a
+
+
 #%%
 tt = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
 tt["id"] = tt.id.astype(int)
@@ -18,14 +84,14 @@ mapingdict = dict(zip(monthId.date, monthId.t_Month))
 
 # %%
 result = pd.DataFrame()
-counter = 0
+counter, counter_file = 0, 0
 arr.remove("MonthlyAllPairs_1400_06_28.csv")
 for i, name in enumerate(arr):
-    print(i)
-    df = pd.read_pickle(path + name).reset_index(drop=True)
-    if len(df) < 1:
+    print(i, len(result))
+    d = pd.read_pickle(path + name).reset_index(drop=True)
+    if len(d) < 1:
         continue
-    df = df.drop(
+    d = d.drop(
         columns=[
             "Weeklyρ_2",
             "Weeklyρ_4",
@@ -65,29 +131,30 @@ for i, name in enumerate(arr):
             "Weeklyρ_amihud_f",
         ]
     )
-
-    df["id_x"] = df.id_x.astype(int)
-    df["id_y"] = df.id_y.astype(int)
-    df["symbol_x"] = df.id_x.map(mapdict)
-    df["symbol_y"] = df.id_y.map(mapdict)
-    df[["symbol_x", "symbol_y"]].isnull().sum()
-    df = df[df.id_x != df.id_y]
-    df["id"] = df["symbol_x"] + "-" + df["symbol_y"]
-    ids = list(set(df.id))
-    id = list(range(len(ids)))
-    mapingdict1 = dict(zip(ids, id))
-    df["id"] = df["id"].map(mapingdict1)
-
-    df["yearMonth"] = round(df.date / 100).astype(int)
-    df["t_Month"] = df.yearMonth.map(mapingdict)
-
-    dt = df.drop_duplicates(["id", "t_Month"], keep="last")
-
-    result = result.append(dt)
-    # if len(result) > 3e6:
-    #     counter += 1
-    #     result.to_parquet(path2 + "MonthlyAllPairs-part%s.parquet" % counter)
-    #     result = pd.DataFrame()
+    d = firstStep(d, mapdict).drop_duplicates(["id", "t_Month"], keep="last")
+    result = result.append(d)
+    d = pd.DataFrame()
+    if len(result) > 6e6:
+        counter_file += 1
+        pickle.dump(
+            result,
+            open(
+                path2
+                + "mergerd_first_step_monthly_all_part_{}.p".format(counter_file),
+                "wb",
+            ),
+        )
+        result = pd.DataFrame()
+counter_file += 1
+pickle.dump(
+            result,
+            open(
+                path2
+                + "mergerd_first_step_monthly_all_part_{}.p".format(counter_file),
+                "wb",
+            ),
+        )
+result = pd.DataFrame()
 # %%
 result[result.t_Month.isnull()].yearMonth.unique()
 

@@ -1,6 +1,7 @@
 #%%
 import pandas as pd
 import os
+import pickle
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
@@ -97,7 +98,10 @@ arrs = os.listdir(path + "NormalzedFCAP9.1")
 counter_file = 0
 for counter, i in enumerate(arrs):
     print(counter, len(Monthly))
-    d = pd.read_pickle(path + "NormalzedFCAP9.1\\" + i).drop(
+    d = pd.read_pickle(path + "NormalzedFCAP9.1\\" + i)
+    if len(d) == 0:
+        continue
+    d = d.drop(
         columns=[
             "Weeklyρ_2",
             "Weeklyρ_4",
@@ -142,128 +146,98 @@ for counter, i in enumerate(arrs):
     d = firstStep(d, df)
     m = d.drop_duplicates(["id", "t_Month"], keep="last")
     Monthly = Monthly.append(m)
-    # w = d.drop_duplicates(["id", "t_Week"], keep="last").drop(
-    #     columns=[
-    #         "Monthlyρ_2",
-    #         "Monthlyρ_4",
-    #         "Monthlyρ_5",
-    #         "Monthlyρ_6",
-    #         "Monthlyρ_5Lag",
-    #         "Monthlyρ_turn",
-    #         "Monthlyρ_amihud",
-    #         "MonthlySizeRatio",
-    #         "MonthlyMarketCap_x",
-    #         "MonthlyMarketCap_y",
-    #         "MonthlyPercentile_Rank_x",
-    #         "MonthlyPercentile_Rank_y",
-    #         "Monthlysize1",
-    #         "Monthlysize2",
-    #         "MonthlySameSize",
-    #         "MonthlyB/M1",
-    #         "MonthlyB/M2",
-    #         "MonthlySameB/M",
-    #         "MonthlyCrossOwnership",
-    #         "MonthlyTurnOver_x",
-    #         "MonthlyAmihud_x",
-    #         "Monthlyvolume_x",
-    #         "Monthlyvalue_x",
-    #         "MonthlyTurnOver_y",
-    #         "MonthlyAmihud_y",
-    #         "Monthlyvolume_y",
-    #         "Monthlyvalue_y",
-    #         "MonthlyFCAPf",
-    #         "MonthlyFCA",
-    #         "Monthlyρ_2_f",
-    #         "Monthlyρ_4_f",
-    #         "Monthlyρ_5_f",
-    #         "Monthlyρ_6_f",
-    #         "MonthlyρLag_5_f",
-    #         "Monthlyρ_turn_f",
-    #         "Monthlyρ_amihud_f",
-    #     ]
-    # )
-    # Weekly = Weekly.append(w)
     d = pd.DataFrame()
     if len(Monthly) > 6e6:
         counter_file += 1
-        Monthly.to_parquet(
-            path + "mergerd_first_step_monthly_part_{}.parquet".format(counter_file)
+        pickle.dump(
+            Monthly,
+            open(
+                path
+                + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
+                "wb",
+            ),
         )
         Monthly = pd.DataFrame()
 counter_file += 1
-Monthly.to_parquet(
-    path + "mergerd_first_step_monthly_part_{}.parquet".format(counter_file)
+pickle.dump(
+    Monthly,
+    open(
+        path
+        + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
+        "wb",
+    ),
 )
 Monthly = pd.DataFrame()
 # %%
-Monthly = pd.read_parquet( 
-        path + "mergerd_first_step_monthly_part_{}.parquet".format(1)
+
+Monthly = pd.read_pickle( 
+        path + "mergerd_first_step_monthly_part_{}.p".format(1)
         ).drop(columns = [
             'Ret_x',
- 'Ret_y',
- 'SizeRatio',
- 'MarketCap_x',
- 'MarketCap_y',
- '2-Residual_x',
- '2-Residual_y',
- '4-Residual_x',
- '4-Residual_y',
- '5-Residual_x',
- '5-Residual_y',
- '6-Residual_x',
- '6-Residual_y',
- '5Lag-Residual_x',
- '5Lag-Residual_y',
- 'Percentile_Rank_x',
- 'Percentile_Rank_y',
- 'BookToMarket_x',
- 'BookToMarket_y',
- 'Amihud_x',
- 'volume_x',
- 'value_x',
- 'TurnOver_y',
- 'Amihud_y',
- 'volume_y',
- 'value_y',
- 'Delta_Trunover_x',
- 'Delta_Trunover_y',
- 'Delta_Amihud_x',
- 'Delta_Amihud_y',
+            'Ret_y',
+            'SizeRatio',
+            'MarketCap_x',
+            'MarketCap_y',
+            '2-Residual_x',
+            '2-Residual_y',
+            '4-Residual_x',
+            '4-Residual_y',
+            '5-Residual_x',
+            '5-Residual_y',
+            '6-Residual_x',
+            '6-Residual_y',
+            '5Lag-Residual_x',
+            '5Lag-Residual_y',
+            'Percentile_Rank_x',
+            'Percentile_Rank_y',
+            'BookToMarket_x',
+            'BookToMarket_y',
+            'Amihud_x',
+            'volume_x',
+            'value_x',
+            'TurnOver_y',
+            'Amihud_y',
+            'volume_y',
+            'value_y',
+            'Delta_Trunover_x',
+            'Delta_Trunover_y',
+            'Delta_Amihud_x',
+            'Delta_Amihud_y',
         ])
 Monthly = Monthly.append(
-    pd.read_parquet( 
-        path + "mergerd_first_step_monthly_part_{}.parquet".format(2)
+    pd.read_pickle( 
+        path + "mergerd_first_step_monthly_part_{}.p".format(2)
         ).drop(columns = [
             'Ret_x',
- 'Ret_y',
- 'SizeRatio',
- 'MarketCap_x',
- 'MarketCap_y',
- '2-Residual_x',
- '2-Residual_y',
- '4-Residual_x',
- '4-Residual_y',
- '5-Residual_x',
- '5-Residual_y',
- '6-Residual_x',
- '6-Residual_y',
- '5Lag-Residual_x',
- '5Lag-Residual_y',
- 'Percentile_Rank_x',
- 'Percentile_Rank_y',
- 'BookToMarket_x',
- 'BookToMarket_y',
- 'Amihud_x',
- 'volume_x',
- 'value_x',
- 'TurnOver_y',
- 'Amihud_y',
- 'volume_y',
- 'value_y',
- 'Delta_Trunover_x',
- 'Delta_Trunover_y',
- 'Delta_Amihud_x',
- 'Delta_Amihud_y',
+            'Ret_y',
+            'SizeRatio',
+            'MarketCap_x',
+            'MarketCap_y',
+            '2-Residual_x',
+            '2-Residual_y',
+            '4-Residual_x',
+            '4-Residual_y',
+            '5-Residual_x',
+            '5-Residual_y',
+            '6-Residual_x',
+            '6-Residual_y',
+            '5Lag-Residual_x',
+            '5Lag-Residual_y',
+            'Percentile_Rank_x',
+            'Percentile_Rank_y',
+            'BookToMarket_x',
+            'BookToMarket_y',
+            'Amihud_x',
+            'volume_x',
+            'value_x',
+            'TurnOver_y',
+            'Amihud_y',
+            'volume_y',
+            'value_y',
+            'Delta_Trunover_x',
+            'Delta_Trunover_y',
+            'Delta_Amihud_x',
+            'Delta_Amihud_y',
         ])
 )
 
@@ -280,7 +254,24 @@ Monthly["MonthlyFCA*"] = gg["MonthlyFCA"].apply(NormalTransform)
 # Weekly["WeeklyFCA*"] = gg["WeeklyFCA"].apply(NormalTransform)
 print("Second step is done")
 #%%
+# %%
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
+SData = (
+    df.groupby("symbol")[["Percentile_Rank"]]
+    .mean()
+    .sort_values(by=["Percentile_Rank"])
+    .reset_index()
+)
+SData = SData.merge(SId)
+SData["Rank"] = SData.Percentile_Rank.rank()
+SData["GRank"] = 0
+for i in range(9):
+    t = i + 1
+    tempt = (SData["Rank"].max()) / 10
+    SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
+del df
 # for a in [Monthly, Weekly]:
 for a in [Monthly]:
     mapingdict = dict(zip(SData.id, SData.GRank))
@@ -293,7 +284,8 @@ Monthly = Monthly[~Monthly.Monthlyρ_5.isnull()]
 # Monthly = Monthly.groupby(["id"]).filter(lambda x: x.shape[0] >= 15)
 n3 = path + "MonthlyNormalzedFCAP9.1"
 Monthly.to_parquet(n3 + ".parquet", index=False)
-
+Pairs = Monthly[["id_x", "id_y", "id"]].drop_duplicates().reset_index(drop=True)
+del Monthly
 # Weekly = Weekly[~Weekly.Weeklyρ_5.isnull()]
 # assets = Weekly.groupby("id").size().to_frame()
 # assets = assets[assets[0] > 14].index
@@ -302,7 +294,25 @@ Monthly.to_parquet(n3 + ".parquet", index=False)
 # Weekly.to_parquet(n3 + ".parquet", index=False)
 # del Weekly
 # %%
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
+SData = (
+    df.groupby("symbol")[["Percentile_Rank"]]
+    .mean()
+    .sort_values(by=["Percentile_Rank"])
+    .reset_index()
+)
+SData = SData.merge(SId)
+SData["Rank"] = SData.Percentile_Rank.rank()
+SData["GRank"] = 0
+for i in range(9):
+    t = i + 1
+    tempt = (SData["Rank"].max()) / 10
+    SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
+
+
+#%%
 
 df["month_of_year"] = df["month_of_year"].astype(str).apply(add)
 df["week_of_year"] = df["week_of_year"].astype(str).apply(add)
@@ -344,7 +354,7 @@ dgg = Rdf.groupby(["id"])
 # gg = a.groupby('id')
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 GData = df[["group_name", "id"]].drop_duplicates().reset_index(drop=True)
-Pairs = Monthly[["id_x", "id_y", "id"]].drop_duplicates().reset_index(drop=True)
+# Pairs = Monthly[["id_x", "id_y", "id"]].drop_duplicates().reset_index(drop=True)
 timeId = a[["date", "t", "t_Week", "t_Month"]].drop_duplicates().sort_values(by=["t"])
 
 

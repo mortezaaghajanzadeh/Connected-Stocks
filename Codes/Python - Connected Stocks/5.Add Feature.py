@@ -83,18 +83,28 @@ def Overall_index():
     return df
 
 Index = Overall_index()
-a = df1[['date','jalaliDate']].drop_duplicates()
+print(len(Index))
+a = df[['date','jalaliDate']].drop_duplicates()
 mapingdict = dict(zip(
     a.jalaliDate,a.date
 ))
-Index['jalaliDate'] = Index.jalaliDate.map(mapingdict)
+Index['date'] = Index.jalaliDate.map(mapingdict)
 Index = Index.dropna()
-Index["YearMonth"] = (Index["jalaliDate"] / 100).round(0)
-Index["YearMonth"] = Index["YearMonth"].astype(int)
-Index["YearMonth"] = Index["YearMonth"].astype(str)
+Index['year'] = Index.date/1e4
+Index['year'] = Index.year.astype(int).astype(str)
+Index['Month'] = ((Index.jalaliDate/1e4 -(Index.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
+def func(x):
+    if len(x) < 2:
+        return '0' + x
+    return x
+Index['Month'] = Index.Month.apply(func)
+Index['YearMonth'] = Index.year + Index.Month
+Index
+#%%
+
 Index = Index[["YearMonth", "Value"]]
 Index = Index.drop_duplicates(subset="YearMonth", keep="last")
-Index["change"] = Index["Value"].pct_change() * 100
+Index["change"] = Index["Value"].pct_change() * 100 
 Index["Bullish"] = 0
 Index["Bearish"] = 0
 Index["change"] = Index.change.shift(-1)
