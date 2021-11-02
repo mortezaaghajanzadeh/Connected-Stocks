@@ -112,7 +112,6 @@ a[a[0] > 1500]
 a[a.index > 1968].head(10)
 
 
-
 #%%
 df["year"] = round(df.date / 1e4, 0)
 t1 = df[df.date == 20170326]
@@ -184,7 +183,7 @@ df["shamsi"] = df["date1"].apply(JalaliDate)
 df["week_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
 # df["week_of_year"] = df["date1"].dt.week
 # df["month_of_year"] = df["date1"].dt.month
-df["month_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
+df["month_of_year"] = df.shamsi.apply(lambda x: x.strftime("%m"))
 df["year_of_year"] = df["date1"].dt.year
 
 
@@ -299,6 +298,6 @@ df.drop(columns=["shamsi"]).to_parquet(
 )
 
 #%%
-HolderData[HolderData.symbol == 'فولاد']
+HolderData[HolderData.symbol == "فولاد"]
 
 # %%
