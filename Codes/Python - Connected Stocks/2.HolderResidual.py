@@ -53,7 +53,7 @@ def vv5(row):
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 
 
 # %%
@@ -181,10 +181,13 @@ df["date1"] = df["date"].apply(vv4)
 df["date1"] = pd.to_datetime(df["date1"])
 df["shamsi"] = df["date1"].apply(JalaliDate)
 df["week_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
-# df["week_of_year"] = df["date1"].dt.week
-# df["month_of_year"] = df["date1"].dt.month
-df["month_of_year"] = df.shamsi.apply(lambda x: x.strftime("%m"))
-df["year_of_year"] = df["date1"].dt.year
+df['year_of_year'] = (df.jalaliDate/1e4).astype(int).astype(str)
+df['Month_of_year'] = ((df.jalaliDate/1e4 -(df.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
+def func(x):
+    if len(x) < 2:
+        return '0' + x
+    return x
+df['Month_of_year'] = df.Month_of_year.apply(func)
 
 
 # %%

@@ -7,6 +7,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import re as ree
 from itertools import islice
+from persiantools.jdatetime import JalaliDate
 
 # %%
 def vv4(row):
@@ -131,11 +132,22 @@ PriceData = PriceData.append(
     ]
 )
 del df
+
+
+#%%
+
 PriceData["date1"] = PriceData["date"].apply(vv4)
 PriceData["date1"] = pd.to_datetime(PriceData["date1"])
-PriceData["week_of_year"] = PriceData["date1"].dt.week
-PriceData["Month_of_year"] = PriceData["date1"].dt.month
-PriceData["year_of_year"] = PriceData["date1"].dt.year
+PriceData["shamsi"] = PriceData["date1"].apply(JalaliDate)
+PriceData["week_of_year"] = PriceData.shamsi.apply(lambda x: x.strftime("%W"))
+PriceData['year_of_year'] = (PriceData.jalaliDate/1e4).astype(int).astype(str)
+PriceData['Month_of_year'] = ((PriceData.jalaliDate/1e4 -(PriceData.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
+def func(x):
+    if len(x) < 2:
+        return '0' + x
+    return x
+PriceData['Month_of_year'] = PriceData.Month_of_year.apply(func)
+
 gg = PriceData.groupby("symbol")
 PriceData = PriceData.rename(
     columns={"return": "Ret", "close_price_Adjusted": "close_price"}
@@ -184,7 +196,7 @@ df["year"] = df["year"].astype(int)
 
 #%%
 df2 = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
-mapingdict = dict(zip(df2.set_index(["symbol", "date"]).index, df2.shrout))
+mapingdict = dict(zip(df2.set_index(["name", "date"]).index, df2.shrout))
 df["shrout"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="backfill")
@@ -306,9 +318,9 @@ PriceData.head()
 path = r"E:\RA_Aghajanzadeh\Data\\"
 n = path + "SymbolShrout_1400_06_28.csv"
 df3 = pd.read_csv(n)
-col = "symbol"
+col = "name"
 df3[col] = df3[col].apply(lambda x: convert_ar_characters(x))
-df3 = df3.set_index(["symbol", "date"])
+df3 = df3.set_index(["name", "date"])
 mapingdict = dict(zip(df3.index, df3.shrout))
 
 
