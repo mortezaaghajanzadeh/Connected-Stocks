@@ -49,7 +49,7 @@ df1["symbol_y"] = df1.id_y.map(mapdict)
 df1[["symbol_x", "symbol_y"]].isnull().sum()
 #%%
 
-df1 = df1[df1.id_x != df1.id_y]
+
 # %%
 
 import requests
@@ -772,6 +772,8 @@ df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
 df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 #%%
 # del result ,a
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 t = (
     df.drop_duplicates(subset=["symbol"])
     .groupby(["uo"])
@@ -779,18 +781,21 @@ t = (
     .to_frame()
     .sort_values(by=[0])
 )
+del df
 ll = t[t[0] >= t[0].median()].index
 df1["BigBusinessGroup"] = 0
 df1.loc[df1.uo_x.isin(ll), "BigBusinessGroup"] = 1
 df1.loc[df1.uo_y.isin(ll), "BigBusinessGroup"] = 1
 
 #%%
-# df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
+df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 n1 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
 print(len(df1))
 df1.to_csv(n1)
-
+n1 = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
+print(len(df1))
+df1.to_parquet(n1)
 # %%
 a = result.groupby("uo")[Imbalances[:-1]].mean()
 a = a.sort_values(by=Imbalances[:-1]).dropna()
