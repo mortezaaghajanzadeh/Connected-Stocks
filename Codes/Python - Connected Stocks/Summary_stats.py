@@ -405,7 +405,7 @@ plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup",palette=['r', 'g'])
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup",palette= "tab10")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -437,7 +437,35 @@ fig.set_rasterized(True)
 fig.tight_layout()
 plt.savefig(pathResult + "\\FCAComparetimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "\\FCAComparetimeSeries.png", bbox_inches="tight")
+#%%
 
+
+df["Grouped"] = 1
+df.loc[df.uo.isnull(), "Grouped"] = 0
+df = df.drop_duplicates(subset=["symbol", "year"])
+fig = plt.figure(figsize=(8, 4))
+g = sns.lineplot(data=df, x="year", y="Grouped")
+g.yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
+plt.ylabel("")
+plt.xlabel("Year")
+plt.title("Group affiliated firms' Time Series")
+fig.set_rasterized(True)
+plt.savefig(pathResult + "\\BGtimeSeries.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\BGtimeSeries.png", bbox_inches="tight")
+#%%
+
+te = df.groupby(["year", "Grouped"]).MarketCap.sum().to_frame().reset_index()
+te = te[te.Grouped == 0].merge(te[te.Grouped == 1], on="year")
+te["Group affiliated"] = te.MarketCap_y / (te.MarketCap_y + te.MarketCap_x)
+te["Not Group affiliated"] = te.MarketCap_x / (te.MarketCap_y + te.MarketCap_x)
+g = te.plot(y=["Group affiliated", "Not Group affiliated"], x="year", figsize=(8, 4))
+g.yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
+plt.ylabel("")
+plt.xlabel("Year")
+plt.title("Group affiliated market caps' Time Series")
+fig.set_rasterized(True)
+plt.savefig(pathResult + "\\BGMarketCaptimeSeries.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\BGMarketCaptimeSeries.png", bbox_inches="tight")
 
 
 

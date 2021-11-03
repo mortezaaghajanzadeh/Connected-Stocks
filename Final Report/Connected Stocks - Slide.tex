@@ -894,13 +894,13 @@
 	\column{.5\textwidth}  
 	\begin{figure}
 	\centering  
-	\includegraphics[width=\linewidth]{"BGtimeSeries.eps"}
+	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
 	
 \end{figure}  
 	\column{.5\textwidth}
 	\begin{figure}
 	\centering  
-	\includegraphics[width=\linewidth]{"BGMarketCaptimeSeries.eps"}
+	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
 	
 \end{figure} 
 	
@@ -988,27 +988,27 @@
 	\begin{frame}{Correlation Calculation Results}
 		
 		
-		\begin{table}[htbp]
-			\centering 
-			\scriptsize
-			{
-				\begin{tabular}{lcccc}\hline\hline
-					Factors  & \multicolumn{1}{l}{mean} & \multicolumn{1}{l}{std} & \multicolumn{1}{l}{min} & \multicolumn{1}{l}{max} \\
-					\hline
-					SMB     & 0.19  & 1.47  & -5.64 & 19.52 \\
-					HML   & -0.12 & 1.39  & -4.90 & 23.20 \\
-					$ \text{Winner}-\text{Loser} $   & 0.69  & 1.06  & -2.61 & 8.58 \\
-					$ \text{Market} $  & 0.24  & 1.23  & -4.71 & 4.89 \\\hline\hline
-			\end{tabular}                          }
-		\end{table}
-		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			{
+%				\begin{tabular}{lcccc}\hline\hline
+%					Factors  & \multicolumn{1}{l}{mean} & \multicolumn{1}{l}{std} & \multicolumn{1}{l}{min} & \multicolumn{1}{l}{max} \\
+%					\hline
+%					SMB     & 0.19  & 1.47  & -5.64 & 19.52 \\
+%					HML   & -0.12 & 1.39  & -4.90 & 23.20 \\
+%					$ \text{Winner}-\text{Loser} $   & 0.69  & 1.06  & -2.61 & 8.58 \\
+%					$ \text{Market} $  & 0.24  & 1.23  & -4.71 & 4.89 \\\hline\hline
+%			\end{tabular}                          }
+%		\end{table}
+%		
 		
 		
 		\begin{table}[htbp]
 			\centering 
 			\scriptsize
 			\resizebox{\textwidth}{!}{
-				\input{CorrelationsResults.tex}              
+				\input{Output/CorrelationsResultsText.tex}              
 			}
 		\end{table}
 		
@@ -1023,7 +1023,7 @@
 	\begin{frame}{Future Correlation via $ FCA $}
 		\begin{figure}
 			\centering  
-			\includegraphics[width=0.85\linewidth]{"mcorr50.eps"}
+			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
 		\end{figure}
 	\end{frame}   
 	
@@ -1051,19 +1051,19 @@
 				\begin{table}[htbp]
 			\centering \scriptsize
 			{
-				\input{SameGroupSameIndustry.tex}
+				\input{Output/SameGroupSameIndustry.tex}
 			}
 		\end{table}
 		\begin{figure}[htbp]
-			\includegraphics[width=0.45\linewidth]{sameIndustryinBG.eps}
-			\includegraphics[width=0.45\linewidth]{sameIndustryNoinBG.eps}
+			\includegraphics[width=0.45\linewidth]{Output/sameIndustryinBG.eps}
+			\includegraphics[width=0.45\linewidth]{Output/sameIndustryNoinBG.eps}
 			
 		\end{figure}
 	\end{frame}
 	
 	\begin{frame}{Business group}{Pairs' characteristic}
 		\begin{figure}[htbp]
-			\includegraphics[width=0.6\linewidth]{BGSummary.eps}
+			\includegraphics[width=0.6\linewidth]{Output/BGSummary.eps}
 			
 		\end{figure}
 	\end{frame}
@@ -1078,7 +1078,7 @@
 			\centering 
 			\scriptsize
 			{
-				\input{ControlsSummary.tex}
+				\input{Output/ControlsSummary.tex}
 			}
 		\end{table}
 		
