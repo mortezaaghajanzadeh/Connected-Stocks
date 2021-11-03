@@ -17,7 +17,7 @@ df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
     df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
 )
 
-df = df[df.jalaliDate < 14000000]
+df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
 df = df[~df["5_Residual"].isnull()]
 try:
