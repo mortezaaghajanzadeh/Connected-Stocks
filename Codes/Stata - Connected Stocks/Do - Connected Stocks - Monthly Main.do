@@ -119,7 +119,23 @@ esttab   v1 v2 v3 v6  v7  v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalanc
 
 esttab   v1 v2 v3 v6  v7  v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup  ) order(NMFCA sbgroup) s( N GroupFE  subsample controll r2 ,  lab("Observations" "Group Effect" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
 
+/**/
 
+
+
+/* bigbusinessgroup*/
+
+eststo v1: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+estadd loc GroupFE "No" , replace
+estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
+
+eststo v2: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership bigbusinessgroup bigbusinessgroupSgroup, fmb newey(4)
+estadd loc GroupFE "No" , replace
+estadd loc controll "Yes" , replace
+estadd loc SubSample "All" , replace
+
+esttab   v1 v2  , nomtitle label   keep(NMFCA sbgroup bigbusinessgroup bigbusinessgroupSgroup   ) order(NMFCA sbgroup) s( N GroupFE  subsample controll r2 ,  lab("Observations" "Group Effect" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
 
 /**/
 

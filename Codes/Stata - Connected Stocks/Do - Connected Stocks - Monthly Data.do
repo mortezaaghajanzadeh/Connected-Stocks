@@ -282,5 +282,7 @@ replace monthlycrossownership = monthlycrossownership/100
 
 
 label variable monthlycrossownership "CrossOwnership"
+label variable bigbusinessgroup "BigGroup"
 
-
+gen bigbusinessgroupSgroup = bigbusinessgroup * sbgroup
+label variable bigbusinessgroupSgroup "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
