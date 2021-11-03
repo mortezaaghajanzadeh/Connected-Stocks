@@ -152,8 +152,7 @@ for counter, i in enumerate(arrs):
         pickle.dump(
             Monthly,
             open(
-                path
-                + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
+                path + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
                 "wb",
             ),
         )
@@ -162,84 +161,48 @@ counter_file += 1
 pickle.dump(
     Monthly,
     open(
-        path
-        + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
+        path + "mergerd_first_step_monthly_part_{}.p".format(counter_file),
         "wb",
     ),
 )
 Monthly = pd.DataFrame()
 # %%
 
-Monthly = pd.read_pickle( 
-        path + "mergerd_first_step_monthly_part_{}.p".format(1)
-        ).drop(columns = [
-            'Ret_x',
-            'Ret_y',
-            'SizeRatio',
-            'MarketCap_x',
-            'MarketCap_y',
-            '2-Residual_x',
-            '2-Residual_y',
-            '4-Residual_x',
-            '4-Residual_y',
-            '5-Residual_x',
-            '5-Residual_y',
-            '6-Residual_x',
-            '6-Residual_y',
-            '5Lag-Residual_x',
-            '5Lag-Residual_y',
-            'Percentile_Rank_x',
-            'Percentile_Rank_y',
-            'BookToMarket_x',
-            'BookToMarket_y',
-            'Amihud_x',
-            'volume_x',
-            'value_x',
-            'TurnOver_y',
-            'Amihud_y',
-            'volume_y',
-            'value_y',
-            'Delta_Trunover_x',
-            'Delta_Trunover_y',
-            'Delta_Amihud_x',
-            'Delta_Amihud_y',
-        ])
-Monthly = Monthly.append(
-    pd.read_pickle( 
-        path + "mergerd_first_step_monthly_part_{}.p".format(2)
-        ).drop(columns = [
-            'Ret_x',
-            'Ret_y',
-            'SizeRatio',
-            'MarketCap_x',
-            'MarketCap_y',
-            '2-Residual_x',
-            '2-Residual_y',
-            '4-Residual_x',
-            '4-Residual_y',
-            '5-Residual_x',
-            '5-Residual_y',
-            '6-Residual_x',
-            '6-Residual_y',
-            '5Lag-Residual_x',
-            '5Lag-Residual_y',
-            'Percentile_Rank_x',
-            'Percentile_Rank_y',
-            'BookToMarket_x',
-            'BookToMarket_y',
-            'Amihud_x',
-            'volume_x',
-            'value_x',
-            'TurnOver_y',
-            'Amihud_y',
-            'volume_y',
-            'value_y',
-            'Delta_Trunover_x',
-            'Delta_Trunover_y',
-            'Delta_Amihud_x',
-            'Delta_Amihud_y',
-        ])
+Monthly = pd.read_pickle(path + "mergerd_first_step_monthly_part_{}.p".format(1)).drop(
+    columns=[
+        "Ret_x",
+        "Ret_y",
+        "SizeRatio",
+        "MarketCap_x",
+        "MarketCap_y",
+        "2-Residual_x",
+        "2-Residual_y",
+        "4-Residual_x",
+        "4-Residual_y",
+        "5-Residual_x",
+        "5-Residual_y",
+        "6-Residual_x",
+        "6-Residual_y",
+        "5Lag-Residual_x",
+        "5Lag-Residual_y",
+        "Percentile_Rank_x",
+        "Percentile_Rank_y",
+        "BookToMarket_x",
+        "BookToMarket_y",
+        "Amihud_x",
+        "volume_x",
+        "value_x",
+        "TurnOver_y",
+        "Amihud_y",
+        "volume_y",
+        "value_y",
+        "Delta_Trunover_x",
+        "Delta_Trunover_y",
+        "Delta_Amihud_x",
+        "Delta_Amihud_y",
+    ]
 )
+
 
 #%%
 Monthly = SecondStep(Monthly)
@@ -310,7 +273,17 @@ for i in range(9):
     t = i + 1
     tempt = (SData["Rank"].max()) / 10
     SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
-
+df = df.rename(
+    columns={
+        "4_Residual": "4-Residual",
+        "5_Residual": "5-Residual",
+        "6_Residual": "6-Residual",
+        "2_Residual": "2-Residual",
+        "5Lag_Residual": "5Lag-Residual",
+        "Delta_TurnOver": "Delta_Trunover",
+        "Month_of_year": "month_of_year",
+    }
+)
 
 #%%
 
@@ -363,4 +336,6 @@ SId.to_csv(path + "SId" + ".csv", index=False)
 GData.to_csv(path + "GData" + ".csv", index=False)
 Pairs.to_csv(path + "Pairs" + ".csv", index=False)
 timeId.to_csv(path + "timeId" + ".csv", index=False)
-# %%
+df[["BGId", "uo"]].drop_duplicates().dropna().sort_values(by=["BGId"]).to_csv(
+    path + "BGId" + ".csv", index=False
+)

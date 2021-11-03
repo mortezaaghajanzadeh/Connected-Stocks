@@ -79,15 +79,15 @@ def genFile(df, path, g, i):
         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
     )
 
-for i in list(gg.groups.keys()):
-    n = time.time()
-    g = gg.get_group(i)
-    F_id = g.id.iloc[0]
-    print("Id " + str(F_id))
-    df = df[df.id > F_id]
-    gg = df.groupby(["id"])
-    genFile(df, path, g, i)
-    print(time.time() - n)
+# for i in list(gg.groups.keys()):
+#     n = time.time()
+#     g = gg.get_group(i)
+#     F_id = g.id.iloc[0]
+#     print("Id " + str(F_id))
+#     df = df[df.id > F_id]
+#     gg = df.groupby(["id"])
+#     genFile(df, path, g, i)
+#     print(time.time() - n)
 
 # threads = {}
 # for i in list(gg.groups.keys()):
@@ -109,6 +109,30 @@ for i in list(gg.groups.keys()):
 # threads[i-1].join()
 #%%
 # All pairs
+
+df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df["week_of_year"] = df.week_of_year.astype(int)
+df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
+    df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
+)
+df = df[df.jalaliDate < 14000000]
+df = df[df.jalaliDate > 13930000]
+df = df[~df["5_Residual"].isnull()]
+try:
+    df = df.drop(columns=["Delta_Trunover"])
+except:
+    1 + 2
+df = df.rename(
+    columns={
+        "4_Residual": "4-Residual",
+        "5_Residual": "5-Residual",
+        "6_Residual": "6-Residual",
+        "2_Residual": "2-Residual",
+        "5Lag_Residual": "5Lag-Residual",
+        "Delta_TurnOver": "Delta_Trunover",
+        "Month_of_year":"month_of_year"
+    }
+)
 data = pd.DataFrame()
 gg = df.groupby(["id"])
 counter = 0

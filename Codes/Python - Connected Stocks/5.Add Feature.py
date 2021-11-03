@@ -90,7 +90,7 @@ mapingdict = dict(zip(
 ))
 Index['date'] = Index.jalaliDate.map(mapingdict)
 Index = Index.dropna()
-Index['year'] = Index.date/1e4
+Index['year'] = Index.jalaliDate/1e4
 Index['year'] = Index.year.astype(int).astype(str)
 Index['Month'] = ((Index.jalaliDate/1e4 -(Index.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
 def func(x):
@@ -494,13 +494,6 @@ for i in set(BGId.BGId.dropna()):
     df1.loc[(df1.bankinGroup_x == i) & (df1.bankinGroup_x == 1), "BankInGroup"] = 1
     df1.loc[(df1.bankinGroup_y == i) & (df1.bankinGroup_y == 1), "BankInGroup"] = 1
 
-#%%
-df1.to_parquet(path + "tempt.parquet")
-#%%
-import pandas as pd
-import numpy as np
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-df1 = pd.read_parquet(path + "tempt.parquet")
 
 #%%
 df1 = df1.rename(columns={"MonthlyFCA*": "NMFCA"})
@@ -521,48 +514,48 @@ df1["Monthlyρ_5_3"] = df1.groupby("id").Monthlyρ_5.shift(3)
 df1["Monthlyρ_5_4"] = df1.groupby("id").Monthlyρ_5.shift(4)
 df1["Monthlyρ_5_5"] = df1.groupby("id").Monthlyρ_5.shift(5)
 #%%
-# df1["sameBgChange"] = 0
-# df1["becomeSameBG"] = 0
-# gg = df1.groupby("id")
-# df1["changedBG"] = 0
+df1["sameBgChange"] = 0
+df1["becomeSameBG"] = 0
+gg = df1.groupby("id")
+df1["changedBG"] = 0
 
 
-# def changedBg(t):
-#     print(t.name)
-#     if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
-#         t["changedBG"] = 1
-#         if t.sBgroup.iloc[0] == 1:
-#             ind = t.loc[t.sBgroup == 0].index[0]
-#             t.loc[t.index >= ind, "sameBgChange"] = 1
-#         else:
-#             ind = t.loc[t.sBgroup == 1].index[0]
-#             t.loc[t.index >= ind, "sameBgChange"] = 1
-#             t["becomeSameBG"] = 1
-#     return t
+def changedBg(t):
+    print(t.name)
+    if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
+        t["changedBG"] = 1
+        if t.sBgroup.iloc[0] == 1:
+            ind = t.loc[t.sBgroup == 0].index[0]
+            t.loc[t.index >= ind, "sameBgChange"] = 1
+        else:
+            ind = t.loc[t.sBgroup == 1].index[0]
+            t.loc[t.index >= ind, "sameBgChange"] = 1
+            t["becomeSameBG"] = 1
+    return t
 
 
-# df1 = gg.apply(changedBg)
+df1 = gg.apply(changedBg)
 
 
 #%%
-# df1["2rdQarter"] = 0
-# df1["4rdQarter"] = 0
-# gg = df1.groupby(["t_Month"])
-# # g = gg.get_group(2)
+df1["2rdQarter"] = 0
+df1["4rdQarter"] = 0
+gg = df1.groupby(["t_Month"])
+# g = gg.get_group(2)
 
 
-# def quarter(g):
-#     print(g.name)
-#     q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
-#     mt = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.5)
-#     g.loc[g.MonthlyFCA > q1, "4rdQarter"] = 1
-#     g.loc[g.MonthlyFCA > mt, "2rdQarter"] = 1
-#     return g
+def quarter(g):
+    print(g.name)
+    q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
+    mt = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.5)
+    g.loc[g.MonthlyFCA > q1, "4rdQarter"] = 1
+    g.loc[g.MonthlyFCA > mt, "2rdQarter"] = 1
+    return g
 
 
-# del df1
-# df1 = gg.apply(quarter)
-# del gg
+del df1
+df1 = gg.apply(quarter)
+del gg
 #%%
 
 
@@ -763,7 +756,7 @@ mapdict = dict(zip(a.index, a.InsImbalance_value))
 df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
 df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 #%%
-del result ,a
+# del result ,a
 
 
 #%%
@@ -792,7 +785,6 @@ def lowdummy(g):
     lowlist = list(t[t.InsImbalance_value <= t.InsImbalance_value.median()].index)
     t["lowImbalanceStd"] = 0
     t.loc[t.index.isin(lowlist), "lowImbalanceStd"] = 1
-    t
     return t
 
 
