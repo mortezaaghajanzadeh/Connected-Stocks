@@ -49,7 +49,7 @@ df1["symbol_y"] = df1.id_y.map(mapdict)
 df1[["symbol_x", "symbol_y"]].isnull().sum()
 #%%
 
-df1 = df1[df1.id_x != df1.id_y]
+df1[df1]
 # %%
 
 import requests

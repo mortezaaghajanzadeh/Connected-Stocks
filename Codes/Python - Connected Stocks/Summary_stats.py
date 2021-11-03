@@ -11,7 +11,7 @@ pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\
 #%%
 n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
-df = df[df.jalaliDate < 14000000]
+df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
 #%%
 
@@ -173,7 +173,7 @@ gg = (
     .drop_duplicates()
     .groupby("id")
 )
-g = gg.get_group(1)
+# g = gg.get_group(1)
 
 
 def summary(g):
@@ -272,9 +272,71 @@ def sumary(g, idlevelData):
 
 
 a2 = gg.apply(sumary, idlevelData=idlevelData).reset_index().drop(columns=["level_1"]).T
-a2.append(a1)
+
 #%%
-time = pd.read_csv(path + "time.csv")
+tempt = a1.append(a2).drop_duplicates()
+tempt = tempt.T.rename(columns={"year_of_year": "Year"})
+tempt = tempt.drop(
+    columns=[
+        "Max. Number of Common owner",
+        "Max. Number of Pairs in one Group",
+        "Max. Number of Common owner",
+        "Max. Number of Owners",
+    ]
+).rename(
+    columns={
+        "Number of Pairs not in one Group": "Number of Pairs not in the same Group",
+        "Number of Pairs in one Group": "Number of Pairs in the same Group",
+        "Avg. Number of Common owner": "Mean Number of Common owner",
+        "Avg. Number of Pairs in one Group": "Mean Number of Pairs in one Group",
+        "Av. Holder Percent": "Mean Percent of each blockholder",
+        "Median of Owners' Percent": "Med. Percent of each blockholder",
+        "Av. Number of Owners": "Mean Number of Owners",
+        "Av. Block. Ownership": "Mean Block. Ownership",
+    }
+)
+mlist = ['year',
+    "No. of Pairs",
+    "No. of Groups",
+    "No. of Pairs not in Groups",
+    "Number of Pairs not in the same Group",
+    "Number of Pairs in the same Group",
+    "Mean Number of Common owner",
+    "Med. Number of Common owner",
+    "Mean Percent of each blockholder",
+    "Med. Percent of each blockholder",
+    "Mean Number of Pairs in one Group",
+    "Med. Number of Pairs in one Group",
+    "Mean Number of Owners",
+    "Med. Number of Owners",
+    "Mean Block. Ownership",
+    "Med. Block. Ownership",
+]
+tempt[mlist].set_index("year").T.astype(int).to_latex(pathResult + "summaryOfPairs.tex")
+
+#%%
+
+df2.groupby("t_Month").size().describe().to_frame().rename(
+    columns = {0:"Number of unique paris"} , index = {
+        '50%':'Median'
+    }
+).T.drop(
+    columns = ['count','std','25%','75%']
+).astype(int).to_latex(pathResult + "numberofPairs.tex")
+
+
+#%%
+
+df2[['t_Month','Year_Month']].drop_duplicates().sort_values(by = ['t_Month'])
+#%%
+
+
+
+time["yearmonth"] = time["date"].astype(str)
+time["yearmonth"] = time["yearmonth"].str[0:6]
+Monthtime = time[["t_Month", "yearmonth"]].drop_duplicates().reset_index(drop=True)
+
+#%%
 g2 = df2.groupby("t_Month")
 df2.loc[df2.uo_x.isnull(), "sBgroup"] = np.nan
 df2.loc[df2.uo_y.isnull(), "sBgroup"] = np.nan
@@ -288,9 +350,6 @@ def s(g):
 
 idMonth = g2.apply(s).reset_index()
 idMonth = idMonth[idMonth[1] > 100]
-time["yearmonth"] = time["date"].astype(str)
-time["yearmonth"] = time["yearmonth"].str[0:6]
-Monthtime = time[["t_Month", "yearmonth"]].drop_duplicates().reset_index(drop=True)
 mapdict = dict(zip(Monthtime.t_Month, Monthtime.yearmonth))
 idMonth["yearmonth"] = idMonth["t_Month"].map(mapdict)
 labels = idMonth.yearmonth.to_list()
@@ -312,6 +371,12 @@ plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 # plt.title("Number of unique pair in each month")
 plt.savefig(pathResult + "\\idMonth.eps", bbox_inches="tight")
 plt.savefig(pathResult + "\\idMonth.png", bbox_inches="tight")
+#%%
+
+df2.groupby('t_Month').FCA.mean().to_frame()
+
+mapdict = dict(zip(Monthtime.t_Month, Monthtime.yearmonth))
+idMonth["yearmonth"] = idMonth["t_Month"].map(mapdict)
 
 #%%
 mlist = [
