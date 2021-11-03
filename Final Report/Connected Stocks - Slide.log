@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  3 NOV 2021 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  3 NOV 2021 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2411,8 +2411,7 @@ put line 1634.
  <./IndustryPseudoSBFCA-eps-converted-to.pdf> <./IndustryPseudoSBFCA_t-eps-conv
 erted-to.pdf>] (./Connected Stocks - Slide.toc) [68
 
-] (./Imbalance.tex)
-[69
+] (./Output/Imbalance.tex) [69
 
 ] (./turnover.tex) [70
 
@@ -2495,8 +2494,8 @@ ged.
 (rerunfilecheck)             Checksum: E7312E4501DE9C989168D0EC002BDC9A;1408.
  ) 
 Here is how much of TeX's memory you used:
- 26129 strings out of 480608
- 519239 string characters out of 5907536
+ 26130 strings out of 480608
+ 519274 string characters out of 5907536
  802363 words of memory out of 5000000
  41085 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
@@ -2524,7 +2523,7 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (89 pages, 1809405 bytes).
+Output written on "Connected Stocks - Slide.pdf" (89 pages, 1809337 bytes).
 PDF statistics:
  3510 PDF objects out of 3580 (max. 8388607)
  3105 compressed objects within 32 object streams

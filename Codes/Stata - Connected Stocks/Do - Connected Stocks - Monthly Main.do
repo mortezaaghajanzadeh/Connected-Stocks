@@ -74,6 +74,55 @@ esttab   v3 v4 v1 v2 /*v5*/ v6 v10 v11 /*v7*/ v8 v9   ,nomtitle label   s( N  Su
 
 /**/
 
+
+
+
+/* Imbalance*/
+
+eststo v1 :  quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup  , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v2 :  quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd  , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v3 :  quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v4 :  quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v5 :  quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA gdummy0-gdummy47, fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "Yes" , replace
+
+eststo v6 :  quietly asreg monthlyρ_5_f    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup  , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v7 :  quietly asreg monthlyρ_5_f  NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership  lowimbalancestd  if sbgroup == 1  , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Same Groups" , replace
+estadd loc GroupFE "No" , replace
+
+esttab   v1 v2 v3 v6  v7  v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup  ) order(NMFCA sbgroup) s( N GroupFE  subsample controll r2 ,  lab("Observations" "Group Effect" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+
+
+esttab   v1 v2 v3 v6  v7  v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup  ) order(NMFCA sbgroup) s( N GroupFE  subsample controll r2 ,  lab("Observations" "Group Effect" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
+
+
+
+/**/
+
 eststo v2: quietly asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
 eststo v1: quietly asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)

@@ -13,8 +13,10 @@ n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
 df = df[df.jalaliDate < 14000000]
 df = df[df.jalaliDate > 13930000]
-# %%
+#%%
 
+
+#%%
 gg = (
     df[["BGId", "id", "year_of_year", "Holder_id"]]
     .drop_duplicates()

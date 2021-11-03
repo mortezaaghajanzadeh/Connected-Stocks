@@ -33,9 +33,9 @@ path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
 n1 = path + "MonthlyNormalzedFCAP9.1" + ".parquet"
 df1 = pd.read_parquet(n1)
-df1 = df1[df1.jalaliDate <13990000]
-df1 = df1[df1.jalaliDate >13930000]
-df1 = df1[df1.FCA >0]
+df1 = df1[df1.jalaliDate < 13990000]
+df1 = df1[df1.jalaliDate > 13930000]
+df1 = df1[df1.FCA > 0]
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
@@ -64,47 +64,58 @@ def removeSlash(row):
 
     return int(X[0] + X[1] + X[2])
 
+
 def Overall_index():
-    url = r"http://www.tsetmc.com/tsev2/chart/data/Index.aspx?i=32097828799138957&t=value"
-    r = requests.get(
-                url
-            )
+    url = (
+        r"http://www.tsetmc.com/tsev2/chart/data/Index.aspx?i=32097828799138957&t=value"
+    )
+    r = requests.get(url)
     jalaliDate = []
     Value = []
     for i in r.text.split(";"):
-        x = i.split(',')
+        x = i.split(",")
         jalaliDate.append(x[0])
         Value.append(float(x[1]))
-    df = pd.DataFrame({'jalaliDate' :jalaliDate,
-                'Value' : Value,
-                }, 
-                columns=['jalaliDate','Value'])
+    df = pd.DataFrame(
+        {
+            "jalaliDate": jalaliDate,
+            "Value": Value,
+        },
+        columns=["jalaliDate", "Value"],
+    )
     df["jalaliDate"] = df.jalaliDate.apply(removeSlash)
     return df
 
+
 Index = Overall_index()
 print(len(Index))
-a = df[['date','jalaliDate']].drop_duplicates()
-mapingdict = dict(zip(
-    a.jalaliDate,a.date
-))
-Index['date'] = Index.jalaliDate.map(mapingdict)
+a = df[["date", "jalaliDate"]].drop_duplicates()
+mapingdict = dict(zip(a.jalaliDate, a.date))
+Index["date"] = Index.jalaliDate.map(mapingdict)
 Index = Index.dropna()
-Index['year'] = Index.jalaliDate/1e4
-Index['year'] = Index.year.astype(int).astype(str)
-Index['Month'] = ((Index.jalaliDate/1e4 -(Index.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
+Index["year"] = Index.jalaliDate / 1e4
+Index["year"] = Index.year.astype(int).astype(str)
+Index["Month"] = (
+    ((Index.jalaliDate / 1e4 - (Index.jalaliDate / 1e4).astype(int)) * 1e2)
+    .astype(int)
+    .astype(str)
+)
+
+
 def func(x):
     if len(x) < 2:
-        return '0' + x
+        return "0" + x
     return x
-Index['Month'] = Index.Month.apply(func)
-Index['YearMonth'] = Index.year + Index.Month
+
+
+Index["Month"] = Index.Month.apply(func)
+Index["YearMonth"] = Index.year + Index.Month
 Index
 #%%
 
 Index = Index[["YearMonth", "Value"]]
 Index = Index.drop_duplicates(subset="YearMonth", keep="last")
-Index["change"] = Index["Value"].pct_change() * 100 
+Index["change"] = Index["Value"].pct_change() * 100
 Index["Bullish"] = 0
 Index["Bearish"] = 0
 Index["change"] = Index.change.shift(-1)
@@ -263,9 +274,7 @@ df1["invinGroup_y"] = df1.BGId_y.map(mapdict)
 df1.isnull().sum()
 #%%
 print(len(df1))
-df1 = df1.drop_duplicates(subset = [
-    'id','t_Month'
-])
+df1 = df1.drop_duplicates(subset=["id", "t_Month"])
 print(len(df1))
 # %%
 print(len(df1[(df1.MonthlyFCAPf >= 1)]))
@@ -331,7 +340,7 @@ def vv(row):
     return int(X[0])
 
 
-price["year"] = round(price["jalaliDate"]/100,0)
+price["year"] = round(price["jalaliDate"] / 100, 0)
 price = price.groupby(["name", "year"]).last().reset_index()
 price["name"] = price.name.apply(convert_ar_characters)
 fkey = zip(price.name, price.year)
@@ -505,7 +514,7 @@ df1.loc[df1.uo_x == df1.uo_y, "sBgroup"] = 1
 df1.loc[df1.uo_x.isnull(), "sBgroup"] = 0
 df1.loc[df1.uo_y.isnull(), "sBgroup"] = 0
 # df1.loc[df1.year<BG.year.min(),'sBgroup'] = np.nan
-df1.sBgroup.isnull().sum() 
+df1.sBgroup.isnull().sum()
 #%%
 df1 = df1.sort_values(by=["id", "t_Month"])
 df1["Monthlyρ_5_1"] = df1.groupby("id").Monthlyρ_5.shift(1)
@@ -571,14 +580,14 @@ df1["NMFCA2"] = gg["NMFCA2"].apply(Normalize)
 df1.groupby(["t_Month"]).NMFCA2.std()
 del gg
 #%%
-time = df1.drop_duplicates(subset = ['jalaliDate','date'])[
-    ['jalaliDate','date']
-]
+time = df1.drop_duplicates(subset=["jalaliDate", "date"])[["jalaliDate", "date"]]
 
 #%%
 mapdict = dict(zip(time.jalaliDate, time.date))
 path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
 df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
+
+
 def removedash(row):
     X = row.split("-")
     if len(X[1]) < 2:
@@ -586,6 +595,8 @@ def removedash(row):
     if len(X[2]) < 2:
         X[2] = "0" + X[2]
     return int(X[0] + X[1] + X[2])
+
+
 def convert_ar_characters(input_str):
     mapping = {
         "ك": "ک",
@@ -600,11 +611,15 @@ def convert_ar_characters(input_str):
         "ي": "ی",
     }
     return _multiple_replace(mapping, input_str)
+
+
 import re
+
 
 def _multiple_replace(mapping, text):
     pattern = "|".join(map(re.escape, mapping.keys()))
     return re.sub(pattern, lambda m: mapping[m.group()], str(text))
+
 
 df["jalali"] = df.jalaliDate.apply(removedash)
 df["name"] = df["name"].apply(lambda x: convert_ar_characters(x))
@@ -757,7 +772,17 @@ df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
 df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 #%%
 # del result ,a
-
+t = (
+    df.drop_duplicates(subset=["symbol"])
+    .groupby(["uo"])
+    .size()
+    .to_frame()
+    .sort_values(by=[0])
+)
+ll = t[t[0] >= t[0].median()].index
+df1["BigBusinessGroup"] = 0
+df1.loc[df1.uo_x.isin(ll), "BigBusinessGroup"] = 1
+df1.loc[df1.uo_y.isin(ll), "BigBusinessGroup"] = 1
 
 #%%
 # df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})

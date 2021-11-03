@@ -281,14 +281,6 @@ replace monthlycrossownership = monthlycrossownership/100
 
 
 
- label variable monthlycrossownership "CrossOwnership"
+label variable monthlycrossownership "CrossOwnership"
 
-
- asreg monthlyρ_5_f NMFCA monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
-
-cor  monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup 
-
-cor NMFCAG NMFCA sbgroup
-
-reg MFCA c.t_month##sbgroup ,robust
 
