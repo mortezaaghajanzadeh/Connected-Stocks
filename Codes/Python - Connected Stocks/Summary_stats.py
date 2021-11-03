@@ -97,7 +97,7 @@ tempt = tempt.drop(
         "No. of Holders": "No. of Blockholders",
         "Avg. Number of Members": "Mean Number of Members",
         "Av. Holder Percent": "Mean Of each Blockholder’s ownership",
-        "Av. Number of Owners": "Mean Number of Blockholders",
+        "Av. Number of Owners": "Mean Number of Owners",
         "Av. Block. Ownership": "Mean Block. Ownership",
     }
 )
@@ -106,9 +106,6 @@ tempt = tempt.set_index("Year").transpose().astype(int)
 
 tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
-# %%
-
-
 #%%
 # MonthlyData
 # del df
@@ -327,15 +324,11 @@ df2.groupby("t_Month").size().describe().to_frame().rename(
 
 #%%
 
-df2[['t_Month','Year_Month']].drop_duplicates().sort_values(by = ['t_Month'])
-#%%
-
-
-
-time["yearmonth"] = time["date"].astype(str)
-time["yearmonth"] = time["yearmonth"].str[0:6]
-Monthtime = time[["t_Month", "yearmonth"]].drop_duplicates().reset_index(drop=True)
-
+Monthtime = df2[
+    ['t_Month','Year_Month']
+    ].drop_duplicates().sort_values(by = ['t_Month']).rename(
+        columns = {'Year_Month':'yearmonth'}
+    )
 #%%
 g2 = df2.groupby("t_Month")
 df2.loc[df2.uo_x.isnull(), "sBgroup"] = np.nan
@@ -369,14 +362,84 @@ plt.ylabel("Number")
 plt.xlabel("Year-Month")
 plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 # plt.title("Number of unique pair in each month")
-plt.savefig(pathResult + "\\idMonth.eps", bbox_inches="tight")
-plt.savefig(pathResult + "\\idMonth.png", bbox_inches="tight")
+plt.savefig(pathResult + "idMonth.eps", bbox_inches="tight")
+plt.savefig(pathResult + "idMonth.png", bbox_inches="tight")
+
+#%%
+fig = plt.figure(figsize=(8, 4))
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA")
+labels = Monthtime.yearmonth.to_list()
+tickvalues = Monthtime.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Common Ownership Time Series")
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathResult + "FCAtimeSeries.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "FCAtimeSeries.png", bbox_inches="tight")
 #%%
 
-df2.groupby('t_Month').FCA.mean().to_frame()
+df2["PairType"] = "Hybrid"
+df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
+df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
+fig = plt.figure(figsize=(8, 4))
 
-mapdict = dict(zip(Monthtime.t_Month, Monthtime.yearmonth))
-idMonth["yearmonth"] = idMonth["t_Month"].map(mapdict)
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="PairType")
+labels = Monthtime.yearmonth.to_list()
+tickvalues = Monthtime.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Common Ownership Time Series")
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathResult + "\\FCAtimeSeriesPairType.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
+#%%
+
+fig = plt.figure(figsize=(8, 4))
+
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup")
+labels = Monthtime.yearmonth.to_list()
+tickvalues = Monthtime.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.legend(["Others", "In the same BG"])
+plt.margins(x=0.01)
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Common Ownership Time Series")
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathResult + "\\FCAtimeSeriesBG.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
+#%%
+fig = plt.figure(figsize=(8, 4))
+
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA")
+sns.lineplot(data=df2, x="t_Month", y="MonthlyFCAPf")
+labels = Monthtime.yearmonth.to_list()
+tickvalues = Monthtime.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Common Ownership Time Series")
+plt.legend(["FCA", "FCAP"])
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathResult + "\\FCAComparetimeSeries.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\FCAComparetimeSeries.png", bbox_inches="tight")
+
+
+
 
 #%%
 mlist = [
@@ -811,4 +874,6 @@ fig.set_rasterized(True)
 plt.savefig(pathResult + "BGSummary.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "BGSummary.jpg", bbox_inches="tight")
 plt.show()
+# %%
+
 # %%
