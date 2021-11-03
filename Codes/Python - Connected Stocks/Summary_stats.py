@@ -405,7 +405,7 @@ plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup")
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup",palette=['r', 'g'])
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
