@@ -232,13 +232,13 @@ eststo v31: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown  sbgrou
 estadd loc Controls "No" , replace
 estadd loc Interaction  "No" , replace
 
-eststo v311: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown sUp  sgroup monthlysamesize monthlysamebm monthlycrossownership sbgroup  , fmb newey(4)
+eststo v311: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown sUp  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc Controls "No" , replace
 estadd loc Interaction  "No" , replace
 
 
 
-eststo v32: quietly asreg monthlyρ_5_f NMFCA   monthlyρ_5 Up Down sDown sUp sgroup monthlysamesize monthlysamebm monthlycrossownership sbgroup, fmb newey(4)
+eststo v32: quietly asreg monthlyρ_5_f NMFCA   monthlyρ_5 Up Down sDown sUp sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc Controls "No" , replace 
 estadd loc Interaction  "No" , replace
 
@@ -251,13 +251,9 @@ estadd loc Interaction  "No" , replace
 
 
 
-esttab  v2  v31  v30 , nomtitle label keep(NMFCA NMFCAG sDown Down Up  sbgroup) order(NMFCA NMFCAG sbgroup) n r2    compress  mgroups("Fu. Monthly Cor. of 4F+Ind. Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+esttab  v2  v31  v30 , nomtitle label keep(NMFCA NMFCAG sDown Down Up  sbgroup) order(NMFCA NMFCAG sbgroup) n r2    compress  mgroups("Fu. Monthly Cor. of 4F+Ind. Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2Down-slide1.tex ,replace 
 
-,using mresult2Down-slide1.tex ,replace 
-
-esttab  v2   v311  v32 , nomtitle label keep(NMFCA NMFCAG sDown Down Up sUp sbgroup) order(NMFCA NMFCAG sbgroup) n r2    compress  mgroups("Fu. Monthly Cor. of 4F+Ind. Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
-
-,using mresult2Down-slide2.tex ,replace
+esttab  v2   v311  v32 , nomtitle label keep(NMFCA NMFCAG sDown Down Up sUp sbgroup) order(NMFCA NMFCAG sbgroup) n r2    compress  mgroups("Fu. Monthly Cor. of 4F+Ind. Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2Down-slide2.tex ,replace
 
 
 

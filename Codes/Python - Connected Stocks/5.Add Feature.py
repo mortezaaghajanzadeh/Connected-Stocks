@@ -47,13 +47,7 @@ df1["id_y"] = df1.id_y.astype(int)
 df1["symbol_x"] = df1.id_x.map(mapdict)
 df1["symbol_y"] = df1.id_y.map(mapdict)
 df1[["symbol_x", "symbol_y"]].isnull().sum()
-<<<<<<< HEAD
 #%%
-
-df1[df1]
-=======
->>>>>>> 409991f346a7adbe0cd11dd4d74a9996628762d6
-# %%
 
 import requests
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2428,71 +2428,76 @@ put line 1626.
  <./IndustryPseudoSBFCA-eps-converted-to.pdf> <./IndustryPseudoSBFCA_t-eps-conv
 erted-to.pdf>] (./Connected Stocks - Slide.toc) [68
 
-] (./Output/mresult2Down-slide1.tex)
+] (./Output/mresult2Down-slide2.tex)
+Overfull \vbox (0.94298pt too high) detected at line 1839
+ []
+
 [69
 
-] (./Output/Imbalance.tex) [70
+] (./Output/mresult2-BigBusinessGroup.tex) [70
 
-] (./turnover.tex) [71
+] (./Output/Imbalance.tex)
+[71
 
-]
-(./Turnovercrosssection.tex) [72
+] (./turnover.tex) [72
 
-] (./Output/mresult2-turnover.tex) [73
-
-]
-(./Amihud.tex) [74
-
-] (./Amihudcrosssection.tex) [75
-
-] (./mresult2-liquidity.tex)
-[76
-
-] [77
-
-] (./Connected Stocks - Slide.toc) [78
-
-] [79
+] (./Turnovercrosssection.tex) [73
 
 ]
-(./Connected Stocks - Slide.bbl
+(./Output/mresult2-turnover.tex) [74
+
+] (./Amihud.tex) [75
+
+]
+(./Amihudcrosssection.tex) [76
+
+] (./mresult2-liquidity.tex) [77
+
+] [78
+
+]
+(./Connected Stocks - Slide.toc) [79
+
+] [80
+
+] (./Connected Stocks - Slide.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1.
 
-) [80
+) [81
 
-] [81
+] [82
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1988.
+(hyperref)                removing `\translate ' on input line 1997.
 
-(./Connected Stocks - Slide.toc) [82
+(./Connected Stocks - Slide.toc) [83
 
-] [83
+] [84
 
 ] (./Connected Stocks - Slide.toc)
-[84
-
-] [85
+[85
 
 ] [86
+
+] [87
 
 ]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 21
-30.
+39.
 
-[87
-
-] [88
+[88
 
 ] [89
 
 ] [90
+
+] [91
 
 ]
 \tf@nav=\write7
@@ -2504,21 +2509,21 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 21
 \tf@snm=\write9
 \openout9 = `"Connected Stocks - Slide.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2589.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2589.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2598.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2598.
  (./Connected Stocks - Slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2589.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2589.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2598.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2598.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Slide".out' has not chan
 ged.
-(rerunfilecheck)             Checksum: C0B05B135701F63342F8D079A8CD48C7;1408.
+(rerunfilecheck)             Checksum: CA86B9B6130E05385AE2028B6BFDDCAA;1408.
  ) 
 Here is how much of TeX's memory you used:
- 26145 strings out of 480608
- 520615 string characters out of 5907536
- 802399 words of memory out of 5000000
- 41091 multiletter control sequences out of 15000+600000
+ 26155 strings out of 480608
+ 520848 string characters out of 5907536
+ 802435 words of memory out of 5000000
+ 41096 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,810b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2544,10 +2549,10 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (90 pages, 1946177 bytes).
+Output written on "Connected Stocks - Slide.pdf" (91 pages, 1948748 bytes).
 PDF statistics:
- 3535 PDF objects out of 3580 (max. 8388607)
- 3130 compressed objects within 32 object streams
- 250 named destinations out of 1000 (max. 500000)
+ 3564 PDF objects out of 3580 (max. 8388607)
+ 3158 compressed objects within 32 object streams
+ 252 named destinations out of 1000 (max. 500000)
  452 words of extra memory for PDF output out of 10000 (max. 10000000)
 
