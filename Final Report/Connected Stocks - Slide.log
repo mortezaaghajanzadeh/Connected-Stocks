@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2429,28 +2429,19 @@ erted-to.pdf>] (./Connected Stocks - Slide.toc)
 ]
 (./Output/mresult2-turnover.tex) [73
 
-] (./Amihud.tex) [74
+] (./Connected Stocks - Slide.toc) [74
 
 ]
-(./Amihudcrosssection.tex) [75
-
-] (./mresult2-liquidity.tex) [76
-
-] [77
-
-]
-(./Connected Stocks - Slide.toc) [78
-
-] [79
+[75
 
 ] (./Connected Stocks - Slide.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1.
 
-) [80
+) [76
 
-] [81
+] [77
 
 
 ]
@@ -2458,29 +2449,29 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1882.
 
-(./Connected Stocks - Slide.toc) [82
+(./Connected Stocks - Slide.toc) [78
 
-] [83
+] [79
 
 ] (./Connected Stocks - Slide.toc)
-[84
+[80
 
-] [85
+] [81
 
-] [86
+] [82
 
 ]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 20
 24.
 
-[87
+[83
 
-] [88
+] [84
 
-] [89
+] [85
 
-] [90
+] [86
 
 ]
 \tf@nav=\write7
@@ -2500,13 +2491,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2483.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Slide".out' has not chan
 ged.
-(rerunfilecheck)             Checksum: DE9D516C16A733259FEA10B8AC0D0754;1408.
+(rerunfilecheck)             Checksum: 1D8106E7C4D51BBE245BC3565F090E33;1408.
  ) 
 Here is how much of TeX's memory you used:
- 26139 strings out of 480608
- 520403 string characters out of 5907536
- 802385 words of memory out of 5000000
- 41086 multiletter control sequences out of 15000+600000
+ 26104 strings out of 480608
+ 519894 string characters out of 5907536
+ 801072 words of memory out of 5000000
+ 41070 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,810b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2532,10 +2523,10 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (90 pages, 1947449 bytes).
+Output written on "Connected Stocks - Slide.pdf" (86 pages, 1935537 bytes).
 PDF statistics:
- 3483 PDF objects out of 3580 (max. 8388607)
- 3130 compressed objects within 32 object streams
- 250 named destinations out of 1000 (max. 500000)
+ 3364 PDF objects out of 3580 (max. 8388607)
+ 3016 compressed objects within 31 object streams
+ 240 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

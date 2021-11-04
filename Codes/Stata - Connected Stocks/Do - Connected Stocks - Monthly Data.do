@@ -55,6 +55,9 @@ label variable monthlyρ_5 " $ {\rho_t} $ "
 label variable monthlyρ_6 " $ {\rho_t} $ "
 label variable monthlyρlag_5 " $ {\rho_t} $ "
 
+label variable monthlyρ_turn " $ {\rho_t(\text{Turnover})} $ "
+
+
 label variable monthlyρ_5_1 " $ {\rho_{t-1}} $ "
 label variable monthlyρ_5_2 " $ {\rho_{t-2}} $ "
 label variable monthlyρ_5_3 " $ {\rho_{t-3}} $ "
@@ -286,3 +289,9 @@ label variable bigbusinessgroup "BigGroup"
 
 gen bigbusinessgroupSgroup = bigbusinessgroup * sbgroup
 label variable bigbusinessgroupSgroup "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
+
+gen bigbusinessgroupSgroupFCA = bigbusinessgroup * sbgroup * NMFCA
+label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} } \times \text{FCA}^* $ "
+
+
+summ sbgroup if bigbusinessgroupSgroup == 1

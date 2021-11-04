@@ -1727,7 +1727,7 @@
 	\begin{frame}{title}
 		\begin{table}[htbp]
 			\centering
-			\resizebox{1\textheight}{!}{
+			\resizebox{0.85\textheight}{!}{
 				\input{Output/mresult2-BigBusinessGroup.tex}
 			}
 		\end{table}
@@ -1783,68 +1783,68 @@
 	\end{table}
 \end{frame}
 
-
-\begin{frame}{Amihud}
-	
-	\begin{equation*}
-		\Delta \text{Amihud} = \ln(\frac{\text{Amihud}_{i,t}}{\text{Amihud}_{i,t-1}}) = 
-		\ln({\frac{|\text{Return}_{i,t}|}{\text{volume}_{i,t}}}) - \ln({\frac{|\text{Return}_{i,t-1}|}{\text{volume}_{i,t-1}}})
-	\end{equation*}
-
-	\begin{table}[htbp]
-	\centering
-	\resizebox{0.9\textheight}{!}{
-		\input{Amihud.tex}
-	}
-\end{table}
-	
-	
-\end{frame}
-
-
-\begin{frame}{Cross-sectional analyze of Group Amihud }
-		\begin{table}[htbp]
-		\centering
-		\resizebox{0.95\textwidth}{!}{
-			\centering
-			\input{Amihudcrosssection.tex}
-		}
-		\label{Amihudcrosssection}
-	\end{table}
-	
-\end{frame}
-
-
-\begin{frame}{Pairwise correlations in liquidity }
-	\begin{table}[htbp]
-		\centering
-		\resizebox{0.95\textwidth}{!}{
-			\centering
-			\input{mresult2-liquidity.tex}
-		}
-		\label{mresult2-liquidity}
-	\end{table}
-	
-\end{frame}
-
-
-	\begin{frame}{Trading}{}
-		\begin{itemize}
-			\item \cite{anton2018dealing}:
-			\begin{equation*}
-				\begin{array}{l}
-					CQ_{ijt} = \sum_{d=1}^{D_t}\omega_{dt}corr(NQ_{idt},NQ_{jdt})
-					\\\\
-					\omega_{dt} = \frac{\min (TQ_{idt},TQ_{jdt})}{\sum_{d=1}^D \min(TQ_{idt},TQ_{jdt}) }
-				\end{array}
-			\end{equation*}
-		\item \cite{ivashina2011institutional}:
-		\begin{equation*}
-			\frac{1}{N}\sum_{i = 1}^N\frac{\sum_{j = 1}^{M_i} D_{ji}CAR_i}{M_i}
-		\end{equation*}
-		\end{itemize}
-	\end{frame}
-	
+%
+%\begin{frame}{Amihud}
+%	
+%	\begin{equation*}
+%		\Delta \text{Amihud} = \ln(\frac{\text{Amihud}_{i,t}}{\text{Amihud}_{i,t-1}}) = 
+%		\ln({\frac{|\text{Return}_{i,t}|}{\text{volume}_{i,t}}}) - \ln({\frac{|\text{Return}_{i,t-1}|}{\text{volume}_{i,t-1}}})
+%	\end{equation*}
+%
+%	\begin{table}[htbp]
+%	\centering
+%	\resizebox{0.9\textheight}{!}{
+%		\input{Amihud.tex}
+%	}
+%\end{table}
+%	
+%	
+%\end{frame}
+%
+%
+%\begin{frame}{Cross-sectional analyze of Group Amihud }
+%		\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.95\textwidth}{!}{
+%			\centering
+%			\input{Amihudcrosssection.tex}
+%		}
+%		\label{Amihudcrosssection}
+%	\end{table}
+%	
+%\end{frame}
+%
+%
+%\begin{frame}{Pairwise correlations in liquidity }
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.95\textwidth}{!}{
+%			\centering
+%			\input{mresult2-liquidity.tex}
+%		}
+%		\label{mresult2-liquidity}
+%	\end{table}
+%	
+%\end{frame}
+%
+%
+%	\begin{frame}{Trading}{}
+%		\begin{itemize}
+%			\item \cite{anton2018dealing}:
+%			\begin{equation*}
+%				\begin{array}{l}
+%					CQ_{ijt} = \sum_{d=1}^{D_t}\omega_{dt}corr(NQ_{idt},NQ_{jdt})
+%					\\\\
+%					\omega_{dt} = \frac{\min (TQ_{idt},TQ_{jdt})}{\sum_{d=1}^D \min(TQ_{idt},TQ_{jdt}) }
+%				\end{array}
+%			\end{equation*}
+%		\item \cite{ivashina2011institutional}:
+%		\begin{equation*}
+%			\frac{1}{N}\sum_{i = 1}^N\frac{\sum_{j = 1}^{M_i} D_{ji}CAR_i}{M_i}
+%		\end{equation*}
+%		\end{itemize}
+%	\end{frame}
+%	
 	
 	
 	
