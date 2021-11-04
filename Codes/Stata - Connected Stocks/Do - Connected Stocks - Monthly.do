@@ -232,13 +232,13 @@ eststo v31: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown  sbgrou
 estadd loc Controls "No" , replace
 estadd loc Interaction  "No" , replace
 
-eststo v311: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown sUp  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v311: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  NMFCAG  sDown sUp  sgroup monthlysamesize monthlysamebm monthlycrossownership sbgroup , fmb newey(4)
 estadd loc Controls "No" , replace
 estadd loc Interaction  "No" , replace
 
 
 
-eststo v32: quietly asreg monthlyρ_5_f NMFCA   monthlyρ_5 Up Down sDown sUp sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v32: quietly asreg monthlyρ_5_f NMFCA   monthlyρ_5 Up Down sDown sUp sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup, fmb newey(4)
 estadd loc Controls "No" , replace 
 estadd loc Interaction  "No" , replace
 
@@ -554,49 +554,48 @@ corr monthlyρ_5_f NMFCA monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysam
 
 
 
- eststo v0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership   monthlyρ_5 , fmb newey(4) 
+ eststo v0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4) 
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
 
-eststo v1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 , fmb newey(4) 
+eststo v1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership  , fmb newey(4) 
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
 
- eststo v2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   monthlyρ_5, fmb newey(4) 
+ eststo v2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4) 
 
-
- eststo Bv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 2, fmb newey(4) 
+ eststo Bv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership   if PairType == 2, fmb newey(4) 
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
 
-eststo Bv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm monthlycrossownership   monthlyρ_5 if PairType == 2 , fmb newey(4) 
+eststo Bv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 2 , fmb newey(4) 
 estadd loc Controls "Yes" , replace
 estadd loc Interaction "Yes" , replace
 
  eststo Bv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup holder_act  sgroup monthlysamesize monthlysamebm monthlycrossownership   monthlyρ_5 if PairType == 2  , fmb newey(4) 
 
 
- eststo Sv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 1, fmb newey(4) 
+ eststo Sv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership  if PairType == 1, fmb newey(4) 
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
 
-eststo Sv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 1 , fmb newey(4) 
+eststo Sv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership   if PairType == 1 , fmb newey(4) 
 estadd loc Controls "Yes" , replace
 estadd loc Interaction "Yes" , replace
 
- eststo Sv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 1  , fmb newey(5) 
+ eststo Sv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm  monthlycrossownership   if PairType == 1  , fmb newey(5) 
 
 
 
-eststo SBv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 0 , fmb newey(4)
+eststo SBv0: quietly  asreg monthlyρ_5_f NMFCA    sbgroup  NMFCAG    sgroup monthlysamesize monthlysamebm  monthlycrossownership   if PairType == 0 , fmb newey(4)
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
 
-eststo SBv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership  monthlyρ_5 if PairType == 0 , fmb newey(4) 
+eststo SBv1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership   if PairType == 0 , fmb newey(4) 
 estadd loc Controls "Yes" , replace
 estadd loc Interaction "Yes" , replace
 
- eststo SBv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   monthlyρ_5 if PairType == 0  , fmb newey(4) 
+ eststo SBv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership    if PairType == 0  , fmb newey(4) 
 
 
 
@@ -708,4 +707,25 @@ estadd loc controll "Yes" , replace
 esttab   v3 v4 v1 v2 /*v5*/ v6 /*v7*/ v8 v9 ,nomtitle label   s( N GroupFE controll r2 ,  lab("Observations" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA  NMFCAG )  mgroups("Dependent Variable: Future Monthly Correlation of Delta turnover"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-turnover.tex ,replace
 
 
+/*BigBusiness group*/
+
+eststo clear
+
+eststo v1: xi: quietly asreg monthlyρ_5_f monthlyρ_5 NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc FE "Yes" , replace
+estadd loc subsample "All" , replace
+
+eststo v2: xi: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5  sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType  if bigbusinessgroupSgroup == 1, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "Same Big Groups" , replace
+estadd loc FE "Yes" , replace
+
+
+eststo v3: xi: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType if bigbusinessgroupSgroup == 0, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "Others" , replace
+estadd loc FE "Yes" , replace
+
+esttab v1 v2 v3 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(NMFCA sbgroup NMFCAG monthlyρ_turn monthlyρ_5) compress order(sbgroup NMFCA  NMFCAG monthlyρ_turn) mgroups("Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
 

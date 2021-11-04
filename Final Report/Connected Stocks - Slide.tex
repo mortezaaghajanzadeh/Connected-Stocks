@@ -1381,127 +1381,20 @@
 	\end{frame}
 	
 	
-%	\begin{frame}{ 4 Factor + Industry Future  Correlation via $ FCA^* $}{Discontinuity \&  Business Groups}\label{Monthly13}
-%		
-%		
-%		
-%		
-%		
-%		\begin{columns}
-%			\column{.5\textwidth}  
-%			\begin{figure}   
-%				\centering
-%				\includegraphics[width=\linewidth]{"Qmcorr5lrd.eps"}     \end{figure}            
-%			\column{.5\textwidth}
-%			\begin{figure}
-%				\centering  
-%				%\includegraphics[width=\linewidth]{"mcorr5lrda.eps"}\\
-%				\includegraphics[width=\linewidth]{"Qmcorr5lrdbg.eps"}
-%			\end{figure}
-%		\end{columns}
-%		\centering
-%		
-%		
-%		
-%	\end{frame}
-%	
-%	\begin{frame}{Estimation model}
-%		\begin{itemize}
-%			\item Use Fama-MacBeth to estimate this model
-%			\begin{equation}
-%				\begin{split}
-%					\rho_{ij,t+1} = & \text{ 	}\beta_0 + \beta_1* \text{FCA}^*_{ij,t} \\
-%					& + \beta_2* (\text{FCA}^*_{ij,t} > Q3[\text{FCA}^*_{ij,t}]) \times {\text{FCA} ^*_{ij,t}}  \\
-%					& + \beta_3*  {\text{FCA} ^*_{ij,t}} \times \text{SameGroup} \\
-%					&+ \beta_4 * (\text{FCA}^*_{ij,t} > Q3[\text{FCA}^*_{ij,t}]) \times {\text{FCA} ^*_{ij,t}}\times \text{SameGroup}\\
-%					& + \sum_{k=1} ^{n} \alpha_k*\text{Control}_{ij,t} + \varepsilon_{ij,t+1}
-%				\end{split}
-%				\label{model3}
-%			\end{equation}
-%			
-%			\item Estimate that model on a monthly frequency 
-%		\end{itemize}
-%	\end{frame}
-%	
-%	
-%	\begin{frame}{Fama-MacBeth Estimation}{Correlation of controls}
-%		\begin{table}[htbp]
-%			\centering
-%			\resizebox{1\textwidth}{!}{
-%				\input{ControlsCorr.tex}
-%			}
-%		\end{table}
-%	\end{frame}
-%	
-%	
-%	\begin{frame}{Fama-MacBeth Estimation}{Discontinuity \&  Business Groups}
-%		\label{Monthly10} 
-%		\begin{table}[htbp]
-%			\centering
-%			\resizebox{1.1\textheight}{!}{
-%				\input{Qmresult3-slide.tex}
-%			}
-%		\end{table}
-%		
-%		
-%	\end{frame}
-%	
-%	
-%	
-%	
-%	\begin{frame}{Future Correlation via $ FCA^* $}{Grouped by size}
-%		
-%		\begin{figure}   
-%			\centering
-%			\includegraphics[width=0.8\linewidth]{"mcorrPairType.eps"}     \end{figure}            
-%		
-%		
-%	\end{frame}
-%	
-%	
-%	
-%	\begin{frame}{Model Estimation}{Grouped by size}
-%		\label{Monthly14} 
-%		\begin{table}[htbp]
-%			\centering
-%			\resizebox{1\textwidth}{!}{
-%				\input{Qmresult4-slide.tex}
-%			}
-%		\end{table}
-%		
-%		
-%	\end{frame}
-%	
-%	
-%	\begin{frame}{$ \text{FCA}^* $ summary}
-%		\input{PairtypeDescribe}
-%		
-%		
-%		\begin{columns}
-%			\column{.33\textwidth}     
-%			\centering
-%			{}\\
-%			
-%			\resizebox{\textwidth}{!}{
-%				\includegraphics{"SmallNMFCAHist.eps"} 
-%			} 
-%			\column{.33\textwidth}
-%			\centering  
-%			{}\\
-%			
-%			\resizebox{\textwidth}{!}{
-%				\includegraphics{"HybridNMFCAHist.eps"} 
-%			}
-%			\column{.33\textwidth}
-%			\centering  
-%			{}\\
-%			
-%			\resizebox{\textwidth}{!}{
-%				\includegraphics{"BigNMFCAHist.eps"} 
-%			}
-%		\end{columns}
-%		
-%	\end{frame}
+	
+\begin{frame}{Model Estimation}{Grouped by size}
+	\label{Monthly14} 
+	\begin{table}[htbp]
+		\centering
+		\resizebox{1\textwidth}{!}{
+			\input{Output/Qmresult4-slide.tex}
+		}
+	\end{table}
+	
+	
+\end{frame}
+	
+
 	
 	
 	
@@ -1829,14 +1722,14 @@
 	\section{Business Group Effect}
 
 
-\begin{frame}{Bearish/Bullish Market}{}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textheight}{!}{
-			\input{Output/mresult2Down-slide2.tex}
-		}
-	\end{table}
-\end{frame}
+%\begin{frame}{Bearish/Bullish Market}{}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textheight}{!}{
+%			\input{Output/mresult2Down-slide2.tex}
+%		}
+%	\end{table}
+%\end{frame}
 	
 	
 	\begin{frame}{title}
@@ -1870,7 +1763,7 @@
 	
 	\begin{table}[htbp]
 		\centering
-		\resizebox{0.75\textheight}{!}{
+		\resizebox{0.85\textheight}{!}{
 			\input{turnover.tex}
 		}
 	\end{table}
