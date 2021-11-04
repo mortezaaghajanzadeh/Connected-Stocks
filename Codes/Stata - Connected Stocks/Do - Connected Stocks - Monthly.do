@@ -559,9 +559,31 @@ corr monthlyρ_5_f NMFCA monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysam
 
 
  eststo v0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4) 
-estadd loc Controls "No" , replace
-estadd loc Interaction "No" , replace
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "All Firms" , replace
+estadd loc FE "No" , replace
 
+ eststo Bv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 2, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Big Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo Sv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 1, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Small Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo SBv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 0, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Big \& Small Firms" , replace
+estadd loc FE "No" , replace
+
+eststo v1: xi: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType , fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "All Firms" , replace
+estadd loc FE "Yes" , replace
+
+/*
 eststo v1: quietly asreg monthlyρ_5_f NMFCA NMFCAM sbgroup    sgroup monthlysamesize monthlysamebm  monthlycrossownership  , fmb newey(4) 
 estadd loc Controls "No" , replace
 estadd loc Interaction "No" , replace
@@ -600,13 +622,13 @@ estadd loc Controls "Yes" , replace
 estadd loc Interaction "Yes" , replace
 
  eststo SBv2: quietly  asreg monthlyρ_5_f NMFCA NMFCAM  NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership    if PairType == 0  , fmb newey(4) 
+*/
 
+/*
+esttab v0 /*v1 v2*/ Bv0 /*Bv1 Bv2*/ SBv0 /*SBv1 SBv2*/ Sv0 /*Sv1 Sv2*/ v1  , nomtitle label n r2  compress order(NMFCA NMFCAG NMFCAM    NMFCAGM sbgroup sgroup) keep(NMFCA NMFCAM sbgroup  NMFCAG  NMFCAGM sgroup)  mgroups("All Firms" "Big Firms" "Big \& Small Firms" "Small Firms"   , pattern(1 0 0 1 0 0 1 0 0 1 0 0) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )	,using Qmresult4-slide.tex ,replace 
+*/
 
-
-esttab v0 v1 v2 Bv0 Bv1 Bv2 SBv0 SBv1 SBv2 Sv0 Sv1 Sv2  , nomtitle label n r2  compress order(NMFCA NMFCAG NMFCAM    NMFCAGM sbgroup sgroup) keep(NMFCA NMFCAM sbgroup  NMFCAG  NMFCAGM sgroup)  mgroups("All Firms" "Big Firms" "Big \& Small Firms" "Small Firms"   , pattern(1 0 0 1 0 0 1 0 0 1 0 0) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )	,using Qmresult4-slide.tex ,replace 
-
-
-
+esttab v0 Bv0 SBv0 Sv0 v1  , nomtitle label  s( N Controls  SubSample FE r2 ,  lab("Observations" "Controls" "Sub-sample" "Pair Size FE" "$ R^2 $"))   compress order(NMFCA sbgroup NMFCAG  FE) keep(NMFCA  sbgroup  NMFCAG  ) mgroups("Dependent Variable: Future Monthly Correlation of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Qmresult4-slide.tex ,replace 
 
 
 
