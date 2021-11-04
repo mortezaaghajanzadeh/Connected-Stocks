@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import re as ree
 import numpy as np
+from matplotlib.ticker import FuncFormatter
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
@@ -292,7 +293,8 @@ tempt = tempt.drop(
         "Av. Block. Ownership": "Mean Block. Ownership",
     }
 )
-mlist = ['year',
+mlist = [
+    "year",
     "No. of Pairs",
     "No. of Groups",
     "No. of Pairs not in Groups",
@@ -314,21 +316,20 @@ tempt[mlist].set_index("year").T.astype(int).to_latex(pathResult + "summaryOfPai
 #%%
 
 df2.groupby("t_Month").size().describe().to_frame().rename(
-    columns = {0:"Number of unique paris"} , index = {
-        '50%':'Median'
-    }
-).T.drop(
-    columns = ['count','std','25%','75%']
-).astype(int).to_latex(pathResult + "numberofPairs.tex")
+    columns={0: "Number of unique paris"}, index={"50%": "Median"}
+).T.drop(columns=["count", "std", "25%", "75%"]).astype(int).to_latex(
+    pathResult + "numberofPairs.tex"
+)
 
 
 #%%
 
-Monthtime = df2[
-    ['t_Month','Year_Month']
-    ].drop_duplicates().sort_values(by = ['t_Month']).rename(
-        columns = {'Year_Month':'yearmonth'}
-    )
+Monthtime = (
+    df2[["t_Month", "Year_Month"]]
+    .drop_duplicates()
+    .sort_values(by=["t_Month"])
+    .rename(columns={"Year_Month": "yearmonth"})
+)
 #%%
 g2 = df2.groupby("t_Month")
 df2.loc[df2.uo_x.isnull(), "sBgroup"] = np.nan
@@ -405,7 +406,7 @@ plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup",palette= "tab10")
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup", palette="tab10")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -466,7 +467,6 @@ plt.title("Group affiliated market caps' Time Series")
 fig.set_rasterized(True)
 plt.savefig(pathResult + "\\BGMarketCaptimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "\\BGMarketCaptimeSeries.png", bbox_inches="tight")
-
 
 
 #%%
@@ -823,7 +823,6 @@ alldf = alldf[
 alldf["positionDif"] = alldf.position_x - alldf.position_y
 
 #%%
-from matplotlib.ticker import FuncFormatter
 
 
 data = [
@@ -904,4 +903,208 @@ plt.savefig(pathResult + "BGSummary.jpg", bbox_inches="tight")
 plt.show()
 # %%
 
+clist = [
+    "Monthlysize1",
+    "Monthlysize2",
+    "MonthlySameSize",
+    "MonthlyB/M1",
+    "MonthlyB/M2",
+    "MonthlySameB/M",
+    "MonthlyCrossOwnership",
+    "MonthlyFCA",
+    "sBgroup",
+]
+clist2 = [
+    "symbol_x",
+    "symbol_y",
+    "id_x",
+    "id_y",
+    "group_name_x",
+    "group_name_y",
+    "position_x",
+    "position_y",
+    "Monthlysize1",
+    "Monthlysize2",
+    "MonthlySameSize",
+    "MonthlyB/M1",
+    "MonthlyB/M2",
+    "MonthlySameB/M",
+    "MonthlyCrossOwnership",
+    "MonthlyFCA",
+    "Monthlyρ_5",
+    "uo_x",
+    "uo_y",
+    "sgroup",
+    "sBgroup",
+]
+df2["Q3"] = 0
+df2.loc[df2.NMFCA >= df2.NMFCA.quantile(0.75), "Q3"] = 1
+
+alldf = df2
+gg = alldf.groupby("id")
+alldf = gg.last()
+alldf[clist] = gg[clist].mean()
+alldf = alldf[clist2]
+alldf["positionDif"] = alldf.position_x - alldf.position_y
+Gdf = df2[df2.Q3 == 1]
+gg = Gdf.groupby("id")
+gdf = gg.last()
+gdf[clist] = gg[clist].mean()
+gdf = gdf[clist2]
+gdf["positionDif"] = gdf.position_x - gdf.position_y
+
+Ndf = df2[df2.Q3 == 0]
+gg = Ndf.groupby("id")
+ndf = gg.last()
+ndf[clist] = gg[clist].mean()
+ndf = ndf[clist2]
+ndf["positionDif"] = ndf.position_x - ndf.position_y
+
+data = [
+    [
+        alldf.MonthlyFCA.mean(),
+        alldf.MonthlySameSize.mean(),
+        alldf["MonthlySameB/M"].mean(),
+        alldf["MonthlyCrossOwnership"].mean() / 100,
+        alldf.sBgroup.mean(),
+        alldf.Monthlyρ_5.mean(),
+    ],
+    [
+        ndf.MonthlyFCA.mean(),
+        ndf.MonthlySameSize.mean(),
+        ndf["MonthlySameB/M"].mean(),
+        ndf["MonthlyCrossOwnership"].mean() / 100,
+        ndf.sBgroup.mean(),
+        ndf.Monthlyρ_5.mean(),
+    ],
+    [
+        gdf.MonthlyFCA.mean(),
+        gdf.MonthlySameSize.mean(),
+        gdf["MonthlySameB/M"].mean(),
+        gdf["MonthlyCrossOwnership"].mean() / 100,
+        gdf.sBgroup.mean(),
+        gdf.Monthlyρ_5.mean(),
+    ],
+]
+
+x = [0, 1, 2]
+
+fig, axs = plt.subplots(2, 3, figsize=(15, 10))
+
+# fig.suptitle("Business Groups summary")
+i, j = 0, 0
+axs[i, j].bar(
+    x,
+    [thing[i + j] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+x_axis_labels = ["Total", "Forth Qarter", "Others"]
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("Monthly FCA")
+i, j = 0, 1
+axs[i, j].bar(
+    x,
+    [thing[i + j] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("SameSize")
+i, j = 1, 0
+axs[i, j].bar(
+    x,
+    [thing[i + j + 1] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("SameBooktoMarket")
+i, j = 1, 1
+axs[i, j].bar(
+    x,
+    [thing[i + j + 1] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("CrossOwnership")
+axs[i, j].yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.1%}".format(y)))
+
+i, j = 0, 2
+axs[i, j].bar(
+    x,
+    [thing[i + j + 2] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("Same Business Group")
+axs[i, j].yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.0%}".format(y)))
+
+i, j = 1, 2
+axs[i, j].bar(
+    x,
+    [thing[i + j + 2] for thing in [data[0], data[2], data[1]]],
+    color=(0.1, 0.1, 0.1, 0.1),
+    edgecolor="blue",
+)
+
+axs[i, j].set_xticks(x)
+axs[i, j].set_xticklabels(x_axis_labels)
+axs[i, j].set_title("Monthly Correlation")
+axs[i, j].yaxis.set_major_formatter(FuncFormatter(lambda y, _: "{:.1%}".format(y)))
+
+fig.set_rasterized(True)
+plt.savefig(pathResult + "\\QarterSummary.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "\\QarterSummary.jpg", bbox_inches="tight")
+plt.show()
+#%%
+labels = "Same Industry", "Different Industry"
+sizes = [gdf.sgroup.mean() * 100, 100 - gdf.sgroup.mean() * 100]
+explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
+
+fig1, ax1 = plt.subplots()
+ax1.pie(
+    sizes,
+    explode=explode,
+    labels=labels,
+    autopct="%1.1f%%",
+    shadow=False,
+    startangle=90,
+)
+ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.title("Pairs in the forth quarter")
+plt.savefig(pathResult + "\\sameIndustryinQuarter.eps", bbox_inches="tight")
+plt.savefig(pathResult + "\\sameIndustryinQuarter.jpg", bbox_inches="tight")
+plt.show()
+
+
+labels = "Same Business group", "Others"
+sizes = [gdf.sBgroup.mean() * 100, 100 - gdf.sBgroup.mean() * 100]
+explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
+
+fig1, ax1 = plt.subplots()
+ax1.pie(
+    sizes,
+    explode=explode,
+    labels=labels,
+    autopct="%1.1f%%",
+    shadow=False,
+    startangle=90,
+)
+ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.title("Pairs in the forth quarter")
+plt.savefig(pathResult + "\\sameIBGinQuarter.eps", bbox_inches="tight")
+plt.savefig(pathResult + "\\sameIBGinQuarter.jpg", bbox_inches="tight")
+plt.show()
 # %%

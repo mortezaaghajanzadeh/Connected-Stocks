@@ -1194,11 +1194,11 @@
 			\column{.5\textwidth}  
 			\begin{figure}   
 				\centering
-				\includegraphics[width=\linewidth]{"mcorr5bg.eps"}     \end{figure}            
+				\includegraphics[width=\linewidth]{"Output/mcorr5bg.eps"}     \end{figure}            
 			\column{.5\textwidth}
 			\begin{figure}
 				\centering  
-				\includegraphics[width=\linewidth]{"mcorr5l.eps"}
+				\includegraphics[width=\linewidth]{"Output/mcorr5l.eps"}
 			\end{figure}
 		\end{columns}
 		
@@ -1213,7 +1213,7 @@
 			\input{Model11}
 			
 			\item Estimate the model on a monthly frequency 
-			\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(60/100)^{\frac{2}{9}} = 3.57 \sim 4 $)
+			\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(70/100)^{\frac{2}{9}} = 3.69 \sim 4 $)
 		\end{itemize}
 	\end{frame}
 	
@@ -1222,7 +1222,7 @@
 		\begin{table}[htbp]
 			\centering
 			\resizebox{1\textwidth}{!}{
-				\input{mresult2-slide.tex}
+				\input{Output/mresult2-slide.tex}
 			}
 		\end{table}
 		
@@ -1244,7 +1244,7 @@
 	\begin{table}[htbp]
 		\centering
 		\resizebox{1\textwidth}{!}{
-			\input{mresultAllPairs.tex}
+			\input{Q3mresultAllPairs.tex}
 		}
 	\end{table}
 \end{frame}
@@ -1271,11 +1271,11 @@
 			\column{.5\textwidth}  
 			\begin{figure}   
 				\centering
-				\includegraphics[width=\linewidth]{"mcorr5l.eps"}     \end{figure}            
+				\includegraphics[width=\linewidth]{"Output/mcorr5l.eps"}     \end{figure}            
 			\column{.5\textwidth}
 			\begin{figure}
 				\centering  
-				\includegraphics[width=\linewidth]{"Qmcorr5lrd.eps"}
+				\includegraphics[width=\linewidth]{"Output/Qmcorr5lrd.eps"}
 			\end{figure}
 		\end{columns}
 		\centering
@@ -1316,11 +1316,11 @@
 			\column{.5\textwidth}  
 			\begin{figure}   
 				\centering
-				\includegraphics[width=\linewidth]{"Qmcorr5subsample.eps"}     \end{figure}            
+				\includegraphics[width=\linewidth]{"Output/Qmcorr5subsample.eps"}     \end{figure}            
 			\column{.5\textwidth}
 			\begin{figure}
 				\centering  
-				\includegraphics[width=\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
+				\includegraphics[width=\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
 			\end{figure}
 		\end{columns}
 		\centering
@@ -1335,11 +1335,11 @@
 	\column{.5\textwidth}  
 	\begin{figure}   
 		\centering
-		\includegraphics[width=\linewidth]{"sameIndustryinQuarter.eps"}     \end{figure}            
+		\includegraphics[width=\linewidth]{"Output/sameIndustryinQuarter.eps"}     \end{figure}            
 	\column{.5\textwidth}
 	\begin{figure}
 		\centering  
-		\includegraphics[width=\linewidth]{"sameIBGinQuarter.eps"}
+		\includegraphics[width=\linewidth]{"Output/sameIBGinQuarter.eps"}
 	\end{figure}
 \end{columns}
 \centering
@@ -1357,7 +1357,7 @@
 
 		\begin{figure}
 			\centering  
-			\includegraphics[width=0.9\linewidth]{"QarterSummary.eps"}
+			\includegraphics[width=0.9\linewidth]{"Output/QarterSummary.eps"}
 		\end{figure}
 
 	
@@ -1827,92 +1827,16 @@
 	
 	
 	\section{Business Group Effect}
-%	\begin{frame}{Business group \& Common-ownership}{graphs}
-%		\begin{itemize}
-%			\item Generate pairs  that they don't have common-owner 
-%			\item Pseudo pairs' $ FCA_{ij,t} $ equal to zero
-%			\item 
-%		\end{itemize}
-%		\begin{figure}
-%			\centering
-%			\includegraphics[width=0.45\linewidth]{mcorr5AllPairs.eps}
-%			\includegraphics[width=0.45\linewidth]{mcorr5bgAllPairs.eps}
-%
-%			\label{fig:zeropbgsample}
-%		\end{figure}
-%		
-%	\end{frame}
 
 
-
-
-
-	
-	
-
-%	\begin{frame}{Trading}{\cite{greenwood2011stock}}
-%		\begin{itemize}
-%			\item Trading index for business groups:
-%			\begin{itemize}
-%				\item For business group of k: 	\[ BGTI_{kt} = \sum w_{ikt} \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} \]
-%				\item   which $  w_{ikt} $ is  $ \frac{\text{MarketCap}_{it} \times \text{CR}_k}
-%				{\sum \text{MarketCap}_{jt} \times \text{CR}_k } $		
-%			\end{itemize}
-%			\item Calculate correlation of $ \frac{\Delta BlockOwnership_{i,t}}{BlockOwnership_{i,t-1}} $ with $ BGTI_{kt} $ for each firm in group
-%			
-%		\end{itemize}
-%		
-%	\end{frame}
-%
-%
-%	
-%	\begin{frame}{Average correlation between Index and symbols}{
-%			$ \rho(\frac{\Delta BlockOwnership_{it}}{BlockOwnership_{it}},
-%			BGTI_{kt}	) $}
-%		
-%		
-%		\begin{figure}
-%			\centering
-%			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndexSymbol}
-%			\includegraphics[width=0.55\linewidth]{../Trade/CorrIndex}
-%			\label{fig:corrindex}
-%		\end{figure}
-%	\end{frame}
-%	
-%	
-%	\begin{frame}{Trading Index correlation \&  FCA} {Group Level}
-%		
-%		
-%		\begin{figure}
-%			\centering
-%			\includegraphics[width=0.75\linewidth]{../Trade/CorrFCA}
-%			\label{fig:CorrFCA}
-%		\end{figure}
-%	\end{frame}
-%	
-%	
-%	\begin{frame}{Trading Index correlation \&  return correlation} {Group Level}
-%		
-%		
-%		\begin{figure}
-%			\centering
-%			\includegraphics[width=0.75\linewidth]{../Trade/CorrIndexCorr}
-%			\label{fig:CorrIndexCorr}
-%		\end{figure}
-%	\end{frame}
-%	
-%	\begin{frame}{Simultaneous Trade}{Group Level}
-%		
-%		\begin{figure}
-%			\centering
-%			\includegraphics[width=0.45\linewidth]{../Trade/MorethanOneProb}
-%			\includegraphics[width=0.45\linewidth]{../Trade/Buy-SellMorethanOneProb}
-%			
-%			\label{fig:morethanoneprob}
-%		\end{figure}
-%		
-%	\end{frame}
-%	
+\begin{frame}{title}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{1\textheight}{!}{
+			\input{Output/mresult2Down-slide1.tex}
+		}
+	\end{table}
+\end{frame}
 	
 	\begin{frame}{Ins Imbalance}
 
@@ -1959,7 +1883,7 @@
 		\centering
 		\resizebox{0.95\textwidth}{!}{
 			\centering
-			\input{mresult2-turnover.tex}
+			\input{Output/mresult2-turnover.tex}
 		}
 		\label{mresult2-turnover}
 	\end{table}
