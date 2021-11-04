@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.5.13)  4 NOV 2021 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2310,9 +2310,9 @@ ut line 1366.
 (pdftex.def)             Requested size: 308.06367pt x 205.37614pt.
  [62
 
- <./Output/QarterSummary-eps-converted-to.pdf>] (./Output/QTimemresult2-slide.t
-ex)
-Overfull \vbox (9.9492pt too high) detected at line 1381
+ <./Output/QarterSummary-eps-converted-to.pdf>] (./Output/QTimemresult2subsampl
+e-slide.tex)
+Overfull \vbox (2.19304pt too high) detected at line 1381
  []
 
 [63
@@ -2523,7 +2523,7 @@ ged.
  ) 
 Here is how much of TeX's memory you used:
  26157 strings out of 480608
- 520831 string characters out of 5907536
+ 520876 string characters out of 5907536
  802485 words of memory out of 5000000
  41097 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
@@ -2551,7 +2551,7 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (91 pages, 1950337 bytes).
+Output written on "Connected Stocks - Slide.pdf" (91 pages, 1950183 bytes).
 PDF statistics:
  3567 PDF objects out of 3580 (max. 8388607)
  3161 compressed objects within 32 object streams
