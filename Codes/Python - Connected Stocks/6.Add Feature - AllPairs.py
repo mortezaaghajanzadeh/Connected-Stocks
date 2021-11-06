@@ -193,6 +193,11 @@ g = gg.get_group(2)
 g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75), g.MonthlyFCA.quantile(0.75)
 
 #%%
+result["2rdQarter"] = 0
+result["4rdQarter"] = 0
+result["4rdQarterTotal"] = 0
+
+
 def quarter(g):
     print(g.name)
     q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
@@ -391,6 +396,7 @@ def _multiple_replace(mapping, text):
     pattern = "|".join(map(re.escape, mapping.keys()))
     return re.sub(pattern, lambda m: mapping[m.group()], str(text))
 
+
 n2 = pathBG + "\\balance sheet - 9811" + ".xlsx"
 df2 = pd.read_excel(n2)
 df2 = df2.iloc[:, [0, 4, 18]]
@@ -576,6 +582,11 @@ for a in [df1]:
     a.loc[a.GRank_x == a.GRank_y, "SameGRank"] = 1
 del a
 
+for i in set(BGId.BGId.dropna()):
+    dname = "GDummy" + str(int(i))
+    df1[dname] = 0
+    df1.loc[df1.BGId_x == i, dname] = 1
+    df1.loc[df1.BGId_y == i, dname] = 1
 #%%
 df1 = df1.rename(columns={"MonthlyFCA*": "NMFCA"})
 df1["MonthlyCrossOwnership"] = df1.MonthlyCrossOwnership.replace(np.nan, 0)
