@@ -121,13 +121,13 @@ label variable monthlycrossownership "CrossOwnership"
 
 
 
-gen median = 0
-xtile  Q = MFCA if MFCA>0 , nq(4)
-replace median = 1 if Q > 3
+summ forthquarter
 
-summ Q median
+gen median = 0 
 
-replace median = v104
+replace median = 1 if forthquarter == 1
+
+
 
 
 label variable median " $ (\text{FCA} > Q3[\text{FCA}]) $ "
