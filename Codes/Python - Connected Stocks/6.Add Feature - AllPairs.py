@@ -2,9 +2,7 @@
 import os
 import pandas as pd
 import pickle
-
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
-path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 #%%
 
 
