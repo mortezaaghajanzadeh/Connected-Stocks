@@ -128,13 +128,11 @@ def firstStep(d):
 
 result = firstStep(result)
 #%%
-
-result[["t_Month", "Year_Month"]].drop_duplicates().sort_values(by=["t_Month"])
+result['Year_Month'] = result.Year_Month.astype(int)
+result[result.Year_Month<139900][["t_Month", "Year_Month"]].drop_duplicates().sort_values(by=["t_Month"])
 #%%
-#%%
-result[
-    (result.symbol_x == "آبادا") & (result.symbol_y == "اوان")
-].isnull().sum().to_frame().tail(15)
+result['Year_Month'] = result.Year_Month.astype(str)
+result = result.reset_index(drop = True)
 
 #%%
 result["id"] = result["symbol_x"] + "-" + result["symbol_y"]
@@ -142,8 +140,6 @@ ids = list(set(result.id))
 id = list(range(len(ids)))
 mapingdict1 = dict(zip(ids, id))
 result["id"] = result["id"].map(mapingdict1)
-# %%
-
 #%%
 
 
@@ -152,18 +148,47 @@ def NormalTransform(df_sub):
     return (col - col.mean()) / col.std()
 
 
-result = result.reset_index(drop=True)
+# result = result.reset_index(drop=True)
+# gg = result.groupby(["t_Month"])
+
+# result["MonthlyFCAP*"] = gg["MonthlyFCAPf"].apply(NormalTransform)
+# result["NMFCA"] = gg["MonthlyFCA"].apply(NormalTransform)
+
 gg = result.groupby(["t_Month"])
 
-result["MonthlyFCAP*"] = gg["MonthlyFCAPf"].apply(NormalTransform)
-result["NMFCA"] = gg["MonthlyFCA"].apply(NormalTransform)
+result["MonthlyFCAP*"] = gg.MonthlyFCAPf.transform("rank")
+gg = result.groupby(["t_Month"])
+tempt = gg["MonthlyFCAP*"].mean().to_frame()
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCAP*"]))
+result["m"] = result.t_Month.map(mpingdict)
+result["MonthlyFCAP*"] = result["MonthlyFCAP*"] - result.m
+tempt = gg["MonthlyFCAP*"].std().to_frame()
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCAP*"]))
+result["m"] = result.t_Month.map(mpingdict)
+result["MonthlyFCAP*"] = result["MonthlyFCAP*"] / result.m
+
+
+gg = result.groupby(["t_Month"])
+
+result["MonthlyFCA*"] = gg.MonthlyFCA.transform("rank")
+gg = result.groupby(["t_Month"])
+tempt = gg["MonthlyFCA*"].mean().to_frame()
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCA*"]))
+result["m"] = result.t_Month.map(mpingdict)
+result["MonthlyFCA*"] = result["MonthlyFCA*"] - result.m
+tempt = gg["MonthlyFCA*"].std().to_frame()
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCA*"]))
+result["m"] = result.t_Month.map(mpingdict)
+result["MonthlyFCA*"] = result["MonthlyFCA*"] / result.m
+result = result.drop(columns=["m"])
+print("Second step is done")
+
 #%%
 result["4rdQarterTotal"] = 0
 result["2rdQarter"] = 0
 result["4rdQarter"] = 0
 gg = result.groupby(["t_Month"])
 g = gg.get_group(2)
-
 g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75), g.MonthlyFCA.quantile(0.75)
 
 #%%
@@ -180,9 +205,7 @@ def quarter(g):
 
 gg = result.groupby(["t_Month"])
 result = gg.apply(quarter)
-# %%
-result.to_csv(path + "MonthlyAllPairs_1400_06_28.csv", index=False)
-# %%
-result.groupby("t_Month").size()
+#%%
+result.to_parquet(path + "MonthlyAllPairs_1400_06_28.parquet")
+#%%
 
-# %%
