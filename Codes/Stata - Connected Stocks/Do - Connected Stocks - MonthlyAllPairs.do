@@ -1,7 +1,7 @@
 cls
 clear
 import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
-// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
 
 cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
@@ -177,9 +177,7 @@ estadd loc controll "Yes" , replace
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 
-esttab  v4 v5 v1 v6 v7 v3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(median   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
-
-,using Q3mresultAllPairs.tex ,replace
+esttab  v4 v5 v1 v6 v7 v3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(median   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q3mresultAllPairs.tex ,replace
 
 
 
