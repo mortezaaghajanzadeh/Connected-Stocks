@@ -44,25 +44,37 @@ df.head()
 df[df.symbol == "فولاد"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
 
 
+<<<<<<< Updated upstream
 # # %%
 # gdata = df.groupby(["id"])
 # g = gdata.get_group(167)
 # S_g = gdata.get_group(157)
+=======
+# %%
+gdata = df.groupby(["id"])
+g = gdata.get_group(167)
+S_g = gdata.get_group(157)
+>>>>>>> Stashed changes
 
-# AllPair = True
+AllPair = True
 
-# n = time.time()
-# t1 = FCAPf(S_g, g,AllPair)
-# print(time.time() - n)
+n = time.time()
+t1 = FCAPf(S_g, g,AllPair)
+print(time.time() - n)
 
 
-# AllPair = False
-# n = time.time()
-# t2 = FCAPf(S_g, g,AllPair)
-# print(time.time() - n)
+AllPair = False
+n = time.time()
+t2 = FCAPf(S_g, g,AllPair)
+print(time.time() - n)
 
+<<<<<<< Updated upstream
 # #%%
 # len(t1[t1.FCAPf>0]),len(t2)
+=======
+#%%
+len(t1[t1.FCAPf>0]),len(t2)
+>>>>>>> Stashed changes
 
 
 #%%
