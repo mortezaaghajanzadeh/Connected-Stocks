@@ -188,11 +188,8 @@ correlate  median  NMFCAGM sbgroup
 
 
 
-drop median 
-egen median = median(MFCA) if MFCA>0
-
-replace median = 1 if MFCA > median
-replace median = 0 if median != 1 
+replace median = 1 if secondquarter == 1
+replace median = 0 if secondquarter != 1 
 
 
 
