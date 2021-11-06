@@ -2,6 +2,7 @@
 import os
 import pandas as pd
 import pickle
+
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 #%%
 
@@ -80,6 +81,14 @@ result = result.append(
 )
 
 #%%
+
+
+def add(row):
+    if len(row) < 2:
+        row = "0" + row
+    return row
+
+
 def firstStep(d):
     d["month_of_year"] = d["month_of_year"].astype(str).apply(add)
     d["week_of_year"] = d["week_of_year"].astype(str).apply(add)
