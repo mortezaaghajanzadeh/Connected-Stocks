@@ -1,6 +1,6 @@
 cls
 clear
-import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyAllPairs_1400_06_28.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
 // import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
 
 cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
