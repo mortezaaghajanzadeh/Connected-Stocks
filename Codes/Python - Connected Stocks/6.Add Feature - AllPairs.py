@@ -185,9 +185,7 @@ result = result.drop(columns=["m"])
 print("Second step is done")
 
 #%%
-result["4rdQarterTotal"] = 0
-result["2rdQarter"] = 0
-result["4rdQarter"] = 0
+
 gg = result.groupby(["t_Month"])
 g = gg.get_group(2)
 g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75), g.MonthlyFCA.quantile(0.75)
@@ -215,6 +213,7 @@ result = gg.apply(quarter)
 result.to_parquet(path + "MonthlyAllPairs_1400_06_28.parquet")
 #%%
 del result
+del gg
 n1 = path + "MonthlyAllPairs_1400_06_28" + ".parquet"
 df1 = pd.read_parquet(n1)
 df1 = df1[df1.jalaliDate < 13990000]
@@ -344,10 +343,6 @@ for t in BG.year.unique():
 df1.isnull().sum()
 
 # %%
-print(len(df1))
-df1 = df1.drop_duplicates(subset=["id", "t_Month"])
-print(len(df1))
-# %%
 print(len(df1[(df1.MonthlyFCAPf >= 1)]))
 df1 = df1[(df1.MonthlyFCAPf < 1)]
 gg = df1.groupby(["t_Month"])
@@ -443,107 +438,106 @@ mapdict = dict(zip(fkey, price.close_price))
 BG["close"] = BG.set_index(["symbol", "year"]).index.map(mapdict)
 del price, df2
 #%%
-len(BG[BG.close.isnull()].symbol.unique())
-BG["MarketCap"] = BG["close"] * BG["shrOut"]
-BG["uoMarketCap"] = BG["MarketCap"] * BG["cfr"]
+# len(BG[BG.close.isnull()].symbol.unique())
+# BG["MarketCap"] = BG["close"] * BG["shrOut"]
+# BG["uoMarketCap"] = BG["MarketCap"] * BG["cfr"]
 
-gg = BG.groupby(["uo"])
-
-
-def summary(Sg):
-    number = Sg.size
-    groupMC = Sg.MarketCap.sum()
-    uoCFr = Sg.cfr.sum()
-    uoCFrMC = Sg.uoMarketCap.sum()
-    return pd.Series(data=[number, groupMC, uoCFr, uoCFrMC])
+# gg = BG.groupby(["uo"])
 
 
-gg = BG.groupby(["uo", "year"])
-sResult = gg.apply(summary).reset_index()
-sResult = sResult.rename(
-    columns={0: "Number", 1: "GroupMarketCap", 2: "Totalcfr", 3: "uoMarketCap"}
-)
+# def summary(Sg):
+#     number = Sg.size
+#     groupMC = Sg.MarketCap.sum()
+#     uoCFr = Sg.cfr.sum()
+#     uoCFrMC = Sg.uoMarketCap.sum()
+#     return pd.Series(data=[number, groupMC, uoCFr, uoCFrMC])
 
 
-def Number(g):
-    g["QuantileNumber"] = np.nan
-    for i in range(1, 5):
-        g.loc[
-            g.Number >= g.Number.quantile(0.25 * (i - 1)),
-            "QuantileNumber",
-        ] = i
-    return g
+# gg = BG.groupby(["uo", "year"])
+# sResult = gg.apply(summary).reset_index()
+# sResult = sResult.rename(
+#     columns={0: "Number", 1: "GroupMarketCap", 2: "Totalcfr", 3: "uoMarketCap"}
+# )
 
 
-def GroupMarketCap(g):
-    g["QuantileGroupMarketCap"] = np.nan
-    for i in range(1, 5):
-        g.loc[
-            g.GroupMarketCap >= g.GroupMarketCap.quantile(0.25 * (i - 1)),
-            "QuantileGroupMarketCap",
-        ] = i
-    return g
+# def Number(g):
+#     g["QuantileNumber"] = np.nan
+#     for i in range(1, 5):
+#         g.loc[
+#             g.Number >= g.Number.quantile(0.25 * (i - 1)),
+#             "QuantileNumber",
+#         ] = i
+#     return g
 
 
-def Totalcfr(g):
-    g["QuantileTotalcfr"] = np.nan
-    for i in range(1, 5):
-        g.loc[
-            g.Totalcfr >= g.Totalcfr.quantile(0.25 * (i - 1)),
-            "QuantileTotalcfr",
-        ] = i
-    return g
+# def GroupMarketCap(g):
+#     g["QuantileGroupMarketCap"] = np.nan
+#     for i in range(1, 5):
+#         g.loc[
+#             g.GroupMarketCap >= g.GroupMarketCap.quantile(0.25 * (i - 1)),
+#             "QuantileGroupMarketCap",
+#         ] = i
+#     return g
 
 
-def uoMarketCap(g):
-    g["QuantileuoMarketCap"] = np.nan
-    for i in range(1, 5):
-        g.loc[
-            g.uoMarketCap >= g.uoMarketCap.quantile(0.25 * (i - 1)),
-            "QuantileuoMarketCap",
-        ] = i
-    return g
+# def Totalcfr(g):
+#     g["QuantileTotalcfr"] = np.nan
+#     for i in range(1, 5):
+#         g.loc[
+#             g.Totalcfr >= g.Totalcfr.quantile(0.25 * (i - 1)),
+#             "QuantileTotalcfr",
+#         ] = i
+#     return g
 
 
-gg = sResult.groupby("year")
-sResult = gg.apply(Number)
-gg = sResult.groupby("year")
-sResult = gg.apply(GroupMarketCap)
-gg = sResult.groupby("year")
-sResult = gg.apply(Totalcfr)
-gg = sResult.groupby("year")
-sResult = gg.apply(uoMarketCap)
+# def uoMarketCap(g):
+#     g["QuantileuoMarketCap"] = np.nan
+#     for i in range(1, 5):
+#         g.loc[
+#             g.uoMarketCap >= g.uoMarketCap.quantile(0.25 * (i - 1)),
+#             "QuantileuoMarketCap",
+#         ] = i
+#     return g
 
-for t in [
-    "QuantileNumber",
-    "QuantileGroupMarketCap",
-    "QuantileTotalcfr",
-    "QuantileuoMarketCap",
-]:
-    fkey = zip(sResult.uo, sResult.year)
-    mapdict = dict(zip(fkey, sResult[t]))
-    BG[t] = BG.set_index(["uo", "year"]).index.map(mapdict)
-del sResult
-del gg
-#%%
+
+# gg = sResult.groupby("year")
+# sResult = gg.apply(Number)
+# gg = sResult.groupby("year")
+# sResult = gg.apply(GroupMarketCap)
+# gg = sResult.groupby("year")
+# sResult = gg.apply(Totalcfr)
+# gg = sResult.groupby("year")
+# sResult = gg.apply(uoMarketCap)
+
+# for t in [
+#     "QuantileNumber",
+#     "QuantileGroupMarketCap",
+#     "QuantileTotalcfr",
+#     "QuantileuoMarketCap",
+# ]:
+#     fkey = zip(sResult.uo, sResult.year)
+#     mapdict = dict(zip(fkey, sResult[t]))
+#     BG[t] = BG.set_index(["uo", "year"]).index.map(mapdict)
+# del sResult
+# del gg
 df1["year"] = round(df1.jalaliDate / 10000, 0)
 df1["year"] = df1["year"].astype(int)
-for t in [
-    "QuantileNumber",
-    "QuantileGroupMarketCap",
-    "QuantileTotalcfr",
-    "QuantileuoMarketCap",
-]:
-    print(t)
-    fkey = zip(BG.uo, BG.year)
-    mapdict = dict(zip(fkey, BG[t]))
-    df1[t + "_x"] = df1.set_index(["uo_x", "year"]).index.map(mapdict)
+# for t in [
+#     "QuantileNumber",
+#     "QuantileGroupMarketCap",
+#     "QuantileTotalcfr",
+#     "QuantileuoMarketCap",
+# ]:
+#     print(t)
+#     fkey = zip(BG.uo, BG.year)
+#     mapdict = dict(zip(fkey, BG[t]))
+#     df1[t + "_x"] = df1.set_index(["uo_x", "year"]).index.map(mapdict)
 
-    fkey = zip(BG.uo, BG.year)
-    mapdict = dict(zip(fkey, BG[t]))
-    df1[t + "_y"] = df1.set_index(["uo_y", "year"]).index.map(mapdict)
+#     fkey = zip(BG.uo, BG.year)
+#     mapdict = dict(zip(fkey, BG[t]))
+#     df1[t + "_y"] = df1.set_index(["uo_y", "year"]).index.map(mapdict)
 
-del t
+# del t
 # for t in ['QuantileNumber',
 #           'QuantileGroupMarketCap',
 #           'QuantileTotalcfr',
@@ -563,6 +557,8 @@ SData = (
     .sort_values(by=["Percentile_Rank"])
     .reset_index()
 )
+
+del df
 SData = SData.merge(SId)
 SData["Rank"] = SData.Percentile_Rank.rank()
 SData["GRank"] = 0
@@ -571,7 +567,6 @@ for i in range(9):
     tempt = (SData["Rank"].max()) / 10
     SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
 
-del df
 for a in [df1]:
     mapingdict = dict(zip(SData.id, SData.GRank))
     a["id_x"] = a["id_x"].astype(int)
@@ -582,11 +577,6 @@ for a in [df1]:
     a.loc[a.GRank_x == a.GRank_y, "SameGRank"] = 1
 del a
 
-for i in set(BGId.BGId.dropna()):
-    dname = "GDummy" + str(int(i))
-    df1[dname] = 0
-    df1.loc[df1.BGId_x == i, dname] = 1
-    df1.loc[df1.BGId_y == i, dname] = 1
 #%%
 df1 = df1.rename(columns={"MonthlyFCA*": "NMFCA"})
 df1["MonthlyCrossOwnership"] = df1.MonthlyCrossOwnership.replace(np.nan, 0)
@@ -597,13 +587,25 @@ df1.loc[df1.uo_x.isnull(), "sBgroup"] = 0
 df1.loc[df1.uo_y.isnull(), "sBgroup"] = 0
 # df1.loc[df1.year<BG.year.min(),'sBgroup'] = np.nan
 df1.sBgroup.isnull().sum()
+#%%
+
+for i in set(BGId.BGId.dropna()):
+    dname = "GDummy" + str(int(i))
+    print(dname)
+    df1[dname] = 0
+    df1.loc[df1.BGId_x == i, dname] = 1
+    df1.loc[df1.BGId_y == i, dname] = 1
 # %%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-n1 = path + "MonthlyNormalzedALLFCAP9.2" + ".csv"
-print(len(df1))
-df1.to_csv(n1)
+
 n1 = path + "MonthlyNormalzedAllFCAP9.2" + ".parquet"
 print(len(df1))
 df1.to_parquet(n1)
+
+n1 = path + "MonthlyNormalzedALLFCAP9.2" + ".csv"
+print(len(df1))
+df1.to_csv(n1)
+# %%
+list(df1)
 # %%
