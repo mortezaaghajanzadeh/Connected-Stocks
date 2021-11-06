@@ -72,6 +72,13 @@ Monthly = pd.read_pickle(path + "mergerd_first_step_monthly_part_{}.p".format(1)
 
 #%%
 
+
+def add(row):
+    if len(row) < 2:
+        row = "0" + row
+    return row
+
+
 def firstStep(d):
     d["month_of_year"] = d["month_of_year"].astype(str).apply(add)
     d["week_of_year"] = d["week_of_year"].astype(str).apply(add)
@@ -107,17 +114,21 @@ def firstStep(d):
     mapingdict = dict(zip(ids, id))
     d["id"] = d["id"].map(mapingdict)
     return d
+
+
 Monthly = firstStep(Monthly)
 #%%
 
-Monthly[['t_Month','Year_Month']].drop_duplicates().sort_values(by = ['t_Month'])
+Monthly[["t_Month", "Year_Month"]].drop_duplicates().sort_values(by=["t_Month"])
 #%%
 # Weekly = SecondStep(Weekly)
+
 
 def NormalTransform(df_sub):
     print(df_sub.name)
     col = df_sub.transform("rank")
     return (col - col.mean()) / col.std()
+
 
 print("First step is done")
 gg = Monthly.groupby(["t_Month"])
@@ -125,12 +136,12 @@ gg = Monthly.groupby(["t_Month"])
 Monthly["MonthlyFCAP*"] = gg.MonthlyFCAPf.transform("rank")
 gg = Monthly.groupby(["t_Month"])
 tempt = gg["MonthlyFCAP*"].mean().to_frame()
-mpingdict = dict(zip(tempt.index,tempt['MonthlyFCAP*']))
-Monthly['m'] = Monthly.t_Month.map(mpingdict)
-Monthly["MonthlyFCAP*"] = Monthly["MonthlyFCAP*"] -Monthly.m
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCAP*"]))
+Monthly["m"] = Monthly.t_Month.map(mpingdict)
+Monthly["MonthlyFCAP*"] = Monthly["MonthlyFCAP*"] - Monthly.m
 tempt = gg["MonthlyFCAP*"].std().to_frame()
-mpingdict = dict(zip(tempt.index,tempt['MonthlyFCAP*']))
-Monthly['m'] = Monthly.t_Month.map(mpingdict)
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCAP*"]))
+Monthly["m"] = Monthly.t_Month.map(mpingdict)
 Monthly["MonthlyFCAP*"] = Monthly["MonthlyFCAP*"] / Monthly.m
 
 
@@ -139,14 +150,14 @@ gg = Monthly.groupby(["t_Month"])
 Monthly["MonthlyFCA*"] = gg.MonthlyFCA.transform("rank")
 gg = Monthly.groupby(["t_Month"])
 tempt = gg["MonthlyFCA*"].mean().to_frame()
-mpingdict = dict(zip(tempt.index,tempt['MonthlyFCA*']))
-Monthly['m'] = Monthly.t_Month.map(mpingdict)
-Monthly["MonthlyFCA*"] = Monthly["MonthlyFCA*"] -Monthly.m
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCA*"]))
+Monthly["m"] = Monthly.t_Month.map(mpingdict)
+Monthly["MonthlyFCA*"] = Monthly["MonthlyFCA*"] - Monthly.m
 tempt = gg["MonthlyFCA*"].std().to_frame()
-mpingdict = dict(zip(tempt.index,tempt['MonthlyFCA*']))
-Monthly['m'] = Monthly.t_Month.map(mpingdict)
+mpingdict = dict(zip(tempt.index, tempt["MonthlyFCA*"]))
+Monthly["m"] = Monthly.t_Month.map(mpingdict)
 Monthly["MonthlyFCA*"] = Monthly["MonthlyFCA*"] / Monthly.m
-Monthly = Monthly.drop(columns = ['m'])
+Monthly = Monthly.drop(columns=["m"])
 print("Second step is done")
 #%%
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
@@ -250,7 +261,11 @@ dgg = Rdf.groupby(["id"])
 
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 GData = df[["group_name", "id"]].drop_duplicates().reset_index(drop=True)
-timeId = a[["jalaliDate","date", "t", "t_Week", "t_Month"]].drop_duplicates().sort_values(by=["t"])
+timeId = (
+    a[["jalaliDate", "date", "t", "t_Week", "t_Month"]]
+    .drop_duplicates()
+    .sort_values(by=["t"])
+)
 
 SId.to_csv(path + "SId" + ".csv", index=False)
 GData.to_csv(path + "GData" + ".csv", index=False)
