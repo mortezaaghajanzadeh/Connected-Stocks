@@ -129,9 +129,9 @@ label variable monthlybm1 "$ BookToMarketMarket_1 $"
 
 label variable monthlybm2 "$ BookToMarketMarket_2 $"
 
-egen median = median(NMFCA)
+gen median = 0
 
-replace median = 1 if NMFCA > median
+replace median = 1 if secondquarter == 1 
 replace median = 0 if median != 1 
 
 gen NMFCAM = NMFCA * median
@@ -223,8 +223,6 @@ label define PairType 0 "Hybrid" 1 "Small" 2 "Large"
 label values PairType PairType
 label variable PairType "PairType"
 
-
-xtile  Q = MFCA, nq(4)
 
 
 drop if monthlyfcapf >1

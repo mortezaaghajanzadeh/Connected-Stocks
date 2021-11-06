@@ -47,7 +47,7 @@ asreg monthlyρ_5_f NMFCA  monthlyρ_5 Up Down sDown sUp sgroup monthlysamesize 
 
 */
 
-cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM    sbgroup   sgroup monthlysamesize monthlysamebm    monthlyρ_5
+cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM sbgroup   sgroup monthlysamesize monthlysamebm    monthlyρ_5
 
 
 
@@ -320,6 +320,33 @@ esttab   v0 v1 v11 v111   v13   v2 v3, nomtitle label   s( N GroupFE r2 ,  lab("
 
 
 
+/*NMFCA Just after Q2*/
+
+eststo v0: quietly asreg monthlyρ_5_f  NMFCA if median == 1 , fmb newey(4) 
+estadd loc GroupFE "No" , replace
+
+eststo v1: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 if median == 1, fmb newey(4)
+estadd loc GroupFE "No" , replace
+
+
+eststo v11: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 sgroup if median == 1, fmb newey(4) 
+estadd loc GroupFE "No" , replace
+
+eststo v111: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 sbgroup sgroup if median == 1, fmb newey(4)
+estadd loc GroupFE "No" , replace
+
+eststo v2: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership if median == 1, fmb newey(4)
+estadd loc GroupFE "No" , replace
+
+eststo v3: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 if median == 1, fmb newey(4)
+estadd loc GroupFE "Yes" , replace
+
+
+
+
+esttab   v0 v1 v11 v111   v2 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA monthlyρ_5 sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(NMFCA sbgroup) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Qmresult2subsanple-slide.tex ,replace
+
+
 
 
 
@@ -327,8 +354,8 @@ esttab   v0 v1 v11 v111   v13   v2 v3, nomtitle label   s( N GroupFE r2 ,  lab("
 /*NMFCAMQ3*/
 
  
-replace median = 0 if Q <=3
-replace median = 1 if Q  == 4
+replace median = 0 if forthquarter =! 1
+replace median = 1 if forthquarter == 1
 
 replace NMFCAM = NMFCA * median
 
@@ -410,59 +437,9 @@ esttab   v0 v1 v11 v2  v4 v5 v3   , nomtitle label  r2 n compress  keep(NMFCA NM
 esttab   v0 v1 v2  v4 v3   , nomtitle label  r2 n   keep(NMFCA NMFCAM NMFCAG NMFCAGM    ) compress addnotes("This table reports Fama and MacBeth (1973) estimates of monthly cross-sectional" " regressions forecasting the correlation of daily 4Factor+Industry residuals in month t + 1 for each pairs." "The independent variables are updated monthly and include our measure of institutional connectedness," " FCA and a series of controls at time t." "We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}_{ij,t} $." "We also capture the similarity in business group by dummy of sgroup." "Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation." " We calculate Newey and West (1987) standard errors (four lags) of the Fama and MacBeth (1973) estimates " " that take into account autocorrelation in the cross-sectional slopes" ) mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Qmresult3.tex ,replace
 
 
-/*NMFCA Just after Q3*/
-
-eststo v0: quietly asreg monthlyρ_5_f  NMFCA if median == 1 , fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v1: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 if median == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-
-eststo v11: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 sgroup if median == 1, fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v111: quietly asreg monthlyρ_5_f NMFCA  monthlyρ_5 sbgroup sgroup if median == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v2: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership if median == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v3: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 if median == 1, fmb newey(4)
-estadd loc GroupFE "Yes" , replace
-
-
-
-
-esttab   v0 v1 v11 v111   v2 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA monthlyρ_5 sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(NMFCA sbgroup) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Qmresult2subsanple-slide.tex ,replace
-
-
 
 
 /**/
-
-replace median = forthquarter 
-
-replace NMFCAM = NMFCA * median
-
-label variable NMFCAM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{FCA} ^*}  $ "
-
-replace sbgroupM = sbgroup * median
-label variable sbgroupM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{SameGroup}} $ "
-
-
-
-replace NMFCAGM = sbgroup * NMFCA * median
-label variable NMFCAGM " $ (\text{FCA} > Q3[\text{FCA}]) \times  (\text{FCA}^*) \times {\text{SameGroup}} $ "
-
-
-replace holder_actM = holder_act * median
-label variable holder_actM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{ActiveHolder} }  $ "
-
-replace spositionM = sposition * median
-
-label variable spositionM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{Same Position} }  $ "
-
 
 
 eststo v00: quietly asreg monthlyρ_5_f NMFCA , fmb newey(4)
@@ -545,9 +522,6 @@ estadd loc GroupFE "Yes" , replace
 
 
 esttab   /*v0*/ v1 v11 v111   v2 v21 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(NMFCA sgroup sbgroup NMFCAG) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using QTimemresult2subsample-slide.tex ,replace
-
-
-corr monthlyρ_5_f NMFCA monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  if median == 1
 
 
 
@@ -649,7 +623,7 @@ esttab v0 Bv0 Bv1  SBv0 SBv1 Sv0 Sv1 v1  , nomtitle label  s( N Controls  SubSam
 
 
 
-/* Amihud*/
+/* Amihud
 
 
 eststo clear
@@ -697,7 +671,7 @@ estadd loc controll "Yes" , replace
 
 esttab   v3 v4 v1 v2 /*v5*/ v6 /*v7*/ v8 v9  ,nomtitle label   s( N GroupFE controll r2 ,  lab("Observations" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA  NMFCAG ) mgroups("Dependent Variable: Future Monthly Correlation of Delta Amihud"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-liquidity.tex ,replace
 
-
+*/
 
 /* Turn over*/
 
