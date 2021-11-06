@@ -4,7 +4,7 @@ import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFC
 // import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
 
 cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
-// cd "C:\Users\RA_Aghajanzadeh\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
 
 label define sgroup 0 "No" 1 "Yes"
 
