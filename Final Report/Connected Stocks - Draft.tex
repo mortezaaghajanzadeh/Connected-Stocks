@@ -709,13 +709,18 @@ In conclusion, the multiple waves of privatization with the development of the s
 \subsection{Forecasting Co-movement}
 
 Our specific interest is how the common ownership affects a pair of stocks return co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common ownership in the current period is associated with a higher level of correlation in the following month. We empirically test the impact of current measured common ownership on the next period's co-movement.
-
  \begin{figure}[htbp]
  \centering  
         \centering
-        \includegraphics[width=0.75\linewidth]{"Output/mcorr50.eps"} 
+        \includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
     \caption{Future monthly correlation for different level of common ownership at this period }
     \label{mcorr50}
+\end{figure}
+ \begin{figure}[htbp]
+	\centering  
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Output/Qmcorr5lrd.eps"} \caption{Future monthly correlation for different level of common ownership at this period }
+	\label{Qmcorr5lrd}
 \end{figure}
 
 For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{FCA}^*_{ij,t}$, $\textit{SameGroup}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
@@ -744,6 +749,7 @@ In the fifth specification of table \ref{mresult2}, we use both \textit{Same Gro
 % % % % % 
 % 		%
 % % % % %
+
 
 In the former analyses, we restrict our investigation to firms with at least one common owner. This restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner. We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
 \input{Model12}
