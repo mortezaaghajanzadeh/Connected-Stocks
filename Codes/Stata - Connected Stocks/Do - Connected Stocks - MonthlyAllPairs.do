@@ -121,11 +121,19 @@ label variable monthlycrossownership "CrossOwnership"
 
 
 
-summ forthquarter
+summ forthquarter if forthquarter != 1
 
+
+
+
+foreach var in NMFCAGM NMFCAM sbgroupM NMFCAG median {
+		capture drop `var'
+	}
 gen median = 0 
 
 replace median = 1 if forthquarter == 1
+replace median = 0 if forthquarter != 1
+
 
 
 
@@ -172,6 +180,8 @@ estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
+
+
  
  eststo v6: quietly asreg monthlyρ_5_f median  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
@@ -183,12 +193,25 @@ estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v8 : quietly asreg monthlyρ_5_f sbgroup median sgroup monthlysamesize monthlysamebm monthlycrossownership  gdummy0-gdummy47 , fmb newey(4)
+eststo v8 : quietly asreg monthlyρ_5_f median  NMFCAGM  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "Yes" , replace
 
-esttab  v4 v5 v1 v6 v7 v3 v8,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) order(median   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q3mresultAllPairs.tex ,replace
+
+eststo v9 : quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+
+eststo v10 : quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+esttab  v4 v9 v5 v10 v1 v6 v7 v3 v8,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) order(NMFCA median   sbgroup NMFCAGM ) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+,using Q3mresultAllPairs.tex ,replace
 
 
 
@@ -197,32 +220,31 @@ correlate  median  NMFCAGM sbgroup
 /****/
 
 
-
-replace median = 1 if secondquarter == 1
-replace median = 0 if secondquarter != 1 
-
+gen medianm = 0
+replace medianm = 1 if secondquarter == 1
 
 
-label variable median " $ (\text{FCA} > Median[\text{FCA}]) $ "
 
-replace NMFCAM = NMFCA * median
+label variable medianm " $ (\text{FCA} > Median[\text{FCA}]) $ "
+
+replace NMFCAM = NMFCA * medianm
 
 label variable NMFCAM " $ (\text{FCA} > Median[\text{FCA}]) \times {\text{FCA} ^*}  $ "
 
-replace sbgroupM = sbgroup * median
+replace sbgroupM = sbgroup * medianm
 label variable sbgroupM " $ (\text{FCA} > Median[\text{FCA}]) \times {\text{SameGroup} }  $ "
 
-replace NMFCAGM = sbgroup  * median
+replace NMFCAGM = sbgroup  * medianm
 label variable NMFCAGM " $ (\text{FCA} > Median[\text{FCA}]) \times  {\text{SameGroup} }  $ "
 
 
 
-eststo mv1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo mv1 : quietly asreg monthlyρ_5_f medianm   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
  
-eststo mv3 : quietly asreg monthlyρ_5_f median  NMFCAGM monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo mv3 : quietly asreg monthlyρ_5_f medianm  NMFCAGM monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
@@ -230,12 +252,12 @@ eststo mv4 : quietly asreg monthlyρ_5_f monthlyρ_5 sbgroup   sgroup monthlysam
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
-eststo mv5 : quietly asreg monthlyρ_5_f median   monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo mv5 : quietly asreg monthlyρ_5_f medianm   monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
  
- eststo mv6: quietly asreg monthlyρ_5_f median   monthlyρ_5  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+ eststo mv6: quietly asreg monthlyρ_5_f medianm   monthlyρ_5  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 
@@ -243,36 +265,36 @@ estadd loc controll "Yes" , replace
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 
-esttab  mv4 mv5 mv1 mv6 mv7 mv3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(median   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q2mresultAllPairs.tex ,replace
+esttab  mv4 mv5 mv1 mv6 mv7 mv3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(medianm   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q2mresultAllPairs.tex ,replace
 
 /**/
 
 
-replace median = 0 
-replace median = 1 if MFCA > 0
+gen medianc = 0 
+replace medianc = 1 if MFCA > 0
 
 
 
-label variable median " Common Ownership "
+label variable medianc " Common Ownership "
 
-replace NMFCAM = NMFCA * median
+replace NMFCAM = NMFCA * medianc
 
 label variable NMFCAM " $ \text{Common Ownership} \times {\text{FCA} ^*}  $ "
 
-replace sbgroupM = sbgroup * median
+replace sbgroupM = sbgroup * medianc
 label variable sbgroupM " $ \text{Common Ownership} \times {\text{SameGroup} }  $ "
 
-replace NMFCAGM = sbgroup  * median
+replace NMFCAGM = sbgroup  * medianc
 label variable NMFCAGM " $ \text{Common Ownership} \times  {\text{SameGroup} }  $ "
 
 
 
-eststo cv1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo cv1 : quietly asreg monthlyρ_5_f medianc   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
  
-eststo cv3 : quietly asreg monthlyρ_5_f median  NMFCAGM monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo cv3 : quietly asreg monthlyρ_5_f medianc  NMFCAGM monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
@@ -280,12 +302,12 @@ eststo cv4 : quietly asreg monthlyρ_5_f monthlyρ_5 sbgroup   sgroup monthlysam
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
-eststo cv5 : quietly asreg monthlyρ_5_f median   monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo cv5 : quietly asreg monthlyρ_5_f medianc   monthlyρ_5   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 
  
- eststo cv6: quietly asreg monthlyρ_5_f median   monthlyρ_5  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+ eststo cv6: quietly asreg monthlyρ_5_f medianc   monthlyρ_5  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 
@@ -293,4 +315,8 @@ estadd loc controll "Yes" , replace
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 
-esttab  cv4 cv5 cv1 cv6 cv7 cv3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(median   sbgroup NMFCAGM NMFCA) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using mresultAllPairs.tex ,replace
+esttab  cv4 cv5 cv1 cv6 cv7 cv3 ,  nomtitle  label  s( N subSample controll r2 ,  lab("Observations" "Sub Sample" "Controls" "$ R^2 $")) order(medianc   sbgroup NMFCAGM NMFCA) keep(medianc  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using mresultAllPairs.tex ,replace
+
+
+
+
