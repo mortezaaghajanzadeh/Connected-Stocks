@@ -159,6 +159,8 @@ summ MFCA if median == 1
 summ monthlyfcapf if monthlyfcapf>0
 
 
+rename NMFCA vv
+
 eststo v1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
@@ -188,7 +190,7 @@ estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
- eststo v7: quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+ eststo v7: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
@@ -199,22 +201,23 @@ estadd loc controll "Yes" , replace
 estadd loc GroupFE "Yes" , replace
 
 
-eststo v9 : quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v9 : quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
-eststo v10 : quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v10 : quietly asreg monthlyρ_5_f vv NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-esttab  v4 v9 v5 v10 v1 v6 v7 v3 v8,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) order(NMFCA median   sbgroup NMFCAGM ) keep(median  NMFCAGM sbgroup NMFCA) compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
-,using Q3mresultAllPairs.tex ,replace
 
 
+esttab  v4 v9 v5 v10 v1 v6 v7 v3 v8,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median  NMFCAGM sbgroup vv) order(vv median   sbgroup NMFCAGM )  compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q3mresultAllPairs.tex ,replace
 
+
+rename  vv NMFCA
 
 correlate  median  NMFCAGM sbgroup
 /****/
