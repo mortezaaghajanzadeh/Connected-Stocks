@@ -758,50 +758,48 @@ In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a h
 	\label{Qmcorr5subsample}
 \end{figure}
 
- For detailed analysis, we estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the sub sample of high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As we expected, the presence of firms in the same business group has a high statistical and economical significant effect on forecasting future comovements. Columns six and seven proves our prior explanations for the importance of business group compared to common ownership in the pairs with a higher level of common ownership.
+For detailed analysis, we estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the subsample of a high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As expected, firms in the same business group have a high statistical and economically significant effect on forecasting future comovements. Columns six and seven prove our prior explanations for the importance of business groups compared to common ownership in pairs with a higher level of common ownership. When we restrict our analysis to the high level of common ownership, our results may be driven by pairs' characteristics. Figure \ref{QarterSummary} reports an average of control and dependent variable for the subsample and all the pairs. In the fourth quarter, measured common ownership is higher than others, and more than 25\% of them belong to the same business group. On the other hand, the difference in size and the book-to-market ratio is not statistically different from other pairs. This similarity shows that pairs in the fourth quarter are not different in their pair characteristics. 
 
 \begin{table}[htbp]
 	\centering
 	\caption{\scriptsize}
 	\label{QTimemresult2subsample}
-	\resizebox{0.85\textwidth}{!}{
+	\resizebox{0.75\textwidth}{!}{
 		\input{Output/QTimemresult2subsample-slide.tex}
 	}
 \end{table}
-
-When we restrict our analysis for the high level of common ownership, our results may bee driven from pairs' characteristics. 
-
-
 \begin{figure}[htbp]
 	\centering  
-	\caption{text}
-	\includegraphics[width=0.85\linewidth]{"Output/QarterSummary.eps"}
+	\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
+	\caption{Pairs' characteristics for the pairs with high level of common ownership}
+	\label{QarterSummary}
 \end{figure}
 
 \FloatBarrier
-  By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement.
-
-
 
 \subsection{All Pairs}
-In the former analyses, we restrict our investigation to firms with at least one common owner. This restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner.As shown in figure \ref{Qmcorr5lrd} We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
+In the former analyses, we restrict our investigation to firms with at least one common owner. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. 
+So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. 
+
+For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner. For analysis of the high level of common ownership, we define a dummy variable that equals one if pairs' common ownership, $\text{FCA}_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}. We estimate equation \ref{model1} and this new model:
 \input{Model12}
 
-In table \ref{AllPairs}, we show that pairs in the same group co-move with each other more than stocks that are not in the same group. In addition, as we expected, pairs by the high level of common ownership co-move greater than others (columns 1 and 2). In the third specification, we used both variables and supported our previous results from table \ref{mresult2} that the \textit{Same Group} is critical for forecasting future co-movement and common ownership only matters for pairs in the same group. 
+Table \ref{AllPairs} reports results of estimations for two models. These results suggest that pairs in the same group co-move more than stocks that are not in the same group. In addition, as we expected, pairs with common ownership and the high level of common ownership co-move greater than others (columns 2 and 8). In columns 3 and 9, we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2} that the \textit{Same Group} is critical for forecasting future co-movement, and common ownership does not matter for pairs. 
 
-In columns four and five of the table \ref{AllPairs},  we estimate our variable of interest for the subsample of pairs in the same business group. These specifications help us to separate common ownership and the group effect. The results establish that only a high level of common ownership will increase the co-movement of the stocks' abnormal return for the pairs in the same group. Furthermore, we estimate model \ref{model2} for the full sample. Two last columns of table \ref{AllPairs} reports the result of this estimation and confirm the table \ref{mresult2} results. When we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.
+In columns four, five, ten, and eleven of the table \ref{AllPairs},  we estimate our variable of interest for the subsample of pairs in the same business group and others that are not in the same group. These specifications help us to separate common ownership and the same group effect. The results establish that only a high level of common ownership will increase the co-movement of the stocks' abnormal return for the pairs in the same group. Furthermore, we estimate model \ref{model1} and \ref{model2} for the full sample. Columns seventh and fourteenth of table \ref{AllPairs} reports the result of this estimation and confirm the results of table \ref{mresult2}. 
 
+In conclusion , these results show that same business group is more important than common ownership. In fact, when we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.
+\begin{landscape}
 		\begin{table}[htbp]
-	\centering
+%	\centering
 	\caption{Non-connected Co-movement}
-%	\resizebox{\textwidth}{!}{
-%		\input{Q2mresultAllPairs.tex}
-%	}
-\label{AllPairs}
-	\resizebox{\textwidth}{!}{
+	\label{AllPairs}
+	\resizebox{1.7\textwidth}{!}{
 		\input{Output/Q3mresultAllPairs.tex}
 	}
 \end{table}
+\end{landscape}
+
 
 \FloatBarrier
 
