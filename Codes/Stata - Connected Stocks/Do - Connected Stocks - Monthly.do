@@ -354,7 +354,7 @@ esttab   v0 v1 v11 v111   v2 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Obser
 /*NMFCAMQ3*/
 
  
-replace median = 0 if forthquarter =! 1
+replace median = 0 if forthquarter != 1
 replace median = 1 if forthquarter == 1
 
 replace NMFCAM = NMFCA * median
@@ -496,14 +496,14 @@ esttab   v0 v1 v11 v2  v4 v5 v3   , nomtitle label  r2 n compress  keep(NMFCA NM
 
 /*NMFCA Just after Q3*/
 
-eststo v0: quietly asreg monthlyρ_5_f  NMFCA if forthquarter == 1 , fmb newey(4) 
+eststo v0: quietly asreg monthlyρ_5_f  sbgroup if forthquarter == 1 , fmb newey(4) 
 estadd loc GroupFE "No" , replace
 
 eststo v1: quietly asreg monthlyρ_5_f NMFCA  if forthquarter == 1, fmb newey(4)
 estadd loc GroupFE "No" , replace
 
 
-eststo v11: quietly asreg monthlyρ_5_f NMFCA  sgroup if forthquarter == 1, fmb newey(4) 
+eststo v11: quietly asreg monthlyρ_5_f NMFCA  sbgroup if forthquarter == 1, fmb newey(4) 
 estadd loc GroupFE "No" , replace
 
 eststo v111: quietly asreg monthlyρ_5_f NMFCA  sbgroup sgroup if forthquarter == 1, fmb newey(4)
@@ -521,7 +521,7 @@ estadd loc GroupFE "Yes" , replace
 
 
 
-esttab   /*v0*/ v1 v11 v111   v2 v21 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(NMFCA sgroup sbgroup NMFCAG) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using QTimemresult2subsample-slide.tex ,replace
+esttab   v0 v1 v11 v111   v2 v21 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(sbgroup NMFCA  NMFCAG sgroup ) compress mgroups("Dependent Variable: Future Monthly Correlation of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using QTimemresult2subsample-slide.tex ,replace
 
 
 

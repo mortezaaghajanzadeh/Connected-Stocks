@@ -15,6 +15,8 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{subcaption}
+ \usepackage{pdflscape}
+
 
 
 \captionsetup{font=footnotesize,labelfont=footnotesize}
@@ -707,7 +709,7 @@ In conclusion, the multiple waves of privatization with the development of the s
 \section{Results}
 
 \subsection{Forecasting Co-movement}
-
+\label{Forecasting Co-movement}
 Our specific interest is how the common ownership affects a pair of stocks return co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common ownership in the current period is associated with a higher level of correlation in the following month. We empirically test the impact of current measured common ownership on the next period's co-movement.
  \begin{figure}[htbp]
  \centering  
@@ -728,72 +730,59 @@ In columns three and four, we estimate our simplified model with only common own
 In the fifth specification of table \ref{mresult2}, we use both \textit{Same Group}  and $\text{FCA}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that pair in the same business group affects more than a higher level of common ownership.
  Furthermore, in the sixth and seventh columns of table \ref{mresult2}, we restrict our investigation to two subsamples. In the first one, we run our model for the pairs in the same business group and others who do not belong to the same one in the second one. It provides evidence that common ownership only matters for the pairs in the same business groups. 
  
- Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{FCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. These results aver that $\text{FCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. On the other hand, as shown in figure \ref{BGSummary}, pairs in the same business group have a higher level of common ownership than others. This evidence, in line with figure \ref{mcorr50}, implies that a higher level of common ownership has a major effect on the pair's co-movement.  By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. 
- 
+ Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{FCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. These results aver that $\text{FCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. On the other hand, as shown in figure \ref{BGSummary} and table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, for further analysis, we restrict our analysis to pairs in the fourth quarter of the common ownership.
+ \begin{landscape}
 \begin{table}[htbp]
-\centering
-\caption{Connected Co-movement}
-\label{mresult2}
-    \resizebox{1\textwidth}{!}{
-\input{Output/mresult2-slide.tex}
-}
+	\centering
+	\caption{Connected Co-movement}
+	\label{mresult2}
+%	\resizebox{1\textwidth}{!}{
+		\input{Output/mresult2-slide.tex}
+%	}
 \end{table}
-
+ \end{landscape}
 \FloatBarrier
-
 \subsection{High level of common ownership}
-
+In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' comovement. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{FCA}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future comovement and current measurement of common ownership for that pairs. As you can see in the left panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' comovement although for a high level of common ownership.
 \begin{figure}[htbp]
 	\centering  
 	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
+	\caption{text}
+	\label{Qmcorr5lrd}
 \end{figure}
-
 \begin{figure}[htbp]
 	\centering  
-	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5subsample.eps"}
+	\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+	\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
+	\caption{text}
+	\label{Qmcorr5subsample}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
-\end{figure}
-
-
-\begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.85\linewidth]{"Output/QarterSummary.eps"}
-\end{figure}
-
-\begin{figure}   
-	\centering
-	\includegraphics[width=0.45\linewidth]{"Output/sameIndustryinQuarter.eps"}
-	\includegraphics[width=0.45\linewidth]{"Output/sameIBGinQuarter.eps"}
-\end{figure}
-\FloatBarrier
-
+ For detailed analysis, we estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the sub sample of high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As we expected, the presence of firms in the same business group has a high statistical and economical significant effect on forecasting future comovements. Columns six and seven proves our prior explanations for the importance of business group compared to common ownership in the pairs with a higher level of common ownership.
 
 \begin{table}[htbp]
 	\centering
 	\caption{\scriptsize}
-	\label{Qmresult2subsanple}
+	\label{QTimemresult2subsample}
 	\resizebox{0.85\textwidth}{!}{
 		\input{Output/QTimemresult2subsample-slide.tex}
 	}
 \end{table}
 
+When we restrict our analysis for the high level of common ownership, our results may bee driven from pairs' characteristics. 
 
 
+\begin{figure}[htbp]
+	\centering  
+	\caption{text}
+	\includegraphics[width=0.85\linewidth]{"Output/QarterSummary.eps"}
+\end{figure}
 
 \FloatBarrier
-
-
-
-
-% % % % % 
-% 		%
-% % % % %
-
   By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement.
+
+
+
 \subsection{All Pairs}
 In the former analyses, we restrict our investigation to firms with at least one common owner. This restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner.As shown in figure \ref{Qmcorr5lrd} We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
 \input{Model12}
