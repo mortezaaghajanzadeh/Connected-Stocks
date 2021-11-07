@@ -161,13 +161,15 @@ summ monthlyfcapf if monthlyfcapf>0
 
 rename NMFCA vv
 
+/*
 eststo v1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
+*/
 
  
-eststo v3 : quietly asreg monthlyρ_5_f median  NMFCAGM  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v3 : quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
@@ -177,25 +179,28 @@ estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
+/*
 eststo v5 : quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
+*/
 
 
 
- 
+
  eststo v6: quietly asreg monthlyρ_5_f median  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
- eststo v7: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+
+eststo v7: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v8 : quietly asreg monthlyρ_5_f median  NMFCAGM  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
+eststo v8 : quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "Yes" , replace
@@ -207,14 +212,29 @@ estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
-eststo v10 : quietly asreg monthlyρ_5_f vv NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v10 : quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
+ 
+eststo v11 : quietly asreg monthlyρ_5_f median  NMFCAGM  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
 
-esttab  v4 v9 v5 v10 v1 v6 v7 v3 v8,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median  NMFCAGM sbgroup vv) order(vv median   sbgroup NMFCAGM )  compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q3mresultAllPairs.tex ,replace
+
+eststo v12: quietly asreg monthlyρ_5_f median  NMFCAGM  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "Yes" , replace
+
+
+
+esttab  v4 v9 /*v5*/ v10 /*v1 */ v6 v7 v3 v11 v8 v12,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median NMFCAG sbgroup vv NMFCAGM) order(sbgroup vv median   NMFCAG NMFCAGM )  compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+
+,using Q3mresultAllPairs.tex ,replace
 
 
 rename  vv NMFCA
