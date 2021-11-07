@@ -236,7 +236,7 @@ estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
-esttab  v4 v9  v10 v7 v3 v8 v13 v1 v5  v6   v11  v12,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median NMFCAG sbgroup vv mvv) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
+esttab  v4 v9  v10 v7 v3 v8 v13 v1 v5  v6   v11  v12,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median NMFCAG sbgroup vv mvv) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
 
 
 rename  vv NMFCA
