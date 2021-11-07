@@ -716,12 +716,6 @@ Our specific interest is how the common ownership affects a pair of stocks retur
     \caption{Future monthly correlation for different level of common ownership at this period }
     \label{mcorr50}
 \end{figure}
- \begin{figure}[htbp]
-	\centering  
-	\centering
-	\includegraphics[width=0.7\linewidth]{"Output/Qmcorr5lrd.eps"} \caption{Future monthly correlation for different level of common ownership at this period }
-	\label{Qmcorr5lrd}
-\end{figure}
 
 For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{FCA}^*_{ij,t}$, $\textit{SameGroup}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
 \input{Model11}
@@ -745,13 +739,63 @@ In the fifth specification of table \ref{mresult2}, we use both \textit{Same Gro
 }
 \end{table}
 
+\FloatBarrier
+
+\subsection{High level of common ownership}
+
+\begin{figure}[htbp]
+	\centering  
+	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering  
+	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5subsample.eps"}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering  
+	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering  
+	\includegraphics[width=0.85\linewidth]{"Output/QarterSummary.eps"}
+\end{figure}
+
+\begin{figure}   
+	\centering
+	\includegraphics[width=0.45\linewidth]{"Output/sameIndustryinQuarter.eps"}
+	\includegraphics[width=0.45\linewidth]{"Output/sameIBGinQuarter.eps"}
+\end{figure}
+\FloatBarrier
+
+
+\begin{table}[htbp]
+	\centering
+	\caption{\scriptsize}
+	\label{Qmresult2subsanple}
+	\resizebox{0.85\textwidth}{!}{
+		\input{Output/QTimemresult2subsample-slide.tex}
+	}
+\end{table}
+
+
+
+
+\FloatBarrier
+
+
+
 
 % % % % % 
 % 		%
 % % % % %
 
-
-In the former analyses, we restrict our investigation to firms with at least one common owner. This restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner. We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
+  By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement.
+\subsection{All Pairs}
+In the former analyses, we restrict our investigation to firms with at least one common owner. This restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner.As shown in figure \ref{Qmcorr5lrd} We define a dummy variable that equals one if pairs' common ownership, $\text{FCA}^*_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}:
 \input{Model12}
 
 In table \ref{AllPairs}, we show that pairs in the same group co-move with each other more than stocks that are not in the same group. In addition, as we expected, pairs by the high level of common ownership co-move greater than others (columns 1 and 2). In the third specification, we used both variables and supported our previous results from table \ref{mresult2} that the \textit{Same Group} is critical for forecasting future co-movement and common ownership only matters for pairs in the same group. 
@@ -777,42 +821,27 @@ In columns four and five of the table \ref{AllPairs},  we estimate our variable 
 
 
 
-		
-		\begin{figure}
-			\centering
-			\caption{Random Pairs from Same Business Group}
-			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA.eps}
-			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA_t.eps}
-		\end{figure}
-
-
-
-
-
-
-
-		\begin{figure}
-			\centering
-			\caption{Random Pairs from Same Size}
-			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA.eps}
-			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA_t.eps}
-		\end{figure}
-
-
-
-
-
-		
-
-
-		\begin{figure}
-			\centering
-			\caption{Random Pairs from Same Industry}
-			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA.eps}	
-			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA_t.eps}
-		\end{figure}
-
-
+%		
+%		\begin{figure}
+%			\centering
+%			\caption{Random Pairs from Same Business Group}
+%			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA.eps}
+%			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA_t.eps}
+%		\end{figure}
+%
+%		\begin{figure}
+%			\centering
+%			\caption{Random Pairs from Same Size}
+%			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA.eps}
+%			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA_t.eps}
+%		\end{figure}
+%
+%		\begin{figure}
+%			\centering
+%			\caption{Random Pairs from Same Industry}
+%			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA.eps}	
+%			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA_t.eps}
+%		\end{figure}
 
 
 \FloatBarrier
@@ -825,51 +854,6 @@ In columns four and five of the table \ref{AllPairs},  we estimate our variable 
 
 
 
-
-\subsection{High level of common ownership}
-
- \begin{figure}[htbp]
- \centering  
-\includegraphics[width=0.6\linewidth]{"Qmcorr5lrd.eps"}
-\end{figure}
-
- \begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.6\linewidth]{"Qmcorr5subsample.eps"}
-\end{figure}
-
- \begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.6\linewidth]{"Qmcorr5lrdbgsubsample.eps"}
-\end{figure}
-
-
- \begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.85\linewidth]{"QarterSummary.eps"}
-\end{figure}
-
-	\begin{figure}   
-	\centering
-	\includegraphics[width=0.45\linewidth]{"sameIndustryinQuarter.eps"}
-	\includegraphics[width=0.45\linewidth]{"sameIBGinQuarter.eps"}
-\end{figure}
-\FloatBarrier
-
-
-\begin{table}[htbp]
-	\centering
-	\caption{\scriptsize}
-	\label{Qmresult2subsanple}
-	\resizebox{0.85\textwidth}{!}{
-		\input{Qmresult2subsanple-slide.tex}
-	}
-\end{table}
-
-
-
-
-\FloatBarrier
 
 
 \subsection{Evidence for correlated trading }
