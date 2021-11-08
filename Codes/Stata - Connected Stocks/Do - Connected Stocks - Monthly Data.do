@@ -91,11 +91,11 @@ label variable ImbalanceSbgroup  " $ \text{Low Imbalance std} \times {\text{Same
 
 gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
-label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times \text{FCA}^*  $ "
+label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times (\text{FCA}^*)  $ "
 
 
 gen lowimbalancestdFCA = lowimbalancestd * nmfca
-label variable lowimbalancestdFCA  " $ \text{Low Imbalance std} \times (\text{FCAP}^*)  $ "
+label variable lowimbalancestdFCA  " $ \text{Low Imbalance std} \times (\text{FCA}^*)  $ "
 
 
 label variable sbgroup "Same Group"
