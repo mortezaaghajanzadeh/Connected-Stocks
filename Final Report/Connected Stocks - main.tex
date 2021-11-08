@@ -14,7 +14,7 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{subcaption}
-
+ \usepackage{pdflscape}
 
 \captionsetup{font=footnotesize,labelfont=footnotesize}
 
@@ -52,13 +52,13 @@
 	\maketitle
 \section*{Effects}
 \subsection*{\textbf{Hypothesis 1}}
- Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation. The effect is stronger for pairs that are in the same business groups.
+ Simple measures of institutional connnectedness statistically and economically improve forecasts of cross-sectional variation in the correlation only for the pairs in the same business group. The effect comes from business group which is the indirect common ownership.
 
 		\begin{table}[htbp]
 	\centering
 	\caption{text}
 	\resizebox{\textwidth}{!}{
-		\input{mresult2-slide.tex}
+		\input{Output/mresult2-slide.tex}
 	}
 \end{table}
 
@@ -67,27 +67,31 @@
 	
 \subsection*{\textbf{Hypothesis 2}}
  Pairs of companies belonging to the same business group have a higher correlation than pairs not in the same group. In addition, Pairs that belong to the same group and have a common ownership co-move more than pairs that don't have common ownership. 
-		\begin{table}[htbp]
-	\centering
-	\caption{All pairs}
-%	\resizebox{\textwidth}{!}{
-%		\input{Q2mresultAllPairs.tex}
-%	}
-\resizebox{\textwidth}{!}{
-	\input{Q3mresultAllPairs.tex}
-}
-\end{table}
+ 
+\begin{landscape}
+	\begin{table}[htbp]
+		\caption{Non-connected Co-movement}
+		\label{AllPairs}
+		\resizebox{1.7\textwidth}{!}{
+			\input{Output/Q3mresultAllPairs.tex}
+		}
+	\end{table}
+\end{landscape}
 
 \newpage
 \subsection*{\textbf{Hypothesis 3}} 
 Stock returns of group affiliated firms exhibit robustly positive comovement even after controlling for both market and industry effects. Group betas
 ($ \beta_{Businussgroup} $) are highly significant across all models.
 
+
+
 			\begin{table}[htbp]
 		\centering
 		\caption{Cross-sectional average of the time-series coefficients}
 		\resizebox{\textwidth}{!}{
+			
 			\input{BGReturn.tex}
+		
 		}
 	\end{table}
 
