@@ -256,6 +256,16 @@ correlate  median  NMFCAGM sbgroup
 /****/
 
 
+
+asreg monthlyρ_5_f median sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn monthlyρ_5 , fmb newey(4)
+
+
+
+
+
+
+/**/
+
 gen medianm = 0
 replace medianm = 1 if secondquarter == 1
 
