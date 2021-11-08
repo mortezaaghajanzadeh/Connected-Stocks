@@ -159,6 +159,12 @@ summ MFCA if median == 1
 summ monthlyfcapf if monthlyfcapf>0
 
 
+
+
+
+
+
+
 rename NMFCA vv
 rename NMFCAGM mvv
 
@@ -255,6 +261,8 @@ rename mvv NMFCAGM
 correlate  median  NMFCAGM sbgroup
 /****/
 
+
+/*
 
 
 asreg monthlyρ_5_f median sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn monthlyρ_5 , fmb newey(4)

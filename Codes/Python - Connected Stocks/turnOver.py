@@ -45,7 +45,7 @@ df = df[~df.title.str.startswith("ح.")]
 
 # %%
 sdf = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
-sdf = sdf.set_index(["date", "symbol"])
+sdf = sdf.set_index(["date", "name"])
 mapdict = dict(zip(sdf.index, sdf.shrout))
 df["date"] = df.date.astype(int)
 df["shrout"] = df.set_index(["date", "symbol"]).index.map(mapdict)
@@ -93,7 +93,7 @@ df.loc[df.uo.isnull(), "Grouped"] = 0
 df["volume"] = df["volume"].astype(float)
 df["value"] = df["value"].astype(float)
 df["marketCap"] = df.close_price * df.shrout
-df["return"] = df.groupby("symbol").close_price.pct_change()
+# df["return"] = df.groupby("symbol").close_price.pct_change()
 
 df["Amihud_volume"] = ln(abs(df["return"]) / df.volume)
 df["TurnOver"] = ln(df.volume / df.marketCap)
