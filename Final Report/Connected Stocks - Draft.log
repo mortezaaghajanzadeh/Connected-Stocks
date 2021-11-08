@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  8 NOV 2021 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 NOV 2021 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -766,10 +766,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--92
 (./Output/summaryOfOwnership.tex) [3] [4] (./Output/summaryOfPairs.tex)
 [5] [6]
 Package epstopdf Info: Source file: <Output/idMonth.eps>
-(epstopdf)                    date: 2021-11-04 11:03:04
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 56789 bytes
 (epstopdf)             Output file: <Output/idMonth-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 11:12:22
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 19534 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/idMonth-eps-convert
 ed-to.pdf Output/idMonth.eps>
@@ -814,11 +814,11 @@ Overfull \hbox (30.77202pt too wide) in paragraph at lines 674--678
 
 [16] [17]
 Package epstopdf Info: Source file: <Output/sameIndustryinBG.eps>
-(epstopdf)                    date: 2021-11-04 11:10:26
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 19035 bytes
 (epstopdf)             Output file: <Output/sameIndustryinBG-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-11-04 11:12:50
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 14123 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/sameIndustryinBG-ep
 s-converted-to.pdf Output/sameIndustryinBG.eps>
@@ -831,11 +831,11 @@ Package pdftex.def Info: Output/sameIndustryinBG-eps-converted-to.pdf  used on
 input line 694.
 (pdftex.def)             Requested size: 187.19833pt x 121.53235pt.
 Package epstopdf Info: Source file: <Output/sameIndustryNoinBG.eps>
-(epstopdf)                    date: 2021-11-04 11:10:32
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 16047 bytes
 (epstopdf)             Output file: <Output/sameIndustryNoinBG-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2021-11-04 11:12:53
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 12246 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/sameIndustryNoinBG-
 eps-converted-to.pdf Output/sameIndustryNoinBG.eps>
@@ -848,10 +848,10 @@ Package pdftex.def Info: Output/sameIndustryNoinBG-eps-converted-to.pdf  used o
 n input line 695.
 (pdftex.def)             Requested size: 187.19833pt x 116.06651pt.
 Package epstopdf Info: Source file: <Output/BGSummary.eps>
-(epstopdf)                    date: 2021-11-04 11:10:44
+(epstopdf)                    date: 2021-11-04 19:49:00
 (epstopdf)                    size: 36255877 bytes
 (epstopdf)             Output file: <Output/BGSummary-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 11:12:58
+(epstopdf)                    date: 2021-11-04 19:49:00
 (epstopdf)                    size: 104654 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/BGSummary-eps-conve
 rted-to.pdf Output/BGSummary.eps>
@@ -866,10 +866,10 @@ ine 702.
  [18 <./Output/sameIndustryinBG-eps-converted-to.pdf> <./Output/sameIndustryNoi
 nBG-eps-converted-to.pdf>] [19 <./Output/BGSummary-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2021-11-03 11:42:06
+(epstopdf)                    date: 2021-11-03 11:35:09
 (epstopdf)                    size: 26740 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 10:50:26
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 23157 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
 ed-to.pdf Output/mcorr50.eps>
@@ -892,10 +892,10 @@ LaTeX Warning: Float too large for page by 0.9269pt on input line 742.
 
 [23]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
-(epstopdf)                    date: 2021-11-04 10:07:13
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 32367 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrd-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 10:57:23
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 26268 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrd-eps-conv
 erted-to.pdf Output/Qmcorr5lrd.eps>
@@ -908,11 +908,11 @@ Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input
 line 749.
 (pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-11-04 10:11:13
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 31146 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2021-11-04 10:57:45
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 15174 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
@@ -927,11 +927,11 @@ Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
 d on input line 755.
 (pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2021-11-04 10:11:28
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 24973 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-11-04 10:57:42
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 16150 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
@@ -949,11 +949,11 @@ input line 756.
  <./Output/Qmcorr5lrd-eps-converted-to.pdf>]
 (./Output/QTimemresult2subsample-slide.tex)
 Package epstopdf Info: Source file: <Output/QarterSummary.eps>
-(epstopdf)                    date: 2021-11-04 11:11:14
+(epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 53213275 bytes
 (epstopdf)             Output file: <Output/QarterSummary-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2021-11-04 11:13:13
+(epstopdf)                    date: 2021-11-08 11:17:07
 (epstopdf)                    size: 158797 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/QarterSummary-eps-c
 onverted-to.pdf Output/QarterSummary.eps>
@@ -995,10 +995,10 @@ Overfull \hbox (24.4107pt too wide) in paragraph at lines 889--893
 
 [33] [34] (./BGReturn.tex) [35] [36]
 Package epstopdf Info: Source file: <mcorr50.eps>
-(epstopdf)                    date: 2021-07-12 13:29:43
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 27040 bytes
 (epstopdf)             Output file: <mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-07-12 13:30:47
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 23706 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr50-eps-converted-to.p
 df mcorr50.eps>
@@ -1010,10 +1010,10 @@ File: mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: mcorr50-eps-converted-to.pdf  used on input line 922.
 (pdftex.def)             Requested size: 312.00119pt x 226.91505pt.
 Package epstopdf Info: Source file: <mcorr50bg.eps>
-(epstopdf)                    date: 2021-07-12 13:29:37
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 38831 bytes
 (epstopdf)             Output file: <mcorr50bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-09-19 15:15:26
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 20476 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr50bg-eps-converted-to
 .pdf mcorr50bg.eps>
@@ -1040,10 +1040,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 940.
 
 Package epstopdf Info: Source file: <mcorr5Polk.eps>
-(epstopdf)                    date: 2021-07-12 13:28:15
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 27355 bytes
 (epstopdf)             Output file: <mcorr5Polk-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-09-19 15:15:30
+(epstopdf)                    date: 2021-10-17 19:54:13
 (epstopdf)                    size: 23727 bytes
 (epstopdf)             Command: <repstopdf --outfile=mcorr5Polk-eps-converted-t
 o.pdf mcorr5Polk.eps>
@@ -1114,7 +1114,7 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft.pdf" (44 pages, 936743 bytes).
+Output written on "Connected Stocks - Draft.pdf" (44 pages, 937193 bytes).
 PDF statistics:
  800 PDF objects out of 1000 (max. 8388607)
  596 compressed objects within 6 object streams
