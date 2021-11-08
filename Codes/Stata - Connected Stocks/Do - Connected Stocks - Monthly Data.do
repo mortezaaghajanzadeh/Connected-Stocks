@@ -297,3 +297,5 @@ label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{Sam
 
 
 summ sbgroup if bigbusinessgroupSgroup == 1
+
+summ id
