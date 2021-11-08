@@ -162,13 +162,13 @@ estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 estadd loc FE "Yes" , replace
 
-eststo v4 :  xi: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA  i.PairType, fmb newey(4)
+eststo v4 :  xi: quietly asreg monthlyρ_5_f NMFCA   NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA lowimbalancestdFCA  i.PairType, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 estadd loc FE "Yes" , replace
 
-eststo v5 :  xi: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA gdummy0-gdummy47  i.PairType, fmb newey(4)
+eststo v5 :  xi: quietly asreg monthlyρ_5_f NMFCA  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA lowimbalancestdFCA gdummy0-gdummy47  i.PairType, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "Yes" , replace
@@ -193,7 +193,7 @@ estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 estadd loc FE "Yes" , replace
 
-esttab   v1 v2 v3 v6  v7 v8 v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA  ) order(NMFCA sbgroup) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+esttab   v1 v2 v3 v6  v7 v8 v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA ) order(NMFCA sbgroup ImbalanceSbgroup ImbalanceSbgroupFCA) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
 
 
 esttab   v1 v2 v3 v6  v7 v8 v4 v5, nomtitle label   keep(NMFCA sbgroup lowimbalancestd ImbalanceSbgroup  ImbalanceSbgroupFCA ) order(NMFCA sbgroup) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
