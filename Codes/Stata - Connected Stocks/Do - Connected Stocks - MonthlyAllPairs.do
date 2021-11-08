@@ -261,6 +261,59 @@ rename mvv NMFCAGM
 correlate  median  NMFCAGM sbgroup
 /****/
 
+/*BigSmall*/
+
+
+
+ eststo v0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "All Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo Bv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 2, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Large Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo Bv1: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 2, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Large Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo Sv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 1, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Small Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo Sv1: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 1, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Small Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo SBv0: quietly  asreg monthlyρ_5_f NMFCA  sbgroup    sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 0, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Hybrid Firms" , replace
+estadd loc FE "No" , replace
+
+ eststo SBv1: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership  if PairType == 0, fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "Hybrid Firms" , replace
+estadd loc FE "No" , replace
+
+eststo v1: xi: quietly  asreg monthlyρ_5_f NMFCA  sbgroup  NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType , fmb newey(4) 
+estadd loc Controls "Yes" , replace
+estadd loc SubSample "All Firms" , replace
+estadd loc FE "Yes" , replace
+
+esttab v0 Bv0 Bv1  SBv0 SBv1 Sv0 Sv1 v1  , nomtitle label  s( N Controls  SubSample FE r2 ,  lab("Observations" "Controls" "Sub-sample" "Pair Size FE" "$ R^2 $"))   compress order(NMFCA sbgroup NMFCAG  FE) keep(NMFCA  sbgroup  NMFCAG  ) mgroups("Dependent Variable: Future Monthly Correlation of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+
+,using Qmresult4-slide.tex ,replace 
+
+
+
+
+
+
 
 /*
 
