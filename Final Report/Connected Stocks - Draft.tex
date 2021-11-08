@@ -814,7 +814,7 @@ In conclusion , these results show that same business group is more important th
 	\begin{table}[htbp]
 	\centering
 	\resizebox{1\textwidth}{!}{
-		\input{Output/Qmresult4-slide.tex}
+		\input{Output/Qmresult4-AllPairs.tex}
 	}
 \end{table}
 
@@ -858,19 +858,12 @@ We expected pairs in the same business groups with a low standard error of buy-s
 	}
 \end{table}
 \FloatBarrier
- \subsubsection{Big business group}
 
-
-
-
-\FloatBarrier
  \subsubsection{Turnover}
 
 Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
-
 We compute the daily change of measure by this definition $ \Delta \text{Measure}_{i,t} = \ln(\frac{\text{Measure}_{i,t}}{\text{Measure}_{i,t-1}}) $. 
 We estimate the following regression for each stock across trading days in given year separately and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
-
 \begin{equation*}
 	\begin{split}
 		\Delta \text{Measure}_{i,t} =  & \text{	}\alpha + \beta_{Market,t} \Delta \text{Measure}_{Market,t}  
@@ -878,7 +871,7 @@ We estimate the following regression for each stock across trading days in given
 	\end{split}
 \end{equation*}
 
-We use the turnover measure as a daily trading measures. We control for lead and lag changes in the two portfolio  and market's measures. In addition, we use size of the firm. [Table \ref{turnover}]
+We use the turnover measure as a daily trading measures. We control for lead and lag changes in the two portfolio and market's measures. In addition, we use size of the firm. As shown in Table \ref{turnover}, firms' change in turnover comes from market reaction and group's change. This observation shows that firms in one group trade together in each day. 
 
 \begin{table}[htbp]
 	\centering
@@ -898,6 +891,21 @@ We use the turnover measure as a daily trading measures. We control for lead and
 	}
 \end{table}
 
+
+\FloatBarrier
+
+
+ \subsubsection{Big business group}
+
+
+		\begin{table}[htbp]
+			\centering
+			\caption{heading}
+			\label{BigBusinessGroup}
+			\resizebox{0.8 \textwidth}{!}{
+				\input{Output/mresult2-BigBusinessGroup.tex}
+			}
+		\end{table}
 
 \FloatBarrier
 \section{Conclusion}
