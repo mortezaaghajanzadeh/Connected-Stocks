@@ -1,9 +1,12 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\turnovercrosssection.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\turnovercrosssection.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\turnovercrosssection_1400_06_28.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
+
 
 xtset id year
 
@@ -168,4 +171,6 @@ estadd loc timeEffect "Yes" , replace
 
 
 
-esttab v0 v00  v4 v04 v3 v03 v2 v02  v1 v01 v5 v05 v6 v06 ,keep(lag_Excess lag_lowimbalancestd lag_position lag_centrality ) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh lag_lowimbalancestd lag_position lag_centrality )  s( N  timeEffect controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))  nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Turnovercrosssection.tex ,replace
+esttab v0 v00  v4 v04 v3 v03 v2 v02  v1 v01 v5 v05 v6 v06 ,keep(lag_Excess lag_lowimbalancestd lag_position lag_centrality ) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh lag_lowimbalancestd lag_position lag_centrality )  s( N  timeEffect controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))  nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+
+,using Turnovercrosssection.tex ,replace

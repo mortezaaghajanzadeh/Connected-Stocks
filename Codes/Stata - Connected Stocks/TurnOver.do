@@ -1,9 +1,14 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\TurnOver.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\TurnOver_1400_06_28.csv", encoding(UTF-8) 
+
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\TurnOver_1400_06_28.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
+
+
 
 xtset  t regidyear
 gen lnmarketcap = ln(marketcap)
@@ -41,12 +46,12 @@ estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "Yes",replace
 
 
-cd "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks"
+cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 
 quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket,fmb newey(7) first  save(FirstStageTurnover)
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 
 replace deltagroup = delta_justmarketgroup
@@ -68,7 +73,7 @@ estadd loc control "Yes",replace
   
   
 
-// esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using turnover.tex ,replace
+esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using turnover.tex ,replace
 
 
 
@@ -101,11 +106,13 @@ estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "Yes" , replace
 
 
-cd "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks"
+// cd "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks"
+cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 
 quietly asreg delta_amihud delta_amihud_market delta_amihud_group lnmarketcap delta_amihud_industry mreturn lagmreturn leadmreturn return lagdelta_amihud_market leaddelta_amihud_market leaddelta_amihud_marketgroup lagdelta_amihud_marketgroup lagdelta_amihud_industry leaddelta_amihud_industry,fmb newey(7) first  save(FirstStageAmihud)
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 
 replace delta_amihud_group = delta_amihud_justmarketgr

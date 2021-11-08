@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 NOV 2021 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 NOV 2021 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,17 +973,29 @@ Overfull \hbox (71.00166pt too wide) in paragraph at lines 797--800
 [][] 
  []
 
-[29] (./Output/Qmresult4-AllPairs.tex) (./ImbalanceSummary.tex)
-<GroupedSTD.png, id=583, 491.8375pt x 311.1625pt>
-File: GroupedSTD.png Graphic file (type png)
-<use GroupedSTD.png>
-Package pdftex.def Info: GroupedSTD.png  used on input line 842.
-(pdftex.def)             Requested size: 312.00119pt x 197.39607pt.
- (./Model13.tex
-[30
+[29] (./Output/Qmresult4-AllPairs.tex) (./Output/ImbalanceSummary.tex)
+Package epstopdf Info: Source file: <Output/GroupedSTD.eps>
+(epstopdf)                    date: 2021-11-08 18:33:01
+(epstopdf)                    size: 13516063 bytes
+(epstopdf)             Output file: <Output/GroupedSTD-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-08 18:35:23
+(epstopdf)                    size: 236165 bytes
+(epstopdf)             Command: <repstopdf --outfile=Output/GroupedSTD-eps-conv
+erted-to.pdf Output/GroupedSTD.eps>
+(epstopdf)             \includegraphics on input line 842.
+Package epstopdf Info: Output file is already uptodate.
+<Output/GroupedSTD-eps-converted-to.pdf, id=583, 578.16pt x 289.08pt>
+File: Output/GroupedSTD-eps-converted-to.pdf Graphic file (type pdf)
+<use Output/GroupedSTD-eps-converted-to.pdf>
+Package pdftex.def Info: Output/GroupedSTD-eps-converted-to.pdf  used on input 
+line 842.
+(pdftex.def)             Requested size: 331.50238pt x 165.74773pt.
+
+(./Model13.tex [30
 
 
-]) (./Output/Imbalance.tex) [31 <./GroupedSTD.png>] [32] (./turnover.tex)
+]) (./Output/Imbalance.tex) [31 <./Output/GroupedSTD-eps-converted-to.pdf>] [32
+] (./turnover.tex)
 Overfull \hbox (24.40614pt too wide) in paragraph at lines 879--882
  [][] 
  []
@@ -1005,7 +1017,7 @@ Package epstopdf Info: Source file: <mcorr50.eps>
 df mcorr50.eps>
 (epstopdf)             \includegraphics on input line 936.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr50-eps-converted-to.pdf, id=633, 397.485pt x 289.08pt>
+<mcorr50-eps-converted-to.pdf, id=635, 397.485pt x 289.08pt>
 File: mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr50-eps-converted-to.pdf  used on input line 936.
@@ -1020,7 +1032,7 @@ Package epstopdf Info: Source file: <mcorr50bg.eps>
 .pdf mcorr50bg.eps>
 (epstopdf)             \includegraphics on input line 941.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr50bg-eps-converted-to.pdf, id=634, 397.485pt x 289.08pt>
+<mcorr50bg-eps-converted-to.pdf, id=636, 397.485pt x 289.08pt>
 File: mcorr50bg-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr50bg-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr50bg-eps-converted-to.pdf  used on input line 941
@@ -1050,7 +1062,7 @@ Package epstopdf Info: Source file: <mcorr5Polk.eps>
 o.pdf mcorr5Polk.eps>
 (epstopdf)             \includegraphics on input line 957.
 Package epstopdf Info: Output file is already uptodate.
-<mcorr5Polk-eps-converted-to.pdf, id=671, 397.485pt x 289.08pt>
+<mcorr5Polk-eps-converted-to.pdf, id=673, 397.485pt x 289.08pt>
 File: mcorr5Polk-eps-converted-to.pdf Graphic file (type pdf)
 <use mcorr5Polk-eps-converted-to.pdf>
 Package pdftex.def Info: mcorr5Polk-eps-converted-to.pdf  used on input line 95
@@ -1083,10 +1095,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 980.
  ) 
 Here is how much of TeX's memory you used:
- 20357 strings out of 480608
- 389465 string characters out of 5907536
+ 20356 strings out of 480608
+ 389599 string characters out of 5907536
  813466 words of memory out of 5000000
- 35640 multiletter control sequences out of 15000+600000
+ 35638 multiletter control sequences out of 15000+600000
  543011 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,60p,1212b,1067s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1115,10 +1127,10 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft.pdf" (46 pages, 939964 bytes).
+Output written on "Connected Stocks - Draft.pdf" (46 pages, 1145571 bytes).
 PDF statistics:
- 823 PDF objects out of 1000 (max. 8388607)
- 616 compressed objects within 7 object streams
+ 825 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
  137 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

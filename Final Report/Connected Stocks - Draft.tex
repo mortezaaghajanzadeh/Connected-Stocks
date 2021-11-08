@@ -828,18 +828,18 @@ In conclusion , these results show that same business group is more important th
 
  \subsubsection{Low imbalance std}
 For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
-We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
+We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  12.9\% and significantly (with pvalue of 0) lower than ungrouped firms. 
 
 \begin{table}[htbp]
 	\centering
 	\resizebox{0.75\textwidth}{!}{
-		\input{ImbalanceSummary.tex}
+		\input{Output/ImbalanceSummary.tex}
 	}
 	\label{tab:ImbalanceSummary}%
 \end{table}%
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{GroupedSTD}
+	\includegraphics[width=0.85\linewidth]{Output/GroupedSTD.eps}
 	\label{fig:GroupedSTD}
 \end{figure}
 

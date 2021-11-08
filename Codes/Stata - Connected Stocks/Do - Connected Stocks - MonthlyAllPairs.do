@@ -322,7 +322,16 @@ esttab v0 Bv0 Bv1  SBv0 SBv1 Sv0 Sv1 v1  , nomtitle label  s( N Controls  SubSam
 
 
 
+/**/
 
+
+
+
+
+
+binscatter monthlyρ_5_f NMFCA ,ytitle("{&rho} {sub:ij,t+1}") nquantiles(20) by (sbgroup) legend(pos(4) ring(0) col(1) label(1 "Separate Group") label(2 "Same Group") ) note("This figure graphs the correlation of daily 4Factor+Industry residuals in month t+1"" against our measure of institutional connectedness.") xtitle("FCA*") title("All Pairs")  msymbol(Th S) 
+graph export mcorr5BigSameG-AllPairs.eps,replace
+graph export mcorr5BigSameG-AllPairs.png,replace
 
 
 /*

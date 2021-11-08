@@ -785,10 +785,10 @@
 	
 		\begin{frame}{Data Summary}
 		\begin{itemize}
-			\item We use blockholders' data from 2015/03/25 \scriptsize{(1394/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
+			\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
 			\begin{itemize}
 				\item Includes of 1203 Days and 60 Months
-				\item Consists of 600 firm inculding 548 firm with common owners
+				\item Consists of 618 firm inculding 562 firm with common owners
 				
 			\end{itemize}
 		\end{itemize}
@@ -810,8 +810,8 @@
 		
 			\item Pairs consist of two firms  with at least one common owner
 			\begin{itemize}
-				\item  18692 unique pairs which is 10\% of possible pairs 
-				\tiny ($ \frac{548*547}{2}= 149878 $)
+				\item  93442 unique pairs which is 60\% of possible pairs 
+				\tiny ($ \frac{562*561}{2}= 149878 $)
 				\normalsize
 			\end{itemize}
 		\end{itemize}
@@ -1230,35 +1230,6 @@
 	\end{frame}
 	
 	
-
-%\begin{frame}{Business group \& Common-ownership}{regression}
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{1\textwidth}{!}{
-%			\input{Q2mresultAllPairs.tex}
-%		}
-%	\end{table}
-%\end{frame}
-
-\begin{frame}{All non-common owner pairs}{regression}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textwidth}{!}{
-			\input{Q3mresultAllPairs.tex}
-		}
-	\end{table}
-\end{frame}
-
-%	\begin{frame}{Business group return}
-%	
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{0.6\textwidth}{!}{
-%			\input{BGReturn.tex}
-%		}
-%	\end{table}
-%\end{frame}
-	
 	\subsection{Discontinuity}
 	
 	\begin{frame}{ Future Correlation via $ FCA $}{Discontinuity}\label{Monthly5}
@@ -1362,6 +1333,29 @@
 	}
 \end{table}	
 	\end{frame}
+
+
+
+\begin{frame}{All non-common owner pairs}{regression}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{1\textwidth}{!}{
+			\input{Output/Q3mresultAllPairs.tex}
+		}
+	\end{table}
+\end{frame}
+
+%	\begin{frame}{Business group return}
+%	
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.6\textwidth}{!}{
+%			\input{BGReturn.tex}
+%		}
+%	\end{table}
+%\end{frame}
+	
+
 
 
 
@@ -1724,10 +1718,18 @@
 	\section{Correlated trading}
 
 \begin{frame}{Ins Imbalance}
+			 \begin{equation*}
+				 \text{InsImbalance}_\text{i} = (\frac{\text{InsBuy} - \text{InsSell}}{\text{InsBuy} + \text{InsSell}})_{\text{value}}
+			\end{equation*}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Output/GroupedSTD.eps}
+	\label{fig:GroupedSTD}
+\end{figure}
+\end{frame}
 
-%			 \begin{equation*}
-%				 \text{InsImbalance}_\text{i} = \frac{\text{InsBuy} - \text{InsSell}}{\text{InsBuy} + \text{InsSell}}
-%			\end{equation*}
+\begin{frame}{Ins Imbalance}
+
 
 				\begin{table}[htbp]
 			\centering
@@ -1748,7 +1750,7 @@
 	\begin{table}[htbp]
 		\centering
 		\resizebox{0.85\textheight}{!}{
-			\input{turnover.tex}
+			\input{Output/turnover.tex}
 		}
 	\end{table}
 	
@@ -1758,7 +1760,7 @@
 \centering
 		\resizebox{0.95\textwidth}{!}{
 			\centering
-			\input{Turnovercrosssection.tex}
+			\input{Output/Turnovercrosssection.tex}
 		}
 		\label{Turnovercrosssection}
 	\end{table}
