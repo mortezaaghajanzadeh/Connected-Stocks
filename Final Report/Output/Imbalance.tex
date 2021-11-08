@@ -2,36 +2,36 @@
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{8}{c}}
 \hline\hline
-          &\multicolumn{8}{c}{Future Monthly Corr. of 4F+Ind. Residuals}                                                                                          \\\cmidrule(lr){2-9}
-          &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                &\multicolumn{8}{c}{Future Monthly Corr. of 4F+Ind. Residuals}                                                                                          \\\cmidrule(lr){2-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
 \hline
-NMFCA     & 0.000308         & 0.000384         & 0.000320         &                  &  0.00945\sym{***}&0.0000347         & 0.000123         &0.0000843         \\
-          &   (0.60)         &   (0.81)         &   (0.68)         &                  &   (6.07)         &   (0.07)         &   (0.17)         &   (0.11)         \\
+$ \text{FCA*} $ & 0.000308         & 0.000384         & 0.000320         &                  &  0.00945\sym{***}&0.0000347         & 0.000123         &0.0000843         \\
+                &   (0.60)         &   (0.81)         &   (0.68)         &                  &   (6.07)         &   (0.07)         &   (0.17)         &   (0.11)         \\
 [1em]
-sbgroup   &   0.0164\sym{***}&   0.0164\sym{***}&  0.00765\sym{***}&  0.00786\sym{***}&                  &  0.00974\sym{***}&  0.00241         &  0.00154         \\
-          &   (8.68)         &   (8.68)         &   (3.64)         &   (3.90)         &                  &   (5.36)         &   (0.79)         &   (0.48)         \\
+Same Group      &   0.0164\sym{***}&   0.0164\sym{***}&  0.00765\sym{***}&  0.00786\sym{***}&                  &  0.00974\sym{***}&  0.00241         &  0.00154         \\
+                &   (8.68)         &   (8.68)         &   (3.64)         &   (3.90)         &                  &   (5.36)         &   (0.79)         &   (0.48)         \\
 [1em]
-lowimbalancestd&                  &  0.00119         & 0.000325         & 0.000192         &   0.0241\sym{***}& 0.000469         &0.0000788         & 0.000481         \\
-          &                  &   (1.29)         &   (0.35)         &   (0.19)         &   (6.15)         &   (0.52)         &   (0.08)         &   (0.31)         \\
+Low Imbalance std&                  &  0.00119         & 0.000325         & 0.000192         &   0.0241\sym{***}& 0.000469         &0.0000788         & 0.000481         \\
+                &                  &   (1.29)         &   (0.35)         &   (0.19)         &   (6.15)         &   (0.52)         &   (0.08)         &   (0.31)         \\
 [1em]
-ImbalanceSbgroup&                  &                  &   0.0238\sym{***}&   0.0240\sym{***}&                  &                  &   0.0142\sym{**} &   0.0142\sym{**} \\
-          &                  &                  &   (6.85)         &   (6.90)         &                  &                  &   (2.95)         &   (3.14)         \\
+ $ \text{Low Imbalance std} \times {\text{SameGroup} } $ &                  &                  &   0.0238\sym{***}&   0.0240\sym{***}&                  &                  &   0.0142\sym{**} &   0.0142\sym{**} \\
+                &                  &                  &   (6.85)         &   (6.90)         &                  &                  &   (2.95)         &   (3.14)         \\
 [1em]
-NMFCAG    &                  &                  &                  &                  &                  &                  &  0.00580\sym{**} &  0.00645\sym{**} \\
-          &                  &                  &                  &                  &                  &                  &   (2.77)         &   (2.94)         \\
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &                  &  0.00580\sym{**} &  0.00645\sym{**} \\
+                &                  &                  &                  &                  &                  &                  &   (2.77)         &   (2.94)         \\
 [1em]
-lowimbalancestdFCA&                  &                  &                  &                  &                  &                  &-0.000584         &-0.000483         \\
-          &                  &                  &                  &                  &                  &                  &  (-0.77)         &  (-0.57)         \\
+ $ \text{Low Imbalance std} \times (\text{FCAP}^*) } $ &                  &                  &                  &                  &                  &                  &-0.000584         &-0.000483         \\
+                &                  &                  &                  &                  &                  &                  &  (-0.77)         &  (-0.57)         \\
 [1em]
-ImbalanceSbgroupFCA&                  &                  &                  &                  &                  &   0.0209\sym{***}&   0.0126\sym{***}&   0.0120\sym{***}\\
-          &                  &                  &                  &                  &                  &   (9.69)         &   (4.44)         &   (3.91)         \\
+ $ \text{Low Imbalance std} \times {\text{SameGroup} } \times \text{FCA}^*  $ &                  &                  &                  &                  &                  &   0.0209\sym{***}&   0.0126\sym{***}&   0.0120\sym{***}\\
+                &                  &                  &                  &                  &                  &   (9.69)         &   (4.44)         &   (3.91)         \\
 \hline
-Observations&  1665996         &  1665996         &  1665996         &  1665996         &    58337         &  1665996         &  1665996         &  1665996         \\
-Group Effect&       No         &       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
-Pair Size FE&      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-Sub-sample&    Total         &    Total         &    Total         &    Total         &Same Groups         &    Total         &    Total         &    Total         \\
-Controls  &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-$ R^2 $   &  0.00120         &  0.00132         &  0.00144         &  0.00129         &   0.0210         &  0.00149         &  0.00166         &  0.00643         \\
+Observations    &  1665996         &  1665996         &  1665996         &  1665996         &    58337         &  1665996         &  1665996         &  1665996         \\
+Group Effect    &       No         &       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
+Pair Size FE    &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Sub-sample      &    Total         &    Total         &    Total         &    Total         &Same Groups         &    Total         &    Total         &    Total         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         &  0.00120         &  0.00132         &  0.00144         &  0.00129         &   0.0210         &  0.00149         &  0.00166         &  0.00643         \\
 \hline\hline
 \multicolumn{9}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
