@@ -15,7 +15,7 @@ df = pd.read_parquet(n)
 df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
 #%%
-
+list(df)
 
 #%%
 gg = (
@@ -112,6 +112,10 @@ tempt
 # del df
 n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 df2 = pd.read_parquet(n)
+#%%
+df2.id.max(),len(set(df2.id_x.to_list()
+                     + df2.id_y.to_list()))
+
 #%%
 PG = df2[
     ["BGId_x", "BGId_y", "year_of_year", "id", "sBgroup", "numberCommonHolder"]
