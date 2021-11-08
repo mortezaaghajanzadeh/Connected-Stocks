@@ -826,7 +826,7 @@ In conclusion , these results show that same business group is more important th
 
 \subsection{Evidence for correlated trading }
 
- 
+ \subsubsection{Low imbalance std}
 For each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). 
 We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  13.1\% and significantly (with t-stat of 12.57) lower than ungrouped firms. 
 
@@ -848,7 +848,7 @@ For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose av
 So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.  We use the previous methodology for estimating that model this model:
 \input{Model13}
 
-We expected pairs in the same business groups with a low standard error of buy-sell imbalance comove more than other pairs. Table \ref{Imbalance} reports estimation results. In columns three and four, we use our defined dummy variable and the same group. These results show that pairs in the same group of low imbalance std will comove more than other pairs. Moreover, in the subsample of same business groups, pairs in the low imbalance std comove greater than others. 
+We expected pairs in the same business groups with a low standard error of buy-sell imbalance comove more than other pairs. Table \ref{Imbalance} reports estimation results. In columns three and four, we use our defined dummy variable and the same group. These results show that pairs in the same group of low imbalance std will comove more than other pairs. Moreover, in the subsample of same business groups, pairs in the low imbalance std comove greater than others.  For detailed analysis, we use the interaction of three variables of interest. For using this triple interaction, we use all the interactions between variables. Columns seven and eight report our results. By increasing common ownership in the same groups, pairs in the same business group of low imbalance std will comove greater than others.
 \begin{table}[htbp]
 	\centering
 	\caption{text}
@@ -858,7 +858,13 @@ We expected pairs in the same business groups with a low standard error of buy-s
 	}
 \end{table}
 \FloatBarrier
+ \subsubsection{Big business group}
 
+
+
+
+\FloatBarrier
+ \subsubsection{Turnover}
 
 Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
 
