@@ -806,36 +806,17 @@ In conclusion , these results show that same business group is more important th
 
 
 
-
-
-%		
-%		\begin{figure}
-%			\centering
-%			\caption{Random Pairs from Same Business Group}
-%			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA.eps}
-%			\includegraphics[width=0.45\linewidth]{BusinessPseudoSBFCA_t.eps}
-%		\end{figure}
-%
-%		\begin{figure}
-%			\centering
-%			\caption{Random Pairs from Same Size}
-%			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA.eps}
-%			\includegraphics[width=0.45\linewidth]{SizePseudoSBFCA_t.eps}
-%		\end{figure}
-%
-%		\begin{figure}
-%			\centering
-%			\caption{Random Pairs from Same Industry}
-%			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA.eps}	
-%			\includegraphics[width=0.45\linewidth]{IndustryPseudoSBFCA_t.eps}
-%		\end{figure}
-
-
-\FloatBarrier
+\subsection{Size effect}
 
 
 
 
+	\begin{table}[htbp]
+	\centering
+	\resizebox{1\textwidth}{!}{
+		\input{Output/Qmresult4-slide.tex}
+	}
+\end{table}
 
 
 
@@ -864,7 +845,10 @@ We expect that institutional imbalances have a lower variation in groups due to 
 
 According to the main hypothesis, we need to compare comovement between pairs in groups with low standard error and other pairs.
 For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
-So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group. Table \ref{Imbalance} reports estimation results for 
+So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group. Table \ref{Imbalance} reports estimation results for this model:
+\input{Model13}
+
+
 \begin{table}[htbp]
 	\centering
 	\caption{text}
@@ -875,10 +859,11 @@ So, this dummy is equal to one if at least one pair's firms belong to the low im
 \end{table}
 \FloatBarrier
 
+
 Furthermore, we should show that stocks in groups have a similar daily trading behavior. Accordingly, for each firm we run time-series regressions of the firm's daily change in trading measure, $ \Delta \text{Measure}_{i,t} $, on changes in market measure,$ \Delta\text{Measure}_{Market,t}   $ , changes in the industry and business group portfolio's measure,$ \Delta\text{Measure}_{Ind,t} $ and  $\Delta \text{Measure}_{Group,t} $ and  ,as well as control variables.
 
 We compute the daily change of measure by this definition $ \Delta \text{Measure}_{i,t} = \ln(\frac{\text{Measure}_{i,t}}{\text{Measure}_{i,t-1}}) $. 
-We estimate the following regression for each stock across trading days and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
+We estimate the following regression for each stock across trading days in given year separately and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
 
 \begin{equation*}
 	\begin{split}
@@ -887,14 +872,14 @@ We estimate the following regression for each stock across trading days and cros
 	\end{split}
 \end{equation*}
 
-We use the turnover and Amihud measure as a daily trading measures separately. For turnover measure, we use size of the firm as a control variable and for Amihud, we include lead, lag, and contemporaneous market returns, contemporaneous firm return squared, and lead and lag changes in the two portfolio illiquidity measures.
+We use the turnover measure as a daily trading measures. We control for lead and lag changes in the two portfolio  and market's measures. In addition, we use size of the firm. [Table \ref{turnover}]
 
 \begin{table}[htbp]
 	\centering
 	\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
-	\resizebox{0.6\textheight}{!}{
+	\resizebox{0.7\textheight}{!}{
 		\input{turnover.tex}
-	}
+	} \label{turnover}
 \end{table}
 
 
@@ -903,7 +888,7 @@ We use the turnover and Amihud measure as a daily trading measures separately. F
 		\caption{Pairwise correlation in turnover  }
 	\resizebox{0.7\textheight}{!}{
 		\centering
-		\input{mresult2-turnover.tex}
+		\input{Output/mresult2-turnover.tex}
 	}
 \end{table}
 
