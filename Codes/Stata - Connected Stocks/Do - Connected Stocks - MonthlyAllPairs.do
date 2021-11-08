@@ -8,7 +8,19 @@ cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 label define sgroup 0 "No" 1 "Yes"
 
+gen PairType = 0
 
+summ grank_x
+
+replace PairType = 1  if grank_x <5 & grank_y<5
+replace PairType = 2  if grank_x >=5 & grank_y>=5
+
+label define PairType 0 "Hybrid" 1 "Small" 2 "Large"
+
+
+
+label values PairType PairType
+label variable PairType "PairType"
 
 label values sgroup sgroup
 label variable sgroup "SameIndustry"
