@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{5}{c}{ $ \text{Return}\_i - r\_f = R\_i$ }                                          \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\hline
+ $ R\_M $        &    0.898\sym{***}&    0.665\sym{***}&    0.728\sym{***}&    0.363\sym{***}&    0.416\sym{***}\\
+                &  (39.40)         &  (19.93)         &  (20.74)         &  (12.76)         &  (11.15)         \\
+[1em]
+ $ R\_{Industry} $ &                  &    0.302\sym{***}&    0.290\sym{***}&    0.184\sym{***}&    0.168\sym{***}\\
+                &                  &   (5.88)         &   (5.43)         &   (6.43)         &   (5.64)         \\
+[1em]
+ $ R\_{Business group} $ &                  &                  &                  &    0.447\sym{***}&    0.453\sym{***}\\
+                &                  &                  &                  &  (13.88)         &  (13.91)         \\
+[1em]
+ $ SMB $        &                  &                  &    0.227\sym{***}&                  &    0.157\sym{***}\\
+                &                  &                  &   (8.57)         &                  &   (5.93)         \\
+[1em]
+ $ UMD $        &                  &                  &   0.0315\sym{*}  &                  & -0.00268         \\
+                &                  &                  &   (2.38)         &                  &  (-0.16)         \\
+[1em]
+ $ HML $        &                  &                  &   0.0106         &                  & 0.000198         \\
+                &                  &                  &   (0.53)         &                  &   (0.01)         \\
+[1em]
+Constant        &    0.204\sym{***}&    0.132\sym{***}&   0.0758\sym{***}&   0.0576\sym{***}&  0.00885         \\
+                &   (7.71)         &   (7.27)         &   (4.16)         &   (6.64)         &   (0.67)         \\
+\hline
+Observations    &   351728         &   351728         &   351728         &   351728         &   351728         \\
+\(R^{2}\)       &    0.140         &    0.224         &    0.251         &    0.684         &    0.695         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -289,7 +289,7 @@ mergedData = mergedData.dropna()
 
 
 #%%
-mergedData.to_csv(path + "BGReturn.csv", index=False)
+mergedData.to_csv(path + "Connected_Stocks\BGReturn.csv", index=False)
 # %%
 mergedData.groupby("id").size().max()
 
