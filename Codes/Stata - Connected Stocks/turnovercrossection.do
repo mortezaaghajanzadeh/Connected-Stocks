@@ -107,7 +107,7 @@ estadd loc controll "Yes" , replace
 estadd loc timeEffect "Yes" , replace
 
 
-esttab v0 v01  v4 v41 v3 v31 v2 v21  v1 v11 v5 v51 v6 v61 ,keep(lag_Excess lag_lowimbalancestd lag_position lag_centrality ) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh lag_lowimbalancestd lag_position lag_centrality ) s( N timeEffect  controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))   nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Amihudcrosssection.tex ,replace
+esttab v0 v01  v4 v41 v3 v31 v2 v21 /* v1 v11 v5 v51 v6 v61 */,keep(lag_Excess /* lag_lowimbalancestd lag_position lag_centrality*/ ) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh /*lag_lowimbalancestd lag_position lag_centrality*/ ) s( N timeEffect  controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))   nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Amihudcrosssection.tex ,replace
 
  
  /**/
@@ -171,6 +171,4 @@ estadd loc timeEffect "Yes" , replace
 
 
 
-esttab v0 v00  v4 v04 v3 v03 v2 v02  v1 v01 v5 v05 v6 v06 ,keep(lag_Excess lag_lowimbalancestd lag_position lag_centrality ) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh lag_lowimbalancestd lag_position lag_centrality )  s( N  timeEffect controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))  nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
-
-,using Turnovercrosssection.tex ,replace
+esttab v0 v00  v4 v04 v3 v03 v2 v02  /*v1 v01 v5 v05 v6 v06*/ ,keep(lag_Excess /*lag_lowimbalancestd lag_position lag_centrality */) order(lag_Excess lag_ExcessDummy lag_ExcessDiff lag_ExcessHigh /* lag_lowimbalancestd lag_position lag_centrality */)  s( N  timeEffect controll r2 ,  lab("Observations" "Time FE" "Controls" "$ R^2 $"))  nomtitle label compress  mgroups("Dependent Variable: $ \beta_{Group} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Turnovercrosssection.tex ,replace
