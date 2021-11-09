@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  9 NOV 2021 09:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  9 NOV 2021 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2341,10 +2341,13 @@ line 1729.
 ] (./Output/mresult2-turnover.tex)
 [70
 
-] (./Output/mresult2-BigBusinessGroup.tex) [71
+] (./Output/mresult2-BigBusinessGroup.tex)
+Overfull \vbox (5.17807pt too high) detected at line 1787
+ []
 
-]
-(./Output/mresult2Down-slide2.tex)
+[71
+
+] (./Output/mresult2Down-slide2.tex)
 Overfull \vbox (0.94298pt too high) detected at line 1796
  []
 
@@ -2447,7 +2450,7 @@ i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
 f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (85 pages, 2120687 bytes).
+Output written on "Connected Stocks - Slide.pdf" (85 pages, 2120778 bytes).
 PDF statistics:
  3269 PDF objects out of 3580 (max. 8388607)
  2933 compressed objects within 30 object streams
