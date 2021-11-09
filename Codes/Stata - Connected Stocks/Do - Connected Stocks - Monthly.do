@@ -226,38 +226,49 @@ eststo v1: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG sgroup monthlys
 estadd loc Controls "Yes" , replace
 estadd loc subsample  "Total" , replace
 estadd loc FE "Yes" , replace
+estadd loc method "FM" , replace
 
 eststo v2: xi: quietly asreg monthlyρ_5_f NMFCA   NMFCAG bearish bullish   sDown sUp  sgroup monthlysamesize monthlysamebm monthlycrossownership sbgroup i.PairType, fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample  "Total" , replace
 estadd loc FE "Yes" , replace
+estadd loc method "FM" , replace
 
 eststo v3: xi: quietly asreg monthlyρ_5_f NMFCA NMFCAG   Up Down sDown sUp DownFCA UpFCA sgroup monthlysamesize monthlysamebm monthlycrossownership  bearish bullish sbgroup i.PairType, fmb newey(4)
 estadd loc Controls "Yes" , replace 
 estadd loc subsample  "Total" , replace
 estadd loc FE "Yes" , replace
+estadd loc method "FM" , replace
 
 eststo v4: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if bearish == 1 , fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample  "Bearish Market" , replace
 estadd loc FE "Yes" , replace
+estadd loc method "FM" , replace
 
 eststo v5: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if bullish == 1 , fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample  "Bullish Market" , replace
 estadd loc FE "Yes" , replace
+estadd loc method "FM" , replace
 
 eststo v6: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if bullish == 0 & bullish ==0 , fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample  "Normal Market" , replace
 estadd loc FE "Yes" , replace
-
-esttab v1 v2 v3 v4 v5 v6, nomtitle label  s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))  keep(NMFCA NMFCAG sDown Down Up sUp  DownFCA UpFCA sbgroup bearish bullish ) order(sbgroup NMFCA NMFCAG bearish bullish   sDown sUp DownFCA UpFCA ) n r2    compress  mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) 
-
-,using mresult2Down-slide2.tex ,replace
+estadd loc method "FM" , replace
 
 
-xtreg monthlyρ_5_f NMFCA NMFCAG   Up Down sDown sUp DownFCA UpFCA sgroup monthlysamesize monthlysamebm monthlycrossownership  bearish bullish sbgroup i.PairType , fe
+
+eststo v7: xtreg monthlyρ_5_f NMFCA NMFCAG   Up Down  DownFCA UpFCA monthlysamesize monthlysamebm monthlycrossownership  bearish bullish  , fe
+estadd loc Controls "Yes" , replace
+estadd loc subsample  "All" , replace
+estadd loc FE "Yes" , replace
+estadd loc method "FE" , replace
+
+esttab v1 v2 v3 v4 v5 v6 v7, nomtitle label  s( N Controls FE subsample method r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "Method" "$ R^2$"))  keep(NMFCA NMFCAG sDown Down Up sUp  DownFCA UpFCA sbgroup bearish bullish ) order(sbgroup NMFCA NMFCAG bearish bullish   sDown sUp DownFCA UpFCA ) n r2    compress  mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals", pattern(1)  prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ,using mresult2Down-slide2.tex ,replace
+
+
 
 
 
