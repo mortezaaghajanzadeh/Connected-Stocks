@@ -302,8 +302,18 @@ gen bigbusinessgroupFCA = bigbusinessgroup * NMFCA
 label variable bigbusinessgroupFCA "$ {\text{BigGroup} } \times \text{FCA}^*  $ "
 
 gen bigbusinessgroupSgroupFCA = bigbusinessgroup * sbgroup * NMFCA
-label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
+label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} } \times \text{FCA}^* $ "
 
+
+
+gen bigbusinessgroupTurn = bigbusinessgroup * monthlyρ_turn
+label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ "
+
+gen sbgroupTurn = sbgroup * monthlyρ_turn
+label variable sbgroupTurn "$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ "
+
+gen bigbusinessgroupSgroupTurn = bigbusinessgroup * sbgroup * monthlyρ_turn
+label variable bigbusinessgroupSgroupTurn "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho_t(\text{Turnover})}$ "
 
 summ sbgroup if bigbusinessgroupSgroup == 1
 
