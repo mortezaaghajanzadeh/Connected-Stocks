@@ -210,8 +210,14 @@ label variable lnUp "$ (\ln(FCA)) \times {\text{Bullish Market} } \times {\text{
 generate sDown = bearish * sbgroup
 label variable sDown "$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
 
+generate DownFCA = bearish * NMFCA
+label variable DownFCA "$ {\text{Bearish Market} } \times \text{FCA}^*  $ "
+
 generate sUp = bullish * sbgroup
 label variable sUp "$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
+
+generate UpFCA = bullish * NMFCA
+label variable UpFCA "$ {\text{Bullish Market} } \times \text{FCA}^*   $ "
 
 gen PairType = 0
 
@@ -292,8 +298,11 @@ label variable bigbusinessgroup "BigGroup"
 gen bigbusinessgroupSgroup = bigbusinessgroup * sbgroup
 label variable bigbusinessgroupSgroup "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
 
+gen bigbusinessgroupFCA = bigbusinessgroup * NMFCA
+label variable bigbusinessgroupFCA "$ {\text{BigGroup} } \times \text{FCA}^*  $ "
+
 gen bigbusinessgroupSgroupFCA = bigbusinessgroup * sbgroup * NMFCA
-label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} } \times \text{FCA}^* $ "
+label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
 
 
 summ sbgroup if bigbusinessgroupSgroup == 1
