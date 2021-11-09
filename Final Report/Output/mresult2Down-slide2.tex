@@ -1,35 +1,44 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{3}{c}}
+\begin{tabular}{l*{6}{c}}
 \hline\hline
-                &\multicolumn{3}{c}{Fu. Monthly Cor. of 4F+Ind. Residuals}\\\cmidrule(lr){2-4}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+                &\multicolumn{6}{c}{Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals}                      \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
-$ \text{FCA*} $ & 0.000363         & 0.000363         & 0.000464         \\
-                &   (0.64)         &   (0.64)         &   (0.82)         \\
+Same Group      &  0.00750\sym{***}&  0.00586         &    4.403         &    6.193         &   0.0139\sym{*}  &    4.867         \\
+                &   (3.53)         &   (0.65)         &   (0.98)         &   (1.06)         &   (2.39)         &   (0.98)         \\
 [1em]
- $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &  0.00966\sym{***}&  0.00968\sym{***}&                  \\
-                &   (6.43)         &   (6.47)         &                  \\
+$ \text{FCA*} $ &-0.0000771         &-0.000277         &  0.00225         & -0.00176         &  0.00141         & -0.00692         \\
+                &  (-0.14)         &  (-0.58)         &   (0.90)         &  (-0.90)         &   (1.15)         &  (-1.72)         \\
 [1em]
-Same Group      &  0.00607\sym{**} &  0.00529         &  0.00974         \\
-                &   (2.77)         &   (0.55)         &   (1.02)         \\
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &   0.0105\sym{***}&   0.0107\sym{***}&    0.194         &   -3.621         &  0.00567         &   -2.787         \\
+                &   (6.72)         &   (7.09)         &   (1.29)         &  (-1.05)         &   (1.21)         &  (-0.95)         \\
 [1em]
-$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ &                  & -0.00531         &    4.724         \\
-                &                  &  (-0.50)         &   (0.99)         \\
+$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ &                  &-0.0000134         &  -0.0208         &                  &                  &                  \\
+                &                  &  (-0.00)         &  (-0.07)         &                  &                  &                  \\
 [1em]
-$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ &                  &  0.00513         &  0.00659         \\
-                &                  &   (0.57)         &   (0.68)         \\
+$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ &                  &  0.00170         &   -4.386         &                  &                  &                  \\
+                &                  &   (0.20)         &  (-0.98)         &                  &                  &                  \\
 [1em]
-$ (\text{FCA}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ &                  &                  &  0.00570         \\
-                &                  &                  &   (1.28)         \\
+$ (\text{FCA}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ &                  &                  &   -0.189         &                  &                  &                  \\
+                &                  &                  &  (-1.27)         &                  &                  &                  \\
 [1em]
-$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ &                  &                  &   -2.774         \\
-                &                  &                  &  (-0.99)         \\
+$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ &                  &                  &   -2.707         &                  &                  &                  \\
+                &                  &                  &  (-0.99)         &                  &                  &                  \\
+[1em]
+$ {\text{Bearish Market} } \times \text{FCA}^*  $ &                  &                  & -0.00338         &                  &                  &                  \\
+                &                  &                  &  (-1.08)         &                  &                  &                  \\
+[1em]
+$ {\text{Bullish Market} } \times \text{FCA}^*   $ &                  &                  &-0.000628         &                  &                  &                  \\
+                &                  &                  &  (-0.22)         &                  &                  &                  \\
 \hline
-Observations    &  1665996         &  1665996         &  1665996         \\
-\(R^{2}\)       &    0.002         &    0.002         &    0.002         \\
+Observations    &  1665996         &  1665996         &  1665996         &   326360         &   982021         &   683975         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Pari Size FE    &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+SubSample       &    Total         &    Total         &    Total         &Bearish Market         &Bullish Market         &Normal Market         \\
+$ R^2$          &  0.00130         &  0.00174         &  0.00171         &   0.0192         &  0.00266         &   0.0240         \\
 \hline\hline
-\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }
