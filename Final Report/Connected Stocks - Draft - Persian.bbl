@@ -35,6 +35,21 @@ Carhart, M.~M. (1997).
 \newblock On persistence in mutual fund performance.
 \newblock {\em The Journal of Finance}, 52(1):57--82.
 
+\bibitem[Cho and Mooney, 2015]{cho2015stock}
+Cho, C.~H. and Mooney, T. (2015).
+\newblock Stock return comovement and korean business groups.
+\newblock {\em Review of Development Finance}, 5(2):71--81.
+
+\bibitem[Coval and Stafford, 2007]{coval2007asset}
+Coval, J. and Stafford, E. (2007).
+\newblock Asset fire sales (and purchases) in equity markets.
+\newblock {\em Journal of Financial Economics}, 86(2):479--512.
+
+\bibitem[David and Simonovska, 2016]{david2016correlated}
+David, J.~M. and Simonovska, I. (2016).
+\newblock Correlated beliefs, returns, and stock market volatility.
+\newblock {\em Journal of International Economics}, 99:S58--S77.
+
 \bibitem[Fama and MacBeth, 1973]{FamaMacBeth}
 Fama, E.~F. and MacBeth, J.~D. (1973).
 \newblock Risk, return, and equilibrium: Empirical tests.
@@ -56,6 +71,16 @@ Gilje, E.~P., Gormley, T.~A., and Levit, D. (2020).
 \newblock Who's paying attention? measuring common ownership and its impact on
   managerial incentives.
 \newblock {\em Journal of Financial Economics}, 137(1):152--178.
+
+\bibitem[Grullon et~al., 2014]{grullon2014comovement}
+Grullon, G., Underwood, S., and Weston, J.~P. (2014).
+\newblock Comovement and investment banking networks.
+\newblock {\em Journal of Financial Economics}, 113(1):73--89.
+
+\bibitem[Hameed and Xie, 2019]{HAMEED2019103}
+Hameed, A. and Xie, J. (2019).
+\newblock Preference for dividends and return comovement.
+\newblock {\em Journal of Financial Economics}, 132(1):103--125.
 
 \bibitem[Hansen and Lott~Jr, 1996]{hansen1996externalities}
 Hansen, R.~G. and Lott~Jr, J.~R. (1996).
@@ -86,6 +111,17 @@ Khanna, T. and Yafeh, Y. (2007).
 \newblock Business groups in emerging markets: Paragons or parasites?
 \newblock {\em Journal of Economic Literature}, 45(2):331--372.
 
+\bibitem[Kim et~al., 2015]{kim2015stock}
+Kim, M.-S., Kim, W., and Lee, D.~W. (2015).
+\newblock Stock return commonality within business groups: Fundamentals or
+  sentiment?
+\newblock {\em Pacific-Basin Finance Journal}, 35:198--224.
+
+\bibitem[Koch et~al., 2016]{Liquidity2016}
+Koch, A., Ruenzi, S., and Starks, L. (2016).
+\newblock {Commonality in Liquidity: A Demand-Side Explanation}.
+\newblock {\em The Review of Financial Studies}, 29(8):1943--1974.
+
 \bibitem[Lewellen and Lowry, 2021]{lewellen2021does}
 Lewellen, K. and Lowry, M. (2021).
 \newblock Does common ownership really increase firm coordination?
@@ -100,5 +136,15 @@ Newey, W.~K. and West, K.~D. (1987).
 Newham, M., Seldeslachts, J., and Banal-Estanol, A. (2018).
 \newblock Common ownership and market entry: Evidence from pharmaceutical
   industry.
+
+\bibitem[Pantzalis and Wang, 2017]{pantzalis2017shareholder}
+Pantzalis, C. and Wang, B. (2017).
+\newblock Shareholder coordination, information diffusion and stock returns.
+\newblock {\em Financial Review}, 52(4):563--595.
+
+\bibitem[Wu and Shamsuddin, 2014]{wu2014investor}
+Wu, Q. and Shamsuddin, A. (2014).
+\newblock Investor attention, information diffusion and industry returns.
+\newblock {\em Pacific-Basin Finance Journal}, 30:30--43.
 
 \end{thebibliography}
