@@ -5,6 +5,7 @@ import numpy as np
 import random
 
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"E:\RA_Aghajanzadeh\Data\\"
 #%%
 
 
@@ -61,7 +62,7 @@ def vv3(row):
 
 
 #%%
-df = pd.read_parquet(path + "Stocks_Prices_1399-09-12.parquet")
+df = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
 
 PriceData = pd.DataFrame()
 PriceData = PriceData.append(
@@ -75,18 +76,20 @@ PriceData = PriceData.append(
             "value",
             "volume",
             "quantity",
+            "return"
         ]
     ]
 )
 del df
-PriceData = PriceData.sort_values(by=["name", "date"])
+PriceData = PriceData.sort_values(
+    by=["name", "date"]
+    ).rename(columns={"return":"Ret"})
 PriceData["close_price"] = PriceData.close_price.astype(float)
 PriceData["value"] = PriceData.value.astype(float)
 PriceData = PriceData[PriceData.volume != 0]
 gg = PriceData.groupby("name")
-PriceData["Ret"] = gg["close_price"].pct_change(periods=1) * 100
+
 PriceData["Amihud"] = abs(PriceData["Ret"]) / PriceData["value"]
-PriceData["jalaliDate"] = PriceData.jalaliDate.apply(vv)
 PriceData.head()
 # %%
 n = path + "Factors-Daily.xlsx"
@@ -129,78 +132,76 @@ PriceData.head()
 
 # %%
 
-n1 = path + "Industry indexes 1399-09-28.csv"
+n1 = path + "IndustryIndexes_1400_06_28.csv"
 df1 = pd.read_csv(n1)
-df1.date = df1.date.apply(vv3)
-df1 = df1.drop(columns=["Unnamed: 0"])
-df1 = df1.drop(df1[(df1.index_id == "EWI") | (df1.index_id == "overall_index")].index)
-df1.index_id = df1.index_id.astype(int)
+# df1.date = df1.date.apply(vv3)
+# df1 = df1.drop(columns=["Unnamed: 0"])
+# df1 = df1.drop(df1[(df1.index_id == "EWI") | (df1.index_id == "overall_index")].index)
+df1['gReturn'] = df1.industry_return.astype(int)
 df1.date = df1.date.astype(int)
-gg = df1.groupby("index_id")
-df1["gReturn"] = gg["index"].pct_change(periods=1) * 100
+df1.index_id = df1.group_id.astype(int)
+
 fkey = zip(list(df1.index_id), list(df1.date))
 mapingdict = dict(zip(fkey, df1["gReturn"]))
-PriceData["gReturn"] = PriceData.set_index(["group_id", "jalaliDate"]).index.map(
+PriceData["gReturn"] = PriceData.set_index(["group_id", "date"]).index.map(
     mapingdict
 )
 PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 
 # %%
-
-df = pd.read_csv(path + "Cleaned_Stocks_Holders_1399-09-12_From94" + ".csv")
+df = pd.read_csv(path + "Cleaned_Stocks_Holders_1400_06_28" + ".csv")
 df["year"] = round(df.jalaliDate / 10000, 0)
 df["year"] = df["year"].astype(int)
-gg = df.groupby("symbol")
+gg = df.groupby("name")
 g = gg.get_group("فارس")
-g = g[["symbol", "shrout", "date"]].drop_duplicates()
+g = g[["name", "shrout", "date"]].drop_duplicates()
 g["dif"] = g.shrout.diff()
 g[g.dif != 0.0]
 
 
-pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-# pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
-n = pathBG + "Grouping_CT.xlsx"
-BG = pd.read_excel(n)
-uolist = (
-    BG[BG.listed == 1]
-    .groupby(["uo", "year"])
-    .filter(lambda x: x.shape[0] >= 3)
-    .uo.unique()
-)
-print(len(BG))
-BG = BG[BG.uo.isin(uolist)]
-print(len(BG))
-BGroup = set(BG["uo"])
-names = sorted(BGroup)
-ids = range(len(names))
-mapingdict = dict(zip(names, ids))
-BG["BGId"] = BG["uo"].map(mapingdict)
+def BG(df):
+    # pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
+    pathBG = r"E:\RA_Aghajanzadeh\Data\\"
+    n = pathBG + "Grouping_CT.xlsx"
+    BG = pd.read_excel(n)
+    uolist = (
+        BG[BG.listed == 1]
+        .groupby(["uo", "year"])
+        .filter(lambda x: x.shape[0] >= 3)
+        .uo.unique()
+    )
+    BG = BG[BG.listed == 1]
+    BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+    print(len(BG))
+    BG = BG[BG.uo.isin(uolist)]
+    print(len(BG))
+    BGroup = set(BG["uo"])
+    names = sorted(BGroup)
+    ids = range(len(names))
+    mapingdict = dict(zip(names, ids))
+    BG["BGId"] = BG["uo"].map(mapingdict)
 
-tt = BG[BG.year == 1397]
-tt["year"] = 1398
-BG = BG.append(tt).reset_index(drop=True)
-tt = BG[BG.year == 1398]
-tt["year"] = 1399
-BG = BG.append(tt).reset_index(drop=True)
+    BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+    for i in ["uo", "cfr", "cr"]:
+        print(i)
+        fkey = zip(list(BG.symbol), list(BG.year))
+        mapingdict = dict(zip(fkey, BG[i]))
+        df[i] = df.set_index(["name", "year"]).index.map(mapingdict)
+    return df
 
-BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
-for i in ["uo", "cfr", "cr"]:
-    print(i)
-    fkey = zip(list(BG.symbol), list(BG.year))
-    mapingdict = dict(zip(fkey, BG[i]))
-    df[i] = df.set_index(["symbol", "year"]).index.map(mapingdict)
 
+df = BG(df)
 df = df[~df.uo.isnull()]
-pdf = df[["date", "symbol", "close_price"]].drop_duplicates()
-pdf["Return"] = pdf.groupby("symbol").close_price.pct_change()
+pdf = df[["date", "name", "close_price"]].drop_duplicates()
+pdf["Return"] = pdf.groupby("name").close_price.pct_change()
 
-fkey = zip(list(pdf.symbol), list(pdf.date))
+fkey = zip(list(pdf.name), list(pdf.date))
 mapingdict = dict(zip(fkey, pdf.Return))
-df["Return"] = df.set_index(["symbol", "date"]).index.map(mapingdict)  # %%
+df["Return"] = df.set_index(["name", "date"]).index.map(mapingdict)  
 df = df[
     [
         "date",
-        "symbol",
+        "name",
         "jalaliDate",
         "group_name",
         "shrout",
@@ -212,6 +213,7 @@ df = df[
     ]
 ].drop_duplicates()
 # %%
+df = df.rename(columns = { "name" : "symbol" })
 df["MarketCap"] = df["shrout"] * df["close_price"]
 
 
@@ -287,7 +289,7 @@ mergedData = mergedData.dropna()
 
 
 #%%
-mergedData.to_csv(path + "BGReturn.csv", index=False)
+mergedData.to_csv(path + "Connected_Stocks\BGReturn.csv", index=False)
 # %%
 mergedData.groupby("id").size().max()
 
