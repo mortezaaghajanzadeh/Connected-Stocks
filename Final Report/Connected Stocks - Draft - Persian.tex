@@ -364,6 +364,25 @@ December\fi, \number \year}
 نیز افزایش پیدا می کند.
 
 \end{itemize}
+\item
+گروه های کسب و کار بزرگ
+\begin{itemize}
+	\item 
+	اگر معامله گران شرکت های در یک گروه کسب و کار را در یک دسته قرار می دهند نیاز است تا اعضای گروه های بزرگ هم حرکتی بیشتری داشته باشند
+	\item
+	علاوه بر مورد فوق باید رابطه هم بستگی 
+	\lr{turnover}
+	و هم حرکتی بازده نیز مثبت باشد. 
+	\begin{itemize}
+		\item 
+		شرکت های عضو گروه کسب و کار به همراه یکدیگر معامله بشوند
+		
+	\end{itemize}
+\item
+بررسی کردیم و نتایج نشان داد که شرکت های در گروه بزرگ هم حرکتی بیشتری دارند و علاوه بر این تاثیر هم حرکتی در 
+\lr{turnover}
+نیز در گروه های بزرگ از دیگر گروه ها بیشتر است.
+\end{itemize}
 \end{itemize}
 \end{itemize}
 
@@ -388,16 +407,46 @@ December\fi, \number \year}
 
 
 
-\section{Data and Methodology}
+\section{\lr{Data and Methodology}}
 
 
 
-\subsection{Data and Sample}
+\subsection{\lr{Data and Sample}}
+\begin{itemize}
+	\item 
+	داده های قیمت، حجم و دیگر مشخصات حسابداری و بازاری شرکت ها از سایت کدال و tsetmc
+	\item
+	داده منحصر به فرد مالکیت های بالای یک درصد روزانه شرکت ها بورسی از سایت 
+	tsetmc
+	\item 
+	حذف داده های صندوق های سرمایه گذاری معامله پذیر
+	\item 
+	از تاریخ 1393/01 تا تاریخ 1398/12
 
-داده های مالکیت، قیمت، حجم و دیگر متغیر های بازاری و حساب داری شرکت ها از سایت کدال و شركت مديريت فناوري بورس تهران جمع آوری شده است. علاوه بر این به داده های منحصر به فرد 
+	\item 
+	گروه های کسب و کار یکی از مشخصات بازار ایران است
+		\item 
+	داده های گروه های کسب و کار از مقاله
+	\cite{Aliabadi2022}
+	\begin{itemize}
+		\item 
+		داده های گروه های کسب و کار در ایران مشخص نیست
+		\item
+		با استفاده از مقاله 
+		\cite{almeida2011structure}
+		با آستانه 40\%
+		
+	\end{itemize}
+	\item
+	جدول 
+	\ref{t2-1}
+	مشخصات آماری داده های مالکیت
+\end{itemize}
+%داده های مالکیت، قیمت، حجم و دیگر متغیر های بازاری و حساب داری شرکت ها از سایت کدال و شركت مديريت فناوري بورس تهران جمع آوری شده است. علاوه بر این به داده های منحصر به فرد 
 
 
- \begin{table}[htbp]
+\begin{LTR}
+\lr{	 \begin{table}[htbp]
         \centering
         \caption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
         \label{t2-1}
@@ -405,226 +454,277 @@ December\fi, \number \year}
         {
         \input{Output/summaryOfOwnership.tex}
          }
-      \end{table}
+      \end{table}}
+\end{LTR}
 
-\subsection{Pair composition }
+\subsection{\lr{Pair composition} }
+\begin{itemize}
+	\item 
+	حداقل یک مالک مشترک که 
+		\item 
+		562 شرکت حداقل یک مالک مشترک با دیگر شرکت ها داشتند
+	\item 
+	93442 جفت که 60 درصد از جفت های ممکن
+	$ (562*561)/2 = 149878$
+
+	\item 
+	جدول
+	 \ref{t2-2}
+	 خلاصه آماری جفت های تشکیل شده
+	\item 1
+	برای قرار گرفتن شرکت ها در گروه های کسب و کار 
+	\begin{itemize}
+		\item
+		 چند حالت امکان دارد 
+		 \item
+		 در شکل 
+		 \ref{g2-2}
+		 حالت های مختلف بیان شده است
+	\end{itemize}
+	
+\end{itemize}
 
  
- 
- \begin{figure}[htbp]
- \centering
-\caption{ Three categories for pairs base on being in business groups}
-\label{g2-1}
-
-\normalcolor
-     \begin{subfigure}[t]{0.9\linewidth}
-
-             \resizebox{0.49\textwidth}{!}{
-    \begin{tikzpicture}[node distance=2cm]
-    
-    
-    
-    \node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-    
-    \node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-    
-    \node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-    
-    \node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-    
-    \node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-    
-    
-    \draw [arrow] (end) --(sur);
-    \draw [arrow] (end2) -- (sur2);
-    
-    
-    \draw [arrow] (CH) -- (sur);
-    \draw [arrow] (CH) -- (sur2);
-    
-    \draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
-    
-    
-    \end{tikzpicture}
-     }   
-\hfill
-\resizebox{0.49\textwidth}{!}{
-    \begin{tikzpicture}[node distance=2cm]
-    
-    
-    \node (start) [startstop] { $ \text{Ultimate Owner} $};
-    
-    
-    \node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-    
-    \node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-    
-    \node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-    
-    \node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-    
-    \node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-    
-    
-    
-    \draw [arrow] (start) --(end);
-    
-    \draw [arrow] (end) --(sur);
-    \draw [arrow] (end2) -- (sur2);
-    
-    \draw [dash dot,->] (start) -- (CH);
-    
-    \draw [arrow] (CH) -- (sur);
-    \draw [arrow] (CH) -- (sur2);
-    
-    \draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
-    
-    
-    \end{tikzpicture}
-       }
-         \caption{ Pair not in the business group}
-       \end{subfigure}
- \bigskip
-    \begin{subfigure}[t]{.45\linewidth}
-        \centering
-        \tiny
-            \resizebox{1\textwidth}{!}{
-             
-        \begin{tikzpicture}[node distance=2cm]
-            
-            
-            \node (start) [startstop] { $ \text{Ultimate Owner A} $};
-            \node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-            
-            
-            \node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-            
-            \node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-            
-            \node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-            
-            \node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-            
-            \node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-            
-            
-            
-            \draw [arrow] (start) --(end);
-            \draw [arrow] (start2) -- (end2);
-            
-            \draw [arrow] (end) --(sur);
-            \draw [arrow] (end2) -- (sur2);
-            
-            \draw [dash dot,->] (start) -- (CH);
-            \draw [dash dot,->] (start2) -- (CH);
-            
-            \draw [arrow] (CH) -- (sur);
-            \draw [arrow] (CH) -- (sur2);
-            
-            \draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
-            
-            
-            \end{tikzpicture}
-         }   
-        \caption{ Pair in two distinct business group}
-      \end{subfigure}
-      \begin{subfigure}[t]{.45\linewidth}
-        \centering
-        \tiny
-         \resizebox{1\textwidth}{!}{
-          
-        \begin{tikzpicture}[node distance=2cm]
-           
-           
-           \node (start) [startstop] {Ultimate Owner};
-           
-           
-           
-           \node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
-           \node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
-           
-           
-           
-           \node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-           
-           
-           \node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-           
-           
-           \node (CH) [process, below of = start ,xshift=0] {Common Owner};
-           
-           
-           \draw [arrow] (start) --(end);
-           \draw [arrow] (end) --(sur);
-           
-           \draw [arrow] (start) --(end2);
-           
-           \draw [arrow] (end) --(sur);
-           \draw [arrow] (end2) -- (sur2);
-           
-           
-           \draw [arrow] (CH) -- (sur);
-           \draw [arrow] (CH) -- (sur2);
-           \draw [dashed ,->] (start) --(CH);
-           
-           \draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
-           
-           
-           \end{tikzpicture}
-          } 
-          
-        \caption{ Pair in the same business group}
-      \end{subfigure}
-
-
-
-   \end{figure}  
-
-  \begin{table}
+\begin{LTR}
+	\lr{  \begin{table}
   \centering
   \caption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
-  \label{t2-2}
     \resizebox{1\textwidth}{!}
           {
  \input{Output/summaryOfPairs.tex}
    }
-    \end{table}% 
+    \end{table} }
+\end{LTR}
 
-
- Figure \ref{g2-2} shows the time series of unique pairs' number in each month. The pattern shows that the portion of pairs that are in one business group is roughly stable. The number of pairs in each period is between 322 to 5101 pairs which, on average, there are 4325 pairs.
- 
- \normalcolor
- 
 \begin{figure}[htbp]
-\caption{ The number of unique pairs in each month}
-\label{g2-2}
-\includegraphics[width=\linewidth]{Output/idMonth.eps}
-\end{figure}
+	\centering
+	\caption{ Three categories for pairs base on being in business groups}
+	\label{g2-1}
+	
+	\normalcolor
+	\begin{subfigure}[t]{0.9\linewidth}
+		
+		\resizebox{0.49\textwidth}{!}{
+			\begin{tikzpicture}[node distance=2cm]
+				
+				
+				
+				\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+				
+				\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+				
+				\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+				
+				\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+				
+				\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+				
+				
+				\draw [arrow] (end) --(sur);
+				\draw [arrow] (end2) -- (sur2);
+				
+				
+				\draw [arrow] (CH) -- (sur);
+				\draw [arrow] (CH) -- (sur2);
+				
+				\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+				
+				
+			\end{tikzpicture}
+		}   
+		\hfill
+		\resizebox{0.49\textwidth}{!}{
+			\begin{tikzpicture}[node distance=2cm]
+				
+				
+				\node (start) [startstop] { $ \text{Ultimate Owner} $};
+				
+				
+				\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+				
+				\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+				
+				\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+				
+				\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+				
+				\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+				
+				
+				
+				\draw [arrow] (start) --(end);
+				
+				\draw [arrow] (end) --(sur);
+				\draw [arrow] (end2) -- (sur2);
+				
+				\draw [dash dot,->] (start) -- (CH);
+				
+				\draw [arrow] (CH) -- (sur);
+				\draw [arrow] (CH) -- (sur2);
+				
+				\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+				
+				
+			\end{tikzpicture}
+		}
+		\caption{ Pair not in the business group}
+	\end{subfigure}
+	\bigskip
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\tiny
+		\resizebox{1\textwidth}{!}{
+			
+			\begin{tikzpicture}[node distance=2cm]
+				
+				
+				\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+				\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+				
+				
+				\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+				
+				\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+				
+				\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+				
+				\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+				
+				\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+				
+				
+				
+				\draw [arrow] (start) --(end);
+				\draw [arrow] (start2) -- (end2);
+				
+				\draw [arrow] (end) --(sur);
+				\draw [arrow] (end2) -- (sur2);
+				
+				\draw [dash dot,->] (start) -- (CH);
+				\draw [dash dot,->] (start2) -- (CH);
+				
+				\draw [arrow] (CH) -- (sur);
+				\draw [arrow] (CH) -- (sur2);
+				
+				\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+				
+				
+			\end{tikzpicture}
+		}   
+		\caption{ Pair in two distinct business group}
+	\end{subfigure}
+	\begin{subfigure}[t]{.45\linewidth}
+		\centering
+		\tiny
+		\resizebox{1\textwidth}{!}{
+			
+			\begin{tikzpicture}[node distance=2cm]
+				
+				
+				\node (start) [startstop] {Ultimate Owner};
+				
+				
+				
+				\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
+				\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
+				
+				
+				
+				\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+				
+				
+				\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+				
+				
+				\node (CH) [process, below of = start ,xshift=0] {Common Owner};
+				
+				
+				\draw [arrow] (start) --(end);
+				\draw [arrow] (end) --(sur);
+				
+				\draw [arrow] (start) --(end2);
+				
+				\draw [arrow] (end) --(sur);
+				\draw [arrow] (end2) -- (sur2);
+				
+				
+				\draw [arrow] (CH) -- (sur);
+				\draw [arrow] (CH) -- (sur2);
+				\draw [dashed ,->] (start) --(CH);
+				
+				\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+				
+				
+			\end{tikzpicture}
+		} 
+		
+		\caption{ Pair in the same business group}
+	\end{subfigure}
+	
+	
+	
+\end{figure}  
+
+%
+% Figure \ref{g2-2} shows the time series of unique pairs' number in each month. The pattern shows that the portion of pairs that are in one business group is roughly stable. The number of pairs in each period is between 322 to 5101 pairs which, on average, there are 4325 pairs.
+% 
+% \normalcolor
+ 
+%\begin{figure}[htbp]
+%\caption{ The number of unique pairs in each month}
+%\label{g2-2}
+%\includegraphics[width=\linewidth]{Output/idMonth.eps}
+%\end{figure}
  
   \FloatBarrier
   
   
   
-\subsection{Stock Return comovement}
+\subsection{\lr{Stock Return comovement}}
 \label{comovement}
+\begin{itemize}
+	\item
+	هم حرکتی ماهانه شرکت ها را محاسبه کرده ایم
+	\item
+	برای محاسبه هم حرکتی از باقی مانده مدل های فاکتوری استفاده کرده ایم
+	\item
+	با توجه به ویژگی بازار ایران شاخص صنعت را هم به مدل های چند فاکتوری اضافه کرده ایم
 
-We calculate the monthly correlation of each pair from stocks' daily abnormal returns. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return due to the importance of industries on stocks' return in the Tehran stock exchange (TSE) :
-\begin{equation}
- \begin{split}
-   R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \\
-  &+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \varepsilon_{i,t}
-  \end{split}
-     \label{e5Factor}
-\end{equation}
-where $ R_{i,t} $, $ R_{M,t} $ and $ R_{Ind,t} $ are excess daily return of respectivly  firm, market and firm's industry from bank deposit's daily rate(risk free). Other variabales difinition is base on Carhart four-factor model [\cite{Carhart4Factor}].
-
-At the end of each month, we estimate our benchmark model base on the past three-month period (from two months before the end of the preceding month) and measure daily residuals.  After that, we calculate the monthly correlation of daily residuals during that month for the pair.
-
-We use other benchmarks for calculating a monthly correlation and report its summary in table \ref{tCorr}. 
-As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use these correlations for our analysis.
+\begin{itemize}
+	\item 
+		\begin{equation}
+		\begin{split}
+			R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t}+\beta _{HML,i}{\mathit {HML}}_{t} \\
+			&+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \varepsilon_{i,t}
+		\end{split}
+		\label{e5Factor}
+	\end{equation}
+	\item
+	از فاکتور های  [
+	\lr{\cite{Carhart4Factor}}
+	]
+\end{itemize}
+	
+	\item
+	برای محاسبه باقی مانده مدل ها، مدل را برای سه ماه ( از دو ماه قبل) پیش بینی می کنیم و بعد از آن باقی مانده ها را محاسبه می کنیم
+	\item
+	برای ماه مورد نظر هم بستگی باقی مانده ها را محاسبه می کنیم
+	\item
+	نتایج در جدول
+	\ref{tCorr}
+	نشان داده شده است
+	\item
+	مدل چهار عاملی به علاوه صنعت تقریبا هم حرکتی را صفر کرده است
+	\begin{itemize}
+		\item 
+		با توجه به دامنه نوسان از تاخیر های فاکتور ها هم استفاده کردیم ولی نتایج  هم بستگی محاسبه شده تفاوت چندانی با مدل های قبلی نداشت
+	\end{itemize}
+	
+\end{itemize}
 
      
- \begin{table}[htbp]
+\begin{LTR}
+	\lr{ \begin{table}[htbp]
         \centering
         \caption{\footnotesize This table reports distribution of calculated correlation base on different models.}
         \label{tCorr}
@@ -632,39 +732,86 @@ As we expected,  models that include industry returns remove pairs' correlation.
         {
         \input{Output/CorrelationsResultsText.tex}
          }
-      \end{table}
+      \end{table}}
+\end{LTR}
       
 
 \FloatBarrier
+
+
 \subsection{Controls}
-We are interested in the effects of common ownership on pair's comovement.
-Our prediction of a higher correlation for a higher level of common ownership dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
 
-The first group of controls is pair controls. These controls include
-a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}. As shown in table \ref{SameGroupIndustry}, 10\% and 6\%  of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
+\begin{itemize}
+	\item 
+	هم حرکتی ممکن است ویژگی های شرکت ها ناشی شده باشد
+	
+	\item 
+	اولین دسته کنترل ها برای جفت هاست
+	\begin{itemize}
+\item 
+\textbf{SameIndustry} :
+صنعت دو شرکت یکسان باشد
+\item 
+\textbf{SameGroup}:
+دو شرکت در یک گروه کسب و کار قرار بگیرند
+\item 
+\textbf{CrossOwnership}:
+حداکثر درصد مالکیت ضربدری میان دو شرکت
+		
+	\end{itemize}
+	\item 
+	جدول
+	\ref{SameGroupIndustry}
+	نشان داده است 6\% از جفت های در یک صنعت
+	6.5 \% در یک گروه کسب و کار
+	1\% نیز هم در یک گروه و هم در یک صنعت قرار دارد
+	\item 
+دسته دوم کنترل ها مشخصات شرکت ها را کنترل می کند
+\begin{itemize}
+	\item \textbf{Size1}:
+	نرمالایزد رنک ترنسفرد اندازه شرکت بزرگتر
+	
+	
+	\item \textbf{Size2}:
+	نرمالایزد رنک ترنسفرد اندازه شرکت کوچکتر
+	
+	\item \textbf{BookToMarket1}:
+	نرمالایزد رنک ترنسفرد نسبت بوک تو مارکت شرکت بزرگتر
+	
+	\item \textbf{BookToMarket2}:
+		نرمالایزد رنک ترنسفرد نسبت بوک تو مارکت شرکت کوچکتر
+	\item \textbf{SameSize}:
+	منفی مقدار اختلاف اندازه رتبه صدکی دو شرکت نسبت به اندازه
+	\item  \textbf{SameBookToMarket}:
+	منفی مقدار اختلاف اندازه رتبه صدکی دو شرکت نسبت به بوک تو مارکت
+\end{itemize}
+	\item 
+	متغیر ها مانند مقاله
+	\lr{\cite{AntonPolk}}
+	تعریف شده است
+	\item
+کنترل ها به صورت روزانه محاسبه شده اند و پس از آن میانگین ماهانه استفاده شده است
+\item 
+جدول 
+\ref{ControlsSummary}
+خلاصه آماری کنترل ها
+\end{itemize}
 
 
-\begin{table}[htbp]
+
+\begin{LTR}
+	\lr{\begin{table}[htbp]
 \caption{\scriptsize This table reports the number of pairs in the same industry and business group.}
 \label{SameGroupIndustry}
                \centering \scriptsize
          {
 \input{Output/SameGroupSameIndustry.tex}
                  }
-             \end{table}
+             \end{table}}
+\end{LTR}
 
-
-Another group of controls are firm-specific controls.  We define these variables base on  \cite{AntonPolk} methodology. One of these is size control based on the normalized rank-transform of the percentile market capitalization of the two stocks, \textbf{Size1} and \textbf{Size2} (where we label the
-larger stock in the pair as the first stock). The other one is a book to market ratio based on the normalized rank-transform of the percentile book to market of the two stocks, \textbf{BookToMarket1} and \textbf{BookToMarket2}.
-We also control these characteristics on a pair level. Our measures of similarity, \textbf{SameSize}, and \textbf{SameBookToMarket}, are the negative of the absolute difference in percentile ranking for a particular characteristic across a pair.
-
-
-We calculate our controls daily and then report the average of these variables for the entire period at the end of each month. Table \ref{ControlsSummary} shows the summary statistics of specified controls in this section.
-
-
-
-
- \begin{table}[htbp]
+\begin{LTR}
+	\lr{ \begin{table}[htbp]
  \caption{\scriptsize This table shows the summary statistics of specified controls in empirical studies.}
  \label{ControlsSummary}
                \centering 
@@ -672,7 +819,8 @@ We calculate our controls daily and then report the average of these variables f
                 \resizebox{\textwidth}{!}  {
     \input{Output/ControlsSummary.tex}
                  }
-             \end{table}
+             \end{table}}
+\end{LTR}
          
          
  
@@ -680,16 +828,72 @@ We calculate our controls daily and then report the average of these variables f
 
 \FloatBarrier
 
-\subsection{Measurement of cross-ownership}
+\subsection{\lr{Measurement of common-ownership}}
 
+\begin{itemize}
+	\item 
+	جدول 
+	\ref{maasurmentsSummary}
+	خلاصه ملاک های استفاده شده در ادبیات
+	\item 
+	دو دسته ملاک اندازه گیری مالکیت مشترک
+	\begin{itemize}
+		\item 
+		دارای پشتوانه مدل
+		\begin{itemize}
+			\item 
+			توضیح تئوری دارند
+			\item 
+			تفسیر اقتصادی بهتری دارند
+			\item 
+			جهت دار
+			\item
+			در سطح صنعت یا شرکت
+			\item
+		\lr{	(e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s})}
+		\end{itemize}
+		\item 
+	مدل های بدون پشتوانه
+	\begin{itemize}
+		\item 
+		تفسیر اقتصادی مشخصی ندارند
+		\item 
+		شک است که چگونه انگیزخ مدیران را اندازه می گیرند
+		\item 
+		ویژگی های نامطلوبی دارند 
+		\item
+		محاسبه ساده است
+		\item
+		در سطح جفت و بدون جهت می توان محاسبه شود
+		
+		\item
+		\lr{(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})}
+	\end{itemize}
+	
+		
+	\end{itemize}
+	
+	\item 
+	هدف اصلی بررسی اثر مالکیت مشترک بر هم حرکتی در سطح جفت است
+	
+	\item 
+	برای این هدف نیاز به ملاک در سطح جفت بدون جهت است با تفسیر اقتصادی مناسب
+	
+	\item 
+	ملاک
+	\cite{AntonPolk}
+	میزان درصد مالکیت مشترک از مارکت دو شرکت است
+	
+	
+	\item 
+	از این ملاک استفاده می کنیم ولی مشکلی دارد
+	\item 
+	این ملاک توضیح مالکیت را در نظر نمی گیرد
+	
+\end{itemize}
 
-In table \ref{maasurmentsSummary} we summarize common ownership measurements which are used in literature. There are two groups of measurement for common ownership.
-First of all, model-based measures that capture common ownership base on a proper  model. These measures have a better economic interpretation, but most of them are bi-directional or industry-level measures.(e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s})
-
-In addition to model-based measures, some ad hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})
-
-
-\begin{table}[htbp]
+\begin{LTR}
+	\lr{\begin{table}[htbp]
 	\centering
 	\scriptsize
 	\caption{ This table summarizes common ownership measurements in the literature.}
@@ -722,34 +926,26 @@ In addition to model-based measures, some ad hoc common ownership measures are u
 		\end{tabular}
 	}
 \end{table}
-
-
-
-In our primary analysis, we estimate the impact of common ownership on pair's correlation. For this purpose, we need a pair-level measure with a good economic interpretation that is not bi-directional. As a result, we propose a modification for Anton's measure (\cite{AntonPolk}) that captures the extent of common ownership distribution and apply this measure in this study.
-
-\subsubsection{Modified Anton's measure }
-We reformulate mentioned Anton's measure in table \ref{maasurmentsSummary}. This factor measure common ownership as the total value of
-stock held by the F common-holders of the two stocks, scaled by the total market capitalization of the two stocks
-\begin{equation}
-	\text{Overlap}_{Sum}(i, j) = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}
-	\label{Sum}
-\end{equation}
-where $ S^f_{i,t}$ is the number of shares held by owner f
-at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t} $, and similarly for stock j. 
-As shown in equation \ref{Sum}, this measure neglects different distribution of common owners and represents the percent of joint-held market capitalization from the total market capitalization of the two stocks.
-
-We reweight this formula to capture the difference between ownership distribution. Our proposed measures are shown in equation \ref{sqrt} and \ref{Quadratic} where all variables as the same Anton's measure. Both modified measures represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to number of holders.\footnote{ \tiny
-	Each holder owns $ 1/n $ of each firm ,Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $, So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i/n $\\
-	$
-	[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
-	= [\frac{\sqrt{n}(\sqrt{\alpha_1} +\sqrt{\alpha_2 })}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 = n $
-	\\
-	$
-	[\frac{\sum_{f=1}^{n} {(\alpha_1/n)^2}+\sum_{f=1}^{n} {(\alpha_2/n)^2}}{\alpha_1^2 +{\alpha_2}^2}]^{-1} = [\frac{{\alpha_1^2 + \alpha_2^2 }}{n(\alpha_1^2 + \alpha_2^2)}]^{-1} = n
-	$
 }
 
+\end{LTR}
 
+
+\subsubsection{\lr{Modified Anton's measure}}
+
+\begin{itemize}
+	\item 
+	فرمول استفاده شده در مقاله
+	\lr{\cite{AntonPolk}}
+		\begin{equation}
+		\text{Overlap}_{Sum}(i, j) = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}
+		\label{Sum}
+	\end{equation}
+	\item 
+	این فرمول توزیع مالکیت را در نظر نمیگیرد و فقط جمع ساده است
+	\item
+وزن دهی دوباره انجام دادیم و دو فرمول زیر را پیشنهاد می دهیم	
+	\item
 
 \begin{equation}
 	\text{Overlap}_{Sqrt}(i, j) =  [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 
@@ -760,147 +956,224 @@ We reweight this formula to capture the difference between ownership distributio
 	\text{Overlap}_{Quadratic}(i, j) =  [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}
 	\label{Quadratic}
 \end{equation}
+	\item
+تفسیر این دو ملاک عبارت است از این که در صورت تقسیم دو شرکت به صورت مساوی بین n مالک، این ملاک عدد n را نشان می دهد
+\LR{\footnote{ \tiny
+	Each holder owns $ 1/n $ of each firm ,Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $, So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i/n $\\
+	$
+	[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
+	= [\frac{\sqrt{n}(\sqrt{\alpha_1} +\sqrt{\alpha_2 })}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 = n $
+	\\
+	$
+	[\frac{\sum_{f=1}^{n} {(\alpha_1/n)^2}+\sum_{f=1}^{n} {(\alpha_2/n)^2}}{\alpha_1^2 +{\alpha_2}^2}]^{-1} = [\frac{{\alpha_1^2 + \alpha_2^2 }}{n(\alpha_1^2 + \alpha_2^2)}]^{-1} = n
+	$
+}}
+	\item
+در واقع یعنی تعداد مالک مشترک مساوی دو شرکت را تولید می کند
+\end{itemize}
 
-There are some numeric examples for better comparison. Two firms (X and Y) have one common owner who has $ \alpha $ and $ \beta $ from each market capitalization, respectively. (illustrated in figure \ref{gExample1}) 
-for better illustration, assume that the sum of holder's ownership equal to 100 percent ($ \alpha + \beta  = 100$), and two firms' market cap is equal. 
-
-
+\begin{itemize}
+	\item 
+	مثال عددی برای مقایسه سه ملاک معرفی شده
+	\begin{itemize}
+		\item 
+		دو شرکت x و y با یک مالک مشترک با مالکیت 
+		 $ \alpha $ 
+		 و
+		  $ \beta $
+		از مارکت کپ دو شرکت با ارزش یکسان.
+		شکل 
+		\ref{gExample1}
+		\begin{itemize}
+			\item 
+			برای سادگی فرق می کنیم
+			($ \alpha + \beta  = 100$)
+			\item شکل مثال
+				\begin{figure}[htbp]
+				\centering
+				\caption{\lr{ Numeric example 1} }
+				\label{gExample1}
+				\begin{tikzpicture}[node distance=1cm]
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+					\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+					
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+					%
+					%\node() at (3,0)
+					%    {$ \alpha + \beta = 100 $}; 
+				\end{tikzpicture}
+			\end{figure}\bigskip
+\item
+شکل 
+\ref{example1Results}
+نتایج محاسبات را نشان می دهد
+\item
 \begin{figure}[htbp]
-	\centering
-	\caption{ Numeric example 1 }
-	\label{gExample1}
-	\begin{tikzpicture}[node distance=1cm]
-		
-		\node (Firm) [startstop3] {\tiny Firm X};
-		\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
-		\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
-		
-		
-		\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
-		
-		\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
-		%
-		%\node() at (3,0)
-		%    {$ \alpha + \beta = 100 $}; 
-	\end{tikzpicture}
-\end{figure}\bigskip
-
-
-
-We  calculate common ownership measures base on equations \ref{Sum} (Sum), \ref{sqrt} (SQRT), and \ref{Quadratic} (Quadratic) for different ownership distributions.  Figure \ref{example1Results}  reports calculations results. As we expected, Anton's measure is constant at a fixed level of aggregate common ownership, but SQRT and  Quadratic vary from concentrated to dispersed ownership.  Concentrated ownership (50-50) has a greater common ownership measure than dispersed (10-90).
-
-\begin{figure}[htbp]
-	\caption{ Comparison of three measure for common ownership}
+	\caption{ \lr{Comparison of three measure for common ownership}}
 	\label{example1Results}
 	\includegraphics[width=0.47\linewidth]{1.png}
 	\includegraphics[width=0.47\linewidth]{2.png}
-	
 \end{figure}
+\item
+ملاک اصلی برای هر توزیعی ثابت است ولی دو ملاک معرفی شده تفاوت را ایجاد کرده است
+\item
+مالکیت مشترک در حال 50-50 بیشترین و در حال 10-90 کمترین حالت ممکن است 
 
 
-Now assume that there are three common owners for the two mentioned firms. First holder's ownership from firm X and Y are respectively $\alpha_1$ and $\beta_1$. It is similar for other holders. (illustrated in figure \ref{gExample2}). As before, the firm's market cap is equal. We calculate measures for concentrated or disparate ownership and ownerships that are less than the aggregate of the firm's market cap. Table \ref{Example2} reports calculation results. For ownerships that consist of total market cap,  results are consistent with the first example. Although, when aggregate ownership decreases, the Quadratic measure denotes unrealistic numbers. We conclude that our Quadratic measure is not a good measure for common ownership.
+\end{itemize}
+\item 
+		حال در مثال قبل فرض کنید سه مالک مشترک داریم که در برای مالک 1 مالکیت در شرکت x و y عبارت است از 
+		$\alpha_1$ 
+		و
+		$\beta_1$
+		
+		\begin{itemize}
+			\item 
+			شکل مثال
+			\begin{figure}[htbp]  \centering
+				\caption{ Numeric example 2}
+				\label{gExample2}
+				\centering
+				\begin{tikzpicture}[node distance=1cm]
+					
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+					
+					\node (Owner) [startstop3,above of = Firm , yshift=1.25cm , xshift=-3.5cm ] {\tiny Common owner 1 };
+					
+					
+					\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
+					
+					\node (Owner3) [startstop3,below of = Firm , yshift=-1.25cm , xshift=-3.5cm ] {\tiny Common owner 3 };
+					
+					
+					
+					
+					
+					\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
+					
+					\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
+					
+					
+					
+					\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
+					
+					\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
+					
+					
+					
+					\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
+					
+					\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+					
+					
+					
+				\end{tikzpicture}
+			\end{figure}
+			\item 
+			نتایح در 
+			\ref{Example2}
+			نشان داده شده است
+			\begin{LTR}
+				\lr{\begin{table}[htbp]
+				\centering
+				\caption{ text}
+				\label{Example2}
+				\resizebox{1\textwidth}{!}
+				{
+					\input{Example2.tex}
+				}
+			\end{table}}
+			\end{LTR}
+			\item 
+			برای مالکیت های برابر تمام مارکت کپ تو شرکت نتایج با قبل یکسان است
+			\item 
+			ستون اول هم تفسیر ملاک را نشان می دهد که در صورت تقسیم شرکت به 3 مالک، عدد برابر 3 است
+			\item 
+			برای مالکیت های کمتر از 100 درصد ملاک درجه 2 مقادیر غیر واقعی تولید می کند
+			\item 
+			برای همین از ملاک جذری استفاده می کنیم
+			
+			
+		\end{itemize}
+		\item 
+		حال فرض اصلی که ارزش بازاری دو شرکت برابر است را کنار می گذاریم برای مثال دو شرکت را با دو مالک مشترک در حالت های مختلف بررسی می کنیم
 
+		
+		\begin{itemize}
+			\item 
+			شکل 
+			 \ref{sqrtMarket}
+			 و
+			  \ref{sumMarket}
+			  نتایج را برای جمع ثابت مالکیت برای سه حالت توزیع مختلف رسم شده است
+			  
+			\item 
+		\begin{LTR}
+			\lr{	\begin{figure}[htbp]
+				\centering
+				\caption{ SQRT measure for fixed aggregate ownership on different relative market cap ratios}
+				\label{sqrtMarket}
+				\includegraphics[width=0.85\linewidth]{3.png}
+			\end{figure}
+			\begin{figure}[htbp]
+				\centering
+				\caption{ Sum measure for fixed aggregate ownership on different relative market cap ratios}
+				\label{sumMarket}
+				\includegraphics[width=0.85\linewidth]{4.png}
+			\end{figure}}
+		\end{LTR}
+			\item 
+			جدول 
+			\ref{marketcap}
+			نتایج محاسبات را نشان داده است.
+			
+			\item 
+			\begin{LTR}
+				\lr{\begin{table}[htbp]
+						\centering
+						\caption{text }
+						\label{marketcap}
+						\resizebox{!}{!}
+						{
+							\input{marketcap}
+						}
+				\end{table}}
+			\end{LTR}
+			\item
+			ملاک وزن دهی جذری به دلیل تغییرات بهتر و مقادیر معقول برای مقادیر کم مالکیت مشترک انتخاب شده است
+		\end{itemize}
 
-\begin{figure}[htbp]  \centering
-	\caption{ Numeric example 2}
-	\label{gExample2}
-	
-	\centering
-	
-	\begin{tikzpicture}[node distance=1cm]
 		
 		
-		\node (Firm) [startstop3] {\tiny Firm X};
-		\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
-		
-		\node (Owner) [startstop3,above of = Firm , yshift=1.25cm , xshift=-3.5cm ] {\tiny Common owner 1 };
-		
-		
-		\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
-		
-		\node (Owner3) [startstop3,below of = Firm , yshift=-1.25cm , xshift=-3.5cm ] {\tiny Common owner 3 };
-		
-		
-		
-		
-		
-		\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
-		
-		\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
-		
-		
-		
-		\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
-		
-		\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
-		
-		
-		
-		\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
-		
-		\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
-		
-		
-		
-	\end{tikzpicture}
-	
-\end{figure}
-
-
-\begin{table}[htbp]
-	\centering
-	
-	\caption{ text}
-	\label{Example2}
-	\resizebox{1\textwidth}{!}
-	{
-		\input{Example2.tex}
-	}
-\end{table}
-
-
-
-
-A fundamental assumption in previous examples is equality of firms' market cap. In the last example, we relax this assumption. Table \ref{marketcap} reports calculated measures for fixed aggregate ownership on different relative market cap ratios. We extend our analysis to higher market cap ratios and report our results in figure \ref{sqrtMarket} and \ref{sumMarket}. In this setting, the SQRT measure has a better variation relative to Anton's measure. 
+	\end{itemize}
+\end{itemize}
 
 
 
 
 
 
-\begin{figure}[htbp]
-	\centering
-	\caption{ SQRT measure for fixed aggregate ownership on different relative market cap ratios}
-	\label{sqrtMarket}
-	\includegraphics[width=0.85\linewidth]{3.png}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\caption{ Sum measure for fixed aggregate ownership on different relative market cap ratios}
-	\label{sumMarket}
-	\includegraphics[width=0.85\linewidth]{4.png}
-\end{figure}
-
-\begin{table}[htbp]
-	\centering
-	\caption{text }
-	\label{marketcap}
-	\resizebox{!}{!}
-	{
-		\input{marketcap}
-	}
-\end{table}
 
 
 
-In conclusion, We use the SQRT measure for our main study. This measure has an acceptable variation within different distributions and relative market caps. Also, it has a fair value at a lower level of aggregate common ownership. 
-
-On each day, we measure common ownership by SQRT measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of
-common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
-
-
-\begin{table}[htbp]
+\begin{itemize}
+	\item 
+	در هر روز مالکیت مشترک با ملاک اصلاح شده تولید شده است
+	\item 
+مقدار میانگین ماهانه آن به عنوان مقدار ماهانه استفاده شده است
+	\item 
+جدول 
+\ref{measureResults}
+نتایج محاسبات برای مالکیت مشترک ملاک ساده و اصلاح شده
+\begin{LTR}
+	\lr{\begin{table}[htbp]
 	\centering
 	\caption{ text}
 	\label{measureResults}
@@ -908,7 +1181,15 @@ common ownership measure for both methods. As we expected, the modified measure 
 	{
 		\input{Output/FCACal.tex}
 	}
-\end{table}%
+\end{table}}
+\end{LTR}
+\item
+مالکیت مشترک برای گروه های کسب و کار حدودا 5 برابر و برای صنعت یکسان حدودا 3 برابر است
+\end{itemize}
+
+
+
+
 
 
 
@@ -918,38 +1199,85 @@ common ownership measure for both methods. As we expected, the modified measure 
 
 
 
-\subsection{Overview of Business Groups in Tehran Stock Exchange} \label{BGDef}
+\subsection{\lr{Overview of Business Groups in Tehran Stock Exchange}} \label{BGDef}
 
-There is no difference between emerging markets (such as  Chile, India, Indonesia, South Korea, Pakistan, and many more) and developed ones (like Italy and Sweden); business groups present everywhere. However, group-affiliated firms are relatively large and economically important in emerging markets. 
-These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
-There is a complex ownership network in TSE as an emerging market. 
-This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
+\begin{itemize}
+	\item 
+	گروه های کسب و کار در کشور های در حال توسعه و توسعه یافته وجود دارد
+	
+	\lr{\cite{Khanna2007}}
+	\item 
+	گروه کسب و کار مجموعه ای از شرکت های به هم پیوسته است که از لحاظ قانونی غیروابسطه هستند ولی ارتباطات رسمی از طریق برای مثال سرمایه و غیر رسمی مانند فامیلی دارند
+	\item 
+	در چین و ایران گروه های کسب و کار مرتبط با حاکمیت هستند
+	\item 
+	لایه های پیچیده و تو در توی مالکیت در ایران وجود دارد 
+	
+	\lr{\cite{FirmInterlock}}
+	\item 
+	دلیل اصلی بسیاری از گروه های کسب و کار در ایران انفلاب سال 
+1375 می باشد
+\lr{\cite{Aliabadi2022}}
+\begin{itemize}
+	\item 
+	بسیاری از شرکت های قبل از انقلاب دولتی شدند
+	\item 
+	بخشی از شرکت های حاضر در صنایع نیز توسط IDRO ایجاد شده است
+	\item 
+	در ادامه فاز های متوالی خصوصی سازی توسط دولت در بازار سرمایه  بوده است
+\begin{itemize}
+	\item 
+	در فاز اول خصوصی سازی حدود 300 شرکت خصوصی شده اند
+	\item 
+	در فاز دوم حدودا 150 مییارد دلار از شرکت های دولتی خصوصی شدند 
+	\item 
+	صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و دینی و موسسات انقلابی مشتری های اصلی مرحله دوم خصوصی سازی بوده اند
+	\item 
+	در این فاز بسیاری از  گروه های کسب و کار تشکیل شده اند و شرکت ها از دولتی به شبه دولتی تبلدیل شده اند	
+\end{itemize}
+\end{itemize}	
+\item
+فاز های خصوصی سازی و گسترش بازار سرمایه ایران سبب تغییر ساختار مالکیت در شرکت های قبل از انقلاب و موسسات بعد از انفلاب شده است
+\item
+سبب ایجاد گروه های کسب و کار بزرگ شده است که بسیاری از صنایع و شرکت ها را مدیریت می کنند
 
-The reason for many of these business groups back to the 1979 revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
-some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s.  (IDRO was a state-owned holding company for investing in capital-intensive industries) 
+\end{itemize}
 
-The business groups are formed from mentioned ancestors due to two related forces; A multi-phased privatization by the state and the development of the domestic stock market. In the first wave of privatization, more than 300 companies were fully or partially privatized. In the second one, approximately  \$150 billion ownership of State-Owned Enterprises (SOEs) and assets were transferred.  
-Pension funds, military institutions, cultural and religious foundations, and revolutionary foundations (pseudo-government groups) primary customers in the second wave of privatization. These waves of privatization transferred control of hundreds of SOEs to
-semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s enhances this effect. The government tried to develop the stock market as a tool for better privatization. 
-(\cite{Aliabadi2022})
+\begin{itemize}
+	\item 
+	انتظار داریم شرکت ها حاضر در گروه های کسب و کار در یک صنعت حضور داشته باشند
+	\begin{itemize}
+		\item 
+		38\% جفت های شناسایی شده در یک گروه کسب و کار در یک صنعت قرار دارند 
+		\item 
+		تنها 5\% جفت های شناسایی شده بیرون یک گروه کسب و کار در یک صنعت قرار دارند 
+		\begin{figure}[htbp]
+			\caption{}
+			\label{sameIndustryinBG}
+			\centering
+			\includegraphics[width=0.48\linewidth]{Output/sameIndustryinBG.eps}
+			\includegraphics[width=0.48\linewidth]{Output/sameIndustryNoinBG.eps}
+		\end{figure}
+		\item 
+		از نظر اندازه و نسبت بوک تو مارکت ججفت های گروه های کسب و کار شبیه جامعه هستند
+		\item 
+		همانطور که قبلا هم گفتیم متوسط مالکیت مشترک در گروه های کسب و کار زیاد است
+		\item 
+	شکل 
+	\ref{BGSummary}
+	خلاصه ها را نشان داده است
+	\begin{figure}[htbp]
+		\caption{}
+		\label{BGSummary}
+		\centering
+		\includegraphics[width=0.85\linewidth]{Output/BGSummary.eps}
+	\end{figure}
+	\end{itemize}
+	
+	
+\end{itemize}
 
-In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations. They created large business groups that govern primary industries. As a result, we expect that pairs in the business groups belong to the same sector, and figure \ref{sameIndustryinBG} confirms that. As you can see, only 8\% of our pairs belong to the same industry, but 43\% of pairs in the same group are in the same industry. Pairs in the business groups are the same size and book to market as other pairs. However, as said before, the common ownership level in these pairs is much greater, and cross-ownership is higher in business group pairs. Figure \ref{BGSummary} reports an average of control variables in these two types of groups.
 
-
-\begin{figure}[htbp]
-	\caption{}
-	\label{sameIndustryinBG}
-	\centering
-	\includegraphics[width=0.48\linewidth]{Output/sameIndustryinBG.eps}
-	\includegraphics[width=0.48\linewidth]{Output/sameIndustryNoinBG.eps}
-\end{figure}
-
-\begin{figure}[htbp]
-	\caption{}
-	\label{BGSummary}
-	\centering
-	\includegraphics[width=0.85\linewidth]{Output/BGSummary.eps}
-\end{figure}
 \FloatBarrier
 
 
@@ -957,96 +1285,209 @@ In conclusion, the multiple waves of privatization with the development of the s
 
 \section{Results}
 
-\subsection{Forecasting Co-movement}
+\subsection{\lr{Forecasting Co-movement}}
 \label{Forecasting Co-movement}
-Our specific interest is how the common ownership affects a pair of stocks return co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common ownership in the current period is associated with a higher level of correlation in the following month. We empirically test the impact of current measured common ownership on the next period's co-movement.
- \begin{figure}[htbp]
- \centering  
-        \centering
-        \includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
-    \caption{Future monthly correlation for different level of common ownership at this period }
-    \label{mcorr50}
-\end{figure}
 
-For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{FCA}^*_{ij,t}$, $\textit{SameGroup}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
-\input{Model11}
+\begin{itemize}
+	\item 
+	در مرحله اول بررسی رابطه مالکیت مشترک و گروه های کسب و کار با هم حرکتی شرکت ها بررسی کرده ایم
+	\item 
+	در شکل 
+	\ref{mcorr50}
+	رابطه هم حرکتی دوره آینده با مالکیت مشترک در این دوره قابل مشاهده است
+	 \begin{figure}[htbp]
+		\centering  
+		\centering
+		\includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
+		\caption{Future monthly correlation for different level of common ownership at this period }
+		\label{mcorr50}
+	\end{figure}
+	\item 
+	هم حرکتی دوره آینده را بر روی متغیر های مورد نظر برآورد می کنیم:
+	\input{Model11}
+	
+	\item
+	برای هر ماه این معادله برآورد می شود و متوسط سری زمانی ضرایب به شیوه
+	
+	\lr{\cite{FamaMacBeth}}
+	برآورد شده است
+	\item
+	این شیوه انتخاب شده است تا مشکلی با 
+	\lr{cross-correlation}
+	نداشته باشیم
+	\item
+	انحراف معیار هم به شیوه
+	
+	\lr{\cite{newey1987hypothesis}}
+	اصلاح شده است تا 
+	\lr{autocorrelation}
+	را بر طرف کنید
+	\item
+	تا 4 دوره قبل را بر طرف می کنید
+	($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $)
+	
+	
+\end{itemize}
 
-We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $). %Furthermore, we use the current period's co-movement to control other committed variables that depend on the pair's characteristics which we cannot measure. 
+\begin{itemize}
+	\item 
+	نتایج برآورد در جدول 
+	\ref{mresult2}
+	نشان داده شده است
+	
+\begin{itemize}
+	\item 
+	در دو ستون اول فقط گروه های کسب و کار را براورد کرده ایم حدودا 1.5 درصد هم حرکتی افزایش پیدا می کند
+	\item 
+	در ستون 3 و 4 اثر مالکیت مشترک بر روی هم حرکتی بررسی کرده ایم
+	\item 
+	اثر گروه کسب و کار بیشتر از مالکیت مشترک است
+	\item 
+	با اضافه کردن گروه کسب و کار و مالکیت مشترک، مالکیت مشترک اثر خود را از دست می دهد
+	\item 
+	مالکیت مشترک فقط در گروه های کسب و کار اثر دارد
+	\item
+	در دو ستون اخر هم بدون محدود کردن جامعه بودن در گروه را بررسی کرده ایم و یافتیم که در گروه کسب و کار مالکیت مشترک اهمیت دارد
+	\item
+	ستون آخر اثر ثابت گروه های کسب و کار را اضافه کردیم نتایج برقرار است
+	
+\end{itemize} 
+\end{itemize}
 
-Table \ref{mresult2} shows that results from forecasting cross-sectional variation in pair's co-movement. In the first two columns, we estimate a simplified version of equation \ref{model1} with only the \textit{Same Group} as an independent variable. In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity. We find that the \textit{Same Group} has a high statically significant effect, with a coefficient of $0.0153$ and a t-statistic of $7.90$, in the presence of control variables. 
-In columns three and four, we estimate our simplified model with only common ownership, $\text{FCA}^*_{ij,t}$, as a forecasting variable. We find that $\text{FCA}^*_{ij,t}$ significantly improves our forecast, with a coefficient of $0.0011$ and a t-statistic of $2.11$, which is significant at five percent level, however, the impact of the \textit{Same Group} is eleven times bigger than this. 
-
-In the fifth specification of table \ref{mresult2}, we use both \textit{Same Group}  and $\text{FCA}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that pair in the same business group affects more than a higher level of common ownership.
- Furthermore, in the sixth and seventh columns of table \ref{mresult2}, we restrict our investigation to two subsamples. In the first one, we run our model for the pairs in the same business group and others who do not belong to the same one in the second one. It provides evidence that common ownership only matters for the pairs in the same business groups. 
- 
- Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{FCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. These results aver that $\text{FCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. On the other hand, as shown in figure \ref{BGSummary} and table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, for further analysis, we restrict our analysis to pairs in the fourth quarter of the common ownership.
  \begin{landscape}
-\begin{table}[htbp]
-	\centering
+
+	{\begin{table}[htbp]
+%	\centering
 	\caption{Connected Co-movement}
 	\label{mresult2}
 %	\resizebox{1\textwidth}{!}{
-		\input{Output/mresult2-slide.tex}
+		\begin{LTR}
+			\lr{\input{Output/mresult2-slide.tex}}
+		\end{LTR}
 %	}
-\end{table}
+\end{table}}
  \end{landscape}
 \FloatBarrier
+
+
+
+
+
 \subsection{High level of common ownership}
-In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' comovement. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{FCA}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future comovement and current measurement of common ownership for that pairs. As you can see in the left panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' comovement although for a high level of common ownership.
-\begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
-	\caption{text}
-	\label{Qmcorr5lrd}
-\end{figure}
-\begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
-	\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
-	\caption{text}
-	\label{Qmcorr5subsample}
-\end{figure}
+\begin{itemize}
+	\item 
+	با توجه به جدول 
+	\ref{measureResults}
+	گروه های کسب و کار به صورت مالکیت بالاتر نیز دارند 
+	\item
+	برای برطرف کردن این مسئله بررسی را محدود به مالکیت مشترک بالا کردیم
+	\item
+	با توجه به شکل 
+	\ref{Qmcorr5subsample}
+	بالاتر از کوارتر سوم داده به نظر می آید بیشترین تاثیر را در هم حرکتی دارد
+	
+	\begin{figure}[htbp]
+		\centering  
+		\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
+		\caption{text}
+		\label{Qmcorr5lrd}
+	\end{figure}
+	\begin{figure}[htbp]
+		\centering  
+		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
+		\caption{text}
+		\label{Qmcorr5subsample}
+	\end{figure}
 
-For detailed analysis, we estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the subsample of a high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As expected, firms in the same business group have a high statistical and economically significant effect on forecasting future comovements. Columns six and seven prove our prior explanations for the importance of business groups compared to common ownership in pairs with a higher level of common ownership. When we restrict our analysis to the high level of common ownership, our results may be driven by pairs' characteristics. Figure \ref{QarterSummary} reports an average of control and dependent variable for the subsample and all the pairs. In the fourth quarter, measured common ownership is higher than others, and more than 25\% of them belong to the same business group. On the other hand, the difference in size and the book-to-market ratio is not statistically different from other pairs. This similarity shows that pairs in the fourth quarter are not different in their pair characteristics. 
+	\item
+	بررسی را محدود به جفت های دراای مالکیت زیاد کردیم و مدل 
+	\ref{model1}
+	را به شیوه گذشته برآورد کریدم
+	\item
+	نتایج در جدول 
+	 \ref{QTimemresult2subsample}
+	 نتایج را نشان داده است
+\lr{\begin{LTR}
+			 \begin{table}[htbp]
+	 	\centering
+	 	\caption{\scriptsize Estimation results for high level of common ownership}
+	 	\label{QTimemresult2subsample}
+	 	\resizebox{0.75\textwidth}{!}{
+	 		\input{Output/QTimemresult2subsample-slide.tex}
+	 	}
+	 \end{table}
+\end{LTR}}
+	\begin{itemize}
+		\item 
+		همچنان نتایج گذشته تایید شده است
+		\item 
+	مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارد 
+		\item 
+		گروه های کسب و کار بیشترین تاثیر را در میان سطح زیاد مالیکت مشترک دارد
+		\item 
+		ممکن است جفت های دارای مالکیت بالا تفاوت بنیادی با دیگر جفت ها داشته باشند 
+		\begin{itemize}
+			\item 
+			در شکل 
+			\ref{QarterSummary}
+			متوسط کنترل های تعریف شده نشان داده شده است
+			\begin{figure}[htbp]
+				\centering  
+				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
+				\caption{Pairs' characteristics for the pairs with high level of common ownership}
+				\label{QarterSummary}
+			\end{figure}
+		\item
+		تفاوت چشمگیری نسبت به بقیه جامعه ندارند
+		\end{itemize}
+	\end{itemize}
+	
+	
+\end{itemize}
 
-\begin{table}[htbp]
-	\centering
-	\caption{\scriptsize Estimation results for high level of common ownership}
-	\label{QTimemresult2subsample}
-	\resizebox{0.75\textwidth}{!}{
-		\input{Output/QTimemresult2subsample-slide.tex}
-	}
-\end{table}
-\begin{figure}[htbp]
-	\centering  
-	\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
-	\caption{Pairs' characteristics for the pairs with high level of common ownership}
-	\label{QarterSummary}
-\end{figure}
 
 \FloatBarrier
 
 \subsection{All Pairs}
-In the former analyses, we restrict our investigation to firms with at least one common owner. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. 
-So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. 
+\begin{itemize}
+	\item 
+	اگر گروه های کسب و کار اهمیت داشته باشند نیاز نیست تا محاسبات را محدود به شرکت های دارای مالک مشترک کنیم
+	\item
+	همه جفت های بازار را تشکیل می دهیم
+	\item
+	زمانی که مالکیت مشترک وجود ندارد مالکیت مشترک را برابر صفر قرار می دهیم و اگر مالکیت مشترک داشته باشند میزان ارن را محاسبه می کنیم
+	\item
+	برای همه جفت ها مدل 
+	\ref{model1}
+	و مدل زیر را به شیوه گذشته برآورد می کنیم:
+	\input{Model12}
+	\item
+	نتایج در جدول 
+	\ref{AllPairs}
+	نشان داده شده است
+	\begin{itemize}
+		\item 
+		در ستون اول عضویت در گروه کسب و کار را نشان می دهد که هم
+		\item 
+		
+		\item 
+		
+		
+	\end{itemize}
+\end{itemize}
 
-For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{FCA}_{ij,t}$ to zero for a pair without any common owner. For analysis of the high level of common ownership, we define a dummy variable that equals one if pairs' common ownership, $\text{FCA}_{ij,t}$, is in the fourth quarter of that period (without considering zeros) and use it as our variable of interest. Other controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}. We estimate equation \ref{model1} and this new model:
-\input{Model12}
-
-Table \ref{AllPairs} reports results of estimations for two models. These results suggest that pairs in the same group co-move more than stocks that are not in the same group. In addition, as we expected, pairs with common ownership and the high level of common ownership co-move greater than others (columns 2 and 8). In columns 3 and 9, we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2} that the \textit{Same Group} is critical for forecasting future co-movement, and common ownership does not matter for pairs. 
-
-In columns four, five, ten, and eleven of the table \ref{AllPairs},  we estimate our variable of interest for the subsample of pairs in the same business group and others that are not in the same group. These specifications help us to separate common ownership and the same group effect. The results establish that only a high level of common ownership will increase the co-movement of the stocks' abnormal return for the pairs in the same group. Furthermore, we estimate model \ref{model1} and \ref{model2} for the full sample. Columns seventh and fourteenth of table \ref{AllPairs} reports the result of this estimation and confirm the results of table \ref{mresult2}. 
-
-In conclusion , these results show that same business group is more important than common ownership. In fact, when we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.
 \begin{landscape}
-		\begin{table}[htbp]
-%	\centering
-	\caption{Non-connected Co-movement}
-	\label{AllPairs}
-	\resizebox{1.7\textwidth}{!}{
-		\input{Output/Q3mresultAllPairs.tex}
-	}
-\end{table}
+\begin{LTR}
+	\lr{	\begin{table}[htbp]
+		%	\centering
+		\caption{Non-connected Co-movement}
+		\label{AllPairs}
+		\resizebox{1.7\textwidth}{!}{
+			\input{Output/Q3mresultAllPairs.tex}
+		}
+	\end{table}}
+\end{LTR}
 \end{landscape}
 
 

@@ -90,16 +90,15 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
 tempt.Year = tempt.Year.astype(int)
-
 tempt = tempt.drop(
     columns=["Max. Number of Members", "Max. Number of Owners", "Max. Block. Ownership"]
 ).rename(
     columns={
         "No. of Holders": "No. of Blockholders",
-        "Avg. Number of Members": "Mean Number of Members",
-        "Av. Holder Percent": "Mean Of each Blockholder’s ownership",
-        "Av. Number of Owners": "Mean Number of Owners",
-        "Av. Block. Ownership": "Mean Block. Ownership",
+        "Avg. Number of Members": "Average Number of Members",
+        "Av. Holder Percent": "Average Of each Blockholder’s ownership",
+        "Av. Number of Owners": "Average Number of Owners",
+        "Av. Block. Ownership": "Average Block. Ownership",
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
@@ -289,12 +288,12 @@ tempt = tempt.drop(
     columns={
         "Number of Pairs not in one Group": "Number of Pairs not in the same Group",
         "Number of Pairs in one Group": "Number of Pairs in the same Group",
-        "Avg. Number of Common owner": "Mean Number of Common owner",
-        "Avg. Number of Pairs in one Group": "Mean Number of Pairs in one Group",
-        "Av. Holder Percent": "Mean Percent of each blockholder",
+        "Avg. Number of Common owner": "Average Number of Common owner",
+        "Avg. Number of Pairs in one Group": "Average Number of Pairs in one Group",
+        "Av. Holder Percent": "Average Percent of each blockholder",
         "Median of Owners' Percent": "Med. Percent of each blockholder",
-        "Av. Number of Owners": "Mean Number of Owners",
-        "Av. Block. Ownership": "Mean Block. Ownership",
+        "Av. Number of Owners": "Average Number of Owners",
+        "Av. Block. Ownership": "Average Block. Ownership",
     }
 )
 mlist = [
@@ -304,19 +303,20 @@ mlist = [
     "No. of Pairs not in Groups",
     "Number of Pairs not in the same Group",
     "Number of Pairs in the same Group",
-    "Mean Number of Common owner",
+    "Average Number of Common owner",
     "Med. Number of Common owner",
-    "Mean Percent of each blockholder",
+    "Average Percent of each blockholder",
     "Med. Percent of each blockholder",
-    "Mean Number of Pairs in one Group",
+    "Average Number of Pairs in one Group",
     "Med. Number of Pairs in one Group",
-    "Mean Number of Owners",
+    "Average Number of Owners",
     "Med. Number of Owners",
-    "Mean Block. Ownership",
+    "Average Block. Ownership",
     "Med. Block. Ownership",
 ]
-tempt[mlist].set_index("year").T.astype(int).to_latex(pathResult + "summaryOfPairs.tex")
-
+tempt = tempt[mlist].set_index("year").T.astype(int)
+tempt.to_latex(pathResult + "summaryOfPairs.tex")
+tempt
 #%%
 
 df2.groupby("t_Month").size().describe().to_frame().rename(
@@ -324,7 +324,9 @@ df2.groupby("t_Month").size().describe().to_frame().rename(
 ).T.drop(columns=["count", "std", "25%", "75%"]).astype(int).to_latex(
     pathResult + "numberofPairs.tex"
 )
-
+df2.groupby("t_Month").size().describe().to_frame().rename(
+    columns={0: "Number of unique paris"}, index={"50%": "Median"}
+).T.drop(columns=["count", "std", "25%", "75%"]).astype(int)
 
 #%%
 
@@ -546,7 +548,7 @@ tempt = (
     .mean()
     .describe()
     .T.drop(columns=["count"])
-    .round(2)
+    .round(2).T
     .rename(
         columns={
             "sgroup": "SameIndustry",
@@ -560,9 +562,11 @@ tempt = (
             "MonthlyCrossOwnership": "CrossOwnership",
         }
     )
-)
-tempt.to_latex(pathResult + "ControlsSummary.tex")
+).T
 
+
+tempt.to_latex(pathResult + "ControlsSummary.tex")
+tempt
 # %%
 tempt = pd.DataFrame()
 t = (
