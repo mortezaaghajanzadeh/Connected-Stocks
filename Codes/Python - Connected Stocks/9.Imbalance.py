@@ -9,6 +9,9 @@ from pandas_jalali.converter import get_gregorian_date_from_jalali_date
 
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+pathR = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
 df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
 
 
@@ -32,7 +35,7 @@ def vv(row):
     return int(row[0] + row[1] + row[2])
 
 
-df = df[~df.ind_buy_count.isnull()].drop(
+df = df[~df.ins_buy_count.isnull()].drop(
     columns=[
         "basevalue",
         "market",
@@ -68,8 +71,8 @@ df["day"] = df["day"].astype(int)
 
 
 def BG(df):
-    # pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-    pathBG = r"E:\RA_Aghajanzadeh\Data\\"
+    pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
+    # pathBG = r"E:\RA_Aghajanzadeh\Data\\"
     n = pathBG + "Grouping_CT.xlsx"
     BG = pd.read_excel(n)
     uolist = (
@@ -132,6 +135,15 @@ mdf["InsImbalance_volume"] = (mdf.ins_buy_volume - mdf.ins_sell_volume) / (
 mdf["InsImbalance_value"] = (mdf.ins_buy_value - mdf.ins_sell_value) / (
     mdf.ins_buy_value + mdf.ins_sell_value
 )
+mdf["IndImbalance_count"] = (mdf.ind_buy_count - mdf.ind_sell_count) / (
+    mdf.ind_buy_count + mdf.ind_sell_count
+)
+mdf["IndImbalance_volume"] = (mdf.ind_buy_volume - mdf.ind_sell_volume) / (
+    mdf.ind_buy_volume + mdf.ind_sell_volume
+)
+mdf["IndImbalance_value"] = (mdf.ind_buy_value - mdf.ind_sell_value) / (
+    mdf.ind_buy_value + mdf.ind_sell_value
+)
 mdf = mdf[
     [
         frequency,
@@ -145,6 +157,9 @@ mdf = mdf[
         "InsImbalance_count",
         "InsImbalance_volume",
         "InsImbalance_value",
+        "IndImbalance_count",
+        "IndImbalance_volume",
+        "IndImbalance_value",
     ]
 ].sort_values(by=["name", frequency])
 mdf = mdf.reset_index(drop=True)
@@ -154,9 +169,99 @@ Imbalances = [
     "InsImbalance_count",
     "InsImbalance_volume",
     "InsImbalance_value",
+    "IndImbalance_count",
+    "IndImbalance_volume",
+    "IndImbalance_value",
     "Grouped",
 ]
+mdf['Grouped'] = 1
+mdf.loc[mdf.uo.isnull(),'Grouped'] = 0
 gg = mdf.groupby([frequency])
+#%% Mean Section
+def daily(g):
+    print(g.name)
+    Imbalances = [
+        "InsImbalance_count",
+        "InsImbalance_volume",
+        "InsImbalance_value",
+        "IndImbalance_count",
+        "IndImbalance_volume",
+        "IndImbalance_value",
+        "Grouped",
+    ]
+    a = g.groupby("name")[Imbalances].mean()
+    # a["Grouped"] = 1
+    # a = a.append(
+    #     g[g.Grouped == 0][Imbalances]
+    #     .mean()
+    #     .to_frame()
+    #     .rename(columns={0: "NotGroup"})
+    #     .T
+    # )
+    return a
+
+
+result = gg.apply(daily)
+result = result.reset_index()
+result = result.dropna()
+result = result[result.yearMonth < 139901]
+result
+a = result.groupby("Grouped")[Imbalances[:-1]].mean()
+a = a.sort_values(by=['InsImbalance_value']).dropna()
+a
+b = result.groupby(["yearMonth", "Grouped"]).mean().reset_index()
+b
+tt = (
+    result.groupby("Grouped")[['InsImbalance_value']]
+    .describe()
+    .T.rename(
+        columns={
+            0.0: "Ungrouped",
+            1.0: "Grouped",
+        }
+    )
+    .T.round(3)
+)
+tt[('InsImbalance_value', 'count')] = tt[('InsImbalance_value', 'count')].astype(int)
+tt.to_latex(pathR + "\\ImbalanceInsMeanSummary.tex")
+tt
+#%%
+tt = (
+    result.groupby("Grouped")[['IndImbalance_value']]
+    .describe()
+    .T.rename(
+        columns={
+            0.0: "Ungrouped",
+            1.0: "Grouped",
+        }
+    )
+    .T.round(3)
+)
+tt[('IndImbalance_value', 'count')] = tt[('IndImbalance_value', 'count')].astype(int)
+tt.to_latex(pathR + "\\ImbalanceIndMeanSummary.tex")
+tt
+#%%
+result["yearMonth"] = result.yearMonth.astype(str)
+fig = plt.figure(figsize=(8, 4))
+g = sns.lineplot(
+    data=result, x="yearMonth", y="InsImbalance_value", hue="Grouped", ci=0
+)
+a = result.yearMonth.unique()
+labels = list(result.yearMonth.unique())
+tickvalues = a
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Monthly mean' Time Series of Ins imbalance")
+plt.legend(["Ungrouped", "Grouped"])
+fig.set_rasterized(True)
+plt.savefig(pathR + "\\GroupedMean.eps", rasterized=True, dpi=300)
+plt.savefig(pathR + "\\GroupedMean.png", bbox_inches="tight")
+
+#%%
 
 
 def daily(g):
@@ -165,6 +270,9 @@ def daily(g):
         "InsImbalance_count",
         "InsImbalance_volume",
         "InsImbalance_value",
+        "IndImbalance_count",
+        "IndImbalance_volume",
+        "IndImbalance_value",
         "Grouped",
     ]
     a = g.groupby("uo")[Imbalances].std()
@@ -177,30 +285,19 @@ def daily(g):
 
 result = gg.apply(daily)
 result = result.reset_index().rename(columns={"level_1": "uo"})
-#%%
+# def togreforian(row):
+#     row = str(row)
+#     time = jdatetime.date(int(row[0:4]), int(row[4:6]), 28).togregorian()
+#     return str(time.year) + "-" + str(time.month)
 
 
-def togreforian(row):
-    row = str(row)
-    time = jdatetime.date(int(row[0:4]), int(row[4:6]), 28).togregorian()
-    return str(time.year) + "-" + str(time.month)
-
-
-result["date"] = result.yearMonth.apply(togreforian)
-result
-#%%
+# result["date"] = result.yearMonth.apply(togreforian)
 result = result.dropna()
 result = result[result.yearMonth < 139901]
-#%%
-a = result.groupby("uo")[Imbalances[:-1]].mean()
-a = a.sort_values(by=Imbalances[-2]).dropna()
-a
-
-# %%
-b = result.groupby(["yearMonth", "Grouped"]).mean().reset_index()
+result
 #%%
 tt = (
-    b.groupby("Grouped")[Imbalances[-2]]
+    result.groupby("Grouped")[["InsImbalance_value"]]
     .describe()
     .T.rename(
         columns={
@@ -210,13 +307,30 @@ tt = (
     )
     .T.round(3)
 )
-tt["count"] = tt["count"].astype(int)
+tt[("InsImbalance_value","count")] = tt[("InsImbalance_value","count")].astype(int)
 tt.to_latex(
-    r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
-    + "\\ImbalanceSummary.tex"
+    pathR
+    + "\\ImbalanceInsStdSummary.tex"
 )
 tt
 #%%
+tt = (
+    result.groupby("Grouped")[["IndImbalance_value"]]
+    .describe()
+    .T.rename(
+        columns={
+            0.0: "Ungrouped",
+            1.0: "Grouped",
+        }
+    )
+    .T.round(3)
+)
+tt[("IndImbalance_value","count")] = tt[("IndImbalance_value","count")].astype(int)
+tt.to_latex(
+    pathR
+    + "\\ImbalanceIndStdSummary.tex"
+)
+tt
 
 # %%
 result["yearMonth"] = result.yearMonth.astype(str)
@@ -230,18 +344,40 @@ tickvalues = a
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-pathS = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 plt.ylabel("")
 plt.xlabel("Year-Month")
-plt.title("Monthly standard errors' Time Series")
+plt.title("Monthly standard errors' Time Series of Institutional Imbalance")
 plt.legend(["Ungrouped", "Grouped"])
 fig.set_rasterized(True)
-plt.savefig(pathS + "\\GroupedSTD.eps", rasterized=True, dpi=300)
-plt.savefig(pathS + "\\GroupedSTD.png", bbox_inches="tight")
+plt.savefig(pathR + "\\GroupedInsSTD.eps", rasterized=True, dpi=300)
+plt.savefig(pathR + "\\GroupedInsSTD.png", bbox_inches="tight")
+# %%
+result["yearMonth"] = result.yearMonth.astype(str)
+fig = plt.figure(figsize=(8, 4))
+g = sns.lineplot(
+    data=result, x="yearMonth", y="IndImbalance_value", hue="Grouped", ci=0
+)
+a = result.yearMonth.unique()
+labels = list(result.yearMonth.unique())
+tickvalues = a
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.title("Monthly standard errors' Time Series of Indtitutional Imbalance")
+plt.legend(["Ungrouped", "Grouped"])
+fig.set_rasterized(True)
+plt.savefig(pathR + "\\GroupedIndSTD.eps", rasterized=True, dpi=300)
+plt.savefig(pathR + "\\GroupedIndSTD.png", bbox_inches="tight")
 
 #%%
 stats.ttest_ind(
-    b[b.Grouped == 1].InsImbalance_value,
-    b[b.Grouped == 0].InsImbalance_value,
+    result[result.Grouped == 1].InsImbalance_value,
+    result[result.Grouped == 0].InsImbalance_value,
+),stats.ttest_ind(
+    result[result.Grouped == 1].IndImbalance_value,
+    result[result.Grouped == 0].IndImbalance_value,
 )

@@ -174,7 +174,7 @@ estadd loc subsample "Total" , replace
 estadd loc GroupFE "Yes" , replace
 estadd loc FE "Yes" , replace
 
-eststo v6 :  xi: quietly asreg monthlyρ_5_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup   i.PairType, fmb newey(4)
+eststo v6 :  xi: quietly asreg monthlyρ_5_f NMFCA NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup   i.PairType, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
