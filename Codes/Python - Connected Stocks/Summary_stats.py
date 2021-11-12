@@ -505,11 +505,11 @@ df2["sBsgroup"] = df2["sgroup"] + df2["sBgroup"]
 
 t = df2.drop_duplicates("id")
 tempt = {}
-tempt["SameIndustry"] = {"Yes": t[t.sgroup == 1].size, "No": t[t.sgroup == 0].size}
-tempt["SameGroup"] = {"Yes": t[t.sBgroup == 1].size, "No": t[t.sBgroup == 0].size}
+tempt["SameIndustry"] = {"Yes": len(t[t.sgroup == 1]), "No": len(t[t.sgroup == 0])}
+tempt["SameGroup"] = {"Yes": len(t[t.sBgroup == 1]), "No": len(t[t.sBgroup == 0])}
 tempt["SameGroup & SameIndustry"] = {
-    "Yes": t[t.sBsgroup == 2].size,
-    "No": t[t.sBgroup != 2].size,
+    "Yes": len(t[t.sBsgroup == 2]),
+    "No": len(t[t.sBgroup != 2]),
 }
 tempt = pd.DataFrame.from_dict(tempt, orient="index")
 tempt = tempt.T
@@ -529,7 +529,9 @@ tempt[
 ].rename(columns={"p1": "", "p2": "", "p3": ""}).T.to_latex(
     pathResult + "SameGroupSameIndustry.tex"
 )
-
+tempt[
+    ["SameIndustry", "p1", "SameGroup", "p2", "SameGroup & SameIndustry", "p3"]
+].rename(columns={"p1": "", "p2": "", "p3": ""}).T
 # %%
 tempt = (
     df2.groupby(["id"])[

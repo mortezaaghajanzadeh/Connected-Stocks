@@ -14,45 +14,45 @@ I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in anton2020common
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 24 entries,
+You've used 27 entries,
             1935 wiz_defined-function locations,
-            619 strings with 7282 characters,
-and the built_in function-call counts, 9616 in all, are:
-= -- 966
-> -- 360
-< -- 16
-+ -- 118
-- -- 116
-* -- 853
-:= -- 1657
-add.period$ -- 71
-call.type$ -- 24
-change.case$ -- 178
-chr.to.int$ -- 24
-cite$ -- 27
-duplicate$ -- 347
-empty$ -- 680
-format.name$ -- 162
-if$ -- 1872
+            640 strings with 7748 characters,
+and the built_in function-call counts, 10830 in all, are:
+= -- 1091
+> -- 404
+< -- 18
++ -- 132
+- -- 130
+* -- 963
+:= -- 1865
+add.period$ -- 80
+call.type$ -- 27
+change.case$ -- 200
+chr.to.int$ -- 27
+cite$ -- 30
+duplicate$ -- 389
+empty$ -- 767
+format.name$ -- 183
+if$ -- 2107
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 122
-num.names$ -- 72
-pop$ -- 130
+missing$ -- 26
+newline$ -- 137
+num.names$ -- 81
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 178
+purify$ -- 200
 quote$ -- 0
-skip$ -- 271
+skip$ -- 303
 stack$ -- 0
-substring$ -- 762
-swap$ -- 40
+substring$ -- 867
+swap$ -- 43
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
+type$ -- 162
 warning$ -- 3
-while$ -- 85
+while$ -- 97
 width$ -- 0
-write$ -- 310
+write$ -- 349
 (There were 2 error messages)

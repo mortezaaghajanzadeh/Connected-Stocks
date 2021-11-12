@@ -102,7 +102,7 @@
 				\end{itemize}
 				\item We focus on excess return co-movement for a pair of the stocks
 				\item We use common ownership to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
-				\item What channel ownership can cause co-movement of returns?
+				\item We demonstrate that correlated trading can be a channel of co-movement
 			\end{itemize}
 		\end{itemize}
 		
@@ -140,7 +140,7 @@
 	
 
 	
-	\subsection{Common-ownership measurements}
+
 	
 	
 	
@@ -272,41 +272,28 @@
 		%% common ownership
 		\node (commonownership) [startstop3,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
 		\pause
-		
-		\node (liquidity) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
-		
-		\draw (commonownership) -> (liquidity);
-		\draw (liquidity) -> (comovement);
-		
-		\pause
-		
-		\node (trading) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] { \begin{tabular}{c}
+		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
 				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
 		\end{tabular} };
 		
 		\draw (commonownership) -> (trading);
 		\draw (trading) -> (comovement);
 		\pause
+		\node (liquidity) [startstop3,below of = trading , yshift=-1cm , xshift=0cm] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
 		
-		\node (corporate) [startstop3,below of = trading , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
-				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
-		\end{tabular}};
+		\draw (commonownership) -> (liquidity);
+		\draw (liquidity) -> (comovement);
 		
-		\draw (commonownership) -> (corporate);
-		\draw (corporate) -> (comovement);
-		
+		\pause
 		
 		
 		
-	
-		
-		
-
-		
-		
-		
-		
-		
+%		\node (corporate) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
+%				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
+%		\end{tabular}};
+%		
+%		\draw (commonownership) -> (corporate);
+%		\draw (corporate) -> (comovement);
 	\end{tikzpicture}
 }
 		
@@ -314,8 +301,33 @@
 		\hyperlink{maineffect}{\beamerbutton{Papers}}
 	\end{frame}
 	
-	\normalsize
+	\begin{frame}{Our work}
+		\begin{itemize}
+			\item 
+			We use daily records of block-holder ownership for firms
+			\item We not restricted to mutual funds ownership
+			\item Furthermore, 80\% of market belongs to the business groups
+			\begin{itemize}
+				\item Would business groups be able to raise the co-movement of stock returns?
+				\begin{itemize}
+					\tiny
+					\item \cite{cho2015stock}: \\
+					The strong co-movement between group returns and
+					firm returns is explained by correlated fundamentals. 
+					\item \cite{kim2015stock}:\\
+					The increase in correlation appears to be driven
+					more by non-fundamental factors such as correlated trading, rather
+					than fundamental factors such as related-party transactions
+				\end{itemize}
+			\item Common ownership or business group (indirect common ownership) ?
+			\item  Through which channel?
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
 	
+	\normalsize
+		\subsection{Common-ownership measurements}
 	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
 		\begin{columns}[t]
 			\column{0.5\textwidth}  
@@ -552,72 +564,32 @@
 			We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
 		\end{block}
 	\end{frame}
-	
-	%     \begin{frame}{Measuring Common Ownership}{Problem}
-	%         \begin{tabular}{|c|cc|}
-	%         \hline
-	%         & Owenership & Owenership \\
-	%         \hline
-	%         x1    & 20    & 20 \\
-	%         y1    & 20    & 80 \\
-	%         x2    & 80    & 80 \\
-	%         y2    & 80    & 20 \\
-	%         \hline
-	%         SQRT  & 1.8   & 1.8 \\
-	%         SUM   & 1     & 1 \\
-	%         Quadratic & 1.47 & 1.47 \\
-	%         \hline
-	%         \end{tabular}
-	%     \end{frame}
-	
-	%\begin{frame}{Pair Composition}{Business Group}
-	% \resizebox{\textwidth}{!}
-	% {
-	%\begin{tikzpicture}[node distance=2cm]
-	%
-	%
-	%\node (start) [startstop] {Ultimate Owner};
-	%
-	%
-	%
-	%\node (end) [startstop1,below of = start , yshift=0cm , xshift=-7cm ] {$ \text{Firm}_{\text{A}} $};
-	%\node (end2) [startstop1,below of = start , yshift=0cm , xshift=7cm ] {$ \text{Firm}_{\text{D}} $};
-	%\node (end3) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm}_{\text{C}} $};
-	%
-	%\node (end4) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm}_{\text{B}} $};
-	%
-	%
-	%\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm}_{\text{X}} $};
-	%
-	%
-	%\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm}_{\text{Y}} $};
-	%
-	%
-	%
-	%
-	%\draw [arrow] (start) -|(end);
-	%\draw [arrow] (start) -|(end2);
-	%\draw [arrow] (start) -|(end3);
-	%\draw [arrow] (start) -|(end4);
-	%\draw [arrow] (end) -+(sur);
-	%
-	%
-	%
-	%\draw [arrow] (end) -+(sur);
-	%\draw [arrow] (end2) -+ (sur2);
-	%
-	%
-	%
-	%
-	%
-	%
-	%\end{tikzpicture}
-	%}
-	%
-	%\end{frame}
-	
-	
-	
+
+	\subsection{Pair composition}
+	\begin{frame}{Pair composition}
+		\begin{itemize}
+			\item Firms with at least one common owner\\
+			
+							\begin{figure}[htbp]
+				\centering
+				\begin{tikzpicture}[node distance=1cm]
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+					\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+					
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm) ;
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm2) ;
+				\end{tikzpicture}
+			\end{figure}\bigskip
+			\item In a business group, how can one pair be defined?
+			\begin{itemize}
+				\item What is the business group?
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
 	
 	\begin{frame}{Pair Composition and Business Group}{Business Group }
 		
@@ -671,48 +643,6 @@
 			\column{.5\textwidth}     
 			\centering
 			{}\\
-			
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-					
-					
-					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-					
-					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-					
-					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					
-					\draw [arrow] (start) --(end);
-					\draw [arrow] (start2) -- (end2);
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					\draw [dash dot,->] (start) -- (CH);
-					\draw [dash dot,->] (start2) -- (CH);
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
-					
-					
-				\end{tikzpicture}
-			} 
-			\column{.5\textwidth}
-			\centering  
-			{}\\
-			
 			\resizebox{\textwidth}{!}{
 				\begin{tikzpicture}[node distance=2cm]
 					
@@ -753,7 +683,50 @@
 					
 				\end{tikzpicture}
 			}
-		\end{columns}
+			
+			\pause
+			\column{.5\textwidth}
+			\centering  
+			{}\\
+			\resizebox{\textwidth}{!}{
+				\begin{tikzpicture}[node distance=2cm]
+					
+					
+					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+					
+					
+					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+					
+					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+					
+					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+					
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+					
+					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+					
+					
+					
+					\draw [arrow] (start) --(end);
+					\draw [arrow] (start2) -- (end2);
+					
+					\draw [arrow] (end) --(sur);
+					\draw [arrow] (end2) -- (sur2);
+					
+					\draw [dash dot,->] (start) -- (CH);
+					\draw [dash dot,->] (start2) -- (CH);
+					
+					\draw [arrow] (CH) -- (sur);
+					\draw [arrow] (CH) -- (sur2);
+					
+					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
+					
+					
+				\end{tikzpicture}
+			} 
+			
+			\end{columns}
 	\end{frame}
 	
 	
@@ -842,7 +815,7 @@
 		\begin{itemize}
 			\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
 			\begin{itemize}
-				\item Includes of 1203 Days and 60 Months
+				\item Includes of 72 Months
 				\item Consists of 618 firm inculding 562 firm with common owners
 				
 			\end{itemize}
@@ -865,8 +838,8 @@
 		
 			\item Pairs consist of two firms  with at least one common owner
 			\begin{itemize}
-				\item  93442 unique pairs which is 60\% of possible pairs 
-				\tiny ($ \frac{562*561}{2}= 149878 $)
+				\item  93442 unique pairs which is 25\% of possible pairs 
+				\tiny ($ \frac{612*611}{2}= 373932 $)
 				\normalsize
 			\end{itemize}
 		\end{itemize}
@@ -893,12 +866,12 @@
 	
 	
 
-	\begin{frame}{Number of Pairs}
-		\begin{figure}[htbp]
-			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
-		\end{figure}
-	\end{frame}
-	
+%	\begin{frame}{Number of Pairs}
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
+%		\end{figure}
+%	\end{frame}
+%	
 	
 	
 	
@@ -918,49 +891,49 @@
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{FCA's time series}
-		\begin{figure}
-			\centering  
-			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
-			
-		\end{figure} 
-	\end{frame}
-
-	\begin{frame}{FCA's time series}
-		\begin{columns}
-			\column{.5\textwidth}  
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
-				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
-			\end{figure}    
-			\column{.5\textwidth}
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
-			\end{figure}
-          
-		\end{columns}
-
-\end{frame}
-
-	\begin{frame}{Group affiliated firm's time series}
-		\begin{columns}
-	\column{.5\textwidth}  
-	\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
-	
-\end{figure}  
-	\column{.5\textwidth}
-	\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
-	
-\end{figure} 
-	
-\end{columns}
-\end{frame}
+%	\begin{frame}{FCA's time series}
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
+%			
+%		\end{figure} 
+%	\end{frame}
+%
+%	\begin{frame}{FCA's time series}
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
+%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
+%			\end{figure}    
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
+%			\end{figure}
+%          
+%		\end{columns}
+%
+%\end{frame}
+%
+%	\begin{frame}{Group affiliated firm's time series}
+%		\begin{columns}
+%	\column{.5\textwidth}  
+%	\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
+%	
+%\end{figure}  
+%	\column{.5\textwidth}
+%	\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
+%	
+%\end{figure} 
+%	
+%\end{columns}
+%\end{frame}
 
 
 
@@ -1085,7 +1058,7 @@
 	\subsection{Controls}
 	\begin{frame}{Controls}
 		\begin{itemize}
-			\item $ \rho_{t} $ : Current period correlation
+%			\item $ \rho_{t} $ : Current period correlation
 			
 			\item \textbf{SameGroup} : Dummy variable for whether the two stocks belong to the same business group.
 			
@@ -1285,7 +1258,7 @@
 	\end{frame}
 	
 	
-	\subsection{Discontinuity}
+	\subsection{High level of common ownership}
 	
 	\begin{frame}{ Future Correlation via $ FCA $}{Discontinuity}\label{Monthly5}
 		
@@ -1389,6 +1362,7 @@
 \end{table}	
 	\end{frame}
 
+\subsubsection{All pairs}
 
 
 \begin{frame}{All non-common owner pairs}{regression}
@@ -1400,15 +1374,7 @@
 	\end{table}
 \end{frame}
 
-%	\begin{frame}{Business group return}
-%	
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{0.6\textwidth}{!}{
-%			\input{BGReturn.tex}
-%		}
-%	\end{table}
-%\end{frame}
+
 	
 
 
@@ -1770,17 +1736,42 @@
 %	
 %	
 %	
-	\section{Correlated trading}
-
+	\section{Evidence for correlated trading}
+ \subsubsection{Institutional Imbalance}
 \begin{frame}{Ins Imbalance}
-			 \begin{equation*}
-				 \text{InsImbalance}_\text{i} = (\frac{\text{InsBuy} - \text{InsSell}}{\text{InsBuy} + \text{InsSell}})_{\text{value}}
-			\end{equation*}
-\begin{figure}[htbp]
+
+\begin{itemize}
+	\item \cite{seasholes2007predictable}
+	\begin{itemize}
+		\item \begin{equation*}
+			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+		\end{equation*}
+	\item 
+	\begin{equation*}
+		Imbalance_{ind} = \frac{Buy_{ind} - Sell_{ind}}{Buy_{ind} + Sell_{ind}}
+	\end{equation*}
+	\end{itemize}
+\end{itemize}
+
+
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.75\textwidth}{!}{
+			\input{Output/ImbalanceInsMeanSummary.tex}
+		}
+		\label{tab:ImbalanceInsMeanSummary}
+	\end{table}
+\column{0.5\linewidth}
+\begin{table}[htbp]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Output/GroupedSTD.eps}
-	\label{fig:GroupedSTD}
-\end{figure}
+	\resizebox{0.75\textwidth}{!}{
+		\input{Output/ImbalanceIndMeanSummary.tex}
+	}
+	\label{tab:ImbalanceIndMeanSummary}
+\end{table}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Ins Imbalance}
