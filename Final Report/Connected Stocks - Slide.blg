@@ -3,6 +3,14 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Slide.aux
 The style file: apalike.bst
 Database file #1: Ref.bib
+Repeated entry---line 341 of file Ref.bib
+ : @article{pantzalis2017shareholder
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 723 of file Ref.bib
+ : @article{azar2018anticompetitive
+ :                                 ,
+I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in anton2020common
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
@@ -47,4 +55,4 @@ warning$ -- 3
 while$ -- 66
 width$ -- 0
 write$ -- 245
-(There were 3 warnings)
+(There were 2 error messages)

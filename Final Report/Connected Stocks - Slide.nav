@@ -115,14 +115,16 @@
 \headcommand {\beamer@framepages {60}{60}}
 \headcommand {\slideentry {5}{2}{5}{61/61}{Discontinuity}{0}}
 \headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {5}{2}{6}{62/62}{Discontinuity}{0}}
+\headcommand {\beamer@subsectionpages {57}{61}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{62}{Size effect}}
+\headcommand {\slideentry {5}{3}{1}{62/62}{Size effect}{0}}
 \headcommand {\beamer@framepages {62}{62}}
-\headcommand {\slideentry {5}{2}{7}{63/63}{Discontinuity}{0}}
+\headcommand {\slideentry {5}{3}{2}{63/63}{Size effect}{0}}
 \headcommand {\beamer@framepages {63}{63}}
-\headcommand {\slideentry {5}{2}{8}{64/64}{Discontinuity}{0}}
+\headcommand {\slideentry {5}{3}{3}{64/64}{Size effect}{0}}
 \headcommand {\beamer@framepages {64}{64}}
 \headcommand {\beamer@sectionpages {53}{64}}
-\headcommand {\beamer@subsectionpages {57}{64}}
+\headcommand {\beamer@subsectionpages {62}{64}}
 \headcommand {\sectionentry {6}{Correlated trading}{65}{Correlated trading}{0}}
 \headcommand {\slideentry {6}{0}{1}{65/65}{}{0}}
 \headcommand {\beamer@framepages {65}{65}}

@@ -10,6 +10,7 @@
 \beamer@sectionintoc {5}{Results}{53}{0}{5}
 \beamer@subsectionintoc {5}{1}{Normalized Rank-Transformed}{54}{0}{5}
 \beamer@subsectionintoc {5}{2}{Discontinuity}{57}{0}{5}
+\beamer@subsectionintoc {5}{3}{Size effect}{62}{0}{5}
 \beamer@sectionintoc {6}{Correlated trading}{65}{0}{6}
 \beamer@sectionintoc {7}{Conclusion}{73}{0}{7}
 \beamer@sectionintoc {9}{Appendix I}{77}{1}{8}
