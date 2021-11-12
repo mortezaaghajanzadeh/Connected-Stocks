@@ -35,7 +35,8 @@
 	April\or May \or June\or July\or August\or September\or October\or November\or %
 	December\fi, \number \year} 
 
-\title[Connected Stocks ]{Connected Stocks: Evidence from Tehran Stock Exchange}
+\title[Connected Stocks ]{How are stocks connected? }
+\subtitle{The evidence from emerging market.}
 %\subtitle{}
 \author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
 \institute[TeIAS]{Tehran Institute for Advanced Studies }
@@ -92,11 +93,16 @@
 	\begin{frame}{Motivation}{Research Question}
 		
 		\begin{itemize}
-			\item\textbf{Can the common ownership cause stock return comovement ?}
+			\item\textbf{Stock return co-movement is caused by direct or indirect common ownership?}
 			\begin{itemize}
-				\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) 
-				\item We focus on excess return comovement for a pair of the stocks
+				\item common ownership:
+				\begin{itemize}
+					\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
+					\item We connect stocks through the ultimate owner for indirect common ownership
+				\end{itemize}
+				\item We focus on excess return co-movement for a pair of the stocks
 				\item We use common ownership to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
+				\item What channel ownership can cause co-movement of returns?
 			\end{itemize}
 		\end{itemize}
 		
@@ -136,85 +142,6 @@
 	
 	\subsection{Common-ownership measurements}
 	
-	\normalsize
-	
-	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
-		\begin{columns}[t]
-			\column{0.5\textwidth}  
-			\centering
-			Model based measures
-			\\
-			
-			\begin{itemize}
-				\item \color{blue} \scriptsize $
-				\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
-				\normalcolor
-				\tiny 
-				
-				\cite{harford2011institutional}
-				
-				
-				\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
-				
-				\cite{azar2018anticompetitive}
-				
-				\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
-			
-			\cite{anton2020common} 
-			
-				\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
-			
-			\cite{backus2020theory}
-				
-				\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
-				
-				\cite{gilje2020s} , \cite{Lewellen2021}
-				
-				
-				\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
-				
-				\cite{LEWELLEN2021b}
-				\normalsize
-				
-				
-				
-			\end{itemize}
-			
-			
-			\pause
-			\column{0.5\textwidth}
-			\centering
-			Ad-hoc measures
-			\begin{itemize}
-				\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
-				\tiny\cite{AntonPolk} \\ 
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
-				\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
-				\tiny \cite{newham2018common}  \\ 
-				
-				
-				
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
-				
-				\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
-				
-			\end{itemize}
-			
-		\end{columns}
-	\pause
-		\begin{block}{\scriptsize Selected measure }
-			\scriptsize
-			We need a pair-level measure, which is bi-directional, so we use the AP measure. 
-		\end{block}
-		\hfill
-		\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
-	\end{frame}
 	
 	
 	
@@ -289,6 +216,60 @@
 		\node (comovement) [startstop3] {Comovement effect};
 		
 		\pause
+		
+				\node (Fundumental) [startstop3,above of = comovement , yshift=0.5cm , xshift=0cm ] { \begin{tabular}{c}
+				\scriptsize	Fundumental	\\ \tiny\cite{shiller1989comovements}
+		\end{tabular} };
+		
+		
+		\draw (Fundumental) -> (comovement);
+		
+		
+		\pause
+		
+		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
+				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}\\ \tiny\cite{barberis2003style}
+		\end{tabular} };
+		
+		
+		\draw (categoryhabitat) -> (comovement);
+		
+		\pause
+		\node (belief) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
+				Correlated beliefs	\\
+				\tiny\cite{david2016correlated}
+		\end{tabular}};
+		
+		\draw (belief) -> (comovement);
+		
+		\pause
+		
+		\node (investmentbanking) [startstop3,below of = comovement , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Investment Bank Network \\
+				\tiny\cite{grullon2014comovement}
+		\end{tabular}};
+		
+		\draw (investmentbanking) -> (comovement);
+		
+		
+		
+		\pause
+		\node (information) [startstop3,below of = investmentbanking , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}\\
+				\tiny\cite{HAMEED2019103}
+		\end{tabular}};
+		
+		\draw (information) -> (investmentbanking);
+		
+		\pause
+		
+		
+		
+		
+		
+		
+		
+		%% common ownership
 		\node (commonownership) [startstop3,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
 		\pause
 		
@@ -314,23 +295,13 @@
 		\draw (commonownership) -> (corporate);
 		\draw (corporate) -> (comovement);
 		
-		\pause
-		\node (information) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
-				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}
-		\end{tabular}};
-		
-		\draw (information) -> (comovement);
 		
 		
-		\pause
+		
+	
 		
 		
-		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
-				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}
-		\end{tabular} };
-		
-		
-		\draw (categoryhabitat) -> (comovement);
+
 		
 		
 		
@@ -342,6 +313,90 @@
 		\hfill
 		\hyperlink{maineffect}{\beamerbutton{Papers}}
 	\end{frame}
+	
+	\normalsize
+	
+	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+		\begin{columns}[t]
+			\column{0.5\textwidth}  
+			\centering
+			Model based measures
+			\\
+			
+			\begin{itemize}
+				\item \color{blue} \scriptsize $
+				\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+				\normalcolor
+				\tiny 
+				
+				\cite{harford2011institutional}
+				
+				
+				\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+				
+				\cite{azar2018anticompetitive}
+				
+				\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+				
+				\cite{anton2020common} 
+				
+				\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+				
+				\cite{backus2020theory}
+				
+				\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+				
+				\cite{gilje2020s} , \cite{Lewellen2021}
+				
+				
+				\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+				
+				\cite{LEWELLEN2021b}
+				\normalsize
+				
+				
+				
+			\end{itemize}
+			
+			
+			\pause
+			\column{0.5\textwidth}
+			\centering
+			Ad-hoc measures
+			\begin{itemize}
+				\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+				\tiny\cite{AntonPolk} \\ 
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+				\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+				
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+				\tiny \cite{newham2018common}  \\ 
+				
+				
+				
+				
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+				
+				\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+				
+			\end{itemize}
+			
+		\end{columns}
+		\pause
+		\begin{block}{\scriptsize Selected measure }
+			\scriptsize
+			We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+		\end{block}
+		\hfill
+		\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+	\end{frame}
+	
+	
+	
+	
 	
 	\section{Empirical Studies}
 	\subsection{Measuring Common-ownership}

@@ -3,56 +3,56 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Slide.aux
 The style file: apalike.bst
 Database file #1: Ref.bib
-Repeated entry---line 341 of file Ref.bib
+Repeated entry---line 363 of file Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 723 of file Ref.bib
+Repeated entry---line 745 of file Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in anton2020common
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 19 entries,
+You've used 24 entries,
             1935 wiz_defined-function locations,
-            590 strings with 6668 characters,
-and the built_in function-call counts, 7645 in all, are:
-= -- 764
-> -- 296
-< -- 12
-+ -- 98
-- -- 96
-* -- 676
-:= -- 1320
-add.period$ -- 56
-call.type$ -- 19
-change.case$ -- 143
-chr.to.int$ -- 19
-cite$ -- 22
-duplicate$ -- 277
-empty$ -- 533
-format.name$ -- 131
-if$ -- 1487
+            619 strings with 7282 characters,
+and the built_in function-call counts, 9616 in all, are:
+= -- 966
+> -- 360
+< -- 16
++ -- 118
+- -- 116
+* -- 853
+:= -- 1657
+add.period$ -- 71
+call.type$ -- 24
+change.case$ -- 178
+chr.to.int$ -- 24
+cite$ -- 27
+duplicate$ -- 347
+empty$ -- 680
+format.name$ -- 162
+if$ -- 1872
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 97
-num.names$ -- 57
-pop$ -- 109
+missing$ -- 23
+newline$ -- 122
+num.names$ -- 72
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 143
+purify$ -- 178
 quote$ -- 0
-skip$ -- 217
+skip$ -- 271
 stack$ -- 0
-substring$ -- 587
-swap$ -- 35
+substring$ -- 762
+swap$ -- 40
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
+type$ -- 144
 warning$ -- 3
-while$ -- 66
+while$ -- 85
 width$ -- 0
-write$ -- 245
+write$ -- 310
 (There were 2 error messages)

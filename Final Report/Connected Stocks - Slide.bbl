@@ -20,6 +20,11 @@ Backus, M., Conlon, C., and Sinkinson, M. (2020).
 \newblock Theory and measurement of common ownership.
 \newblock In {\em AEA Papers and Proceedings}, volume 110, pages 557--60.
 
+\bibitem[Barberis and Shleifer, 2003]{barberis2003style}
+Barberis, N. and Shleifer, A. (2003).
+\newblock Style investing.
+\newblock {\em Journal of financial Economics}, 68(2):161--199.
+
 \bibitem[Barberis et~al., 2005]{barberis2005comovement}
 Barberis, N., Shleifer, A., and Wurgler, J. (2005).
 \newblock Comovement.
@@ -29,6 +34,11 @@ Barberis, N., Shleifer, A., and Wurgler, J. (2005).
 Boubaker, S., Mansali, H., and Rjiba, H. (2014).
 \newblock Large controlling shareholders and stock price synchronicity.
 \newblock {\em Journal of Banking \& Finance}, 40:80--96.
+
+\bibitem[David and Simonovska, 2016]{david2016correlated}
+David, J.~M. and Simonovska, I. (2016).
+\newblock Correlated beliefs, returns, and stock market volatility.
+\newblock {\em Journal of International Economics}, 99:S58--S77.
 
 \bibitem[Freeman, 2019]{freeman2019effects}
 Freeman, K. (2019).
@@ -45,6 +55,16 @@ Gilje, E.~P., Gormley, T.~A., and Levit, D. (2020).
 Greenwood, R. and Thesmar, D. (2011).
 \newblock Stock price fragility.
 \newblock {\em Journal of Financial Economics}, 102(3):471--490.
+
+\bibitem[Grullon et~al., 2014]{grullon2014comovement}
+Grullon, G., Underwood, S., and Weston, J.~P. (2014).
+\newblock Comovement and investment banking networks.
+\newblock {\em Journal of Financial Economics}, 113(1):73--89.
+
+\bibitem[Hameed and Xie, 2019]{HAMEED2019103}
+Hameed, A. and Xie, J. (2019).
+\newblock Preference for dividends and return comovement.
+\newblock {\em Journal of Financial Economics}, 132(1):103--125.
 
 \bibitem[Hansen and Lott~Jr, 1996]{hansen1996externalities}
 Hansen, R.~G. and Lott~Jr, J.~R. (1996).
@@ -100,5 +120,10 @@ Newham, M., Seldeslachts, J., and Banal-Estanol, A. (2018).
 Pantzalis, C. and Wang, B. (2017).
 \newblock Shareholder coordination, information diffusion and stock returns.
 \newblock {\em Financial Review}, 52(4):563--595.
+
+\bibitem[Shiller, 1989]{shiller1989comovements}
+Shiller, R.~J. (1989).
+\newblock Comovements in stock prices and comovements in dividends.
+\newblock {\em The Journal of Finance}, 44(3):719--729.
 
 \end{thebibliography}
