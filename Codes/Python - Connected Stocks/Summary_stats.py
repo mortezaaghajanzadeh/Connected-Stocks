@@ -14,8 +14,7 @@ n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
 df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
-#%%
-list(df)
+
 
 #%%
 gg = (
@@ -112,8 +111,15 @@ tempt
 n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 df2 = pd.read_parquet(n)
 #%%
-df2.id.max(),len(set(df2.id_x.to_list()
-                     + df2.id_y.to_list()))
+ff = df2[['MonthlyMarketCap_x',
+ 'MonthlyMarketCap_y',]]
+ff['m'] = ff.MonthlyMarketCap_x/ff.MonthlyMarketCap_y
+ff['mm'] = ff.MonthlyMarketCap_y/ff.MonthlyMarketCap_x
+ff['r'] = ff.m
+ff.loc[ff.r<1,'r'] = ff[ff.r<1].mm
+ff
+#%%
+df2.id.max(), len(set(df2.id_x.to_list() + df2.id_y.to_list()))
 
 #%%
 PG = df2[
@@ -550,8 +556,8 @@ tempt = (
     .mean()
     .describe()
     .T.drop(columns=["count"])
-    .round(2).T
-    .rename(
+    .round(2)
+    .T.rename(
         columns={
             "sgroup": "SameIndustry",
             "sBgroup": "SameGroup",
