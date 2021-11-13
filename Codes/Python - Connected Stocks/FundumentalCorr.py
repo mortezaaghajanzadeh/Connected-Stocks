@@ -27,9 +27,10 @@ def _multiple_replace(mapping, text):
 
 # %%
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Balance Sheet\\"
+path = r"E:\RA_Aghajanzadeh\Data\\"
 balance = pd.read_excel(path + "balance sheet - 9811.xlsx")
 # %%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Incomesheet\\"
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Incomesheet\\"
 income = pd.read_csv(path + "incomesheet.csv")
 income = (
     income[["year", "سود خالص", "season", "stock", "target"]]
@@ -53,8 +54,8 @@ income = income.rename(
 income
 
 #%%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-df = pd.read_parquet(path + "Stocks_Prices_1399-09-12.parquet")
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+df = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
 PriceData = pd.DataFrame()
 PriceData = PriceData.append(
     df[
@@ -78,35 +79,13 @@ PriceData["value"] = PriceData.value.astype(float)
 PriceData = PriceData[PriceData.volume != 0]
 
 
-def vv(row):
-    X = row.split("-")
-    return int(X[1])
-
-
-PriceData["month"] = PriceData.jalaliDate.apply(vv)
-
+PriceData["year"] = (PriceData.jalaliDate / 1e4).astype(int)
+PriceData["month"] = ((PriceData.jalaliDate - PriceData.year * 1e4) / 1e2).astype(int)
 PriceData["quarter"] = 1
 PriceData.loc[PriceData.month > 3, "quarter"] = 2
 PriceData.loc[PriceData.month > 6, "quarter"] = 3
 PriceData.loc[PriceData.month > 9, "quarter"] = 4
-
-
-def vv(row):
-    X = row.split("-")
-    return int(X[0])
-
-
-PriceData["year"] = PriceData.jalaliDate.apply(vv)
-
-PriceData = PriceData.loc[PriceData.year >= 1394]
-
-
-def vv(row):
-    X = row.split("-")
-    return int(X[0] + X[1] + X[2])
-
-
-PriceData["jalaliDate"] = PriceData.jalaliDate.apply(vv)
+PriceData = PriceData.loc[PriceData.year >= 1393]
 
 PriceData
 # %%
@@ -123,7 +102,7 @@ quarterdata = quarterdata.reset_index()
 
 def BG(df):
     pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-    # pathBG = r"C:\Users\RA\Desktop\RA_Aghajanzadeh\Data\\"
+    pathBG = r"E:\RA_Aghajanzadeh\Data\\"
     n = pathBG + "Grouping_CT.xlsx"
     BG = pd.read_excel(n)
     uolist = (
@@ -161,10 +140,10 @@ quarterdata[col] = quarterdata[col].apply(lambda x: convert_ar_characters(x))
 quarterdata
 # %%
 
-df = pd.read_csv(path + "Cleaned_Stocks_Holders_1399-09-12_From94" + ".csv")
+df = pd.read_csv(path + "Cleaned_Stocks_Holders_1400_06_28" + ".csv")
 df = df[
     [
-        "symbol",
+        "name",
         "jalaliDate",
         "stock_id",
         "group_name",
@@ -183,7 +162,7 @@ df.loc[df.month > 9, "quarter"] = 4
 
 df = df[
     [
-        "symbol",
+        "name",
         "year",
         "quarter",
         "stock_id",
@@ -196,7 +175,7 @@ df = df[
 
 # %%
 
-a = df.set_index(["symbol", "year", "quarter"])
+a = df.set_index(["name", "year", "quarter"])
 mapdict = dict(zip(a.index, a.shrout))
 
 quarterdata = quarterdata.set_index(["name", "year", "quarter"])
@@ -216,38 +195,47 @@ quarterdata = quarterdata.reset_index()
 quarterdata.isnull().sum()
 # %%
 quarterdata = quarterdata[~quarterdata.netProfit.isnull()]
-gg  = quarterdata.groupby('name')
-quarterdata['Earning1'] = gg.netProfit.shift()
-quarterdata['Earning1'] = quarterdata['Earning1'] - quarterdata.netProfit
-quarterdata['Earning2'] = gg.netProfit.shift(2)
-quarterdata['Earning2'] = quarterdata['Earning2'] - quarterdata.netProfit
-quarterdata['Earning4'] = gg.netProfit.shift(4)
-quarterdata['Earning4'] = quarterdata['Earning4'] - quarterdata.netProfit
+gg = quarterdata.groupby("name")
+quarterdata["Earning1"] = gg.netProfit.shift()
+quarterdata["Earning1"] = quarterdata["Earning1"] - quarterdata.netProfit
+quarterdata["Earning2"] = gg.netProfit.shift(2)
+quarterdata["Earning2"] = quarterdata["Earning2"] - quarterdata.netProfit
+quarterdata["Earning4"] = gg.netProfit.shift(4)
+quarterdata["Earning4"] = quarterdata["Earning4"] - quarterdata.netProfit
+
 
 def vv2(row):
-    X = row.split('/')
+    X = row.split("/")
     return X[0]
-balance = balance.iloc[:,[0,4,13,-7]]
-balance.rename(columns={ balance.columns[0]: "symbol" ,balance.columns[1]: "date" ,balance.columns[2]: "BookValue" ,balance.columns[3] : "Capital"}, inplace = True)
-balance['shrout'] = balance['Capital'] * 100
-balance['Year'] = balance['date'].apply(vv2)
-balance['Year'] = balance['Year'].astype(str)
-balance = balance.drop(columns = ['date','Capital'])
-col = 'symbol'
+
+
+balance = balance.iloc[:, [0, 4, 13, -7]]
+balance.rename(
+    columns={
+        balance.columns[0]: "symbol",
+        balance.columns[1]: "date",
+        balance.columns[2]: "BookValue",
+        balance.columns[3]: "Capital",
+    },
+    inplace=True,
+)
+balance["shrout"] = balance["Capital"] * 100
+balance["Year"] = balance["date"].apply(vv2)
+balance["Year"] = balance["Year"].astype(str)
+balance = balance.drop(columns=["date", "Capital"])
+col = "symbol"
 balance[col] = balance[col].apply(lambda x: convert_ar_characters(x))
-balance['year']= balance.Year.astype(int)
-balance = balance.set_index(['symbol','year'])
-mapdict = dict(zip(balance.index,balance.BookValue))
-quarterdata['BookValue'] = quarterdata.set_index(
-    ['name','year']
-    ).index.map(mapdict)
+balance["year"] = balance.Year.astype(int)
+balance = balance.set_index(["symbol", "year"])
+mapdict = dict(zip(balance.index, balance.BookValue))
+quarterdata["BookValue"] = quarterdata.set_index(["name", "year"]).index.map(mapdict)
 balance = balance.reset_index()
 quarterdata["MarketCap"] = quarterdata.close_price * quarterdata.shrout
 
-for i in ['1','2','4']:
-    t = 'Earning' + i
-    quarterdata[t] = quarterdata[t] /quarterdata['BookValue']
-quarterdata    
+for i in ["1", "2", "4"]:
+    t = "Earning" + i
+    quarterdata[t] = quarterdata[t] / quarterdata["BookValue"]
+quarterdata
 # %%
 
 
@@ -263,52 +251,50 @@ def UoWeight(sg):
 
 def QuarterCalculation(g):
     print(g.name)
-    uoMean = g.groupby(['uo'])[
-        ['Earning1',	'Earning2',	'Earning4']
-        ].mean()
+    uoMean = g.groupby(["uo"])[["Earning1", "Earning2", "Earning4"]].mean()
     for i in uoMean:
-        mapdict = dict(zip(uoMean.index,uoMean[i]))
+        mapdict = dict(zip(uoMean.index, uoMean[i]))
         g[i + "_group"] = g.uo.map(mapdict)
-    t = g.groupby(['uo']).size().to_frame()
-    mapdict = dict(zip(t.index,t[0]))
-    g['number' + "_group"] = g.uo.map(mapdict)
+    t = g.groupby(["uo"]).size().to_frame()
+    mapdict = dict(zip(t.index, t[0]))
+    g["number" + "_group"] = g.uo.map(mapdict)
 
-    indMean = g.groupby(['group_id'])[
-        ['Earning1',	'Earning2',	'Earning4']
-        ].mean()
+    indMean = g.groupby(["group_id"])[["Earning1", "Earning2", "Earning4"]].mean()
     for i in indMean:
-        mapdict = dict(zip(indMean.index,indMean[i]))
+        mapdict = dict(zip(indMean.index, indMean[i]))
         g[i + "_ind"] = g.group_id.map(mapdict)
-    t = g.groupby(['group_id']).size().to_frame()
-    mapdict = dict(zip(t.index,t[0]))
-    g['number' + "_ind"] = g.group_id.map(mapdict)
+    t = g.groupby(["group_id"]).size().to_frame()
+    mapdict = dict(zip(t.index, t[0]))
+    g["number" + "_ind"] = g.group_id.map(mapdict)
 
-    for i in ['Earning1',	'Earning2',	'Earning4']:
-        for j in ["_group","_ind"]:
-            g[i+j] = (g[i+j] - g[i]/g['number'+j])/(1-1/g['number'+j])
+    for i in ["Earning1", "Earning2", "Earning4"]:
+        for j in ["_group", "_ind"]:
+            g[i + j] = (g[i + j] - g[i] / g["number" + j]) / (1 - 1 / g["number" + j])
 
-
-    for i in ['Earning1',	'Earning2',	'Earning4']:
-        g[i + '_market'] = g[i].mean()
+    for i in ["Earning1", "Earning2", "Earning4"]:
+        g[i + "_market"] = g[i].mean()
     return g
+
+
 gg = quarterdata.groupby(["year", "quarter"])
-g = gg.get_group((1395,4))
+g = gg.get_group((1395, 4))
 data = gg.apply(QuarterCalculation)
 # %%
 names = sorted(data.name.unique())
 ids = range(len(names))
 mapingdict = dict(zip(names, ids))
 data["id"] = data["name"].map(mapingdict)
-data['yearQuarter'] = data.year.astype(str) + '-' + data.quarter.astype(str)
+data["yearQuarter"] = data.year.astype(str) + "-" + data.quarter.astype(str)
 times = sorted(data.yearQuarter.unique())
 ids = range(len(times))
 mapingdict = dict(zip(times, ids))
 data["t"] = data["yearQuarter"].map(mapingdict)
 #%%
-gg=data.groupby('name')
-data['return']= gg.close_price.pct_change()
+gg = data.groupby("name")
+data["return"] = gg.close_price.pct_change()
 data
 #%%
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-data.to_csv(path + "Earnings.csv",index = False)
+# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+
+data.to_csv(path + "\Connected_Stocks\Earnings.csv", index=False)
 # %%

@@ -1,9 +1,12 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\Earnings.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\Earnings.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\Earnings.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 xtset  t id
 
