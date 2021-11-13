@@ -213,7 +213,7 @@
 		
 		
 		
-		\node (comovement) [startstop3] {Comovement effect};
+		\node (comovement) [startstop1] {Comovement effect};
 		
 		\pause
 		
@@ -270,7 +270,7 @@
 		
 		
 		%% common ownership
-		\node (commonownership) [startstop3,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
+		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
 		\pause
 		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
 				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
@@ -297,8 +297,8 @@
 	\end{tikzpicture}
 }
 		
-		\hfill
-		\hyperlink{maineffect}{\beamerbutton{Papers}}
+%		\hfill
+%		\hyperlink{maineffect}{\beamerbutton{Papers}}
 	\end{frame}
 	
 	\begin{frame}{Our work}
@@ -483,88 +483,6 @@
 %	\end{frame}
 %	
 	
-	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
-		\begin{tikzpicture}[node distance=1cm]
-			
-			
-			\node (Firm) [startstop3] {\tiny Firm X};
-			\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
-			\pause
-			\node (Owner) [startstop3,above of = Firm , yshift=1.75cm , xshift=-3.5cm ] {\tiny Common owner 1 };
-
-			
-			\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
-			
-			\node (Owner3) [startstop3,below of = Firm , yshift=-1.75cm , xshift=-3.5cm ] {\tiny Common owner 3 };
-			
-			\pause
-			
-			
-			
-			\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
-			
-			\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
-			
-			\pause
-			
-			\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
-			
-			\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
-			
-			
-			
-			\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
-			
-			\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
-			
-			
-			
-		\end{tikzpicture}
-		
-	\end{frame}
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
-		\begin{table}[htbp]
-			\centering
-			\resizebox{0.9\textwidth}{!}
-			{
-				\input{Example2}
-			}
-		\end{table}
-		
-	\end{frame}
-	
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Comparison}
-		\begin{itemize}
-			\item For better comparison we relax previous assumptions:
-			\begin{itemize}
-				\item Two Firms with different market caps.
-			\end{itemize}
-		\end{itemize}
-		\resizebox{0.7\textwidth}{!}
-		{
-			\input{marketcap}
-		}
-		
-		
-	\end{frame}
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Comparison}
-		\begin{figure}[htbp]
-			\includegraphics[width=0.47\linewidth]{3.png}
-			\includegraphics[width=0.47\linewidth]{4.png}
-			\captionsetup{labelformat=empty}
-			\caption{\scriptsize Comparison of two methods for calculating common ownership}
-		\end{figure}
-		\begin{block}{Conclusion}
-			We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
-		\end{block}
-	\end{frame}
-
 	\subsection{Pair composition}
 	\begin{frame}{Pair composition}
 		\begin{itemize}
@@ -732,82 +650,82 @@
 	
 	
 	
-	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
-		\begin{columns}
-			\column{.5\textwidth}     
-			\centering
-			{}\\
-			
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					
-					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-					
-					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-					
-					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-					
-					
-				\end{tikzpicture}
-			} 
-			
-			\column{.5\textwidth}
-			\centering  
-			{}\\
-			
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					\node (start) [startstop] { $ \text{Ultimate Owner} $};
-					
-					
-					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-					
-					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-					
-					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					
-					\draw [arrow] (start) --(end);
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					\draw [dash dot,->] (start) -- (CH);
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-					
-					
-				\end{tikzpicture}
-			} 
-			
-		\end{columns}
-	\end{frame}
+%	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
+%		\begin{columns}
+%			\column{.5\textwidth}     
+%			\centering
+%			{}\\
+%			
+%			\resizebox{\textwidth}{!}{
+%				\begin{tikzpicture}[node distance=2cm]
+%					
+%					
+%					
+%					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+%					
+%					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+%					
+%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+%					
+%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+%					
+%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+%					
+%					
+%					\draw [arrow] (end) --(sur);
+%					\draw [arrow] (end2) -- (sur2);
+%					
+%					
+%					\draw [arrow] (CH) -- (sur);
+%					\draw [arrow] (CH) -- (sur2);
+%					
+%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+%					
+%					
+%				\end{tikzpicture}
+%			} 
+%			
+%			\column{.5\textwidth}
+%			\centering  
+%			{}\\
+%			
+%			\resizebox{\textwidth}{!}{
+%				\begin{tikzpicture}[node distance=2cm]
+%					
+%					
+%					\node (start) [startstop] { $ \text{Ultimate Owner} $};
+%					
+%					
+%					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+%					
+%					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+%					
+%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+%					
+%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+%					
+%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+%					
+%					
+%					
+%					\draw [arrow] (start) --(end);
+%					
+%					\draw [arrow] (end) --(sur);
+%					\draw [arrow] (end2) -- (sur2);
+%					
+%					\draw [dash dot,->] (start) -- (CH);
+%					
+%					\draw [arrow] (CH) -- (sur);
+%					\draw [arrow] (CH) -- (sur2);
+%					
+%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+%					
+%					
+%				\end{tikzpicture}
+%			} 
+%			
+%		\end{columns}
+%	\end{frame}
 	
 	
 	
@@ -2016,6 +1934,88 @@
 		\hfill
 		\hyperlink{Intuition}{\beamerbutton{Back}}
 		
+	\end{frame}
+	
+	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+		\begin{tikzpicture}[node distance=1cm]
+			
+			
+			\node (Firm) [startstop3] {\tiny Firm X};
+			\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+			\pause
+			\node (Owner) [startstop3,above of = Firm , yshift=1.75cm , xshift=-3.5cm ] {\tiny Common owner 1 };
+			
+			
+			\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
+			
+			\node (Owner3) [startstop3,below of = Firm , yshift=-1.75cm , xshift=-3.5cm ] {\tiny Common owner 3 };
+			
+			\pause
+			
+			
+			
+			\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
+			
+			\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
+			
+			\pause
+			
+			\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
+			
+			\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
+			
+			
+			
+			\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
+			
+			\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+			
+			
+			
+		\end{tikzpicture}
+		
+	\end{frame}
+	
+	
+	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+		\begin{table}[htbp]
+			\centering
+			\resizebox{0.9\textwidth}{!}
+			{
+				\input{Example2}
+			}
+		\end{table}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Measuring Common Ownership}{Comparison}
+		\begin{itemize}
+			\item For better comparison we relax previous assumptions:
+			\begin{itemize}
+				\item Two Firms with different market caps.
+			\end{itemize}
+		\end{itemize}
+		\resizebox{0.7\textwidth}{!}
+		{
+			\input{marketcap}
+		}
+		
+		
+	\end{frame}
+	
+	
+	\begin{frame}{Measuring Common Ownership}{Comparison}
+		\begin{figure}[htbp]
+			\includegraphics[width=0.47\linewidth]{3.png}
+			\includegraphics[width=0.47\linewidth]{4.png}
+			\captionsetup{labelformat=empty}
+			\caption{\scriptsize Comparison of two methods for calculating common ownership}
+		\end{figure}
+		\begin{block}{Conclusion}
+			We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
+		\end{block}
 	\end{frame}
 	
 	
