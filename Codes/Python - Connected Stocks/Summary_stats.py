@@ -14,8 +14,7 @@ n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
 df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
-#%%
-list(df)
+
 
 #%%
 gg = (
@@ -90,16 +89,15 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
 tempt.Year = tempt.Year.astype(int)
-
 tempt = tempt.drop(
     columns=["Max. Number of Members", "Max. Number of Owners", "Max. Block. Ownership"]
 ).rename(
     columns={
         "No. of Holders": "No. of Blockholders",
-        "Avg. Number of Members": "Mean Number of Members",
-        "Av. Holder Percent": "Mean Of each Blockholder’s ownership",
-        "Av. Number of Owners": "Mean Number of Owners",
-        "Av. Block. Ownership": "Mean Block. Ownership",
+        "Avg. Number of Members": "Average Number of Members",
+        "Av. Holder Percent": "Average Of each Blockholder’s ownership",
+        "Av. Number of Owners": "Average Number of Owners",
+        "Av. Block. Ownership": "Average Block. Ownership",
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
@@ -113,8 +111,15 @@ tempt
 n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 df2 = pd.read_parquet(n)
 #%%
-df2.id.max(),len(set(df2.id_x.to_list()
-                     + df2.id_y.to_list()))
+ff = df2[['MonthlyMarketCap_x',
+ 'MonthlyMarketCap_y',]]
+ff['m'] = ff.MonthlyMarketCap_x/ff.MonthlyMarketCap_y
+ff['mm'] = ff.MonthlyMarketCap_y/ff.MonthlyMarketCap_x
+ff['r'] = ff.m
+ff.loc[ff.r<1,'r'] = ff[ff.r<1].mm
+ff
+#%%
+df2.id.max(), len(set(df2.id_x.to_list() + df2.id_y.to_list()))
 
 #%%
 PG = df2[
@@ -289,12 +294,12 @@ tempt = tempt.drop(
     columns={
         "Number of Pairs not in one Group": "Number of Pairs not in the same Group",
         "Number of Pairs in one Group": "Number of Pairs in the same Group",
-        "Avg. Number of Common owner": "Mean Number of Common owner",
-        "Avg. Number of Pairs in one Group": "Mean Number of Pairs in one Group",
-        "Av. Holder Percent": "Mean Percent of each blockholder",
+        "Avg. Number of Common owner": "Average Number of Common owner",
+        "Avg. Number of Pairs in one Group": "Average Number of Pairs in one Group",
+        "Av. Holder Percent": "Average Percent of each blockholder",
         "Median of Owners' Percent": "Med. Percent of each blockholder",
-        "Av. Number of Owners": "Mean Number of Owners",
-        "Av. Block. Ownership": "Mean Block. Ownership",
+        "Av. Number of Owners": "Average Number of Owners",
+        "Av. Block. Ownership": "Average Block. Ownership",
     }
 )
 mlist = [
@@ -304,19 +309,20 @@ mlist = [
     "No. of Pairs not in Groups",
     "Number of Pairs not in the same Group",
     "Number of Pairs in the same Group",
-    "Mean Number of Common owner",
+    "Average Number of Common owner",
     "Med. Number of Common owner",
-    "Mean Percent of each blockholder",
+    "Average Percent of each blockholder",
     "Med. Percent of each blockholder",
-    "Mean Number of Pairs in one Group",
+    "Average Number of Pairs in one Group",
     "Med. Number of Pairs in one Group",
-    "Mean Number of Owners",
+    "Average Number of Owners",
     "Med. Number of Owners",
-    "Mean Block. Ownership",
+    "Average Block. Ownership",
     "Med. Block. Ownership",
 ]
-tempt[mlist].set_index("year").T.astype(int).to_latex(pathResult + "summaryOfPairs.tex")
-
+tempt = tempt[mlist].set_index("year").T.astype(int)
+tempt.to_latex(pathResult + "summaryOfPairs.tex")
+tempt
 #%%
 
 df2.groupby("t_Month").size().describe().to_frame().rename(
@@ -324,7 +330,9 @@ df2.groupby("t_Month").size().describe().to_frame().rename(
 ).T.drop(columns=["count", "std", "25%", "75%"]).astype(int).to_latex(
     pathResult + "numberofPairs.tex"
 )
-
+df2.groupby("t_Month").size().describe().to_frame().rename(
+    columns={0: "Number of unique paris"}, index={"50%": "Median"}
+).T.drop(columns=["count", "std", "25%", "75%"]).astype(int)
 
 #%%
 
@@ -503,11 +511,11 @@ df2["sBsgroup"] = df2["sgroup"] + df2["sBgroup"]
 
 t = df2.drop_duplicates("id")
 tempt = {}
-tempt["SameIndustry"] = {"Yes": t[t.sgroup == 1].size, "No": t[t.sgroup == 0].size}
-tempt["SameGroup"] = {"Yes": t[t.sBgroup == 1].size, "No": t[t.sBgroup == 0].size}
+tempt["SameIndustry"] = {"Yes": len(t[t.sgroup == 1]), "No": len(t[t.sgroup == 0])}
+tempt["SameGroup"] = {"Yes": len(t[t.sBgroup == 1]), "No": len(t[t.sBgroup == 0])}
 tempt["SameGroup & SameIndustry"] = {
-    "Yes": t[t.sBsgroup == 2].size,
-    "No": t[t.sBgroup != 2].size,
+    "Yes": len(t[t.sBsgroup == 2]),
+    "No": len(t[t.sBgroup != 2]),
 }
 tempt = pd.DataFrame.from_dict(tempt, orient="index")
 tempt = tempt.T
@@ -527,7 +535,9 @@ tempt[
 ].rename(columns={"p1": "", "p2": "", "p3": ""}).T.to_latex(
     pathResult + "SameGroupSameIndustry.tex"
 )
-
+tempt[
+    ["SameIndustry", "p1", "SameGroup", "p2", "SameGroup & SameIndustry", "p3"]
+].rename(columns={"p1": "", "p2": "", "p3": ""}).T
 # %%
 tempt = (
     df2.groupby(["id"])[
@@ -547,7 +557,7 @@ tempt = (
     .describe()
     .T.drop(columns=["count"])
     .round(2)
-    .rename(
+    .T.rename(
         columns={
             "sgroup": "SameIndustry",
             "sBgroup": "SameGroup",
@@ -560,9 +570,11 @@ tempt = (
             "MonthlyCrossOwnership": "CrossOwnership",
         }
     )
-)
-tempt.to_latex(pathResult + "ControlsSummary.tex")
+).T
 
+
+tempt.to_latex(pathResult + "ControlsSummary.tex")
+tempt
 # %%
 tempt = pd.DataFrame()
 t = (

@@ -35,7 +35,8 @@
 	April\or May \or June\or July\or August\or September\or October\or November\or %
 	December\fi, \number \year} 
 
-\title[Connected Stocks ]{Connected Stocks: Evidence from Tehran Stock Exchange}
+\title[Connected Stocks ]{How are stocks connected? }
+\subtitle{The evidence from emerging market.}
 %\subtitle{}
 \author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
 \institute[TeIAS]{Tehran Institute for Advanced Studies }
@@ -92,11 +93,16 @@
 	\begin{frame}{Motivation}{Research Question}
 		
 		\begin{itemize}
-			\item\textbf{Can the common ownership cause stock return comovement ?}
+			\item\textbf{Stock return co-movement is caused by direct or indirect common ownership?}
 			\begin{itemize}
-				\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) 
-				\item We focus on excess return comovement for a pair of the stocks
+				\item common ownership:
+				\begin{itemize}
+					\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
+					\item We connect stocks through the ultimate owner for indirect common ownership
+				\end{itemize}
+				\item We focus on excess return co-movement for a pair of the stocks
 				\item We use common ownership to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
+				\item We demonstrate that correlated trading can be a channel of co-movement
 			\end{itemize}
 		\end{itemize}
 		
@@ -134,87 +140,8 @@
 	
 
 	
-	\subsection{Common-ownership measurements}
+
 	
-	\normalsize
-	
-	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
-		\begin{columns}[t]
-			\column{0.5\textwidth}  
-			\centering
-			Model based measures
-			\\
-			
-			\begin{itemize}
-				\item \color{blue} \scriptsize $
-				\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
-				\normalcolor
-				\tiny 
-				
-				\cite{harford2011institutional}
-				
-				
-				\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
-				
-				\cite{azar2018anticompetitive}
-				
-				\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
-			
-			\cite{anton2020common} 
-			
-				\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
-			
-			\cite{backus2020theory}
-				
-				\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
-				
-				\cite{gilje2020s} , \cite{Lewellen2021}
-				
-				
-				\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
-				
-				\cite{LEWELLEN2021b}
-				\normalsize
-				
-				
-				
-			\end{itemize}
-			
-			
-			\pause
-			\column{0.5\textwidth}
-			\centering
-			Ad-hoc measures
-			\begin{itemize}
-				\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
-				\tiny\cite{AntonPolk} \\ 
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
-				\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
-				\tiny \cite{newham2018common}  \\ 
-				
-				
-				
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
-				
-				\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
-				
-			\end{itemize}
-			
-		\end{columns}
-	\pause
-		\begin{block}{\scriptsize Selected measure }
-			\scriptsize
-			We need a pair-level measure, which is bi-directional, so we use the AP measure. 
-		\end{block}
-		\hfill
-		\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
-	\end{frame}
 	
 	
 	
@@ -289,59 +216,199 @@
 		\node (comovement) [startstop3] {Comovement effect};
 		
 		\pause
+		
+				\node (Fundumental) [startstop3,above of = comovement , yshift=0.5cm , xshift=0cm ] { \begin{tabular}{c}
+				\scriptsize	Fundumental	\\ \tiny\cite{shiller1989comovements}
+		\end{tabular} };
+		
+		
+		\draw (Fundumental) -> (comovement);
+		
+		
+		\pause
+		
+		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
+				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}\\ \tiny\cite{barberis2003style}
+		\end{tabular} };
+		
+		
+		\draw (categoryhabitat) -> (comovement);
+		
+		\pause
+		\node (belief) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
+				Correlated beliefs	\\
+				\tiny\cite{david2016correlated}
+		\end{tabular}};
+		
+		\draw (belief) -> (comovement);
+		
+		\pause
+		
+		\node (investmentbanking) [startstop3,below of = comovement , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Investment Bank Network \\
+				\tiny\cite{grullon2014comovement}
+		\end{tabular}};
+		
+		\draw (investmentbanking) -> (comovement);
+		
+		
+		
+		\pause
+		\node (information) [startstop3,below of = investmentbanking , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}\\
+				\tiny\cite{HAMEED2019103}
+		\end{tabular}};
+		
+		\draw (information) -> (investmentbanking);
+		
+		\pause
+		
+		
+		
+		
+		
+		
+		
+		%% common ownership
 		\node (commonownership) [startstop3,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
 		\pause
-		
-		\node (liquidity) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
-		
-		\draw (commonownership) -> (liquidity);
-		\draw (liquidity) -> (comovement);
-		
-		\pause
-		
-		\node (trading) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] { \begin{tabular}{c}
+		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
 				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
 		\end{tabular} };
 		
 		\draw (commonownership) -> (trading);
 		\draw (trading) -> (comovement);
 		\pause
+		\node (liquidity) [startstop3,below of = trading , yshift=-1cm , xshift=0cm] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
 		
-		\node (corporate) [startstop3,below of = trading , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
-				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
-		\end{tabular}};
-		
-		\draw (commonownership) -> (corporate);
-		\draw (corporate) -> (comovement);
-		
-		\pause
-		\node (information) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
-				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}
-		\end{tabular}};
-		
-		\draw (information) -> (comovement);
-		
+		\draw (commonownership) -> (liquidity);
+		\draw (liquidity) -> (comovement);
 		
 		\pause
 		
 		
-		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
-				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}
-		\end{tabular} };
 		
-		
-		\draw (categoryhabitat) -> (comovement);
-		
-		
-		
-		
-		
+%		\node (corporate) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
+%				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
+%		\end{tabular}};
+%		
+%		\draw (commonownership) -> (corporate);
+%		\draw (corporate) -> (comovement);
 	\end{tikzpicture}
 }
 		
 		\hfill
 		\hyperlink{maineffect}{\beamerbutton{Papers}}
 	\end{frame}
+	
+	\begin{frame}{Our work}
+		\begin{itemize}
+			\item 
+			We use daily records of block-holder ownership for firms
+			\item We not restricted to mutual funds ownership
+			\item Furthermore, 80\% of market belongs to the business groups
+			\begin{itemize}
+				\item Would business groups be able to raise the co-movement of stock returns?
+				\begin{itemize}
+					\tiny
+					\item \cite{cho2015stock}: \\
+					The strong co-movement between group returns and
+					firm returns is explained by correlated fundamentals. 
+					\item \cite{kim2015stock}:\\
+					The increase in correlation appears to be driven
+					more by non-fundamental factors such as correlated trading, rather
+					than fundamental factors such as related-party transactions
+				\end{itemize}
+			\item Common ownership or business group (indirect common ownership) ?
+			\item  Through which channel?
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\normalsize
+		\subsection{Common-ownership measurements}
+	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+		\begin{columns}[t]
+			\column{0.5\textwidth}  
+			\centering
+			Model based measures
+			\\
+			
+			\begin{itemize}
+				\item \color{blue} \scriptsize $
+				\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+				\normalcolor
+				\tiny 
+				
+				\cite{harford2011institutional}
+				
+				
+				\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+				
+				\cite{azar2018anticompetitive}
+				
+				\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+				
+				\cite{anton2020common} 
+				
+				\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+				
+				\cite{backus2020theory}
+				
+				\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+				
+				\cite{gilje2020s} , \cite{Lewellen2021}
+				
+				
+				\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+				
+				\cite{LEWELLEN2021b}
+				\normalsize
+				
+				
+				
+			\end{itemize}
+			
+			
+			\pause
+			\column{0.5\textwidth}
+			\centering
+			Ad-hoc measures
+			\begin{itemize}
+				\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+				\tiny\cite{AntonPolk} \\ 
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+				\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+				
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+				\tiny \cite{newham2018common}  \\ 
+				
+				
+				
+				
+				
+				\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+				
+				\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+				
+			\end{itemize}
+			
+		\end{columns}
+		\pause
+		\begin{block}{\scriptsize Selected measure }
+			\scriptsize
+			We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+		\end{block}
+		\hfill
+		\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+	\end{frame}
+	
+	
+	
+	
 	
 	\section{Empirical Studies}
 	\subsection{Measuring Common-ownership}
@@ -497,72 +564,32 @@
 			We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
 		\end{block}
 	\end{frame}
-	
-	%     \begin{frame}{Measuring Common Ownership}{Problem}
-	%         \begin{tabular}{|c|cc|}
-	%         \hline
-	%         & Owenership & Owenership \\
-	%         \hline
-	%         x1    & 20    & 20 \\
-	%         y1    & 20    & 80 \\
-	%         x2    & 80    & 80 \\
-	%         y2    & 80    & 20 \\
-	%         \hline
-	%         SQRT  & 1.8   & 1.8 \\
-	%         SUM   & 1     & 1 \\
-	%         Quadratic & 1.47 & 1.47 \\
-	%         \hline
-	%         \end{tabular}
-	%     \end{frame}
-	
-	%\begin{frame}{Pair Composition}{Business Group}
-	% \resizebox{\textwidth}{!}
-	% {
-	%\begin{tikzpicture}[node distance=2cm]
-	%
-	%
-	%\node (start) [startstop] {Ultimate Owner};
-	%
-	%
-	%
-	%\node (end) [startstop1,below of = start , yshift=0cm , xshift=-7cm ] {$ \text{Firm}_{\text{A}} $};
-	%\node (end2) [startstop1,below of = start , yshift=0cm , xshift=7cm ] {$ \text{Firm}_{\text{D}} $};
-	%\node (end3) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm}_{\text{C}} $};
-	%
-	%\node (end4) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm}_{\text{B}} $};
-	%
-	%
-	%\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm}_{\text{X}} $};
-	%
-	%
-	%\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm}_{\text{Y}} $};
-	%
-	%
-	%
-	%
-	%\draw [arrow] (start) -|(end);
-	%\draw [arrow] (start) -|(end2);
-	%\draw [arrow] (start) -|(end3);
-	%\draw [arrow] (start) -|(end4);
-	%\draw [arrow] (end) -+(sur);
-	%
-	%
-	%
-	%\draw [arrow] (end) -+(sur);
-	%\draw [arrow] (end2) -+ (sur2);
-	%
-	%
-	%
-	%
-	%
-	%
-	%\end{tikzpicture}
-	%}
-	%
-	%\end{frame}
-	
-	
-	
+
+	\subsection{Pair composition}
+	\begin{frame}{Pair composition}
+		\begin{itemize}
+			\item Firms with at least one common owner\\
+			
+							\begin{figure}[htbp]
+				\centering
+				\begin{tikzpicture}[node distance=1cm]
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+					\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+					
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm) ;
+					
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm2) ;
+				\end{tikzpicture}
+			\end{figure}\bigskip
+			\item In a business group, how can one pair be defined?
+			\begin{itemize}
+				\item What is the business group?
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
 	
 	\begin{frame}{Pair Composition and Business Group}{Business Group }
 		
@@ -616,48 +643,6 @@
 			\column{.5\textwidth}     
 			\centering
 			{}\\
-			
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-					
-					
-					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-					
-					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-					
-					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					
-					\draw [arrow] (start) --(end);
-					\draw [arrow] (start2) -- (end2);
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					\draw [dash dot,->] (start) -- (CH);
-					\draw [dash dot,->] (start2) -- (CH);
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
-					
-					
-				\end{tikzpicture}
-			} 
-			\column{.5\textwidth}
-			\centering  
-			{}\\
-			
 			\resizebox{\textwidth}{!}{
 				\begin{tikzpicture}[node distance=2cm]
 					
@@ -698,7 +683,50 @@
 					
 				\end{tikzpicture}
 			}
-		\end{columns}
+			
+			\pause
+			\column{.5\textwidth}
+			\centering  
+			{}\\
+			\resizebox{\textwidth}{!}{
+				\begin{tikzpicture}[node distance=2cm]
+					
+					
+					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+					
+					
+					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+					
+					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+					
+					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+					
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+					
+					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+					
+					
+					
+					\draw [arrow] (start) --(end);
+					\draw [arrow] (start2) -- (end2);
+					
+					\draw [arrow] (end) --(sur);
+					\draw [arrow] (end2) -- (sur2);
+					
+					\draw [dash dot,->] (start) -- (CH);
+					\draw [dash dot,->] (start2) -- (CH);
+					
+					\draw [arrow] (CH) -- (sur);
+					\draw [arrow] (CH) -- (sur2);
+					
+					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
+					
+					
+				\end{tikzpicture}
+			} 
+			
+			\end{columns}
 	\end{frame}
 	
 	
@@ -787,7 +815,7 @@
 		\begin{itemize}
 			\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
 			\begin{itemize}
-				\item Includes of 1203 Days and 60 Months
+				\item Includes of 72 Months
 				\item Consists of 618 firm inculding 562 firm with common owners
 				
 			\end{itemize}
@@ -810,8 +838,8 @@
 		
 			\item Pairs consist of two firms  with at least one common owner
 			\begin{itemize}
-				\item  93442 unique pairs which is 60\% of possible pairs 
-				\tiny ($ \frac{562*561}{2}= 149878 $)
+				\item  93442 unique pairs which is 25\% of possible pairs 
+				\tiny ($ \frac{612*611}{2}= 373932 $)
 				\normalsize
 			\end{itemize}
 		\end{itemize}
@@ -838,12 +866,12 @@
 	
 	
 
-	\begin{frame}{Number of Pairs}
-		\begin{figure}[htbp]
-			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
-		\end{figure}
-	\end{frame}
-	
+%	\begin{frame}{Number of Pairs}
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
+%		\end{figure}
+%	\end{frame}
+%	
 	
 	
 	
@@ -863,49 +891,49 @@
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{FCA's time series}
-		\begin{figure}
-			\centering  
-			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
-			
-		\end{figure} 
-	\end{frame}
-
-	\begin{frame}{FCA's time series}
-		\begin{columns}
-			\column{.5\textwidth}  
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
-				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
-			\end{figure}    
-			\column{.5\textwidth}
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
-			\end{figure}
-          
-		\end{columns}
-
-\end{frame}
-
-	\begin{frame}{Group affiliated firm's time series}
-		\begin{columns}
-	\column{.5\textwidth}  
-	\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
-	
-\end{figure}  
-	\column{.5\textwidth}
-	\begin{figure}
-	\centering  
-	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
-	
-\end{figure} 
-	
-\end{columns}
-\end{frame}
+%	\begin{frame}{FCA's time series}
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
+%			
+%		\end{figure} 
+%	\end{frame}
+%
+%	\begin{frame}{FCA's time series}
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
+%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
+%			\end{figure}    
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
+%			\end{figure}
+%          
+%		\end{columns}
+%
+%\end{frame}
+%
+%	\begin{frame}{Group affiliated firm's time series}
+%		\begin{columns}
+%	\column{.5\textwidth}  
+%	\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
+%	
+%\end{figure}  
+%	\column{.5\textwidth}
+%	\begin{figure}
+%	\centering  
+%	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
+%	
+%\end{figure} 
+%	
+%\end{columns}
+%\end{frame}
 
 
 
@@ -1030,7 +1058,7 @@
 	\subsection{Controls}
 	\begin{frame}{Controls}
 		\begin{itemize}
-			\item $ \rho_{t} $ : Current period correlation
+%			\item $ \rho_{t} $ : Current period correlation
 			
 			\item \textbf{SameGroup} : Dummy variable for whether the two stocks belong to the same business group.
 			
@@ -1230,7 +1258,7 @@
 	\end{frame}
 	
 	
-	\subsection{Discontinuity}
+	\subsection{High level of common ownership}
 	
 	\begin{frame}{ Future Correlation via $ FCA $}{Discontinuity}\label{Monthly5}
 		
@@ -1334,6 +1362,7 @@
 \end{table}	
 	\end{frame}
 
+\subsection{All pairs}
 
 
 \begin{frame}{All non-common owner pairs}{regression}
@@ -1345,15 +1374,7 @@
 	\end{table}
 \end{frame}
 
-%	\begin{frame}{Business group return}
-%	
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{0.6\textwidth}{!}{
-%			\input{BGReturn.tex}
-%		}
-%	\end{table}
-%\end{frame}
+
 	
 
 
@@ -1391,8 +1412,14 @@
 	
 	
 \end{frame}
-	
-	
+	\subsection{Common Ownership measure}
+	\begin{frame}{Common Ownership measure}	
+		\begin{table}[htbp]
+					\centering
+				\resizebox{1\textwidth}{!}{
+					\input{Output/mresult2Polk-slide.tex}}
+		\end{table}
+	\end{frame}
 	
 	
 	
@@ -1715,19 +1742,75 @@
 %	
 %	
 %	
-	\section{Correlated trading}
-
+	\section{Evidence for correlated trading}
+ \subsection{Institutional Imbalance}
 \begin{frame}{Ins Imbalance}
-			 \begin{equation*}
-				 \text{InsImbalance}_\text{i} = (\frac{\text{InsBuy} - \text{InsSell}}{\text{InsBuy} + \text{InsSell}})_{\text{value}}
-			\end{equation*}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\linewidth]{Output/GroupedSTD.eps}
-	\label{fig:GroupedSTD}
-\end{figure}
+
+\begin{itemize}
+	\item \cite{seasholes2007predictable}
+	
+	\begin{columns}
+		\column{0.5\linewidth}
+		\begin{equation*}
+			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+		\end{equation*}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceInsMeanSummary.tex}
+		}
+		\label{tab:ImbalanceInsMeanSummary}
+	\end{table}
+		\column{0.5\linewidth}
+			\begin{equation*}
+			Imbalance_{ind} = \frac{Buy_{ind} - Sell_{ind}}{Buy_{ind} + Sell_{ind}}
+		\end{equation*}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceIndMeanSummary.tex}
+		}
+		\label{tab:ImbalanceIndMeanSummary}
+	\end{table}
+	\end{columns}
+	
+	
+\end{itemize}
+
 \end{frame}
 
+
+\begin{frame}{Ins Imbalance}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+ 	\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedIndSTD.eps}
+	\label{fig:GroupedIndSTD}
+\end{figure}
+
+	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+	\label{fig:GroupedInsSTD}
+\end{figure}
+\end{columns}
+\end{frame}
 \begin{frame}{Ins Imbalance}
 
 
@@ -1739,13 +1822,19 @@
 		\end{table}
 	
 	\end{frame}
-	
+
+\subsection{Turnover}
 	\begin{frame}{TrunOver}
 	
+\begin{itemize}
+	\item 
+	\cite{Liquidity2016}
+\end{itemize}
 	\begin{equation*}
 		\Delta \text{TurnOver} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
 		\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
 	\end{equation*}
+
 	
 	\begin{table}[htbp]
 		\centering
@@ -1766,7 +1855,7 @@
 	\end{table}
 \end{frame}
 
-\begin{frame}{Pairwise correlations in  trunover}
+\begin{frame}{Pairwise correlations in  turnover}
 	\begin{table}[htbp]
 		\centering
 		\resizebox{0.95\textwidth}{!}{
@@ -1776,24 +1865,24 @@
 		\label{mresult2-turnover}
 	\end{table}
 \end{frame}
-
+\subsection{Big business group}
 	\begin{frame}{Big Business group}
 		\begin{table}[htbp]
 			\centering
-			\resizebox{0.8\textheight}{!}{
+			\resizebox{0.75\textheight}{!}{
 				\input{Output/mresult2-BigBusinessGroup.tex}
 			}
 		\end{table}
 	\end{frame}
 
-\begin{frame}{Bearish/Bullish Market}{}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textheight}{!}{
-			\input{Output/mresult2Down-slide2.tex}
-		}
-	\end{table}
-\end{frame}
+%\begin{frame}{Bearish/Bullish Market}{}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textheight}{!}{
+%			\input{Output/mresult2Down-slide2.tex}
+%		}
+%	\end{table}
+%\end{frame}
 %
 %\begin{frame}{Amihud}
 %	
@@ -1867,13 +1956,12 @@
 			\item We derive a measure that captures the extent of common ownership distribution.
 			
 			
-			\item The common ownership comovement effect  with a
-			extra explanation:
-			\begin{itemize}
-				\item Common ownership that  crosses a threshold affect on comovement
-				\item Be in the same business group has a major effect on comovement
-%				\item Business groups of banks affect more than normal business groups
-			\end{itemize} 
+			\item Direct common ownership can affect firms' co-movement
+			\item 
+			Firms in the business groups co-move more than other pairs
+			\item Direct common ownership only matters for firms in the business groups
+			\item Firms in the same business group trade in one way
+			
 		\end{itemize}
 	\end{frame}
 	

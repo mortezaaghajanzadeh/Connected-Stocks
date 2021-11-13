@@ -1,11 +1,19 @@
 
+asreg monthlyρ_4_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership if monthlyρ_5_f != 1 & monthlyρ_5_f != -1, fmb newey(4)
 
-asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+gen xxx = ln(monthlyρ_5_f/(1-monthlyρ_5_f))
 
-asreg monthlyρ_5_f NMFCAP NMFCAPG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-asreg monthlyρ_5_f NMFCA NMFCAG sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+asreg xxx NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 
+
+
+eststo v1: asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+eststo v2: asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+
+eststo v3: asreg monthlyρ_5_f NMFCAP NMFCAPG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+eststo v4: asreg monthlyρ_5_f NMFCA NMFCAG sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+
+esttab v1 v2 v3 v4 
 
 summ MFCA monthlyfcapf
 
@@ -664,6 +672,10 @@ estadd loc Controls "Yes" , replace
 estadd loc subsample "Others" , replace
 estadd loc FE "Yes" , replace
 
+
+esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(NMFCA sbgroup NMFCAG bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn sbgroupTurn bigbusinessgroupSgroupTurn ) compress order(sbgroup NMFCA  NMFCAG monthlyρ_turn monthlyρ_5 sbgroupTurn bigbusinessgroup bigbusinessgroupSgroup) 
+
+
 esttab v1 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(NMFCA sbgroup NMFCAG bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn sbgroupTurn bigbusinessgroupSgroupTurn ) compress order(sbgroup NMFCA  NMFCAG monthlyρ_turn monthlyρ_5 sbgroupTurn bigbusinessgroup bigbusinessgroupSgroup) mgroups("Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
 }
 
@@ -742,33 +754,58 @@ esttab   v0 v1 v11 v111     v13  v2 , nomtitle label s( N GroupFE r2 ,  lab("Obs
 
 
 
-
-
 /*NMFCAP*/
 {
-eststo v0: quietly asreg monthlyρ_5_f  NMFCAP , fmb newey(4)
-estadd loc GroupFE "No" , replace
+	capture drop vv
+	capture drop Gvv
+	gen vv =   NMFCAP
+	gen  Gvv = NMFCAPG
+  
+	eststo v0: quietly asreg monthlyρ_5_f  vv , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Sum" , replace
+	
+	eststo v1: quietly asreg monthlyρ_5_f  vv sbgroup, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Sum" , replace
+	
+	eststo v2: quietly asreg monthlyρ_5_f  vv sbgroup Gvv , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Sum" , replace
+	
+	eststo v3: quietly asreg monthlyρ_5_f  vv sbgroup Gvv sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Sum" , replace
+	
+	eststo v4: quietly asreg monthlyρ_5_f  vv sbgroup Gvv sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
+	estadd loc GroupFE "Yes" , replace
+	estadd loc Measure "Sum" , replace
+	
+	replace vv = NMFCA
+	replace  Gvv = NMFCAG
+	
+	eststo v01: quietly asreg monthlyρ_5_f  vv , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Quadratic" , replace
+	
+	eststo v11: quietly asreg monthlyρ_5_f  vv sbgroup, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Quadratic" , replace
+	
+	eststo v21: quietly asreg monthlyρ_5_f  vv sbgroup Gvv , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Quadratic" , replace
+	
+	eststo v31: quietly asreg monthlyρ_5_f  vv sbgroup Gvv sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Measure "Quadratic" , replace
 
-eststo v1: quietly asreg monthlyρ_5_f NMFCAP  monthlyρ_5 , fmb newey(4)
-estadd loc GroupFE "No" , replace
+	eststo v41: quietly asreg monthlyρ_5_f  vv sbgroup Gvv sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
+	estadd loc GroupFE "Yes" , replace
+	estadd loc Measure "Quadratic" , replace
 
+	label variable vv "Common Ownership Measure"
+	label variable Gvv " $ \text{\small Common Ownership Measure} \times {\text{SameGroup} }$ "
 
-
-eststo v11: quietly asreg monthlyρ_5_f NMFCAP  monthlyρ_5 sbgroup, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v111: quietly asreg monthlyρ_5_f NMFCAP  monthlyρ_5 sbgroup NMFCAPG, fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v13: quietly asreg monthlyρ_5_f NMFCAP  monthlyρ_5  sbgroup NMFCAPG sgroup, fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v2: quietly asreg monthlyρ_5_f NMFCAP monthlyρ_5  sbgroup NMFCAPG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v3: quietly asreg monthlyρ_5_f NMFCAP monthlyρ_5  sbgroup NMFCAPG  sgroup monthlysamesize monthlysamebm  monthlycrossownership gdummy0-gdummy47, fmb newey(4)
-estadd loc GroupFE "Yes" , replace
-
-
-esttab   v0 v1 v11 v111   v13   v2 v3, nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCAP monthlyρ_5  sbgroup NMFCAPG  sgroup monthlysamesize monthlysamebm monthlycrossownership) order(NMFCAP NMFCAPG sbgroup) compress   mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2Polk-slide.tex ,replace
+esttab   v0 v01 v1 v11 v2 v21 v3 v31 v4 v41, nomtitle label   s( N GroupFE Measure r2 ,  lab("Observations" "Group FE" "Measurement" "$ R^2 $"))  keep(vv sbgroup Gvv  sgroup monthlysamesize monthlysamebm monthlycrossownership) order(vv sbgroup Gvv) compress   mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2Polk-slide.tex ,replace
 }

@@ -1,0 +1,37 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{10}{c}}
+\hline\hline
+                &\multicolumn{10}{c}{Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals}                                                                                                 \\\cmidrule(lr){2-11}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         &\multicolumn{1}{c}{(10)}         \\
+\hline
+Common Ownership Measure&  0.00177\sym{***}&  0.00150\sym{**} &  0.00133\sym{**} &  0.00102         & 0.000936         & 0.000663         & 0.000536         & 0.000377         &-0.0000197         &-0.0000113         \\
+                &   (3.93)         &   (2.90)         &   (2.76)         &   (1.87)         &   (1.90)         &   (1.17)         &   (1.06)         &   (0.65)         &  (-0.04)         &  (-0.02)         \\
+[1em]
+Same Group      &                  &                  &   0.0156\sym{***}&   0.0157\sym{***}&  0.00774\sym{***}&  0.00813\sym{***}&  0.00575\sym{*}  &  0.00624\sym{**} &  0.00503\sym{*}  &  0.00549\sym{*}  \\
+                &                  &                  &   (7.32)         &   (7.44)         &   (3.61)         &   (3.71)         &   (2.62)         &   (2.81)         &   (2.11)         &   (2.27)         \\
+[1em]
+ $ \text{\small Common Ownership Measure} \times {\text{SameGroup} }$ &                  &                  &                  &                  &   0.0103\sym{***}&  0.00935\sym{***}&   0.0110\sym{***}&  0.00992\sym{***}&   0.0119\sym{***}&   0.0107\sym{***}\\
+                &                  &                  &                  &                  &   (7.76)         &   (6.72)         &   (7.47)         &   (6.49)         &   (7.94)         &   (6.97)         \\
+[1em]
+SameIndustry    &                  &                  &                  &                  &                  &                  &-0.000364         &-0.000312         & 0.000286         & 0.000339         \\
+                &                  &                  &                  &                  &                  &                  &  (-0.21)         &  (-0.19)         &   (0.17)         &   (0.21)         \\
+[1em]
+SameSize        &                  &                  &                  &                  &                  &                  &   0.0133\sym{***}&   0.0135\sym{***}&   0.0131\sym{***}&   0.0132\sym{***}\\
+                &                  &                  &                  &                  &                  &                  &   (4.48)         &   (4.56)         &   (4.61)         &   (4.68)         \\
+[1em]
+SameBookToMarket&                  &                  &                  &                  &                  &                  &  0.00772\sym{***}&  0.00772\sym{***}&  0.00893\sym{***}&  0.00893\sym{***}\\
+                &                  &                  &                  &                  &                  &                  &   (4.55)         &   (4.58)         &   (5.05)         &   (5.09)         \\
+[1em]
+CrossOwnership  &                  &                  &                  &                  &                  &                  &   0.0280\sym{*}  &   0.0260         &   0.0303\sym{*}  &   0.0283\sym{*}  \\
+                &                  &                  &                  &                  &                  &                  &   (2.07)         &   (1.93)         &   (2.27)         &   (2.14)         \\
+\hline
+Observations    &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         \\
+Group FE        &       No         &       No         &       No         &       No         &       No         &       No         &       No         &       No         &      Yes         &      Yes         \\
+Measurement     &      Sum         &Quadratic         &      Sum         &Quadratic         &      Sum         &Quadratic         &      Sum         &Quadratic         &      Sum         &Quadratic         \\
+$ R^2 $         & 0.000171         & 0.000170         & 0.000348         & 0.000349         & 0.000443         & 0.000437         & 0.000898         & 0.000898         &  0.00575         &  0.00575         \\
+\hline\hline
+\multicolumn{11}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{11}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

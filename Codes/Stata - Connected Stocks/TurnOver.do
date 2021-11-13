@@ -18,9 +18,9 @@ label variable deltatrun " $ \Delta \text{TurnOver} $ "
 
 replace return = return * return
 
-label variable deltagroup " $ \Delta \text{TurnOver}_{\text{Group}} $ "
+label variable deltagroup " $ \Delta \text{TurnOver}_{\text{Group,-i}} $ "
 label variable deltamarket " $ \Delta \text{TurnOver}_{\text{Market}} $ "
-label variable deltaindustry " $ \Delta \text{TurnOver}_{\text{Industry}} $ "
+label variable deltaindustry " $ \Delta \text{TurnOver}_{\text{Industry-i}} $ "
 
 
 
