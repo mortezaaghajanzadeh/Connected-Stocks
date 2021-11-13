@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  13 NOV 2021 12:08
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  13 NOV 2021 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1026,40 +1026,40 @@ LaTeX Warning: Label `model1' multiply defined.
 )
 \openout1 = `"Connected Stocks - Draft - Persian.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
-4.
+3.
  (c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 84.
+LaTeX Info: Redefining \selectfont on input line 83.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 83.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1072,9 +1072,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count368
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (./Connected Stocks - Draft - Persian.out)
 (./Connected Stocks - Draft - Persian.out)
@@ -1084,7 +1084,7 @@ LaTeX Info: Redefining \nameref on input line 84.
 
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/b/n' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 88.
+(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 87.
 
 (c:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
@@ -1092,30 +1092,41 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ]
-[2] [3] [4] [5] (./Output/summaryOfOwnership.tex) (./Output/summaryOfPairs.tex)
-[6] [7] [8] (./Output/CorrelationsResultsText.tex)
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 802--804
+[2] [3] [4] [5] (./Output/summaryOfOwnership.tex) [6]
+(./Output/summaryOfPairs.tex) [7] [8] (./Output/CorrelationsResultsText.tex)
+[9]
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 792--794
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-[9] (./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex)
-[10] (./MeasurmentLit.tex
+(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [10]
+[11] (./MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-) [11] [12]
+) [12]
+
+LaTeX Warning: Reference `footdir@7' on page 13 undefined on input line 957.
+
+
+LaTeX Warning: Reference `footdir@8' on page 13 undefined on input line 957.
+
+
+LaTeX Warning: Reference `footdir@9' on page 13 undefined on input line 967.
+
+[13]
 File: 1.png Graphic file (type bmp)
 <1.png>
 File: 2.png Graphic file (type bmp)
 <2.png>
- (./Example2.tex) [13] [14]
+ (./Example2.tex) [14] [15]
 File: 3.png Graphic file (type bmp)
 <3.png>
 File: 4.png Graphic file (type bmp)
 <4.png>
-
-(./marketcap.tex) [15] [16] (./Output/FCACal.tex) [17]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1233--1235
+ (./marketcap.tex) [16] [17]
+(./Output/FCACal.tex) [18]
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 1223--1225
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1124,22 +1135,22 @@ File: Output/sameIndustryinBG.eps Graphic file (type eps)
 <Output/sameIndustryinBG.eps>
 File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 <Output/sameIndustryNoinBG.eps>
-[18]
+[19]
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
- [19] (./Model11.tex) [20] [21] (./Output/mresult2-slide.tex)
-Overfull \hbox (103.91066pt too wide) in paragraph at lines 1366--1367
+ [20] (./Model11.tex) [21] [22] (./Output/mresult2-slide.tex)
+Overfull \hbox (103.91066pt too wide) in paragraph at lines 1356--1357
 [][][]  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1357
 [][]
  []
 
-[22]
+[23]
 File: Output/Qmcorr5lrd.eps Graphic file (type eps)
 <Output/Qmcorr5lrd.eps>
 File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
@@ -1147,40 +1158,40 @@ File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
 File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
  (./Output/QTimemresult2subsample-slide.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1419--1420
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1409--1410
 [][] []
  []
 
-[23
+[24
 
 
 ]
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
- [24] (./Model12.tex) [25] [26] (./Output/Q3mresultAllPairs.tex)
-Overfull \hbox (71.02052pt too wide) in paragraph at lines 1490--1490
+ [25] (./Model12.tex) [26] [27] (./Output/Q3mresultAllPairs.tex)
+Overfull \hbox (71.02052pt too wide) in paragraph at lines 1480--1480
 [][][] []
  []
 
-[27
+[28
 
 ]
 File: Output/mcorrPairType.eps Graphic file (type eps)
 <Output/mcorrPairType.eps>
- (./Output/Qmresult4-slide.tex) [28
+ (./Output/Qmresult4-slide.tex) [29
 
 ] (./Output/Qmresult4-AllPairs.tex)
-[29] (./Output/mresult2Polk-slide.tex) [30]
+[30] (./Output/mresult2Polk-slide.tex) [31]
 (./Output/ImbalanceInsMeanSummary.tex) (./Output/ImbalanceIndMeanSummary.tex)
-(./Output/ImbalanceInsStdSummary.tex) [31] (./Output/ImbalanceIndStdSummary.tex
+(./Output/ImbalanceInsStdSummary.tex) [32] (./Output/ImbalanceIndStdSummary.tex
 )
 
-LaTeX Warning: Reference `tab:GroupedInsSTD' on page 32 undefined on input line
- 1706.
+LaTeX Warning: Reference `tab:GroupedInsSTD' on page 33 undefined on input line
+ 1696.
 
 
-LaTeX Warning: Reference `tab:GroupedIndSTD' on page 32 undefined on input line
- 1708.
+LaTeX Warning: Reference `tab:GroupedIndSTD' on page 33 undefined on input line
+ 1698.
 
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
@@ -1201,8 +1212,8 @@ Overfull \hbox (30.0pt too wide) detected at line 11
 [][]
  []
 
-[32] [33]) (./Output/Imbalance.tex) [34]
-Overfull \hbox (25.6144pt too wide) detected at line 1795
+[33] [34]) (./Output/Imbalance.tex) [35]
+Overfull \hbox (25.6144pt too wide) detected at line 1785
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1218,21 +1229,21 @@ Overfull \hbox (30.0pt too wide) detected at line 6
  []
 
 ) (./turnover.tex)
-Overfull \hbox (24.41608pt too wide) in paragraph at lines 1828--1828
+Overfull \hbox (24.41608pt too wide) in paragraph at lines 1818--1818
  [][][][] 
  []
 
-[35] (./Turnovercrosssection.tex)
-Overfull \hbox (24.40437pt too wide) in paragraph at lines 1854--1854
+[36] (./Turnovercrosssection.tex)
+Overfull \hbox (24.40437pt too wide) in paragraph at lines 1844--1844
  [][][][] 
  []
 
-[36] (./Output/mresult2-turnover.tex)
-Overfull \hbox (24.40068pt too wide) in paragraph at lines 1881--1881
+[37] (./Output/mresult2-turnover.tex)
+Overfull \hbox (24.40068pt too wide) in paragraph at lines 1871--1871
  [][][][] 
  []
 
-[37] (./Output/mresult2-BigBusinessGroup.tex) [38] [39] [40]
+[38] (./Output/mresult2-BigBusinessGroup.tex) [39] [40] [41]
 (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
@@ -1286,7 +1297,7 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 79.
 
-[41]
+[42]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 84.
@@ -1343,17 +1354,17 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 159.
 
-[42]
+[43]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 164.
 
-) [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1987.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1987.
+) [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1977.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1977.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1987.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1987.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1977.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1977.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1368,15 +1379,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1987.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1977.
  ) 
 Here is how much of TeX's memory you used:
- 27607 strings out of 479418
- 555718 string characters out of 5888105
- 987590 words of memory out of 5000000
- 44475 multiletter control sequences out of 15000+600000
+ 27610 strings out of 479418
+ 555757 string characters out of 5888105
+ 987587 words of memory out of 5000000
+ 44478 multiletter control sequences out of 15000+600000
  540087 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (43 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (44 pages).
