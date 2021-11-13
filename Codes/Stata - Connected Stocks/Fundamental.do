@@ -15,7 +15,7 @@ generate  earning_group = earning1_group
 generate  earning_ind = earning1_ind
 generate  earning_market = earning1_market
 
-rename v34 r
+rename v35 r
 
 
 
