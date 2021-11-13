@@ -3,11 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft - Persian.aux
 The style file: apalike.bst
 Database file #1: Ref.bib
-Repeated entry---line 341 of file Ref.bib
+Repeated entry---line 363 of file Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 723 of file Ref.bib
+Repeated entry---line 745 of file Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
@@ -15,45 +15,45 @@ Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 30 entries,
+You've used 31 entries,
             1935 wiz_defined-function locations,
-            654 strings with 8198 characters,
-and the built_in function-call counts, 11827 in all, are:
-= -- 1188
-> -- 437
-< -- 20
-+ -- 146
-- -- 140
-* -- 1054
-:= -- 2047
-add.period$ -- 87
-call.type$ -- 30
-change.case$ -- 220
-chr.to.int$ -- 30
-cite$ -- 34
-duplicate$ -- 419
-empty$ -- 834
-format.name$ -- 200
-if$ -- 2297
+            660 strings with 8307 characters,
+and the built_in function-call counts, 12190 in all, are:
+= -- 1226
+> -- 444
+< -- 21
++ -- 148
+- -- 142
+* -- 1085
+:= -- 2109
+add.period$ -- 90
+call.type$ -- 31
+change.case$ -- 226
+chr.to.int$ -- 31
+cite$ -- 35
+duplicate$ -- 433
+empty$ -- 864
+format.name$ -- 203
+if$ -- 2368
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 27
-newline$ -- 150
-num.names$ -- 90
-pop$ -- 149
+missing$ -- 28
+newline$ -- 155
+num.names$ -- 93
+pop$ -- 152
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 226
 quote$ -- 0
-skip$ -- 333
+skip$ -- 344
 stack$ -- 0
-substring$ -- 957
-swap$ -- 43
+substring$ -- 994
+swap$ -- 44
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 186
 warning$ -- 4
-while$ -- 105
+while$ -- 109
 width$ -- 0
-write$ -- 382
+write$ -- 395
 (There were 2 error messages)

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  12 NOV 2021 13:46
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  12 NOV 2021 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,19 +1094,19 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ]
 [2] [3] [4] [5] (./Output/summaryOfOwnership.tex)
 
-LaTeX Warning: Reference `t2-2' on page 6 undefined on input line 472.
+LaTeX Warning: Reference `t2-2' on page 6 undefined on input line 478.
 
+[6]
 
-LaTeX Warning: Reference `g2-2' on page 6 undefined on input line 481.
+LaTeX Warning: Reference `g2-2' on page 7 undefined on input line 487.
 
-(./Output/summaryOfPairs.tex) [6] [7] (./Output/CorrelationsResultsText.tex)
-[8]
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 781--783
+(./Output/summaryOfPairs.tex) [7] [8] (./Output/CorrelationsResultsText.tex)
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 787--789
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [9]
+[9] (./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex)
 [10]
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
@@ -1122,7 +1122,7 @@ File: 4.png Graphic file (type bmp)
 <4.png>
  (./marketcap.tex) [15] [16]
 (./Output/FCACal.tex) [17]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1234--1236
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 1240--1242
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1137,12 +1137,12 @@ File: Output/BGSummary.eps Graphic file (type eps)
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
  [19] (./Model11.tex) [20] [21] (./Output/mresult2-slide.tex)
-Overfull \hbox (103.91066pt too wide) in paragraph at lines 1365--1366
+Overfull \hbox (103.91066pt too wide) in paragraph at lines 1371--1372
 [][][]  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1372
 [][]
  []
 
@@ -1154,7 +1154,7 @@ File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
 File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
  (./Output/QTimemresult2subsample-slide.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1420--1421
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1426--1427
 [][] []
  []
 
@@ -1165,7 +1165,7 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
  [24] (./Model12.tex) [25] [26] (./Output/Q3mresultAllPairs.tex)
-Overfull \hbox (71.02052pt too wide) in paragraph at lines 1491--1491
+Overfull \hbox (71.02052pt too wide) in paragraph at lines 1497--1497
 [][][] []
  []
 
@@ -1182,11 +1182,11 @@ File: Output/mcorrPairType.eps Graphic file (type eps)
 (./Output/ImbalanceInsStdSummary.tex) (./Output/ImbalanceIndStdSummary.tex)
 
 LaTeX Warning: Reference `tab:GroupedInsSTD' on page 31 undefined on input line
- 1681.
+ 1687.
 
 
 LaTeX Warning: Reference `tab:GroupedIndSTD' on page 31 undefined on input line
- 1683.
+ 1689.
 
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
@@ -1208,7 +1208,7 @@ Overfull \hbox (30.0pt too wide) detected at line 11
  []
 
 ) (./Output/Imbalance.tex) [33]
-Overfull \hbox (25.6144pt too wide) detected at line 1770
+Overfull \hbox (25.6144pt too wide) detected at line 1776
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1224,17 +1224,17 @@ Overfull \hbox (30.0pt too wide) detected at line 6
  []
 
 [34]) (./turnover.tex)
-Overfull \hbox (24.41608pt too wide) in paragraph at lines 1803--1803
+Overfull \hbox (24.41608pt too wide) in paragraph at lines 1809--1809
  [][][][] 
  []
 
 [35] (./Turnovercrosssection.tex)
-Overfull \hbox (24.40437pt too wide) in paragraph at lines 1829--1829
+Overfull \hbox (24.40437pt too wide) in paragraph at lines 1835--1835
  [][][][] 
  []
 
 (./Output/mresult2-turnover.tex)
-Overfull \hbox (24.40068pt too wide) in paragraph at lines 1856--1856
+Overfull \hbox (24.40068pt too wide) in paragraph at lines 1862--1862
  [][][][] 
  []
 
@@ -1349,12 +1349,17 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 159.
 
-[41]) [42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1949.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1949.
+[41]
+
+LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
+(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 164.
+
+) [42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1968.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1968.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1949.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1949.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1968.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1968.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1369,13 +1374,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1949.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1968.
  ) 
 Here is how much of TeX's memory you used:
- 27588 strings out of 479418
- 555086 string characters out of 5888105
+ 27591 strings out of 479418
+ 555176 string characters out of 5888105
  983556 words of memory out of 5000000
- 44465 multiletter control sequences out of 15000+600000
+ 44468 multiletter control sequences out of 15000+600000
  540063 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s

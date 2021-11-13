@@ -1362,7 +1362,7 @@
 \end{table}	
 	\end{frame}
 
-\subsubsection{All pairs}
+\subsection{All pairs}
 
 
 \begin{frame}{All non-common owner pairs}{regression}
@@ -1737,43 +1737,74 @@
 %	
 %	
 	\section{Evidence for correlated trading}
- \subsubsection{Institutional Imbalance}
+ \subsection{Institutional Imbalance}
 \begin{frame}{Ins Imbalance}
 
 \begin{itemize}
 	\item \cite{seasholes2007predictable}
-	\begin{itemize}
-		\item \begin{equation*}
+	
+	\begin{columns}
+		\column{0.5\linewidth}
+		\begin{equation*}
 			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
 		\end{equation*}
-	\item 
-	\begin{equation*}
-		Imbalance_{ind} = \frac{Buy_{ind} - Sell_{ind}}{Buy_{ind} + Sell_{ind}}
-	\end{equation*}
-	\end{itemize}
-\end{itemize}
-
-
-\begin{columns}
-	\column{0.5\linewidth}
 	\begin{table}[htbp]
 		\centering
-		\resizebox{0.75\textwidth}{!}{
+		\resizebox{\textwidth}{!}{
 			\input{Output/ImbalanceInsMeanSummary.tex}
 		}
 		\label{tab:ImbalanceInsMeanSummary}
 	\end{table}
-\column{0.5\linewidth}
-\begin{table}[htbp]
-	\centering
-	\resizebox{0.75\textwidth}{!}{
-		\input{Output/ImbalanceIndMeanSummary.tex}
-	}
-	\label{tab:ImbalanceIndMeanSummary}
-\end{table}
-\end{columns}
+		\column{0.5\linewidth}
+			\begin{equation*}
+			Imbalance_{ind} = \frac{Buy_{ind} - Sell_{ind}}{Buy_{ind} + Sell_{ind}}
+		\end{equation*}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceIndMeanSummary.tex}
+		}
+		\label{tab:ImbalanceIndMeanSummary}
+	\end{table}
+	\end{columns}
+	
+	
+\end{itemize}
+
 \end{frame}
 
+
+\begin{frame}{Ins Imbalance}
+\begin{columns}
+	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+ 	\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedIndSTD.eps}
+	\label{fig:GroupedIndSTD}
+\end{figure}
+
+	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+	\label{fig:GroupedInsSTD}
+\end{figure}
+\end{columns}
+\end{frame}
 \begin{frame}{Ins Imbalance}
 
 
@@ -1785,13 +1816,19 @@
 		\end{table}
 	
 	\end{frame}
-	
+
+\subsection{Turnover}
 	\begin{frame}{TrunOver}
 	
+\begin{itemize}
+	\item 
+	\cite{Liquidity2016}
+\end{itemize}
 	\begin{equation*}
 		\Delta \text{TurnOver} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
 		\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
 	\end{equation*}
+
 	
 	\begin{table}[htbp]
 		\centering
@@ -1812,7 +1849,7 @@
 	\end{table}
 \end{frame}
 
-\begin{frame}{Pairwise correlations in  trunover}
+\begin{frame}{Pairwise correlations in  turnover}
 	\begin{table}[htbp]
 		\centering
 		\resizebox{0.95\textwidth}{!}{
@@ -1822,24 +1859,24 @@
 		\label{mresult2-turnover}
 	\end{table}
 \end{frame}
-
+\subsection{Big business group}
 	\begin{frame}{Big Business group}
 		\begin{table}[htbp]
 			\centering
-			\resizebox{0.8\textheight}{!}{
+			\resizebox{0.75\textheight}{!}{
 				\input{Output/mresult2-BigBusinessGroup.tex}
 			}
 		\end{table}
 	\end{frame}
 
-\begin{frame}{Bearish/Bullish Market}{}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textheight}{!}{
-			\input{Output/mresult2Down-slide2.tex}
-		}
-	\end{table}
-\end{frame}
+%\begin{frame}{Bearish/Bullish Market}{}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textheight}{!}{
+%			\input{Output/mresult2Down-slide2.tex}
+%		}
+%	\end{table}
+%\end{frame}
 %
 %\begin{frame}{Amihud}
 %	
@@ -1913,13 +1950,12 @@
 			\item We derive a measure that captures the extent of common ownership distribution.
 			
 			
-			\item The common ownership comovement effect  with a
-			extra explanation:
-			\begin{itemize}
-				\item Common ownership that  crosses a threshold affect on comovement
-				\item Be in the same business group has a major effect on comovement
-%				\item Business groups of banks affect more than normal business groups
-			\end{itemize} 
+			\item Direct common ownership can affect firms' co-movement
+			\item 
+			Firms in the business groups co-move more than other pairs
+			\item Direct common ownership only matters for firms in the business groups
+			\item Firms in the same business group trade in one way
+			
 		\end{itemize}
 	\end{frame}
 	
