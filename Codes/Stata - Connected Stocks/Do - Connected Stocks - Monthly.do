@@ -65,67 +65,68 @@ cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM sbgroup   sgroup monthlysam
 
 
 /*NMFCA*/
-{eststo clear
+{
+	eststo clear
 
-eststo v1: quietly asreg monthlyρ_5_f  NMFCA , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-estadd loc SubSample "All" , replace
+	eststo v1: quietly asreg monthlyρ_5_f  NMFCA , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "No" , replace
+	estadd loc SubSample "All" , replace
 
-eststo v2: quietly asreg monthlyρ_5_f NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "All" , replace
+	eststo v2: quietly asreg monthlyρ_5_f NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
 
-eststo v3: quietly asreg monthlyρ_5_f  sbgroup  , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-estadd loc SubSample "All" , replace
+	eststo v3: quietly asreg monthlyρ_5_f  sbgroup  , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "No" , replace
+	estadd loc SubSample "All" , replace
 
-eststo v4: quietly asreg monthlyρ_5_f sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "All" , replace
-
-
-eststo v5: quietly asreg monthlyρ_5_f NMFCA sbgroup , fmb newey(4) 
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-estadd loc SubSample "All" , replace
-
-eststo v6: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "All" , replace
-
-eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-estadd loc SubSample "All" , replace
-
-eststo v8: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "All" , replace
+	eststo v4: quietly asreg monthlyρ_5_f sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
 
 
-eststo v9: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
-estadd loc GroupFE "Yes" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "All" , replace
+	eststo v5: quietly asreg monthlyρ_5_f NMFCA sbgroup , fmb newey(4) 
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "No" , replace
+	estadd loc SubSample "All" , replace
+
+	eststo v6: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
+
+	eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "No" , replace
+	estadd loc SubSample "All" , replace
+
+	eststo v8: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
+
+
+	eststo v9: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
+	estadd loc GroupFE "Yes" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
 
 
 
-eststo v10: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "SameGroup" , replace
-eststo v11: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership   if sbgroup == 0, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-estadd loc SubSample "Others" , replace
+	eststo v10: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "SameGroup" , replace
+	eststo v11: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership   if sbgroup == 0, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "Others" , replace
 
-esttab   v3 v4 v1 v2 /*v5*/ v6 v10 v11 /*v7*/ v8 v9   ,nomtitle label   s( N  SubSample GroupFE controll r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA    ) mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  star(* 0.10 ** 0.05 *** 0.01) ,using mresult2-slide.tex ,replace
+	esttab    v1 v2 v3 v4 /*v5*/ v6 v10 v11 /*v7*/ v8 v9   ,nomtitle label   s( N  SubSample GroupFE controll r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement'"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  star(* 0.10 ** 0.05 *** 0.01) ,using mresult2-slide.tex ,replace
 }
 /*Quadratic*/
 {
