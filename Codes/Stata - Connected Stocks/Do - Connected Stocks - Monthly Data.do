@@ -55,7 +55,7 @@ label variable monthlyρ_5 " $ {\rho_t} $ "
 label variable monthlyρ_6 " $ {\rho_t} $ "
 label variable monthlyρlag_5 " $ {\rho_t} $ "
 
-label variable monthlyρ_turn " $ {\rho_t(\text{Turnover})} $ "
+label variable monthlyρ_turn " $ {\rho(\Delta \text{TurnOver})_t} $ "
 
 
 label variable monthlyρ_5_1 " $ {\rho_{t-1}} $ "
@@ -307,13 +307,13 @@ label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{Sam
 
 
 gen bigbusinessgroupTurn = bigbusinessgroup * monthlyρ_turn
-label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ "
+label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times{\rho(\Delta \text{TurnOver})_t}  $ "
 
 gen Turnsbgroup = sbgroup * monthlyρ_turn
-label variable Turnsbgroup "$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ "
+label variable Turnsbgroup "$ {\text{SameGroup} \times {\rho(\Delta \text{TurnOver})_t}$ "
 
 gen TurnSgroupbigbusinessgroup = bigbusinessgroup * sbgroup * monthlyρ_turn
-label variable TurnSgroupbigbusinessgroup "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho_t(\text{Turnover})}$ "
+label variable TurnSgroupbigbusinessgroup "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho(\Delta \text{TurnOver})_t} $ "
 
 summ sbgroup if bigbusinessgroupSgroup == 1
 

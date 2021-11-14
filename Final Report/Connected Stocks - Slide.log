@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  14 NOV 2021 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  14 NOV 2021 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,15 +2045,20 @@ Package pdftex.def Info: MHistNFCAP-eps-converted-to.pdf  used on input line 83
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2021-11-03 11:35:09
-(epstopdf)                    size: 26740 bytes
+(epstopdf)                    date: 2021-11-14 17:41:41
+(epstopdf)                    size: 26743 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 23157 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 928.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=Output/mcorr50-eps-converted-to.pdf Output/mcorr5
+0.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/mcorr50-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-14 17:44:06
+(epstopdf)                    size: 23208 bytes.
 <Output/mcorr50-eps-converted-to.pdf, id=1469, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
@@ -2139,11 +2144,11 @@ ine 969.
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 40447 bytes
+(epstopdf)                    date: 2021-11-14 17:35:46
+(epstopdf)                    size: 39797 bytes
 (epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 20711 bytes
+(epstopdf)                    date: 2021-11-14 17:36:38
+(epstopdf)                    size: 20727 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
 (epstopdf)             \includegraphics on input line 1106.
@@ -2155,11 +2160,11 @@ Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
 ne 1106.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 26722 bytes
+(epstopdf)                    date: 2021-11-14 17:36:06
+(epstopdf)                    size: 26578 bytes
 (epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 23709 bytes
+(epstopdf)                    date: 2021-11-14 17:36:40
+(epstopdf)                    size: 23649 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
 (epstopdf)             \includegraphics on input line 1106.
@@ -2183,11 +2188,11 @@ f>] (./Model11.tex) [48
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 26722 bytes
+(epstopdf)                    date: 2021-11-14 17:36:06
+(epstopdf)                    size: 26578 bytes
 (epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 23709 bytes
+(epstopdf)                    date: 2021-11-14 17:36:40
+(epstopdf)                    size: 23649 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
 (epstopdf)             \includegraphics on input line 1166.
@@ -2198,15 +2203,20 @@ Package pdftex.def Info: Output/mcorr5l-eps-converted-to.pdf  used on input lin
 e 1166.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 32367 bytes
+(epstopdf)                    date: 2021-11-14 17:40:28
+(epstopdf)                    size: 32260 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrd-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-11-04 19:49:01
 (epstopdf)                    size: 26268 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrd-eps-conv
 erted-to.pdf Output/Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 1166.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=Output/Qmcorr5lrd-eps-converted-to.pdf Output/Qmc
+orr5lrd.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/Qmcorr5lrd-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-14 17:44:08
+(epstopdf)                    size: 26183 bytes.
 <Output/Qmcorr5lrd-eps-converted-to.pdf, id=2005, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
@@ -2217,8 +2227,8 @@ line 1166.
 
  <./Output/Qmcorr5lrd-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 24973 bytes
+(epstopdf)                    date: 2021-11-14 17:42:53
+(epstopdf)                    size: 24309 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
 (epstopdf)                    date: 2021-11-04 19:49:01
@@ -2226,7 +2236,13 @@ df>
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 1212.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=Output/Qmcorr5subsample-eps-converted-to.pdf Outp
+ut/Qmcorr5subsample.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/Qmcorr5subsample-eps-converted-to.p
+df>
+(epstopdf)                    date: 2021-11-14 17:44:10
+(epstopdf)                    size: 16223 bytes.
 <Output/Qmcorr5subsample-eps-converted-to.pdf, id=2046, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
@@ -2234,8 +2250,8 @@ Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on
 input line 1212.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 31146 bytes
+(epstopdf)                    date: 2021-11-14 17:42:45
+(epstopdf)                    size: 30949 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
 (epstopdf)                    date: 2021-11-04 19:49:01
@@ -2243,7 +2259,13 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 1212.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf
+ Output/Qmcorr5lrdbgsubsample.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/Qmcorr5lrdbgsubsample-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2021-11-14 17:44:11
+(epstopdf)                    size: 13074 bytes.
 <Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=2047, 397.485pt x 289.08
 pt>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
@@ -2255,49 +2277,30 @@ d on input line 1212.
  [52
 
  <./Output/Qmcorr5subsample-eps-converted-to.pdf> <./Output/Qmcorr5lrdbgsubsamp
-le-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Output/QarterSummary.eps>
-(epstopdf)                    date: 2021-11-04 19:49:01
-(epstopdf)                    size: 53213275 bytes
-(epstopdf)             Output file: <Output/QarterSummary-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2021-11-08 11:17:07
-(epstopdf)                    size: 158797 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/QarterSummary-eps-c
-onverted-to.pdf Output/QarterSummary.eps>
-(epstopdf)             \includegraphics on input line 1235.
-Package epstopdf Info: Output file is already uptodate.
-<Output/QarterSummary-eps-converted-to.pdf, id=2096, 1084.05pt x 722.7pt>
-File: Output/QarterSummary-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/QarterSummary-eps-converted-to.pdf>
-Package pdftex.def Info: Output/QarterSummary-eps-converted-to.pdf  used on inp
-ut line 1235.
-(pdftex.def)             Requested size: 308.06367pt x 205.37614pt.
- [53
-
- <./Output/QarterSummary-eps-converted-to.pdf>]
-(./Output/QTimemresult2subsample-slide.tex) [54
+le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex) [53
 
 ]
-(./Output/Q3mresultAllPairs.tex) [55
+(./Output/Q3mresultAllPairs.tex) [54
 
-] (./Connected Stocks - Slide.toc) [56
-
-]
-(./Output/turnover.tex) [57
-
-] (./Output/turnover.tex) [58
+] (./Connected Stocks - Slide.toc) [55
 
 ]
-(./Output/HighBeta.tex) [59
+(./Output/turnover.tex) [56
 
-] (./Output/mresult2-turnover.tex) [60
-
-]
-(./Output/mresult2-BigBusinessGroup.tex) [61
+] (./Output/turnover.tex) [57
 
 ]
-(./Output/ImbalanceInsMeanSummary.tex) [62
+(./Output/turnover.tex) [58
+
+] (./Output/HighBeta.tex) [59
+
+]
+(./Output/mresult2-turnover.tex) [60
+
+] (./Output/mresult2-BigBusinessGroup.tex)
+[61
+
+] (./Output/ImbalanceInsMeanSummary.tex) [62
 
 ]
 (./Output/ImbalanceInsStdSummary.tex)
@@ -2310,13 +2313,13 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)                    size: 235389 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
-(epstopdf)             \includegraphics on input line 1719.
+(epstopdf)             \includegraphics on input line 1361.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=2407, 578.16pt x 289.08pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=2403, 578.16pt x 289.08pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 1719.
+ut line 1361.
 (pdftex.def)             Requested size: 290.9531pt x 145.47476pt.
  [63
 
@@ -2340,7 +2343,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1763.
+(hyperref)                removing `\translate ' on input line 1405.
 
 (./Connected Stocks - Slide.toc) [69
 
@@ -2350,7 +2353,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1831 			\end{frame}
+l.1473 			\end{frame}
                       [71
 
 ] [72
@@ -2358,37 +2361,37 @@ l.1831 			\end{frame}
 ] [73
 
 ]
-<1.png, id=2761, 494.8086pt x 299.6796pt>
+<1.png, id=2760, 494.8086pt x 299.6796pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 1870.
+Package pdftex.def Info: 1.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<2.png, id=2763, 494.3268pt x 300.1614pt>
+<2.png, id=2762, 494.3268pt x 300.1614pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 1870.
+Package pdftex.def Info: 2.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
  [74
 
  <./1.png> <./2.png>]
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 1870.
+Package pdftex.def Info: 1.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 1870.
+Package pdftex.def Info: 2.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
  [75
 
 ]
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 1870.
+Package pdftex.def Info: 1.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 1870.
+Package pdftex.def Info: 2.png  used on input line 1512.
 (pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
  [76
 
@@ -2406,15 +2409,15 @@ Package pdftex.def Info: 2.png  used on input line 1870.
 ] (./marketcap.tex) [82
 
 ]
-<3.png, id=3022, 722.7pt x 360.3864pt>
+<3.png, id=3018, 722.7pt x 360.3864pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 1953.
+Package pdftex.def Info: 3.png  used on input line 1595.
 (pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<4.png, id=3023, 723.1818pt x 359.9046pt>
+<4.png, id=3019, 723.1818pt x 359.9046pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 1953.
+Package pdftex.def Info: 4.png  used on input line 1595.
 (pdftex.def)             Requested size: 160.8792pt x 80.06342pt.
  [83
 
@@ -2429,8 +2432,8 @@ Package pdftex.def Info: 4.png  used on input line 1953.
 
 ]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 20
-64.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
+06.
 
 [88
 
@@ -2450,54 +2453,75 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 20
 \tf@snm=\write9
 \openout9 = `"Connected Stocks - Slide.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2523.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2523.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2165.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2165.
  (./Connected Stocks - Slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2523.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2523.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2165.
 
-Package rerunfilecheck Info: File `"Connected Stocks - Slide".out' has not chan
-ged.
-(rerunfilecheck)             Checksum: BB1893897C48C43940F9EA1254D6CA1B;1563.
 
+
+Package rerunfilecheck Warning: File `"Connected Stocks - Slide".out' has chang
+ed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Connected Stocks - Slide".out':
+(rerunfilecheck)             Before: 4E20C6A85D1F59CF36AB5E48DD139AA7;1563
+(rerunfilecheck)             After:  6BE168D4EBCBFE937440011596F90667;1563.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26141 strings out of 480608
- 519455 string characters out of 5907536
- 796908 words of memory out of 5000000
- 41088 multiletter control sequences out of 15000+600000
+ 26137 strings out of 480608
+ 519262 string characters out of 5907536
+ 796788 words of memory out of 5000000
+ 41079 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,810b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c
-:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-i8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c
-:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (91 pages, 1285198 bytes).
+pdfTeX warning (dest): name{Outline1.10.4.89} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline1.10.3.88} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline1.10.2.87} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline1.10.1.86} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.6.2.61} has been referenced but does not e
+xist, replaced by a fixed one
+
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmssi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8
+.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c:/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb>
+Output written on "Connected Stocks - Slide.pdf" (91 pages, 1127891 bytes).
 PDF statistics:
- 3439 PDF objects out of 3580 (max. 8388607)
- 3174 compressed objects within 32 object streams
- 261 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3441 PDF objects out of 3580 (max. 8388607)
+ 3178 compressed objects within 32 object streams
+ 265 named destinations out of 1000 (max. 500000)
+ 403 words of extra memory for PDF output out of 10000 (max. 10000000)
 

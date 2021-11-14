@@ -10,9 +10,9 @@
 \beamer@sectionintoc {5}{Results}{46}{0}{5}
 \beamer@subsectionintoc {5}{1}{Normalized Rank-Transformed}{47}{0}{5}
 \beamer@subsectionintoc {5}{2}{High level of common ownership}{51}{0}{5}
-\beamer@subsectionintoc {5}{3}{All pairs}{55}{0}{5}
-\beamer@sectionintoc {6}{Evidence for correlated trading}{56}{0}{6}
-\beamer@subsectionintoc {6}{1}{Turnover}{57}{0}{6}
+\beamer@subsectionintoc {5}{3}{All pairs}{54}{0}{5}
+\beamer@sectionintoc {6}{Evidence for correlated trading}{55}{0}{6}
+\beamer@subsectionintoc {6}{1}{Turnover}{56}{0}{6}
 \beamer@subsectionintoc {6}{2}{Institutional Imbalance}{62}{0}{6}
 \beamer@sectionintoc {7}{Conclusion}{65}{0}{7}
 \beamer@sectionintoc {9}{Appendix I}{69}{1}{8}
