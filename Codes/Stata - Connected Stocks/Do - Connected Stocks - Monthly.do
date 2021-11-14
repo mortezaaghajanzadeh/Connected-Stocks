@@ -235,10 +235,10 @@ cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM sbgroup   sgroup monthlysam
 	estadd loc GroupFE "No" , replace
 	estadd loc FE "Yes" , replace
 	
-	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup   i.PairType, fmb newey(4)
+	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup   i.PairType gdummy0-gdummy47  , fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
-	estadd loc GroupFE "No" , replace
+	estadd loc GroupFE "Yes" , replace
 	estadd loc FE "Yes" , replace
 	
 
@@ -271,10 +271,10 @@ cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM sbgroup   sgroup monthlysam
 	estadd loc FE "Yes" , replace
 	*/
 	
-	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
 
 
-	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Future Monthly Corr. of 4F+Ind. Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
 
 	/**/
 	
@@ -638,55 +638,6 @@ esttab v0 Bv0 Bv1  SBv0 SBv1 Sv0 Sv1 v1  , nomtitle label  s( N Controls  SubSam
 
 
 
-/* Amihud
-
-
-eststo clear
-
-eststo v1: quietly asreg monthlyρ_amihud_f  NMFCA , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-
-eststo v2: quietly asreg monthlyρ_amihud_f NMFCA monthlyρ_amihud sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-
-
-eststo v3: quietly asreg monthlyρ_amihud_f  sbgroup  , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-
-eststo v4: quietly asreg monthlyρ_amihud_f sbgroup  monthlyρ_amihud sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-
-
-eststo v5: quietly asreg monthlyρ_amihud_f NMFCA sbgroup , fmb newey(4) 
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-
-eststo v6: quietly asreg monthlyρ_amihud_f NMFCA sbgroup monthlyρ_amihud sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-
-eststo v7: quietly asreg monthlyρ_amihud_f NMFCA sbgroup NMFCAG, fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "No" , replace
-
-eststo v8: quietly asreg monthlyρ_amihud_f NMFCA sbgroup NMFCAG monthlyρ_amihud sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
-estadd loc GroupFE "No" , replace
-estadd loc controll "Yes" , replace
-
-
-eststo v9: quietly asreg monthlyρ_amihud_f NMFCA sbgroup NMFCAG monthlyρ_amihud sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
-estadd loc GroupFE "Yes" , replace
-estadd loc controll "Yes" , replace
-
-
-
-esttab   v3 v4 v1 v2 /*v5*/ v6 /*v7*/ v8 v9  ,nomtitle label   s( N GroupFE controll r2 ,  lab("Observations" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA  NMFCAG ) mgroups("Dependent Variable: Future Monthly Correlation of Delta Amihud"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-liquidity.tex ,replace
-
-*/
 
 /* Turn over*/
 
@@ -737,11 +688,47 @@ estadd loc controll "Yes" , replace
 esttab   v3 v4 v1 v2 /*v5*/ v6 /*v7*/ v8 v9 ,nomtitle label   s( N GroupFE controll r2 ,  lab("Observations" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(sbgroup NMFCA  NMFCAG )  mgroups("Dependent Variable: Future Monthly Correlation of Delta turnover"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-turnover.tex ,replace
 
 }
+
+
+/*HighBeta*/
+
+{
+	eststo v1 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+
+	eststo v2 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup highbeta   i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+
+	eststo v3 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup highbeta Grouphighbeta  i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+	
+	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup highbeta Grouphighbeta   i.PairType gdummy0-gdummy47  , fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "Yes" , replace
+	estadd loc FE "Yes" , replace
+	
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup highbeta Grouphighbeta /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup highbeta Grouphighbeta /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+
+
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using HighBeta.tex ,replace
+}
+
+
 /*BigBusiness group*/
 {
 eststo clear
 
-eststo v1: xi: quietly asreg monthlyρ_5_f monthlyρ_5 NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType, fmb newey(4)
+eststo v1: xi: quietly asreg monthlyρ_5_f monthlyρ_5 /*NMFCA*/ sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType, fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc FE "Yes" , replace
 estadd loc subsample "All" , replace
@@ -751,30 +738,31 @@ estadd loc Controls "Yes" , replace
 estadd loc subsample "All" , replace
 estadd loc FE "Yes" , replace*/
 
-eststo v2: xi: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType  bigbusinessgroup  NMFCAG bigbusinessgroupTurn sbgroupTurn bigbusinessgroupSgroupTurn bigbusinessgroupSgroup, fmb newey(4)
+eststo v2: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType  bigbusinessgroup  /*NMFCAG*/ bigbusinessgroupTurn Turnsbgroup bigbusinessgroupSgroupTurn bigbusinessgroupSgroup, fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample "All" , replace
 estadd loc FE "Yes" , replace
 
 
 
-eststo v3: xi: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn sbgroupTurn i.PairType  if bigbusinessgroup == 1, fmb newey(4)
+eststo v3: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn Turnsbgroup i.PairType  if bigbusinessgroup == 1, fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample "Big Groups" , replace
 estadd loc FE "Yes" , replace
 
 
 
-eststo v4: xi: quietly asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership sbgroupTurn monthlyρ_turn i.PairType if bigbusinessgroup  == 0, fmb newey(4)
+eststo v4: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership Turnsbgroup monthlyρ_turn i.PairType if bigbusinessgroup  == 0, fmb newey(4)
 estadd loc Controls "Yes" , replace
 estadd loc subsample "Others" , replace
 estadd loc FE "Yes" , replace
 
 
-esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(NMFCA sbgroup NMFCAG bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn sbgroupTurn bigbusinessgroupSgroupTurn ) compress order(sbgroup NMFCA  NMFCAG monthlyρ_turn monthlyρ_5 sbgroupTurn bigbusinessgroup bigbusinessgroupSgroup) 
+esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup bigbusinessgroupSgroupTurn ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup) 
 
 
-esttab v1 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(NMFCA sbgroup NMFCAG bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn sbgroupTurn bigbusinessgroupSgroupTurn ) compress order(sbgroup NMFCA  NMFCAG monthlyρ_turn monthlyρ_5 sbgroupTurn bigbusinessgroup bigbusinessgroupSgroup) mgroups("Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
+
+esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup bigbusinessgroupSgroupTurn ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup)  mgroups("Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
 }
 
 

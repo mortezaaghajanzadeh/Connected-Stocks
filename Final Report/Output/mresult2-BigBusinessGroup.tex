@@ -1,47 +1,41 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{4}{c}}
+\begin{tabular}{l*{5}{c}}
 \hline\hline
-                &\multicolumn{4}{c}{Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res.}        \\\cmidrule(lr){2-5}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &\multicolumn{5}{c}{Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res.}                           \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
 \hline
-Same Group      &  0.00637\sym{*}  &   0.0169\sym{*}  &  0.00476         &   0.0127         \\
-                &   (2.22)         &   (2.25)         &   (1.83)         &   (1.78)         \\
+Same Group      &   0.0263\sym{***}&   0.0250\sym{***}&   0.0380\sym{***}&   0.0244\sym{**} &   0.0256\sym{***}\\
+                &   (3.79)         &   (3.55)         &   (5.82)         &   (3.33)         &   (4.02)         \\
 [1em]
-$ \text{FCA*} $ &-0.000339         &-0.000551         &-0.000108         & -0.00121         \\
-                &  (-0.80)         &  (-1.14)         &  (-0.19)         &  (-1.64)         \\
+ $ {\rho(\Delta \text{TurnOver})_t} $ &  0.00475\sym{***}&  0.00419\sym{***}&  0.00474\sym{***}&  0.00383\sym{***}&  0.00493\sym{***}\\
+                &   (9.75)         &   (8.55)         &   (4.65)         &   (4.64)         &   (4.66)         \\
 [1em]
- $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &   0.0120\sym{***}&   0.0120\sym{***}&   0.0121\sym{***}&   0.0115\sym{***}\\
-                &   (7.57)         &   (7.74)         &   (7.14)         &   (4.07)         \\
+ $ {\rho_t} $   &   0.0249\sym{***}&   0.0248\sym{***}&   0.0248\sym{***}&   0.0252\sym{***}&   0.0243\sym{***}\\
+                &  (11.12)         &  (11.10)         &  (11.03)         &  (10.64)         &   (8.58)         \\
 [1em]
- $ {\rho_t(\text{Turnover})} $ &  0.00515\sym{***}&  0.00609\sym{***}&  0.00373\sym{***}&  0.00638\sym{***}\\
-                &   (8.45)         &   (5.86)         &   (3.52)         &   (6.12)         \\
+$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ &                  &   0.0172\sym{***}& -0.00936         &   0.0224\sym{***}&  -0.0114         \\
+                &                  &   (3.63)         &  (-0.84)         &   (4.42)         &  (-1.04)         \\
 [1em]
- $ {\rho_t} $   &   0.0246\sym{***}&   0.0245\sym{***}&   0.0246\sym{***}&   0.0243\sym{***}\\
-                &  (17.07)         &  (17.07)         &  (17.07)         &  (10.96)         \\
+BigGroup        &                  &                  & -0.00186         &                  &                  \\
+                &                  &                  &  (-1.99)         &                  &                  \\
 [1em]
-$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ &                  &  -0.0104         &   0.0236\sym{***}&  -0.0129         \\
-                &                  &  (-0.95)         &   (5.23)         &  (-1.19)         \\
+$ {\text{BigGroup} } \times {\text{SameGroup} }  $ &                  &                  &  -0.0151\sym{*}  &                  &                  \\
+                &                  &                  &  (-2.43)         &                  &                  \\
 [1em]
-BigGroup        &                  & -0.00148         &                  &                  \\
-                &                  &  (-1.67)         &                  &                  \\
+$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ &                  &                  &-0.000833         &                  &                  \\
+                &                  &                  &  (-0.53)         &                  &                  \\
 [1em]
-$ {\text{BigGroup} } \times {\text{SameGroup} }  $ &                  &  -0.0132\sym{*}  &                  &                  \\
-                &                  &  (-2.08)         &                  &                  \\
-[1em]
-$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ &                  & -0.00233         &                  &                  \\
-                &                  &  (-1.35)         &                  &                  \\
-[1em]
-$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho_t(\text{Turnover})}$ &                  &   0.0336\sym{**} &                  &                  \\
-                &                  &   (3.15)         &                  &                  \\
+$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho_t(\text{Turnover})}$ &                  &                  &   0.0317\sym{*}  &                  &                  \\
+                &                  &                  &   (2.64)         &                  &                  \\
 \hline
-Observations    &  1459585         &  1459585         &   957316         &   502269         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         \\
-Pari Size FE    &      Yes         &      Yes         &      Yes         &      Yes         \\
-SubSample       &      All         &      All         &Big Groups         &   Others         \\
-$ R^2$          &  0.00241         &  0.00284         &  0.00312         &  0.00399         \\
+Observations    &  1459585         &  1459585         &  1459585         &   957316         &   502269         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Pari Size FE    &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+SubSample       &      All         &      All         &      All         &Big Groups         &   Others         \\
+$ R^2$          &  0.00244         &  0.00255         &  0.00302         &  0.00307         &  0.00396         \\
 \hline\hline
-\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

@@ -85,15 +85,18 @@ list(df)
 # %%
 tempt = df.groupby(['uo','year']).Coef_deltagroup.mean().to_frame()
 tempt = tempt.reset_index()
+tempt = tempt.fillna(method='ffill')
 gg = tempt.groupby('year')
 def highBeta(g):
     print(g.name)
     t = g.Coef_deltagroup.median()
+    print(len(g))
     g['highBeta'] = 0
     g.loc[g.Coef_deltagroup > t, 'highBeta'] = 1
     return g
-tempt = gg.apply(highBeta).set_index(['uo','year'])
-tempt
+tempt = gg.apply(highBeta)
+
+tempt = tempt.set_index(['uo','year'])
 #%%
 tt = pd.read_parquet(path + "MonthlyNormalzedFCAP9.2.parquet")
 #%%

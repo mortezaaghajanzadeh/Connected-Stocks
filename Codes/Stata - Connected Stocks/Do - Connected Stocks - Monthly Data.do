@@ -1,10 +1,10 @@
 cls
 clear
-// import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.2.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedFCAP9.3.csv", encoding(UTF-8) 
+// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.3.csv", encoding(UTF-8) 
 
-// cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
-cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
 
 label define sgroup 0 "No" 1 "Yes"
 
@@ -318,3 +318,20 @@ label variable bigbusinessgroupSgroupTurn "$ {\text{BigGroup}}\times{\text{SameG
 summ sbgroup if bigbusinessgroupSgroup == 1
 
 summ id
+
+
+capture drop   highbeta
+
+gen highbeta = 0
+
+replace highbeta = 1 if highbeta_x == 1
+replace highbeta = 1 if highbeta_y == 1
+
+
+label variable highbeta "HighBetaGroup"
+
+gen Grouphighbeta = highbeta * sbgroup
+label variable Grouphighbeta "$ {\text{HighBetaGroup} } \times {\text{SameGroup} }  $ "
+
+
+
