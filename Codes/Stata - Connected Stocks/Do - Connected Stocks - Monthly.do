@@ -514,32 +514,38 @@ esttab   v0 v1 v11 v2  v4 v5 v3   , nomtitle label  r2 n compress  keep(NMFCA NM
 {/*NMFCA Just after Q3*/
 
 
-eststo v0: quietly asreg monthlyρ_5_f  sbgroup if forthquarter == 1 , fmb newey(4) 
-estadd loc GroupFE "No" , replace
+	eststo v0: xi: quietly asreg monthlyρ_5_f  sbgroup i.PairType if forthquarter == 1 , fmb newey(4) 
+	estadd loc GroupFE "No" , replace
+		estadd loc Pairtypr "Yes" , replace
 
-eststo v1: quietly asreg monthlyρ_5_f NMFCA  if forthquarter == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
+	eststo v1: xi: quietly asreg monthlyρ_5_f NMFCA i.PairType if forthquarter == 1, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Pairtypr "Yes" , replace
+
+	eststo v11: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup i.PairType if forthquarter == 1, fmb newey(4) 
+	estadd loc GroupFE "No" , replace
+	estadd loc Pairtypr "Yes" , replace
+
+	eststo v111: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup sgroup i.PairType if forthquarter == 1, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Pairtypr "Yes" , replace
+
+	eststo v2: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if forthquarter == 1, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Pairtypr "Yes" , replace
+
+	eststo v21: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if forthquarter == 1, fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc Pairtypr "Yes" , replace
+
+	eststo v3: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 i.PairType if forthquarter == 1, fmb newey(4)
+	estadd loc GroupFE "Yes" , replace
+	estadd loc Pairtypr "Yes" , replace
 
 
-eststo v11: quietly asreg monthlyρ_5_f NMFCA  sbgroup if forthquarter == 1, fmb newey(4) 
-estadd loc GroupFE "No" , replace
-
-eststo v111: quietly asreg monthlyρ_5_f NMFCA  sbgroup sgroup if forthquarter == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v2: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v21: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1, fmb newey(4)
-estadd loc GroupFE "No" , replace
-
-eststo v3: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 if forthquarter == 1, fmb newey(4)
-estadd loc GroupFE "Yes" , replace
 
 
-
-
-esttab   v0 v1 v11 v111   v2 v21 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Observations" "Group FE" "$ R^2 $"))  keep(NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(sbgroup NMFCA  NMFCAG sgroup ) compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using QTimemresult2subsample-slide.tex ,replace
+	esttab   v0 v1 v11 v111   v2 v21 v3 , nomtitle label   s( N GroupFE Pairtypr r2 ,  lab("Observations" "Group FE" "PairType Control" "$ R^2 $"))  keep(NMFCA sbgroup NMFCAG sgroup monthlysamesize monthlysamebm monthlycrossownership ) order(sbgroup NMFCA  NMFCAG sgroup ) compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using QTimemresult2subsample-slide.tex ,replace
 }
 
 
