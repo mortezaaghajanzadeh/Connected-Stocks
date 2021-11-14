@@ -72,64 +72,92 @@ cor monthlyρ_5_f NMFCA median NMFCAM NMFCAG NMFCAGM sbgroup   sgroup monthlysam
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
+	
 
 	eststo v2: quietly asreg monthlyρ_5_f NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
 
 	eststo v3: quietly asreg monthlyρ_5_f  sbgroup  , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
 
 	eststo v4: quietly asreg monthlyρ_5_f sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
 
 
 	eststo v5: quietly asreg monthlyρ_5_f NMFCA sbgroup , fmb newey(4) 
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
 
 	eststo v6: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
+	
+	eststo v61: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType , fmb newey(4)
+	estadd loc GroupFE "No" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "Yes" , replace
+	
 
 	eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "No" , replace
 
-	eststo v8: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+	eststo v8: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "Yes" , replace
 
 
-	eststo v9: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 , fmb newey(4)
+	eststo v9: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 i.PairType , fmb newey(4)
 	estadd loc GroupFE "Yes" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "Yes" , replace
+	
+	eststo v91: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 i.PairType, fmb newey(4)
+	estadd loc GroupFE "Yes" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc SubSample "All" , replace
+	estadd loc Pairtypr "Yes" , replace
 
 
 
-	eststo v10: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
+	eststo v10: xi: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 1 , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "SameGroup" , replace
-	eststo v11: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership   if sbgroup == 0, fmb newey(4)
+	estadd loc Pairtypr "Yes" , replace
+	
+	eststo v11: xi: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType  if sbgroup == 0, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "Others" , replace
+	estadd loc Pairtypr "Yes" , replace
+	
 
-	esttab    v1 v2 v3 v4 /*v5*/ v6    ,nomtitle label   s( N  SubSample GroupFE controll r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using mresult2part1-slide.tex ,replace
+	esttab    v1 v2 v3 v4 /*v5*/ v6 v61   ,nomtitle label   s( N  SubSample GroupFE controll Pairtypr r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "PairType Control" "$ R^2 $"))   keep(NMFCA sbgroup) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 	,using mresult2part1-slide.tex ,replace
 	
 	
-	esttab v10 v11 /*v7*/ v8 v9 ,nomtitle label   s( N  SubSample GroupFE controll r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ), using mresult2part2-slide.tex ,replace
+	esttab v10 v11 /*v7*/ v8 v9 v91,nomtitle label   s( N  SubSample GroupFE controll Pairtypr r2 ,  lab("Observations" "Sub-sample" "Group Effect" "Controls" "PairType Control" "$ R^2 $"))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+	, using mresult2part2-slide.tex ,replace
 	
 	
 }
