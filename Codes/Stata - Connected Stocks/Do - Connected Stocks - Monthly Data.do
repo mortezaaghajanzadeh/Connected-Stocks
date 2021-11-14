@@ -91,23 +91,23 @@ label variable ImbalanceSbgroup  " $ \text{Low Imbalance std} \times {\text{Same
 
 gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
-label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times (\text{FCA}^*)  $ "
+label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times (\text{MFCAP}^*)  $ "
 
 
 gen lowimbalancestdFCA = lowimbalancestd * nmfca
-label variable lowimbalancestdFCA  " $ \text{Low Imbalance std} \times (\text{FCA}^*)  $ "
+label variable lowimbalancestdFCA  " $ \text{Low Imbalance std} \times (\text{MFCAP}^*)  $ "
 
 
 label variable sbgroup "Same Group"
 
 rename nmfca NMFCA
 
-label variable NMFCA "$ \text{FCA*} $"
+label variable NMFCA "$ \text{MFCAP*} $"
 
 
 gen ImbalanceNMFCA = lowimbalancestd * NMFCA
 
-label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{FCA}^* } $ "
+label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{MFCAP}^* } $ "
 
 
 
@@ -120,10 +120,10 @@ rename nmfca2 NMFCA2
 
 
 
-label variable NMFCA2 "$ \text{QuardaticTr}(\text{FCA}^ *) $"
+label variable NMFCA2 "$ \text{QuardaticTr}(\text{MFCAP}^ *) $"
 
 generate lnMFCA = ln(MFCA)
-label variable lnMFCA "$\ln(FCA)$"
+label variable lnMFCA "$\ln(MFCAP)$"
 
 generate msbm1bm2 =  monthlybm1 * monthlybm2
 
@@ -140,16 +140,16 @@ replace median = 0 if median != 1
 
 gen NMFCAM = NMFCA * median
 
-label variable NMFCAM " $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{FCA} ^*}  $ "
+label variable NMFCAM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times {\text{MFCAP} ^*}  $ "
 
 gen sbgroupM = sbgroup * median
-label variable sbgroupM " $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{SameGroup} }  $ "
+label variable sbgroupM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times {\text{SameGroup} }  $ "
 
 gen NMFCAG = sbgroup * NMFCA
-label variable NMFCAG " $ (\text{FCA}^*) \times {\text{SameGroup} }  $ "
+label variable NMFCAG " $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
 
 generate Down = NMFCA * bearish * sbgroup
-label variable Down "$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ "
+label variable Down "$ (\text{MFCAP}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ "
 
 
 
@@ -158,7 +158,7 @@ label variable Down "$ (\text{FCA}^*) \times {\text{Bearish Market}} \times {\te
 
 generate Up = NMFCA * bullish * sbgroup
 
-label variable Up "$ (\text{FCA}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ "
+label variable Up "$ (\text{MFCAP}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ "
 
 
 
@@ -166,22 +166,22 @@ label variable bearish "Bearish Market"
 label variable bullish "Bullish Market"
 
 gen NMFCAGM = sbgroup * NMFCA * median
-label variable NMFCAGM " $ (\text{FCA}^* > Median[\text{FCA}^*]) \times  (\text{FCA}^*) \times {\text{SameGroup} }  $ "
+label variable NMFCAGM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times  (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
 
 
 
 
 gen NMFCAA = holder_act * NMFCA
 
-label variable NMFCAA " $ (\text{FCA}^*) \times {\text{ActiveHolder} }  $ "
+label variable NMFCAA " $ (\text{MFCAP}^*) \times {\text{ActiveHolder} }  $ "
 
 
 gen holder_actM = holder_act * median
-label variable holder_actM " $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{ActiveHolder} }  $ "
+label variable holder_actM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times {\text{ActiveHolder} }  $ "
 
 gen spositionM = sposition * median
 
-label variable spositionM " $ (\text{FCA}^* > Median[\text{FCA}^*]) \times {\text{Same Position} }  $ "
+label variable spositionM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times {\text{Same Position} }  $ "
 
 
 
@@ -194,30 +194,30 @@ generate lnMFCAP = ln(monthlyfcap)
 label variable lnMFCAP "$\ln(FCAP)$"
 
 generate lnMFCAG = lnMFCA * sbgroup
-label variable lnMFCAG "$ (\ln(FCA)) \times {\text{SameGroup} }  $ "
+label variable lnMFCAG "$ (\ln(MFCAP)) \times {\text{SameGroup} }  $ "
 
 
 generate lnMFCAA = lnMFCA * holder_act
-label variable lnMFCAA "$ (\ln(FCA)) \times {\text{ActiveHolder} }  $ "
+label variable lnMFCAA "$ (\ln(MFCAP)) \times {\text{ActiveHolder} }  $ "
 
 generate lnDown = lnMFCA * bearish * sbgroup
-label variable lnDown "$ (\ln(FCA)) \times {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
+label variable lnDown "$ (\ln(MFCAP)) \times {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
 
 generate lnUp = lnMFCA * bullish * sbgroup
-label variable lnUp "$ (\ln(FCA)) \times {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
+label variable lnUp "$ (\ln(MFCAP)) \times {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
 
 
 generate sDown = bearish * sbgroup
 label variable sDown "$ {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
 
 generate DownFCA = bearish * NMFCA
-label variable DownFCA "$ {\text{Bearish Market} } \times \text{FCA}^*  $ "
+label variable DownFCA "$ {\text{Bearish Market} } \times \text{MFCAP}^*  $ "
 
 generate sUp = bullish * sbgroup
 label variable sUp "$ {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
 
 generate UpFCA = bullish * NMFCA
-label variable UpFCA "$ {\text{Bullish Market} } \times \text{FCA}^*   $ "
+label variable UpFCA "$ {\text{Bullish Market} } \times \text{MFCAP}^*   $ "
 
 gen PairType = 0
 
@@ -299,10 +299,10 @@ gen bigbusinessgroupSgroup = bigbusinessgroup * sbgroup
 label variable bigbusinessgroupSgroup "$ {\text{BigGroup} } \times {\text{SameGroup} }  $ "
 
 gen bigbusinessgroupFCA = bigbusinessgroup * NMFCA
-label variable bigbusinessgroupFCA "$ {\text{BigGroup} } \times \text{FCA}^*  $ "
+label variable bigbusinessgroupFCA "$ {\text{BigGroup} } \times \text{MFCAP}^*  $ "
 
 gen bigbusinessgroupSgroupFCA = bigbusinessgroup * sbgroup * NMFCA
-label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} } \times \text{FCA}^* $ "
+label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{SameGroup} } \times \text{MFCAP}^* $ "
 
 
 
