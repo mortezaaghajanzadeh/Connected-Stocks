@@ -6,9 +6,12 @@ import re as ree
 import numpy as np
 from matplotlib.ticker import FuncFormatter
 
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+
 #%%
 n = path + "Holder_Residual_1400_06_28" + ".parquet"
 df = pd.read_parquet(n)
@@ -89,15 +92,23 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
 tempt.Year = tempt.Year.astype(int)
+tempt['Year'] = tempt.Year + 621
 tempt = tempt.drop(
-    columns=["Max. Number of Members", "Max. Number of Owners", "Max. Block. Ownership"]
+    columns=["Max. Number of Members",
+             "Max. Number of Owners",
+             "Max. Block. Ownership",
+             "No. of Firms not in Groups",
+             "Med. of  Number of Members",
+             "Med. Number of Owners",
+             "Med. Block. Ownership"]
 ).rename(
     columns={
         "No. of Holders": "No. of Blockholders",
-        "Avg. Number of Members": "Average Number of Members",
-        "Av. Holder Percent": "Average Of each Blockholder’s ownership",
-        "Av. Number of Owners": "Average Number of Owners",
-        "Av. Block. Ownership": "Average Block. Ownership",
+        "Avg. Number of Members": "Ave. Number of group Members",
+        "Av. Holder Percent": "Ave. ownership of each Blockholders",
+        "Av. Number of Owners": "Ave. Number of Owners",
+        "Av. Block. Ownership": "Ave. Block. Ownership",
+        "Med. of Owners' Percent":"Med. ownership of each Blockholders"
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
@@ -106,8 +117,7 @@ tempt = tempt.set_index("Year").transpose().astype(int)
 tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
 #%%
-# MonthlyData
-# del df
+
 n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 df2 = pd.read_parquet(n)
 #%%
@@ -282,7 +292,10 @@ a2 = gg.apply(sumary, idlevelData=idlevelData).reset_index().drop(columns=["leve
 
 #%%
 tempt = a1.append(a2).drop_duplicates()
-tempt = tempt.T.rename(columns={"year_of_year": "Year"})
+tempt = tempt.T.rename(columns={"year": "Year"})
+
+tempt['Year'] = tempt['Year'].astype(int)
+tempt['Year'] = tempt.Year + 621
 tempt = tempt.drop(
     columns=[
         "Max. Number of Common owner",
@@ -292,35 +305,35 @@ tempt = tempt.drop(
     ]
 ).rename(
     columns={
-        "Number of Pairs not in one Group": "Number of Pairs not in the same Group",
-        "Number of Pairs in one Group": "Number of Pairs in the same Group",
-        "Avg. Number of Common owner": "Average Number of Common owner",
-        "Avg. Number of Pairs in one Group": "Average Number of Pairs in one Group",
-        "Av. Holder Percent": "Average Percent of each blockholder",
+        "Number of Pairs not in one Group": "No. of Pairs not in the same Group",
+        "Number of Pairs in one Group": "No. of Pairs in the same Group",
+        "Avg. Number of Common owner": "Ave. Number of Common owner",
+        "Avg. Number of Pairs in one Group": "Ave. Number of Pairs in one Group",
+        "Av. Holder Percent": "Ave. Percent of each blockholder",
         "Median of Owners' Percent": "Med. Percent of each blockholder",
-        "Av. Number of Owners": "Average Number of Owners",
-        "Av. Block. Ownership": "Average Block. Ownership",
+        "Av. Number of Owners": "Ave. Number of Owners",
+        "Av. Block. Ownership": "Ave. Block. Ownership",
     }
 )
 mlist = [
-    "year",
+    "Year",
     "No. of Pairs",
-    "No. of Groups",
+    # "No. of Groups",
     "No. of Pairs not in Groups",
-    "Number of Pairs not in the same Group",
-    "Number of Pairs in the same Group",
-    "Average Number of Common owner",
-    "Med. Number of Common owner",
-    "Average Percent of each blockholder",
-    "Med. Percent of each blockholder",
-    "Average Number of Pairs in one Group",
-    "Med. Number of Pairs in one Group",
-    "Average Number of Owners",
-    "Med. Number of Owners",
-    "Average Block. Ownership",
-    "Med. Block. Ownership",
+    "No. of Pairs not in the same Group",
+    "No. of Pairs in the same Group",
+    "Ave. Number of Common owner",
+    # "Med. Number of Common owner",
+    # "Average Percent of each blockholder",
+    # "Med. Percent of each blockholder",
+    # "Ave. Number of Pairs in one Group",
+    # "Med. Number of Pairs in one Group",
+    # "Average Number of Owners",
+    # "Med. Number of Owners",
+    # "Average Block. Ownership",
+    # "Med. Block. Ownership",
 ]
-tempt = tempt[mlist].set_index("year").T.astype(int)
+tempt = tempt[mlist].set_index("Year").T.astype(int)
 tempt.to_latex(pathResult + "summaryOfPairs.tex")
 tempt
 #%%
@@ -487,23 +500,39 @@ mlist = [
     "Monthlyρ_2",
     "Monthlyρ_4",
     "Monthlyρ_5",
-    "Monthlyρ_5Lag",
+    # "Monthlyρ_5Lag",
 ]
+# tempt = df2[df2.Monthlyρ_2<0.9]
 tempt = df2[mlist].groupby("id")[mlist[1::]].mean().describe().T
+
 latex = (
-    tempt.drop(columns=["count"])
-    .rename(
+    tempt.drop(columns=["count",
+                    "25%",
+                    "75%"]).rename(
         index={
             "Monthlyρ_2": " CAPM + Industry",
             "Monthlyρ_4": "4 Factor",
             "Monthlyρ_5": "4 Factor + Industry",
             "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
+        },
+        columns = {
+            "50%": "median",
         }
-    )
-    .round(3)
-    .to_latex(pathResult + "CorrelationsResultsText.tex")
+    ).round(3).to_latex(pathResult + "CorrelationsResultsText.tex")
 )
-
+tempt.drop(columns=["count",
+                    "25%",
+                    "75%"]).rename(
+        index={
+            "Monthlyρ_2": " CAPM + Industry",
+            "Monthlyρ_4": "4 Factor",
+            "Monthlyρ_5": "4 Factor + Industry",
+            "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
+        },
+        columns = {
+            "50%": "median",
+        }
+    ).round(3)
 
 #%%
 df2["sBsgroup"] = df2["sgroup"] + df2["sBgroup"]
@@ -542,8 +571,8 @@ tempt[
 tempt = (
     df2.groupby(["id"])[
         [
-            "sgroup",
-            "sBgroup",
+            # "sgroup",
+            # "sBgroup",
             "Monthlysize1",
             "Monthlysize2",
             "MonthlySameSize",
@@ -555,7 +584,13 @@ tempt = (
     ]
     .mean()
     .describe()
-    .T.drop(columns=["count"])
+    .T.drop(columns=["count",
+                    "25%",
+                    "75%"]).rename(
+                         columns = {
+            "50%": "median",
+        }
+                    )
     .round(2)
     .T.rename(
         columns={
@@ -648,12 +683,20 @@ t["index"] = "Not Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
 tempt = tempt.append(t)
 #%%
-tempt.replace("MonthlyFCAPf", "FCAP").replace(
-    "MonthlyFCA", "FCA"
-).reset_index().set_index(["index", "variable"]).round(3).to_latex(
+tempt.sort_values(by = ['variable'])
+#%%
+a = tempt.replace("MonthlyFCAPf", "FCAP").replace(
+    "MonthlyFCA", "MFCAP"
+    ).sort_values(
+        by = ['variable']
+        ).reset_index().rename(columns={
+            'index':"subset"}).set_index(
+            ["variable","subset",]
+            ).round(3).T
+a.to_latex(
     pathResult + "FCACal.tex"
 )
-
+a
 
 # %%
 
