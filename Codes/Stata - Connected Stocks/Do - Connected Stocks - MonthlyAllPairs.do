@@ -98,10 +98,10 @@ label variable msize1size2 "$ Size1 \times Size2 $"
 generate NMFCA2 = NMFCA * NMFCA
 
 
-label variable NMFCA "$ \text{FCA*} $"
+label variable NMFCA "$ \text{MFCAP*} $"
 
 
-label variable NMFCA2 "$ { \text{FCA}^ * } ^ 2$"
+label variable NMFCA2 "$ { \text{MFCAP}^ * } ^ 2$"
 
 
 
@@ -150,20 +150,20 @@ replace median = 0 if forthquarter != 1
 
 
 
-label variable median " $ (\text{FCA} > Q3[\text{FCA}]) $ "
+label variable median " $ (\text{MFCAP} > Q3[\text{MFCAP}]) $ "
 
 gen NMFCAM = NMFCA * median
 
-label variable NMFCAM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{FCA} ^*}  $ "
+label variable NMFCAM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{MFCAP} ^*}  $ "
 
 gen sbgroupM = sbgroup * median
-label variable sbgroupM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{SameGroup} }  $ "
+label variable sbgroupM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{SameGroup} }  $ "
 
 gen NMFCAG = sbgroup * NMFCA
-label variable NMFCAG " $ (\text{FCA}^*) \times {\text{SameGroup} }  $ "
+label variable NMFCAG " $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
 
 gen NMFCAGM = sbgroup  * median
-label variable NMFCAGM " $ (\text{FCA} > Q3[\text{FCA}]) \times  {\text{SameGroup} }  $ "
+label variable NMFCAGM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times  {\text{SameGroup} }  $ "
 
 
 summ MFCA if median == 1
@@ -180,24 +180,25 @@ summ monthlyfcapf if monthlyfcapf>0
 rename NMFCA vv
 rename NMFCAGM mvv
 
+/*
 eststo v1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
-
+*/
 
  
-eststo v3 : quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v3 : xi: quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v4 : quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v4 : xi: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-
+/*
 eststo v5 : quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
@@ -207,46 +208,47 @@ estadd loc GroupFE "No" , replace
 
 
 
- eststo v6: quietly asreg monthlyρ_5_f median  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+ eststo v6: quietly asreg monthlyρ_5_f median  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
+
 
  eststo v61: quietly asreg monthlyρ_5_f median  sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0   , fmb newey(4) 
 estadd loc subSample "Others" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
+*/
 
-
-eststo v7: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1   , fmb newey(4) 
+eststo v7: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 1   , fmb newey(4) 
 estadd loc subSample "SameGroups" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v71: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0   , fmb newey(4) 
+eststo v71: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 0   , fmb newey(4) 
 estadd loc subSample "Others" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v8 : quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
+eststo v8 : xi: quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType gdummy0-gdummy47 , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "Yes" , replace
 
 
-eststo v9 : quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v9 : xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType, fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
-eststo v10 : quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
+eststo v10 : xi: quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 
 
- 
+ /*
 eststo v11 : quietly asreg monthlyρ_5_f median  mvv  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
@@ -262,9 +264,9 @@ eststo v13 : quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysa
 estadd loc subSample "Total" , replace
 estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
+*/
 
-
-esttab  v4 v9  v10 v7 v71 v3 v8 v13 v1 v5  v6 v61 v11  v12,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(median NMFCAG sbgroup vv mvv) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
+esttab  v4 v9  v10 v7 v71 v3 v8 /* v13 v1 v5  v6 v61 v11  v12 */ ,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(/*median */ NMFCAG sbgroup vv /*mvv*/) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
 
 
 rename  vv NMFCA
