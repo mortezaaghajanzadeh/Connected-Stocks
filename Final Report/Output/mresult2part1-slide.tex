@@ -1,23 +1,24 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{5}{c}}
+\begin{tabular}{l*{6}{c}}
 \hline\hline
-                &\multicolumn{5}{c}{Dependent Variable: Future Pairs's co-movement}                            \\\cmidrule(lr){2-6}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                &\multicolumn{6}{c}{Dependent Variable: Future Pairs's co-movement}                                               \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
-$ \text{MFCAP*} $&  0.00150\sym{**} &  0.00112\sym{*}  &                  &                  & 0.000736         \\
-                &   (2.90)         &   (2.11)         &                  &                  &   (1.33)         \\
+$ \text{MFCAP*} $&  0.00150\sym{**} &  0.00112\sym{*}  &                  &                  & 0.000736         & 0.000308         \\
+                &   (2.90)         &   (2.11)         &                  &                  &   (1.33)         &   (0.60)         \\
 [1em]
-Same Group      &                  &                  &   0.0166\sym{***}&   0.0153\sym{***}&   0.0147\sym{***}\\
-                &                  &                  &   (8.54)         &   (7.90)         &   (6.97)         \\
+Same Group      &                  &                  &   0.0166\sym{***}&   0.0153\sym{***}&   0.0147\sym{***}&   0.0164\sym{***}\\
+                &                  &                  &   (8.54)         &   (7.90)         &   (6.97)         &   (8.68)         \\
 \hline
-Observations    &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         \\
-Sub-sample      &      All         &      All         &      All         &      All         &      All         \\
-Group Effect    &       No         &       No         &       No         &       No         &       No         \\
-Controls        &       No         &      Yes         &       No         &      Yes         &      Yes         \\
-$ R^2 $         & 0.000170         & 0.000652         & 0.000180         & 0.000637         & 0.000804         \\
+Observations    &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         \\
+Sub-sample      &      All         &      All         &      All         &      All         &      All         &      All         \\
+Group Effect    &       No         &       No         &       No         &       No         &       No         &       No         \\
+Controls        &       No         &      Yes         &       No         &      Yes         &      Yes         &      Yes         \\
+PairType Control&       No         &       No         &       No         &       No         &       No         &      Yes         \\
+$ R^2 $         & 0.000170         & 0.000652         & 0.000180         & 0.000637         & 0.000804         &  0.00120         \\
 \hline\hline
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }
