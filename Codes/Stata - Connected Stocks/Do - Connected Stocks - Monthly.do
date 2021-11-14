@@ -769,7 +769,7 @@ esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Obse
 
 
 
-esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup bigbusinessgroupSgroupTurn ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup)  mgroups("Dep. Var.: Future Monthly Cor.  of 4F+Ind. Res."   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
+esttab v1  v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup bigbusinessgroupSgroupTurn ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup)  mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
 }
 
 

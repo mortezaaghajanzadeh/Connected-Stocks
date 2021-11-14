@@ -306,11 +306,11 @@ label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{Sam
 
 
 
-gen bigbusinessgroupTurn = bigbusinessgroup * monthlyρ_turn
-label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ "
+gen Turnbigbusinessgroup = bigbusinessgroup * monthlyρ_turn
+label variable Turnbigbusinessgroup "$ {\text{BigGroup} } \times  {\rho_t(\text{Turnover})}  $ "
 
-gen sbgroupTurn = sbgroup * monthlyρ_turn
-label variable sbgroupTurn "$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ "
+gen Turnsbgroup = sbgroup * monthlyρ_turn
+label variable Turnsbgroup "$ {\text{SameGroup} \times  {\rho_t(\text{Turnover})} } $ "
 
 gen bigbusinessgroupSgroupTurn = bigbusinessgroup * sbgroup * monthlyρ_turn
 label variable bigbusinessgroupSgroupTurn "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho_t(\text{Turnover})}$ "
