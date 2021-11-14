@@ -367,36 +367,38 @@ esttab   v0 v1 v11 v111   v2 v3 , nomtitle label   s( N GroupFE r2 ,  lab("Obser
 }
 
 
+{ /*Define Q3*/
+	replace median = 0 if forthquarter != 1
+	replace median = 1 if forthquarter == 1
 
+	replace NMFCAM = NMFCA * median
+
+	label variable NMFCAM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{FCA} ^*}  $ "
+
+	replace sbgroupM = sbgroup * median
+	label variable sbgroupM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{SameGroup}} $ "
+
+
+
+	replace NMFCAGM = sbgroup * NMFCA * median
+	label variable NMFCAGM " $ (\text{FCA} > Q3[\text{FCA}]) \times  (\text{FCA}^*) \times {\text{SameGroup}} $ "
+
+
+	replace holder_actM = holder_act * median
+	label variable holder_actM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{ActiveHolder} }  $ "
+
+	replace spositionM = sposition * median
+
+	label variable spositionM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{Same Position} }  $ "
+
+
+	corr monthlyρ_5_f monthlyρ_5  NMFCA median NMFCAM   NMFCAG NMFCAGM sbgroup  sgroup monthlysamesize monthlysamebm 
+
+
+}
 
 /*NMFCAMQ3*/
 { 
-replace median = 0 if forthquarter != 1
-replace median = 1 if forthquarter == 1
-
-replace NMFCAM = NMFCA * median
-
-label variable NMFCAM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{FCA} ^*}  $ "
-
-replace sbgroupM = sbgroup * median
-label variable sbgroupM " $ (\text{FCA} > Q3[\text{FCA}]) \times {\text{SameGroup}} $ "
-
-
-
-replace NMFCAGM = sbgroup * NMFCA * median
-label variable NMFCAGM " $ (\text{FCA} > Q3[\text{FCA}]) \times  (\text{FCA}^*) \times {\text{SameGroup}} $ "
-
-
-replace holder_actM = holder_act * median
-label variable holder_actM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{ActiveHolder} }  $ "
-
-replace spositionM = sposition * median
-
-label variable spositionM " $ (\text{FCA}> Q3[\text{FCA}]) \times {\text{Same Position} }  $ "
-
-
-corr monthlyρ_5_f monthlyρ_5  NMFCA median NMFCAM   NMFCAG NMFCAGM sbgroup  sgroup monthlysamesize monthlysamebm 
-
 
 
 
@@ -510,8 +512,10 @@ eststo v2: quietly  asreg monthlyρ_5_f  NMFCA NMFCAM NMFCAG    sbgroup     sgro
 esttab   v0 v1 v11 v2  v4 v5 v3   , nomtitle label  r2 n compress  keep(NMFCA NMFCAM NMFCAG NMFCAGM) mgroups("Dep. Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using QTimemresult3-slide.tex ,replace
 */
 
+}
 
-/*NMFCA Just after Q3*/
+
+{/*NMFCA Just after Q3*/
 
 eststo v0: quietly asreg monthlyρ_5_f  sbgroup if forthquarter == 1 , fmb newey(4) 
 estadd loc GroupFE "No" , replace

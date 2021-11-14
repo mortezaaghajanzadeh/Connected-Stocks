@@ -83,56 +83,44 @@ df.to_csv(path + "turnovercrosssection_1400_06_28.csv", index=False)
 # %%
 list(df)
 # %%
-tempt = df.groupby(['uo']).Coef_deltagroup.mean().to_frame()
+tempt = df.groupby(["uo", "year"]).Coef_deltagroup.mean().to_frame()
 tempt = tempt.reset_index()
-tempt = tempt.fillna(method='ffill')
+tempt = tempt.fillna(method="ffill")
+gg = tempt.groupby("year")
 
 
-# gg = tempt.groupby('year')
-# def highBeta(g):
-#     print(g.name)
-#     t = g.Coef_deltagroup.median()
-#     print(len(g))
-#     g['highBeta'] = 0
-#     g.loc[g.Coef_deltagroup > t, 'highBeta'] = 1
-#     return g
-# tempt = gg.apply(highBeta)
+def highBeta(g):
+    print(g.name)
+    t = g.Coef_deltagroup.median()
+    print(len(g))
+    g["highBeta"] = 0
+    g.loc[g.Coef_deltagroup > t, "highBeta"] = 1
+    return g
 
-tempt['highBeta'] = 0
-tempt.loc[tempt.Coef_deltagroup >tempt.Coef_deltagroup.median(), 'highBeta'] = 1
-tempt = tempt.set_index('uo')
+
+tempt = gg.apply(highBeta)
+
+tempt = tempt.set_index(["uo", "year"])
 #%%
 tt = pd.read_parquet(path + "MonthlyNormalzedFCAP9.2.parquet")
 #%%
-tt['year_of_year'] = tt.year_of_year.astype(int)
-mapingdict = dict(
-    zip(tempt.index,tempt.Coef_deltagroup)
-)
-tt['Coef_deltagroup_x'] = tt.set_index(
-    ['uo_x']
-    ).index.map(mapingdict)
-tt['Coef_deltagroup_y'] = tt.set_index(
-    ['uo_y']
-    ).index.map(mapingdict)
+tt["year_of_year"] = tt.year_of_year.astype(int)
+mapingdict = dict(zip(tempt.index, tempt.Coef_deltagroup))
+tt["Coef_deltagroup_x"] = tt.set_index(["uo_x", "year_of_year"]).index.map(mapingdict)
+tt["Coef_deltagroup_y"] = tt.set_index(["uo_y", "year_of_year"]).index.map(mapingdict)
 
-mapingdict = dict(
-    zip(tempt.index,tempt.highBeta)
-)
-tt['highBeta_x'] = tt.set_index(
-    ['uo_x']
-    ).index.map(mapingdict)
-tt['highBeta_y'] = tt.set_index(
-    ['uo_y']
-    ).index.map(mapingdict)
+mapingdict = dict(zip(tempt.index, tempt.highBeta))
+tt["highBeta_x"] = tt.set_index(["uo_x", "year_of_year"]).index.map(mapingdict)
+tt["highBeta_y"] = tt.set_index(["uo_y", "year_of_year"]).index.map(mapingdict)
 tt
 #%%
-tt.loc[tt.highBeta_x.isnull(), 'highBeta_x'] = 0
-tt.loc[tt.highBeta_y.isnull(), 'highBeta_y'] = 0
-tt.loc[tt.Coef_deltagroup_x.isnull(), 'Coef_deltagroup_x'] = 0
-tt.loc[tt.Coef_deltagroup_y.isnull(), 'Coef_deltagroup_y'] = 0
+tt.loc[tt.highBeta_x.isnull(), "highBeta_x"] = 0
+tt.loc[tt.highBeta_y.isnull(), "highBeta_y"] = 0
+tt.loc[tt.Coef_deltagroup_x.isnull(), "Coef_deltagroup_x"] = 0
+tt.loc[tt.Coef_deltagroup_y.isnull(), "Coef_deltagroup_y"] = 0
 
 
 # %%
 tt.to_parquet(path + "MonthlyNormalzedFCAP9.3.parquet")
-tt.to_csv(path + "MonthlyNormalzedFCAP9.3.csv",index = False)
+tt.to_csv(path + "MonthlyNormalzedFCAP9.3.csv", index=False)
 # %%
