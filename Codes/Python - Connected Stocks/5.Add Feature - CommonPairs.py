@@ -979,6 +979,51 @@ Imbalances = [
     "InsImbalance_value",
     "Grouped",
 ]
+#%%
+gg = mdf.groupby(frequency)
+
+
+def Pnum(g):
+    return len(g[g.InsImbalance_value>0])/len(g)
+def Nnum(g):
+    return len(g[g.InsImbalance_value<0])/len(g)
+def dailyn(g):
+    print(g.name)
+    Imbalances = [
+        "InsImbalance_count",
+        "InsImbalance_volume",
+        "InsImbalance_value",
+        "Grouped",
+    ]
+    a = g.groupby("uo").apply(Pnum).to_frame().rename(
+        columns={0: "Positive"})
+    a = a.merge(
+        g.groupby("uo").apply(Nnum).to_frame().rename(
+        columns={0: "Negative"})
+            ,how = "left",on =["uo"])
+    # a["Grouped"] = 1
+    # a = a.append(
+    #     g[g.Grouped == 0][Imbalances].std().to_frame().rename(columns={0: "NotGroup"}).T
+    # )
+    return a
+
+
+result = gg.apply(dailyn)
+result = result.reset_index().rename(columns={"level_1": "uo"})
+result
+#%%
+a = result.groupby("uo")[['Positive', 'Negative']].mean()
+a = a.sort_values(by=['Positive']).dropna()
+a
+lowlist = list(a[a.Positive <= a.Positive.median()].index)
+df1["PositiveSynch"] = 0
+df1.loc[df1.uo_x.isin(lowlist), "PositiveSynch"] = 1
+df1.loc[df1.uo_y.isin(lowlist), "PositiveSynch"] = 1
+mapdict = dict(zip(a.index, a.Positive))
+df1["PositiveSynch_x"] = df1.uo_x.map(mapdict)
+df1["PositiveSynch_y"] = df1.uo_y.map(mapdict)
+#%%
+
 gg = mdf.groupby(frequency)
 
 
@@ -991,6 +1036,7 @@ def daily(g):
         "Grouped",
     ]
     a = g.groupby("uo")[Imbalances].std()
+    
     a["Grouped"] = 1
     a = a.append(
         g[g.Grouped == 0][Imbalances].std().to_frame().rename(columns={0: "NotGroup"}).T
@@ -1001,6 +1047,7 @@ def daily(g):
 result = gg.apply(daily)
 result = result.reset_index().rename(columns={"level_1": "uo"})
 #%%
+
 #%%
 a = result.groupby("uo")[Imbalances[:-1]].mean()
 a = a.sort_values(by=Imbalances[:-1]).dropna()
@@ -1012,6 +1059,9 @@ df1.loc[df1.uo_y.isin(lowlist), "lowImbalanceStd"] = 1
 mapdict = dict(zip(a.index, a.InsImbalance_value))
 df1["InsImbalance_value_x"] = df1.uo_x.map(mapdict)
 df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
+#%%
+
+
 #%%
 # del result ,a
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"

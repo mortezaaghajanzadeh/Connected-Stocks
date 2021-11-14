@@ -83,8 +83,17 @@ df.to_csv(path + "turnovercrosssection_1400_06_28.csv", index=False)
 # %%
 list(df)
 # %%
-tempt = df.groupby(["uo", "year"]).Coef_deltagroup.mean().to_frame()
-tempt = tempt.reset_index()
+t = df.groupby(["uo",'year']).marketCap.sum().to_frame()
+mapingdict = dict(zip(t.index, t.marketCap))
+df['weight'] = df.set_index(['uo','year']).index.map(mapingdict)
+df['weight'] = df.marketCap/df.weight
+df['Coef_deltagroup_mean'] = df['weight'] * df.Coef_deltagroup
+
+#%%
+tempt = df.groupby(["uo", "year"]).Coef_deltagroup_mean.sum().to_frame()
+tempt = tempt.reset_index().rename(
+    columns={"Coef_deltagroup_mean": "Coef_deltagroup"}
+    )
 tempt = tempt.fillna(method="ffill")
 gg = tempt.groupby("year")
 

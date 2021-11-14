@@ -37,6 +37,8 @@ def vv(row):
     return int(row[0] + row[1] + row[2])
 
 
+df = df[df.value > 0]
+
 df = df[~df.ins_buy_count.isnull()].drop(
     columns=[
         "basevalue",
@@ -84,7 +86,7 @@ def BG(df):
         .uo.unique()
     )
     BG = BG[BG.listed == 1]
-    BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
+    # BG = BG.groupby(["uo", "year"]).filter(lambda x: x.shape[0] >= 3)
     print(len(BG))
     BG = BG[BG.uo.isin(uolist)]
     print(len(BG))
@@ -126,7 +128,11 @@ df["yearMonth"] = df["yearMonth"].astype(int)
 #%%
 frequency = "yearMonth"
 mdf = df.groupby(["name", frequency]).first().drop(columns=["jalaliDate"])
-mdf[mlist] = df.groupby(["name", frequency])[mlist].sum()
+tempt = df.groupby(["name", frequency])[mlist].sum()
+for i in tempt:
+    mapingdict = dict(zip(list(tempt.index), tempt[i]))
+    mdf[i] = mdf.index.map(mapingdict)
+#%%
 mdf = mdf.reset_index()
 mdf["InsImbalance_count"] = (mdf.ins_buy_count - mdf.ins_sell_count) / (
     mdf.ins_buy_count + mdf.ins_sell_count
@@ -176,9 +182,11 @@ Imbalances = [
     "IndImbalance_value",
     "Grouped",
 ]
-mdf['Grouped'] = 1
-mdf.loc[mdf.uo.isnull(),'Grouped'] = 0
+mdf["Grouped"] = 1
+mdf.loc[mdf.uo.isnull(), "Grouped"] = 0
 gg = mdf.groupby([frequency])
+
+
 #%% Mean Section
 def daily(g):
     print(g.name)
@@ -209,12 +217,12 @@ result = result.dropna()
 result = result[result.yearMonth < 139901]
 result
 a = result.groupby("Grouped")[Imbalances[:-1]].mean()
-a = a.sort_values(by=['InsImbalance_value']).dropna()
+a = a.sort_values(by=["InsImbalance_value"]).dropna()
 a
 b = result.groupby(["yearMonth", "Grouped"]).mean().reset_index()
 b
 tt = (
-    result.groupby("Grouped")['InsImbalance_value']
+    result.groupby("Grouped")["InsImbalance_value"]
     .describe()
     .T.rename(
         columns={
@@ -224,13 +232,13 @@ tt = (
     )
     .T.round(3)
 )
-tt['count'] = tt['count'].astype(int)
+tt["count"] = tt["count"].astype(int)
 tt = tt.rename(columns={"count": "Group $\times$ Month"})
 tt.to_latex(pathR + "\\ImbalanceInsMeanSummary.tex")
 tt
 #%%
 tt = (
-    result.groupby("Grouped")[['IndImbalance_value']]
+    result.groupby("Grouped")[["IndImbalance_value"]]
     .describe()
     .T.rename(
         columns={
@@ -240,7 +248,7 @@ tt = (
     )
     .T.round(3)
 )
-tt[('IndImbalance_value', 'count')] = tt[('IndImbalance_value', 'count')].astype(int)
+tt[("IndImbalance_value", "count")] = tt[("IndImbalance_value", "count")].astype(int)
 tt.to_latex(pathR + "\\ImbalanceIndMeanSummary.tex")
 tt
 #%%
@@ -312,11 +320,15 @@ tt = (
 )
 tt["count"] = tt["count"].astype(int)
 tt = tt.rename(columns={"count": "Group $\times$ Month"})
-tt.to_latex(
-    pathR
-    + "\\ImbalanceInsStdSummary.tex"
-)
+tt.to_latex(pathR + "\\ImbalanceInsStdSummary.tex")
 tt
+#%%
+ff = df[(df.name == "سامان") & (df.yearMonth == 139301)]
+a, b = ff.ins_buy_value.sum(), ff.ins_sell_value.sum()
+ff = df[(df.name == "بساما") & (df.yearMonth == 139301)]
+c, d = ff.ins_buy_value.sum(), ff.ins_sell_value.sum()
+a, b, c, d
+# ff[['ins_buy_value','ins_sell_value']]
 #%%
 tt = (
     result.groupby("Grouped")[["IndImbalance_value"]]
@@ -329,11 +341,8 @@ tt = (
     )
     .T.round(3)
 )
-tt[("IndImbalance_value","count")] = tt[("IndImbalance_value","count")].astype(int)
-tt.to_latex(
-    pathR
-    + "\\ImbalanceIndStdSummary.tex"
-)
+tt[("IndImbalance_value", "count")] = tt[("IndImbalance_value", "count")].astype(int)
+tt.to_latex(pathR + "\\ImbalanceIndStdSummary.tex")
 tt
 
 # %%
@@ -381,7 +390,9 @@ plt.savefig(pathR + "\\GroupedIndSTD.png", bbox_inches="tight")
 stats.ttest_ind(
     result[result.Grouped == 1].InsImbalance_value,
     result[result.Grouped == 0].InsImbalance_value,
-),stats.ttest_ind(
+), stats.ttest_ind(
     result[result.Grouped == 1].IndImbalance_value,
     result[result.Grouped == 0].IndImbalance_value,
 )
+
+# %%
