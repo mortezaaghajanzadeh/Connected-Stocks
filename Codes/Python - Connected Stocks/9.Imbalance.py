@@ -8,10 +8,12 @@ import seaborn as sns
 from pandas_jalali.converter import get_gregorian_date_from_jalali_date
 
 #%%
-path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
+
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
-pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
+
 pathR = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
+pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
 df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
 
 
@@ -72,7 +74,7 @@ df["day"] = df["day"].astype(int)
 
 def BG(df):
     pathBG = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Control Right - Cash Flow Right\\"
-    # pathBG = r"E:\RA_Aghajanzadeh\Data\\"
+    pathBG = r"E:\RA_Aghajanzadeh\Data\\"
     n = pathBG + "Grouping_CT.xlsx"
     BG = pd.read_excel(n)
     uolist = (
@@ -212,7 +214,7 @@ a
 b = result.groupby(["yearMonth", "Grouped"]).mean().reset_index()
 b
 tt = (
-    result.groupby("Grouped")[['InsImbalance_value']]
+    result.groupby("Grouped")['InsImbalance_value']
     .describe()
     .T.rename(
         columns={
@@ -222,7 +224,8 @@ tt = (
     )
     .T.round(3)
 )
-tt[('InsImbalance_value', 'count')] = tt[('InsImbalance_value', 'count')].astype(int)
+tt['count'] = tt['count'].astype(int)
+tt = tt.rename(columns={"count": "Group $\times$ Month"})
 tt.to_latex(pathR + "\\ImbalanceInsMeanSummary.tex")
 tt
 #%%
@@ -297,7 +300,7 @@ result = result[result.yearMonth < 139901]
 result
 #%%
 tt = (
-    result.groupby("Grouped")[["InsImbalance_value"]]
+    result.groupby("Grouped")["InsImbalance_value"]
     .describe()
     .T.rename(
         columns={
@@ -307,7 +310,8 @@ tt = (
     )
     .T.round(3)
 )
-tt[("InsImbalance_value","count")] = tt[("InsImbalance_value","count")].astype(int)
+tt["count"] = tt["count"].astype(int)
+tt = tt.rename(columns={"count": "Group $\times$ Month"})
 tt.to_latex(
     pathR
     + "\\ImbalanceInsStdSummary.tex"
