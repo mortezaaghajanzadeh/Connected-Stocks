@@ -765,19 +765,23 @@ December\fi, \number \year}
 (FCAP)
 و اصلاح شده
 (MFCAP)
-\begin{LTR}
-	\lr{\begin{table}[htbp]
-	\centering
-	\caption{ text}
-	\label{measureResults}
-	\resizebox{1\textwidth}{!}
-	{
-		\input{Output/FCACal.tex}
-	}
-\end{table}}
-\end{LTR}
+
 \item
 مالکیت مشترک برای گروه های کسب و کار حدودا 5 برابر و برای صنعت یکسان حدودا 3 برابر است
+\begin{landscape}
+\begin{table}[p]
+%	\centering
+	\caption{ text}
+	\label{measureResults}
+	\resizebox{1.5\textheight}{!}
+	{
+		\begin{LTR}
+			\lr{\input{Output/FCACal.tex}}
+			\end{LTR}
+	}
+\end{table}
+\end{landscape}
+
 \end{itemize}
 
   \FloatBarrier
@@ -1096,7 +1100,7 @@ December\fi, \number \year}
 	 	\centering
 	 	\caption{\scriptsize Estimation results for high level of common ownership}
 	 	\label{QTimemresult2subsample}
-	 	\resizebox{0.75\textwidth}{!}{
+	 	\resizebox{\textwidth}{!}{
 	 		\input{Output/QTimemresult2subsample-slide.tex}
 	 	}
 	 \end{table}
@@ -1156,22 +1160,22 @@ December\fi, \number \year}
 		\item 
 		در میان گروه کسب و کار سطح مالکیت مشترک تاثیر چندانی ندارد
 		\item
-		درمیان جفت های بیرون گروه کسب و کار نیز سطح مالکیت مشترک اهمیت دارد که می تواند صرفا دراای مالک مشترک بودن دارای اهمیت است
+		درمیان جفت های بیرون گروه کسب و کار نیز سطح مالکیت مشترک اهمیت دارد که می تواند صرفا اهمیت مالکیت مشترک در پیش بینی هم حرکتی قیمت شرکت ها را نشان دهد.
 		
 	\end{itemize}
 \end{itemize}
 
 
-\begin{LTR}
-	\lr{	\begin{table}[p]
+	\begin{table}[p]
 		%	\centering
 		\caption{Non-connected Co-movement}
 		\label{AllPairs}
 		\resizebox{1\textwidth}{!}{
-			\input{Output/Q3mresultAllPairs.tex}
+		\begin{LTR}
+			\lr{	\input{Output/Q3mresultAllPairs.tex}
 		}
-	\end{table}}
-\end{LTR}
+		\end{LTR}}
+	\end{table}
 
 
 
