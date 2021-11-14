@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  14 NOV 2021 11:46
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  14 NOV 2021 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,30 +1124,18 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 [17]
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
- [18] (./Model12.tex) [19] [20] (./Output/Q3mresultAllPairs.tex)
-Overfull \hbox (71.02052pt too wide) in paragraph at lines 1174--1174
-[][][] []
- []
-
-[21
+ [18] (./Output/Q3mresultAllPairs.tex) [19] [20]
+(./Output/ImbalanceInsMeanSummary.tex) [21
 
 ]
-File: Output/mcorrPairType.eps Graphic file (type eps)
-<Output/mcorrPairType.eps>
- (./Output/Qmresult4-slide.tex) [22
+(./Output/ImbalanceInsStdSummary.tex) (./Output/ImbalanceIndStdSummary.tex)
 
-] (./Output/Qmresult4-AllPairs.tex)
-[23] (./Output/mresult2Polk-slide.tex) [24]
-(./Output/ImbalanceInsMeanSummary.tex) (./Output/ImbalanceIndMeanSummary.tex)
-(./Output/ImbalanceInsStdSummary.tex) [25] (./Output/ImbalanceIndStdSummary.tex
-)
-
-LaTeX Warning: Reference `tab:GroupedInsSTD' on page 26 undefined on input line
- 1390.
+LaTeX Warning: Reference `tab:GroupedInsSTD' on page 22 undefined on input line
+ 1350.
 
 
-LaTeX Warning: Reference `tab:GroupedIndSTD' on page 26 undefined on input line
- 1392.
+LaTeX Warning: Reference `tab:GroupedIndSTD' on page 22 undefined on input line
+ 1352.
 
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
@@ -1168,8 +1156,8 @@ Overfull \hbox (30.0pt too wide) detected at line 11
 [][]
  []
 
-[26] [27]) (./Output/Imbalance.tex) [28]
-Overfull \hbox (25.6144pt too wide) detected at line 1479
+[22] [23]) (./Output/Imbalance.tex) [24]
+Overfull \hbox (25.6144pt too wide) detected at line 1439
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1185,21 +1173,21 @@ Overfull \hbox (30.0pt too wide) detected at line 6
  []
 
 ) (./turnover.tex)
-Overfull \hbox (24.41608pt too wide) in paragraph at lines 1512--1512
+Overfull \hbox (24.41608pt too wide) in paragraph at lines 1472--1472
  [][][][] 
  []
 
-[29] (./Turnovercrosssection.tex)
-Overfull \hbox (24.40437pt too wide) in paragraph at lines 1538--1538
+[25] (./Turnovercrosssection.tex)
+Overfull \hbox (24.40437pt too wide) in paragraph at lines 1498--1498
  [][][][] 
  []
 
-[30] (./Output/mresult2-turnover.tex)
-Overfull \hbox (24.40068pt too wide) in paragraph at lines 1565--1565
+[26] (./Output/mresult2-turnover.tex)
+Overfull \hbox (24.40068pt too wide) in paragraph at lines 1525--1525
  [][][][] 
  []
 
-[31] (./Output/mresult2-BigBusinessGroup.tex) [32] [33] [34]
+[27] (./Output/mresult2-BigBusinessGroup.tex) [28] [29] [30]
 (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
@@ -1253,7 +1241,7 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 79.
 
-[35]
+[31]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 84.
@@ -1310,29 +1298,30 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 159.
 
-[36]
+[32]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 164.
 
-) [37]
+) [33]
 File: 1.png Graphic file (type bmp)
 <1.png>
 File: 2.png Graphic file (type bmp)
 <2.png>
- (./Example2.tex) [38] [39]
+ (./Example2.tex) [34] [35]
 File: 3.png Graphic file (type bmp)
 <3.png>
 File: 4.png Graphic file (type bmp)
 <4.png>
- (./marketcap.tex) [40] [41]
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 1914--1914
+ (./marketcap.tex) [36] [37]
+(./Output/mresult2Polk-slide.tex)
+Overfull \hbox (23.17839pt too wide) in paragraph at lines 1901--1901
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
-
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1948--1950
+[38]
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 1935--1937
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1341,15 +1330,15 @@ File: Output/sameIndustryinBG.eps Graphic file (type eps)
 <Output/sameIndustryinBG.eps>
 File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 <Output/sameIndustryNoinBG.eps>
-[42]
+[39]
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
- [43] [44]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2002.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2002.
+ [40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1989.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1989.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2002.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2002.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1989.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1989.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1364,15 +1353,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2002.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1989.
  ) 
 Here is how much of TeX's memory you used:
- 27616 strings out of 479418
- 555879 string characters out of 5888105
- 987587 words of memory out of 5000000
- 44482 multiletter control sequences out of 15000+600000
+ 27589 strings out of 479418
+ 555210 string characters out of 5888105
+ 988587 words of memory out of 5000000
+ 44467 multiletter control sequences out of 15000+600000
  540079 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (44 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (40 pages).
