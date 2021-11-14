@@ -1,4 +1,4 @@
- \documentclass{beamer}
+\documentclass{beamer}
 \usetheme{Madrid}
 \usepackage{comment}
 \usepackage{ragged2e}
@@ -36,7 +36,7 @@
 	December\fi, \number \year} 
 
 \title[Connected Stocks ]{How are stocks connected? }
-\subtitle{The evidence from emerging market.}
+\subtitle{Evidence from an emerging market}
 %\subtitle{}
 \author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
 \institute[TeIAS]{Tehran Institute for Advanced Studies }
@@ -305,7 +305,7 @@
 		\begin{itemize}
 			\item 
 			We use daily records of block-holder ownership for firms
-			\item We not restricted to mutual funds ownership
+			\item We are not restricted to mutual funds ownership
 			\item Furthermore, 80\% of market belongs to the business groups
 			\begin{itemize}
 				\item Would business groups be able to raise the co-movement of stock returns?
@@ -327,113 +327,464 @@
 	\end{frame}
 	
 	\normalsize
-		\subsection{Common-ownership measurements}
-	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
-		\begin{columns}[t]
-			\column{0.5\textwidth}  
-			\centering
-			Model based measures
-			\\
-			
-			\begin{itemize}
-				\item \color{blue} \scriptsize $
-				\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
-				\normalcolor
-				\tiny 
-				
-				\cite{harford2011institutional}
-				
-				
-				\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
-				
-				\cite{azar2018anticompetitive}
-				
-				\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
-				
-				\cite{anton2020common} 
-				
-				\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
-				
-				\cite{backus2020theory}
-				
-				\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
-				
-				\cite{gilje2020s} , \cite{Lewellen2021}
-				
-				
-				\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
-				
-				\cite{LEWELLEN2021b}
-				\normalsize
-				
-				
-				
-			\end{itemize}
-			
-			
-			\pause
-			\column{0.5\textwidth}
-			\centering
-			Ad-hoc measures
-			\begin{itemize}
-				\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
-				\tiny\cite{AntonPolk} \\ 
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
-				\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
-				\tiny \cite{newham2018common}  \\ 
-				
-				
-				
-				
-				
-				\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
-				
-				\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
-				
-			\end{itemize}
-			
-		\end{columns}
-		\pause
-		\begin{block}{\scriptsize Selected measure }
-			\scriptsize
-			We need a pair-level measure, which is bi-directional, so we use the AP measure. 
-		\end{block}
-		\hfill
-		\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
-	\end{frame}
-	
-	
-	
+
 	
 	
 	\section{Empirical Studies}
+		\subsection{Pair composition}
+		\begin{frame}{Pair composition}
+			\begin{itemize}
+				\item Firms with at least one common owner\\
+				
+								\begin{figure}[htbp]
+					\centering
+					\begin{tikzpicture}[node distance=1cm]
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm) ;
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm2) ;
+					\end{tikzpicture}
+				\end{figure}\bigskip
+				\item In a business group, how can one pair be defined?
+				\begin{itemize}
+					\item What is the business group?
+				\end{itemize}
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{Pair Composition and Business Group}{Business Group }
+			
+			
+			\resizebox{0.7\textwidth}{!}{
+				\begin{tikzpicture}[node distance=2cm]
+					
+					
+					\node (UO) [startstop] { $ \text{Ultimate Owner} $};
+					\pause
+					\node (FirmA) [startstop1,below of = UO,xshift=-3cm] {$ \text{Firm A} $};
+					\node (FirmB) [startstop1,right of = FirmA,xshift=1cm] {$ \text{Firm B} $};
+					\node (FirmC) [startstop1,right of = FirmB,xshift=1cm] {$ \text{Firm C} $};
+					\draw [arrow] (UO) --(FirmA);
+					\draw [arrow] (UO) --(FirmB);
+					\draw [arrow] (UO) --(FirmC);
+					
+					\pause
+					
+					\node (FirmX) [startstop20,below of = FirmA,xshift=-1cm] {$ \scriptsize\text{Firm X} $};
+					
+					\node (FirmY) [startstop20,below of = FirmA,xshift=1cm] {$ \scriptsize\text{Firm Y} $};
+					
+					\node (FirmZ) [startstop20,below of = FirmB] {$ \scriptsize\text{Firm Z} $};
+					
+					\node (FirmK) [startstop20,below of = FirmC , xshift = -1cm] {$ \scriptsize\text{Firm K} $};
+					\node (FirmL) [startstop20,below of = FirmC , xshift = 1cm] {$ \scriptsize\text{Firm L} $};
+					\node (FirmM) [startstop20,below of = FirmC , yshift = -1 cm] {$ \scriptsize\text{Firm M} $};
+					
+					
+					\draw [arrow] (FirmA) --(FirmX);
+					\draw [arrow] (FirmA) --(FirmY);
+					
+					\draw [arrow] (FirmB) --(FirmZ);
+					
+					\draw [arrow] (FirmC) --(FirmK);
+					\draw [arrow] (FirmC) --(FirmL);
+					
+					\draw [arrow] (FirmK) --(FirmM);
+					\draw [arrow] (FirmL) --(FirmM);
+					
+					
+				\end{tikzpicture}
+			}
+			
+		\end{frame}
+		
+		
+		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
+			\begin{columns}
+				\column{.5\textwidth}     
+				\centering
+				{}\\
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						\node (start) [startstop] {Ultimate Owner};
+						
+						
+						
+						\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
+						\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
+						
+						
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						
+						\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						\node (CH) [process, below of = start ,xshift=0] {Common Owner};
+						
+						
+						\draw [arrow] (start) --(end);
+						\draw [arrow] (end) --(sur);
+						
+						\draw [arrow] (start) --(end2);
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						\draw [dashed ,->] (start) --(CH);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
+						
+						
+					\end{tikzpicture}
+				}
+				
+				\pause
+				\column{.5\textwidth}
+				\centering  
+				{}\\
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+						\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+						
+						
+						\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+						
+						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+						
+						\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						
+						\draw [arrow] (start) --(end);
+						\draw [arrow] (start2) -- (end2);
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						\draw [dash dot,->] (start) -- (CH);
+						\draw [dash dot,->] (start2) -- (CH);
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
+						
+						
+					\end{tikzpicture}
+				} 
+				
+				\end{columns}
+		\end{frame}
+		
+		
+		
+		
+	%	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
+	%		\begin{columns}
+	%			\column{.5\textwidth}     
+	%			\centering
+	%			{}\\
+	%			
+	%			\resizebox{\textwidth}{!}{
+	%				\begin{tikzpicture}[node distance=2cm]
+	%					
+	%					
+	%					
+	%					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+	%					
+	%					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+	%					
+	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+	%					
+	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+	%					
+	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+	%					
+	%					
+	%					\draw [arrow] (end) --(sur);
+	%					\draw [arrow] (end2) -- (sur2);
+	%					
+	%					
+	%					\draw [arrow] (CH) -- (sur);
+	%					\draw [arrow] (CH) -- (sur2);
+	%					
+	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+	%					
+	%					
+	%				\end{tikzpicture}
+	%			} 
+	%			
+	%			\column{.5\textwidth}
+	%			\centering  
+	%			{}\\
+	%			
+	%			\resizebox{\textwidth}{!}{
+	%				\begin{tikzpicture}[node distance=2cm]
+	%					
+	%					
+	%					\node (start) [startstop] { $ \text{Ultimate Owner} $};
+	%					
+	%					
+	%					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+	%					
+	%					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+	%					
+	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+	%					
+	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+	%					
+	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+	%					
+	%					
+	%					
+	%					\draw [arrow] (start) --(end);
+	%					
+	%					\draw [arrow] (end) --(sur);
+	%					\draw [arrow] (end2) -- (sur2);
+	%					
+	%					\draw [dash dot,->] (start) -- (CH);
+	%					
+	%					\draw [arrow] (CH) -- (sur);
+	%					\draw [arrow] (CH) -- (sur2);
+	%					
+	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+	%					
+	%					
+	%				\end{tikzpicture}
+	%			} 
+	%			
+	%		\end{columns}
+	%	\end{frame}
+		
+		
+		
+			\begin{frame}{Data Summary}
+			\begin{itemize}
+				\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
+				\begin{itemize}
+					\item Includes of 72 Months
+					\item Consists of 618 firm inculding 562 firm with common owners
+					
+				\end{itemize}
+			\end{itemize}
+			
+			\begin{table}[htbp]
+				\centering
+				\resizebox{0.8\textwidth}{!}
+				{
+					\input{Output/summaryOfOwnership.tex}
+				}
+			\end{table}
+			
+		\end{frame}
+		
+		
+		
+		\begin{frame}{Pair Composition}
+			\begin{itemize}
+			
+				\item Pairs consist of two firms  with at least one common owner
+				\begin{itemize}
+					\item  93442 unique pairs which is 25\% of possible pairs 
+					\tiny ($ \frac{612*611}{2}= 373932 $)
+					\normalsize
+				\end{itemize}
+			\end{itemize}
+			
+			\begin{table}[htbp]
+				\centering
+				{
+					\footnotesize
+				\input{Output/numberofPairs.tex}
+					
+				}
+			\end{table}
+			
+			
+			\begin{table}
+				\resizebox{0.7\textwidth}{!}
+				{
+					\input{Output/summaryOfPairs.tex}
+				}
+			\end{table}% 
+			
+		\end{frame}  
+		
+		
+		
+	
+	%	\begin{frame}{Number of Pairs}
+	%		\begin{figure}[htbp]
+	%			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
+	%		\end{figure}
+	%	\end{frame}
+	%	
+		
+		
+		
+		
+	%	\begin{frame}{FCA's time series}
+	%		\begin{figure}
+	%			\centering  
+	%			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
+	%			
+	%		\end{figure} 
+	%	\end{frame}
+	%
+	%	\begin{frame}{FCA's time series}
+	%		\begin{columns}
+	%			\column{.5\textwidth}  
+	%			\begin{figure}
+	%				\centering  
+	%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
+	%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
+	%			\end{figure}    
+	%			\column{.5\textwidth}
+	%			\begin{figure}
+	%				\centering  
+	%				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
+	%			\end{figure}
+	%          
+	%		\end{columns}
+	%
+	%\end{frame}
+	%
+	%	\begin{frame}{Group affiliated firm's time series}
+	%		\begin{columns}
+	%	\column{.5\textwidth}  
+	%	\begin{figure}
+	%	\centering  
+	%	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
+	%	
+	%\end{figure}  
+	%	\column{.5\textwidth}
+	%	\begin{figure}
+	%	\centering  
+	%	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
+	%	
+	%\end{figure} 
+	%	
+	%\end{columns}
+	%\end{frame}
+	
+	
+	
+	
+		
+	
 	\subsection{Measuring Common-ownership}
-	
-	
+	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+			\begin{columns}[t]
+				\column{0.5\textwidth}  
+				\centering
+				Model based measures
+				\\
+				
+				\begin{itemize}
+					\item \color{blue} \scriptsize $
+					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+					\normalcolor
+					\tiny 
+					
+					\cite{harford2011institutional}
+					
+					
+					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+					
+					\cite{azar2018anticompetitive}
+					
+					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+					
+					\cite{anton2020common} 
+					
+					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+					
+					\cite{backus2020theory}
+					
+					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+					
+					\cite{gilje2020s} , \cite{Lewellen2021}
+					
+					
+					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+					
+					\cite{LEWELLEN2021b}
+					\normalsize
+					
+					
+					
+				\end{itemize}
+				
+				
+				\pause
+				\column{0.5\textwidth}
+				\centering
+				Ad-hoc measures
+				\begin{itemize}
+					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+					\tiny\cite{AntonPolk} \\ 
+					
+					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+					
+					
+					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+					\tiny \cite{newham2018common}  \\ 
+					
+					
+					
+					
+					
+					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+					
+					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+					
+				\end{itemize}
+				
+			\end{columns}
+			\pause
+			\begin{block}{\scriptsize Selected measure }
+				\scriptsize
+				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+			\end{block}
+			\hfill
+			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+		\end{frame}
+
 	\begin{frame}{Measuring Common-ownership}\label{Intuition}
-		\cite{AntonPolk}
-		\begin{align*}
-			\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
-		\end{align*}
-	\pause
-		\begin{columns}
-			\column{.5\textwidth}     
+				\begin{columns}
+			\column{.5\textwidth}    
+			\centering  
+						\cite{AntonPolk}
+								\begin{align*}
+									\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
+								\end{align*} 
+%			\pause
+			\column{.5\textwidth}
 			\centering
 			SQRT
-			\begin{align*}
-				\boxed{              [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
-			\end{align*}     
-		             
-			\column{.5\textwidth}
-			\centering  
-			Quadratic
-			\begin{align*}
-				\boxed{    [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}}
-			\end{align*}
+						\begin{align*}
+						\footnotesize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+						\end{align*}     				         
 		\end{columns}
 	\pause
 		\begin{block}{Intuition}
@@ -444,446 +795,49 @@
 	\end{frame}
 	
 	
-	
-	
-%	\begin{frame}{Measuring Common Ownership}{Example}
-%		
-%		\begin{figure}[htbp]
-%			\begin{tikzpicture}[node distance=1cm]
-%				
-%				
-%				\node (Firm) [startstop3] {\tiny Firm X};
-%				\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
-%				\node (Owner) [startstop3,right of = Firm , yshift=0cm , xshift=-3.25cm ] {\tiny Common owner };
-%				
-%				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
-%				
-%				\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
-%				%
-%				%\node() at (3,0)
-%				%    {$ \alpha + \beta = 100 $}; 
-%			\end{tikzpicture}
-%			
-%		\end{figure}\bigskip
-%		\pause
-%		\begin{itemize}
-%			\item[] For better observation, assume that 
-%			\begin{itemize}
-%				\item $ \alpha + \beta = 100 $\\
-%				\item both firm have equal market cap
-%			\end{itemize} 
-%		\end{itemize}
-%	\pause
-%		\begin{figure}[htbp]
-%			\includegraphics[width=0.47\linewidth]{1.png}
-%			\includegraphics[width=0.47\linewidth]{2.png}
-%			\captionsetup{labelformat=empty}
-%			\caption{\scriptsize Comparison of three methods for calculating common ownership}
-%		\end{figure}
-%	\end{frame}
-%	
-	
-	\subsection{Pair composition}
-	\begin{frame}{Pair composition}
-		\begin{itemize}
-			\item Firms with at least one common owner\\
+				\begin{frame}{MFCAP vs. FCAP Summary}
+					\begin{table}[htbp]
+						\centering
+						\resizebox{\textwidth}{!}
+						{
+							\input{Output/FCACal.tex}  }          
+					\end{table}%
+					\begin{block}{Results}
+						\small
+						\begin{itemize}
+							\item By the proposed measurement, common ownership increases
+							\item Common ownership is greater in pairs that  are in the same business group and insutry
+						\end{itemize}
+					\end{block}
+				\end{frame}
+		
 			
-							\begin{figure}[htbp]
-				\centering
-				\begin{tikzpicture}[node distance=1cm]
-					
-					\node (Firm) [startstop3] {\tiny Firm X};
-					\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
-					\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
-					
-					
-					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm) ;
-					
-					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm2) ;
-				\end{tikzpicture}
-			\end{figure}\bigskip
-			\item In a business group, how can one pair be defined?
-			\begin{itemize}
-				\item What is the business group?
-			\end{itemize}
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}{Pair Composition and Business Group}{Business Group }
-		
-		
-		\resizebox{0.7\textwidth}{!}{
-			\begin{tikzpicture}[node distance=2cm]
-				
-				
-				\node (UO) [startstop] { $ \text{Ultimate Owner} $};
+			\begin{frame}{MFCAP vs. FCAP Distributions}{Monthly}
+				\label{Monthly1}
+				\begin{columns}
+					\column{.33\textwidth}  
+					\begin{figure}
+						\centering  
+						\includegraphics[width=\linewidth]{"MHistFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"MHistFCAP.eps"}
+					\end{figure}  
+				\pause   
+					\column{.33\textwidth}
+					\begin{figure}
+						\centering  
+						\includegraphics[width=\linewidth]{"MHistlnFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"MHistlnFCAP.eps"}
+					\end{figure}
 				\pause
-				\node (FirmA) [startstop1,below of = UO,xshift=-3cm] {$ \text{Firm A} $};
-				\node (FirmB) [startstop1,right of = FirmA,xshift=1cm] {$ \text{Firm B} $};
-				\node (FirmC) [startstop1,right of = FirmB,xshift=1cm] {$ \text{Firm C} $};
-				\draw [arrow] (UO) --(FirmA);
-				\draw [arrow] (UO) --(FirmB);
-				\draw [arrow] (UO) --(FirmC);
-				
-				\pause
-				
-				\node (FirmX) [startstop20,below of = FirmA,xshift=-1cm] {$ \scriptsize\text{Firm X} $};
-				
-				\node (FirmY) [startstop20,below of = FirmA,xshift=1cm] {$ \scriptsize\text{Firm Y} $};
-				
-				\node (FirmZ) [startstop20,below of = FirmB] {$ \scriptsize\text{Firm Z} $};
-				
-				\node (FirmK) [startstop20,below of = FirmC , xshift = -1cm] {$ \scriptsize\text{Firm K} $};
-				\node (FirmL) [startstop20,below of = FirmC , xshift = 1cm] {$ \scriptsize\text{Firm L} $};
-				\node (FirmM) [startstop20,below of = FirmC , yshift = -1 cm] {$ \scriptsize\text{Firm M} $};
-				
-				
-				\draw [arrow] (FirmA) --(FirmX);
-				\draw [arrow] (FirmA) --(FirmY);
-				
-				\draw [arrow] (FirmB) --(FirmZ);
-				
-				\draw [arrow] (FirmC) --(FirmK);
-				\draw [arrow] (FirmC) --(FirmL);
-				
-				\draw [arrow] (FirmK) --(FirmM);
-				\draw [arrow] (FirmL) --(FirmM);
-				
-				
-			\end{tikzpicture}
-		}
-		
-	\end{frame}
-	
-	
-	\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
-		\begin{columns}
-			\column{.5\textwidth}     
-			\centering
-			{}\\
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					\node (start) [startstop] {Ultimate Owner};
-					
-					
-					
-					\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
-					\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
-					
-					
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					
-					\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					\node (CH) [process, below of = start ,xshift=0] {Common Owner};
-					
-					
-					\draw [arrow] (start) --(end);
-					\draw [arrow] (end) --(sur);
-					
-					\draw [arrow] (start) --(end2);
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					\draw [dashed ,->] (start) --(CH);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
-					
-					
-				\end{tikzpicture}
-			}
+					\column{.33\textwidth}
+					\begin{figure}   
+						\centering
+						\includegraphics[width=\linewidth]{"MHistNFCA.eps"}  \\
+						\includegraphics[width=\linewidth]{"MHistNFCAP.eps"}   \end{figure}            
+				\end{columns}
+			\end{frame}
 			
-			\pause
-			\column{.5\textwidth}
-			\centering  
-			{}\\
-			\resizebox{\textwidth}{!}{
-				\begin{tikzpicture}[node distance=2cm]
-					
-					
-					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-					
-					
-					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-					
-					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-					
-					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-					
-					
-					
-					\draw [arrow] (start) --(end);
-					\draw [arrow] (start2) -- (end2);
-					
-					\draw [arrow] (end) --(sur);
-					\draw [arrow] (end2) -- (sur2);
-					
-					\draw [dash dot,->] (start) -- (CH);
-					\draw [dash dot,->] (start2) -- (CH);
-					
-					\draw [arrow] (CH) -- (sur);
-					\draw [arrow] (CH) -- (sur2);
-					
-					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
-					
-					
-				\end{tikzpicture}
-			} 
 			
-			\end{columns}
-	\end{frame}
-	
-	
-	
-	
-%	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
-%		\begin{columns}
-%			\column{.5\textwidth}     
-%			\centering
-%			{}\\
-%			
-%			\resizebox{\textwidth}{!}{
-%				\begin{tikzpicture}[node distance=2cm]
-%					
-%					
-%					
-%					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-%					
-%					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-%					
-%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-%					
-%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-%					
-%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-%					
-%					
-%					\draw [arrow] (end) --(sur);
-%					\draw [arrow] (end2) -- (sur2);
-%					
-%					
-%					\draw [arrow] (CH) -- (sur);
-%					\draw [arrow] (CH) -- (sur2);
-%					
-%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-%					
-%					
-%				\end{tikzpicture}
-%			} 
-%			
-%			\column{.5\textwidth}
-%			\centering  
-%			{}\\
-%			
-%			\resizebox{\textwidth}{!}{
-%				\begin{tikzpicture}[node distance=2cm]
-%					
-%					
-%					\node (start) [startstop] { $ \text{Ultimate Owner} $};
-%					
-%					
-%					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-%					
-%					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-%					
-%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-%					
-%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-%					
-%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-%					
-%					
-%					
-%					\draw [arrow] (start) --(end);
-%					
-%					\draw [arrow] (end) --(sur);
-%					\draw [arrow] (end2) -- (sur2);
-%					
-%					\draw [dash dot,->] (start) -- (CH);
-%					
-%					\draw [arrow] (CH) -- (sur);
-%					\draw [arrow] (CH) -- (sur2);
-%					
-%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-%					
-%					
-%				\end{tikzpicture}
-%			} 
-%			
-%		\end{columns}
-%	\end{frame}
-	
-	
-	
-		\begin{frame}{Data Summary}
-		\begin{itemize}
-			\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
-			\begin{itemize}
-				\item Includes of 72 Months
-				\item Consists of 618 firm inculding 562 firm with common owners
-				
-			\end{itemize}
-		\end{itemize}
-		
-		\begin{table}[htbp]
-			\centering
-			\resizebox{0.8\textwidth}{!}
-			{
-				\input{Output/summaryOfOwnership.tex}
-			}
-		\end{table}
-		
-	\end{frame}
-	
-	
-	
-	\begin{frame}{Pair Composition}
-		\begin{itemize}
-		
-			\item Pairs consist of two firms  with at least one common owner
-			\begin{itemize}
-				\item  93442 unique pairs which is 25\% of possible pairs 
-				\tiny ($ \frac{612*611}{2}= 373932 $)
-				\normalsize
-			\end{itemize}
-		\end{itemize}
-		
-		\begin{table}[htbp]
-			\centering
-			{
-				\footnotesize
-			\input{Output/numberofPairs.tex}
-				
-			}
-		\end{table}
-		
-		
-		\begin{table}
-			\resizebox{0.7\textwidth}{!}
-			{
-				\input{Output/summaryOfPairs.tex}
-			}
-		\end{table}% 
-		
-	\end{frame}  
-	
-	
-	
-
-%	\begin{frame}{Number of Pairs}
-%		\begin{figure}[htbp]
-%			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
-%		\end{figure}
-%	\end{frame}
-%	
-	
-	
-	
-	\begin{frame}{FCA vs. FCAP Summary}
-		\begin{table}[htbp]
-			\centering
-			\resizebox{0.8\textwidth}{!}
-			{
-				\input{Output/FCACal.tex}  }          
-		\end{table}%
-		\begin{block}{Results}
-			\small
-			\begin{itemize}
-				\item By the proposed measurement, common ownership increases
-				\item Common ownership is greater in pairs that  are in the same business group and insutry
-			\end{itemize}
-		\end{block}
-	\end{frame}
-	
-%	\begin{frame}{FCA's time series}
-%		\begin{figure}
-%			\centering  
-%			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
-%			
-%		\end{figure} 
-%	\end{frame}
-%
-%	\begin{frame}{FCA's time series}
-%		\begin{columns}
-%			\column{.5\textwidth}  
-%			\begin{figure}
-%				\centering  
-%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
-%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
-%			\end{figure}    
-%			\column{.5\textwidth}
-%			\begin{figure}
-%				\centering  
-%				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
-%			\end{figure}
-%          
-%		\end{columns}
-%
-%\end{frame}
-%
-%	\begin{frame}{Group affiliated firm's time series}
-%		\begin{columns}
-%	\column{.5\textwidth}  
-%	\begin{figure}
-%	\centering  
-%	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
-%	
-%\end{figure}  
-%	\column{.5\textwidth}
-%	\begin{figure}
-%	\centering  
-%	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
-%	
-%\end{figure} 
-%	
-%\end{columns}
-%\end{frame}
-
-
-
-
-
-	
-	\begin{frame}{FCA vs. FCAP Distributions}{Monthly}
-		\label{Monthly1}
-		\begin{columns}
-			\column{.33\textwidth}  
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"MHistFCA.eps"}\\
-				\includegraphics[width=\linewidth]{"MHistFCAP.eps"}
-			\end{figure}  
-		\pause   
-			\column{.33\textwidth}
-			\begin{figure}
-				\centering  
-				\includegraphics[width=\linewidth]{"MHistlnFCA.eps"}\\
-				\includegraphics[width=\linewidth]{"MHistlnFCAP.eps"}
-			\end{figure}
-		\pause
-			\column{.33\textwidth}
-			\begin{figure}   
-				\centering
-				\includegraphics[width=\linewidth]{"MHistNFCA.eps"}  \\
-				\includegraphics[width=\linewidth]{"MHistNFCAP.eps"}   \end{figure}            
-		\end{columns}
-	\end{frame}
-	
-	
 	
 	\subsection{Correlation Calculation}
 	\begin{frame}{Correlation Calculation}{4 Factor + Industry}
@@ -953,7 +907,7 @@
 		\begin{table}[htbp]
 			\centering 
 			\scriptsize
-			\resizebox{\textwidth}{!}{
+			\resizebox{0.8\textwidth}{!}{
 				\input{Output/CorrelationsResultsText.tex}              
 			}
 		\end{table}
@@ -1164,16 +1118,27 @@
 	\end{frame}
 	
 	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
-		\label{Monthly15} 
-		\begin{table}[htbp]
-			\centering
-			\resizebox{1\textwidth}{!}{
-				\input{Output/mresult2-slide.tex}
-			}
-		\end{table}
-		
-		
-	\end{frame}
+			\label{mresult2part1} 
+			\begin{table}[htbp]
+				\centering
+				\resizebox{1\textwidth}{!}{
+					\input{Output/mresult2part1-slide.tex}
+				}
+			\end{table}
+			
+			
+		\end{frame}
+	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
+			\label{mresult2part2} 
+			\begin{table}[htbp]
+				\centering
+				\resizebox{1\textwidth}{!}{
+					\input{Output/mresult2part2-slide.tex}
+				}
+			\end{table}
+			
+			
+		\end{frame}
 	
 	
 	\subsection{High level of common ownership}
@@ -1297,47 +1262,40 @@
 
 
 
-\subsection{Size effect}
+%\subsection{Size effect}
+%
+%	\begin{frame}{Grouped by size}
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.9\linewidth]{"Output/mcorrPairType.eps"}
+%		\end{figure}
+%	\end{frame}	
+%	
+%	
+%\begin{frame}{Model Estimation}{Grouped by size}
+%	\label{Monthly14} 
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textwidth}{!}{
+%			\input{Output/Qmresult4-slide.tex}
+%		}
+%	\end{table}
+%	
+%	
+%\end{frame}
+%	
+%\begin{frame}{Model Estimation}{Grouped by size}
+%	\label{Monthly14} 
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{1\textwidth}{!}{
+%			\input{Output/Qmresult4-AllPairs.tex}
+%		}
+%	\end{table}
+%	
+%	
+%\end{frame}
 
-	\begin{frame}{Grouped by size}
-		\begin{figure}
-			\centering  
-			\includegraphics[width=0.9\linewidth]{"Output/mcorrPairType.eps"}
-		\end{figure}
-	\end{frame}	
-	
-	
-\begin{frame}{Model Estimation}{Grouped by size}
-	\label{Monthly14} 
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textwidth}{!}{
-			\input{Output/Qmresult4-slide.tex}
-		}
-	\end{table}
-	
-	
-\end{frame}
-	
-\begin{frame}{Model Estimation}{Grouped by size}
-	\label{Monthly14} 
-	\begin{table}[htbp]
-		\centering
-		\resizebox{1\textwidth}{!}{
-			\input{Output/Qmresult4-AllPairs.tex}
-		}
-	\end{table}
-	
-	
-\end{frame}
-	\subsection{Common Ownership measure}
-	\begin{frame}{Common Ownership measure}	
-		\begin{table}[htbp]
-					\centering
-				\resizebox{1\textwidth}{!}{
-					\input{Output/mresult2Polk-slide.tex}}
-		\end{table}
-	\end{frame}
 	
 	
 	
@@ -1661,87 +1619,7 @@
 %	
 %	
 	\section{Evidence for correlated trading}
- \subsection{Institutional Imbalance}
-\begin{frame}{Ins Imbalance}
-
-\begin{itemize}
-	\item \cite{seasholes2007predictable}
-	
-	\begin{columns}
-		\column{0.5\linewidth}
-		\begin{equation*}
-			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
-		\end{equation*}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{\textwidth}{!}{
-			\input{Output/ImbalanceInsMeanSummary.tex}
-		}
-		\label{tab:ImbalanceInsMeanSummary}
-	\end{table}
-		\column{0.5\linewidth}
-			\begin{equation*}
-			Imbalance_{ind} = \frac{Buy_{ind} - Sell_{ind}}{Buy_{ind} + Sell_{ind}}
-		\end{equation*}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{\textwidth}{!}{
-			\input{Output/ImbalanceIndMeanSummary.tex}
-		}
-		\label{tab:ImbalanceIndMeanSummary}
-	\end{table}
-	\end{columns}
-	
-	
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Ins Imbalance}
-\begin{columns}
-	\column{0.5\linewidth}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{\textwidth}{!}{
-			\input{Output/ImbalanceInsStdSummary.tex}
-		}
-		\label{tab:ImbalanceInsStdSummary}
-	\end{table}
- 	\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.85\linewidth]{Output/GroupedIndSTD.eps}
-	\label{fig:GroupedIndSTD}
-\end{figure}
-
-	\column{0.5\linewidth}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{\textwidth}{!}{
-			\input{Output/ImbalanceInsStdSummary.tex}
-		}
-		\label{tab:ImbalanceInsStdSummary}
-	\end{table}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
-	\label{fig:GroupedInsSTD}
-\end{figure}
-\end{columns}
-\end{frame}
-\begin{frame}{Ins Imbalance}
-
-
-				\begin{table}[htbp]
-			\centering
-			\resizebox{1\textwidth}{!}{
-				\input{Output/Imbalance.tex}
-			}
-		\end{table}
-	
-	\end{frame}
-
-\subsection{Turnover}
+ \subsection{Turnover}
 	\begin{frame}{TrunOver}
 	
 \begin{itemize}
@@ -1753,7 +1631,7 @@
 		\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
 	\end{equation*}
 
-	
+	\pause
 	\begin{table}[htbp]
 		\centering
 		\resizebox{0.95\textheight}{!}{
@@ -1762,12 +1640,12 @@
 	\end{table}
 	
 \end{frame}
-\begin{frame}{Cross-sectional analyze of Group trunover}
+\begin{frame}{High Beta Group}
 	\begin{table}[htbp]
 \centering
 		\resizebox{0.95\textwidth}{!}{
 			\centering
-			\input{Output/Turnovercrosssection.tex}
+			\input{Output/HighBeta.tex}
 		}
 		\label{Turnovercrosssection}
 	\end{table}
@@ -1783,88 +1661,74 @@
 		\label{mresult2-turnover}
 	\end{table}
 \end{frame}
-\subsection{Big business group}
-	\begin{frame}{Big Business group}
+	\begin{frame}{Turn over and Comovement}
 		\begin{table}[htbp]
 			\centering
-			\resizebox{0.75\textheight}{!}{
+			\resizebox{\textheight}{!}{
 				\input{Output/mresult2-BigBusinessGroup.tex}
 			}
 		\end{table}
 	\end{frame}
 
-%\begin{frame}{Bearish/Bullish Market}{}
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{1\textheight}{!}{
-%			\input{Output/mresult2Down-slide2.tex}
-%		}
-%	\end{table}
-%\end{frame}
-%
-%\begin{frame}{Amihud}
-%	
-%	\begin{equation*}
-%		\Delta \text{Amihud} = \ln(\frac{\text{Amihud}_{i,t}}{\text{Amihud}_{i,t-1}}) = 
-%		\ln({\frac{|\text{Return}_{i,t}|}{\text{volume}_{i,t}}}) - \ln({\frac{|\text{Return}_{i,t-1}|}{\text{volume}_{i,t-1}}})
-%	\end{equation*}
-%
-%	\begin{table}[htbp]
-%	\centering
-%	\resizebox{0.9\textheight}{!}{
-%		\input{Amihud.tex}
-%	}
-%\end{table}
-%	
-%	
-%\end{frame}
-%
-%
-%\begin{frame}{Cross-sectional analyze of Group Amihud }
-%		\begin{table}[htbp]
-%		\centering
-%		\resizebox{0.95\textwidth}{!}{
-%			\centering
-%			\input{Amihudcrosssection.tex}
-%		}
-%		\label{Amihudcrosssection}
-%	\end{table}
-%	
-%\end{frame}
-%
-%
-%\begin{frame}{Pairwise correlations in liquidity }
-%	\begin{table}[htbp]
-%		\centering
-%		\resizebox{0.95\textwidth}{!}{
-%			\centering
-%			\input{mresult2-liquidity.tex}
-%		}
-%		\label{mresult2-liquidity}
-%	\end{table}
-%	
-%\end{frame}
-%
-%
-%	\begin{frame}{Trading}{}
-%		\begin{itemize}
-%			\item \cite{anton2018dealing}:
-%			\begin{equation*}
-%				\begin{array}{l}
-%					CQ_{ijt} = \sum_{d=1}^{D_t}\omega_{dt}corr(NQ_{idt},NQ_{jdt})
-%					\\\\
-%					\omega_{dt} = \frac{\min (TQ_{idt},TQ_{jdt})}{\sum_{d=1}^D \min(TQ_{idt},TQ_{jdt}) }
-%				\end{array}
-%			\end{equation*}
-%		\item \cite{ivashina2011institutional}:
-%		\begin{equation*}
-%			\frac{1}{N}\sum_{i = 1}^N\frac{\sum_{j = 1}^{M_i} D_{ji}CAR_i}{M_i}
-%		\end{equation*}
-%		\end{itemize}
-%	\end{frame}
-%	
 	
 	
+\subsection{Institutional Imbalance}
+\begin{frame}{Ins Imbalance}
+
+\begin{itemize}
+	\item \cite{seasholes2007predictable}
+	
+		\begin{equation*}
+			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+		\end{equation*}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ImbalanceInsMeanSummary.tex}
+		}
+		\label{tab:ImbalanceInsMeanSummary}
+	\end{table}
+		
+	
+	
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Ins Imbalance std}
+%\begin{columns}
+%	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.85\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+
+
+%	\column{0.5\linewidth}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+	\label{fig:GroupedInsSTD}
+\end{figure}
+%\end{columns}
+\end{frame}
+\begin{frame}{Low Ins Imbalance Group}
+
+
+				\begin{table}[htbp]
+			\centering
+			\resizebox{0.8\textwidth}{!}{
+				\input{Output/Imbalance.tex}
+			}
+		\end{table}
+	
+	\end{frame}
+
 	
 	\section{Conclusion}
 	
@@ -1936,88 +1800,165 @@
 		
 	\end{frame}
 	
-	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
-		\begin{tikzpicture}[node distance=1cm]
 			
-			
-			\node (Firm) [startstop3] {\tiny Firm X};
-			\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+			\begin{frame}{Measuring Common-ownership}\label{Intuition}
+				\cite{AntonPolk}
+				\begin{align*}
+					\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
+				\end{align*}
 			\pause
-			\node (Owner) [startstop3,above of = Firm , yshift=1.75cm , xshift=-3.5cm ] {\tiny Common owner 1 };
-			
-			
-			\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
-			
-			\node (Owner3) [startstop3,below of = Firm , yshift=-1.75cm , xshift=-3.5cm ] {\tiny Common owner 3 };
-			
+				\begin{columns}
+					\column{.5\textwidth}     
+					\centering
+					SQRT
+					\begin{align*}
+						\boxed{              [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+					\end{align*}     
+				             
+					\column{.5\textwidth}
+					\centering  
+					Quadratic
+					\begin{align*}
+						\boxed{    [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}}
+					\end{align*}
+				\end{columns}
 			\pause
+				\begin{block}{Intuition}
+					If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
+					\hyperlink{Proof}{\beamerbutton{Proof}}
+				\end{block}
+				
+			\end{frame}
 			
 			
 			
-			\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
 			
-			\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
-			
+			\begin{frame}{Measuring Common Ownership}{Example}
+				
+				\begin{figure}[htbp]
+					\begin{tikzpicture}[node distance=1cm]
+						
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=0cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+						
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+						%
+						%\node() at (3,0)
+						%    {$ \alpha + \beta = 100 $}; 
+					\end{tikzpicture}
+					
+				\end{figure}\bigskip
+				\pause
+				\begin{itemize}
+					\item[] For better observation, assume that 
+					\begin{itemize}
+						\item $ \alpha + \beta = 100 $\\
+						\item both firm have equal market cap
+					\end{itemize} 
+				\end{itemize}
 			\pause
-			
-			\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
-			
-			\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
-			
-			
-			
-			\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
-			
-			\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+				\begin{figure}[htbp]
+					\includegraphics[width=0.47\linewidth]{1.png}
+					\includegraphics[width=0.47\linewidth]{2.png}
+					\captionsetup{labelformat=empty}
+					\caption{\scriptsize Comparison of three methods for calculating common ownership}
+				\end{figure}
+			\end{frame}
 			
 			
-			
-		\end{tikzpicture}
+			\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+				\begin{tikzpicture}[node distance=1cm]
+					
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+					\pause
+					\node (Owner) [startstop3,above of = Firm , yshift=1.75cm , xshift=-3.5cm ] {\tiny Common owner 1 };
 		
-	\end{frame}
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Example of three common owner}
-		\begin{table}[htbp]
-			\centering
-			\resizebox{0.9\textwidth}{!}
-			{
-				\input{Example2}
-			}
-		\end{table}
+					
+					\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
+					
+					\node (Owner3) [startstop3,below of = Firm , yshift=-1.75cm , xshift=-3.5cm ] {\tiny Common owner 3 };
+					
+					\pause
+					
+					
+					
+					\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
+					
+					\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
+					
+					\pause
+					
+					\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
+					
+					\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
+					
+					
+					
+					\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
+					
+					\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+					
+					
+					
+				\end{tikzpicture}
+				
+			\end{frame}
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+				\begin{table}[htbp]
+					\centering
+					\resizebox{0.9\textwidth}{!}
+					{
+						\input{Example2}
+					}
+				\end{table}
+				
+			\end{frame}
+			
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Comparison}
+				\begin{itemize}
+					\item For better comparison we relax previous assumptions:
+					\begin{itemize}
+						\item Two Firms with different market caps.
+					\end{itemize}
+				\end{itemize}
+				\resizebox{0.7\textwidth}{!}
+				{
+					\input{marketcap}
+				}
+				
+				
+			\end{frame}
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Comparison}
+				\begin{figure}[htbp]
+					\includegraphics[width=0.47\linewidth]{3.png}
+					\includegraphics[width=0.47\linewidth]{4.png}
+					\captionsetup{labelformat=empty}
+					\caption{\scriptsize Comparison of two methods for calculating common ownership}
+				\end{figure}
+				\begin{block}{Conclusion}
+					We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
+				\end{block}
+			\end{frame}
+		\begin{frame}{Common Ownership measure}	
+			\begin{table}[htbp]
+						\centering
+					\resizebox{1\textwidth}{!}{
+						\input{Output/mresult2Polk-slide.tex}}
+			\end{table}
+		\end{frame}	
 		
-	\end{frame}
-	
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Comparison}
-		\begin{itemize}
-			\item For better comparison we relax previous assumptions:
-			\begin{itemize}
-				\item Two Firms with different market caps.
-			\end{itemize}
-		\end{itemize}
-		\resizebox{0.7\textwidth}{!}
-		{
-			\input{marketcap}
-		}
-		
-		
-	\end{frame}
-	
-	
-	\begin{frame}{Measuring Common Ownership}{Comparison}
-		\begin{figure}[htbp]
-			\includegraphics[width=0.47\linewidth]{3.png}
-			\includegraphics[width=0.47\linewidth]{4.png}
-			\captionsetup{labelformat=empty}
-			\caption{\scriptsize Comparison of two methods for calculating common ownership}
-		\end{figure}
-		\begin{block}{Conclusion}
-			We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
-		\end{block}
-	\end{frame}
-	
 	
 	\section{Appendix II}
 	\begin{frame}{Main Effect}\label{maineffect}
