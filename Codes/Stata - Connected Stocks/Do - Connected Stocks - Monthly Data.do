@@ -56,6 +56,7 @@ label variable monthlyρ_6 " $ {\rho_t} $ "
 label variable monthlyρlag_5 " $ {\rho_t} $ "
 
 label variable monthlyρ_turn " $ {\rho(\Delta \text{TurnOver})_t} $ "
+label variable monthlyρ_turn_f " $ {\rho(\Delta \text{TurnOver})_{t+1}} $ "
 
 
 label variable monthlyρ_5_1 " $ {\rho_{t-1}} $ "
