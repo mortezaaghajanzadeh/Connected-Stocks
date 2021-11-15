@@ -582,3 +582,39 @@ esttab   v0 v1 v11 v111     v13  v2 , nomtitle label s( N GroupFE r2 ,  lab("Obs
 
 esttab   v0 v01 v1 v11 v2 v21 v3 v31 v4 v41, nomtitle label   s( N GroupFE Measure r2 ,  lab("Observations" "Group FE" "Measurement" "$ R^2 $"))  keep(vv sbgroup Gvv  sgroup monthlysamesize monthlysamebm monthlycrossownership) order(vv sbgroup Gvv) compress   mgroups("Dependent Variable: Future Monthly Correlation of 4F+Industry Residuals"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2Polk-slide.tex ,replace
 }
+
+
+{
+eststo v1 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+
+	eststo v2 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup positivesynch   i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+
+	eststo v3 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup positivesynch Grouphpositivesynch  i.PairType, fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "No" , replace
+	estadd loc FE "Yes" , replace
+	
+	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup positivesynch Grouphpositivesynch   i.PairType gdummy0-gdummy47  , fmb newey(4)
+	estadd loc controll "Yes" , replace
+	estadd loc subsample "Total" , replace
+	estadd loc GroupFE "Yes" , replace
+	estadd loc FE "Yes" , replace
+	
+	
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup positivesynch Grouphpositivesynch /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup positivesynch Grouphpositivesynch /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+
+
+	esttab   v1 v2 v3 v6 /* v7 v8 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup positivesynch Grouphpositivesynch /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA*/ ) order(/*NMFCA */ sbgroup positivesynch Grouphpositivesynch /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA*/) s( N GroupFE FE  subsample controll r2 ,  lab("Observations" "Group Effect" "Pair Size FE" "Sub-sample" "Controls" "$ R^2 $"))compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using PostiveSynch.tex ,replace
+
+
+
+}

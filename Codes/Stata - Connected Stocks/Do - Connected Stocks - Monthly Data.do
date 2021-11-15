@@ -333,5 +333,9 @@ label variable highbeta "HighBetaGroup"
 gen Grouphighbeta = highbeta * sbgroup
 label variable Grouphighbeta "$ {\text{HighBetaGroup} } \times {\text{SameGroup} }  $ "
 
+label variable positivesynch "High Positive direction"
+
+gen Grouphpositivesynch = positivesynch * sbgroup
+label variable Grouphpositivesynch "$ {\text{High Positive direction} } \times {\text{SameGroup} }  $ "
 
 
