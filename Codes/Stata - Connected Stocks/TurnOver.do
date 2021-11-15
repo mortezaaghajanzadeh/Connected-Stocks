@@ -24,7 +24,12 @@ label variable deltaindustry " $ \Delta \text{TurnOver}_{\text{Industry-i}} $ "
 
 
 
+cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 
+quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket,fmb newey(7) first  save(FirstStageTurnover)
+
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 eststo v1: quietly asreg deltatrun deltamarket deltaindustry   , fmb newey(7)
 estadd loc weight "-" , replace
@@ -46,12 +51,7 @@ estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "Yes",replace
 
 
-cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 
-quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket,fmb newey(7) first  save(FirstStageTurnover)
-
-// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
 
 
 replace deltagroup = delta_justmarketgroup
@@ -67,15 +67,16 @@ eststo v31: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarke
 estadd loc weight " $ \text{MC} $ " , replace
 estadd loc control "Yes",replace
 
+asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket, fmb newey(7)
 
   
-
-  
   
 
-esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using turnover.tex ,replace
 
-,using turnover.tex ,replace
+
+
+
 
 
 

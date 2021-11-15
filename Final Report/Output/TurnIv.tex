@@ -1,0 +1,36 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    & First Stage         &Reduced form         &Second Stage         \\
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\hline
+SameIndustry        &      0.0285\sym{***}&     0.00133         &                     \\
+                    &     (14.59)         &      (1.09)         &                     \\
+[1em]
+ $ {\rho(\Delta \text{TurnOver})_{t+1}} $ &                     &                     &      0.0805\sym{*}  \\
+                    &                     &                     &      (2.45)         \\
+[1em]
+Same Group          &      0.0242\sym{***}&      0.0167\sym{***}&      0.0174\sym{***}\\
+                    &     (10.73)         &      (9.72)         &     (10.40)         \\
+[1em]
+SameSize            &      0.0332\sym{***}&      0.0158\sym{***}&      0.0160\sym{***}\\
+                    &      (3.47)         &      (5.67)         &      (9.18)         \\
+[1em]
+SameBookToMarket    &      0.0183\sym{***}&     0.00711\sym{***}&     0.00554\sym{***}\\
+                    &      (4.38)         &      (4.46)         &      (4.48)         \\
+[1em]
+CrossOwnership      &      0.0393\sym{***}&      0.0172         &      0.0165\sym{*}  \\
+                    &      (3.52)         &      (1.59)         &      (2.13)         \\
+\hline
+Observations        &     1341445         &     1665996         &     1447736         \\
+Method              &          FE         &          FE         &        2sls         \\
+Group FE            &         Yes         &         Yes         &         Yes         \\
+Pair Size Control   &         Yes         &         Yes         &         Yes         \\
+Lag of Dep. Var.    &         Yes         &         Yes         &         Yes         \\
+$ R^2$              &     0.00231         &     0.00111         &                     \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

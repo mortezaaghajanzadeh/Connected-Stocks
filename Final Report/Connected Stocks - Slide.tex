@@ -1089,7 +1089,7 @@
 	
 	\subsection{Normalized Rank-Transformed}
 	
-	\begin{frame}{Future Correlation via $ FCA $}{Normalized Rank-Transformed}
+	\begin{frame}{Future Correlation via $ MFCAP $}{Normalized Rank-Transformed}
 		\label{Monthly16} 
 		\begin{columns}
 			\column{.5\textwidth}  
@@ -1144,7 +1144,7 @@
 	
 	\subsection{High level of common ownership}
 	
-	\begin{frame}{ Future Correlation via $ FCA $}{Discontinuity}\label{Monthly5}
+	\begin{frame}{ Future Correlation via $ MFCAP $}{Discontinuity}\label{Monthly5}
 		
 		
 		
@@ -1189,7 +1189,7 @@
 		
 	%
 	%
-		\begin{frame}{ 4 Factor + Industry Future  Correlation via $ FCA^* $}{Discontinuity \&  Business Groups}\label{Monthly19}
+		\begin{frame}{ 4 Factor + Industry Future  Correlation via $ MFCAP^* $}{Discontinuity \&  Business Groups}\label{Monthly19}
 		
 		
 		
@@ -1304,6 +1304,36 @@
 		\label{mresult2-turnover}
 	\end{table}
 \end{frame}
+\begin{frame}{Turnover or Co-movement?}
+\begin{itemize}
+
+\item Same Industry instrumental variable for $\rho(\Delta \text{TurnOver})_{t+1}$
+\begin{itemize}
+\item \textbf{Relevance}: First stage 
+\item \textbf{Exogeneity}: Trade cannot affect firms' industry
+\item \textbf{Exclusion restriction}: We eliminate return of industry from co-movement calculation
+\end{itemize}
+%\item \textbf{First Stage} : 
+%\input{FirstStage.tex}
+%\item \textbf{Reduced Form} : 
+%\input{ReducedForm.tex}
+%
+%\item \textbf{Second Stage} : 
+%\input{SecondStage.tex}
+\end{itemize}
+\end{frame}
+\begin{frame}{Turnover or Co-movement?}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.6\textwidth}{!}{
+			\centering
+			\input{Output/TurnIv.tex}
+		}
+		\label{TurnIv}
+	\end{table}
+\end{frame}
+
+
 	\begin{frame}{Turn over and Comovement}
 		\begin{table}[htbp]
 			\centering

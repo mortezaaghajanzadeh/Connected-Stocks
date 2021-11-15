@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  14 NOV 2021 16:34
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  15 NOV 2021 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1151,10 +1151,29 @@ Overfull \hbox (3.06392pt too wide) in paragraph at lines 1353--1
  همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
 
-) [24] (./Output/mresult2-turnover.tex) [25]
-(./Output/mresult2-BigBusinessGroup.tex) [26] [27]
-(./Output/ImbalanceInsMeanSummary.tex) (./Output/ImbalanceInsStdSummary.tex)
-[28]
+) [24] (./Output/mresult2-turnover.tex)
+Overfull \hbox (5.44673pt too wide) in paragraph at lines 1401--1405
+[][]\TU/XBZar.ttf(0)/b/n/12 از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای
+ هم بستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
+ []
+
+[25] (./FirstStage.tex
+Overfull \hbox (39.11026pt too wide) detected at line 6
+[]
+ []
+
+
+Overfull \hbox (78.8399pt too wide) detected at line 6
+[]
+ []
+
+) (./ReducedForm.tex) (./SecondStage.tex) (./Output/TurnIv.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1439--1440
+[] []
+ []
+
+[26] [27] (./Output/ImbalanceInsMeanSummary.tex)
+(./Output/ImbalanceInsStdSummary.tex) [28]
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
  (./Model13.tex
@@ -1290,13 +1309,13 @@ File: 4.png Graphic file (type bmp)
 <4.png>
  (./marketcap.tex) [37] [38]
 (./Output/mresult2Polk-slide.tex)
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 1906--1906
+Overfull \hbox (23.17839pt too wide) in paragraph at lines 1955--1955
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
 [39]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1940--1942
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 1989--1991
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1309,11 +1328,11 @@ File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
  [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1994.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1994.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2043.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2043.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1994.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1994.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2043.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2043.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1325,13 +1344,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1994.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2043.
  ) 
 Here is how much of TeX's memory you used:
- 27575 strings out of 479418
- 554747 string characters out of 5888105
+ 27590 strings out of 479418
+ 554892 string characters out of 5888105
  977587 words of memory out of 5000000
- 44457 multiletter control sequences out of 15000+600000
+ 44463 multiletter control sequences out of 15000+600000
  540079 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
