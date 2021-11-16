@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  15 NOV 2021 14:56
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  16 NOV 2021 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1093,15 +1093,15 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 ]
 [2] [3] [4] [5] (./Output/summaryOfOwnership.tex) [6]
-(./Output/summaryOfPairs.tex) [7] [8] [9] (./MeasurmentLit.tex
+(./Output/summaryOfPairs.tex) [7] [8] (./MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-) [10]
+) [9] [10]
 (./Output/FCACal.tex) [11] (./Output/CorrelationsResultsText.tex) [12
 
 
 ]
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 886--888
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 875--877
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
@@ -1120,7 +1120,7 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
 
 (./Output/QTimemresult2subsample-slide.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1107--1108
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1096--1097
 [][] []
  []
 
@@ -1128,7 +1128,7 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
  [20] (./Output/Q3mresultAllPairs.tex) [21] [22]
-Overfull \hbox (25.6144pt too wide) detected at line 1298
+Overfull \hbox (25.6144pt too wide) detected at line 1284
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1146,18 +1146,24 @@ Overfull \hbox (30.0pt too wide) detected at line 6
 ) (./turnover.tex) [23
 
 ] (./Model14.tex
-Overfull \hbox (3.06392pt too wide) in paragraph at lines 1353--1
+Overfull \hbox (3.06392pt too wide) in paragraph at lines 1339--1
 [][]\TU/XBZar.ttf(0)/b/n/12 در مدل اصلی به جای پیش بینی هم حرکتی بازده آبنده از
  همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
 
-) [24] (./Output/mresult2-turnover.tex)
-Overfull \hbox (5.44673pt too wide) in paragraph at lines 1401--1405
+) (./Output/mresult2-turnover.tex) [24]
+Overfull \hbox (1.09364pt too wide) in paragraph at lines 1374--1378
+[][]\TU/XBZar.ttf(0)/b/n/12 با توجه به بررسی ها داریم عضویت در گروه کسب و کار س
+بب همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
+ []
+
+
+Overfull \hbox (5.44673pt too wide) in paragraph at lines 1383--1387
 [][]\TU/XBZar.ttf(0)/b/n/12 از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای
  هم بستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
 
-[25] (./FirstStage.tex
+(./FirstStage.tex
 Overfull \hbox (39.11026pt too wide) detected at line 6
 []
  []
@@ -1167,16 +1173,16 @@ Overfull \hbox (78.8399pt too wide) detected at line 6
 []
  []
 
-) (./ReducedForm.tex) (./SecondStage.tex) (./Output/TurnIv.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1439--1440
+[25]) (./ReducedForm.tex) (./SecondStage.tex) (./Output/TurnIv.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1421--1422
 [] []
  []
 
 [26] [27] (./Output/ImbalanceInsMeanSummary.tex)
-(./Output/ImbalanceInsStdSummary.tex) [28]
+(./Output/ImbalanceInsStdSummary.tex)
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
- (./Model13.tex
+ [28] (./Model13.tex
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/sl' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 1.
@@ -1309,13 +1315,13 @@ File: 4.png Graphic file (type bmp)
 <4.png>
  (./marketcap.tex) [37] [38]
 (./Output/mresult2Polk-slide.tex)
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 1955--1955
+Overfull \hbox (23.17839pt too wide) in paragraph at lines 1936--1936
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
 [39]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1989--1991
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 1970--1972
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1328,11 +1334,11 @@ File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
  [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2043.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2043.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2024.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2024.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2043.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2043.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2024.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2024.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1344,7 +1350,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2043.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2024.
  ) 
 Here is how much of TeX's memory you used:
  27590 strings out of 479418

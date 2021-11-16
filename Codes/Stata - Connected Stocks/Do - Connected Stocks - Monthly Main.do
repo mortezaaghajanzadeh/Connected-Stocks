@@ -336,3 +336,7 @@ corr sbgroup  sgroup
 
 xtset id t_month  
  }
+ 
+ 
+ 
+ xtivreg monthlyρ_turn_f  sbgroup monthlyρ_turn  monthlysamesize monthlysamebm monthlycrossownership i.PairType gdummy0-gdummy47 ( monthlyρ_5_f = sgroup)  , fe 

@@ -35,7 +35,7 @@
 	April\or May \or June\or July\or August\or September\or October\or November\or %
 	December\fi, \number \year} 
 
-\title[Connected Stocks ]{How are stocks connected? }
+\title[How are stocks connected? ]{How are stocks connected?}
 \subtitle{Evidence from an emerging market}
 %\subtitle{}
 \author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
@@ -101,7 +101,7 @@
 					\item We connect stocks through the ultimate owner for indirect common ownership
 				\end{itemize}
 				\item We focus on excess return co-movement for a pair of the stocks
-				\item We use common ownership to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
+				\item We use common ownership (direct or indirect) to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
 				\item We demonstrate that correlated trading can be a channel of co-movement
 			\end{itemize}
 		\end{itemize}
@@ -305,7 +305,7 @@
 			\item 
 			We use daily records of block-holder ownership for firms
 			\item We are not restricted to mutual funds ownership
-			\item Furthermore, 80\% of market belongs to the business groups
+			\item Furthermore, 85\% of market belongs to the business groups
 			\begin{itemize}
 				\item Would business groups be able to raise the co-movement of stock returns?
 				\begin{itemize}
@@ -693,83 +693,83 @@
 		
 	
 	\subsection{Measuring Common-ownership}
-	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
-			\begin{columns}[t]
-				\column{0.5\textwidth}  
-				\centering
-				Model based measures
-				\\
-				
-				\begin{itemize}
-					\item \color{blue} \scriptsize $
-					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
-					\normalcolor
-					\tiny 
-					
-					\cite{harford2011institutional}
-					
-					
-					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
-					
-					\cite{azar2018anticompetitive}
-					
-					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
-					
-					\cite{anton2020common} 
-					
-					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
-					
-					\cite{backus2020theory}
-					
-					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
-					
-					\cite{gilje2020s} , \cite{Lewellen2021}
-					
-					
-					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
-					
-					\cite{LEWELLEN2021b}
-					\normalsize
-					
-					
-					
-				\end{itemize}
-				
-				
-				\pause
-				\column{0.5\textwidth}
-				\centering
-				Ad-hoc measures
-				\begin{itemize}
-					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
-					\tiny\cite{AntonPolk} \\ 
-					
-					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
-					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
-					
-					
-					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
-					\tiny \cite{newham2018common}  \\ 
-					
-					
-					
-					
-					
-					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
-					
-					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
-					
-				\end{itemize}
-				
-			\end{columns}
-			\pause
-			\begin{block}{\scriptsize Selected measure }
-				\scriptsize
-				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
-			\end{block}
-			\hfill
-			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
-		\end{frame}
+%	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+%			\begin{columns}[t]
+%				\column{0.5\textwidth}  
+%				\centering
+%				Model based measures
+%				\\
+%				
+%				\begin{itemize}
+%					\item \color{blue} \scriptsize $
+%					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+%					\normalcolor
+%					\tiny 
+%					
+%					\cite{harford2011institutional}
+%					
+%					
+%					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+%					
+%					\cite{azar2018anticompetitive}
+%					
+%					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+%					
+%					\cite{anton2020common} 
+%					
+%					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+%					
+%					\cite{backus2020theory}
+%					
+%					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+%					
+%					\cite{gilje2020s} , \cite{Lewellen2021}
+%					
+%					
+%					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+%					
+%					\cite{LEWELLEN2021b}
+%					\normalsize
+%					
+%					
+%					
+%				\end{itemize}
+%				
+%				
+%				\pause
+%				\column{0.5\textwidth}
+%				\centering
+%				Ad-hoc measures
+%				\begin{itemize}
+%					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+%					\tiny\cite{AntonPolk} \\ 
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+%					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+%					
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+%					\tiny \cite{newham2018common}  \\ 
+%					
+%					
+%					
+%					
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+%					
+%					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+%					
+%				\end{itemize}
+%				
+%			\end{columns}
+%			\pause
+%			\begin{block}{\scriptsize Selected measure }
+%				\scriptsize
+%				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+%			\end{block}
+%			\hfill
+%			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+%		\end{frame}
 
 	\begin{frame}{Measuring Common-ownership}\label{Intuition}
 				\begin{columns}
@@ -843,29 +843,29 @@
 	\subsection{Correlation Calculation}
 	\begin{frame}{Correlation Calculation}{4 Factor + Industry}
 		
-		\begin{enumerate}
+		\begin{enumerate}\footnotesize
 			\item Frist Step:\\
-			\footnotesize
-			Estimate each of these models on periods of three month:
+			\scriptsize
+			Estimate this model on periods of three month (From two months earlier):
 			\begin{itemize}
-				\item CAPM + Industry (2 Factor): 
-				\begin{equation*}
-					\begin{split}
-						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \boxed{\varepsilon_{i,t}}
-					\end{split}
-					\label{e12}
-				\end{equation*}
-				\item 4 Factor : 
-				\begin{equation*}
-					\begin{split}
-						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \\
-						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
-					\end{split}
-					\label{e11}
-				\end{equation*}
+%				\item CAPM + Industry (2 Factor): 
+%				\begin{equation*}
+%					\begin{split}
+%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \boxed{\varepsilon_{i,t}}
+%					\end{split}
+%					\label{e12}
+%				\end{equation*}
+%				\item 4 Factor : 
+%				\begin{equation*}
+%					\begin{split}
+%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \\
+%						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
+%					\end{split}
+%					\label{e11}
+%				\end{equation*}
 				
-				\item 4 Factor + Industry (5 Factor) : 
-				\begin{equation*}
+				\item 4 Factor + Industry : 
+				\begin{equation*}\footnotesize
 					\begin{split}
 						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} \\
 						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
@@ -873,12 +873,26 @@
 					\label{e10}
 				\end{equation*}
 			\end{itemize}
-			\normalsize
+			
 			\item Second Step:\\
-			\footnotesize
+			\scriptsize
 			Calculate monthly correlation of each stock pair’s daily abnormal returns (residuals)
 			
 		\end{enumerate}
+		
+			\begin{table}[htbp]
+					\centering 
+					\scriptsize
+					\resizebox{0.7\textwidth}{!}{
+						\input{Output/CorrelationsResultsText.tex}              
+					}
+				\end{table}
+				
+				
+				\begin{block}{Conclusion}
+					\scriptsize
+					We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
+				\end{block}
 		
 	\end{frame}
 	%   
@@ -886,7 +900,7 @@
 	%   
 	%
 	%   
-	\begin{frame}{Correlation Calculation Results}
+%	\begin{frame}{Correlation Calculation Results}
 		
 		
 %		\begin{table}[htbp]
@@ -905,23 +919,23 @@
 %		
 		
 		
-		\begin{table}[htbp]
-			\centering 
-			\scriptsize
-			\resizebox{0.8\textwidth}{!}{
-				\input{Output/CorrelationsResultsText.tex}              
-			}
-		\end{table}
-		
-		
-		\begin{block}{Conclusion}
-			\scriptsize
-			We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
-		\end{block}
-	\end{frame}
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			\resizebox{0.8\textwidth}{!}{
+%				\input{Output/CorrelationsResultsText.tex}              
+%			}
+%		\end{table}
+%		
+%		
+%		\begin{block}{Conclusion}
+%			\scriptsize
+%			We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
+%		\end{block}
+%	\end{frame}
 	
 	
-	\begin{frame}{Future Correlation via $ FCA $}
+	\begin{frame}{Future Correlation via $ MFCAP $}
 		\begin{figure}
 			\centering  
 			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
@@ -962,29 +976,29 @@
 		\end{figure}
 	\end{frame}
 	
-	\begin{frame}{Business group}{Pairs' characteristic}
-		\begin{figure}[htbp]
-			\includegraphics[width=0.6\linewidth]{Output/BGSummary.eps}
-			
-		\end{figure}
-	\end{frame}
+%	\begin{frame}{Business group}{Pairs' characteristic}
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.6\linewidth]{Output/BGSummary.eps}
+%			
+%		\end{figure}
+%	\end{frame}
 	
 	
 	
 	
-	\begin{frame}{Summary of Controls}{Variables' distribution } \label{Monthly2}
-
-		
-		\begin{table}[htbp]
-			\centering 
-			\scriptsize
-			{
-				\input{Output/ControlsSummary.tex}
-			}
-		\end{table}
-		
-		
-	\end{frame}
+%	\begin{frame}{Summary of Controls}{Variables' distribution } \label{Monthly2}
+%
+%		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			{
+%				\input{Output/ControlsSummary.tex}
+%			}
+%		\end{table}
+%		
+%		
+%	\end{frame}
 	
 	%\begin{frame}{Regression Summary}
 	%\begin{itemize}
@@ -1334,14 +1348,14 @@
 \end{frame}
 
 
-	\begin{frame}{Turn over and Comovement}
-		\begin{table}[htbp]
-			\centering
-			\resizebox{\textheight}{!}{
-				\input{Output/mresult2-BigBusinessGroup.tex}
-			}
-		\end{table}
-	\end{frame}
+%	\begin{frame}{Turn over and Comovement}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{\textheight}{!}{
+%				\input{Output/mresult2-BigBusinessGroup.tex}
+%			}
+%		\end{table}
+%	\end{frame}
 
 	
 	
@@ -1408,14 +1422,14 @@
 	\begin{frame}{Conclusion}
 		\begin{itemize}
 			
-			\item We derive a measure that captures the extent of common ownership distribution.
+%			\item We derive a measure that captures the extent of common ownership distribution.
 			
 			
 			\item Direct common ownership can affect firms' co-movement
 			\item 
 			Firms in the business groups co-move more than other pairs
 			\item Direct common ownership only matters for firms in the business groups
-			\item Firms in the same business group trade in one way
+			\item Firms in the same business group trade together
 			
 		\end{itemize}
 	\end{frame}
