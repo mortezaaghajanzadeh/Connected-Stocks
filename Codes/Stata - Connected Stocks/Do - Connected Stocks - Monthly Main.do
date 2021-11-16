@@ -309,6 +309,7 @@ esttab v1 v5 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Ob
 
 xtset t_month id
 
+
 eststo v1 : quietly xtreg monthlyρ_5_f monthlyρ_5 sbgroup  monthlycrossownership sgroup  monthlysamesize monthlysamebm  i.PairType gdummy0-gdummy47 ,fe robust
 estadd loc FE "Yes" , replace
 estadd loc lag "Yes" , replace

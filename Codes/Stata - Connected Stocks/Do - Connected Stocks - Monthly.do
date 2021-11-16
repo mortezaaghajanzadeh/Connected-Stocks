@@ -1,5 +1,7 @@
 
-asreg monthlyρ_4_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership if monthlyρ_5_f != 1 & monthlyρ_5_f != -1, fmb newey(4)
+
+xtset id t_month 
+asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 
 gen xxx = ln(monthlyρ_5_f/(1-monthlyρ_5_f))
 
