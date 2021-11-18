@@ -13,11 +13,11 @@
 \beamer@subsectionintoc {5}{3}{All pairs}{48}{0}{5}
 \beamer@sectionintoc {6}{Evidence for correlated trading}{49}{0}{6}
 \beamer@subsectionintoc {6}{1}{Turnover}{50}{0}{6}
-\beamer@subsectionintoc {6}{2}{Institutional Imbalance}{57}{0}{6}
-\beamer@sectionintoc {7}{Conclusion}{60}{0}{7}
-\beamer@sectionintoc {9}{Appendix I}{64}{1}{8}
-\beamer@sectionintoc {10}{Appendix II}{80}{1}{9}
-\beamer@subsectionintoc {10}{1}{Synchronicity and firm interlocks}{82}{1}{9}
-\beamer@subsectionintoc {10}{2}{Large controlling shareholder and stock price synchronicity}{83}{1}{9}
-\beamer@subsectionintoc {10}{3}{Connected Stocks}{84}{1}{9}
-\beamer@subsectionintoc {10}{4}{Measures' Detail}{85}{1}{9}
+\beamer@subsectionintoc {6}{2}{Institutional Imbalance}{56}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{59}{0}{7}
+\beamer@sectionintoc {9}{Appendix I}{63}{1}{8}
+\beamer@sectionintoc {10}{Appendix II}{79}{1}{9}
+\beamer@subsectionintoc {10}{1}{Synchronicity and firm interlocks}{81}{1}{9}
+\beamer@subsectionintoc {10}{2}{Large controlling shareholder and stock price synchronicity}{82}{1}{9}
+\beamer@subsectionintoc {10}{3}{Connected Stocks}{83}{1}{9}
+\beamer@subsectionintoc {10}{4}{Measures' Detail}{84}{1}{9}

@@ -1,27 +1,37 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{4}{c}}
+\begin{tabular}{l*{5}{c}}
 \hline\hline
-                &\multicolumn{4}{c}{Future Monthly Corr. of 4F+Ind. Residuals}              \\\cmidrule(lr){2-5}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &\multicolumn{5}{c}{Dependent Variable: Future Pairs's co-movement}                            \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
 \hline
-Same Group      &   0.0166\sym{***}&   0.0167\sym{***}&  0.00786\sym{***}&  0.00786\sym{***}\\
-                &   (9.38)         &   (9.31)         &   (3.90)         &   (3.90)         \\
+Same Group      &   0.0180\sym{***}&   0.0186\sym{***}&  0.00982\sym{***}&  0.00931\sym{***}&    0.135\sym{***}\\
+                &   (8.45)         &   (8.25)         &   (4.63)         &   (4.60)         &  (13.96)         \\
 [1em]
-Low Imbalance std&                  &  0.00104         & 0.000192         & 0.000192         \\
-                &                  &   (1.03)         &   (0.19)         &   (0.19)         \\
+Low Imbalance std&                  & 0.000899         &0.0000151         & 0.000421         &                  \\
+                &                  &   (0.98)         &   (0.02)         &   (0.45)         &                  \\
 [1em]
- $ \text{Low Imbalance std} \times {\text{SameGroup} } $ &                  &                  &   0.0240\sym{***}&   0.0240\sym{***}\\
-                &                  &                  &   (6.90)         &   (6.90)         \\
+ $ \text{Low Imbalance std} \times {\text{SameGroup} } $ &                  &                  &   0.0235\sym{***}&   0.0228\sym{***}&                  \\
+                &                  &                  &   (9.05)         &   (8.46)         &                  \\
+[1em]
+ $ {\text{Group Ins Imb std}_1} $ &                  &                  &                  &                  &  0.00168         \\
+                &                  &                  &                  &                  &   (0.25)         \\
+[1em]
+ $ {\text{Group Ins Imb std}_2} $ &                  &                  &                  &                  &  0.00986         \\
+                &                  &                  &                  &                  &   (1.65)         \\
+[1em]
+$ {\text{Group Ins Imb std} } \times {\text{SameGroup} }  $ &                  &                  &                  &                  &   -0.198\sym{***}\\
+                &                  &                  &                  &                  & (-12.76)         \\
 \hline
-Observations    &  1665996         &  1665996         &  1665996         &  1665996         \\
-Group Effect    &       No         &       No         &       No         &       No         \\
-Pair Size FE    &      Yes         &      Yes         &      Yes         &      Yes         \\
-Sub-sample      &    Total         &    Total         &    Total         &    Total         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         \\
-$ R^2 $         &  0.00105         &  0.00117         &  0.00129         &  0.00129         \\
+Observations    &  1665996         &  1665996         &  1665996         &  1665996         &   599765         \\
+Group Size Effect&       No         &      Yes         &      Yes         &       No         &      Yes         \\
+Group Effect    &       No         &       No         &       No         &      Yes         &       No         \\
+Pair Size FE    &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Sub-sample      &    Total         &    Total         &    Total         &    Total         &    Total         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         &  0.00120         &  0.00151         &  0.00163         &  0.00601         &  0.00357         \\
 \hline\hline
-\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

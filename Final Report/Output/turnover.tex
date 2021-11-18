@@ -2,22 +2,22 @@
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{6}{c}}
 \hline\hline
-                    &\multicolumn{6}{c}{Dependent Variable: $\Delta \text{TurnOver}_{i} $ }                                                             \\\cmidrule(lr){2-7}
+                    &\multicolumn{6}{c}{Dependent Variable: $\Delta \text{TurnOver}\_{i} $ }                                                             \\\cmidrule(lr){2-7}
                     &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
- $ \Delta \text{TurnOver}_{\text{Market}} $ &       0.431\sym{***}&       0.453\sym{***}&       0.287\sym{***}&       0.321\sym{***}&       0.288\sym{***}&       0.321\sym{***}\\
-                    &     (14.56)         &     (14.49)         &      (8.23)         &     (14.03)         &      (6.92)         &     (14.14)         \\
+ $ \Delta \text{TurnOver}_{\text{Market}} $ &       0.430\sym{***}&       0.443\sym{***}&       0.297\sym{***}&       0.328\sym{***}&       0.322\sym{***}&       0.264\sym{***}\\
+                    &     (24.73)         &     (25.88)         &      (9.40)         &     (14.78)         &     (13.34)         &      (3.92)         \\
 [1em]
- $ \Delta \text{TurnOver}_{\text{Group}} $ &                     &                     &       0.245\sym{***}&       0.234\sym{***}&       0.284\sym{***}&       0.273\sym{***}\\
-                    &                     &                     &      (6.31)         &      (7.15)         &      (6.02)         &      (7.19)         \\
+ $ \Delta \text{TurnOver}_{\text{Group-i}} $ &                     &                     &       0.209\sym{***}&       0.218\sym{***}&       0.228\sym{***}&       0.175\sym{***}\\
+                    &                     &                     &      (7.38)         &      (8.07)         &      (7.89)         &      (5.19)         \\
 [1em]
- $ \Delta \text{TurnOver}_{\text{Industry}} $ &       0.155\sym{***}&       0.169\sym{***}&       0.174\sym{*}  &       0.118\sym{***}&       0.152         &      0.0430         \\
-                    &      (6.53)         &      (6.99)         &      (2.08)         &      (3.68)         &      (1.47)         &      (1.19)         \\
+ $ \Delta \text{TurnOver}_{\text{Industry-i}} $ &       0.157\sym{***}&       0.176\sym{***}&       0.103\sym{**} &      0.0703\sym{**} &      0.0595         &      0.0990\sym{**} \\
+                    &      (9.12)         &     (10.03)         &      (3.13)         &      (2.87)         &      (1.94)         &      (2.71)         \\
 \hline
 Observations        &      626813         &      623759         &      305563         &      301329         &      305563         &      301329         \\
 Weight              &           -         &           -         & $ \text{MC} \times \text{CR} $          & $ \text{MC} \times \text{CR} $          & $ \text{MC} $          & $ \text{MC} $          \\
 Control             &          No         &         Yes         &          No         &         Yes         &          No         &         Yes         \\
-$ R^2 $             &       0.141         &       0.180         &       0.242         &       0.282         &       0.236         &       0.277         \\
+$ R^2 $             &       0.151         &       0.231         &       0.278         &       0.393         &       0.271         &       0.387         \\
 \hline\hline
 \multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\

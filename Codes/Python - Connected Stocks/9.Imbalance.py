@@ -1,10 +1,10 @@
 #%%
 import pandas as pd
-import matplotlib.pyplot as plt
 import jdatetime
 from matplotlib.ticker import FuncFormatter
 from scipy import stats
 import seaborn as sns
+import matplotlib.pyplot as plt
 from pandas_jalali.converter import get_gregorian_date_from_jalali_date
 
 #%%
@@ -253,7 +253,7 @@ tt.to_latex(pathR + "\\ImbalanceIndMeanSummary.tex")
 tt
 #%%
 result["yearMonth"] = result.yearMonth.astype(str)
-fig = plt.figure(figsize=(8, 4))
+fig = plt.figure(figsize=(10,5))
 g = sns.lineplot(
     data=result, x="yearMonth", y="InsImbalance_value", hue="Grouped", ci=0
 )
@@ -347,9 +347,10 @@ tt
 
 # %%
 result["yearMonth"] = result.yearMonth.astype(str)
-fig = plt.figure(figsize=(8, 4))
+fig = plt.figure(figsize=(10,5))
+markers = {1: "s", 0: "X"}
 g = sns.lineplot(
-    data=result, x="yearMonth", y="InsImbalance_value", hue="Grouped", ci=0
+    data=result, x="yearMonth", y="InsImbalance_value", hue="Grouped", ci=0, style="Grouped", markers=markers
 )
 a = result.yearMonth.unique()
 labels = list(result.yearMonth.unique())
@@ -367,9 +368,10 @@ plt.savefig(pathR + "\\GroupedInsSTD.eps", rasterized=True, dpi=300)
 plt.savefig(pathR + "\\GroupedInsSTD.png", bbox_inches="tight")
 # %%
 result["yearMonth"] = result.yearMonth.astype(str)
-fig = plt.figure(figsize=(8, 4))
+fig = plt.figure(figsize=(10,5))
+markers = {1: "s", 0: "X"}
 g = sns.lineplot(
-    data=result, x="yearMonth", y="IndImbalance_value", hue="Grouped", ci=0
+    data=result, x="yearMonth", y="IndImbalance_value", hue="Grouped", ci=0, style="Grouped", markers=markers
 )
 a = result.yearMonth.unique()
 labels = list(result.yearMonth.unique())

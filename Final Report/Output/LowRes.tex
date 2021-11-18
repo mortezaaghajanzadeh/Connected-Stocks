@@ -1,0 +1,37 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                &\multicolumn{5}{c}{Dependent Variable: Future Pairs's co-movement}                            \\\cmidrule(lr){2-6}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+\hline
+Same Group      &   0.0180\sym{***}&   0.0189\sym{***}&   0.0151\sym{***}&   0.0131\sym{***}&   0.0351\sym{***}\\
+                &   (8.45)         &   (8.09)         &   (5.24)         &   (5.00)         &   (5.80)         \\
+[1em]
+LowResidualStd  &                  &  0.00193         &  0.00159         &-0.000678         &                  \\
+                &                  &   (1.99)         &   (1.59)         &  (-0.84)         &                  \\
+[1em]
+$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ &                  &                  &  0.00981\sym{*}  &   0.0119\sym{**} &                  \\
+                &                  &                  &   (2.57)         &   (3.37)         &                  \\
+[1em]
+ $ {\text{Group Turnover std}_1} $ &                  &                  &                  &                  & -0.00119         \\
+                &                  &                  &                  &                  &  (-0.64)         \\
+[1em]
+ $ {\text{Group Turnover std}_2} $ &                  &                  &                  &                  & -0.00292\sym{*}  \\
+                &                  &                  &                  &                  &  (-2.28)         \\
+[1em]
+$ {\text{Group Turnover std} } \times {\text{SameGroup} }  $ &                  &                  &                  &                  &  -0.0261\sym{**} \\
+                &                  &                  &                  &                  &  (-3.02)         \\
+\hline
+Observations    &  1665996         &  1665996         &  1665996         &  1665996         &  1665996         \\
+Group Size Effect&       No         &      Yes         &      Yes         &       No         &      Yes         \\
+Group Effect    &       No         &       No         &       No         &      Yes         &       No         \\
+Pair Size FE    &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Sub-sample      &    Total         &    Total         &    Total         &    Total         &    Total         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+$ R^2 $         &  0.00120         &  0.00150         &  0.00161         &  0.00597         &  0.00173         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

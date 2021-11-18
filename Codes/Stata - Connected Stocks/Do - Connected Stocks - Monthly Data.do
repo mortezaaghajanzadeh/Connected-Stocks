@@ -340,3 +340,40 @@ gen Grouphpositivesynch = positivesynch * sbgroup
 label variable Grouphpositivesynch "$ {\text{High Positive direction} } \times {\text{SameGroup} }  $ "
 
 
+
+capture drop   lowres
+
+gen lowres = 0
+
+replace lowres = 1 if lowres_x == 1
+replace lowres = 1 if lowres_y == 1
+
+
+label variable lowres "LowResidualStd"
+
+gen Grouplowres = lowres * sbgroup
+label variable Grouplowres "$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ "
+
+
+
+capture drop xx
+gen xx = sbgroup * trunresstd_x
+label variable xx "$ {\text{Group Turnover std} } \times {\text{SameGroup} }  $ "
+
+label variable trunresstd_x " $ {\text{Group Turnover std}_1} $ "
+label variable trunresstd_y " $ {\text{Group Turnover std}_2} $ "
+
+
+capture drop yy
+gen yy = sbgroup * insimbalance_value_x
+label variable yy "$ {\text{Group Ins Imb std} } \times {\text{SameGroup} }  $ "
+label variable insimbalance_value_x " $ {\text{Group Ins Imb std}_1} $ "
+label variable insimbalance_value_y " $ {\text{Group Ins Imb std}_2} $ "
+
+gen zz = sbgroup * gsize_x
+label variable zz "$ {\text{Group Size} } \times {\text{SameGroup} }  $ "
+label variable gsize_x " $ {\text{Group Size}_1} $ "
+label variable gsize_y " $ {\text{Group Size}_2} $ "
+
+ 
+

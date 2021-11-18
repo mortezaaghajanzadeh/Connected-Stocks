@@ -1,12 +1,13 @@
 
 
-xtset id t_month 
-asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 
-gen xxx = ln(monthlyρ_5_f/(1-monthlyρ_5_f))
 
-asreg xxx NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
+binscatter monthlyρ_5_f NMFCA ,by(Grouphighbeta)
 
+xi: asreg monthlyρ_5_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup highbeta Grouphighbeta i.PairType  , fmb newey(4)
+
+
+xi: asreg monthlyρ_5_f monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType  , fmb newey(4)
 
 
 eststo v1: asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
@@ -620,3 +621,39 @@ eststo v1 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesiz
 
 
 }
+ 
+ { /*Iv estimation*/
+ 
+
+xtset t_month id
+
+
+eststo v1 : quietly xtreg monthlyρ_5_f monthlyρ_5 sbgroup  monthlycrossownership sgroup  monthlysamesize monthlysamebm  i.PairType gdummy0-gdummy47 ,fe robust
+estadd loc FE "Yes" , replace
+estadd loc lag "Yes" , replace
+estadd loc method "FE" , replace
+estadd loc Group "Yes" , replace
+
+
+eststo v2 : quietly xtreg monthlyρ_turn_f sbgroup monthlyρ_turn   sgroup  monthlysamesize monthlysamebm monthlycrossownership  i.PairType gdummy0-gdummy47,fe robust
+estadd loc FE "Yes" , replace
+estadd loc lag "Yes" , replace
+estadd loc method "FE" , replace
+estadd loc Group "Yes" , replace
+
+eststo v3 : quietly xtivreg monthlyρ_5_f sbgroup monthlyρ_5  monthlysamesize monthlysamebm monthlycrossownership i.PairType gdummy0-gdummy47 (monthlyρ_turn_f = sgroup)  , fe 
+estadd loc FE "Yes" , replace
+estadd loc lag "Yes" , replace
+estadd loc method "2sls" , replace
+estadd loc Group "Yes" , replace
+
+esttab v2 v1  v3 , label s( N method Group FE lag r2,  lab("Observations" "Method" "Group FE" "Pair Size Control" "Lag of Dep. Var." "$ R^2$ "))keep( sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn_f) nomtitle   order(sgroup monthlyρ_turn_f) mgroups("First Stage" "Reduced form" "Second Stage" , pattern(1 1  1)),using TurnIv.tex ,replace
+
+
+
+corr sbgroup  sgroup
+
+xtset id t_month  
+ }
+ 
+ 

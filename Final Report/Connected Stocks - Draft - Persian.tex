@@ -329,11 +329,17 @@ December\fi, \number \year}
 \lr{turnover}
 را توضیح دهد.
 \item
-در گروه های کسب و کار هر آنچه مالکیت مشترک افزایش پیدا می کند هم بستگی تغییرات 
+از 
 \lr{turnover}
-نیز افزایش پیدا می کند.
+ماهانه شرکت ها 
+میانگین 
+\lr{turnover}
+سالانه شرکت و 
+\lr{turnover}
+ماهانه بازار را خارج کردیم و بررسی کردیم درگروه های کسب و کار میزان پراکندگی باقی مانده ماهانه کمتر است
 \item
-از متغیر ابزاری جهت یافتن کانال استفاده کرده ایم و نشان داده ایم گروه های کسب و کار از طریق معاملات هم زمان سبب ایجاد هم جرکتی در قیمت شرکت ها شده است
+برای گروه های با پراکندگی کمتر هم حرکتی بیشتر است
+
 % گروه های کسب و کار بزرگ
 % \begin{itemize}
 % 	\item 
@@ -1110,7 +1116,7 @@ December\fi, \number \year}
 			متوسط کنترل های تعریف شده نشان داده شده است
 			\begin{figure}[htbp]
 				\centering  
-				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
+				\includegraphics[width=0.85\linewidth]{"Output/QarterSummary.eps"}
 				\caption{Pairs' characteristics for the pairs with high level of common ownership}
 				\label{QarterSummary}
 			\end{figure}
@@ -1375,51 +1381,117 @@ December\fi, \number \year}
 \lr{turnover}
 می شود
 \item
-عضویت در گروه کسب و کار سبب هم حرکتی قیمت شرکت ها می شود
-\item
-کانال تاثیر کدام است؟
-\begin{itemize}
-\item
-از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای هم بستگی تغییرات
+برای بررسی اثر 
 \lr{turnover}
-استفاده می کنیم تا هم حرکتی قیمت شرکت ها را بررسی کنیم
+در سطح ماه به صورت متوسط 
+\lr{turnover}
+را محاسبه کردیم
 \item
-شرایط استفاده از متغیر ابزاری
-\begin{itemize}
+از 
+\lr{turnover}
+میانگین سالانه
+\lr{turnover}
+و 
+\lr{turnover}
+ماهانه در آن ماه را کم کردیم
 \item
-ارتباط: شرکت های در یک صنعت به همراه یکدیگر معامله می شوند 
-نتایج برآورد 
-\lr{Reduced Form}
-این سوال را پاسخ می دهد
-\item
-برونزایی:
-هم حرکتی شرکت ها نمی تواند صنعت شرکت را تعیین کند
-\item
-\lr{Exclusion restriction}:
-با توجه به نحوه محاسبه هم حرکتی بازده صنعت از آن حذف شده است
-در نتیجه یکسان بودن صنعت دو شرکت نمی تواند سبب هم حرکتی قیمت آن ها شود.
+بررسی کردیم پراکندگی باقی مانده در گروه های کسب و کار چگونه است
 
-\item \lr{{First Stage} : 
-\input{FirstStage.tex}}
-\item \lr{{Reduced Form} : 
-\input{ReducedForm.tex}}
-\item \lr{{Second Stage} : 
-\input{SecondStage.tex}
-}
-\end{itemize}
-	\lr{
-	\begin{LTR}
+
+	\lr{\begin{LTR}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ResidualTrunSummary.tex}
+		}
+		\label{tab:ResidualTrunSummary}
+	\end{table}	
+	\end{LTR}}
+	\item
+		به صورت متوسط میانگین باقی مانده صفر است
+			\item
+			پراکندگی در بیرون گروه های کسب و کار بیشتر است
+				\item
+				در سطح گروه های کسب و کار انحراف معیار را محاسبه کردیم
+				
+	\lr{\begin{LTR}
 	\begin{table}[htbp]
 			\centering
-			\resizebox{0.75\textwidth}{!}{
-				\centering
-				\input{Output/TurnIv.tex}
+			\resizebox{0.8\textwidth}{!}{
+				\input{Output/ResidualTrunStdSummary.tex}
 			}
-			\label{TurnIv}
+			\label{tab:ResidualTrunStdSummary}
 		\end{table}
-		\end{LTR}
-		}
-\end{itemize}
+	\end{LTR}}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
+		\label{fig:GroupedResSTD}
+	\end{figure}
+	\item
+	برای گروه های کسب و کار متغیر دامی تعریف می کنیم
+		\item
+		که برای گروه های با انحراف معیار کم در باقی مانده ها برابر یک است
+			\item
+			بررسی می کنیم که سبب افزایش هم حرکتی می شود
+				\item
+				برای کنترل و حذف اثر اندازه گروه های کسب و کار، تعداد اعضای هر گروه را هم به صورت کن
+\lr{\begin{LTR}
+		\begin{table}[htbp]
+	\centering
+			\resizebox{0.8\textwidth}{!}{
+				\centering
+				\input{Output/LowRes.tex}
+			}
+			\label{Turnovercrosssection}
+		\end{table}
+\end{LTR}}
+%\item
+%عضویت در گروه کسب و کار سبب هم حرکتی قیمت شرکت ها می شود
+%\item
+%کانال تاثیر کدام است؟
+%\begin{itemize}
+%\item
+%از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای هم بستگی تغییرات
+%\lr{turnover}
+%استفاده می کنیم تا هم حرکتی قیمت شرکت ها را بررسی کنیم
+%\item
+%شرایط استفاده از متغیر ابزاری
+%\begin{itemize}
+%\item
+%ارتباط: شرکت های در یک صنعت به همراه یکدیگر معامله می شوند 
+%نتایج برآورد 
+%\lr{Reduced Form}
+%این سوال را پاسخ می دهد
+%\item
+%برونزایی:
+%هم حرکتی شرکت ها نمی تواند صنعت شرکت را تعیین کند
+%\item
+%\lr{Exclusion restriction}:
+%با توجه به نحوه محاسبه هم حرکتی بازده صنعت از آن حذف شده است
+%در نتیجه یکسان بودن صنعت دو شرکت نمی تواند سبب هم حرکتی قیمت آن ها شود.
+%
+%\item \lr{{First Stage} : 
+%\input{FirstStage.tex}}
+%\item \lr{{Reduced Form} : 
+%\input{ReducedForm.tex}}
+%\item \lr{{Second Stage} : 
+%\input{SecondStage.tex}
+%}
+%\end{itemize}
+%	\lr{
+%	\begin{LTR}
+%	\begin{table}[htbp]
+%			\centering
+%			\resizebox{0.75\textwidth}{!}{
+%				\centering
+%				\input{Output/TurnIv.tex}
+%			}
+%			\label{TurnIv}
+%		\end{table}
+%		\end{LTR}
+%		}
+%\end{itemize}
 %حال برای بررسی نهایی به عنوان متغییر کنترلی همبستگی تغییرات 
 %\lr{turnover}
 %جفت ها را به مدل اصلی اضافه می کنیم
@@ -1569,7 +1641,7 @@ December\fi, \number \year}
  	\end{LTR}
 
  		\item 
- 	به صورت متوسط انحراف معیار ناترازی در شرکت های درون گروه از شرکت های بیرو گروه کمتر است	
+ 	به صورت متوسط انحراف معیار ناترازی در شرکت های درون گروه از شرکت های بیرون گروه کمتر است	
  	
  	\item 
  	در شکل 

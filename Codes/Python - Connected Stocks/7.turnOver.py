@@ -105,7 +105,7 @@ df["DeltaTrun"] = gg["TurnOver"].diff()
 df["Delta_Amihud_value"] = gg["Amihud_value"].diff()
 
 # %%
-df = df[df.jalaliDate>13930000].reset_index(drop = True)
+df = df[df.jalaliDate > 13900000].reset_index(drop=True)
 gg = df.groupby("date")
 # g = gg.get_group(20081207)
 # print(g.name)
@@ -190,7 +190,6 @@ def Daily(g):
     return g
 
 
-# Daily(g)
 a = gg.apply(Daily)
 #%%
 df = a
@@ -291,7 +290,14 @@ mlist = result.date.unique()
 mapdict = dict(zip(mlist, range(len(mlist))))
 result["t"] = result.date.map(mapdict)
 # %%
-result["idyear"] = result["id"].astype(str) + "-" + result["year"].astype(str)
+result["month"] = ((result.jalaliDate.astype(int) - result.year * 1e4) / 100).astype(
+    int
+)
+result[["jalaliDate", "month", "year"]]
+#%%
+result["yearmonth"] = result.year.astype(str) + "-" + result.month.astype(str)
+#%%
+result["idyear"] = result["id"].astype(str) + "-" + result["yearmonth"].astype(str)
 mlist = result.idyear.unique()
 mapdict = dict(zip(mlist, range(len(mlist))))
 result["regidyear"] = result.idyear.map(mapdict)
@@ -321,5 +327,3 @@ result = result.rename(
 
 #%%
 result.to_csv(path + "\Connected_Stocks\TurnOver_1400_06_28.csv", index=False)
-# %%
-result

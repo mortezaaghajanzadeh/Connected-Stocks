@@ -622,7 +622,7 @@
 			
 			
 			\begin{table}
-				\resizebox{0.7\textwidth}{!}
+				\resizebox{0.8\textwidth}{!}
 				{
 					\input{Output/summaryOfPairs.tex}
 				}
@@ -819,22 +819,22 @@
 					\column{.33\textwidth}  
 					\begin{figure}
 						\centering  
-						\includegraphics[width=\linewidth]{"MHistFCA.eps"}\\
-						\includegraphics[width=\linewidth]{"MHistFCAP.eps"}
+						\includegraphics[width=\linewidth]{"Output/MHistFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"Output/MHistFCAP.eps"}
 					\end{figure}  
 				\pause   
 					\column{.33\textwidth}
 					\begin{figure}
 						\centering  
-						\includegraphics[width=\linewidth]{"MHistlnFCA.eps"}\\
-						\includegraphics[width=\linewidth]{"MHistlnFCAP.eps"}
+						\includegraphics[width=\linewidth]{"Output/MHistlnFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"Output/MHistlnFCAP.eps"}
 					\end{figure}
 				\pause
 					\column{.33\textwidth}
 					\begin{figure}   
 						\centering
-						\includegraphics[width=\linewidth]{"MHistNFCA.eps"}  \\
-						\includegraphics[width=\linewidth]{"MHistNFCAP.eps"}   \end{figure}            
+						\includegraphics[width=\linewidth]{"Output/MHistNFCA.eps"}  \\
+						\includegraphics[width=\linewidth]{"Output/MHistNFCAP.eps"}   \end{figure}            
 				\end{columns}
 			\end{frame}
 			
@@ -1297,56 +1297,91 @@
 	\end{table}
 	
 \end{frame}
-\begin{frame}{High Beta Group}
+\begin{frame}{Residual of Monthly Turnover}
+\begin{itemize}
+\item $ \text{Turnover}_{i,t} = \alpha_0 +\alpha_1 \times \text{Turnover}_{i,avg} +\alpha_2 \times \text{Turnover}_{m,t} + \boxed{\varepsilon_{i,t}} $
+\begin{itemize}\scriptsize
+\item $ \text{Turnover}_{i,t}$: Monthly Turnover (Average of daily turnovers in each month)
+\item $ \text{Turnover}_{i,avg}$: Annual average of monthly turnover
+\item $ \text{Turnover}_{m,t}$: Market's turnover 
+
+\end{itemize}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ResidualTrunSummary.tex}
+		}
+		\label{tab:ResidualTrunSummary}
+	\end{table}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Residual of Monthly Turnover}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ResidualTrunStdSummary.tex}
+		}
+		\label{tab:ResidualTrunStdSummary}
+	\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
+	\label{fig:GroupedResSTD}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Low residual standard error}
 	\begin{table}[htbp]
 \centering
-		\resizebox{0.95\textwidth}{!}{
+		\resizebox{0.8\textwidth}{!}{
 			\centering
-			\input{Output/HighBeta.tex}
+			\input{Output/LowRes.tex}
 		}
 		\label{Turnovercrosssection}
 	\end{table}
 \end{frame}
 
-\begin{frame}{Pairwise correlations in  turnover}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{0.95\textwidth}{!}{
-			\centering
-			\input{Output/mresult2-turnover.tex}
-		}
-		\label{mresult2-turnover}
-	\end{table}
-\end{frame}
-\begin{frame}{Turnover or Co-movement?}
-\begin{itemize}
-
-\item Same Industry instrumental variable for $\rho(\Delta \text{TurnOver})_{t+1}$
-\begin{itemize}
-\item \textbf{Relevance}: First stage 
-\item \textbf{Exogeneity}: Trade cannot affect firms' industry
-\item \textbf{Exclusion restriction}: We eliminate return of industry from co-movement calculation
-\end{itemize}
-%\item \textbf{First Stage} : 
-%\input{FirstStage.tex}
-%\item \textbf{Reduced Form} : 
-%\input{ReducedForm.tex}
+%\begin{frame}{Pairwise correlations in  turnover}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.95\textwidth}{!}{
+%			\centering
+%			\input{Output/mresult2-turnover.tex}
+%		}
+%		\label{mresult2-turnover}
+%	\end{table}
+%\end{frame}
+%\begin{frame}{Turnover or Co-movement?}
+%\begin{itemize}
 %
-%\item \textbf{Second Stage} : 
-%\input{SecondStage.tex}
-\end{itemize}
-\end{frame}
-\begin{frame}{Turnover or Co-movement?}
-	\begin{table}[htbp]
-		\centering
-		\resizebox{0.6\textwidth}{!}{
-			\centering
-			\input{Output/TurnIv.tex}
-		}
-		\label{TurnIv}
-	\end{table}
-\end{frame}
-
+%\item Same Industry instrumental variable for $\rho(\Delta \text{TurnOver})_{t+1}$
+%\begin{itemize}
+%\item \textbf{Relevance}: First stage 
+%\item \textbf{Exogeneity}: Trade cannot affect firms' industry
+%\item \textbf{Exclusion restriction}: We eliminate return of industry from co-movement calculation
+%\end{itemize}
+%%\item \textbf{First Stage} : 
+%%\input{FirstStage.tex}
+%%\item \textbf{Reduced Form} : 
+%%\input{ReducedForm.tex}
+%%
+%%\item \textbf{Second Stage} : 
+%%\input{SecondStage.tex}
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{Turnover or Co-movement?}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.6\textwidth}{!}{
+%			\centering
+%			\input{Output/TurnIv.tex}
+%		}
+%		\label{TurnIv}
+%	\end{table}
+%\end{frame}
+%
 
 %	\begin{frame}{Turn over and Comovement}
 %		\begin{table}[htbp]
