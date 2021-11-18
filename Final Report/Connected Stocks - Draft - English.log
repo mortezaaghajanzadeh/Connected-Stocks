@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  18 NOV 2021 12:07
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  18 NOV 2021 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,26 +1092,26 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ]
-[2] [3] [4] [5] [6] (./Output/summaryOfOwnership.tex)
-(./Output/summaryOfPairs.tex) [7] [8] [9] (./MeasurmentLit.tex
+[2] [3] [4] [5] [6] [7] [8] (./Output/summaryOfOwnership.tex) [9]
+(./Output/summaryOfPairs.tex) [10] [11] (./MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-) [10]
-(./Output/FCACal.tex) [11] (./Output/CorrelationsResultsText.tex) [12
+) [12]
+(./Output/FCACal.tex) [13] (./Output/CorrelationsResultsText.tex) [14
 
 
 ]
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 881--883
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 933--935
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [13]
-[14]
+(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [15]
+[16]
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
- (./Model11.tex) [15] (./Output/mresult2part1-slide.tex)
-(./Output/mresult2part2-slide.tex) [16] [17]
+ (./Model11.tex) [17] (./Output/mresult2part1-slide.tex)
+(./Output/mresult2part2-slide.tex) [18] [19]
 File: Output/Qmcorr5lrd.eps Graphic file (type eps)
 <Output/Qmcorr5lrd.eps>
 File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
@@ -1120,15 +1120,15 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
 
 (./Output/QTimemresult2subsample-slide.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1102--1103
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1154--1155
 [][] []
  []
 
-[18] [19]
+[20] [21]
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
- [20] (./Output/Q3mresultAllPairs.tex) [21] [22]
-Overfull \hbox (25.6144pt too wide) detected at line 1290
+ [22] (./Output/Q3mresultAllPairs.tex) [23] [24]
+Overfull \hbox (25.6144pt too wide) detected at line 1342
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1143,22 +1143,22 @@ Overfull \hbox (30.0pt too wide) detected at line 6
 []
  []
 
-) (./turnover.tex) [23
+) (./turnover.tex) [25
 
 ] (./Model14.tex
-Overfull \hbox (3.06392pt too wide) in paragraph at lines 1345--1
+Overfull \hbox (3.06392pt too wide) in paragraph at lines 1397--1
 [][]\TU/XBZar.ttf(0)/b/n/12 در مدل اصلی به جای پیش بینی هم حرکتی بازده آبنده از
  همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
 
-) (./Output/mresult2-turnover.tex) [24]
-Overfull \hbox (1.09364pt too wide) in paragraph at lines 1380--1384
+) (./Output/mresult2-turnover.tex) [26]
+Overfull \hbox (1.09364pt too wide) in paragraph at lines 1432--1436
 [][]\TU/XBZar.ttf(0)/b/n/12 با توجه به بررسی ها داریم عضویت در گروه کسب و کار س
 بب همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
 
 
-Overfull \hbox (5.44673pt too wide) in paragraph at lines 1389--1393
+Overfull \hbox (5.44673pt too wide) in paragraph at lines 1441--1445
 [][]\TU/XBZar.ttf(0)/b/n/12 از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای
  هم بستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
  []
@@ -1173,21 +1173,21 @@ Overfull \hbox (78.8399pt too wide) detected at line 6
 []
  []
 
-[25]) (./ReducedForm.tex) (./SecondStage.tex) (./Output/TurnIv.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1427--1428
+[27]) (./ReducedForm.tex) (./SecondStage.tex) (./Output/TurnIv.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1479--1480
 [] []
  []
 
-[26] [27] (./Output/ImbalanceInsMeanSummary.tex)
+[28] [29] (./Output/ImbalanceInsMeanSummary.tex)
 (./Output/ImbalanceInsStdSummary.tex)
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
- [28] (./Model13.tex
+ [30] (./Model13.tex
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/sl' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 1.
 
-[29]) (./Output/Imbalance.tex) [30] [31]
+[31]) (./Output/Imbalance.tex) [32] [33] [34]
 (./Connected Stocks - Draft - English.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
@@ -1241,7 +1241,7 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 79.
 
-[32]
+[35]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 84.
@@ -1298,30 +1298,30 @@ LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 159.
 
-[33]
+[36]
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 164.
 
-) [34]
+) [37]
 File: 1.png Graphic file (type bmp)
 <1.png>
 File: 2.png Graphic file (type bmp)
 <2.png>
- (./Example2.tex) [35] [36]
+ (./Example2.tex) [38] [39]
 File: 3.png Graphic file (type bmp)
 <3.png>
 File: 4.png Graphic file (type bmp)
 <4.png>
- (./marketcap.tex) [37] [38]
+ (./marketcap.tex) [40] [41]
 (./Output/mresult2Polk-slide.tex)
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 1942--1942
+Overfull \hbox (23.17839pt too wide) in paragraph at lines 1994--1994
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
-[39]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 1976--1978
+[42]
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 2028--2030
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1330,15 +1330,15 @@ File: Output/sameIndustryinBG.eps Graphic file (type eps)
 <Output/sameIndustryinBG.eps>
 File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 <Output/sameIndustryNoinBG.eps>
-[40]
+[43]
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
- [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2030.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2030.
+ [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2082.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2082.
  (./Connected Stocks - Draft - English.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2030.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2030.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2082.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2082.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
 s not changed.
@@ -1350,15 +1350,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2030.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2082.
  ) 
 Here is how much of TeX's memory you used:
  27596 strings out of 479418
  555038 string characters out of 5888105
- 977587 words of memory out of 5000000
+ 980587 words of memory out of 5000000
  44468 multiletter control sequences out of 15000+600000
  540087 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - English.pdf (41 pages).
+Output written on Connected Stocks - Draft - English.pdf (44 pages).

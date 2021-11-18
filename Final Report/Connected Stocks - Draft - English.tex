@@ -172,10 +172,8 @@ December\fi, \number \year}
   Although the price co-movement in business groups is accepted, the co-movement channels remained undiscovered.
   Both (2 cites) studied the South Korean market and suggested two different causes for the co-movement in business groups. The first paper attributed co-movement to the companies' fundamental factors. However, the second paper presents that the difference in companies' category habitat is responsible for co-movement.
   In this paper, we consider the co-movement of the companies in business groups. This paper is the first study that compares direct and indirect mutual ownership. A modified criterion is introduced in this paper to calculate the mutual ownership of the companies. Mutual ownership is crucial for predicting the companies' price co-movement. Business groups play a more critical role in price co-movement prediction than mutual ownership. Mutual ownership causes co-movement inside business groups, but it does not affect the same outside the business groups.
-  
   We studied the prominence of business groups in this paper. Only pairs with a high level of common ownership are considered in this study. In this subset, like the mentioned ones, business groups have a significant impact. Common ownership is noted exclusively for business groups. 
   We only considered pairs with common ownership:
-  
   There is no need for common ownership to study the impact of business groups. 
   We can not distinguish the impact of common ownership and business group.
   We built all possible pairs in the market.
@@ -185,8 +183,16 @@ December\fi, \number \year}
   Impact channel: Companies' simultaneous trade in different business groups.
   turnover:
   The business groups might not have as much influence as the market has on many companies' turnover fluctuations. However, it is influential.
-The companies' presence in business groups can explain the correlation in turnover. We employed the 
-
+ The companies' presence in business groups can explain the correlation in turnover. 
+ We extracted both yearly companies' turnover average and monthly market turnover from monthly companies' turnover. Then we realized that there is less monthly residual dispersion in business
+ groups analyzing the deduced data.
+ More co-movement is detected for groups with less dispersion.
+ Institutional imbalance:
+ Institutional imbalance dispersion must be low for these companies.
+ In general, the imbalance dispersion average in business groups is less than companies that are not included in the groups.
+ A more precise study illustrated that determining business groups with low dispersion, we expect the co-movement to increase.
+ In low dispersion groups, the co-movement increases with either a decrease in dispersion or with higher common ownership.
+ We searched for fundamental factors, too. But they had no impact on price co-movements.-
 }
   
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,44 +237,45 @@ The companies' presence in business groups can explain the correlation in turnov
 
 \end{itemize}
 
+
 %%%% Our work
 \begin{itemize}
-\item 
-در آمریکا داده های مالکیت صندوق های سرمایه گذاری موجود می باشد
-\item
-در نتیجه نتایج بدست آمده محدود به این نوع مالکیت می باشد
-\item
-در صورتی که این نوع به خصوص مالکیت با توجه به نیاز ها و واسطه بودن، رفتار های به خصوصی انجام می دهند
-\footnote{\lr{\cite{coval2007asset}} 
-	نشان داده است که جریان ورود و خروج مالی صندوق ها می تواند سبب ایجاد فشار قیمتی بر سهام شرکت ها شود و قیمت شرکت ها رو تحت تاثیر قرار دهد و این مسئله با موصوع مالکیت مشترک که می تواند سبب تغییر رفتار مدیران شرکت شود می تواند متفاوت باشد.}
-\item
-با توجه به محدودیت های دیتای موجود در آمریکا و  تنها موجود بودن داده های مالکیت های صندوق های سرمایه گذاری، بررسی های این حوزه محدود به اثر مالکیت صندوق های سرمایه گذاری بر شرکت ها می باشد.
-\item
-اولین بررسی هم حرکتی ناشی از مالکیت مشترک صرف نظر از اینکه مالک شرکت صندوق سرمایه گذاری بوده باشد
-
-\item 
-در ایران داده های مالکیت های بالای یک درصد به صورت روزانه وجود دارد که محدود به مالکیت صندوق های سرمایه گذاری نیست.
-\item
-می توان به این سوال پاسخ داد که مالکیت مشترکی که ناشی از صندوق های سرمایه گذاری نباشد آیا سبب هم حرکتی می شود و یا خیر
-\item 
- یکی دیگر از ویژگی های بازار سرمایه ایران وجود گروه های کسب و کار است. گروه های کسب و کار حدود 85\% از ارزش بازار ایران را در اختیار دارند.
- \begin{itemize}
- \item
-  گروه های کسب و کار پدیده مهمی هستند در کشور های در حال توسعه یافته و در حال توسعه وجود دارند.
-  \item
-  هم حرکتی شرکت ها را در گروه های کسب و کار بررسی می کنیم
-  \item
-  دو مقاله در ادبیات به این موضوع پرداخته اند و هم حرکتی قیمت شرکت ها در گروه های کسب و کار را بررسی کرده اند
-  \item
-  هم حرکتی قیمت شرکت ها در گروه های کسب و کار تایید شده است ولی کانال این هم حرکتی مشخص نشده است
-  \begin{itemize}
-  \item \lr{\cite{cho2015stock},\cite{kim2015stock}}:
-  \begin{itemize}
-دو پاسخ متفاوت به دلایل هم حرکتی شرکت ها در گروه های کسب و کار داده اند. هر دو گروه های کسب و کار موجود در بازار کره جنوبی را بررسی کرده اند و مقاله اول عوامل بنیادی مرتبط شرکت ها در گروه های کسب و کار را به عنوان دلیل هم حرکتی شرکت ها معرفی کرده است ولی مقاله دوم دسته بندی شرکت های عضو گروه را به عنوان دلیل هم حرکتی بیان کرده است. 
-  \end{itemize}
-  
-  \end{itemize}
- \end{itemize}
+	\item 
+	در آمریکا داده های مالکیت صندوق های سرمایه گذاری موجود می باشد
+	\item
+	در نتیجه نتایج بدست آمده محدود به این نوع مالکیت می باشد
+	\item
+	در صورتی که این نوع به خصوص مالکیت با توجه به نیاز ها و واسطه بودن، رفتار های به خصوصی انجام می دهند
+	\footnote{\lr{\cite{coval2007asset}} 
+		نشان داده است که جریان ورود و خروج مالی صندوق ها می تواند سبب ایجاد فشار قیمتی بر سهام شرکت ها شود و قیمت شرکت ها رو تحت تاثیر قرار دهد و این مسئله با موصوع مالکیت مشترک که می تواند سبب تغییر رفتار مدیران شرکت شود می تواند متفاوت باشد.}
+	\item
+	با توجه به محدودیت های دیتای موجود در آمریکا و  تنها موجود بودن داده های مالکیت های صندوق های سرمایه گذاری، بررسی های این حوزه محدود به اثر مالکیت صندوق های سرمایه گذاری بر شرکت ها می باشد.
+	\item
+	اولین بررسی هم حرکتی ناشی از مالکیت مشترک صرف نظر از اینکه مالک شرکت صندوق سرمایه گذاری بوده باشد
+	
+	\item 
+	در ایران داده های مالکیت های بالای یک درصد به صورت روزانه وجود دارد که محدود به مالکیت صندوق های سرمایه گذاری نیست.
+	\item
+	می توان به این سوال پاسخ داد که مالکیت مشترکی که ناشی از صندوق های سرمایه گذاری نباشد آیا سبب هم حرکتی می شود و یا خیر
+	\item 
+	یکی دیگر از ویژگی های بازار سرمایه ایران وجود گروه های کسب و کار است. گروه های کسب و کار حدود 85\% از ارزش بازار ایران را در اختیار دارند.
+	\begin{itemize}
+		\item
+		گروه های کسب و کار پدیده مهمی هستند در کشور های در حال توسعه یافته و در حال توسعه وجود دارند.
+		\item
+		هم حرکتی شرکت ها را در گروه های کسب و کار بررسی می کنیم
+		\item
+		دو مقاله در ادبیات به این موضوع پرداخته اند و هم حرکتی قیمت شرکت ها در گروه های کسب و کار را بررسی کرده اند
+		\item
+		هم حرکتی قیمت شرکت ها در گروه های کسب و کار تایید شده است ولی کانال این هم حرکتی مشخص نشده است
+		\begin{itemize}
+			\item \lr{\cite{cho2015stock},\cite{kim2015stock}}:
+			\begin{itemize}
+				دو پاسخ متفاوت به دلایل هم حرکتی شرکت ها در گروه های کسب و کار داده اند. هر دو گروه های کسب و کار موجود در بازار کره جنوبی را بررسی کرده اند و مقاله اول عوامل بنیادی مرتبط شرکت ها در گروه های کسب و کار را به عنوان دلیل هم حرکتی شرکت ها معرفی کرده است ولی مقاله دوم دسته بندی شرکت های عضو گروه را به عنوان دلیل هم حرکتی بیان کرده است. 
+			\end{itemize}
+			
+		\end{itemize}
+	\end{itemize}
 \end{itemize}
 
 %با توجه به محدودیت های دیتای موجود در آمریکا و  تنها موجود بودن داده های مالکیت های صندوق های سرمایه گذاری، بخشی از بررسی های این حوزه محدود به اثر مالکیت صندوق های سرمایه گذاری بر شرکت ها می باشد. برای مثال مقاله 
@@ -282,139 +289,145 @@ The companies' presence in business groups can explain the correlation in turnov
 
 
 \begin{itemize}
-\item
-در این مقاله سعی شده است تا هم حرکتی میان شرکت های درون گروه های کسب و کار بررسی شود.
-
-\item 
-و برای اولین میان مالکیت مشترک مستفیم و مالکیت مشترک غیر مستقیم مقایسه انجام شود
-
-\end{itemize}
- 
- 
- \begin{itemize}
- \item
-برای محاسبه مالکیت مشترک میان شرکت ها از ملاکی اصلاح شده استفاده کرده ایم که در این پژوهش معرفی کرده ایم
-
- \end{itemize}
-
-
-\begin{itemize}
-\item
-مالکیت مشترک برای پیش بینی هم حرکتی قیمت شرکت ها اهمیت دارد
-\item 
-گروه های کسب و کار برای پیش بینی هم حرکتی قیمت شرکت ها اهمیت دارد
-\item
-اهمیت گروه های کسب و کار برای پیش بینی هم حرکتی قیمت شرکت ها بیشتر از مالکیت مشترک است
-\item
- در گروه های کسب و کار، مالکیت مشترک سبب افزایش هم حرکتی قیمت می شود ولی در خارج از گروه های کسب و کار اهمیت ندارد
+	\item
+	در این مقاله سعی شده است تا هم حرکتی میان شرکت های درون گروه های کسب و کار بررسی شود.
+	
+	\item 
+	و برای اولین میان مالکیت مشترک مستفیم و مالکیت مشترک غیر مستقیم مقایسه انجام شود
+	
 \end{itemize}
 
 
-
 \begin{itemize}
-\item 
-انواع بررسی ها برای تایید اهمیت گروه های کسب و کار انجام شده است 
-\begin{itemize}
-
-\item
-فقط جفت  های د ارای مالکیت بالا را بررسی کردیم
-\begin{itemize}
-\item 
-در این زیر مجموعه هم گروه های کسب و کار بیشترین تاثیر را دارند 
-\item
-مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارند.
-
-\end{itemize}
-\item
-بررسی ها محدود به جفت های دارای مالک مشترک بوده است:
-\begin{itemize}
-\item
-بررسی اثر گروه کسب و کار نیاز به مالکیت مشترک ندارد
-\item
-اثر گروه کسب و کار و مالکیت مشترک را نمی توان جدا کرد
-\item 
-همه ی جفت های بازار را ساختیم:
-\begin{itemize}
-\item
-نتایج اولیه تایید شد
-\item 
-جفت های حاضر در گروه های کسب و کار سطح مالکیت مشترک اهمیت ندارد و صرفا سطح بالایی از مالکیت مشترک اهمیت دارد
-\item
-برای جفت های بیرون یک گروه کسب وکار، سطح مالکیت در واقع وجود مالکیت مشترک اهمیت دارد و نه مقدار قابل توجه آن
-\item
-مالکیت مشترک خارج از گروه های کسب و کار نیز اهمیت دارد
-\item
-تاثیر یکسان بودن گروه های کسب و کار بیشتر است
-\end{itemize}
+	\item
+	برای محاسبه مالکیت مشترک میان شرکت ها از ملاکی اصلاح شده استفاده کرده ایم که در این پژوهش معرفی کرده ایم
+	
 \end{itemize}
 
+
+\begin{itemize}
+	\item
+	مالکیت مشترک برای پیش بینی هم حرکتی قیمت شرکت ها اهمیت دارد
+	\item 
+	گروه های کسب و کار برای پیش بینی هم حرکتی قیمت شرکت ها اهمیت دارد
+	\item
+	اهمیت گروه های کسب و کار برای پیش بینی هم حرکتی قیمت شرکت ها بیشتر از مالکیت مشترک است
+	\item
+	در گروه های کسب و کار، مالکیت مشترک سبب افزایش هم حرکتی قیمت می شود ولی در خارج از گروه های کسب و کار اهمیت ندارد
 \end{itemize}
 
 
 
-
+\begin{itemize}
+	\item 
+	انواع بررسی ها برای تایید اهمیت گروه های کسب و کار انجام شده است 
+	\begin{itemize}
+		
+		\item
+		فقط جفت  های د ارای مالکیت بالا را بررسی کردیم
+		\begin{itemize}
+			\item 
+			در این زیر مجموعه هم گروه های کسب و کار بیشترین تاثیر را دارند 
+			\item
+			مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارند.
+			
+		\end{itemize}
+		\item
+		بررسی ها محدود به جفت های دارای مالک مشترک بوده است:
+		\begin{itemize}
+			\item
+			بررسی اثر گروه کسب و کار نیاز به مالکیت مشترک ندارد
+			\item
+			اثر گروه کسب و کار و مالکیت مشترک را نمی توان جدا کرد
+			\item 
+			همه ی جفت های بازار را ساختیم:
+			\begin{itemize}
+				\item
+				نتایج اولیه تایید شد
+				\item 
+				جفت های حاضر در گروه های کسب و کار سطح مالکیت مشترک اهمیت ندارد و صرفا سطح بالایی از مالکیت مشترک اهمیت دارد
+				\item
+				برای جفت های بیرون یک گروه کسب وکار، سطح مالکیت در واقع وجود مالکیت مشترک اهمیت دارد و نه مقدار قابل توجه آن
+				\item
+				مالکیت مشترک خارج از گروه های کسب و کار نیز اهمیت دارد
+				\item
+				تاثیر یکسان بودن گروه های کسب و کار بیشتر است
+			\end{itemize}
+		\end{itemize}
+		
+	\end{itemize}
+	
+	
+	
+	
 \end{itemize}
 
 
 
 
 \begin{itemize}
-\item
-کانال تاثیر: معامله هم زمان شرکت ها با یکدیگر در گروه های کسب و کار:
-\begin{itemize}
-\item
-\lr{turnover}
-\begin{itemize}
-\item
-بخش قابل توجهی از تغییرات 
-\lr{turnover}
-شرکت ها علاوه بر بازار از گروه های کسب و کار ناشی می شود
-\item
-حضور شرکت ها در گروه های کسی و کار می تواند هم بستگی 
-\lr{turnover}
-را توضیح دهد.
-\item
-در گروه های کسب و کار هر آنچه مالکیت مشترک افزایش پیدا می کند هم بستگی تغییرات 
-\lr{turnover}
-نیز افزایش پیدا می کند.
-\item
-از متغیر ابزاری جهت یافتن کانال استفاده کرده ایم و نشان داده ایم گروه های کسب و کار از طریق معاملات هم زمان سبب ایجاد هم جرکتی در قیمت شرکت ها شده است
-% گروه های کسب و کار بزرگ
-% \begin{itemize}
-% 	\item 
-% 	اگر معامله گران شرکت های در یک گروه کسب و کار را در یک دسته قرار می دهند نیاز است تا اعضای گروه های بزرگ هم حرکتی بیشتری داشته باشند
-% 	\item
-% 	علاوه بر مورد فوق باید رابطه هم بستگی 
-% 	\lr{turnover}
-% 	و هم حرکتی بازده نیز مثبت باشد. 
-% 	
-% 		\item 
-% 		شرکت های عضو گروه کسب و کار به همراه یکدیگر معامله بشوند
-% 		
-% 	
-% \item
-% بررسی کردیم و نتایج نشان داد که شرکت های در گروه بزرگ هم حرکتی بیشتری دارند و علاوه بر این تاثیر هم حرکتی در 
-% \lr{turnover}
-% نیز در گروه های بزرگ از دیگر گروه ها بیشتر است.
-% \end{itemize}
-\end{itemize}
-\item 
-ناترازی خرید حقوقی
-\begin{itemize}
-\item
-پراکندگی ناترازی خرید و فروش حقوقی در این شرکت ها باید کم باشد
-\item 
-به صورت کلی در گروه های کسب و کار میانگین پراکندگی شاخص ناترازی کمتر از شرکت های بیرون گروه است
-\item
- بررسی دقیق تر نشان داد با مشخص کردن گروه های کسب و کار دارای پراکندگی کم انتظار داریم با کاهش پراکندگی، هم حرکتی افزایش پیدا کند
- \item
- در گروه های با پراکندگی کم، هم حرکتی شرکت ها افزایش پیدا می کند و با افزایش مالکیت مشترک نیز هم حرکتی افزایش پیدا می کند
- 
-\end{itemize}
-\item
-کانال عوامل بنیادی را بررسی کردیم ولی تاثیری بر هم حرکتی قیمت ها یافت نشد
-
-\end{itemize}
+	\item
+	کانال تاثیر: معامله هم زمان شرکت ها با یکدیگر در گروه های کسب و کار:
+	\begin{itemize}
+		\item
+		\lr{turnover}
+		\begin{itemize}
+			\item
+			بخش قابل توجهی از تغییرات 
+			\lr{turnover}
+			شرکت ها علاوه بر بازار از گروه های کسب و کار ناشی می شود
+			\item
+			حضور شرکت ها در گروه های کسی و کار می تواند هم بستگی 
+			\lr{turnover}
+			را توضیح دهد.
+			\item
+			از 
+			\lr{turnover}
+			ماهانه شرکت ها 
+			میانگین 
+			\lr{turnover}
+			سالانه شرکت و 
+			\lr{turnover}
+			ماهانه بازار را خارج کردیم و بررسی کردیم درگروه های کسب و کار میزان پراکندگی باقی مانده ماهانه کمتر است
+			\item
+			برای گروه های با پراکندگی کمتر هم حرکتی بیشتر است
+			
+			% گروه های کسب و کار بزرگ
+			% \begin{itemize}
+				% 	\item 
+				% 	اگر معامله گران شرکت های در یک گروه کسب و کار را در یک دسته قرار می دهند نیاز است تا اعضای گروه های بزرگ هم حرکتی بیشتری داشته باشند
+				% 	\item
+				% 	علاوه بر مورد فوق باید رابطه هم بستگی 
+				% 	\lr{turnover}
+				% 	و هم حرکتی بازده نیز مثبت باشد. 
+				% 	
+				% 		\item 
+				% 		شرکت های عضو گروه کسب و کار به همراه یکدیگر معامله بشوند
+				% 		
+				% 	
+				% \item
+				% بررسی کردیم و نتایج نشان داد که شرکت های در گروه بزرگ هم حرکتی بیشتری دارند و علاوه بر این تاثیر هم حرکتی در 
+				% \lr{turnover}
+				% نیز در گروه های بزرگ از دیگر گروه ها بیشتر است.
+				% \end{itemize}
+		\end{itemize}
+		\item 
+		ناترازی خرید حقوقی
+		\begin{itemize}
+			\item
+			پراکندگی ناترازی خرید و فروش حقوقی در این شرکت ها باید کم باشد
+			\item 
+			به صورت کلی در گروه های کسب و کار میانگین پراکندگی شاخص ناترازی کمتر از شرکت های بیرون گروه است
+			\item
+			بررسی دقیق تر نشان داد با مشخص کردن گروه های کسب و کار دارای پراکندگی کم انتظار داریم با کاهش پراکندگی، هم حرکتی افزایش پیدا کند
+			\item
+			در گروه های با پراکندگی کم، هم حرکتی شرکت ها افزایش پیدا می کند و با افزایش مالکیت مشترک نیز هم حرکتی افزایش پیدا می کند
+			
+		\end{itemize}
+		\item
+		کانال عوامل بنیادی را بررسی کردیم ولی تاثیری بر هم حرکتی قیمت ها یافت نشد
+		
+	\end{itemize}
 \end{itemize}
 
 
