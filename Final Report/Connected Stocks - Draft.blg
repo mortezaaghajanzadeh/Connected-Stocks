@@ -3,6 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft.aux
 The style file: apalike.bst
 Database file #1: Ref.bib
+Repeated entry---line 749 of file Ref.bib
+ : @article{azar2018anticompetitive
+ :                                 ,
+I'm skipping whatever remains of this entry
 Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
@@ -48,4 +52,4 @@ warning$ -- 4
 while$ -- 59
 width$ -- 0
 write$ -- 226
-(There were 4 warnings)
+(There was 1 error message)

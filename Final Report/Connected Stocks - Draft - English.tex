@@ -84,9 +84,13 @@ December\fi, \number \year}
 \maketitle
 
 
+
 \begin{abstract}
-در این پژوهش با استفاده از داده های روزانه مالکیت  شرکت های فعال در  بورس اوراق بهادار تهران نشان می دهیم مالکیت مشترک و عضویت در یک گروه کسب و کار بر هم حرکتی قیمت شرکت ها تاثیر مثبتی دارد. علاوه بر این نشان می دهیم که عضویت در گروه کسب و کار تاثیر بیشتری از مالکیت مشترک دارد و مالکیت مشترک تنها در درون گروه های کسب و کار سبب افزایش هم حرکتی می شود.
-در ادامه با توجه به شواهد معرفی شده نشان می دهیم معاملات هم زمان و هم جهت در گروه های کسب و کار هم حرکتی را توضیح می دهد.
+	\begin{LTR}
+		We link stocks through direct and indirect common owners, and we show that having common ownership and belonging to a business group (indirect common owner) affect the co-movement. Our analysis is based on the daily ownership of blockholders on the Tehran Stock Exchange. The study found that belonging to a business group had more impact than being a common owner, and a common owner influenced only movement within business groups. In addition, co-movement in business groups is explained by simultaneous trades in the same direction.
+	\end{LTR}
+%در این پژوهش با استفاده از داده های روزانه مالکیت  شرکت های فعال در  بورس اوراق بهادار تهران نشان می دهیم مالکیت مشترک و عضویت در یک گروه کسب و کار بر هم حرکتی قیمت شرکت ها تاثیر مثبتی دارد. علاوه بر این نشان می دهیم که عضویت در گروه کسب و کار تاثیر بیشتری از مالکیت مشترک دارد و مالکیت مشترک تنها در درون گروه های کسب و کار سبب افزایش هم حرکتی می شود.
+%در ادامه با توجه به شواهد معرفی شده نشان می دهیم معاملات هم زمان و هم جهت در گروه های کسب و کار هم حرکتی را توضیح می دهد.
 \end{abstract}
 
 
@@ -95,15 +99,70 @@ December\fi, \number \year}
 
 \section{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\lr{The phenomenon of "co-movement" has been observed by researchers and analysts, notably after the financial crisis of 2008. There is an increase in interest in risk models. According to these models, asset price correlation plays a significant role in risk measurement. Several companies' return co-movement was traditionally attributed to their fundamentals. (cite)
-	Although, in recent years, it has been recognized that the co-movement might have non-fundamental sources. (cite) describes some theoretical models for predicting a correlation between fundamentally unrelated companies' returns.
-	The following are some of the other sources of co-movement in companies' returns. Index inclusion (cite), investors' attention to the companies (cite), Investment banks' underwriting (cite), correlated beliefs (cite), shareholders' coordination (cite), and preference for companies' dividends (cite) are among contributing factors to co-movement in companies' returns that have been identified by researchers.
-	\footnote{Furthermore, the mutual ownership concept has been observed in financial literature in recent years. There has been a surge in the popularity of index investing in the United States, which has led to an increase in mutual ownership. (cite)
-	For instance, (cite) claims that an increase in mutual ownership in airline companies leads to less competitive ticket pricing. However, this subject is controversial and many papers discuss whether mutual ownership affects companies' behavior.
-	For example, (cite) realized that in previous investigations, other effective factors have wrongly been replaced by mutual ownership effect.
-	}}
+\begin{LTR}
+	\lr{The phenomenon of "co-movement" has been observed by researchers and analysts. There is an increase in interest in risk models, notably after the financial crisis of 2008. According to these models, price correlation plays a significant role in risk measurement. Companies' return co-movement was traditionally attributed to their fundamentals. (For example {\cite{shiller1989comovements}})} 
+		
+	Although, in recent years, it has been recognized that the co-movement rises from non-fundamental sources. \lr{\cite{barberis2003style} and \cite{barberis2005comovement}} provided theoretical models for predicting a co-movement between fundamentally unrelated companies.
+	The following are some of the other sources of co-movement. Index inclusion (\lr{\cite{barberis2005comovement}}), investors' attention to the companies (\lr{\cite{wu2014investor}}), Investment banks' underwriting (\lr{\cite{grullon2014comovement}}), correlated beliefs (\lr{\cite{david2016correlated}}), shareholders' coordination (\lr{\cite{pantzalis2017shareholder}}), and preference for companies' dividends (\lr{\cite{HAMEED2019103}}) are among contributing factors to co-movement that have been identified by researchers.
+	
+
+	Further more, \lr{\cite{AntonPolk}} examined on the effect of common ownership on co-movement\LTRfootnote{The common ownership concept has been observed in financial literature in recent years. There has been a surge in the popularity of index investing in the United States, which has led to an increase in common ownership. 
+		For instance, \cite{azar2018anticompetitive} claims that an increase in mutual ownership in airline companies leads to less competitive ticket pricing. However, this subject is controversial and many papers discuss whether mutual ownership affects companies' behavior.
+		For example, \cite{lewellen2021does} realized that in previous investigations, other effective factors have wrongly been replaced by mutual ownership effect.
+	}. 
+This paper suggests that co-movement increases by increasing common ownership. Also, as the mutual fund ownership data was accessible to the author, it is shown in the paper that the  co-movement increases when there is a significant net flow, either in or out-flow in the months.
+
+In addition, according to \lr{\cite{Liquidity2016}} companies show co-movement considering their owners' correlation in their liquidity needs. The author also adds that companies with higher mutual fund ownership have a more liquidity correlation than others. This paper contends that in order for companies to have co-movement, there is no need for common ownership. Plus, common ownership can explain companies'  liquidity correlation. 
+\end{LTR}
+
+
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{LTR}
+	According to the restriction of data in the US that only fund ownership data is available, investigations in this area are limited to the fund ownership impact on co-movement. This type of owners perform particular types of behavior due to their needs and the fact that they are intermediates.
+	Nevertheless, in Iran, the block holders' daily ownership data, including mutual fund ownership, is publicly accessible. So research through this data can show whether common ownership other than mutual fund ownership can lead to co-movement or not.
+	
+	Additionally, there are business groups with a share of almost 85\% of the Iran stock market. Business groups are essential phenomena that can be seen in developed and developing countries. 
+	This paper analyzes co-movement in business groups. Two papers are found in the literature debate this subject, considering co-movement in business groups.
+	
+	Although the co-movement in business groups is accepted, the co-movement channels remained undiscovered.
+	Both \lr{\cite{cho2015stock} and \cite{kim2015stock}} studied the South Korean market and suggested two different sources for the co-movement in business groups. The first paper attributed co-movement to the companies' fundamentals. However, the second paper presents that the investors' category/habitat behavior is responsible for co-movement.
+	
+	In this paper, we consider the co-movement of the companies in business groups. Best of our knowledge, it is the first study that compares direct and indirect common ownership.
+	A modified measurement is introduced in this paper to calculate the common ownership of the companies. 
+	
+	%% Result
+	We realize that common ownership is crucial for predicting the co-movement. Business groups play a more critical role in predicting correlation of companies' return than common ownership. We show that common ownership  can predict  co-movement only inside  the business groups.
+	
+	
+	
+	We extend our analysis in order to validate the prominence of business groups. First, restrict the study to high level of common ownership for distinguishing effect of high level of common ownership and business groups. 
+	In this subset, like the mentioned ones, business groups have a significant impact.
+	Second, if business group affect co-movement, there is no need to restrict our investigation to commonly hold pairs. In order to distinguish the impact of common ownership and business group, we built all possible pairs in the market.
+	We show that for all the firms in the market, business group can increase firms' co-movement. 
+	
+	Finally, we show that correlated trade in business groups is the channel of co-movement. We provide evidence that the volume and direction of trades in business groups are related, and firms in the business groups with higher relation in trade have a higher level of co-movement.
+	
+	
+	%  The business groups might not have as much influence as the market has on many companies' turnover fluctuations. However, it is influential.
+	% The companies' presence in business groups can explain the correlation in turnover. 
+	% We extracted both yearly companies' turnover average and monthly market turnover from monthly companies' turnover. Then we realized that there is less monthly residual dispersion in business
+	% groups analyzing the deduced data.
+	% More co-movement is detected for groups with less dispersion.
+	% 
+	% Institutional imbalance:
+	% Institutional imbalance dispersion must be low for these companies.
+	% In general, the imbalance dispersion average in business groups is less than companies that are not included in the groups.
+	% A more precise study illustrated that determining business groups with low dispersion, we expect the co-movement to increase.
+	% In low dispersion groups, the co-movement increases with either a decrease in dispersion or with higher common ownership.
+	% We searched for fundamental factors, too. But they had no impact on price co-movements.-
+	
+\end{LTR}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \begin{itemize}
 \item
 هم حرکتی مورد توجه تحلیلگران بازار و محققان قرار گرفته است
@@ -159,85 +218,45 @@ December\fi, \number \year}
 	\lr{\cite{lewellen2021does}}
 	مقالات سال های گذشته را بررسی کرده است و یافته است که در بررسی های گذشته، اثر دیگر فاکتور های تاثیر گذار به اشتباه به مالکیت مشترک مرتبط شده است.
 }
- و
- 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \lr{Further more, \lr{\cite{AntonPolk}} researched on the effect of mutual ownership on co-movement.
-  This paper suggests these arguments: First, co-movement increases by increasing mutual ownership. Second, as the mutual fund ownership data was accessible to the author, he has shown in the paper that the companies' co-movement increases with the existence of a significant net flow of cash, either in-flow or out-flow.
-  In addition, according to \lr{\cite{Liquidity2016}} companies show co-movement considering their owners' liquidity needs correlation. The author also adds that companies with higher mutual fund ownership have a more liquidity correlation than others. This paper contends that in order for companies to have co-movement, there is no need for their mutual ownership. Plus, mutual ownership explains companies' share liquidity correlation.
-  Since mutual fund ownership data is not open to access, the research results are limited to this type of ownership. However, they perform particular types of behavior due to their needs and the fact that they are intermediates. According to the restriction of data in the US and that only mutual fund ownership data is accessible, investigations in this area are limited to the mutual fund ownership impact on co-movement.
-  ----------------??
-  Nevertheless, in Iran, the block holders' daily ownership data, including mutual fund ownership data, is publicly accessible. So research through this data can show whether mutual ownership other than mutual fund ownership can lead to co-movement or not. There are business groups with a share of almost 85\% of the Iran stock market. Business groups are essential phenomena that can be seen in developed and developing countries. 
-  This paper analyzes co-movement in business groups. Two papers are found in the literature debate this subject, considering companies' price co-movement in business groups.
-  Although the price co-movement in business groups is accepted, the co-movement channels remained undiscovered.
-  Both (2 cites) studied the South Korean market and suggested two different causes for the co-movement in business groups. The first paper attributed co-movement to the companies' fundamental factors. However, the second paper presents that the difference in companies' category habitat is responsible for co-movement.
-  In this paper, we consider the co-movement of the companies in business groups. This paper is the first study that compares direct and indirect mutual ownership. A modified criterion is introduced in this paper to calculate the mutual ownership of the companies. Mutual ownership is crucial for predicting the companies' price co-movement. Business groups play a more critical role in price co-movement prediction than mutual ownership. Mutual ownership causes co-movement inside business groups, but it does not affect the same outside the business groups.
-  We studied the prominence of business groups in this paper. Only pairs with a high level of common ownership are considered in this study. In this subset, like the mentioned ones, business groups have a significant impact. Common ownership is noted exclusively for business groups. 
-  We only considered pairs with common ownership:
-  There is no need for common ownership to study the impact of business groups. 
-  We can not distinguish the impact of common ownership and business group.
-  We built all possible pairs in the market.
-  First-level results were satisfactory, and so we approved them. 
-  The level of common ownership is influential for pairs that are not in the same business group.
-  The business group has a more meaningful influence than common ownership.
-  Impact channel: Companies' simultaneous trade in different business groups.
-  turnover:
-  The business groups might not have as much influence as the market has on many companies' turnover fluctuations. However, it is influential.
- The companies' presence in business groups can explain the correlation in turnover. 
- We extracted both yearly companies' turnover average and monthly market turnover from monthly companies' turnover. Then we realized that there is less monthly residual dispersion in business
- groups analyzing the deduced data.
- More co-movement is detected for groups with less dispersion.
- Institutional imbalance:
- Institutional imbalance dispersion must be low for these companies.
- In general, the imbalance dispersion average in business groups is less than companies that are not included in the groups.
- A more precise study illustrated that determining business groups with low dispersion, we expect the co-movement to increase.
- In low dispersion groups, the co-movement increases with either a decrease in dispersion or with higher common ownership.
- We searched for fundamental factors, too. But they had no impact on price co-movements.-
-}
-  
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
  
  
  
+ \lr{\cite{AntonPolk}}
+ اثر مالکیت مشترک را بر هم حرکتی را بررسی کرده است.  
  
- 
-\lr{\cite{AntonPolk}}
-اثر مالکیت مشترک را بر هم حرکتی را بررسی کرده است.  
-
-\begin{itemize}
-\item \lr{\cite{AntonPolk}}
-\begin{itemize}
-\item
-یافته است که با افزایش مالکیت مشترک هم حرکتی شرکت ها افزایش پیدا می کند. 
-\item
-علاوه بر این با توجه به دسترسی به داده های مالکیت صندوق های سرمایه گذاری مقاله نشان داده است که هم حرکتی شرکت ها هنگامی که جریان خروجی و ورودی قوی ای در صندوق ها وجود داشته باشد افزایش پیدا می کند. 
-\item
-این مقاله بررسی خود را محدود به صندوق های سرمایه گذاری فعال 
-(\lr{Active mutual funds}) 
-و شرکت های بزرگ (ارزش بازاری بالاتر از میانه ارزش شرکت ها) محدود کرده است.
-\end{itemize}
-\end{itemize}
-\item
-در ادامه 
-\lr{\cite{Liquidity2016}}
-نشان داده است که شرکت ها با توجه به هم بستگی نیاز های نقدینگی مالکان خود، با یکدیگر هم حرکتی نشان می دهند
-\begin{itemize}
-\item \lr{\cite{Liquidity2016}}:
-\begin{itemize} 
-\item
- نشان می دهد که شرکت های دارای سطح بالایی از مالکیت صندوق های سرمایه گذاری همراهی نقدشوندگی بالاتری نسبت به بقیه شرکت ها دارند.
+ \begin{itemize}
+ 	\item \lr{\cite{AntonPolk}}
+ 	\begin{itemize}
+ 		\item
+ 		یافته است که با افزایش مالکیت مشترک هم حرکتی شرکت ها افزایش پیدا می کند. 
+ 		\item
+ 		علاوه بر این با توجه به دسترسی به داده های مالکیت صندوق های سرمایه گذاری مقاله نشان داده است که هم حرکتی شرکت ها هنگامی که جریان خروجی و ورودی قوی ای در صندوق ها وجود داشته باشد افزایش پیدا می کند. 
+ 		\item
+ 		این مقاله بررسی خود را محدود به صندوق های سرمایه گذاری فعال 
+ 		(\lr{Active mutual funds}) 
+ 		و شرکت های بزرگ (ارزش بازاری بالاتر از میانه ارزش شرکت ها) محدود کرده است.
+ 	\end{itemize}
+ \end{itemize}
  \item
- نشان می دهد که برای هم حرکتی قیمت شرکت ها نیاز به مالکیت مشترک نیست
- \item
- همچنین نشان می دهد که مالکیت مشترک می تواند هم بستگی در نقد شوندگی سهام شرکت را توضیح دهد
+ در ادامه 
+ \lr{\cite{Liquidity2016}}
+ نشان داده است که شرکت ها با توجه به هم بستگی نیاز های نقدینگی مالکان خود، با یکدیگر هم حرکتی نشان می دهند
+ \begin{itemize}
+ 	\item \lr{\cite{Liquidity2016}}:
+ 	\begin{itemize} 
+ 		\item
+ 		نشان می دهد که شرکت های دارای سطح بالایی از مالکیت صندوق های سرمایه گذاری همراهی نقدشوندگی بالاتری نسبت به بقیه شرکت ها دارند.
+ 		\item
+ 		نشان می دهد که برای هم حرکتی قیمت شرکت ها نیاز به مالکیت مشترک نیست
+ 		\item
+ 		همچنین نشان می دهد که مالکیت مشترک می تواند هم بستگی در نقد شوندگی سهام شرکت را توضیح دهد
+ 	\end{itemize}
+ \end{itemize}
+ 
+ 
 \end{itemize}
-\end{itemize}
-
-
-\end{itemize}
-
-
+ 
 %%%% Our work
 \begin{itemize}
 	\item 
@@ -986,7 +1005,43 @@ December\fi, \number \year}
 
 \subsection{\lr{Forecasting Co-movement}}
 \label{Forecasting Co-movement}
+\begin{LTR}
+	in the following month. We empirically test the impact of current measured
+	common ownership on the next period’s co-movement
+	At the first step, we study the effects of business groups and common ownership on the co-movement. As it has shown in \ref{mcorr50},, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's co-movement on the considered variables.
+	\input{Model11}
+	
+	For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{MFCA}^*_{ij,t}$, $\textit{Same Group}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
+	
+\begin{figure}[htbp]
+	\centering  
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
+	\caption{Future monthly correlation for different level of common ownership at this period }
+	\label{mcorr50}
+\end{figure}
 
+We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
+
+	The estimated results are presented in tables \ref{mresult2part1}
+	and \ref{mresult2part2}.
+	In the two first columns table \ref{mresult2part1}, we estimate a simplified version of equation \ref{model1} with only common ownership measure($ MFCAP^*_{i,j}$). In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity.  We find that $ MFCAP^*_{i,j}$ is significant with a coefficient of $0.00112$ and a t-statistics of $2.11$ in the presence of control variables. 
+	
+	 
+	In Columns 3 and 4 of that table, we use another simplified version of equation \ref{model1}, with only Same Group. The estimated coefficient in this specification, Same Group is highly statistically significant, with a coefficient of   $0.0153$ and a t-statistics of $7.9$. 
+	There is a significant difference in the impact of same business groups and the common ownership, according to the results. 
+	
+	In the fifth specification of table \ref{mresult2part1}, we use both \textit{Same Group}  and $\text{MFCA}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that pair in the same business group affects more than a higher level of common ownership
+	 \cite{AntonPolk} study large firms but we do not restrict  our investigation. In the last column of table \ref{mresult2part1}, we control for pairs type (Pairs is large or small if both firms are large or  small . If one firm is large and other is small, we call it hybrid.) Estimation results in table \ref{mresult2part1} shows that for all the pairs \textit{Same Group} significantly increases co-movement.
+	 
+	 In Table  \ref{mresult2part2}, we examine effect of common ownership in the business groups. In two first columns, we restrict our investigation to two sub-samples. In the first one, we run our model for the pairs in the same business group and others who do not belong to the same one in the second one. It provides evidence that common ownership only matters for the pairs in the same business groups. 
+	
+	
+	Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{MFCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. These results aver that $\text{MFCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. 
+	
+	
+
+\end{LTR}
 \begin{itemize}
 	\item 
 	در مرحله اول بررسی رابطه مالکیت مشترک و گروه های کسب و کار با هم حرکتی شرکت ها بررسی کرده ایم
@@ -1108,17 +1163,8 @@ December\fi, \number \year}
 
 
 \subsection{\lr{High level of common ownership}}
-\begin{itemize}
-	\item 
-	با توجه به جدول 
-	\ref{measureResults}
-	گروه های کسب و کار به صورت مالکیت بالاتر نیز دارند 
-	\item
-	برای برطرف کردن این مسئله بررسی را محدود به مالکیت مشترک بالا کردیم
-	\item
-	با توجه به شکل 
-	\ref{Qmcorr5subsample}
-	بالاتر از کوارتر سوم داده به نظر می آید بیشترین تاثیر را در هم حرکتی دارد
+\begin{LTR}
+	In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' co-movement. As shown in table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, the previous results could be drive from high level of common ownership For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{FCA}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future co-movement and current measurement of common ownership for that pairs. As you can see in the left panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' co-movement although for a high level of common ownership.
 	
 	\begin{figure}[htbp]
 		\centering  
@@ -1134,95 +1180,162 @@ December\fi, \number \year}
 		\label{Qmcorr5subsample}
 	\end{figure}
 
-	\item
-	بررسی را محدود به جفت های دراای مالکیت زیاد کردیم و مدل 
-	\ref{model1}
-	را به شیوه گذشته برآورد کریدم
-	\item
-	نتایج در جدول 
-	 \ref{QTimemresult2subsample}
-	 نتایج را نشان داده است
-\lr{\begin{LTR}
-			 \begin{table}[htbp]
-	 	\centering
-	 	\caption{\scriptsize Estimation results for high level of common ownership}
-	 	\label{QTimemresult2subsample}
-	 	\resizebox{\textwidth}{!}{
-	 		\input{Output/QTimemresult2subsample-slide.tex}
-	 	}
-	 \end{table}
-\end{LTR}}
-	\begin{itemize}
-		\item 
-		همچنان نتایج گذشته تایید شده است
-		\item 
-	مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارد 
-		\item 
-		گروه های کسب و کار بیشترین تاثیر را در میان سطح زیاد مالیکت مشترک دارد
-		\item 
-		ممکن است جفت های دارای مالکیت بالا تفاوت بنیادی با دیگر جفت ها داشته باشند 
-		\begin{itemize}
-			\item 
-			در شکل 
-			\ref{QarterSummary}
-			متوسط کنترل های تعریف شده نشان داده شده است
-			\begin{figure}[htbp]
-				\centering  
-				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
-				\caption{Pairs' characteristics for the pairs with high level of common ownership}
-				\label{QarterSummary}
-			\end{figure}
-		\item
-		تفاوت چشمگیری نسبت به بقیه جامعه ندارند
-		\end{itemize}
-	\end{itemize}
+
+	We estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the sub-sample of a high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As expected, firms in the same business group have a high statistical and economically significant effect on forecasting future co-movements. Columns six and seven prove our prior explanations for the importance of business groups compared to common ownership in pairs with a higher level of common ownership.
 	
-	
-\end{itemize}
+	\lr{\begin{table}[htbp]
+			\centering
+			\caption{\scriptsize Estimation results for high level of common ownership}
+			\label{QTimemresult2subsample}
+			\resizebox{\textwidth}{!}{
+				\input{Output/QTimemresult2subsample-slide.tex}
+			}
+	\end{table}}
+
+	\begin{figure}[htbp]
+					\centering  
+					\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
+					\caption{Pairs' characteristics for the pairs with high level of common ownership}
+					\label{QarterSummary}
+				\end{figure}
+
+\end{LTR}
+%\begin{itemize}
+%	\item 
+%	با توجه به جدول 
+%	\ref{measureResults}
+%	گروه های کسب و کار به صورت مالکیت بالاتر نیز دارند 
+%	\item
+%	برای برطرف کردن این مسئله بررسی را محدود به مالکیت مشترک بالا کردیم
+%	\item
+%	با توجه به شکل 
+%	\ref{Qmcorr5subsample}
+%	بالاتر از کوارتر سوم داده به نظر می آید بیشترین تاثیر را در هم حرکتی دارد
+%	
+%	\begin{figure}[htbp]
+%		\centering  
+%		\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
+%		\caption{text}
+%		\label{Qmcorr5lrd}
+%	\end{figure}
+%	\begin{figure}[htbp]
+%		\centering  
+%		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+%		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
+%		\caption{text}
+%		\label{Qmcorr5subsample}
+%	\end{figure}
+%
+%	\item
+%	بررسی را محدود به جفت های دراای مالکیت زیاد کردیم و مدل 
+%	\ref{model1}
+%	را به شیوه گذشته برآورد کریدم
+%	\item
+%	نتایج در جدول 
+%	 \ref{QTimemresult2subsample}
+%	 نتایج را نشان داده است
+%\lr{\begin{LTR}
+%			 \begin{table}[htbp]
+%	 	\centering
+%	 	\caption{\scriptsize Estimation results for high level of common ownership}
+%	 	\label{QTimemresult2subsample}
+%	 	\resizebox{\textwidth}{!}{
+%	 		\input{Output/QTimemresult2subsample-slide.tex}
+%	 	}
+%	 \end{table}
+%\end{LTR}}
+%	\begin{itemize}
+%		\item 
+%		همچنان نتایج گذشته تایید شده است
+%		\item 
+%	مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارد 
+%		\item 
+%		گروه های کسب و کار بیشترین تاثیر را در میان سطح زیاد مالیکت مشترک دارد
+%		\item 
+%		ممکن است جفت های دارای مالکیت بالا تفاوت بنیادی با دیگر جفت ها داشته باشند 
+%		\begin{itemize}
+%			\item 
+%			در شکل 
+%			\ref{QarterSummary}
+%			متوسط کنترل های تعریف شده نشان داده شده است
+%			\begin{figure}[htbp]
+%				\centering  
+%				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
+%				\caption{Pairs' characteristics for the pairs with high level of common ownership}
+%				\label{QarterSummary}
+%			\end{figure}
+%		\item
+%		تفاوت چشمگیری نسبت به بقیه جامعه ندارند
+%		\end{itemize}
+%	\end{itemize}
+%	
+%	
+%\end{itemize}
 
 
 \FloatBarrier
 
 \subsection{All Pairs}
-\begin{itemize}
-	\item 
-	اگر گروه های کسب و کار اهمیت داشته باشند نیاز نیست تا محاسبات را محدود به شرکت های دارای مالک مشترک کنیم
-	\item
-	همه جفت های بازار را تشکیل می دهیم
-	\item
-	زمانی که مالکیت مشترک وجود ندارد مالکیت مشترک را برابر صفر قرار می دهیم و اگر مالکیت مشترک داشته باشند میزان ارن را محاسبه می کنیم
-	\item
-	برای همه جفت ها مدل 
-	\ref{model1}
-	را به شیوه گذشته برآورد می کنیم
-	\item
-	نتایج در جدول 
-	\ref{AllPairs}
-	نشان داده شده است
-	\begin{itemize}
-		\item 
-		در ستون اول عضویت در گروه کسب و کار را نشان می دهد که علامت و مقدار برآورد قبلی را نشان می دهد
-		\item 
-		در ستون2 نیز برای سطح مالکیت مشترک بررسی شده است و نتایج قبلی تایید شده است
-		\item 
-		در میان گروه کسب و کار سطح مالکیت مشترک تاثیر چندانی ندارد
-		\item
-		درمیان جفت های بیرون گروه کسب و کار نیز سطح مالکیت مشترک اهمیت دارد که می تواند صرفا اهمیت مالکیت مشترک در پیش بینی هم حرکتی قیمت شرکت ها را نشان دهد.
-			\begin{table}[p]
-					%	\centering
-					\caption{Non-connected Co-movement}
-					\label{AllPairs}
-					\resizebox{1\textwidth}{!}{
-					\begin{LTR}
-						\lr{	\input{Output/Q3mresultAllPairs.tex}
-					}
-					\end{LTR}}
-				\end{table}
-	\end{itemize}
+\begin{LTR}
+	In the former analyses, we restrict our investigation to firms with at least one common owner. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business group. 
+	So, we extend our investigation by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problem. 
 	
-\end{itemize}
-
-
+	For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}. We estimate equation \ref{model1}. 
+	
+	Table \ref{AllPairs} reports results of estimations for two models. These results suggest that pairs in the same group co-move more than stocks that are not in the same group. In addition, pairs with common ownership common does not co-move greater than others. In columns 3 , we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2-part1} that the \textit{Same Group} is critical for forecasting future co-movement, and common ownership does not matter for pairs. In the pairs with common ownership, pairs in the same group have a higher level of co-movement than the pairs no in the same group.
+	
+	\lr{\begin{table}[htbp]
+			%	\centering
+			\caption{Non-connected Co-movement}
+			\label{AllPairs}
+			\resizebox{1\textwidth}{!}{
+				\begin{LTR}
+					\lr{	\input{Output/Q3mresultAllPairs.tex}
+					}
+			\end{LTR}}
+	\end{table}}
+	
+\end{LTR}
+%
+%\begin{itemize}
+%	\item 
+%	اگر گروه های کسب و کار اهمیت داشته باشند نیاز نیست تا محاسبات را محدود به شرکت های دارای مالک مشترک کنیم
+%	\item
+%	همه جفت های بازار را تشکیل می دهیم
+%	\item
+%	زمانی که مالکیت مشترک وجود ندارد مالکیت مشترک را برابر صفر قرار می دهیم و اگر مالکیت مشترک داشته باشند میزان ارن را محاسبه می کنیم
+%	\item
+%	برای همه جفت ها مدل 
+%	\ref{model1}
+%	را به شیوه گذشته برآورد می کنیم
+%	\item
+%	نتایج در جدول 
+%	\ref{AllPairs}
+%	نشان داده شده است
+%	\begin{itemize}
+%		\item 
+%		در ستون اول عضویت در گروه کسب و کار را نشان می دهد که علامت و مقدار برآورد قبلی را نشان می دهد
+%		\item 
+%		در ستون2 نیز برای سطح مالکیت مشترک بررسی شده است و نتایج قبلی تایید شده است
+%		\item 
+%		در میان گروه کسب و کار سطح مالکیت مشترک تاثیر چندانی ندارد
+%		\item
+%		درمیان جفت های بیرون گروه کسب و کار نیز سطح مالکیت مشترک اهمیت دارد که می تواند صرفا اهمیت مالکیت مشترک در پیش بینی هم حرکتی قیمت شرکت ها را نشان دهد.
+%			\begin{table}[p]
+%					%	\centering
+%					\caption{Non-connected Co-movement}
+%					\label{AllPairs}
+%					\resizebox{1\textwidth}{!}{
+%					\begin{LTR}
+%						\lr{	\input{Output/Q3mresultAllPairs.tex}
+%					}
+%					\end{LTR}}
+%				\end{table}
+%	\end{itemize}
+%	
+%\end{itemize}
+%
+%
 
 
 
@@ -1316,7 +1429,7 @@ December\fi, \number \year}
 	
 
 
-
+In conclusion , these results show that same business group is more important than common ownership. In fact, when we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.
 
 
 \FloatBarrier
