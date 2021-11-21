@@ -7,10 +7,10 @@ import numpy as np
 from matplotlib.ticker import FuncFormatter
 
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
 
 #%%
 n = path + "Holder_Residual_1400_06_28" + ".parquet"
@@ -92,15 +92,17 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
 tempt.Year = tempt.Year.astype(int)
-tempt['Year'] = tempt.Year + 621
+tempt["Year"] = tempt.Year + 621
 tempt = tempt.drop(
-    columns=["Max. Number of Members",
-             "Max. Number of Owners",
-             "Max. Block. Ownership",
-             "No. of Firms not in Groups",
-             "Med. of  Number of Members",
-             "Med. Number of Owners",
-             "Med. Block. Ownership"]
+    columns=[
+        "Max. Number of Members",
+        "Max. Number of Owners",
+        "Max. Block. Ownership",
+        "No. of Firms not in Groups",
+        "Med. of  Number of Members",
+        "Med. Number of Owners",
+        "Med. Block. Ownership",
+    ]
 ).rename(
     columns={
         "No. of Holders": "No. of Blockholders",
@@ -108,7 +110,7 @@ tempt = tempt.drop(
         "Av. Holder Percent": "Ave. ownership of each Blockholders",
         "Av. Number of Owners": "Ave. Number of Owners",
         "Av. Block. Ownership": "Ave. Block. Ownership",
-        "Med. of Owners' Percent":"Med. ownership of each Blockholders"
+        "Med. of Owners' Percent": "Med. ownership of each Blockholders",
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
@@ -121,12 +123,16 @@ tempt
 n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 df2 = pd.read_parquet(n)
 #%%
-ff = df2[['MonthlyMarketCap_x',
- 'MonthlyMarketCap_y',]]
-ff['m'] = ff.MonthlyMarketCap_x/ff.MonthlyMarketCap_y
-ff['mm'] = ff.MonthlyMarketCap_y/ff.MonthlyMarketCap_x
-ff['r'] = ff.m
-ff.loc[ff.r<1,'r'] = ff[ff.r<1].mm
+ff = df2[
+    [
+        "MonthlyMarketCap_x",
+        "MonthlyMarketCap_y",
+    ]
+]
+ff["m"] = ff.MonthlyMarketCap_x / ff.MonthlyMarketCap_y
+ff["mm"] = ff.MonthlyMarketCap_y / ff.MonthlyMarketCap_x
+ff["r"] = ff.m
+ff.loc[ff.r < 1, "r"] = ff[ff.r < 1].mm
 ff
 #%%
 df2.id.max(), len(set(df2.id_x.to_list() + df2.id_y.to_list()))
@@ -294,8 +300,8 @@ a2 = gg.apply(sumary, idlevelData=idlevelData).reset_index().drop(columns=["leve
 tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year": "Year"})
 
-tempt['Year'] = tempt['Year'].astype(int)
-tempt['Year'] = tempt.Year + 621
+tempt["Year"] = tempt["Year"].astype(int)
+tempt["Year"] = tempt.Year + 621
 tempt = tempt.drop(
     columns=[
         "Max. Number of Common owner",
@@ -506,33 +512,32 @@ mlist = [
 tempt = df2[mlist].groupby("id")[mlist[1::]].mean().describe().T
 
 latex = (
-    tempt.drop(columns=["count",
-                    "25%",
-                    "75%"]).rename(
+    tempt.drop(columns=["count", "25%", "75%"])
+    .rename(
         index={
             "Monthlyρ_2": " CAPM + Industry",
             "Monthlyρ_4": "4 Factor",
             "Monthlyρ_5": "4 Factor + Industry",
             "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
         },
-        columns = {
+        columns={
             "50%": "median",
-        }
-    ).round(3).to_latex(pathResult + "CorrelationsResultsText.tex")
+        },
+    )
+    .round(3)
+    .to_latex(pathResult + "CorrelationsResultsText.tex")
 )
-tempt.drop(columns=["count",
-                    "25%",
-                    "75%"]).rename(
-        index={
-            "Monthlyρ_2": " CAPM + Industry",
-            "Monthlyρ_4": "4 Factor",
-            "Monthlyρ_5": "4 Factor + Industry",
-            "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
-        },
-        columns = {
-            "50%": "median",
-        }
-    ).round(3)
+tempt.drop(columns=["count", "25%", "75%"]).rename(
+    index={
+        "Monthlyρ_2": " CAPM + Industry",
+        "Monthlyρ_4": "4 Factor",
+        "Monthlyρ_5": "4 Factor + Industry",
+        "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
+    },
+    columns={
+        "50%": "median",
+    },
+).round(3)
 
 #%%
 df2["sBsgroup"] = df2["sgroup"] + df2["sBgroup"]
@@ -584,13 +589,12 @@ tempt = (
     ]
     .mean()
     .describe()
-    .T.drop(columns=["count",
-                    "25%",
-                    "75%"]).rename(
-                         columns = {
+    .T.drop(columns=["count", "25%", "75%"])
+    .rename(
+        columns={
             "50%": "median",
         }
-                    )
+    )
     .round(2)
     .T.rename(
         columns={
@@ -683,19 +687,33 @@ t["index"] = "Not Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
 tempt = tempt.append(t)
 #%%
-tempt.sort_values(by = ['variable'])
+tempt.sort_values(by=["variable"])
 #%%
-a = tempt.replace("MonthlyFCAPf", "FCAP").replace(
-    "MonthlyFCA", "MFCAP"
-    ).sort_values(
-        by = ['variable']
-        ).reset_index().rename(columns={
-            'index':"subset"}).set_index(
-            ["variable","subset",]
-            ).round(3).T
-a.to_latex(
-    pathResult + "FCACal.tex"
+a = (
+    tempt.replace("MonthlyFCAPf", "FCAP")
+    .replace("MonthlyFCA", "MFCAP")
+    .sort_values(by=["variable"])
+    .reset_index()
+    .rename(columns={"index": "subset"})
+    .set_index(
+        [
+            "variable",
+            "subset",
+        ]
+    )
+    .round(3)
+    .T
 )
+#%%
+tempt[tempt.variable == "MonthlyFCA"].merge(
+    tempt[tempt.variable == "MonthlyFCAPf"],
+    left_index=True,
+    right_index=True,
+)
+#%%
+
+
+a.to_latex(pathResult + "FCACal.tex")
 a
 
 # %%
