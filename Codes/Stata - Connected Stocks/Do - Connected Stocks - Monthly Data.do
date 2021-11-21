@@ -3,7 +3,7 @@ clear
 import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedFCAP9.3.csv", encoding(UTF-8) 
 // import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedFCAP9.3.csv", encoding(UTF-8) 
 
-cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output" 
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output" 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
 
 label define sgroup 0 "No" 1 "Yes"
@@ -377,3 +377,5 @@ label variable gsize_y " $ {\text{Group Size}_2} $ "
 
  
 
+gen turnSbgroup = monthlyρ_turn_f * sbgroup
+label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{TurnOver})_t} $ "

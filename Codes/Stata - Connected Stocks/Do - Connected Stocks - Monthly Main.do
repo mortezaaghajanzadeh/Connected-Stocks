@@ -324,3 +324,52 @@ esttab   v0 v1 /*v11 v111   v2*/ v21 v3 , nomtitle label   s( Control GroupFE /*
 
 
 
+{ /*Turn on Co Movement*/
+
+eststo clear
+
+eststo v1 : quietly asreg monthlyρ_5_f monthlyρ_turn_f , fmb newey(4)
+estadd loc controll "No" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+
+eststo v2 : quietly asreg monthlyρ_5_f monthlyρ_turn_f sbgroup , fmb newey(4)
+estadd loc controll "No" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+
+eststo v3 : quietly asreg monthlyρ_5_f monthlyρ_turn_f sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v4 : quietly asreg monthlyρ_5_f monthlyρ_turn_f   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1 , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "SameGroup" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v5 : quietly asreg monthlyρ_5_f monthlyρ_turn_f   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0 , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Others" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v6 : quietly asreg monthlyρ_5_f monthlyρ_turn_f   sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v7 : quietly asreg monthlyρ_5_f monthlyρ_turn_f   sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47, fmb newey(4)
+estadd loc controll "Yes" , replace
+estadd loc subsample "Total" , replace
+estadd loc GroupFE "Yes" , replace
+
+
+
+esttab   v1 v2 v3 v4 v5 v6 v7, nomtitle  label  keep(monthlyρ_turn_f sbgroup turnSbgroup ) s( controll subsample   GroupFE   N  ,  lab( "Control" "Sub-sample" "Business Group FE" "Observations")) compress mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})),using turncomovement.tex ,replace
+ 
+
+
+}
+
