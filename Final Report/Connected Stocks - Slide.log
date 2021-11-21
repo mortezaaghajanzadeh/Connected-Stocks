@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  21 NOV 2021 09:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  21 NOV 2021 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,23 +2197,12 @@ le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex) [47
 ] (./Connected Stocks - Slide.toc) [49
 
 ]
-(./Output/turnover.tex)
-Overfull \vbox (22.3147pt too high) detected at line 1298
- []
+(./Output/turnover.tex) [50
 
-[50
+] (./Output/turnover.tex) [51
 
-] (./Output/turnover.tex)
-Overfull \vbox (22.3147pt too high) detected at line 1298
- []
-
-[51
-
-] (./Output/turnover.tex)
-Overfull \vbox (22.3147pt too high) detected at line 1298
- []
-
-[52
+]
+(./Output/turnover.tex) [52
 
 ] (./Output/ResidualTrunSummary.tex) [53
 
@@ -2411,7 +2400,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  26090 strings out of 480608
  519150 string characters out of 5907536
- 795463 words of memory out of 5000000
+ 796463 words of memory out of 5000000
  41053 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2441,7 +2430,7 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (85 pages, 1312910 bytes).
+Output written on "Connected Stocks - Slide.pdf" (85 pages, 1312698 bytes).
 PDF statistics:
  3201 PDF objects out of 3580 (max. 8388607)
  2946 compressed objects within 30 object streams

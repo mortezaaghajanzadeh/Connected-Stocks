@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  21 NOV 2021 09:21
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  21 NOV 2021 09:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -670,7 +670,7 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsavesec=\count301
 \c@@ppsaveapp=\count302
 )
-(./Elements/Title.tex) (c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
+(c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
 (c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-03-06 L3 programming layer (loader) 
 
@@ -1019,7 +1019,7 @@ x-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-(./Connected Stocks - Draft - Persian.aux)
+(./Elements/Title.tex) (./Connected Stocks - Draft - Persian.aux)
 \openout1 = `"Connected Stocks - Draft - Persian.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -1093,209 +1093,26 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/b/n' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 84.
 
-(./Elements-Fa/Introduction-Persian.tex
-
-Package natbib Warning: Citation `shiller1989comovements' on page 2 undefined o
-n input line 12.
-
-
-Package natbib Warning: Citation `barberis2003style' on page 2 undefined on inp
-ut line 17.
-
-
-Package natbib Warning: Citation `barberis2005comovement' on page 2 undefined o
-n input line 17.
-
-[2]
-
-Package natbib Warning: Citation `barberis2005comovement' on page 3 undefined o
-n input line 23.
-
-
-Package natbib Warning: Citation `wu2014investor' on page 3 undefined on input 
-line 26.
-
-
-Package natbib Warning: Citation `grullon2014comovement' on page 3 undefined on
- input line 31.
-
-
-Package natbib Warning: Citation `david2016correlated' on page 3 undefined on i
-nput line 34.
-
-
-Package natbib Warning: Citation `pantzalis2017shareholder' on page 3 undefined
- on input line 37.
-
-
-Package natbib Warning: Citation `HAMEED2019103' on page 3 undefined on input l
-ine 40.
-
-
-Package natbib Warning: Citation `azar2018anticompetitive' on page 3 undefined 
-on input line 57.
-
-
-Package natbib Warning: Citation `lewellen2021does' on page 3 undefined on inpu
-t line 57.
-
-
-Package natbib Warning: Citation `AntonPolk' on page 3 undefined on input line 
-59.
-
-
-Package natbib Warning: Citation `AntonPolk' on page 3 undefined on input line 
-63.
-
-
-Package natbib Warning: Citation `Liquidity2016' on page 3 undefined on input l
-ine 77.
-
-
-Package natbib Warning: Citation `Liquidity2016' on page 3 undefined on input l
-ine 80.
-
-[3]
-
-Package natbib Warning: Citation `coval2007asset' on page 4 undefined on input 
-line 97.
-
-
-Package natbib Warning: Citation `cho2015stock' on page 4 undefined on input li
-ne 114.
-
-
-Package natbib Warning: Citation `kim2015stock' on page 4 undefined on input li
-ne 114.
-
-[4] [5]) (./Elements-Fa/Data and Methodology - Persian.tex
-
-Package natbib Warning: Citation `Aliabadi2022' on page 6 undefined on input li
-ne 25.
-
-
-Package natbib Warning: Citation `almeida2011structure' on page 6 undefined on 
-input line 31.
-
-(./Output/summaryOfOwnership.tex) [6] (./Output/summaryOfPairs.tex) [7]
-[8]
-
-Package natbib Warning: Citation `harford2011institutional' on page 9 undefined
- on input line 302.
-
-
-Package natbib Warning: Citation `azar2018anticompetitive' on page 9 undefined 
-on input line 302.
-
-
-Package natbib Warning: Citation `gilje2020s' on page 9 undefined on input line
- 302.
-
-
-Package natbib Warning: Citation `AntonPolk' on page 9 undefined on input line 
-319.
-
-
-Package natbib Warning: Citation `azar2011new' on page 9 undefined on input lin
-e 319.
-
-
-Package natbib Warning: Citation `freeman2019effects' on page 9 undefined on in
-put line 319.
-
-
-Package natbib Warning: Citation `hansen1996externalities' on page 9 undefined 
-on input line 319.
-
-
-Package natbib Warning: Citation `he2017product' on page 9 undefined on input l
-ine 319.
-
-
-Package natbib Warning: Citation `he2019internalizing' on page 9 undefined on i
-nput line 319.
-
-
-Package natbib Warning: Citation `lewellen2021does' on page 9 undefined on inpu
-t line 319.
-
-
-Package natbib Warning: Citation `newham2018common' on page 9 undefined on inpu
-t line 319.
-
-
-Package natbib Warning: Citation `AntonPolk' on page 9 undefined on input line 
-333.
-
-(./Elements/MeasurmentLit.tex
-
-Package natbib Warning: Citation `harford2011institutional' on page 9 undefined
- on input line 6.
-
-
-Package natbib Warning: Citation `azar2018anticompetitive' on page 9 undefined 
-on input line 9.
-
-
-Package natbib Warning: Citation `gilje2020s' on page 9 undefined on input line
- 11.
-
-
-Package natbib Warning: Citation `he2017product' on page 9 undefined on input l
-ine 14.
-
-
-Package natbib Warning: Citation `he2019internalizing' on page 9 undefined on i
-nput line 15.
-
+(./Elements-Fa/Introduction-Persian.tex [2] [3] [4] [5])
+(./Elements-Fa/Data and Methodology - Persian.tex [6]
+(./Output/summaryOfOwnership.tex) (./Output/summaryOfPairs.tex) [7] [8]
+[9] (./Elements/MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-
-Package natbib Warning: Citation `newham2018common' on page 9 undefined on inpu
-t line 17.
-
-
-Package natbib Warning: Citation `AntonPolk' on page 9 undefined on input line 
-19.
-
-
-Package natbib Warning: Citation `freeman2019effects' on page 9 undefined on in
-put line 22.
-
-
-Package natbib Warning: Citation `hansen1996externalities' on page 9 undefined 
-on input line 23.
-
-) [9] (./Output/FCACal.tex) [10]
-
-Package natbib Warning: Citation `Carhart4Factor' on page 11 undefined on input
- line 423.
-
+) (./Output/FCACal.tex) [10]
 (./Output/CorrelationsResultsText.tex) [11]
 Overfull \hbox (0.68024pt too wide) in paragraph at lines 500--502
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-
-Package natbib Warning: Citation `AntonPolk' on page 12 undefined on input line
- 509.
-
 (./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [12]
 [13]) (./Elements-Fa/Results-Persian.tex
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
- (./Elements/Model11.tex)
-
-Package natbib Warning: Citation `FamaMacBeth' on page 14 undefined on input li
-ne 29.
-
-
-Package natbib Warning: Citation `newey1987hypothesis' on page 14 undefined on 
-input line 38.
-
-[14] (./Output/mresult2part1-slide.tex) (./Output/mresult2part2-slide.tex)
-[15] [16]
+ (./Elements/Model11.tex) [14]
+(./Output/mresult2part1-slide.tex) (./Output/mresult2part2-slide.tex) [15]
+[16]
 File: Output/Qmcorr5lrd.eps Graphic file (type eps)
 <Output/Qmcorr5lrd.eps>
 File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
@@ -1317,10 +1134,6 @@ Overfull \hbox (25.6144pt too wide) detected at line 19
 2 ([])
  []
 
-
-Package natbib Warning: Citation `Liquidity2016' on page 20 undefined on input 
-line 22.
-
 (./Elements/turnoverModel.tex
 Overfull \hbox (12.19699pt too wide) detected at line 6
 []
@@ -1331,12 +1144,7 @@ Overfull \hbox (30.0pt too wide) detected at line 6
 []
  []
 
-[20]) (./Output/turnover.tex)
-
-Package natbib Warning: Citation `FamaMacBeth' on page 21 undefined on input li
-ne 56.
-
-[21] (./Output/ResidualTrunSummary.tex)
+[20]) (./Output/turnover.tex) [21] (./Output/ResidualTrunSummary.tex)
 \endL or \endR problem (0 missing, 1 extra) in paragraph at lines 141--143
 [][] []
  []
@@ -1354,53 +1162,35 @@ File: Output/GroupedResSTD.eps Graphic file (type eps)
 [][] []
  []
 
-[22] [23]
-
-Package natbib Warning: Citation `seasholes2007predictable' on page 24 undefine
-d on input line 326.
-
-(./Output/ImbalanceInsMeanSummary.tex) (./Output/ImbalanceInsStdSummary.tex)
+[22] [23] (./Output/ImbalanceInsMeanSummary.tex)
+(./Output/ImbalanceInsStdSummary.tex)
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
+ [24] (./Output/Imbalance.tex) [25]
+[26]) (./Elements-Fa/Conclusion - Persian.tex [27]
+(./Connected Stocks - Draft - Persian.bbl
 
-[24] (./Output/Imbalance.tex) [25] [26])
-(./Elements-Fa/Conclusion - Persian.tex [27]
-No file "Connected Stocks - Draft - Persian".bbl.
-) (./Elements-Fa/appendices-Persian.tex
+LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
+(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 12.
 
-Package natbib Warning: Citation `AntonPolk' on page 28 undefined on input line
- 8.
-
+[28] [29])) (./Elements-Fa/appendices-Persian.tex [30]
 File: Elements/1.png Graphic file (type bmp)
 <Elements/1.png>
 File: Elements/2.png Graphic file (type bmp)
 <Elements/2.png>
-[28] (./Elements/Example2.tex) [29]
+ (./Elements/Example2.tex) [31] [32]
 File: Elements/3.png Graphic file (type bmp)
 <Elements/3.png>
 File: Elements/4.png Graphic file (type bmp)
 <Elements/4.png>
- (./Elements/marketcap.tex) [30] [31]
+ (./Elements/marketcap.tex) [33] [34]
 (./Output/mresult2Polk-slide.tex)
 Overfull \hbox (23.17839pt too wide) in paragraph at lines 273--273
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
-[32]
-
-Package natbib Warning: Citation `Khanna2007' on page 33 undefined on input lin
-e 279.
-
-
-Package natbib Warning: Citation `FirmInterlock' on page 33 undefined on input 
-line 288.
-
-
-Package natbib Warning: Citation `Aliabadi2022' on page 33 undefined on input l
-ine 293.
-
-
+[35]
 Overfull \hbox (2.17194pt too wide) in paragraph at lines 307--309
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
@@ -1410,16 +1200,13 @@ File: Output/sameIndustryinBG.eps Graphic file (type eps)
 <Output/sameIndustryinBG.eps>
 File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 <Output/sameIndustryNoinBG.eps>
-[33]
+[36]
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
- [34] [35])
-
-Package natbib Warning: There were undefined citations.
-
+) [37]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
-(./Connected Stocks - Draft - Persian.aux)
+ (./Connected Stocks - Draft - Persian.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
@@ -1432,12 +1219,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 27521 strings out of 479418
- 554270 string characters out of 5888105
- 982611 words of memory out of 5000000
- 44378 multiletter control sequences out of 15000+600000
- 540095 words of font info for 87 fonts, out of 8000000 for 9000
+ 27613 strings out of 479418
+ 556407 string characters out of 5888105
+ 977603 words of memory out of 5000000
+ 44471 multiletter control sequences out of 15000+600000
+ 540071 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,17n,78p,4854b,1103s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,78p,4854b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (35 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (37 pages).
