@@ -1,9 +1,9 @@
 cls
 clear
-import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\WeeklyNormalzedFCAP6.2.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\WeeklyNormalzedFCAP9.2.csv", encoding(UTF-8) 
 
 
-cd "D:\Dropbox\Connected Stocks\Final Report"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output"
 
 label define sgroup 0 "No" 1 "Yes"
 
@@ -182,48 +182,34 @@ xtset id t_week
 
 
 
+replace median = 0 if forthquarter != 1
+replace median = 1 if forthquarter == 1
+
+replace NWFCAM = NWFCA * median
+
+label variable NWFCAM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{MFCAP} ^*}  $ "
+
+replace sbgroupM = sbgroup * median
+label variable sbgroupM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{SameGroup}} $ "
 
 
 
+replace NWFCAGM = sbgroup * NWFCA * median
+label variable NWFCAGM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times  (\text{MFCAP}^*) \times {\text{SameGroup}} $ "
 
 
-gen BigGroupNumber = quantilenumber_x  if sbgroup == 1
+replace holder_actM = holder_act * median
+label variable holder_actM " $ (\text{MFCAP}> Q3[\text{MFCAP}]) \times {\text{ActiveHolder} }  $ "
 
-gen BigGroupCap = quantilegroupmarketcap_x  if sbgroup == 1
+replace spositionM = sposition * median
 
-gen BigGroupTotalCFR = quantiletotalcfr_x  if sbgroup == 1
-
-gen BigGroupUoCap = quantileuomarketcap_x  if sbgroup == 1
-
-
- foreach v of varlist  BigGroupNumber BigGroupCap BigGroupTotalCFR BigGroupUoCap{
-
- replace `v' = 0 if `v' == 2 | `v' == 1
- replace `v' = 1 if `v' == 4 | `v' == 3
-
-}
+label variable spositionM " $ (\text{MFCAP}> Q3[\text{MFCAP}]) \times {\text{Same Position} }  $ "
 
 
-summ  BigGroupNumber BigGroupCap BigGroupTotalCFR BigGroupUoCap
+corr weeklyρ_5_f weeklyρ_5  NWFCA median NWFCAM   NWFCAG NWFCAGM sbgroup  sgroup weeklysamesize weeklysamebm 
 
 
 
-
-foreach v of varlist  gdummy0-gdummy47 {
-
-	gen SG`v' = sbgroup * `v'
-
-}
-foreach v of varlist  gdummy0-gdummy47 {
-
-	gen FCA`v' = NWFCA * `v'
-
-}
-foreach v of varlist  gdummy0-gdummy47 {
-
-	gen SGFCA`v' = sbgroup * NWFCA * `v'
-
-}
 
 
 replace weeklycrossownership = weeklycrossownership/100
@@ -231,5 +217,61 @@ replace weeklycrossownership = weeklycrossownership/100
 
 
  label variable weeklycrossownership "CrossOwnership"
+ 
+ 
+ 
+ 
+ {
+ 
+
+rename NWFCA vv
+rename NWFCAGM mvv
+
+
+ 
+eststo v3 : xi: quietly asreg weeklyρ_5_f vv  NWFCAG  sbgroup   sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v4 : xi: quietly asreg weeklyρ_5_f  sbgroup sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+
+
+eststo v7: xi: quietly asreg weeklyρ_5_f vv sgroup weeklysamesize weeklysamebm weeklycrossownership i.PairType if sbgroup == 1   , fmb newey(4) 
+estadd loc subSample "SameGroups" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v71: xi: quietly asreg weeklyρ_5_f vv sgroup weeklysamesize weeklysamebm weeklycrossownership i.PairType if sbgroup == 0   , fmb newey(4) 
+estadd loc subSample "Others" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+eststo v8 : xi: quietly asreg weeklyρ_5_f vv  NWFCAG  sbgroup   sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType gdummy0-gdummy47 , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "Yes" , replace
+
+
+eststo v9 : xi: quietly asreg weeklyρ_5_f vv sgroup weeklysamesize weeklysamebm weeklycrossownership i.PairType, fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+
+eststo v10 : xi: quietly asreg weeklyρ_5_f vv sbgroup  sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType , fmb newey(4)
+estadd loc subSample "Total" , replace
+estadd loc controll "Yes" , replace
+estadd loc GroupFE "No" , replace
+
+
+
+esttab  v4 v9  v10 v7 v71 v3 v8 ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab("Controls"  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order(sbgroup vv NWFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using wresult.tex ,replace
+
+ }
 
 

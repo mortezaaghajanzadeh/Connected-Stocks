@@ -1,0 +1,25 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+                &\multicolumn{7}{c}{Dependent Variable: Future Pairs' co-movement}                                                                   \\\cmidrule(lr){2-8}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+\hline
+SameGroup       &   0.0131\sym{*}  &                  &   0.0166\sym{***}&                  &                  &  0.00768\sym{*}  &  0.00390         \\
+                &   (2.37)         &                  &   (6.04)         &                  &                  &   (2.22)         &   (0.62)         \\
+[1em]
+$ \text{FCA*} $ &                  &-0.00000356         &-0.000412         &  0.00629\sym{*}  &-0.0000229         &-0.0000763         &  0.00184         \\
+                &                  &  (-0.01)         &  (-0.77)         &   (2.41)         &  (-0.04)         &  (-0.12)         &   (0.76)         \\
+[1em]
+ $ (\text{FCA}^*) \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &  0.00723\sym{*}  &  0.00487         \\
+                &                  &                  &                  &                  &                  &   (2.57)         &   (0.91)         \\
+\hline
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Sub-Sample      &    Total         &    Total         &    Total         &SameGroups         &   Others         &    Total         &    Total         \\
+Business Group FE&       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
+Observations    &  3498484         &  3498482         &  3498482         &   122785         &  3375697         &  3498482         &  3498482         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

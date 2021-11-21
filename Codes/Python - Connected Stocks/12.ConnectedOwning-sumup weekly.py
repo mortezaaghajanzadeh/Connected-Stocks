@@ -84,12 +84,6 @@ for i in range(9):
     t = i + 1
     tempt = (SData["Rank"].max()) / 10
     SData.loc[SData["Rank"] > tempt * t, "GRank"] = t
-
-#%%
-Monthly = pd.DataFrame()
-Weekly = pd.DataFrame()
-time = pd.DataFrame()
-d = pd.DataFrame()
 mlist = [
             "Monthlyρ_2",
             "Monthlyρ_4",
@@ -128,6 +122,12 @@ mlist = [
             "Monthlyρ_turn_f",
             "Monthlyρ_amihud_f",
         ]
+
+#%%
+Monthly = pd.DataFrame()
+Weekly = pd.DataFrame()
+time = pd.DataFrame()
+d = pd.DataFrame()
 arrs = os.listdir(path + "NormalzedFCAP9.1")
 counter_file = 0
 for counter, i in enumerate(arrs):
@@ -167,18 +167,8 @@ Monthly = pd.DataFrame()
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
-tt = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
-tt["id"] = tt.id.astype(int)
-tt = tt[["symbol", "id"]].drop_duplicates()
-mapdict = dict(zip(tt.id, tt.symbol))
-
-monthId = pd.read_csv(path2 + "timeId.csv")[["t_Month", "date"]]
-monthId["date"] = round(monthId.date / 100).astype(int)
-monthId = monthId.drop_duplicates("t_Month")
-mapingdict = dict(zip(monthId.date, monthId.t_Month))
-
+df = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
 # %%
-
 result = pd.DataFrame()
 counter, counter_file = 0, 0
 # arr.remove("MonthlyAllPairs_1400_06_28.csv")
@@ -190,7 +180,7 @@ for i, name in enumerate(arr):
     d = d.drop(
         columns= mlist
     )
-    d = firstStep(d, mapdict).drop_duplicates(["id", "t_Month"], keep="last")
+    d = firstStep(d, df).drop_duplicates(["id", "t_Week"], keep="last")
     result = result.append(d)
     d = pd.DataFrame()
     if len(result) > 6e6:
@@ -199,7 +189,7 @@ for i, name in enumerate(arr):
             result,
             open(
                 path2
-                + "mergerd_first_step_monthly_all_part_{}.p".format(counter_file),
+                + "mergerd_first_step_weekly_all_part_{}.p".format(counter_file),
                 "wb",
             ),
         )
@@ -209,9 +199,11 @@ pickle.dump(
             result,
             open(
                 path2
-                + "mergerd_first_step_monthly_all_part_{}.p".format(counter_file),
+                + "mergerd_first_step_weekly_all_part_{}.p".format(counter_file),
                 "wb",
             ),
         )
 result = pd.DataFrame()
 
+
+# %%
