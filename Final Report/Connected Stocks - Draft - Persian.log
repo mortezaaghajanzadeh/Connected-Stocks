@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  17 NOV 2021 14:41
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  21 NOV 2021 07:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,11 +1019,7 @@ x-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 
-(./Connected Stocks - Draft - Persian.aux
-
-LaTeX Warning: Label `model1' multiply defined.
-
-)
+(./Connected Stocks - Draft - Persian.aux)
 \openout1 = `"Connected Stocks - Draft - Persian.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -1037,7 +1033,8 @@ LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
 3.
- (c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 83.
@@ -1092,26 +1089,23 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ]
-[2] [3] [4] [5] (./Output/summaryOfOwnership.tex) [6]
-(./Output/summaryOfPairs.tex) [7] [8] (./MeasurmentLit.tex
+[2] [3] [4] [5] (./Output/summaryOfOwnership.tex) (./Output/summaryOfPairs.tex)
+[6] [7] [8] (./MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-) [9] [10]
-(./Output/FCACal.tex) [11] (./Output/CorrelationsResultsText.tex) [12
-
-
-]
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 881--883
+) (./Output/FCACal.tex) [9]
+(./Output/CorrelationsResultsText.tex) [10]
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 895--897
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [13]
-[14]
+(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [11]
+[12]
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
- (./Model11.tex) [15] (./Output/mresult2part1-slide.tex)
-(./Output/mresult2part2-slide.tex) [16] [17]
+ (./Model11.tex) [13] (./Output/mresult2part1-slide.tex)
+(./Output/mresult2part2-slide.tex) [14] [15]
 File: Output/Qmcorr5lrd.eps Graphic file (type eps)
 <Output/Qmcorr5lrd.eps>
 File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
@@ -1120,15 +1114,15 @@ File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
 
 (./Output/QTimemresult2subsample-slide.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1102--1103
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1116--1117
 [][] []
  []
 
-[18] [19]
+[16] [17]
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
- [20] (./Output/Q3mresultAllPairs.tex) [21] [22]
-Overfull \hbox (25.6144pt too wide) detected at line 1290
+ [18] (./Output/Q3mresultAllPairs.tex) [19] [20]
+Overfull \hbox (25.6144pt too wide) detected at line 1304
 []\OT1/cmr/m/n/12 ^^A[] = []([]) = []([]) \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/1
 2 ([])
  []
@@ -1143,182 +1137,55 @@ Overfull \hbox (30.0pt too wide) detected at line 6
 []
  []
 
-) (./turnover.tex) [23
+) (./turnover.tex) [21
 
-] (./Model14.tex
-Overfull \hbox (3.06392pt too wide) in paragraph at lines 1345--1
-[][]\TU/XBZar.ttf(0)/b/n/12 در مدل اصلی به جای پیش بینی هم حرکتی بازده آبنده از
- همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
- []
-
-) (./Output/mresult2-turnover.tex) [24]
-Overfull \hbox (1.09364pt too wide) in paragraph at lines 1380--1384
-[][]\TU/XBZar.ttf(0)/b/n/12 با توجه به بررسی ها داریم عضویت در گروه کسب و کار س
-بب همبستگی تغییرات []\TU/lmroman10-regular(0)/m/n/12 turnover[][]
- []
-
-(./Output/ResidualTrunSummary.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1409--1411
+] (./Output/ResidualTrunSummary.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1426--1428
 [][] []
  []
 
-(./Output/ResidualTrunStdSummary.tex) [25]
+(./Output/ResidualTrunStdSummary.tex)
 File: Output/GroupedResSTD.eps Graphic file (type eps)
 <Output/GroupedResSTD.eps>
 
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1425--1432
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1442--1449
 [][]  []
  []
 
-(./Output/LowRes.tex)
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1448--1567
+[22] (./Output/LowRes.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 1465--1584
 [][] []
  []
 
-[26] [27] (./Output/ImbalanceInsMeanSummary.tex)
+[23] [24] (./Output/ImbalanceInsMeanSummary.tex)
 (./Output/ImbalanceInsStdSummary.tex)
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
- [28] (./Model13.tex
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/sl' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 1.
-
-) (./Output/Imbalance.tex) [29] [30] [31]
-(./Connected Stocks - Draft - Persian.bbl
+ [25] (./Output/Imbalance.tex) [26]
+[27] [28] (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 12.
+(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 12.
 
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 17.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 27.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 32.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 37.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 42.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 47.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 52.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 57.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 62.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 68.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 73.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 79.
-
-[32]
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 84.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 89.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 95.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 101.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 107.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 113.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 118.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 124.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 129.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 134.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 139.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 149.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 154.
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 159.
-
-[33]
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/sl' instead on input line 164.
-
-) [34]
+[29] [30]) [31]
 File: 1.png Graphic file (type bmp)
 <1.png>
 File: 2.png Graphic file (type bmp)
 <2.png>
- (./Example2.tex) [35] [36]
+ (./Example2.tex) [32] [33]
 File: 3.png Graphic file (type bmp)
 <3.png>
 File: 4.png Graphic file (type bmp)
 <4.png>
- (./marketcap.tex) [37] [38]
+ (./marketcap.tex) [34] [35]
 (./Output/mresult2Polk-slide.tex)
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 2008--2008
+Overfull \hbox (23.17839pt too wide) in paragraph at lines 2025--2025
 [][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
 ][]
  []
 
-[39]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 2042--2044
+[36]
+Overfull \hbox (2.17194pt too wide) in paragraph at lines 2059--2061
 [][]\TU/XBZar.ttf(0)/b/n/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و 
 دینی و موسسات[]
  []
@@ -1327,15 +1194,15 @@ File: Output/sameIndustryinBG.eps Graphic file (type eps)
 <Output/sameIndustryinBG.eps>
 File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
 <Output/sameIndustryNoinBG.eps>
-[40]
+[37]
 File: Output/BGSummary.eps Graphic file (type eps)
 <Output/BGSummary.eps>
- [41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2096.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2096.
+ [38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2113.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2113.
  (./Connected Stocks - Draft - Persian.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2096.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2096.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2113.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2113.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - Persian".out' ha
 s not changed.
@@ -1344,18 +1211,15 @@ s not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2096.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2113.
  ) 
 Here is how much of TeX's memory you used:
- 27592 strings out of 479418
- 555151 string characters out of 5888105
- 977587 words of memory out of 5000000
- 44467 multiletter control sequences out of 15000+600000
+ 27575 strings out of 479418
+ 554843 string characters out of 5888105
+ 977598 words of memory out of 5000000
+ 44458 multiletter control sequences out of 15000+600000
  540079 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (41 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (38 pages).
