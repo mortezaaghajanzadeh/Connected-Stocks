@@ -144,16 +144,16 @@ for counter, i in enumerate(arrs):
     m = d.drop_duplicates(["id", "t_Week"], keep="last")
     Monthly = Monthly.append(m)
     d = pd.DataFrame()
-    # if len(Monthly) > 6e6:
-        # counter_file += 1
-        # pickle.dump(
+    if len(Monthly) > 6e6:
+        counter_file += 1
+        pickle.dump(
             # Monthly,
             # open(
                 # path + "mergerd_first_step_weekly_part_{}.p".format(counter_file),
                 # "wb",
             # ),
-        # )
-        # Monthly = pd.DataFrame()
+        )
+        Monthly = pd.DataFrame()
 counter_file += 1
 pickle.dump(
     Monthly,
