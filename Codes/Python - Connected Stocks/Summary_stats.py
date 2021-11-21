@@ -629,7 +629,7 @@ t = (
 )
 t["index"] = "All"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t)
+tempt = tempt.append(t.round(3))
 t = (
     df2[df2.sBgroup == 1][
         [
@@ -643,7 +643,7 @@ t = (
 )
 t["index"] = "Same Group"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t)
+tempt = tempt.append(t.round(3))
 t = (
     df2[df2.sBgroup == 0][
         [
@@ -657,7 +657,7 @@ t = (
 )
 t["index"] = "Not Same Group"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t)
+tempt = tempt.append(t.round(3))
 t = (
     df2[df2.sgroup == 1][
         [
@@ -671,7 +671,7 @@ t = (
 )
 t["index"] = "Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t)
+tempt = tempt.append(t.round(3))
 t = (
     df2[df2.sgroup == 0][
         [
@@ -685,34 +685,53 @@ t = (
 )
 t["index"] = "Not Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t)
+tempt = tempt.append(t.round(3))
 #%%
 tempt.sort_values(by=["variable"])
 #%%
-a = (
-    tempt.replace("MonthlyFCAPf", "FCAP")
-    .replace("MonthlyFCA", "MFCAP")
-    .sort_values(by=["variable"])
-    .reset_index()
-    .rename(columns={"index": "subset"})
-    .set_index(
-        [
-            "variable",
-            "subset",
-        ]
-    )
-    .round(3)
-    .T
-)
+# a = (
+#     tempt.replace("MonthlyFCAPf", "FCAP")
+#     .replace("MonthlyFCA", "MFCAP")
+#     .sort_values(by=["variable"])
+#     .reset_index()
+#     .rename(columns={"index": "subset"})
+#     .set_index(
+#         [
+#             "variable",
+#             "subset",
+#         ]
+#     )
+#     .round(3)
+#     .T
+# )
 #%%
-tempt[tempt.variable == "MonthlyFCA"].merge(
+tempt.reset_index()
+#%%
+a = tempt[tempt.variable == "MonthlyFCA"].merge(
     tempt[tempt.variable == "MonthlyFCAPf"],
     left_index=True,
     right_index=True,
-)
-#%%
-
-
+).T
+a['variable'] = "MonthlyFCA"
+mlist = ['variable_y', 'mean_y', 'std_y', 'min_y', '25%_y', '50%_y',
+       '75%_y', 'max_y']
+a.loc[a.index.isin(mlist),'variable'] = "MonthlyFCAPf"
+a = a.reset_index()
+a['index'] =a['index'].apply(lambda x: x.split('_')[0])
+a = a[~a['index'].isin(['25%','75%'])]
+a.loc[a['index'] == '50%','index'] = 'median'
+a = a.set_index(
+    ['variable','index']
+    ).T.drop(
+        columns = [(  'MonthlyFCA', 'variable'),
+                   (  'MonthlyFCAPf', 'variable')]
+        ).replace(
+            "MonthlyFCAPf", "FCAP"
+            ).replace(
+                "MonthlyFCA", "MFCAP"
+                ).reset_index().rename(
+                    columns={"index": "subset"}
+                    ).set_index('subset')
 a.to_latex(pathResult + "FCACal.tex")
 a
 
