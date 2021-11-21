@@ -1,0 +1,442 @@
+\section{\lr{Evidence for correlated trading} }
+\begin{itemize}
+	\item 
+	به نظر می آید در شرکت های عضو گروه های کسب و کار به همراه یکدیگر معامله می شوند
+	\item
+	از ملاک های اندازه گیری معاملات برای این هدف استفاده کرده یم
+\end{itemize}
+\subsection{\lr{Turnover}}
+\begin{itemize}
+	\item 
+	از تغییرات 
+	\lr{turnover}
+	برای بررسی معامله هم زمان استفاده می کنیم
+	\item 
+	تعریف تغییرات انحراف معیار
+	\begin{equation}
+			\Delta \text{TurnOver} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
+		\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
+	\end{equation}
+	\item 
+	از شیوه مقاله 
+	\lr{\cite{Liquidity2016}}
+	برای تعریف استفاده کرده ایم
+\end{itemize}
+
+
+\begin{itemize}
+	\item
+	به منظور بررسی معامله هم زمان شرکت ها در گروه نیاز است تا رابطه تغییرات 
+	\lr{turnover}
+	را با میانگین تغییرات 
+	\lr{turnover}
+	در گروه بدست بیاوریم
+	\item 
+	مدل زیر را برآورد می کنیم
+	\input{Elements/turnoverModel}
+	\item
+	انتظار داریم متوسط ضرایب برای تغییرات
+	\lr{turnover}
+	گروه معنا دار و مثبت باشد
+	\item
+	جدول 
+	\ref{turnover}
+	نتایج برآورد را نشان می دهد
+	\begin{LTR}
+		\lr{\begin{table}[htbp]
+				\centering
+				\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
+				\resizebox{1\textwidth}{!}{
+					\input{Output/turnover.tex}
+				} \label{turnover}
+		\end{table}}
+	\end{LTR}
+	\item
+	از شیوه فاما مکبث برای برآورد این معادله استفاده شده است
+	\lr{\cite{FamaMacBeth}}
+	\item
+	علاوه بر شرایط بازار، گروه کسب و کار بیشترین تاثیر را بر روی تغییرات معاملات در گروه دارد
+%	\item
+%	در قدم بعدی سعی می کنیم نشان دهیم با افزایش همبستگی تغییرات 
+%	\lr{turnover}
+%	هم بستگی شرکت های درون جفت افزایش پیدا می کند
+%	\item
+%	در این راستا برای هر جفت پیدا شده هم بستگی تغییرات روزانه 
+%	\lr{turnover}
+%را محاسبه می کنیم
+%
+%\item
+%در قدم اول رابطه هم بستگی تغییرات 
+%	\lr{turnover}
+%را  بر روی مالکیت مشترک و عضویت در یک گروه کسب و کار بررسی میکنیم
+%\begin{itemize}
+%	\item 
+%	در مدل اصلی به جای پیش بینی هم حرکتی بازده آبنده از همبستگی تغییرات 
+%		\lr{turnover}
+%		استفاده می کنیم:
+%		\input{Model14.tex}
+%		
+%
+%	را بر روی متغیر های مورد نظر خودمان بررسی می کنیم
+%	\item 
+%	جدول
+%	\ref{mresult2-turnover}
+%	نتایج را نشان می دهد
+%	\begin{LTR}
+%		\lr{\begin{table}[htbp]
+%				\centering
+%				\caption{Pairwise correlation in turnover  }
+%				\label{mresult2-turnover}
+%				\resizebox{\textwidth}{!}{
+%					\centering
+%					\input{Output/mresult2-turnover.tex}
+%				}
+%		\end{table}}
+%	\end{LTR}
+%	\item 
+%	نتایج نشان می دهد شرکت های درون گروه های کسب و کار هم بستگی بیشتری در تغییرات
+%	\lr{turnover}
+%	دارند و مالکیت مشترک از مسیر معاملات هم زمان تاثیری بر روی هم حرکتی از این کانال ندارد.
+%
+%	
+%\end{itemize}
+
+
+
+
+
+%\item
+%با توجه به بررسی ها  داریم عضویت در گروه کسب و کار سبب همبستگی تغییرات 
+%\lr{turnover}
+%می شود
+\item
+حال باید نشان دهیم 
+\lr{turnover}
+مرتبط در گروه های کسب و کار سبب افزایش هم حرکتی می شود
+\item
+\lr{turnover}
+در سطح ماه به صورت متوسط 
+\lr{turnover}
+را محاسبه کردیم
+\item
+از 
+\lr{turnover}
+میانگین سالانه
+\lr{turnover}
+و 
+\lr{turnover}
+ماهانه بازار  در آن ماه را کم کردیم
+\item
+بررسی کردیم پراکندگی باقی مانده در گروه های کسب و کار چگونه است
+\item
+انتظار داریم برای شرکت های در  گروه های کسب و کار پراکندگی باقی مانده کمتر از دیگر شرکت ها باشد
+	\lr{\begin{LTR}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ResidualTrunSummary.tex}
+		}
+		\label{tab:ResidualTrunSummary}
+	\end{table}	
+	\end{LTR}}
+	\item
+		به صورت متوسط میانگین باقی مانده صفر است
+			\item
+			پراکندگی در بیرون گروه های کسب و کار بیشتر است
+				\item
+				در سطح گروه های کسب و کار انحراف معیار را محاسبه کردیم
+				
+	\lr{\begin{LTR}
+	\begin{table}[htbp]
+			\centering
+			\resizebox{0.8\textwidth}{!}{
+				\input{Output/ResidualTrunStdSummary.tex}
+			}
+			\label{tab:ResidualTrunStdSummary}
+		\end{table}
+	\end{LTR}}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
+		\label{fig:GroupedResSTD}
+	\end{figure}
+	\item
+	برای گروه های کسب و کار متغیر دامی تعریف می کنیم
+		\item
+		که برای گروه های با انحراف معیار کم در باقی مانده ها برابر یک است
+			\item
+			بررسی می کنیم که سبب افزایش هم حرکتی می شود
+				\item
+				برای کنترل و حذف اثر اندازه گروه های کسب و کار، تعداد اعضای هر گروه را هم به صورت کن
+\lr{\begin{LTR}
+		\begin{table}[htbp]
+	\centering
+			\resizebox{0.8\textwidth}{!}{
+				\centering
+				\input{Output/LowRes.tex}
+			}
+			\label{Turnovercrosssection}
+		\end{table}
+\end{LTR}}
+%\item
+%عضویت در گروه کسب و کار سبب هم حرکتی قیمت شرکت ها می شود
+%\item
+%کانال تاثیر کدام است؟
+%\begin{itemize}
+%\item
+%از متغیر یکسان بودن صنعت به عنوان متغیر ابزاری برای هم بستگی تغییرات
+%\lr{turnover}
+%استفاده می کنیم تا هم حرکتی قیمت شرکت ها را بررسی کنیم
+%\item
+%شرایط استفاده از متغیر ابزاری
+%\begin{itemize}
+%\item
+%ارتباط: شرکت های در یک صنعت به همراه یکدیگر معامله می شوند 
+%نتایج برآورد 
+%\lr{Reduced Form}
+%این سوال را پاسخ می دهد
+%\item
+%برونزایی:
+%هم حرکتی شرکت ها نمی تواند صنعت شرکت را تعیین کند
+%\item
+%\lr{Exclusion restriction}:
+%با توجه به نحوه محاسبه هم حرکتی بازده صنعت از آن حذف شده است
+%در نتیجه یکسان بودن صنعت دو شرکت نمی تواند سبب هم حرکتی قیمت آن ها شود.
+%
+%\item \lr{{First Stage} : 
+%\input{FirstStage.tex}}
+%\item \lr{{Reduced Form} : 
+%\input{ReducedForm.tex}}
+%\item \lr{{Second Stage} : 
+%\input{SecondStage.tex}
+%}
+%\end{itemize}
+%	\lr{
+%	\begin{LTR}
+%	\begin{table}[htbp]
+%			\centering
+%			\resizebox{0.75\textwidth}{!}{
+%				\centering
+%				\input{Output/TurnIv.tex}
+%			}
+%			\label{TurnIv}
+%		\end{table}
+%		\end{LTR}
+%		}
+%\end{itemize}
+%حال برای بررسی نهایی به عنوان متغییر کنترلی همبستگی تغییرات 
+%\lr{turnover}
+%جفت ها را به مدل اصلی اضافه می کنیم
+%
+%		
+%	\begin{itemize}
+%		\item 
+%	برای رفع مشکل 
+%	\lr{reverse casulity}
+%	از لگ هم حرکتی قیمت شرکت ها استفاده می کنیم
+%	\item
+%	نتایج در جدول 
+%			\ref{BigBusinessGroup}
+%			نشان داده شده است
+%			
+%				\begin{itemize}
+%				\item
+%				در دو ستون اول هم بستگی تغییرات 
+%				\lr{turnover}
+%				را به مدل اضافه کرده ایم
+%				\item
+%				افزایش هم بستگی تغییرات
+%				\lr{turnover}
+%				در شرکت ها سبب افزایش هم حرکتی قیمت شرکت ها می شود
+%				\item
+%				در جفت های عضو یک گروه کسب و کار نیز تاثیر هم حرکتی تغییرات  
+%				\lr{turnover}
+%				بیشتر است
+%				\end{itemize}
+%					\item 
+%								در ادامه انتظار داریم گروه های بزرگ کسب و کار به دلیل آگاهی فعالان بازار در رابطه با وجود این گروه ها، به همراه یکدیگر معامله شوند	
+%							\begin{itemize}
+%								
+%								\item 
+%								برای این منظور گروه های کسب و کار را براساس تعداد اعضا دسته بندی کردیم و  گروه های بالاتر از میانه را گروه های بزرگ در نظر گرفتیم.
+%								\item 
+%								انتظار داریم هم حرکتی جفت های در گروه های کسب و کار بزرگ بیشتر از جفت های دیگر باشد
+%								\item
+%								از طرفی تاثیر معاملات هم زمان نیز در این گروه ها باید بیشتر از گروه های کوچک باشد
+%								\item
+%								در گروه های کسب و کار بزرگ هم حرکتی در تغییرات 
+%								\lr{turnover}
+%								توضیح دهندگی بیشتری نسبت به دیگر گروه ها داشته باشد
+%								\item
+%								نتایج برآورد در جدول
+%								\ref{BigBusinessGroup}
+%								نشان داده شده است
+%							
+%								\item
+%								در گروه های بزرگ هم بستگی تغییرات 
+%								\lr{turnover}
+%								تاثیر بیشتری بر روی هم بستگی دارد
+%								\item
+%								در صورتی که در دیگر گروه ها تاثیر هم بستگی در تغییرات 
+%								\lr{turnover}
+%								کمتر است
+%								
+%								
+%							\end{itemize}
+%	\end{itemize}
+%	
+%	
+%		\begin{LTR}
+%						\lr{		\begin{table}[htbp]
+%								\centering
+%								\caption{heading}
+%								\label{BigBusinessGroup}
+%								\resizebox{\textwidth}{!}{
+%									\input{Output/mresult2-BigBusinessGroup.tex}
+%								}
+%						\end{table}}
+%					\end{LTR}
+\end{itemize}
+
+\FloatBarrier
+
+
+
+
+\FloatBarrier
+
+
+
+
+
+
+
+\FloatBarrier
+
+
+ \subsection{\lr{Institutional Imbalance}}
+ \begin{itemize}
+ 	\item 
+ 	در قسمت قبل نشان دادیم که شرکت های درون گروه به همراه هم حرکت می شوند و این امر سبب می شود تا هم حرکتی قیمتی نیز با یدیگر داشته باشند
+ 	\item
+ 	حال بررسی می کنیم تا شرکت ها در یک جهت نیز معامله شوند
+ 	\item
+ 	یکی از ملاک های مورد استفاده در ادبیات برای بررسی رفتار معامله گران  ناترازی خرید و فروش است
+ 	
+ 	\lr{\cite{seasholes2007predictable}}
+ 
+ 		\begin{equation}
+ 			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+ 		\end{equation}
+
+ 	\item 
+ 	در سطح ماه ملاک ناترازی خرید و فروش را تعریف می کنیم
+ 	\item 
+ 	که در عبارت های ذکر شده مجموع خرید و فروش در سطح یک ماه در نظر گرفته شده است
+ 	\item 
+ 	مشخصات آماری ناترازی حقوقی در جدول 
+ 	\ref{tab:ImbalanceInsMeanSummary}
+ 	بیان شده است
+  	\begin{LTR}
+ 	\lr{\begin{table}[htbp]
+ 			\centering
+ 			\caption{text}
+ 			\resizebox{0.75\textwidth}{!}{
+ 				\input{Output/ImbalanceInsMeanSummary.tex}
+ 			}
+ 			\label{tab:ImbalanceInsMeanSummary}
+ 	\end{table}}
+ \end{LTR}
+
+ \end{itemize}
+ \FloatBarrier
+ 
+ \begin{itemize}
+ 	\item 
+ 	اگر شرکت های در یک گروه کسب و کار به همراه یکدیگر معامله شوند انتظار داریم تا انحراف معیار ناترازی خرید و فروش  حقوقی در گروه کمتر از شرکت های بیرون گروه باشد
+ 	\item 
+ 	انحراف معیار ناترازی حقوقی در شرکت های درون گروه و بیرون گروه را بررسی کرده ایم
+ 		\item 
+ 	جدول 
+ 		\ref{tab:ImbalanceInsStdSummary}
+ 	و
+ 	نتایج را نشان می دهد
+ 	\begin{LTR}
+ 		\lr{\begin{table}[htbp]
+ 				\centering
+ 				\caption{text}
+ 				\resizebox{0.75\textwidth}{!}{
+ 					\input{Output/ImbalanceInsStdSummary.tex}
+ 				}
+ 				\label{tab:ImbalanceInsStdSummary}%
+ 		\end{table}}
+ 	\end{LTR}
+
+ 		\item 
+ 	به صورت متوسط انحراف معیار ناترازی در شرکت های درون گروه از شرکت های بیرون گروه کمتر است	
+ 	
+ 	\item 
+ 	در شکل 
+ 	\ref{fig:GroupedInsSTD}
+ 	سری زمانی میانگین انحراف معیار ناترازی شرکت ها در گروه ها و بیرون گروه نشان داده شده است
+ 	\begin{figure}[htbp]
+ 		\centering
+ 		\caption{text}
+ 		\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+ 		\label{fig:GroupedInsSTD}
+ 	\end{figure}
+
+ 	\item 
+ 	به صورت متوسط انحراف معیار نا ترازی برای حقوقی ها 12\%
+ 	از شرکت های بیرون گروه کمتر است. (از لحاظ آماری هم این اختلاف معنا دار است)
+ 	
+ \end{itemize}
+  
+
+\begin{itemize}
+	\item 
+	همانطور که انتظار داشتیم در گروه های کسب و کار انحراف معیار نا ترازی کم است
+	\item 
+	حال باید نشان دهیم که جفت های حاضر  در گروه های کسب و کار با انحراف معیار کمتر، هم حرکتی بالاتری نیز دارند
+	\item 
+	برای این هدف متغیر دامی 
+	\textbf{Imbalance std}
+	را برای گروه هایی که انحراف معیار ناترازی حقوقی برای آن ها از میانه کمتر است تعریف می کنیم
+%	\item 
+%	مدل زیر را با استفاده از روش مدل 
+%	\ref{model1}
+%	برآورد می کنیم
+%	\input{Model13}
+	\item 
+	انتظار داریم جفت های حاضر در گروه های با انحراف معیار کم هم حرکتی بیشتری داشته باشند
+	
+\end{itemize}
+
+\begin{itemize}
+	\item 
+	نتایج در جدول
+	\ref{Imbalance}
+	آورده شده است
+	\begin{LTR}
+		\lr{\begin{table}[htbp]
+		\centering
+		\caption{text}
+		\label{Imbalance}
+		\resizebox{\textwidth}{!}{
+			\input{Output/Imbalance.tex}
+		}
+	\end{table}}
+	\end{LTR}
+\begin{itemize}
+	\item 
+	همچنان جفت های در یک گروه کسب و کار هم حرکتی بیشتری دارند
+	\item 
+	اگر جفت های در یک گروه کسب و کار، در گروه های با انحراف معیار کم باشند $ 2.4\% $ هم حرکتی آن ها افزایش پیدا می کند
+	(میانگین هم حرکتی تقریبا $ 1.6 \%$ است )
+
+	
+\end{itemize}
+\end{itemize}
+
+\FloatBarrier
+

@@ -35,12 +35,7 @@
 	April\or May \or June\or July\or August\or September\or October\or November\or %
 	December\fi, \number \year} 
 
-\title[How are stocks connected? ]{How are stocks connected?}
-\subtitle{Evidence from an emerging market}
-%\subtitle{}
-\author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
-\institute[TeIAS]{Tehran Institute for Advanced Studies }
-\centering
+
 
 
 
@@ -78,7 +73,11 @@
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-
+\title[Connected Stocks  via Business Groups]{Connected Stocks via Business Groups:}
+\subtitle{Evidence from an emerging market}
+%\subtitle{}
+\author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
+\institute[TeIAS]{Tehran Institute for Advanced Studies }
 
 
 \begin{document}
@@ -1125,7 +1124,7 @@
 	\begin{frame}{Estimation model}
 		\begin{itemize}
 			\item Use Fama-MacBeth to estimate this model
-			\input{Model11}
+			\input{Elements/Model11}
 			
 			\item Estimate the model on a monthly frequency 
 			\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(70/100)^{\frac{2}{9}} = 3.69 \sim 4 $)
@@ -1308,7 +1307,7 @@
 \end{itemize}
 	\begin{table}[htbp]
 		\centering
-		\resizebox{0.8\textwidth}{!}{
+		\resizebox{0.75\textwidth}{!}{
 			\input{Output/ResidualTrunSummary.tex}
 		}
 		\label{tab:ResidualTrunSummary}
@@ -1584,8 +1583,8 @@
 				\end{itemize}
 			\pause
 				\begin{figure}[htbp]
-					\includegraphics[width=0.47\linewidth]{1.png}
-					\includegraphics[width=0.47\linewidth]{2.png}
+					\includegraphics[width=0.47\linewidth]{Elements/1.png}
+					\includegraphics[width=0.47\linewidth]{Elements/2.png}
 					\captionsetup{labelformat=empty}
 					\caption{\scriptsize Comparison of three methods for calculating common ownership}
 				\end{figure}
@@ -1638,7 +1637,7 @@
 					\centering
 					\resizebox{0.9\textwidth}{!}
 					{
-						\input{Example2}
+						\input{Elements/Example2}
 					}
 				\end{table}
 				
@@ -1655,7 +1654,7 @@
 				\end{itemize}
 				\resizebox{0.7\textwidth}{!}
 				{
-					\input{marketcap}
+					\input{Elements/marketcap}
 				}
 				
 				
@@ -1664,8 +1663,8 @@
 			
 			\begin{frame}{Measuring Common Ownership}{Comparison}
 				\begin{figure}[htbp]
-					\includegraphics[width=0.47\linewidth]{3.png}
-					\includegraphics[width=0.47\linewidth]{4.png}
+					\includegraphics[width=0.47\linewidth]{Elements/3.png}
+					\includegraphics[width=0.47\linewidth]{Elements/4.png}
 					\captionsetup{labelformat=empty}
 					\caption{\scriptsize Comparison of two methods for calculating common ownership}
 				\end{figure}

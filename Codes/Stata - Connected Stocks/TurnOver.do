@@ -41,7 +41,7 @@ estadd loc control "Yes",replace
 
 
 
-
+/*
 eststo v2: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   , fmb newey(7)
 estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "No",replace
@@ -49,7 +49,7 @@ estadd loc control "No",replace
 eststo v21: quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket, fmb newey(7)
 estadd loc weight " $ \text{MC} \times \text{CR} $ " , replace
 estadd loc control "Yes",replace
-
+*/
 
 
 
@@ -72,9 +72,7 @@ asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   lagdeltagroup
   
   
 
-esttab v1 v11 v2 v21 v3 v31, n r2 label s( N weight control r2 ,  lab("Observations" "Weight " "Control" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket deltagroup deltaindustry ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
-
- ,using turnover.tex ,replace
+esttab v1 v11 /*v2 v21*/ v3 v31, n r2 label s(  weight control N r2 ,  lab( "Portfo. Weight " "Control" "Observations" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket  deltaindustry deltagroup ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using turnover.tex ,replace
 
 
 

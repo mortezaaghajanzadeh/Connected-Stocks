@@ -1,0 +1,12 @@
+\textsl{}\begin{equation}
+\begin{split}
+\rho_{ij,t+1} = & \text{ 	}\beta_0 + \beta_1* \text{SameGroup}_{ij} + \beta_2* \text{Low Imbalance std} \\
+&+  \beta_3 * \text{Low Imbalance std} \times \text{SameGroup}_{ij}  \\
+%& +\beta_4*  \\
+%& +\beta_5* \text{FCA}^*_{ij,t} \times \text{SameGroup}_{ij}  \\
+%& +\beta_6* \text{Low Imbalance std} \times \text{FCA}^*_{ij,t}  \\
+% & 	+\beta_4* \text{Low Imbalance std} \times \text{SameGroup}_{ij} \times \text{FCA}^*_{ij,t}   \\
+  & + \sum_{k=1} ^{n} \alpha_k*\text{Control}_{ij,t} + \varepsilon_{ij,t+1}
+\end{split}
+\label{model1S}
+\end{equation}

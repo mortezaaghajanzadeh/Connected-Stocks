@@ -1,0 +1,103 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt, a4paper]{article}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{subcaption}
+ \usepackage{pdflscape}
+
+
+
+\captionsetup{font=footnotesize,labelfont=footnotesize}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\usepackage{natbib}
+\usepackage[title]{appendix}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{startstop1} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=blue!30]
+
+\tikzstyle{startstop2} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=yellow!30]
+
+\tikzstyle{startstop3} = [rectangle , rounded corners, minimum width=0.5cm, minimum height=0.75cm,text centered,draw=black]
+
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=blue!30]
+
+
+
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{decision} = [diamond, minimum width=0.75cm, minimum height=0.75cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi, \number \year} 
+
+\title{\lr{Connected Stocks via Business Groups: Evidence from an Emerging Market}}
+\author{\lr{S.M. Aghajanzadeh\sym{*} \qquad M. Heidari\sym{*} \qquad M. Mohseni\sym{*} }\\
+\lr{\sym{*} \footnotesize  Tehran Institute for Advanced Studies, Khatam University, Tehran, Iran}
+}
+
+\def\boxit#1{%
+  \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+  \llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
+
+
+\usepackage{lipsum}
+\usepackage{xepersian}
+\settextfont{XB Zar.ttf}
+\settextdigitfont{XB Zar.ttf}
+\linespread{1.2}
+
+
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+در این پژوهش با استفاده از داده های روزانه مالکیت  شرکت های فعال در  بورس اوراق بهادار تهران نشان می دهیم مالکیت مشترک و عضویت در یک گروه کسب و کار بر هم حرکتی قیمت شرکت ها تاثیر مثبتی دارد. علاوه بر این نشان می دهیم که عضویت در گروه کسب و کار تاثیر بیشتری از مالکیت مشترک دارد و مالکیت مشترک تنها در درون گروه های کسب و کار سبب افزایش هم حرکتی می شود.
+در ادامه با توجه به شواهد معرفی شده نشان می دهیم معاملات هم زمان و هم جهت در گروه های کسب و کار هم حرکتی بیشتر شرکت ها را توضیح می دهد.
+\end{abstract}
+
+
+
+
+\input{Introduction-Persian}
+\input{Data and Methodology - Persian}
+\input{Results-Persian}
+\input{Evidence for correlated tradin - Persian}
+
+\input{Conclusion - Persian}
+
+\input{appendices-Persian}
+\end{document}

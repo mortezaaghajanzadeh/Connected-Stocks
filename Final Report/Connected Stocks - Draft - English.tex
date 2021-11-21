@@ -60,10 +60,7 @@
 April\or May \or June\or July\or August\or September\or October\or November\or %
 December\fi, \number \year} 
 
-\title{\lr{How are stocks connected? Evidence from an emerging market}}
-\author{\lr{S.M. Aghajanzadeh\sym{*} \qquad M. Heidari\sym{*} \qquad M. Mohseni\sym{*} }\\
-\lr{\sym{*} \footnotesize  Tehran Institute for Advanced Studies, Khatam University, Tehran, Iran}
-}
+
 
 \def\boxit#1{%
   \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
@@ -72,13 +69,11 @@ December\fi, \number \year}
 
 
 \usepackage{lipsum}
-\usepackage{xepersian}
-\settextfont{XB Zar.ttf}
-\settextdigitfont{XB Zar.ttf}
+
 \linespread{1.2}
 
 
-
+\input{Elements/Title}
 
 \begin{document}
 \maketitle
@@ -86,11 +81,9 @@ December\fi, \number \year}
 
 
 \begin{abstract}
-	\begin{LTR}
+
 		We link stocks through direct and indirect common owners, and we show that having common ownership and belonging to a business group (indirect common owner) affect the co-movement. Our analysis is based on the daily ownership of blockholders on the Tehran Stock Exchange. The study found that belonging to a business group had more impact than being a common owner, and a common owner influenced only movement within business groups. In addition, co-movement in business groups is explained by simultaneous trades in the same direction.
-	\end{LTR}
-%در این پژوهش با استفاده از داده های روزانه مالکیت  شرکت های فعال در  بورس اوراق بهادار تهران نشان می دهیم مالکیت مشترک و عضویت در یک گروه کسب و کار بر هم حرکتی قیمت شرکت ها تاثیر مثبتی دارد. علاوه بر این نشان می دهیم که عضویت در گروه کسب و کار تاثیر بیشتری از مالکیت مشترک دارد و مالکیت مشترک تنها در درون گروه های کسب و کار سبب افزایش هم حرکتی می شود.
-%در ادامه با توجه به شواهد معرفی شده نشان می دهیم معاملات هم زمان و هم جهت در گروه های کسب و کار هم حرکتی را توضیح می دهد.
+
 \end{abstract}
 
 
@@ -98,12 +91,13 @@ December\fi, \number \year}
 
 
 
-\input{Introduction}
-\input{Data and Methodology}
+\input{Elements-Eng/Introduction}
+\input{Elements-Eng/Data and Methodology}
 \FloatBarrier
-\input{Results}
+\input{Elements-Eng/Results}
 \FloatBarrier
-\input{Evidence for correlated trading}
-\input{Conclusion}
-\input{appendices}
+\input{Elements-Eng/Evidence for correlated trading}
+\input{Elements-Eng/Conclusion}
+%\input{appendices}
+
 \end{document}

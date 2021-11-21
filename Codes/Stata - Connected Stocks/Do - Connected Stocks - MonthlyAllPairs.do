@@ -1,3 +1,4 @@
+{ /*Data*/
 cls
 clear
 import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
@@ -172,6 +173,8 @@ summ monthlyfcapf if monthlyfcapf>0
 
 
 
+}
+
 
 
 
@@ -266,7 +269,7 @@ estadd loc controll "Yes" , replace
 estadd loc GroupFE "No" , replace
 */
 
-esttab  v4 v9  v10 v7 v71 v3 v8 /* v13 v1 v5  v6 v61 v11  v12 */ ,  nomtitle  label  s( N subSample GroupFE controll r2 ,  lab("Observations" "Sub Sample" "Group Effect" "Controls" "$ R^2 $")) keep(/*median */ NMFCAG sbgroup vv /*mvv*/) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
+esttab  v4 v9  v10 v7 v71 v3 v8 /* v13 v1 v5  v6 v61 v11  v12 */ ,  nomtitle  label  s( subSample GroupFE controll N  ,  lab( "Sub-Sample" "Business Group FE" "Controls" "Observations" )) keep(/*median */ NMFCAG sbgroup vv /*mvv*/) order(sbgroup vv NMFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using Q3mresultAllPairs.tex ,replace
 
 
 rename  vv NMFCA

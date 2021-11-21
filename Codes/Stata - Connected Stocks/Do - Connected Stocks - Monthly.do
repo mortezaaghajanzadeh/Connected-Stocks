@@ -657,3 +657,46 @@ xtset id t_month
  }
  
  
+/*BigBusiness group*/
+{
+eststo clear
+
+eststo v1: xi: quietly asreg monthlyρ_5_f monthlyρ_5 /*NMFCA*/ sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc FE "Yes" , replace
+estadd loc subsample "All" , replace
+
+
+
+eststo v2: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType  bigbusinessgroup  /*NMFCAG*/ bigbusinessgroupTurn Turnsbgroup TurnSgroupbigbusinessgroup bigbusinessgroupSgroup, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "All" , replace
+estadd loc FE "Yes" , replace
+
+
+
+eststo v3: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn Turnsbgroup i.PairType  if bigbusinessgroup == 1, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "Big Groups" , replace
+estadd loc FE "Yes" , replace
+
+
+
+eststo v4: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup /*NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership Turnsbgroup monthlyρ_turn i.PairType if bigbusinessgroup  == 0, fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "Others" , replace
+estadd loc FE "Yes" , replace
+
+
+eststo v5: xi: quietly asreg monthlyρ_5_f /*NMFCA*/ monthlyρ_5 sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_turn i.PairType    /*NMFCAG*/  Turnsbgroup , fmb newey(4)
+estadd loc Controls "Yes" , replace
+estadd loc subsample "All" , replace
+estadd loc FE "Yes" , replace
+
+esttab v1 v5 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup TurnSgroupbigbusinessgroup ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup  bigbusinessgroupTurn TurnSgroupbigbusinessgroup) 
+
+
+
+esttab v1 v5 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup TurnSgroupbigbusinessgroup ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup  bigbusinessgroupTurn TurnSgroupbigbusinessgroup)  mgroups("Dependent Variable: Future Pairs's co-movement"  , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
+}
+

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  20 NOV 2021 18:22
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  21 NOV 2021 09:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,376 +693,44 @@ Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 (c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/xepersian.sty
-Package: xepersian 2020-01-31 v22.8 Persian typesetting in XeLaTeX
-
-(c:/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-
-(c:/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
-X
-\l__fontspec_script_int=\count310
-\l__fontspec_language_int=\count311
-\l__fontspec_strnum_int=\count312
-\l__fontspec_tmp_int=\count313
-\l__fontspec_tmpa_int=\count314
-\l__fontspec_tmpb_int=\count315
-\l__fontspec_tmpc_int=\count316
-\l__fontspec_em_int=\count317
-\l__fontspec_emdef_int=\count318
-\l__fontspec_strong_int=\count319
-\l__fontspec_strongdef_int=\count320
-\l__fontspec_tmpa_dim=\dimen291
-\l__fontspec_tmpb_dim=\dimen292
-\l__fontspec_tmpc_dim=\dimen293
-
-(c:/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-)
-(c:/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
-Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count321
-\XePersian@y=\count322
-\XePersian@m=\count323
-\XePersian@d=\count324
-\XePersian@latini=\count325
-\XePersian@persiani=\count326
-\XePersian@latinii=\count327
-\XePersian@persianii=\count328
-\XePersian@latiniii=\count329
-\XePersian@persianiii=\count330
-\XePersian@latiniv=\count331
-\XePersian@persianiv=\count332
-\XePersian@latinv=\count333
-\XePersian@persianv=\count334
-\XePersian@latinvi=\count335
-\XePersian@persianvi=\count336
-\XePersian@latinvii=\count337
-\XePersian@persianvii=\count338
-\XePersian@latinviii=\count339
-\XePersian@persianviii=\count340
-\XePersian@latinix=\count341
-\XePersian@persianix=\count342
-\XePersian@latinx=\count343
-\XePersian@persianx=\count344
-\XePersian@latinxi=\count345
-\XePersian@persianxi=\count346
-\XePersian@latinxii=\count347
-\XePersian@persianxii=\count348
-\XePersian@persianxiii=\count349
-\XePersian@temp=\count350
-\XePersian@temptwo=\count351
-\XePersian@tempthree=\count352
-\XePersian@yModHundred=\count353
-\XePersian@thirtytwo=\count354
-\XePersian@dn=\count355
-\XePersian@sn=\count356
-\XePersian@mminusone=\count357
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/xepersian-mathsdigitspec.sty
-Package: xepersian-mathsdigitspec 2018/12/16 v1.1.7 Unicode Persian maths digit
-s in XeLaTeX
-) (c:/texlive/2020/texmf-dist/tex/xelatex/bidi/bidi.sty
-Package: bidi 2020-01-29 v35.11 Bidirectional typesetting in plain TeX and LaTe
-X
-
-****************************************************
-* 
-* bidi package (Bidirectional typesetting in
-* plain TeX and LaTeX, using XeTeX engine)
-* 
-* Description: A convenient interface for
-* typesetting bidirectional texts in plain TeX
-* and LaTeX. The package includes adaptations
-* for use with many other commonly-used packages.
-* 
-* Copyright (c) 2009--2019 Vafa Khalighi
-* 2018-2020 bidi-tex GitHub Organisation
-* 
-* v35.11, 2020-01-29
-* 
-* License: LaTeX Project Public License, version
-* 1.3c or higher (your choice)
-* 
-* Location on CTAN: /macros/xetex/latex/bidi
-* 
-* Issue tracker: https://github.com/bidi-tex/bidi/issues
-* 
-****************************************************
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/biditools.sty
-Package: biditools 2020-01-29 v1.10 Programming tools for bidi package
-\@bidi@envbody=\toks36
-\@bidi@emptytoks=\toks37
-\bidi@tempcountb=\count358
-\bidi@temptoksa=\toks38
-\bidi@temptoksb=\toks39
-\bidi@dummies=\count359
-\bidi@are@these@correct=\toks40
-\bidi@toks@lista=\toks41
-\bidi@toks@listb=\toks42
-\bidi@stack@length=\count360
-\bidi@empty@stack=\toks43
-\bidi@looprepeat@depth=\count361
-)
-(c:/texlive/2020/texmf-dist/tex/latex/zref/zref-abspage.sty
-Package: zref-abspage 2020-03-03 v2.29 Module abspage for zref (HO)
-
-(c:/texlive/2020/texmf-dist/tex/latex/zref/zref-base.sty
-Package: zref-base 2020-03-03 v2.29 Module base for zref (HO)
-Package zref Info: New property list: main on input line 763.
-Package zref Info: New property: default on input line 764.
-Package zref Info: New property: page on input line 765.
-)
-\c@abspage=\count362
-Package zref Info: New property: abspage on input line 66.
-)
-(c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks44
-\XKV@tempa@toks=\toks45
-)
-\XKV@depth=\count363
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-\@bidi@copyins@=\insert252
-
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
-File: latex-xetex-bidi.def 2019/03/03 v1.3.7 bidi adaptations for `latex.ltx' f
-or XeTeX engine
-\bidi@n@everypar=\toks46
-\bidi@column@check@number=\count364
-
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
-File: footnote-xetex-bidi.def 2017/08/09 v1.1 bidi footnote macros for XeTeX en
-gine
-\c@footdir@label=\count365
-\footdir@toks=\toks47
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
-File: article-xetex-bidi.def 2017/06/09 v0.6 bidi adaptations for standard arti
-cle class for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/amsmath-xetex-bidi.def
-File: amsmath-xetex-bidi.def 2018/01/08 v1.1 bidi adaptations for amsmath packa
-ge for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
-File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
-ge for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/caption-xetex-bidi.def
-File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
-ge for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/caption3-xetex-bidi.def
-File: caption3-xetex-bidi.def 2013/04/01 v0.1 bidi adaptations for caption3 pac
-kage for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/color-xetex-bidi.def
-File: color-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for color package f
-or XeTeX engine
-LaTeX Info: Redefining \color on input line 46.
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/xcolor-xetex-bidi.def
-File: xcolor-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for xcolor package
- for XeTeX engine
-LaTeX Info: Redefining \color on input line 45.
-LaTeX Info: Redefining \bidicolor on input line 88.
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/graphicx-xetex-bidi.def
-File: graphicx-xetex-bidi.def 2017/06/17 v0.5 bidi adaptations for graphicx pac
-kage for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/hyperref-xetex-bidi.def
-File: hyperref-xetex-bidi.def 2018/11/11 v1.1 bidi adaptations for hyperref pac
-kage for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/pgfcorescopes.code-xetex-bidi.def
-File: pgfcorescopes.code-xetex-bidi.def 2015/11/14 v0.1 bidi adaptations for pg
-f package for XeTeX engine
-) (c:/texlive/2020/texmf-dist/tex/xelatex/bidi/array-xetex-bidi.def
-File: array-xetex-bidi.def 2015/11/07 v0.3 bidi adaptations for array package f
-or XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/natbib-xetex-bidi.def
-File: natbib-xetex-bidi.def 2017/06/09 v0.2 bidi adaptations for natbib package
- for XeTeX engine
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/ragged2e-xetex-bidi.def
-File: ragged2e-xetex-bidi.def 2018/10/17 v0.3 bidi adaptations for ragged2e pac
-kage for XeTeX engine
-))
-(c:/texlive/2020/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
-File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
- last package loaded
-)
-\bidi@digits=\count366
-\bidi@digits@charclass=\XeTeXcharclass1
-\bidi@sepmark@charclass=\XeTeXcharclass2
-)
-****************************************************
-* 
-* xepersian package (Persian for LaTeX, using XeTeX engine)
-* 
-* Description: The package supports Persian
-* typesetting, using fonts provided in the
-* distribution.
-* 
-* Copyright (c) 2008-2019 Vafa Khalighi
-* 2018-2020 bidi-tex GitHub Organisation
-* 
-* v22.8, 2020-01-31
-* 
-* License: LaTeX Project Public License, version
-* 1.3c or higher (your choice)
-* 
-* Location on CTAN: /macros/xetex/latex/xepersian
-* 
-* Issue tracker: https://github.com/bidi-tex/xepersian/issues
-* 
-****************************************************
-\xepersian@tcl=\count367
-\xepersian@ilg=\dimen294
-\xepersian@strutilg=\dimen295
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
-File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is 
-the last package loaded
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/footnote-xepersian.def
-File: footnote-xepersian.def 2017/08/09 v0.6 footnote macros for xepersian pack
-age
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/appendix-xepersian.def
-File: appendix-xepersian.def 2015/02/01 v0.1 adaptations for appendix package
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/hyperref-xepersian.def
-File: hyperref-xepersian.def 2015/02/02 v0.6 bilingual captions for hyperref pa
-ckage
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/natbib-xepersian.def
-File: natbib-xepersian.def 2011/08/01 v0.1 adaptations for natbib package
-LaTeX Info: Redefining \Latincite on input line 229.
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/tikz.code-xepersian.def
-File: tikz.code-xepersian.def 2018/12/11 v0.1 adaptations for tikz.code.tex fil
-e
-)
-(c:/texlive/2020/texmf-dist/tex/xelatex/xepersian/article-xepersian.def
-File: article-xepersian.def 2010/07/25 v0.2 adaptations for standard article cl
-ass
-)
-
-Package fontspec Info: Font family 'lmroman10-regular(0)' created for font
-(fontspec)             'lmroman10-regular' with options
-(fontspec)             [Ligatures=TeX,Path,BoldFont={lmroman10-bold},BoldItalic
-Font={lmroman10-bolditalic},ItalicFont={lmroman10-italic},SmallCapsFont={lmroma
-ncaps10-regular},SlantedFont={lmromanslant10-regular},BoldSlantedFont={lmromans
-lant10-bold}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[lmroman10-regular]/OT:script=latn;language=dflt;map
-ping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[lmroman10-bold]/OT:script=latn;language=dflt;mappin
-g=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[lmroman10-italic]/OT:script=latn;language=dflt;mapp
-ing=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
-(fontspec)             <->"[lmromanslant10-regular]/OT:script=latn;language=dfl
-t;mapping=tex-text;"
-(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[lmroman10-bolditalic]/OT:script=latn;language=dflt;
-mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
-(fontspec)             <->"[lmromanslant10-bold]/OT:script=latn;language=dflt;m
-apping=tex-text;"
-(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
-(fontspec)             <->"[lmromancaps10-regular]/OT:script=latn;language=dflt
-;mapping=tex-text;"
-
-)
-
-Package fontspec Info: Font family 'XBZar.ttf(0)' created for font 'XB
-(fontspec)             Zar.ttf' with options
-(fontspec)             [Script=Persian,Ligatures=PersianTeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[XB
-(fontspec)             Zar.ttf]/OT:script=arab;language=dflt;mapping=persian-te
-x-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
-
-(./Connected Stocks - Draft - English.aux
-
-LaTeX Warning: Label `model1' multiply defined.
-
-
-LaTeX Warning: Label `mcorr50' multiply defined.
-
-)
+(./Elements/Title.tex) (./Connected Stocks - Draft - English.aux)
 \openout1 = `"Connected Stocks - Draft - English.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
-3.
- (c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
+8.
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 83.
+LaTeX Info: Redefining \selectfont on input line 78.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 83.
+Package hyperref Info: Link coloring ON on input line 78.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1073,214 +741,322 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count368
+\c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 (./Connected Stocks - Draft - English.out)
 (./Connected Stocks - Draft - English.out)
 \@outlinefile=\write5
 \openout5 = `"Connected Stocks - Draft - English.out"'.
 
-
-
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/b/n' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 88.
-
-(./Introduction.tex
+ (./Elements-Eng/Introduction.tex
 (c:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
-Overfull \hbox (4.41211pt too wide) in paragraph at lines 6--8
-[][]\TU/XBZar.ttf(0)/m/n/12 Although، in recent years، it has been recognized t
-hat the co-movement[]
- []
+
+Package natbib Warning: Citation `shiller1989comovements' on page 1 undefined o
+n input line 4.
+
+
+Package natbib Warning: Citation `barberis2003style' on page 1 undefined on inp
+ut line 6.
+
+
+Package natbib Warning: Citation `barberis2005comovement' on page 1 undefined o
+n input line 6.
+
+
+Package natbib Warning: Citation `barberis2005comovement' on page 1 undefined o
+n input line 7.
+
+
+Package natbib Warning: Citation `wu2014investor' on page 1 undefined on input 
+line 7.
+
+
+Package natbib Warning: Citation `grullon2014comovement' on page 1 undefined on
+ input line 7.
+
+
+Package natbib Warning: Citation `david2016correlated' on page 1 undefined on i
+nput line 7.
+
+
+Package natbib Warning: Citation `pantzalis2017shareholder' on page 1 undefined
+ on input line 7.
+
+
+Package natbib Warning: Citation `HAMEED2019103' on page 1 undefined on input l
+ine 7.
 
 [1
 
 ]
-Overfull \hbox (1.90886pt too wide) in paragraph at lines 10--15
-[]\TU/XBZar.ttf(0)/m/n/12 mon ownership on co-movement[][][][][][][][]. This pa
-per suggests that co-movement[]
- []
+
+Package natbib Warning: Citation `AntonPolk' on page 2 undefined on input line 
+10.
 
 
-Overfull \hbox (17.31827pt too wide) in paragraph at lines 16--17
-[][]\TU/XBZar.ttf(0)/m/n/12 In addition، according to [][][][]\TU/lmroman10-reg
-ular(0)/m/n/12 Koch et al.[][][] ([][][]2016[][][])[] \TU/XBZar.ttf(0)/m/n/12 c
-ompanies show co-movement[]
- []
+Package natbib Warning: Citation `azar2018anticompetitive' on page 2 undefined 
+on input line 13.
+
+
+Package natbib Warning: Citation `lewellen2021does' on page 2 undefined on inpu
+t line 13.
+
+
+Package natbib Warning: Citation `Liquidity2016' on page 2 undefined on input l
+ine 16.
 
 [2]
-Overfull \hbox (1.51863pt too wide) in paragraph at lines 30--32
-[]\TU/XBZar.ttf(0)/m/n/12 movement channels remained undiscovered. Both [][][][
-]\TU/lmroman10-regular(0)/m/n/12 Cho and Mooney[][][] ([][][]2015[][][])[][]
+
+Package natbib Warning: Citation `cho2015stock' on page 3 undefined on input li
+ne 31.
+
+
+Package natbib Warning: Citation `kim2015stock' on page 3 undefined on input li
+ne 31.
+
+
+Overfull \hbox (8.18086pt too wide) in paragraph at lines 30--32
+[]\TU/lmr/m/n/12 Although the co-movement in business groups is accepted, the c
+o-movement
  []
 
-) (./Data and Methodology.tex [3] [4] (./Output/summaryOfOwnership.tex)
-[5] (./Output/summaryOfPairs.tex) [6] (./MeasurmentLit.tex
-Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
-guage=dflt;mapping=tex-text;!
-) [7] [8]
-(./Output/FCACal.tex) [9]
-Overfull \hbox (5.79492pt too wide) in paragraph at lines 638--640
-[]\TU/XBZar.ttf(0)/b/n/12 variabales difinition is base on Carhart four-factor 
-model [[][][]Carhart[][][] ([][][]۱۹۹۷[][][])]. []
+
+Overfull \hbox (13.27602pt too wide) in paragraph at lines 37--38
+[]\TU/lmr/m/n/12 We realize that common ownership is crucial for predicting the
+ co-movement.
  []
 
-(./Output/CorrelationsResultsText.tex) [10
+) (./Elements-Eng/Data and Methodology.tex [3]
+
+Package natbib Warning: Citation `Aliabadi2022' on page 4 undefined on input li
+ne 19.
 
 
-]
-Overfull \hbox (0.68024pt too wide) in paragraph at lines 753--755
-[][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
-رکت شرکت کوچکتر []
- []
+Package natbib Warning: Citation `Aliabadi2022' on page 4 undefined on input li
+ne 21.
 
-(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex)) [11]
-(./Results.tex (./Model11.tex)
 
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 14.
+Package natbib Warning: Citation `almeida2011structure' on page 4 undefined on 
+input line 22.
 
+(./Output/summaryOfOwnership.tex) [4]
+
+LaTeX Warning: Reference `BGDef' on page 5 undefined on input line 46.
+
+(./Output/summaryOfPairs.tex) [5] [6]
+
+Package natbib Warning: Citation `harford2011institutional' on page 7 undefined
+ on input line 243.
+
+
+Package natbib Warning: Citation `azar2018anticompetitive' on page 7 undefined 
+on input line 243.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 7 undefined on input line
+ 243.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 
+245.
+
+
+Package natbib Warning: Citation `azar2011new' on page 7 undefined on input lin
+e 245.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 7 undefined on in
+put line 245.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 7 undefined 
+on input line 245.
+
+
+Package natbib Warning: Citation `he2017product' on page 7 undefined on input l
+ine 245.
+
+
+Package natbib Warning: Citation `he2019internalizing' on page 7 undefined on i
+nput line 245.
+
+
+Package natbib Warning: Citation `lewellen2021does' on page 7 undefined on inpu
+t line 245.
+
+
+Package natbib Warning: Citation `newham2018common' on page 7 undefined on inpu
+t line 245.
+
+(./Elements/MeasurmentLit.tex
+
+Package natbib Warning: Citation `harford2011institutional' on page 7 undefined
+ on input line 6.
+
+
+Package natbib Warning: Citation `azar2018anticompetitive' on page 7 undefined 
+on input line 9.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 7 undefined on input line
+ 11.
+
+
+Package natbib Warning: Citation `he2017product' on page 7 undefined on input l
+ine 14.
+
+
+Package natbib Warning: Citation `he2019internalizing' on page 7 undefined on i
+nput line 15.
+
+Missing character: There is no ‌ in font [lmroman8-regular]:mapping=tex-text;!
+
+Package natbib Warning: Citation `newham2018common' on page 7 undefined on inpu
+t line 17.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 
+19.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 7 undefined on in
+put line 22.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 7 undefined 
+on input line 23.
+
+)
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 
+257.
+
+[7] (./Output/FCACal.tex) [8]
+
+Package natbib Warning: Citation `Carhart4Factor' on page 9 undefined on input 
+line 300.
+
+(./Output/CorrelationsResultsText.tex) [9] (./Output/SameGroupSameIndustry.tex)
+
+Package natbib Warning: Citation `AntonPolk' on page 10 undefined on input line
+ 342.
+
+(./Output/ControlsSummary.tex)) [10] (./Elements-Eng/Results.tex
+(./Elements/Model11.tex)
 File: Output/mcorr50.eps Graphic file (type eps)
 <Output/mcorr50.eps>
-[12] [13]
-Overfull \hbox (6.90524pt too wide) in paragraph at lines 34--36
-[][]\TU/XBZar.ttf(0)/m/it/12 In the fifth specification of table [][][]۸[][][]،
- we use both Same Group and $[][]$[]
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 11 undefined on input li
+ne 24.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 11 undefined on 
+input line 24.
+
+[11]
+
+Package natbib Warning: Citation `AntonPolk' on page 12 undefined on input line
+ 35.
+
+
+Overfull \hbox (5.30383pt too wide) in paragraph at lines 34--36
+[]\TU/lmr/m/n/12 In the fifth specification of table [][]8[][], we use both \TU
+/lmr/m/it/12 Same Group \TU/lmr/m/n/12 and $[][]$
  []
 
-
-Overfull \hbox (2.16176pt too wide) in paragraph at lines 40--41
-[]\TU/XBZar.ttf(0)/m/it/12 group’s characteristics for the last column. These r
-esults aver that $[][]$[]
- []
-
-File: Output/mcorr50.eps Graphic file (type eps)
-<Output/mcorr50.eps>
-(./Model11.tex) [14] [15] (./Output/mresult2part1-slide.tex)
-(./Output/mresult2part2-slide.tex) [16] [17]
+[12] (./Output/mresult2part1-slide.tex) (./Output/mresult2part2-slide.tex)
+[13] [14]
 File: Output/Qmcorr5lrd.eps Graphic file (type eps)
 <Output/Qmcorr5lrd.eps>
 File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
 <Output/Qmcorr5lrdbgsubsample.eps>
 File: Output/Qmcorr5subsample.eps Graphic file (type eps)
 <Output/Qmcorr5subsample.eps>
+ (./Output/QTimemresult2subsample-slide.tex)
+Overfull \hbox (19.32352pt too wide) in paragraph at lines 3--114
+ [][] 
+ []
 
-(./Output/QTimemresult2subsample-slide.tex)
 File: Output/QarterSummary.eps Graphic file (type eps)
 <Output/QarterSummary.eps>
- [18] [19]
+[15] [16]
 
-LaTeX Warning: Reference `mresult2-part1' on page 20 undefined on input line 28
-5.
+LaTeX Warning: Reference `mresult2-part1' on page 17 undefined on input line 20
+6.
 
-[20] (./Output/Q3mresultAllPairs.tex)) (./Evidence for correlated trading.tex
-Overfull \hbox (1.4668pt too wide) in paragraph at lines 4--7
-[]\TU/XBZar.ttf(0)/m/it/12 specific channel that business groups can promote co
-mmonality، our anal-[]
+[17] (./Output/Q3mresultAllPairs.tex))
+(./Elements-Eng/Evidence for correlated trading.tex [18]
+Overfull \hbox (13.63594pt too wide) in paragraph at lines 23--26
+\TU/lmr/m/n/12 , changes in the industry and business group portfolio’s turnove
+r,$\OT1/cmr/m/n/12 ^^A[][]$
  []
 
-[21]
-Overfull \hbox (55.29704pt too wide) in paragraph at lines 23--26
-[]\TU/XBZar.ttf(0)/m/it/12 change in turnover، $\OT1/cmr/m/n/12 ^^A[][]$\TU/XBZ
-ar.ttf(0)/m/it/12 ، on changes in market turnover،$\OT1/cmr/m/n/12 ^^A[][]$[]
+(./Elements/turnoverModel.tex)
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input li
+ne 28.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 19 undefined on 
+input line 28.
+
+(./Output/turnover.tex)
+Overfull \hbox (24.43185pt too wide) in paragraph at lines 32--35
+ [][] 
  []
 
-
-Overfull \hbox (31.38731pt too wide) in paragraph at lines 23--26
-[]\TU/XBZar.ttf(0)/m/it/12 ، changes in the industry and business group portfol
-io’s turnover،$\OT1/cmr/m/n/12 ^^A[][]$[]
- []
-
-(./turnoverModel.tex) (./turnover.tex)
-Overfull \hbox (24.41608pt too wide) in paragraph at lines 35--35
- [][][][] 
- []
-
-[22] (./Output/ResidualTrunSummary.tex) (./Output/ResidualTrunStdSummary.tex)
+[19] [20] (./Output/ResidualTrunSummary.tex)
+(./Output/ResidualTrunStdSummary.tex)
 File: Output/GroupedResSTD.eps Graphic file (type eps)
 <Output/GroupedResSTD.eps>
+ (./Output/LowRes.tex) [21] [22]
 
-(./Output/LowRes.tex) [23] [24] [25]
-Overfull \hbox (4.71304pt too wide) in paragraph at lines 372--374
-[]\TU/XBZar.ttf(0)/m/it/12 relative to total traded value on that day ($[] \OT1
-/cmr/m/n/12 = []$\TU/XBZar.ttf(0)/m/it/12 ).[][][]Seasholes[][]
- []
+Package natbib Warning: Citation `seasholes2007predictable' on page 23 undefine
+d on input line 372.
 
 (./Output/ImbalanceInsMeanSummary.tex) (./Output/ImbalanceInsStdSummary.tex)
 File: Output/GroupedInsSTD.eps Graphic file (type eps)
 <Output/GroupedInsSTD.eps>
 
-(./Model13.tex
+(./Elements/Model13.tex [23]) (./Output/Imbalance.tex) [24] [25])
+(./Elements-Eng/Conclusion.tex [26] (./Connected Stocks - Draft - English.bbl
 
-LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/sl' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/it' instead on input line 1.
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-[26]) (./Output/Imbalance.tex) [27] [28]) (./Conclusion.tex [29]
-(./Connected Stocks - Draft - English.bbl [30] [31])) (./appendices.tex
-[32]
-File: 1.png Graphic file (type bmp)
-<1.png>
-File: 2.png Graphic file (type bmp)
-<2.png>
- (./Example2.tex) [33] [34]
-File: 3.png Graphic file (type bmp)
-<3.png>
-File: 4.png Graphic file (type bmp)
-<4.png>
- (./marketcap.tex) [35] [36]
-(./Output/mresult2Polk-slide.tex)
-Overfull \hbox (23.17839pt too wide) in paragraph at lines 273--273
-[][][]\TU/lmroman10-regular(0)/b/n/17.28 Overview of Business Groups in Tehran[
-][]
- []
+))
 
-[37]
-Overfull \hbox (2.17194pt too wide) in paragraph at lines 307--309
-[][]\TU/XBZar.ttf(0)/m/it/12 صندوق های بازنشستگی، موسسات نظامی، موسسات فرهنگی و
- دینی و موسسات[]
- []
+Package natbib Warning: There were undefined citations.
 
-File: Output/sameIndustryinBG.eps Graphic file (type eps)
-<Output/sameIndustryinBG.eps>
-File: Output/sameIndustryNoinBG.eps Graphic file (type eps)
-<Output/sameIndustryNoinBG.eps>
-[38]
-File: Output/BGSummary.eps Graphic file (type eps)
-<Output/BGSummary.eps>
-) [39]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
  (./Connected Stocks - Draft - English.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 109.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 103.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
 s not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 103.
  ) 
 Here is how much of TeX's memory you used:
- 27615 strings out of 479418
- 555642 string characters out of 5888105
- 981587 words of memory out of 5000000
- 44481 multiletter control sequences out of 15000+600000
- 540087 words of font info for 86 fonts, out of 8000000 for 9000
+ 23168 strings out of 479418
+ 425614 string characters out of 5888105
+ 844495 words of memory out of 5000000
+ 40173 multiletter control sequences out of 15000+600000
+ 539959 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,17n,78p,4854b,1127s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,60p,1018b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - English.pdf (39 pages).
+Output written on Connected Stocks - Draft - English.pdf (27 pages).
