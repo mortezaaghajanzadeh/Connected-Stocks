@@ -70,6 +70,10 @@ gen NWFCAPA = holder_act * NWFCAP
 
 label variable NWFCAPA " $ (\text{FCAP}^*) \times {\text{ActiveHolder} }  $ "
 
+gen NWFCAG = sbgroup * nwfca
+
+label variable NWFCAPA " $ (\text{MFCAP}^*) \times {\text{ActSameGroupiveHolder} }  $ "
+
 
 
 
