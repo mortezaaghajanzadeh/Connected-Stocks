@@ -378,4 +378,4 @@ label variable gsize_y " $ {\text{Group Size}_2} $ "
  
 
 gen turnSbgroup = monthlyρ_turn_f * sbgroup
-label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{TurnOver})_t} $ "
+label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{TurnOver})_{t+1}} $ "
