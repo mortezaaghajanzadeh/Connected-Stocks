@@ -1,0 +1,2295 @@
+\documentclass[handout]{beamer}
+\usetheme{Madrid}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{calc}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usetikzlibrary{arrows}
+\usepackage[title]{appendix}
+\usepackage{booktabs}
+\usepackage{appendixnumberbeamer}
+\setbeamertemplate{caption}[numbered]
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=false,
+	linkcolor=blue,
+	filecolor=blue,      
+	urlcolor=blue,
+}
+
+\usepackage{natbib}
+
+\def\boxit#1{%
+	\smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+		\llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+	April\or May \or June\or July\or August\or September\or October\or November\or %
+	December\fi, \number \year} 
+
+
+
+
+
+\AtBeginSection[]
+{
+	\begin{frame}{Table of Contents}
+		\scriptsize
+		
+			\tableofcontents[hideallsubsections,hideothersubsections,currentsection]
+
+		
+	\end{frame}
+}	
+
+
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{startstop1} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=blue!30]
+
+\tikzstyle{startstop2} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=yellow!30]
+
+\tikzstyle{startstop20} = [rectangle, rounded corners, minimum width=1cm, minimum height=0.5cm,text centered, draw=black, fill=yellow!30]
+
+\tikzstyle{startstop3} = [rectangle , rounded corners, minimum width=0.5cm, minimum height=0.75cm,text centered,draw=black]
+
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=blue!30]
+
+
+
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{decision} = [diamond, minimum width=0.75cm, minimum height=0.75cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\title[Connected Stocks  via Business Groups]{Connected Stocks via Business Groups:}
+\subtitle{Evidence from an Emerging Market}
+%\subtitle{}
+\author[Aghajanzadeh, Heidari \& Mohseni]{S.M. Aghajanzadeh \qquad M. Heidari \qquad M. Mohseni }
+\institute[TeIAS]{Tehran Institute for Advanced Studies }
+
+
+\begin{document}
+	\maketitle
+	
+	
+	
+	\section{Motivation}
+	
+	\begin{frame}{Future Correlation via $ MFCAP $}
+		\begin{figure}
+			\centering  
+			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
+		\end{figure}
+	\end{frame}   
+	
+		\begin{frame}{Future Correlation via $ MFCAP $}
+			\begin{figure}
+				\centering  
+				\includegraphics[width=0.85\linewidth]{"Output/mcorr5bg.eps"}
+			\end{figure}
+		\end{frame}   
+	
+	\begin{frame}{Motivation}{Research Question}
+		
+		\begin{itemize}
+			\item\textbf{Does direct or indirect common ownership cause stock return co-movement?}
+			\begin{itemize}
+				\item common ownership:
+				\begin{itemize}
+					\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
+					\item We connect stocks through the ultimate owner for indirect common ownership
+				\end{itemize}
+				\item We focus on excess return co-movement for a pair of the stocks
+				\item We use common ownership (direct or indirect) to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
+				\item We demonstrate that correlated trading can be a channel of co-movement
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}{Why does it matter?}
+		\begin{itemize}
+			\item Covariance
+			\begin{itemize}
+				\item Covariance is a key component of risk in
+				many financial applications.
+				\scriptsize(Portfolio selection, Risk management, Hedging and Asset
+				pricing)
+				\small
+				\item Covariance is a significant input in risk measurement models \\ \scriptsize(Such as Value-at-Risk)\small
+				
+			\end{itemize}
+			\item Return predictability
+			\begin{itemize}
+				\item If it's valid, we can build a profitable buy-sell strategy
+			\end{itemize}
+			%\item Synchronicity
+			%\begin{itemize}
+			%\item Poor corporate governance 
+			%\item Lack of
+			%firm-level transparency
+			%\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\section{Literature}
+	
+
+	
+
+	
+	
+	
+	
+	\normalsize
+	
+	
+	%\begin{frame}{Connected Stocks}
+	%\begin{itemize}
+	%\item[]In September 2003, 25 large mutual fund families settled allegations of illegal
+	%trading
+	%\begin{itemize}
+	%\item Those families lost 14.1\% of their capital within one year, and 24.3\% within two years
+	%\item We instrument FCAP from 2004-2006 with
+	%RATIO = FCAPScandal/FCAP as of September 2003
+	%\end{itemize}
+	%\end{itemize}
+	%
+	%
+	%\begin{figure}[htbp]
+	%\includegraphics[width=0.7\linewidth]{NSlide.png}
+	%\end{figure}
+	%\end{frame}
+	%
+	%
+	%\begin{frame}{Connected Stocks}
+	%\begin{itemize}
+	%\item PFLOAT = The total float capitalizstion of the two stocks in the pair
+	%\item PFLOW = The absolute value
+	%of the total net flow into the common funds
+	%\end{itemize}
+	%
+	%
+	%
+	%\begin{figure}[htbp]
+	%\includegraphics[width=0.65\linewidth]{N2Slide.png}
+	%\end{figure}
+	%\begin{itemize}
+	%\item Prices are more subject to non-fundamental comovement when pressure
+	%from net mutual fund trading is high and especially so when the stocks in
+	%question have low float and are thus less liquid
+	%\end{itemize}
+	%\end{frame}
+	%
+	%
+	%
+	%\begin{frame}{Connected Stocks}
+	%\begin{itemize}
+	%\item[]Buy (sell) stocks that have gone down (up) if their connected stocks have gone
+	%down (up) as well. The connected return is a confirming signal that the own
+	%return will revert
+	%\end{itemize}
+	%
+	%
+	%
+	%\begin{figure}[htbp]
+	%\includegraphics[width=0.5\linewidth]{N3Slide.png}
+	%\end{figure}
+	%\begin{itemize}
+	%\item  low (high) own-return and low (high) connected-return
+	%portfolio $ \rightarrow $ low (high) portfolio
+	%\end{itemize}
+	%\end{frame}
+	
+	
+		\subsection{Main Effect}
+	\begin{frame}{Main effect}\label{Grapgh}
+		\resizebox{\textwidth}{!}{
+	\begin{tikzpicture}[node distance=1cm][every text node part/.style={align=center}]
+		
+		
+		
+		\node (comovement) [startstop1] {Comovement effect};
+		
+		\pause
+		
+				\node (Fundumental) [startstop3,above of = comovement , yshift=0.5cm , xshift=0cm ] { \begin{tabular}{c}
+				\scriptsize	Fundumental	\\ \tiny\cite{shiller1989comovements}
+		\end{tabular} };
+		
+		
+		\draw (Fundumental) -> (comovement);
+		
+		
+		\pause
+		
+		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
+				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}\\ \tiny\cite{barberis2003style}
+		\end{tabular} };
+		
+		
+		\draw (categoryhabitat) -> (comovement);
+		
+		\pause
+		\node (belief) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
+				Correlated beliefs	\\
+				\tiny\cite{david2016correlated}
+		\end{tabular}};
+		
+		\draw (belief) -> (comovement);
+		
+		\pause
+		
+		\node (investmentbanking) [startstop3,below of = comovement , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Investment Bank Network \\
+				\tiny\cite{grullon2014comovement}
+		\end{tabular}};
+		
+		\draw (investmentbanking) -> (comovement);
+		
+		
+		
+		\pause
+		\node (information) [startstop3,below of = investmentbanking , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}\\
+				\tiny\cite{HAMEED2019103}
+		\end{tabular}};
+		
+		\draw (information) -> (investmentbanking);
+		
+		\pause
+		
+		
+		
+		
+		
+		
+		
+		%% common ownership
+		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
+		\pause
+		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
+				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
+		\end{tabular} };
+		
+		\draw (commonownership) -> (trading);
+		\draw (trading) -> (comovement);
+		\pause
+		\node (liquidity) [startstop3,below of = trading , yshift=-1cm , xshift=0cm] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
+		
+		\draw (commonownership) -> (liquidity);
+		\draw (liquidity) -> (comovement);
+		
+
+		
+		
+%		\node (corporate) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
+%				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
+%		\end{tabular}};
+%		
+%		\draw (commonownership) -> (corporate);
+%		\draw (corporate) -> (comovement);
+	\end{tikzpicture}
+}
+		
+%		\hfill
+%		\hyperlink{maineffect}{\beamerbutton{Papers}}
+	\end{frame}
+	
+	\begin{frame}{Our work}
+		\begin{itemize}
+			\item 
+			We use daily records of block-holder ownership for firms
+			\item We are not restricted to mutual funds ownership
+			\item Furthermore, 85\% of market belongs to the business groups
+			\begin{itemize}
+				\item Would business groups be able to raise the co-movement of stock returns?
+				\begin{itemize}
+					\tiny
+					\item \cite{cho2015stock}: \\
+					The strong co-movement between group returns and
+					firm returns is explained by correlated fundamentals. 
+					\item \cite{kim2015stock}:\\
+					The increase in correlation appears to be driven
+					more by non-fundamental factors such as correlated trading, rather
+					than fundamental factors such as related-party transactions
+				\end{itemize}
+			\item Common ownership or business group (indirect common ownership) ?
+			\item  Through which channel?
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\normalsize
+
+	
+	
+	\section{Empirical Studies}
+		\subsection{Pair composition}
+		\begin{frame}{Pair composition}
+			\begin{itemize}
+				\item Firms with at least one common owner\\
+				\bigskip
+								\begin{figure}[htbp]
+					\centering
+					\begin{tikzpicture}[node distance=1cm]
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm) ;
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {} (Firm2) ;
+					\end{tikzpicture}
+				\end{figure}
+			\bigskip
+			\pause
+				\item In a business group, how can one pair be defined?
+				\begin{columns}
+				\column{0.5\textwidth}
+				\begin{itemize}
+					\item What is the business group?
+							
+								
+				\end{itemize}
+				
+				\column{0.5\textwidth}
+				\begin{figure}[htbp]
+					\centering
+												\resizebox{\textwidth}{!}{
+													\begin{tikzpicture}[node distance=2cm]
+														
+														
+														\node (UO) [startstop] { $ \text{Ultimate Owner} $};
+														\pause
+														\node (FirmA) [startstop1,below of = UO,xshift=-3cm] {$ \text{Firm A} $};
+														\node (FirmB) [startstop1,right of = FirmA,xshift=1cm] {$ \text{Firm B} $};
+														\node (FirmC) [startstop1,right of = FirmB,xshift=1cm] {$ \text{Firm C} $};
+														\draw [arrow] (UO) --(FirmA);
+														\draw [arrow] (UO) --(FirmB);
+														\draw [arrow] (UO) --(FirmC);
+														
+														\pause
+														
+														\node (FirmX) [startstop20,below of = FirmA,xshift=-1cm] {$ \scriptsize\text{Firm X} $};
+														
+														\node (FirmY) [startstop20,below of = FirmA,xshift=1cm] {$ \scriptsize\text{Firm Y} $};
+														
+														\node (FirmZ) [startstop20,below of = FirmB] {$ \scriptsize\text{Firm Z} $};
+														
+														\node (FirmK) [startstop20,below of = FirmC , xshift = -1cm] {$ \scriptsize\text{Firm K} $};
+														\node (FirmL) [startstop20,below of = FirmC , xshift = 1cm] {$ \scriptsize\text{Firm L} $};
+														\node (FirmM) [startstop20,below of = FirmC , yshift = -1 cm] {$ \scriptsize\text{Firm M} $};
+														
+														
+														\draw [arrow] (FirmA) --(FirmX);
+														\draw [arrow] (FirmA) --(FirmY);
+														
+														\draw [arrow] (FirmB) --(FirmZ);
+														
+														\draw [arrow] (FirmC) --(FirmK);
+														\draw [arrow] (FirmC) --(FirmL);
+														
+														\draw [arrow] (FirmK) --(FirmM);
+														\draw [arrow] (FirmL) --(FirmM);
+														
+														
+													\end{tikzpicture}
+												}
+				\end{figure}
+				\end{columns}
+				
+			\end{itemize}
+		\end{frame}
+		
+%		\begin{frame}{Pair Composition and Business Group}{Business Group }
+%			
+%
+%		\end{frame}
+		
+		
+%		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
+%			\begin{columns}
+%				\column{.5\textwidth}     
+%				\centering
+%				{}\\
+%				\resizebox{\textwidth}{!}{
+%					\begin{tikzpicture}[node distance=2cm]
+%						
+%						
+%						\node (start) [startstop] {Ultimate Owner};
+%						
+%						
+%						
+%						\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
+%						\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
+%						
+%						
+%						
+%						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+%						
+%						
+%						\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+%						
+%						
+%						\node (CH) [process, below of = start ,xshift=0] {Common Owner};
+%						
+%						
+%						\draw [arrow] (start) --(end);
+%						\draw [arrow] (end) --(sur);
+%						
+%						\draw [arrow] (start) --(end2);
+%						
+%						\draw [arrow] (end) --(sur);
+%						\draw [arrow] (end2) -- (sur2);
+%						
+%						
+%						\draw [arrow] (CH) -- (sur);
+%						\draw [arrow] (CH) -- (sur2);
+%						\draw [dashed ,->] (start) --(CH);
+%						
+%						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
+%						
+%						
+%					\end{tikzpicture}
+%				}
+%				
+%				\pause
+%				\column{.5\textwidth}
+%				\centering  
+%				{}\\
+%				\resizebox{\textwidth}{!}{
+%					\begin{tikzpicture}[node distance=2cm]
+%						
+%						
+%						\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+%						\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+%						
+%						
+%						\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+%						
+%						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+%						
+%						\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+%						
+%						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+%						
+%						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+%						
+%						
+%						
+%						\draw [arrow] (start) --(end);
+%						\draw [arrow] (start2) -- (end2);
+%						
+%						\draw [arrow] (end) --(sur);
+%						\draw [arrow] (end2) -- (sur2);
+%						
+%						\draw [dash dot,->] (start) -- (CH);
+%						\draw [dash dot,->] (start2) -- (CH);
+%						
+%						\draw [arrow] (CH) -- (sur);
+%						\draw [arrow] (CH) -- (sur2);
+%						
+%						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
+%						
+%						
+%					\end{tikzpicture}
+%				} 
+%				
+%				\end{columns}
+%		\end{frame}
+%		
+%		
+		
+		
+	%	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
+	%		\begin{columns}
+	%			\column{.5\textwidth}     
+	%			\centering
+	%			{}\\
+	%			
+	%			\resizebox{\textwidth}{!}{
+	%				\begin{tikzpicture}[node distance=2cm]
+	%					
+	%					
+	%					
+	%					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+	%					
+	%					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+	%					
+	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+	%					
+	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+	%					
+	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+	%					
+	%					
+	%					\draw [arrow] (end) --(sur);
+	%					\draw [arrow] (end2) -- (sur2);
+	%					
+	%					
+	%					\draw [arrow] (CH) -- (sur);
+	%					\draw [arrow] (CH) -- (sur2);
+	%					
+	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+	%					
+	%					
+	%				\end{tikzpicture}
+	%			} 
+	%			
+	%			\column{.5\textwidth}
+	%			\centering  
+	%			{}\\
+	%			
+	%			\resizebox{\textwidth}{!}{
+	%				\begin{tikzpicture}[node distance=2cm]
+	%					
+	%					
+	%					\node (start) [startstop] { $ \text{Ultimate Owner} $};
+	%					
+	%					
+	%					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+	%					
+	%					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+	%					
+	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+	%					
+	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+	%					
+	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+	%					
+	%					
+	%					
+	%					\draw [arrow] (start) --(end);
+	%					
+	%					\draw [arrow] (end) --(sur);
+	%					\draw [arrow] (end2) -- (sur2);
+	%					
+	%					\draw [dash dot,->] (start) -- (CH);
+	%					
+	%					\draw [arrow] (CH) -- (sur);
+	%					\draw [arrow] (CH) -- (sur2);
+	%					
+	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+	%					
+	%					
+	%				\end{tikzpicture}
+	%			} 
+	%			
+	%		\end{columns}
+	%	\end{frame}
+		
+		
+		
+			\begin{frame}{Data Summary}
+			\begin{itemize}
+				\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
+				\begin{itemize}
+					\item Includes of 72 Months
+					\item Consists of 618 firm inculding 562 firm with common owners
+					
+				\end{itemize}
+			\end{itemize}
+			
+			\begin{table}[htbp]
+				\centering
+				\resizebox{0.8\textwidth}{!}
+				{
+					\input{Output/summaryOfOwnership.tex}
+				}
+			\end{table}
+			
+		\end{frame}
+		
+		
+		
+		\begin{frame}{Pair Composition}
+			\begin{itemize}
+			
+				\item Pairs consist of two firms  with at least one common owner
+				\begin{itemize}
+					\item  93442 unique pairs which is 25\% of possible pairs 
+					\tiny ($ \frac{612*611}{2}= 373932 $)
+					\normalsize
+				\end{itemize}
+			\end{itemize}
+			
+			\begin{table}[htbp]
+				\centering
+				{
+					\footnotesize
+				\input{Output/numberofPairs.tex}
+					
+				}
+			\end{table}
+			
+			
+			\begin{table}
+				\resizebox{0.8\textwidth}{!}
+				{
+					\input{Output/summaryOfPairs.tex}
+				}
+			\end{table}% 
+			
+		\end{frame}  
+		
+		
+		
+	
+	%	\begin{frame}{Number of Pairs}
+	%		\begin{figure}[htbp]
+	%			\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
+	%		\end{figure}
+	%	\end{frame}
+	%	
+		
+		
+		
+		
+	%	\begin{frame}{FCA's time series}
+	%		\begin{figure}
+	%			\centering  
+	%			\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
+	%			
+	%		\end{figure} 
+	%	\end{frame}
+	%
+	%	\begin{frame}{FCA's time series}
+	%		\begin{columns}
+	%			\column{.5\textwidth}  
+	%			\begin{figure}
+	%				\centering  
+	%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
+	%				\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
+	%			\end{figure}    
+	%			\column{.5\textwidth}
+	%			\begin{figure}
+	%				\centering  
+	%				\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
+	%			\end{figure}
+	%          
+	%		\end{columns}
+	%
+	%\end{frame}
+	%
+	%	\begin{frame}{Group affiliated firm's time series}
+	%		\begin{columns}
+	%	\column{.5\textwidth}  
+	%	\begin{figure}
+	%	\centering  
+	%	\includegraphics[width=\linewidth]{"Output/BGtimeSeries.eps"}
+	%	
+	%\end{figure}  
+	%	\column{.5\textwidth}
+	%	\begin{figure}
+	%	\centering  
+	%	\includegraphics[width=\linewidth]{"Output/BGMarketCaptimeSeries.eps"}
+	%	
+	%\end{figure} 
+	%	
+	%\end{columns}
+	%\end{frame}
+	
+	
+	
+	
+		
+	
+	\subsection{Measuring Common-ownership}
+%	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+%			\begin{columns}[t]
+%				\column{0.5\textwidth}  
+%				\centering
+%				Model based measures
+%				\\
+%				
+%				\begin{itemize}
+%					\item \color{blue} \scriptsize $
+%					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+%					\normalcolor
+%					\tiny 
+%					
+%					\cite{harford2011institutional}
+%					
+%					
+%					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+%					
+%					\cite{azar2018anticompetitive}
+%					
+%					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+%					
+%					\cite{anton2020common} 
+%					
+%					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+%					
+%					\cite{backus2020theory}
+%					
+%					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+%					
+%					\cite{gilje2020s} , \cite{Lewellen2021}
+%					
+%					
+%					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+%					
+%					\cite{LEWELLEN2021b}
+%					\normalsize
+%					
+%					
+%					
+%				\end{itemize}
+%				
+%				
+%				\pause
+%				\column{0.5\textwidth}
+%				\centering
+%				Ad-hoc measures
+%				\begin{itemize}
+%					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+%					\tiny\cite{AntonPolk} \\ 
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+%					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+%					
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+%					\tiny \cite{newham2018common}  \\ 
+%					
+%					
+%					
+%					
+%					
+%					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+%					
+%					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+%					
+%				\end{itemize}
+%				
+%			\end{columns}
+%			\pause
+%			\begin{block}{\scriptsize Selected measure }
+%				\scriptsize
+%				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+%			\end{block}
+%			\hfill
+%			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+%		\end{frame}
+
+	\begin{frame}{Measuring Common-ownership}\label{Intuition}
+				\begin{columns}
+			\column{.5\textwidth}    
+			\centering  
+						\cite{AntonPolk}
+								\begin{align*}
+									\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
+								\end{align*} 
+%			\pause
+			\column{.5\textwidth}
+			\centering
+			SQRT
+						\begin{align*}
+						\footnotesize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+						\end{align*}     				         
+		\end{columns}
+	\pause
+		\begin{block}{Intuition}
+			If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
+			\hyperlink{Proof}{\beamerbutton{Proof}}
+		\end{block}
+		\begin{table}[htbp]
+								\centering
+								\resizebox{0.8\textwidth}{!}
+								{
+									\input{Output/FCACal.tex}  }          
+							\end{table}
+	\end{frame}
+	
+	
+%				\begin{frame}{MFCAP vs. FCAP Summary}
+%					\begin{table}[htbp]
+%						\centering
+%						\resizebox{\textwidth}{!}
+%						{
+%							\input{Output/FCACal.tex}  }          
+%					\end{table}%
+%					\begin{block}{Results}
+%						\small
+%						\begin{itemize}
+%							\item By the proposed measurement, common ownership increases
+%							\item Common ownership is greater in pairs that  are in the same business group and insutry
+%						\end{itemize}
+%					\end{block}
+%				\end{frame}
+		
+			
+			\begin{frame}{MFCAP vs. FCAP Distributions}{Monthly}
+				\label{Monthly1}
+				\begin{columns}
+					\column{.33\textwidth}  
+					\begin{figure}
+						\centering  
+						\includegraphics[width=\linewidth]{"Output/MHistFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"Output/MHistFCAP.eps"}
+					\end{figure}  
+				\pause   
+					\column{.33\textwidth}
+					\begin{figure}
+						\centering  
+						\includegraphics[width=\linewidth]{"Output/MHistlnFCA.eps"}\\
+						\includegraphics[width=\linewidth]{"Output/MHistlnFCAP.eps"}
+					\end{figure}
+				\pause
+					\column{.33\textwidth}
+					\begin{figure}   
+						\centering
+						\includegraphics[width=\linewidth]{"Output/MHistNFCA.eps"}  \\
+						\includegraphics[width=\linewidth]{"Output/MHistNFCAP.eps"}   \end{figure}            
+				\end{columns}
+			\end{frame}
+			
+			
+	
+	\subsection{Correlation Calculation}
+	\begin{frame}{Correlation Calculation}{4 Factor + Industry}
+		
+		\begin{enumerate}\footnotesize
+			\item Frist Step:\\
+			\scriptsize
+			Estimate this model on periods of three month (From two months earlier):
+			\begin{itemize}
+%				\item CAPM + Industry (2 Factor): 
+%				\begin{equation*}
+%					\begin{split}
+%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \boxed{\varepsilon_{i,t}}
+%					\end{split}
+%					\label{e12}
+%				\end{equation*}
+%				\item 4 Factor : 
+%				\begin{equation*}
+%					\begin{split}
+%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \\
+%						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
+%					\end{split}
+%					\label{e11}
+%				\end{equation*}
+				
+				\item 4 Factor + Industry : 
+				\begin{equation*}\footnotesize
+					\begin{split}
+						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} \\
+						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
+					\end{split}
+					\label{e10}
+				\end{equation*}
+			\end{itemize}
+			
+			\item Second Step:\\
+			\scriptsize
+			Calculate monthly correlation of each stock pair’s daily abnormal returns (residuals)
+			
+		\end{enumerate}
+		
+			\begin{table}[htbp]
+					\centering 
+					\scriptsize
+					\resizebox{0.7\textwidth}{!}{
+						\input{Output/CorrelationsResultsText.tex}              
+					}
+				\end{table}
+				
+				
+				\begin{block}{Conclusion}
+					\scriptsize
+					We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
+				\end{block}
+		
+	\end{frame}
+	%   
+	%   
+	%   
+	%
+	%   
+%	\begin{frame}{Correlation Calculation Results}
+		
+		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			{
+%				\begin{tabular}{lcccc}\hline\hline
+%					Factors  & \multicolumn{1}{l}{mean} & \multicolumn{1}{l}{std} & \multicolumn{1}{l}{min} & \multicolumn{1}{l}{max} \\
+%					\hline
+%					SMB     & 0.19  & 1.47  & -5.64 & 19.52 \\
+%					HML   & -0.12 & 1.39  & -4.90 & 23.20 \\
+%					$ \text{Winner}-\text{Loser} $   & 0.69  & 1.06  & -2.61 & 8.58 \\
+%					$ \text{Market} $  & 0.24  & 1.23  & -4.71 & 4.89 \\\hline\hline
+%			\end{tabular}                          }
+%		\end{table}
+%		
+		
+		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			\resizebox{0.8\textwidth}{!}{
+%				\input{Output/CorrelationsResultsText.tex}              
+%			}
+%		\end{table}
+%		
+%		
+%		\begin{block}{Conclusion}
+%			\scriptsize
+%			We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
+%		\end{block}
+%	\end{frame}
+	
+	
+
+	
+	\subsection{Controls}
+	\begin{frame}{Controls}
+		\begin{itemize}
+%			\item $ \rho_{t} $ : Current period correlation
+			
+			\item \textbf{SameGroup} : Dummy variable for whether the two stocks belong to the same business group.
+			
+			
+			\item \textbf{SameIndustry} : Dummy variable for whether the two stocks belong to the same Industry.
+			
+			\item \textbf{SameSize} : The negative of absolute difference in percentile ranking of size across a pair
+			
+			\item \textbf{SameBookToMarket} :The negative of absolute difference in percentile ranking of the book to market ratio across a pair
+			
+			\item \textbf{CrossOwnership}: The maximum percent of cross-ownership between two firms
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+%	\begin{frame}{Industry \& Business group}
+%				\begin{table}[htbp]
+%			\centering \scriptsize
+%			{
+%				\input{Output/SameGroupSameIndustry.tex}
+%			}
+%		\end{table}
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.45\linewidth]{Output/sameIndustryinBG.eps}
+%			\includegraphics[width=0.45\linewidth]{Output/sameIndustryNoinBG.eps}
+%			
+%		\end{figure}
+%	\end{frame}
+	
+%	\begin{frame}{Business group}{Pairs' characteristic}
+%		\begin{figure}[htbp]
+%			\includegraphics[width=0.6\linewidth]{Output/BGSummary.eps}
+%			
+%		\end{figure}
+%	\end{frame}
+	
+	
+	
+	
+%	\begin{frame}{Summary of Controls}{Variables' distribution } \label{Monthly2}
+%
+%		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			{
+%				\input{Output/ControlsSummary.tex}
+%			}
+%		\end{table}
+%		
+%		
+%	\end{frame}
+	
+	%\begin{frame}{Regression Summary}
+	%\begin{itemize}
+	%\item \textbf{Controls} :  We use the percentile rank of a particular characteristic for each stock in regression.
+	%\item \textbf{Interaction} : We use the interaction between percentile rankings for a particular characteristic across a pair in regression.
+	%\end{itemize}
+	%\end{frame}
+	
+	\section{Results}
+	
+	\subsection{Normalized Rank-Transformed}
+	
+	\begin{frame}{Future Correlation via $ MFCAP $}{Normalized Rank-Transformed}
+		\label{Monthly16} 
+		\begin{columns}
+			\column{.5\textwidth}  
+			\begin{figure}   
+				\centering
+				\includegraphics[width=\linewidth]{"Output/mcorr5bg.eps"}     \end{figure}            
+			\column{.5\textwidth}
+			\begin{figure}
+				\centering  
+				\includegraphics[width=\linewidth]{"Output/mcorr5l.eps"}
+			\end{figure}
+		\end{columns}
+		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Estimation model}\label{Estimation}
+		\begin{itemize}
+			\item Use Fama-MacBeth to estimate this model
+			\input{Elements/Model11}
+			
+			\item Estimate the model on a monthly frequency 
+			\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(70/100)^{\frac{2}{9}} = 3.69 \sim 4 $)
+		\end{itemize}
+				\hfill
+				\hyperlink{Methood}{\beamerbutton{Methodology}}
+	\end{frame}
+	
+	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
+			\label{mresult2part1} 
+			\begin{table}[htbp]
+				\centering
+				\resizebox{1\textwidth}{!}{
+					\input{Output/mresult2part1-slide.tex}
+				}
+			\end{table}
+			
+			
+		\end{frame}
+	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
+			\label{mresult2part2} 
+			\begin{table}[htbp]
+				\centering
+				\resizebox{1\textwidth}{!}{
+					\input{Output/mresult2part2-slide.tex}
+				}
+			\end{table}
+			
+			
+		\end{frame}
+	
+	
+	\subsection{High level of common ownership}
+	
+%	\begin{frame}{ Future Correlation via $ MFCAP $}{Discontinuity}\label{Monthly5}
+%		
+%		
+%		
+%		
+%		
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}   
+%				\centering
+%				\includegraphics[width=\linewidth]{"Output/mcorr5l.eps"}     \end{figure}            
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"Output/Qmcorr5lrd.eps"}
+%			\end{figure}
+%		\end{columns}
+%		\centering
+%		
+%		
+%	\end{frame}
+	
+	
+
+	
+	
+%	\begin{frame}{Estimation model}
+%		\begin{itemize}
+%			\item Use Fama-MacBeth to estimate this model
+%			
+%			\input{Model12}
+%			
+%			\item Estimate that model on a monthly frequency 
+%		\end{itemize}
+%	\end{frame}
+%	
+	
+	
+	
+	
+	
+
+		
+	%
+	%
+		\begin{frame}{ 4 Factor + Industry Future  Correlation via $ MFCAP^* $}{High level of common ownership}\label{Monthly19}
+		
+		
+		
+		
+		
+		\begin{columns}
+				\column{.5\textwidth}
+				\begin{figure}
+					\centering  
+					\includegraphics[width=\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+				\end{figure}
+			\column{.5\textwidth}  
+			\begin{figure}   
+				\centering
+				\includegraphics[width=\linewidth]{"Output/Qmcorr5subsample.eps"}     \end{figure}            
+
+		\end{columns}
+		\centering
+		
+		
+		
+	\end{frame}
+		
+%\begin{frame}{Forth quarter summary}\label{Monthly22}
+%
+%\begin{columns}
+%\column{.5\textwidth}  
+%\begin{figure}   
+%\centering
+%\includegraphics[width=\linewidth]{"Output/sameIndustryinQuarter.eps"}     \end{figure}            
+%\column{.5\textwidth}
+%\begin{figure}
+%\centering  
+%\includegraphics[width=\linewidth]{"Output/sameIBGinQuarter.eps"}
+%\end{figure}
+%\end{columns}
+%\centering
+%\end{frame}
+		
+%\begin{frame}{Forth quarter summary}\label{Monthly21}
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.9\linewidth]{"Output/QarterSummary.eps"}
+%		\end{figure}
+%\end{frame}		
+		
+\begin{frame}{Fama-MacBeth Estimation}{High level of common ownership (sub-sample)}
+\label{Monthly9} 
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{0.8\textwidth}{!}{
+		\input{Output/QTimemresult2subsample-slide.tex}
+	}
+\end{table}	
+	\end{frame}
+
+\subsection{All pairs}
+
+
+\begin{frame}{All non-common owner pairs}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{1\textwidth}{!}{
+			\input{Output/Q3mresultAllPairs.tex}
+		}
+	\end{table}
+\end{frame}
+
+
+	
+	
+	\section{Evidence for correlated trading}
+ \subsection{Turnover}
+	\begin{frame}{TrunOver}{\cite{Liquidity2016}}
+		\begin{equation*}
+			\Delta \text{TurnOver} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
+			\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
+		\end{equation*}
+
+
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.55\textwidth}{!}{
+			\input{Output/turnover.tex}
+		}
+	\end{table}
+	
+\end{frame}
+
+
+\begin{frame}{Business group and Future correlation in Turnover}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{\textwidth}{!}{
+			\centering
+			\input{Output/mresult2-turnover.tex}
+		}
+	\end{table}
+\end{frame}
+
+\begin{frame}{Future correlation in Turnover and Co-movement}
+\begin{table}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\centering
+		\input{Output/turncomovement.tex}
+	}
+\end{table}
+\end{frame}
+
+\begin{frame}{Residual of Monthly Turnover}
+\begin{itemize}
+\item $ \text{Turnover}_{i,t} = \alpha_0 +\alpha_1 \times \text{Turnover}_{i,avg} +\alpha_2 \times \text{Turnover}_{m,t} + \boxed{\varepsilon_{i,t}} $
+\begin{itemize}\scriptsize
+\item $ \text{Turnover}_{i,t}$: Monthly Turnover (Average of daily turnovers in each month)
+\item $ \text{Turnover}_{i,avg}$: Annual average of monthly turnover
+\item $ \text{Turnover}_{m,t}$: Market's turnover 
+
+\end{itemize}
+\item Assign residuals to the business groups
+\bigskip
+
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.75\textwidth}{!}{
+			\input{Output/ResidualTrunSummary.tex}
+		}
+		\label{tab:ResidualTrunSummary}
+	\end{table}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Residual of Monthly Turnover}{Standard error}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ResidualTrunStdSummary.tex}
+		}
+		\label{tab:ResidualTrunStdSummary}
+	\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
+	\label{fig:GroupedResSTD}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Low residual standard error}
+	\begin{table}[htbp]
+\centering
+		\resizebox{0.8\textwidth}{!}{
+			\centering
+			\input{Output/LowRes.tex}
+		}
+		\label{Turnovercrosssection}
+	\end{table}
+\end{frame}
+
+%\begin{frame}{Pairwise correlations in  turnover}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.95\textwidth}{!}{
+%			\centering
+%			\input{Output/mresult2-turnover.tex}
+%		}
+%		\label{mresult2-turnover}
+%	\end{table}
+%\end{frame}
+%\begin{frame}{Turnover or Co-movement?}
+%\begin{itemize}
+%
+%\item Same Industry instrumental variable for $\rho(\Delta \text{TurnOver})_{t+1}$
+%\begin{itemize}
+%\item \textbf{Relevance}: First stage 
+%\item \textbf{Exogeneity}: Trade cannot affect firms' industry
+%\item \textbf{Exclusion restriction}: We eliminate return of industry from co-movement calculation
+%\end{itemize}
+%%\item \textbf{First Stage} : 
+%%\input{FirstStage.tex}
+%%\item \textbf{Reduced Form} : 
+%%\input{ReducedForm.tex}
+%%
+%%\item \textbf{Second Stage} : 
+%%\input{SecondStage.tex}
+%\end{itemize}
+%\end{frame}
+%\begin{frame}{Turnover or Co-movement?}
+%	\begin{table}[htbp]
+%		\centering
+%		\resizebox{0.6\textwidth}{!}{
+%			\centering
+%			\input{Output/TurnIv.tex}
+%		}
+%		\label{TurnIv}
+%	\end{table}
+%\end{frame}
+%
+
+%	\begin{frame}{Turn over and Comovement}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{\textheight}{!}{
+%				\input{Output/mresult2-BigBusinessGroup.tex}
+%			}
+%		\end{table}
+%	\end{frame}
+
+	
+	
+\subsection{Institutional Imbalance}
+\begin{frame}{Ins Imbalance}
+
+\begin{itemize}
+	\item \cite{seasholes2007predictable}
+	
+		\begin{equation*}
+			Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+		\end{equation*}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.8\textwidth}{!}{
+			\input{Output/ImbalanceInsMeanSummary.tex}
+		}
+		\label{tab:ImbalanceInsMeanSummary}
+	\end{table}
+		
+	
+	
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Ins Imbalance std}{Standard error}
+%\begin{columns}
+%	\column{0.5\linewidth}
+	\begin{table}[htbp]
+		\centering
+		\resizebox{0.85\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}
+	\end{table}
+
+
+%	\column{0.5\linewidth}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+	\label{fig:GroupedInsSTD}
+\end{figure}
+%\end{columns}
+\end{frame}
+\begin{frame}{Low Ins Imbalance Group}
+
+
+				\begin{table}[htbp]
+			\centering
+			\resizebox{0.8\textwidth}{!}{
+				\input{Output/Imbalance.tex}
+			}
+		\end{table}
+	
+	\end{frame}
+
+	
+	\section{Conclusion}
+	
+	\begin{frame}{Conclusion}
+		\begin{itemize}
+			
+%			\item We derive a measure that captures the extent of common ownership distribution.
+			
+			
+			\item Direct common ownership can affect firms' co-movement
+			\item 
+			Firms in the business groups co-move more than other pairs
+			\item Direct common ownership only matters for firms in the business groups
+			\item Firms in the same business group trade together
+			
+		\end{itemize}
+	\end{frame}
+	
+
+	
+	
+	\color{black}
+	\appendix
+	
+	\tiny
+	\begin{frame}[allowframebreaks]{References}
+		
+		{		
+			\bibliographystyle{apalike}
+			\bibliography{Ref}
+		}
+	\end{frame}
+	
+	\normalsize	
+	
+	
+	
+	
+	\section{Appendix I}
+	\begin{frame}{Measuring Common Ownership}{Proof}\label{Proof}
+		
+		
+		\begin{itemize}
+			\item  If two stocks in pair have n mutual owner, which total market cap divides them equally, the mentioned indexes equal n.
+			
+			\begin{itemize}
+				
+				\item Each holder owns $ 1/n $ of each firm.
+				\item Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $:
+				\item So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i $
+				\item    SQRT
+				\begin{align*}
+					[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
+					= [\frac{\sqrt{n}(\sqrt{\alpha_1} +\sqrt{\alpha_2 })}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 = n
+				\end{align*}                  
+				
+				
+				\item	 Quadratic
+				\begin{align*}
+					[  \frac{\sum_{f=1}^{n} {(\alpha_1/n)^2}+\sum_{f=1}^{n} {(\alpha_2/n)^2}}{\alpha_1^2 +{\alpha_2}^2}]^{-1} 
+					=[\frac{{\alpha_1^2 + \alpha_2^2 }}{n(\alpha_1^2 + \alpha_2^2)}]^{-1} = n
+				\end{align*}
+				
+			\end{itemize}
+		\end{itemize}
+		
+		\hfill
+		\hyperlink{Intuition}{\beamerbutton{Back}}
+		
+	\end{frame}
+	
+			
+			\begin{frame}{Measuring Common-ownership}\label{Intuition}
+				\cite{AntonPolk}
+				\begin{align*}
+					\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
+				\end{align*}
+			\pause
+				\begin{columns}
+					\column{.5\textwidth}     
+					\centering
+					SQRT
+					\begin{align*}
+						\boxed{              [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+					\end{align*}     
+				             
+					\column{.5\textwidth}
+					\centering  
+					Quadratic
+					\begin{align*}
+						\boxed{    [{\frac{\sum_{f = 1}^{F}[(S^f_{i,t}P_{i,t})^2+(S^f_{j,t}P_{j,t})^2]}{(S_{i,t}P{i,t})^2 + (S_{j,t}P{j,t})^2}}]^{-1}}
+					\end{align*}
+				\end{columns}
+			\pause
+				\begin{block}{Intuition}
+					If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
+					\hyperlink{Proof}{\beamerbutton{Proof}}
+				\end{block}
+				
+			\end{frame}
+			
+			
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Example}
+				
+				\begin{figure}[htbp]
+					\begin{tikzpicture}[node distance=1cm]
+						
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=0cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+						
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+						%
+						%\node() at (3,0)
+						%    {$ \alpha + \beta = 100 $}; 
+					\end{tikzpicture}
+					
+				\end{figure}\bigskip
+				\pause
+				\begin{itemize}
+					\item[] For better observation, assume that 
+					\begin{itemize}
+						\item $ \alpha + \beta = 100 $\\
+						\item both firm have equal market cap
+					\end{itemize} 
+				\end{itemize}
+			\pause
+				\begin{figure}[htbp]
+					\includegraphics[width=0.47\linewidth]{Elements/1.png}
+					\includegraphics[width=0.47\linewidth]{Elements/2.png}
+					\captionsetup{labelformat=empty}
+					\caption{\scriptsize Comparison of three methods for calculating common ownership}
+				\end{figure}
+			\end{frame}
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+				\begin{tikzpicture}[node distance=1cm]
+					
+					
+					\node (Firm) [startstop3] {\tiny Firm X};
+					\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-8cm ] {\tiny Firm Y};
+					\pause
+					\node (Owner) [startstop3,above of = Firm , yshift=1.75cm , xshift=-3.5cm ] {\tiny Common owner 1 };
+		
+					
+					\node (Owner2) [startstop3,right of = Firm , yshift= 0 , xshift=-4.5cm ] {\tiny Common owner 2 };
+					
+					\node (Owner3) [startstop3,below of = Firm , yshift=-1.75cm , xshift=-3.5cm ] {\tiny Common owner 3 };
+					
+					\pause
+					
+					
+					
+					\draw [-latex] (Owner) to [bend right =0]  node[sloped, anchor=center, above] {\tiny $ \beta_1 $} (Firm2);
+					
+					\draw [-latex] (Owner) to [bend left =0]  node[sloped, anchor=center, above] {\tiny $ \alpha_1 $} (Firm);
+					
+					\pause
+					
+					\draw [-latex] (Owner2) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \beta_2 $} (Firm2);
+					
+					\draw [-latex] (Owner2) to [bend left =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_2 $} (Firm);
+					
+					
+					
+					\draw [-latex] (Owner3) to [bend left =0]  node[sloped, anchor=center, below] {\tiny$ \beta_3 $} (Firm2);
+					
+					\draw [-latex] (Owner3) to [bend right =0]  node[sloped, anchor=center, below] {\tiny $ \alpha_3 $} (Firm);
+					
+					
+					
+				\end{tikzpicture}
+				
+			\end{frame}
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+				\begin{table}[htbp]
+					\centering
+					\resizebox{0.9\textwidth}{!}
+					{
+						\input{Elements/Example2}
+					}
+				\end{table}
+				
+			\end{frame}
+			
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Comparison}
+				\begin{itemize}
+					\item For better comparison we relax previous assumptions:
+					\begin{itemize}
+						\item Two Firms with different market caps.
+					\end{itemize}
+				\end{itemize}
+				\resizebox{0.7\textwidth}{!}
+				{
+					\input{Elements/marketcap}
+				}
+				
+				
+			\end{frame}
+			
+			
+			\begin{frame}{Measuring Common Ownership}{Comparison}
+				\begin{figure}[htbp]
+					\includegraphics[width=0.47\linewidth]{Elements/3.png}
+					\includegraphics[width=0.47\linewidth]{Elements/4.png}
+					\captionsetup{labelformat=empty}
+					\caption{\scriptsize Comparison of two methods for calculating common ownership}
+				\end{figure}
+				\begin{block}{Conclusion}
+					We use the SQRT measure because it has an acceptable variation and has fair values at a lower level of aggregate common ownership. 
+				\end{block}
+			\end{frame}
+		\begin{frame}{Common Ownership measure}	
+			\begin{table}[htbp]
+						\centering
+					\resizebox{1\textwidth}{!}{
+						\input{Output/mresult2Polk-slide.tex}}
+			\end{table}
+		\end{frame}	
+		
+	
+	\section{Appendix II}
+	\begin{frame}{Main Effect}\label{maineffect}
+		
+		\begin{itemize}
+			\item \color{cyan} Common-ownership and comovement effect 
+			\\
+			\scriptsize
+			\normalcolor
+			[\cite{AntonPolk}]
+			\\  \tiny 
+			Stocks sharing many common investors tend to comove more strongly with each other in the future than otherwise similar stocks.
+			
+			\normalsize
+			\item \color{cyan} Common-ownership and liquidity demand 
+			\\
+			\scriptsize
+			\normalcolor 
+			[\cite{Liquidity2016}, Pastor and Stambaugh (2003), Acharya and Pedersen (2005)]
+			\normalsize
+			\\
+			\tiny Commonality in stock liquidity is likely driven by correlated trading among a given stock’s investors.
+			Commonality in liquidity is important because it can influence expected returns 
+			
+			\normalsize
+			
+			
+			
+			\item \color{cyan} Trading needs and comovement 
+			\\
+			\scriptsize
+			\normalcolor
+			[\cite{greenwood2011stock}]
+			\normalsize
+			\\  
+			\tiny   If the investors of mutual funds have correlated trading needs, the stocks that are held by mutual funds can comove even without any portfolio overlap of the funds themselves 
+			
+			\normalsize
+			
+			
+			
+			\item \color{cyan} Stock price synchronicity and poor corporate governance 
+			\\
+			\scriptsize
+			\normalcolor
+			[\cite{boubaker2014large}, \cite{khanna2009synchronicity}, Morck et al. (2000)]
+			\normalsize
+			\\  
+			\tiny   Stock price synchronicity has been attributed to poor corporate governance and a lack of firm-level transparency. On the other hand, better law protection encourages informed trading, which facilitates the incorporation of firm-specific information into stock prices, leading to lower synchronicity 
+			
+			\normalsize
+			
+		\end{itemize}
+		\hfill
+		\hyperlink{Grapgh}{\beamerbutton{Grapgh}}
+	\end{frame}
+	\subsection{Synchronicity and firm interlocks}
+	\begin{frame}{Synchronicity and firm interlocks }{JFE-2009-Khanna} \label{ref1}
+		\begin{itemize}
+			\item Three types of network
+			\begin{enumerate}
+				\item Equity network \item Director network \item Owner network
+			\end{enumerate}
+			\item Dependent variables
+			\begin{enumerate}
+				\item[] Using deterended weekly return for calculation
+				\item Pairwise returns synchronicity = $\frac{\sum_t (n^{up}_{i,j,t} 
+					n^{down}_{i,j,t})}{T_{i,j}}$
+				\item Correlation = $\frac{Cov(i,j)}{\sqrt{Var(i).Var(j)}}$
+			\end{enumerate}
+			\item Tobit estimation of
+			\begin{equation*}
+				f^d_{i,j} = \alpha I_{i,j} + \beta (1*N_{i,j}) + \gamma Ind_{i,j} + \varepsilon_{i,j}
+			\end{equation*}
+			being in the same director network has a significant effect
+		\end{itemize}
+	\end{frame}
+	
+	
+	\subsection{Large controlling shareholder and stock price synchronicity}
+	
+	\begin{frame}{Large controlling shareholder and stock price synchronicity}{JBF-2014-Boubaker}
+		\begin{itemize}
+			\item Stock price synchronicity:
+			\begin{equation*}
+				SYNCH = \log(\frac{R^2_{i,t}}{1-R^2_{i,t}})
+			\end{equation*}
+			where $ R^2_{i,t} $ is the R-squared value from \footnotesize  $$ RET_{i,w} = \alpha + \beta_1 MKRET_{w-1} + \beta_2 MKRET_w + \beta_3 INDRET_{i,w-1} + \beta_4 INDRET_{i,w} + \varepsilon_{i,w} $$
+			\normalsize  
+			\item OLS estimation of 
+			\begin{equation*}
+				\footnotesize
+				\begin{split}
+					SYNCH_{i,t} & =  \beta_0 + \beta_1 Excess_{i,t} + \beta_2 UCF_{i,t} + \sum_k \beta_k Control^k_{i,t}\\
+					& + IndustryDummies + YearDummies + \varepsilon_{i,t}
+				\end{split}
+			\end{equation*}
+			
+			\item Stock price synchronicity increases with excess control
+			\item  Firms with substantial excess control are more likely to experience stock price crashes
+			
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{Connected Stocks}
+	
+	
+	\begin{frame}{Connected Stocks}{JF-2014-Anton Polk}
+		\begin{itemize}
+			\item  Common active mutual fund owners
+			\item  Measuring Common Ownership
+			\begin{itemize}
+				\item $ FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}} $
+				\item Using normalized rank-transformed as $  FCAP_{ij,t} ^* $
+			\end{itemize}
+			\item $ \rho_{ij,t} $ :  within-month realized correlation of each stock pair’s daily four-factor returns 
+			\item    \begin{equation*}
+				\rho_{ij,t+1} = a + b_f \times FCAPF^*_{ij,t} + \sum_{k = 1}^{n } CONTROL_{ij,t,k} + \varepsilon_{ij,t+1}
+				\label{e1}
+			\end{equation*}
+			Estimate these regressions monthly and report
+			the time-series average as in Fama-MacBeth
+			
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	
+	
+	\subsection{Measures' Detail}
+	\begin{frame}{Commonownership measurements}{Model-based measures }\label{measuredetail}
+		
+		\begin{itemize}
+			\item \color{cyan} \scriptsize $
+			\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  \normalcolor
+			\tiny \cite{harford2011institutional} \\ 
+			\begin{itemize}
+				\item Bi-directional
+				\item Pair-level measure of common ownership
+				\item Its potential impact on managerial incentives
+				\item Measure not necessarily increases  when the relative ownership increases
+				\item Accounts  only for an investor’s relative holdings
+			\end{itemize}
+			\normalsize
+			\item \color{cyan} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+			\cite{azar2018anticompetitive}  \\ 
+			\begin{itemize}
+				\item Capture a specific   type of externality
+				\item Measured at the industry level
+				\item Assumes that investors are fully   informed about the externalities 
+			\end{itemize}
+			\normalsize
+			
+			\item \color{cyan} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+			\cite{gilje2020s}
+			\\ 
+			\begin{itemize}
+				\item Bi-directional
+				\item Less information
+				\item Not sensitive to  the scope
+				\item Measure increases   when the relative ownership of firm A increases
+			\end{itemize}
+			\normalsize
+		\end{itemize}
+		
+		
+	\end{frame}
+	
+	\normalsize
+	
+	\begin{frame}{Commonownership measurements}{ Ad hoc common ownership measures}
+		
+		\begin{itemize}
+			\item \color{cyan} \small $   Overlap_{Count}(A,B)= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+			\tiny  \cite{he2017product},\cite{he2019internalizing}  \\ 
+			
+			\normalsize
+			\item \color{cyan} \small $   Overlap_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+			\tiny \cite{newham2018common}  \\ 
+			
+			\normalsize
+			\item \color{cyan} \small $   Overlap_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+			\tiny \cite{AntonPolk} \\ 
+			
+			\normalsize
+			\item \color{cyan} \small $   Overlap_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+			\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+			\normalsize
+			\item Unappealing properties
+			\begin{itemize}
+				\item  Unclear is whether any of these
+				measures represents an economically meaningful measure
+				of common ownership’s impact on managerial incentives.
+				\item Both $  \text{Overlap}_{Count} $ and $  \text{Overlap}_{AP} $ are invariant
+				to the decomposition of ownership between the two firms,
+				which leads to some unappealing properties.
+			\end{itemize}
+		\end{itemize}
+		
+		\hfill
+		\hyperlink{mainmeasure}{\beamerbutton{Back}}
+	\end{frame}
+	
+
+
+	\section{Appendix III}
+	
+	\begin{frame}{Fama-MacBeth Estimation}\label{Methood}
+		\begin{itemize}
+			\item Fama-MacBeth regression analysis is implemented using a two-step procedure. 
+			\begin{itemize}
+				\item The first step is to
+				run periodic cross-sectional regression for dependent variables using data of each period.
+				\item[]
+				\item
+				The second step is to analyze the time series
+				of each regression coefficient to determine whether the average coefficient differs from zero.
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Fama-MacBeth (1973)}
+		\begin{itemize}
+			
+			\item Two Step Regression
+			\begin{itemize}
+				\item First Step
+				\begin{equation*}
+					\begin{array}{c}
+						Y_{i1} = \delta_{0,1} + \delta_{1,1}^1 X^1_{i,1} + \dots  + \delta_{k,1}^k X^k_{i,1}  + \varepsilon_{i,1}\\
+						\vdots\\
+						Y_{iT} = \delta_{0,1} + \delta_{1,T}^1 X^1_{i,T} + \dots  + \delta_{k,T}^k X^k_{i,T}  + \varepsilon_{i,T}
+					\end{array}
+				\end{equation*}
+				
+				
+				
+				\item Second Step
+				\begin{equation*}
+					\left[\begin{matrix}
+						\bar{Y_1}\\
+						\vdots\\
+						\bar{Y_T}
+					\end{matrix}\right]_{T\times 1} =
+					\left[\begin{matrix}
+						1 &  \delta_1^0 &  \delta_1^1 & \dots  &  \delta_1^k\\
+						\vdots&  \vdots &  \vdots &  \dots &  \vdots\\
+						1 &  \delta_T^0 &  \delta_T^1 & \dots &  \delta_T^k
+					\end{matrix}\right]_{T\times (k+2)}
+					\times \left[\begin{matrix}
+						\lambda\\
+						\lambda_0\\
+						\lambda_1\\
+						\vdots\\
+						\lambda_k
+					\end{matrix}\right] _{(k+2)\times 1}
+				\end{equation*}
+				
+				
+			\end{itemize}
+			\item Fama-MacBeth technique was
+			developed to account for correlation between observations on different firms in the same period
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Calculating standard errors}
+		\begin{itemize}
+			\item In most cases, the standard errors are adjusted following Newey and West (1987).
+			
+			
+			\begin{itemize}
+				\item Newey and West (1987) adjustment to the results of the
+				regression produces a new standard error for the estimated mean that is adjusted for autocorrelation and heteroscedasticity.
+				
+				\item Only input is the number of lags to use when performing the adjustment
+				\begin{equation*}
+					Lag = 4(T/100)^{\frac{2}{9}}
+				\end{equation*}
+				where T is the number of periods in the time series
+			\end{itemize}
+			
+			
+		\end{itemize}
+		
+		
+				\hfill
+				\hyperlink{Estimation}{\beamerbutton{Back}}
+	\end{frame}
+	
+%	\begin{frame}{Fixed effect or Fama-MacBeth}
+%		\begin{itemize}
+%			\item Both methods rely on zero correlation between the error terms of non-contemporaneous periods. A difference is weighting: 
+%			\begin{itemize}
+%				\item The Fama-Macbeth procedure weights each time period equally.
+%				\item A panel regression will effectively give greater weight to periods with more observations or greater variation in right hand side variables
+%			\end{itemize}
+%			\item The econometric analysis of panel data depends in a crucial way on the cross-sectional and timeseries correlation of the regression residuals
+%		\end{itemize}
+%	\end{frame}
+	
+%	\section{Appendix III}
+	
+%	\begin{frame}{ 4 Factor + Industry Future Correlation via $ FCA^* $}{Normalized Rank Transformed for each cross section (Monthly)}\label{Monthly7}
+%		
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.8\linewidth]{"mcorr5.eps"}
+%		\end{figure}
+%		\hfill
+%		\hyperlink{Fortnightly7}{\beamerbutton{Fortnightly}}
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Monthly variables}\label{Monthly8}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{\textheight}{!}{
+%				\input{mresult2-slide.tex}
+%			}
+%		\end{table}
+%		\hfill
+%		\hyperlink{Fortnightly8}{\beamerbutton{Fortnightly}}
+%	\end{frame}
+%	
+%	
+%	
+%	\appendix
+%	\section{Appendix IV}
+%	\subsection{Measuring Common Ownership}
+%	
+%	\begin{frame}{FCA vs. FCAP Distributions}{Fortnightly}\label{Fortnightly1}
+%		\begin{columns}
+%			\column{.33\textwidth}  
+%			\begin{figure}   
+%				\centering
+%				\includegraphics[width=\linewidth]{"HistNFCA.eps"}  \\
+%				\includegraphics[width=\linewidth]{"HistNFCAP.eps"}   \end{figure}            
+%			\column{.33\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"HistlnFCA.eps"}\\
+%				\includegraphics[width=\linewidth]{"HistlnFCAP.eps"}
+%			\end{figure}
+%			\column{.33\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"HistFCA.eps"}\\
+%				\includegraphics[width=\linewidth]{"HistFCAP.eps"}
+%			\end{figure}
+%		\end{columns}
+%		\centering
+%		\hfill
+%		\hyperlink{Monthly1}{\beamerbutton{Monthly}}
+%	\end{frame}
+%	
+%	\begin{frame}{Summary of Controls}{Fortnightly }\label{Fortnightly2}
+%		
+%		\subsection{Controls}
+%		
+%		
+%		\begin{table}[htbp]
+%			\centering \scriptsize
+%			{
+%				\begin{tabular}{lcc}
+%					{Type of Pairs} & {Yes} &{No} \\
+%					\hline
+%					\hline
+%					{SameIndustry} & 1142  & 9125 \\
+%					& \tiny(11.1\%) & \tiny (88.9\%) \\
+%					[1 em]
+%					{SameGroup} & 1173  & 9094 \\
+%					& \tiny(11.4\%) & \tiny (88.6\%) \\
+%					[1 em]          
+%					{ActiveHolder} & 2819  & 7448 \\
+%					& \tiny(27.5\%) & \tiny (72.5\%) \\
+%				\end{tabular}%
+%			}
+%		\end{table}
+%		
+%		\begin{table}[htbp]
+%			\centering 
+%			\scriptsize
+%			{
+%				\begin{tabular}{lrrrrrrrr}
+%					Variable & \multicolumn{1}{l}{count} & \multicolumn{1}{l}{mean} & \multicolumn{1}{l}{std} & \multicolumn{1}{l}{min} & 25\%  & 50\%  & 75\%  & \multicolumn{1}{l}{max} \\
+%					\hline\hline
+%					Size1 & 636641 & 0.75  & 0.21  & 0.01  & 0.61  & 0.81  & 0.93  & 1 \\
+%					Size2 & 636641 & 0.47  & 0.26  & 0.00  & 0.26  & 0.45  & 0.67  & 1.00 \\
+%					SameSize & 636641 & -0.28 & 0.22  & -0.99 & -0.42 & -0.24 & -0.10 & 0.00 \\
+%					BookToMarket1 & 636641 & 0.52  & 0.27  & 0.00  & 0.31  & 0.54  & 0.74  & 1.00 \\
+%					BookToMarket2 & 636641 & 0.50  & 0.25  & 0.00  & 0.29  & 0.49  & 0.70  & 1.00 \\
+%					SameBookToMarket & 636641 & -0.29 & 0.21  & -1.00 & -0.43 & -0.25 & -0.12 & 0.00 \\
+%				\end{tabular}%
+%			}
+%		\end{table}
+%		\hfill
+%		\hyperlink{Monthly2}{\beamerbutton{Monthly}}  
+%	\end{frame}
+%	\subsection{Logaritmic}
+%	
+%	\begin{frame}{Future Correlation via $ FCA $}{4 Factor + Industry (Fortnightly)}\label{Fortnightly3}
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.8\linewidth]{"wcorr50.eps"}
+%		\end{figure}
+%		\hfill
+%		\hyperlink{Monthly3}{\beamerbutton{Monthly}} 
+%	\end{frame}
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Fortnightly variables }\label{Fortnightly4}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{\textwidth}{!}{
+%				\input{lwresult2-slide.tex}
+%			}
+%		\end{table}
+%		\hfill
+%		\hyperlink{Monthly4}{\beamerbutton{Monthly}}
+%	\end{frame}
+%	
+%	\begin{frame}{ 4 Factor + Industry Future  Correlation via $ FCA^* $}{Normalized Rank Transformed for each cross section ({Fortnightly})} \label{Fortnightly5}
+%		
+%		
+%		
+%		
+%		
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}   
+%				\centering
+%				\includegraphics[width=\linewidth]{"wcorr5l.eps"}     \end{figure}            
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"wcorr5lrd.eps"}
+%			\end{figure}
+%		\end{columns}
+%		\centering
+%		
+%		
+%		\subsection{Discontinuity}
+%		\hfill 
+%		\hyperlink{Monthly5}{\beamerbutton{Monthly}}
+%	\end{frame}
+%	\begin{frame}{Fama-MacBeth Estimation}{ Fortnightly variables}\label{Fortnightly6}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{\textwidth}{!}{
+%				\input{wresult2M-slide.tex}
+%			}
+%		\end{table}
+%		\hfill
+%		\hyperlink{Monthly6}{\beamerbutton{Monthly}}
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{ 4 Factor + Industry Future  Correlation via $ FCA^* $}{Normalized Rank Transformed for each cross section ({Fortnightly})}\label{Fortnightly13}
+%		
+%		
+%		
+%		
+%		
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}   
+%				\centering
+%				\includegraphics[width=\linewidth]{"wcorr5lrd.eps"}     \end{figure}            
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				%  \includegraphics[width=\linewidth]{"wcorr5lrda.eps"}\\
+%				\includegraphics[width=\linewidth]{"wcorr5lrdbg.eps"}
+%			\end{figure}
+%		\end{columns}
+%		\centering
+%		
+%		
+%		\hfill 
+%		\hyperlink{Monthly13}{\beamerbutton{Monthly}}
+%	\end{frame}
+%	
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Monthly variables}
+%		\label{Fortnightly10} 
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{0.6\textheight}{!}{
+%				\input{Mwresult3-slide.tex}
+%			}
+%		\end{table}
+%		\hfill
+%		\hyperlink{Monthly10}{\beamerbutton{Monthly}}
+%		
+%	\end{frame}
+%	
+%	
+%	
+%	
+%	
+%	
+%	\subsection{Business Group}
+%	
+%	
+%	
+%	\begin{frame}{Future Correlation via $ FCA^* $ }{4 Factor + Industry (by Business Group)} \label{Fortnightly9} 
+%		
+%		\begin{figure}
+%			\centering
+%			\includegraphics[width=0.8\linewidth]{"wcorr5bg.eps"}
+%		\end{figure}
+%		
+%		
+%	\end{frame}
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Fortnightly variables for subset of Same Business Group } \label{Fortnightly11} 
+%		
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1.1\textheight}{!}{
+%				\input{wresult2MSameGroup-slide.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Fortnightly variables for subset of Different Business Group }  \label{Fortnightly12} 
+%		
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1.1\textheight}{!}{
+%				\input{wresult2MNotSameGroup-slide.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}  
+%	
+%	
+%	
+%	\subsection{Other} 
+%	
+%	\begin{frame}{ 4 Factor + Industry Future Correlation via $ FCA^* $}{Normalized Rank Transformed for each cross section (Fortnightly)} \label{Fortnightly7}
+%		
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.8\linewidth]{"wcorr5.eps"}
+%		\end{figure}
+%		
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{ Fortnightly variables}\label{Fortnightly8}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1.1\textheight}{!}{
+%				\input{wresult2-slide.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}
+%	
+%	
+%	
+%	\section{Appendix V}
+%	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1\textheight}{!}{
+%				\input{mresult2-slide-withLag.tex}
+%			}
+%		\end{table}
+%		
+%		
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{Discontinuity}
+%		
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1\textheight}{!}{
+%				\input{Qmresult2-slide-withLag.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{Discontinuity \&  Business Groups}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{1.1\textheight}{!}{
+%				\input{Qmresult3-slide-withLag.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}
+%	
+%	
+%	\section{Appendix VI}
+%	
+%	\subsection{Logaritmic}
+%	
+%	
+%	\begin{frame}{Estimation model}
+%		\begin{itemize}
+%			\item Use Fama-MacBeth to estimate this model
+%			\begin{equation}
+%				\begin{split}
+%					\rho_{ij,t+1} = & \text{ 	}\beta_0 + \beta_1* \ln(\text{FCA}_{ij,t}) + \beta_2* \text{SameGroup}_{ij} \\
+%					&	+\beta_3* \ln(\text{FCA}_{ij,t}) \times \text{SameGroup}_{ij}   \\
+%					& + \sum_{k=1} ^{n} \alpha_k*\text{Control}_{ij,t} + \varepsilon_{ij,t+1}
+%				\end{split}
+%				\label{model4}
+%			\end{equation}
+%			
+%			\item Estimate that model on a monthly frequency 
+%		\end{itemize}
+%	\end{frame}
+%	
+%	
+%	\begin{frame}{Future Correlation via $ FCA $}{Logaritmic Transformation}\label{Monthly3}
+%		\begin{columns}
+%			\column{.5\textwidth}  
+%			\begin{figure}   
+%				\centering
+%				\includegraphics[width=\linewidth]{"mcorr50bg.eps"}     \end{figure}            
+%			\column{.5\textwidth}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=\linewidth]{"mcorr50.eps"}
+%			\end{figure}
+%		\end{columns}
+%		
+%	\end{frame}
+%	
+%	
+%	
+%	\begin{frame}{Fama-MacBeth Estimation}{Logaritmic Transformation}\label{Monthly4}
+%		\begin{table}[htbp]
+%			\centering
+%			\resizebox{0.9\textheight}{!}{
+%				\input{lnmresult2-slide.tex}
+%			}
+%		\end{table}
+%		
+%	\end{frame}
+%	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
