@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  24 NOV 2021 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  24 NOV 2021 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,11 +1160,11 @@ ocks - Slide - Dr.Heidari.toc)
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2021-11-22 18:45:50
-(epstopdf)                    size: 22355 bytes
+(epstopdf)                    date: 2021-11-24 12:38:17
+(epstopdf)                    size: 21544 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-22 18:46:25
-(epstopdf)                    size: 13258 bytes
+(epstopdf)                    date: 2021-11-24 12:39:02
+(epstopdf)                    size: 13160 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 95.
@@ -1197,16 +1197,16 @@ thkerncmss.
 
  <./Output/mcorr50-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2021-11-22 18:45:50
-(epstopdf)                    size: 30786 bytes
+(epstopdf)                    date: 2021-11-24 12:35:51
+(epstopdf)                    size: 29914 bytes
 (epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-22 18:46:28
-(epstopdf)                    size: 14790 bytes
+(epstopdf)                    date: 2021-11-24 12:39:05
+(epstopdf)                    size: 14480 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
 (epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5bg-eps-converted-to.pdf, id=191, 397.485pt x 289.08pt>
+<Output/mcorr5bg-eps-converted-to.pdf, id=192, 397.485pt x 289.08pt>
 File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5bg-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
@@ -1269,27 +1269,27 @@ Missing character: There is no ] in font nullfont!
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 427.
 
 
 [11
@@ -1304,20 +1304,20 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 421.
 (./Output/numberofPairs.tex) (./Output/summaryOfPairs.tex) [15
 
 ]
-Overfull \hbox (4.36893pt too wide) detected at line 820
+Overfull \hbox (4.36893pt too wide) detected at line 826
 []
  []
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 82
-0.
+6.
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 82
-0.
+6.
 
 
-Overfull \hbox (11.39645pt too wide) detected at line 820
+Overfull \hbox (11.39645pt too wide) detected at line 826
 []
  []
 
@@ -1332,13 +1332,13 @@ Package epstopdf Info: Source file: <Output/MHistFCA.eps>
 (epstopdf)                    size: 8205 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCA-eps-converted-to.pdf, id=356, 397.485pt x 289.08pt>
+<Output/MHistFCA-eps-converted-to.pdf, id=357, 397.485pt x 289.08pt>
 File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 863.
+ne 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    date: 2021-11-04 09:56:38
@@ -1348,13 +1348,13 @@ Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    size: 9395 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCAP-eps-converted-to.pdf, id=357, 397.485pt x 289.08pt>
+<Output/MHistFCAP-eps-converted-to.pdf, id=358, 397.485pt x 289.08pt>
 File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 863.
+ine 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    date: 2021-11-15 16:37:08
@@ -1364,13 +1364,13 @@ Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    size: 9549 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCA-eps-converted-to.pdf, id=358, 397.485pt x 289.08pt>
+<Output/MHistlnFCA-eps-converted-to.pdf, id=359, 397.485pt x 289.08pt>
 File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 863.
+line 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    date: 2021-11-04 10:04:04
@@ -1380,13 +1380,13 @@ Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    size: 9518 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCAP-eps-converted-to.pdf, id=359, 397.485pt x 289.08pt>
+<Output/MHistlnFCAP-eps-converted-to.pdf, id=360, 397.485pt x 289.08pt>
 File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 863.
+ line 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    date: 2021-11-15 16:37:08
@@ -1396,13 +1396,13 @@ Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    size: 8314 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCA-eps-converted-to.pdf, id=360, 397.485pt x 289.08pt>
+<Output/MHistNFCA-eps-converted-to.pdf, id=361, 397.485pt x 289.08pt>
 File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 863.
+ine 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    date: 2021-11-14 17:34:26
@@ -1412,13 +1412,13 @@ Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    size: 8255 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 863.
+(epstopdf)             \includegraphics on input line 869.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCAP-eps-converted-to.pdf, id=361, 397.485pt x 289.08pt>
+<Output/MHistNFCAP-eps-converted-to.pdf, id=362, 397.485pt x 289.08pt>
 File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 863.
+line 869.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
  [17
 
@@ -1428,7 +1428,7 @@ rted-to.pdf> <./Output/MHistNFCA-eps-converted-to.pdf> <./Output/MHistNFCAP-eps
 -converted-to.pdf>]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 92
-1.
+7.
 
 (./Output/CorrelationsResultsText.tex) [18
 
@@ -1439,35 +1439,35 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 92
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2021-11-22 18:45:50
-(epstopdf)                    size: 30786 bytes
+(epstopdf)                    date: 2021-11-24 12:35:51
+(epstopdf)                    size: 29914 bytes
 (epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-22 18:46:28
-(epstopdf)                    size: 14790 bytes
+(epstopdf)                    date: 2021-11-24 12:39:05
+(epstopdf)                    size: 14480 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
-(epstopdf)             \includegraphics on input line 1048.
+(epstopdf)             \includegraphics on input line 1054.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5bg-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
-ne 1048.
+ne 1054.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
-(epstopdf)                    date: 2021-11-22 18:45:50
-(epstopdf)                    size: 22240 bytes
+(epstopdf)                    date: 2021-11-24 12:38:17
+(epstopdf)                    size: 21430 bytes
 (epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-11-22 18:46:33
-(epstopdf)                    size: 13072 bytes
+(epstopdf)                    date: 2021-11-24 12:39:10
+(epstopdf)                    size: 13017 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
-(epstopdf)             \includegraphics on input line 1048.
+(epstopdf)             \includegraphics on input line 1054.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5l-eps-converted-to.pdf, id=437, 397.485pt x 289.08pt>
+<Output/mcorr5l-eps-converted-to.pdf, id=438, 397.485pt x 289.08pt>
 File: Output/mcorr5l-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5l-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5l-eps-converted-to.pdf  used on input lin
-e 1048.
+e 1054.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
  [21
 
@@ -1481,40 +1481,40 @@ e 1048.
 
 ]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-11-15 16:37:09
-(epstopdf)                    size: 30952 bytes
+(epstopdf)                    date: 2021-11-24 12:35:50
+(epstopdf)                    size: 30803 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2021-11-15 16:37:09
-(epstopdf)                    size: 13076 bytes
+(epstopdf)                    date: 2021-11-24 12:39:13
+(epstopdf)                    size: 13081 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 1157.
+(epstopdf)             \includegraphics on input line 1163.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=482, 397.485pt x 289.08p
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=483, 397.485pt x 289.08p
 t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 1157.
+d on input line 1163.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2021-11-15 16:37:09
-(epstopdf)                    size: 24312 bytes
+(epstopdf)                    date: 2021-11-24 12:35:51
+(epstopdf)                    size: 23878 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-11-15 16:37:09
-(epstopdf)                    size: 16224 bytes
+(epstopdf)                    date: 2021-11-24 12:39:17
+(epstopdf)                    size: 16202 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 1157.
+(epstopdf)             \includegraphics on input line 1163.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=483, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=484, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 1157.
+input line 1163.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
  [25
 
@@ -1548,13 +1548,13 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 (epstopdf)                    size: 263118 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
-(epstopdf)             \includegraphics on input line 1283.
+(epstopdf)             \includegraphics on input line 1289.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=569, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=570, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
-ut line 1283.
+ut line 1289.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
  [33
 
@@ -1573,13 +1573,13 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)                    size: 287937 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
-(epstopdf)             \includegraphics on input line 1391.
+(epstopdf)             \includegraphics on input line 1397.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=596, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=597, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 1391.
+ut line 1397.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
  [36
 
@@ -1593,7 +1593,7 @@ ut line 1391.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1426.
+(hyperref)                removing `\translate ' on input line 1432.
 
 (./Connected Stocks - Slide - Dr.Heidari.bbl
 
@@ -1612,15 +1612,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [44
 
 ]
-<Elements/1.png, id=707, 494.8086pt x 299.6796pt>
+<Elements/1.png, id=708, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1542.
+Package pdftex.def Info: Elements/1.png  used on input line 1548.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<Elements/2.png, id=709, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=710, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1542.
+Package pdftex.def Info: Elements/2.png  used on input line 1548.
 (pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
 
 [45
@@ -1633,15 +1633,15 @@ Package pdftex.def Info: Elements/2.png  used on input line 1542.
 ] (./Elements/marketcap.tex) [48
 
 ]
-<Elements/3.png, id=737, 722.7pt x 360.3864pt>
+<Elements/3.png, id=738, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
-Package pdftex.def Info: Elements/3.png  used on input line 1627.
+Package pdftex.def Info: Elements/3.png  used on input line 1633.
 (pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<Elements/4.png, id=738, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=739, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
-Package pdftex.def Info: Elements/4.png  used on input line 1627.
+Package pdftex.def Info: Elements/4.png  used on input line 1633.
 (pdftex.def)             Requested size: 160.8792pt x 80.06342pt.
  [49
 
@@ -1657,7 +1657,7 @@ Package pdftex.def Info: Elements/4.png  used on input line 1627.
 ]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
-38.
+44.
 
 [54
 
@@ -1686,11 +1686,11 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
 \tf@snm=\write9
 \openout9 = `"Connected Stocks - Slide - Dr.Heidari.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2295.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2301.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2301.
  (./Connected Stocks - Slide - Dr.Heidari.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2301.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2301.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Slide - Dr.Heidari".out'
  has not changed.
@@ -1699,7 +1699,7 @@ Package rerunfilecheck Info: File `"Connected Stocks - Slide - Dr.Heidari".out'
 Here is how much of TeX's memory you used:
  26023 strings out of 480608
  518289 string characters out of 5907536
- 794950 words of memory out of 5000000
+ 793950 words of memory out of 5000000
  41035 multiletter control sequences out of 15000+600000
  549559 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1732,11 +1732,11 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 109299
-6 bytes).
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 109229
+1 bytes).
 PDF statistics:
- 980 PDF objects out of 1000 (max. 8388607)
- 829 compressed objects within 9 object streams
+ 981 PDF objects out of 1000 (max. 8388607)
+ 830 compressed objects within 9 object streams
  199 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
