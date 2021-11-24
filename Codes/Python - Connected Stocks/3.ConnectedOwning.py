@@ -7,74 +7,70 @@ from ConnectedOwnershipFunctions import *
 import time
 
 # %%
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+def prepare():
+    path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+    # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+    df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+    df["week_of_year"] = df.week_of_year.astype(int)
+    df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
+        df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
+    )
+
+    df = df[df.jalaliDate < 13990000]
+    df = df[df.jalaliDate > 13930000]
+    df = df[~df["5_Residual"].isnull()]
+    print(len(df))
+    df = df[df.volume > 0]
+    print(len(df))
+    try:
+        df = df.drop(columns=["Delta_Trunover"])
+    except:
+        1 + 2
+
+    df = df.rename(
+        columns={
+            "4_Residual": "4-Residual",
+            "5_Residual": "5-Residual",
+            "6_Residual": "6-Residual",
+            "2_Residual": "2-Residual",
+            "5Lag_Residual": "5Lag-Residual",
+            "Delta_TurnOver": "Delta_Trunover",
+            "Month_of_year": "month_of_year",
+        }
+    )
+    return df
 
 
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
-df["week_of_year"] = df.week_of_year.astype(int)
-df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
-    df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
-)
-
-df = df[df.jalaliDate < 13990000]
-df = df[df.jalaliDate > 13930000]
-df = df[~df["5_Residual"].isnull()]
-try:
-    df = df.drop(columns=["Delta_Trunover"])
-except:
-    1 + 2
-
-
-#%%
-df = df.rename(
-    columns={
-        "4_Residual": "4-Residual",
-        "5_Residual": "5-Residual",
-        "6_Residual": "6-Residual",
-        "2_Residual": "2-Residual",
-        "5Lag_Residual": "5Lag-Residual",
-        "Delta_TurnOver": "Delta_Trunover",
-        "Month_of_year":"month_of_year"
-    }
-)
+df = prepare()
 df.head()
 
 # %%
 df[df.symbol == "فولاد"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
 
 
-<<<<<<< Updated upstream
-# # %%
-# gdata = df.groupby(["id"])
-# g = gdata.get_group(167)
-# S_g = gdata.get_group(157)
-=======
 # %%
 gdata = df.groupby(["id"])
 g = gdata.get_group(167)
 S_g = gdata.get_group(157)
->>>>>>> Stashed changes
+
+
+#%%
 
 AllPair = True
 
 n = time.time()
-t1 = FCAPf(S_g, g,AllPair)
+t1 = FCAPf(S_g, g, AllPair)
 print(time.time() - n)
 
 
 AllPair = False
 n = time.time()
-t2 = FCAPf(S_g, g,AllPair)
+t2 = FCAPf(S_g, g, AllPair)
 print(time.time() - n)
 
-<<<<<<< Updated upstream
-# #%%
-# len(t1[t1.FCAPf>0]),len(t2)
-=======
+
 #%%
-len(t1[t1.FCAPf>0]),len(t2)
->>>>>>> Stashed changes
+len(t1[t1.FCAPf > 0]), len(t2)
 
 
 #%%
@@ -90,6 +86,7 @@ def genFile(df, path, g, i):
         S_gg.apply(FCAPf, g=g, AllPair=False),
         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
     )
+
 
 # for i in list(gg.groups.keys()):
 #     n = time.time()
@@ -122,29 +119,7 @@ def genFile(df, path, g, i):
 #%%
 # All pairs
 
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
-df["week_of_year"] = df.week_of_year.astype(int)
-df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
-    df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
-)
-df = df[df.jalaliDate < 14000000]
-df = df[df.jalaliDate > 13930000]
-df = df[~df["5_Residual"].isnull()]
-try:
-    df = df.drop(columns=["Delta_Trunover"])
-except:
-    1 + 2
-df = df.rename(
-    columns={
-        "4_Residual": "4-Residual",
-        "5_Residual": "5-Residual",
-        "6_Residual": "6-Residual",
-        "2_Residual": "2-Residual",
-        "5Lag_Residual": "5Lag-Residual",
-        "Delta_TurnOver": "Delta_Trunover",
-        "Month_of_year":"month_of_year"
-    }
-)
+df = prepare()
 data = pd.DataFrame()
 gg = df.groupby(["id"])
 counter = 0

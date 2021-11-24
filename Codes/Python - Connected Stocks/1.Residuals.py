@@ -111,6 +111,9 @@ symbols = [
     "سپرمی",
     "بتک",
 ]
+print(len(df))
+df = df[df.volume > 0]
+print(len(df))
 df = df[~(df["symbol"].isin(symbols))]
 df = df[df.group_name != "صندوق سرمایه گذاری قابل معامله"]
 df = df[~((df.symbol == "اتکای") & (df.close_price == 1000))]

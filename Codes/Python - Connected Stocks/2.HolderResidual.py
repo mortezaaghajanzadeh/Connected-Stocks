@@ -69,30 +69,28 @@ a = df.groupby("date").size().to_frame().reset_index()
 a.plot(y=0, use_index=True)
 
 #%%
-
-#%%
 dropholders = [
-    "سایر سهامدارن",
-    "اعضا هیئت مدیره",
-    "اشخاص حقیقی",
-    "اشخاص حقوقی",
-    "سهام حقوقی",
-    "سهام حقیقی",
-    "سهام کارکنان",
-    "سهام کارگری",
-    "سهام مسدود",
-    "سهام وثیقه",
-    "شرکت های گروه",
-    "شهرداری ها",
-    "کارکنان",
-    "کارگران",
-    "کارگزاران",
-    "مدیران شرکت",
-    "هیئت مدیره",
+    # "سایر سهامدارن",
+    # "اعضا هیئت مدیره",
+    # "اشخاص حقیقی",
+    # "اشخاص حقوقی",
+    # "سهام حقوقی",
+    # "سهام حقیقی",
+    # "سهام کارکنان",
+    # "سهام کارگری",
+    # "سهام مسدود",
+    # "سهام وثیقه",
+    # "شرکت های گروه",
+    # "شهرداری ها",
+    # "کارکنان",
+    # "کارگران",
+    # "کارگزاران",
+    # "مدیران شرکت",
+    # "هیئت مدیره",
     "کد رزرو صندوقهای سرمایه گذاری قابل معامله",
     "کد رزرو صندوق های سرمایه گذاری قابل معامله",
     "کدواسط دستورالعمل اجرایی",
-    "سلب حق تقدم",
+    # "سلب حق تقدم",
 ]
 df = df[~df.Holder.isin(dropholders)]
 
@@ -181,13 +179,21 @@ df["date1"] = df["date"].apply(vv4)
 df["date1"] = pd.to_datetime(df["date1"])
 df["shamsi"] = df["date1"].apply(JalaliDate)
 df["week_of_year"] = df.shamsi.apply(lambda x: x.strftime("%W"))
-df['year_of_year'] = (df.jalaliDate/1e4).astype(int).astype(str)
-df['Month_of_year'] = ((df.jalaliDate/1e4 -(df.jalaliDate/1e4).astype(int))*1e2).astype(int).astype(str)
+df["year_of_year"] = (df.jalaliDate / 1e4).astype(int).astype(str)
+df["Month_of_year"] = (
+    ((df.jalaliDate / 1e4 - (df.jalaliDate / 1e4).astype(int)) * 1e2)
+    .astype(int)
+    .astype(str)
+)
+
+
 def func(x):
     if len(x) < 2:
-        return '0' + x
+        return "0" + x
     return x
-df['Month_of_year'] = df.Month_of_year.apply(func)
+
+
+df["Month_of_year"] = df.Month_of_year.apply(func)
 
 
 # %%
@@ -292,15 +298,31 @@ del mapingdict
 del gg
 len(df), list(df)
 
-# %%
-
 
 #%%
+variable = 'Percentile_Rank'
+df['Size_Group'] = 1
+for i in range(1,5):
+    print(i)
+    df.loc[df[variable] > i*0.2, 'Size_Group'] = i+1
+
+variable = 'BookToMarket'
+df['BM_Group'] = 1
+for i in range(1,5):
+    print(i)
+    df.loc[df[variable] > i*0.2, 'BM_Group'] = i+1
+
+
+# %%
+a = df.groupby(['date','BM_Group','Size_Group'])[['Ret']].mean()
+mapingdict = dict(zip(a.index, a.Ret))
+df['Benchmark_Ret'] = df.set_index(
+    ['date','BM_Group','Size_Group']
+    ).index.map(mapingdict)
+df['Residual_Bench'] = df['Ret'] - df['Benchmark_Ret']
+
+# %%
 df.drop(columns=["shamsi"]).to_parquet(
     path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
 )
-
-#%%
-HolderData[HolderData.symbol == "فولاد"]
-
 # %%
