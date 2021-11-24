@@ -101,7 +101,7 @@
 			\end{figure}
 		\end{frame}   
 	
-	\begin{frame}{Motivation}{Research Question}
+	\begin{frame}{Motivation}
 		
 		\begin{itemize}
 			\item\textbf{Does direct or indirect common ownership cause stock return co-movement?}
@@ -224,7 +224,7 @@
 		
 		
 		
-		\node (comovement) [startstop1] {Comovement effect};
+		\node (comovement) [startstop1] {Comovement};
 		
 		\pause
 		
@@ -366,7 +366,7 @@
 				\begin{columns}
 				\column{0.5\textwidth}
 				\begin{itemize}
-					\item What is the business group?
+					\item  Business group
 							
 								
 				\end{itemize}
@@ -419,192 +419,188 @@
 				
 			\end{itemize}
 		\end{frame}
-		
-%		\begin{frame}{Pair Composition and Business Group}{Business Group }
-%			
-%
-%		\end{frame}
+
 		
 		
-%		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
-%			\begin{columns}
-%				\column{.5\textwidth}     
-%				\centering
-%				{}\\
-%				\resizebox{\textwidth}{!}{
-%					\begin{tikzpicture}[node distance=2cm]
-%						
-%						
-%						\node (start) [startstop] {Ultimate Owner};
-%						
-%						
-%						
-%						\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
-%						\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
-%						
-%						
-%						
-%						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-%						
-%						
-%						\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-%						
-%						
-%						\node (CH) [process, below of = start ,xshift=0] {Common Owner};
-%						
-%						
-%						\draw [arrow] (start) --(end);
-%						\draw [arrow] (end) --(sur);
-%						
-%						\draw [arrow] (start) --(end2);
-%						
-%						\draw [arrow] (end) --(sur);
-%						\draw [arrow] (end2) -- (sur2);
-%						
-%						
-%						\draw [arrow] (CH) -- (sur);
-%						\draw [arrow] (CH) -- (sur2);
-%						\draw [dashed ,->] (start) --(CH);
-%						
-%						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
-%						
-%						
-%					\end{tikzpicture}
-%				}
-%				
-%				\pause
-%				\column{.5\textwidth}
-%				\centering  
-%				{}\\
-%				\resizebox{\textwidth}{!}{
-%					\begin{tikzpicture}[node distance=2cm]
-%						
-%						
-%						\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-%						\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-%						
-%						
-%						\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-%						
-%						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-%						
-%						\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-%						
-%						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-%						
-%						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-%						
-%						
-%						
-%						\draw [arrow] (start) --(end);
-%						\draw [arrow] (start2) -- (end2);
-%						
-%						\draw [arrow] (end) --(sur);
-%						\draw [arrow] (end2) -- (sur2);
-%						
-%						\draw [dash dot,->] (start) -- (CH);
-%						\draw [dash dot,->] (start2) -- (CH);
-%						
-%						\draw [arrow] (CH) -- (sur);
-%						\draw [arrow] (CH) -- (sur2);
-%						
-%						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
-%						
-%						
-%					\end{tikzpicture}
-%				} 
-%				
-%				\end{columns}
-%		\end{frame}
-%		
-%		
+		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
+			\begin{columns}
+				\column{.5\textwidth}     
+				\centering
+				{}\\
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						\node (start) [startstop] {Ultimate Owner};
+						
+						
+						
+						\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
+						\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
+						
+						
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						
+						\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						\node (CH) [process, below of = start ,xshift=0] {Common Owner};
+						
+						
+						\draw [arrow] (start) --(end);
+						\draw [arrow] (end) --(sur);
+						
+						\draw [arrow] (start) --(end2);
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						\draw [dashed ,->] (start) --(CH);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
+						
+						
+					\end{tikzpicture}
+				}
+				
+				\pause
+				\column{.5\textwidth}
+				\centering  
+				{}\\
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						\node (start) [startstop] { $ \text{Ultimate Owner A} $};
+						\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+						
+						
+						\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+						
+						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+						
+						\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						
+						\draw [arrow] (start) --(end);
+						\draw [arrow] (start2) -- (end2);
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						\draw [dash dot,->] (start) -- (CH);
+						\draw [dash dot,->] (start2) -- (CH);
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
+						
+						
+					\end{tikzpicture}
+				} 
+				
+				\end{columns}
+		\end{frame}
 		
 		
-	%	\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
-	%		\begin{columns}
-	%			\column{.5\textwidth}     
-	%			\centering
-	%			{}\\
-	%			
-	%			\resizebox{\textwidth}{!}{
-	%				\begin{tikzpicture}[node distance=2cm]
-	%					
-	%					
-	%					
-	%					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-	%					
-	%					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-	%					
-	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-	%					
-	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-	%					
-	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-	%					
-	%					
-	%					\draw [arrow] (end) --(sur);
-	%					\draw [arrow] (end2) -- (sur2);
-	%					
-	%					
-	%					\draw [arrow] (CH) -- (sur);
-	%					\draw [arrow] (CH) -- (sur2);
-	%					
-	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-	%					
-	%					
-	%				\end{tikzpicture}
-	%			} 
-	%			
-	%			\column{.5\textwidth}
-	%			\centering  
-	%			{}\\
-	%			
-	%			\resizebox{\textwidth}{!}{
-	%				\begin{tikzpicture}[node distance=2cm]
-	%					
-	%					
-	%					\node (start) [startstop] { $ \text{Ultimate Owner} $};
-	%					
-	%					
-	%					\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-	%					
-	%					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-	%					
-	%					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-	%					
-	%					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-	%					
-	%					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-	%					
-	%					
-	%					
-	%					\draw [arrow] (start) --(end);
-	%					
-	%					\draw [arrow] (end) --(sur);
-	%					\draw [arrow] (end2) -- (sur2);
-	%					
-	%					\draw [dash dot,->] (start) -- (CH);
-	%					
-	%					\draw [arrow] (CH) -- (sur);
-	%					\draw [arrow] (CH) -- (sur2);
-	%					
-	%					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-	%					
-	%					
-	%				\end{tikzpicture}
-	%			} 
-	%			
-	%		\end{columns}
-	%	\end{frame}
+		
+		
+		\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
+			\begin{columns}
+				\column{.5\textwidth}     
+				\centering
+				{}\\
+				
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						
+						\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+						
+						\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+						
+						\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+						
+						
+					\end{tikzpicture}
+				} 
+				
+				\column{.5\textwidth}
+				\centering  
+				{}\\
+				
+				\resizebox{\textwidth}{!}{
+					\begin{tikzpicture}[node distance=2cm]
+						
+						
+						\node (start) [startstop] { $ \text{Ultimate Owner} $};
+						
+						
+						\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+						
+						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+						
+						\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+						
+						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+						
+						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+						
+						
+						
+						\draw [arrow] (start) --(end);
+						
+						\draw [arrow] (end) --(sur);
+						\draw [arrow] (end2) -- (sur2);
+						
+						\draw [dash dot,->] (start) -- (CH);
+						
+						\draw [arrow] (CH) -- (sur);
+						\draw [arrow] (CH) -- (sur2);
+						
+						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+						
+						
+					\end{tikzpicture}
+				} 
+				
+			\end{columns}
+		\end{frame}
 		
 		
 		
 			\begin{frame}{Data Summary}
 			\begin{itemize}
-				\item We use blockholders' data from 2014/03/25 \scriptsize{(1393/01/06)} \normalsize to 2020/03/18 \scriptsize (1398/12/28)  \normalsize
+				\item Data: 2014/03/25 \scriptsize{(1393/01/06)} \normalsize - 2020/03/18 \scriptsize (1398/12/28)  \normalsize
 				\begin{itemize}
-					\item Includes of 72 Months
-					\item Consists of 618 firm inculding 562 firm with common owners
+					\item  72 Months
+					\item 618 firm including 562 firms with common owners
 					
 				\end{itemize}
 			\end{itemize}
@@ -792,7 +788,7 @@
 %			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
 %		\end{frame}
 
-	\begin{frame}{Measuring Common-ownership}\label{Intuition}
+	\begin{frame}{Measuring Common-ownership}\label{measure}
 				\begin{columns}
 			\column{.5\textwidth}    
 			\centering  
@@ -809,16 +805,18 @@
 						\end{align*}     				         
 		\end{columns}
 	\pause
-		\begin{block}{Intuition}
-			If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
-			\hyperlink{Proof}{\beamerbutton{Proof}}
-		\end{block}
+%		\begin{block}{Intuition}
+%			If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
+%			\hyperlink{Proof}{\beamerbutton{Proof}}
+%		\end{block}
 		\begin{table}[htbp]
 								\centering
-								\resizebox{0.8\textwidth}{!}
+								\resizebox{0.9\textwidth}{!}
 								{
 									\input{Output/FCACal.tex}  }          
 							\end{table}
+						\hfill
+						\hyperlink{example}{\beamerbutton{Example}}
 	\end{frame}
 	
 	
@@ -915,10 +913,10 @@
 				\end{table}
 				
 				
-				\begin{block}{Conclusion}
-					\scriptsize
-					We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
-				\end{block}
+%				\begin{block}{Conclusion}
+%					\scriptsize
+%					We use the 4 Factor + Industry model to control for exposure to systematic risk because it almost captures all correlations between two firms in each pair.
+%				\end{block}
 		
 	\end{frame}
 	%   
@@ -1030,9 +1028,9 @@
 	
 	\section{Results}
 	
-	\subsection{Normalized Rank-Transformed}
+	\subsection{Common ownership \& Co-movement}
 	
-	\begin{frame}{Future Correlation via $ MFCAP $}{Normalized Rank-Transformed}
+	\begin{frame}{Correlation and Common Ownership}
 		\label{Monthly16} 
 		\begin{columns}
 			\column{.5\textwidth}  
@@ -1134,7 +1132,7 @@
 		
 	%
 	%
-		\begin{frame}{ 4 Factor + Industry Future  Correlation via $ MFCAP^* $}{High level of common ownership}\label{Monthly19}
+		\begin{frame}{Correlation and Common Ownership}{High level of common ownership}\label{Monthly19}
 		
 		
 		
@@ -1226,7 +1224,7 @@
 \end{frame}
 
 
-\begin{frame}{Business group and Future correlation in Turnover}
+\begin{frame}{Business group and correlation in Turnover}
 	\begin{table}[htbp]
 		\centering
 		\resizebox{\textwidth}{!}{
@@ -1236,7 +1234,7 @@
 	\end{table}
 \end{frame}
 
-\begin{frame}{Future correlation in Turnover and Co-movement}
+\begin{frame}{Correlation in Turnover and Co-movement}
 \begin{table}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{
@@ -1347,7 +1345,7 @@
 	
 	
 \subsection{Institutional Imbalance}
-\begin{frame}{Ins Imbalance}
+\begin{frame}{Institutional Imbalance}
 
 \begin{itemize}
 	\item \cite{seasholes2007predictable}
@@ -1412,11 +1410,11 @@
 %			\item We derive a measure that captures the extent of common ownership distribution.
 			
 			
-			\item Direct common ownership can affect firms' co-movement
+			\item Direct common ownership affects firms' co-movement.
 			\item 
 			Firms in the business groups co-move more than other pairs
-			\item Direct common ownership only matters for firms in the business groups
-			\item Firms in the same business group trade together
+			\item Direct common ownership only matters for firms in the business groups.
+			\item In the Business groups, firms are traded in the same time and also in the same direction.
 			
 		\end{itemize}
 	\end{frame}
@@ -1475,7 +1473,7 @@
 	\end{frame}
 	
 			
-			\begin{frame}{Measuring Common-ownership}\label{Intuition}
+			\begin{frame}{Measuring Common-ownership}\label{two}
 				\cite{AntonPolk}
 				\begin{align*}
 					\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
@@ -1544,7 +1542,8 @@
 			\end{frame}
 			
 			
-			\begin{frame}{Measuring Common Ownership}{Example of three common owner}
+			\begin{frame}{Measuring Common Ownership}{Example of three common owner} \label{example}
+				\centering
 				\begin{tikzpicture}[node distance=1cm]
 					
 					
@@ -1593,7 +1592,8 @@
 						\input{Elements/Example2}
 					}
 				\end{table}
-				
+			\hfill
+				\hyperlink{measure}{\beamerbutton{Back}}
 			\end{frame}
 			
 			
