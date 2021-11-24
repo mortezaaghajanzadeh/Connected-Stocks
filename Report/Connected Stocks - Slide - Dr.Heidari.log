@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  24 NOV 2021 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  24 NOV 2021 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1481,12 +1481,12 @@ e 1054.
 
 ]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-11-24 12:35:50
-(epstopdf)                    size: 30803 bytes
+(epstopdf)                    date: 2021-11-24 12:40:35
+(epstopdf)                    size: 30667 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2021-11-24 12:39:13
-(epstopdf)                    size: 13081 bytes
+(epstopdf)                    date: 2021-11-24 12:40:53
+(epstopdf)                    size: 13192 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 1163.
@@ -1500,12 +1500,12 @@ Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
 d on input line 1163.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2021-11-24 12:35:51
-(epstopdf)                    size: 23878 bytes
+(epstopdf)                    date: 2021-11-24 12:40:35
+(epstopdf)                    size: 23742 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
-(epstopdf)                    date: 2021-11-24 12:39:17
-(epstopdf)                    size: 16202 bytes
+(epstopdf)                    date: 2021-11-24 12:40:56
+(epstopdf)                    size: 16306 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 1163.
@@ -1550,7 +1550,7 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 1289.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=570, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=572, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -1575,7 +1575,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 1397.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=597, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=599, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -1612,12 +1612,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [44
 
 ]
-<Elements/1.png, id=708, 494.8086pt x 299.6796pt>
+<Elements/1.png, id=710, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
 Package pdftex.def Info: Elements/1.png  used on input line 1548.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<Elements/2.png, id=710, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=712, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
 Package pdftex.def Info: Elements/2.png  used on input line 1548.
@@ -1633,12 +1633,12 @@ Package pdftex.def Info: Elements/2.png  used on input line 1548.
 ] (./Elements/marketcap.tex) [48
 
 ]
-<Elements/3.png, id=738, 722.7pt x 360.3864pt>
+<Elements/3.png, id=740, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
 Package pdftex.def Info: Elements/3.png  used on input line 1633.
 (pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<Elements/4.png, id=739, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=741, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
 Package pdftex.def Info: Elements/4.png  used on input line 1633.
@@ -1732,11 +1732,11 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 109229
-1 bytes).
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 109228
+4 bytes).
 PDF statistics:
- 981 PDF objects out of 1000 (max. 8388607)
- 830 compressed objects within 9 object streams
+ 983 PDF objects out of 1000 (max. 8388607)
+ 832 compressed objects within 9 object streams
  199 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
