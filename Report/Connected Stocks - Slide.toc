@@ -1,0 +1,23 @@
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Literature}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Main Effect}{6}{0}{2}
+\beamer@sectionintoc {3}{Empirical Studies}{16}{0}{3}
+\beamer@subsectionintoc {3}{1}{Pair composition}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{Measuring Common-ownership}{26}{0}{3}
+\beamer@subsectionintoc {3}{3}{Correlation Calculation}{32}{0}{3}
+\beamer@subsectionintoc {3}{4}{Controls}{34}{0}{3}
+\beamer@sectionintoc {4}{Methodology}{36}{0}{4}
+\beamer@sectionintoc {5}{Results}{40}{0}{5}
+\beamer@subsectionintoc {5}{1}{Normalized Rank-Transformed}{41}{0}{5}
+\beamer@subsectionintoc {5}{2}{High level of common ownership}{45}{0}{5}
+\beamer@subsectionintoc {5}{3}{All pairs}{48}{0}{5}
+\beamer@sectionintoc {6}{Evidence for correlated trading}{49}{0}{6}
+\beamer@subsectionintoc {6}{1}{Turnover}{50}{0}{6}
+\beamer@subsectionintoc {6}{2}{Institutional Imbalance}{58}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{61}{0}{7}
+\beamer@sectionintoc {9}{Appendix I}{65}{1}{8}
+\beamer@sectionintoc {10}{Appendix II}{81}{1}{9}
+\beamer@subsectionintoc {10}{1}{Synchronicity and firm interlocks}{83}{1}{9}
+\beamer@subsectionintoc {10}{2}{Large controlling shareholder and stock price synchronicity}{84}{1}{9}
+\beamer@subsectionintoc {10}{3}{Connected Stocks}{85}{1}{9}
+\beamer@subsectionintoc {10}{4}{Measures' Detail}{86}{1}{9}
