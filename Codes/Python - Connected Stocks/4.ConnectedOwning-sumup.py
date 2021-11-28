@@ -129,6 +129,7 @@ mlist = [
             "Weeklyρ_amihud_f",
         ]
 arrs = os.listdir(path + "NormalzedFCAP9.1")
+arrs.remove("Old")
 counter_file = 0
 for counter, i in enumerate(arrs):
     print(counter, len(Monthly))

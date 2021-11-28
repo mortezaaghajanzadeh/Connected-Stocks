@@ -295,6 +295,9 @@ tt.loc[tt.Gsize_x.isnull(), "Gsize_x"] = 0
 tt.loc[tt.Gsize_y.isnull(), "Gsize_y"] = 0
 tt.loc[tt.TrunResStd_x.isnull(), "TrunResStd_x"] = 0
 tt.loc[tt.TrunResStd_y.isnull(), "TrunResStd_y"] = 0
+tt.to_csv(path + "MonthlyNormalzedFCAP9.3.csv", index=False)
+
+tt.to_parquet(path + "MonthlyNormalzedFCAP9.3.parquet")
 t = t.reset_index()
 t
 
@@ -332,7 +335,7 @@ t["yearmonth"] = t.yearmonth.apply(func)
 t = t.sort_values(by="yearmonth").reset_index(drop=True)
 t
 #%%
-pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
 fig = plt.figure(figsize=(10, 5))
 markers = {1: "s", 0: "X"}
 g = sns.lineplot(
@@ -404,8 +407,4 @@ tt.to_latex(pathR + "\\ResidualTrunStdSummary.tex")
 tt
 
 
-#%%
-tt.to_csv(path + "MonthlyNormalzedFCAP9.3.csv", index=False)
-# %%
-tt.to_parquet(path + "MonthlyNormalzedFCAP9.3.parquet")
 #%%

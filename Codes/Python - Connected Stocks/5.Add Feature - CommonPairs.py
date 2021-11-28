@@ -1138,7 +1138,3 @@ def lowdummy(g):
 
 a = gg.apply(lowdummy).reset_index()
 a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)
-
-# %%
-
-# %%

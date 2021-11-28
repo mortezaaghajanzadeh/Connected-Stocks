@@ -6,7 +6,7 @@ import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\TurnOver_1400_06_28.c
 
 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output"
 
 
 
@@ -29,7 +29,7 @@ cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 quietly asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap    lagdeltagroup leaddeltagroup lagdeltaindustry leaddeltaindustry lagdeltamarket leaddeltamarket,fmb newey(7) first  save(FirstStageTurnover)
 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output"
 
 eststo v1: quietly asreg deltatrun deltamarket deltaindustry   , fmb newey(7)
 estadd loc weight "-" , replace
@@ -115,7 +115,7 @@ cd "E:\RA_Aghajanzadeh\Data\Connected_Stocks"
 quietly asreg delta_amihud delta_amihud_market delta_amihud_group lnmarketcap delta_amihud_industry mreturn lagmreturn leadmreturn return lagdelta_amihud_market leaddelta_amihud_market leaddelta_amihud_marketgroup lagdelta_amihud_marketgroup lagdelta_amihud_industry leaddelta_amihud_industry,fmb newey(7) first  save(FirstStageAmihud)
 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
-cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output"
+cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output"
 
 
 replace delta_amihud_group = delta_amihud_justmarketgr
