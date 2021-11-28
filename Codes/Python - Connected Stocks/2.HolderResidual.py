@@ -320,6 +320,11 @@ df['Benchmark_Ret'] = df.set_index(
     ['date','BM_Group','Size_Group']
     ).index.map(mapingdict)
 df['Residual_Bench'] = df['Ret'] - df['Benchmark_Ret']
+#%%
+df.isnull().sum()
+
+
+
 
 # %%
 df.drop(columns=["shamsi"]).to_parquet(
