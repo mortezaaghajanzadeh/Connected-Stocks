@@ -271,7 +271,7 @@ summ  BigGroupNumber BigGroupCap BigGroupTotalCFR BigGroupUoCap
 
 cor  NMFCA NMFCAM NMFCAG NMFCAGM BigGroupNumber BigGroupCap BigGroupTotalCFR BigGroupUoCap
 
-
+/*
 foreach v of varlist  gdummy0-gdummy47 {
 
 	gen SG`v' = sbgroup * `v'
@@ -287,7 +287,7 @@ foreach v of varlist  gdummy0-gdummy47 {
 	gen SGFCA`v' = sbgroup * NMFCA * `v'
 
 }
-
+*/
 
 replace monthlycrossownership = monthlycrossownership/100
 
@@ -379,3 +379,16 @@ label variable gsize_y " $ {\text{Group Size}_2} $ "
 
 gen turnSbgroup = monthlyρ_turn_f * sbgroup
 label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{TurnOver})_{t+1}} $ "
+
+
+
+
+foreach var of varlist NMFCA sbgroup NMFCAG monthlyρ_5 monthlyρ_5_f monthlyρ_turn_f{
+  summ `var'
+  gen `var'std = `var'/r(sd)
+  }
+
+label variable monthlyρ_5std " $ {\rho_t} / \sigma $ "
+label variable monthlyρ_turn_fstd " $ {\rho(\Delta \text{TurnOver})_t} / \sigma $ "
+  
+summ sbgroupstd

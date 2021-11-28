@@ -282,38 +282,38 @@ esttab   v0 v1 /*v11 v111   v2*/ v21 v3 , nomtitle label   s( Control GroupFE /*
 
  
 
-/*LowRes*/
 
-{
-	eststo v1 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType, fmb newey(4)
+
+{/*LowRes*/
+	eststo v1 :  xi: quietly asreg monthlyρ_5_fstd /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType, fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
 	estadd loc GroupFE "No" , replace
 	estadd loc FE "Yes" , replace
 	estadd loc GroupSizeFE "No" , replace
 
-	eststo v2 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres gsize_y gsize_x  i.PairType, fmb newey(4)
+	eststo v2 :  xi: quietly asreg monthlyρ_5_fstd /*NMFCA */     sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres gsize_y gsize_x  i.PairType, fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
 	estadd loc GroupFE "No" , replace
 	estadd loc FE "Yes" , replace
 	estadd loc GroupSizeFE "Yes" , replace
 
-	eststo v3 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres Grouplowres gsize_y gsize_x  i.PairType, fmb newey(4)
+	eststo v3 :  xi: quietly asreg monthlyρ_5_fstd /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres Grouplowres gsize_y gsize_x  i.PairType, fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
 	estadd loc GroupFE "No" , replace
 	estadd loc FE "Yes" , replace
 	estadd loc GroupSizeFE "Yes" , replace
 	
-	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres Grouplowres i.PairType gdummy0-gdummy47  , fmb newey(4)
+	eststo v6 :  xi: quietly asreg monthlyρ_5_fstd /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowres Grouplowres i.PairType gdummy0-gdummy47  , fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
 	estadd loc GroupFE "Yes" , replace
 	estadd loc FE "Yes" , replace
 	estadd loc GroupSizeFE "No" , replace
 	
-	eststo v7 :  xi: quietly asreg monthlyρ_5_f /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup trunresstd_x trunresstd_y xx gsize_y gsize_x i.PairType, fmb newey(4)
+	eststo v7 :  xi: quietly asreg monthlyρ_5_fstd /*NMFCA */    sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup trunresstd_x trunresstd_y xx gsize_y gsize_x i.PairType, fmb newey(4)
 	estadd loc controll "Yes" , replace
 	estadd loc subsample "Total" , replace
 	estadd loc GroupFE "No" , replace
@@ -334,26 +334,26 @@ esttab   v0 v1 /*v11 v111   v2*/ v21 v3 , nomtitle label   s( Control GroupFE /*
 
 eststo clear
 
-eststo v1 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f , fmb newey(4)
+eststo v1 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd , fmb newey(4)
 estadd loc controll "No" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 
 
-eststo v2 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v2 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 
 
-eststo v3 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
+eststo v3 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "SameGroup" , replace
 estadd loc GroupFE "No" , replace
 
 
 
-eststo v4 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0, fmb newey(4)
+eststo v4 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Others" , replace
 estadd loc GroupFE "No" , replace
@@ -365,34 +365,36 @@ estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 */
 
-eststo v3 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v3 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v4 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1 , fmb newey(4)
+eststo v4 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 1 , fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "SameGroup" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v5 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0 , fmb newey(4)
+eststo v5 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd   sgroup monthlysamesize monthlysamebm monthlycrossownership if sbgroup == 0 , fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Others" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v6 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f  sbgroup sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
+eststo v6 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd  sbgroup sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "No" , replace
 
-eststo v7 : quietly asreg monthlyρ_5_f monthlyρ_5 monthlyρ_turn_f  sbgroup sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47, fmb newey(4)
+eststo v7 : quietly asreg monthlyρ_5_fstd monthlyρ_5std monthlyρ_turn_fstd  sbgroup sgroup turnSbgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47, fmb newey(4)
 estadd loc controll "Yes" , replace
 estadd loc subsample "Total" , replace
 estadd loc GroupFE "Yes" , replace
 
 
 
-esttab   v1 v2 v3 v4 /*v5 v6 v7*/, nomtitle  label  keep(monthlyρ_turn_f monthlyρ_5 /*sbgroup turnSbgroup*/ ) order(monthlyρ_turn_f) s( controll subsample   GroupFE   N  ,  lab( "Control" "Sub-sample" "Business Group FE" "Observations")) compress mgroups("Dependent Variable: Standardized Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))  ,using turncomovement.tex ,replace
+esttab   v1 v2 v3 v4 v5 /*v6 v7*/, nomtitle  label  keep(monthlyρ_turn_fstd monthlyρ_5std /*sbgroup turnSbgroup*/ ) order(monthlyρ_turn_fstd) s( controll subsample   GroupFE   N  ,  lab( "Control" "Sub-sample" "Business Group FE" "Observations")) compress mgroups("Dependent Variable: Standardized Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))
+
+esttab   v1 v2 v3 v4 v5 /*v6 v7*/, nomtitle  label  keep(monthlyρ_turn_fstd monthlyρ_5std /*sbgroup turnSbgroup*/ ) order(monthlyρ_turn_fstd) s( controll subsample   GroupFE   N  ,  lab( "Control" "Sub-sample" "Business Group FE" "Observations")) compress mgroups("Dependent Variable: Standardized Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))  ,using turncomovement.tex ,replace
  
 
 
