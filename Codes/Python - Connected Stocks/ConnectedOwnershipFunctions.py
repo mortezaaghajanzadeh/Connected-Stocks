@@ -104,6 +104,10 @@ def SecondCal(a):
         "Delta_Trunover_y",
         "Delta_Amihud_x",
         "Delta_Amihud_y",
+        "Benchmark_Ret_x",
+        "Residual_Bench_x",
+        "Benchmark_Ret_y",
+        "Residual_Bench_y",
     ]
     for i in mlist:
         mapingdict = dict(zip(a.date, a[i]))
@@ -176,6 +180,7 @@ def AfterCal(f, g, S_g, intersection):
     t["MaxCommon"] = t[["Percent_x", "Percent_y"]].max(1)
     mapdict = dict(zip(t.date, t.MaxCommon))
     f["CrossOwnership"] = f["date"].map(mapdict).fillna(0)
+
     f = MonthlyCalculation(f)
     f = WeeklyCalculation(f)
     return f
@@ -353,6 +358,8 @@ def MonthlyCorr(f):
                 "Delta_Trunover_y",
                 "Delta_Amihud_x",
                 "Delta_Amihud_y",
+                "Residual_Bench_x",
+                "Residual_Bench_y",
             ]
         ]
         .corr()
@@ -365,6 +372,7 @@ def MonthlyCorr(f):
         "5-Residual",
         "6-Residual",
         "5Lag-Residual",
+        "Residual_Bench",
     ]:
         cor = fc.loc[fc.level_2 == i + "_y"][
             ["year_of_year", "month_of_year", i + "_x"]
@@ -500,6 +508,8 @@ def WeeklyCorr(f):
                 "Delta_Trunover_y",
                 "Delta_Amihud_x",
                 "Delta_Amihud_y",
+                "Residual_Bench_x",
+                "Residual_Bench_y",
             ]
         ]
         .corr()
@@ -511,6 +521,7 @@ def WeeklyCorr(f):
         "5-Residual",
         "6-Residual",
         "5Lag-Residual",
+        "Residual_Bench",
     ]:
         cor = fc.loc[fc.level_2 == i + "_y"][
             ["year_of_year", "week_of_year", i + "_x"]

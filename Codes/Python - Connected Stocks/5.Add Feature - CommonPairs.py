@@ -765,27 +765,52 @@ df1["Monthlyρ_5_3"] = df1.groupby("id").Monthlyρ_5.shift(3)
 df1["Monthlyρ_5_4"] = df1.groupby("id").Monthlyρ_5.shift(4)
 df1["Monthlyρ_5_5"] = df1.groupby("id").Monthlyρ_5.shift(5)
 #%%
+df1["changedBG"] = 0
+df1['SBGperiod'] = 0
+df1['changePeriodDummy'] = 0 
 df1["sameBgChange"] = 0
 df1["becomeSameBG"] = 0
 gg = df1.groupby("id")
-df1["changedBG"] = 0
-
-
-def changedBg(t):
+t = gg.get_group(705)
+def changeBg(t):
     print(t.name)
     if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
         t["changedBG"] = 1
         if t.sBgroup.iloc[0] == 1:
-            ind = t.loc[t.sBgroup == 0].index[0]
-            t.loc[t.index >= ind, "sameBgChange"] = 1
-        else:
-            ind = t.loc[t.sBgroup == 1].index[0]
-            t.loc[t.index >= ind, "sameBgChange"] = 1
+            ind = t.loc[t.sBgroup == 0].t_Month.iloc[0]
+            t["sameBgChange"] = 1
+            t.loc[t.t_Month >= ind, "changePeriodDummy"] = 1
+            t["SBGperiod"] = t.t_Month - ind
+        if t.sBgroup.iloc[0] == 0:
+            ind = t.loc[t.sBgroup == 1].t_Month.iloc[0]
             t["becomeSameBG"] = 1
+            t.loc[t.t_Month >= ind, "changePeriodDummy"] = 1
+            t["SBGperiod"] = t.t_Month - ind
     return t
+df1 =  gg.apply(changeBg)
+
+#%%
+# df1["sameBgChange"] = 0
+# df1["becomeSameBG"] = 0
+# gg = df1.groupby("id")
+# df1["changedBG"] = 0
 
 
-df1 = gg.apply(changedBg)
+# def changedBg(t):
+#     print(t.name)
+#     if t.sBgroup.sum() != len(t) and t.sBgroup.sum() != 0:
+#         t["changedBG"] = 1
+#         if t.sBgroup.iloc[0] == 1:
+#             ind = t.loc[t.sBgroup == 0].index[0]
+#             t.loc[t.index >= ind, "sameBgChange"] = 1
+#         else:
+#             ind = t.loc[t.sBgroup == 1].index[0]
+#             t.loc[t.index >= ind, "sameBgChange"] = 1
+#             t["becomeSameBG"] = 1
+#     return t
+
+
+
 
 
 #%%
@@ -1082,12 +1107,13 @@ df1.loc[df1.uo_y.isin(ll), "BigBusinessGroup"] = 1
 #%%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-n1 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
-print(len(df1))
-df1.to_csv(n1)
 n1 = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
 print(len(df1))
 df1.to_parquet(n1)
+n1 = path + "MonthlyNormalzedFCAP9.2" + ".csv"
+print(len(df1))
+df1.to_csv(n1)
+
 # %%
 a = result.groupby("uo")[Imbalances[:-1]].mean()
 a = a.sort_values(by=Imbalances[:-1]).dropna()
