@@ -72,8 +72,6 @@
 	estadd loc SubSample "All" , replace
 	estadd loc Pairtypr "Yes" , replace
 
-
-
 	eststo v10: xi: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 1 , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
@@ -87,10 +85,14 @@
 	estadd loc Pairtypr "Yes" , replace
 	
 
+	esttab    v1 v2 v3 v4 /*v5*/ v6 v61   ,nomtitle label   s(  /*SubSample GroupFE*/ controll Pairtypr N  /*r2*/ ,  lab(/*"Sub-sample" "Group Effect"*/ "Controls" "PairType Control" "Observations"  /*"$ R^2 $"*/))   keep(NMFCA sbgroup) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+	
 	esttab    v1 v2 v3 v4 /*v5*/ v6 v61   ,nomtitle label   s(  /*SubSample GroupFE*/ controll Pairtypr N  /*r2*/ ,  lab(/*"Sub-sample" "Group Effect"*/ "Controls" "PairType Control" "Observations"  /*"$ R^2 $"*/))   keep(NMFCA sbgroup) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using mresult2part1-slide.tex ,replace
 	
 	
-	esttab v10 v11 /*v7*/ v8 v9 v91,nomtitle label   s( SubSample GroupFE /*controll*/ N /*Pairtypr r2*/ ,  lab( "Sub-sample" "Business Group FE" "Observations" /*"Controls" "PairType Control" "$ R^2 $"*/))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 	, using mresult2part2-slide.tex ,replace
+	esttab v10 v11 /*v7*/ v8 v9 v91,nomtitle label   s( SubSample GroupFE /*controll*/ N /*Pairtypr r2*/ ,  lab( "Sub-sample" "Business Group FE" "Observations" /*"Controls" "PairType Control" "$ R^2 $"*/))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
+ 	
+	esttab v10 v11 /*v7*/ v8 v9 v91,nomtitle label   s( SubSample GroupFE /*controll*/ N /*Pairtypr r2*/ ,  lab( "Sub-sample" "Business Group FE" "Observations" /*"Controls" "PairType Control" "$ R^2 $"*/))   keep(NMFCA sbgroup NMFCAG) compress order(NMFCA sbgroup     ) mgroups("Dependent Variable: Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ), using mresult2part2-slide.tex ,replace
 	
 	
 }
