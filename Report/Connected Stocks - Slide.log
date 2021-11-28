@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  28 NOV 2021 10:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  28 NOV 2021 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2403,10 +2403,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26108 strings out of 480608
- 519485 string characters out of 5907536
- 796549 words of memory out of 5000000
- 41061 multiletter control sequences out of 15000+600000
+ 26109 strings out of 480608
+ 519503 string characters out of 5907536
+ 795549 words of memory out of 5000000
+ 41062 multiletter control sequences out of 15000+600000
  549918 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,810b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2435,7 +2435,7 @@ texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide.pdf" (87 pages, 1280544 bytes).
+Output written on "Connected Stocks - Slide.pdf" (87 pages, 1280644 bytes).
 PDF statistics:
  3262 PDF objects out of 3580 (max. 8388607)
  3004 compressed objects within 31 object streams
