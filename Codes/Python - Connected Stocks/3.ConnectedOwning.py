@@ -88,34 +88,18 @@ def genFile(df, path, g, i):
     )
 
 
-# for i in list(gg.groups.keys()):
-#     n = time.time()
-#     g = gg.get_group(i)
-#     F_id = g.id.iloc[0]
-#     print("Id " + str(F_id))
-#     df = df[df.id > F_id]
-#     gg = df.groupby(["id"])
-#     genFile(df, path, g, i)
-#     print(time.time() - n)
+path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
-# threads = {}
-# for i in list(gg.groups.keys()):
-#     n = time.time()
-#     g = gg.get_group(i)
-#     F_id = g.id.iloc[0]
-#     print("Id " + str(F_id))
-#     df = df[df.id > F_id]
-#     gg = df.groupby(["id"])
-#     genFile(df, path, g, i)
-#     print(time.time() - n)
-#     while psutil.virtual_memory().percent > 80:
-#         1+2
-#     threads[i] = Thread(
-#             target=genFile,
-#             args=(df,path,g,i),
-#         )
-#     threads[i].start()
-# threads[i-1].join()
+for i in list(gg.groups.keys()):
+    n = time.time()
+    g = gg.get_group(i)
+    F_id = g.id.iloc[0]
+    print("Id " + str(F_id))
+    df = df[df.id > F_id]
+    gg = df.groupby(["id"])
+    genFile(df, path, g, i)
+    print(time.time() - n)
+
 #%%
 # All pairs
 
@@ -150,21 +134,4 @@ for i in list(gg.groups.keys()):
     print(time.time() - n)
 
 
-#     while psutil.virtual_memory().percent > 80:
-#         1+2
-#     try:
-#         threads[i] = Thread(
-#                 target=genFile,
-#                 args=(df,path,g,i),
-#             )
-#         threads[i].start()
-#     except:
-#         while psutil.virtual_memory().percent > 80:
-#             1+2
-#         threads[i] = Thread(
-#                 target=genFile,
-#                 args=(df,path,g,i),
-#             )
-#         threads[i].start()
-# threads[i-1].join()
 # %%
