@@ -7,10 +7,10 @@ import numpy as np
 from matplotlib.ticker import FuncFormatter
 
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
+pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output\\"
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
 
 #%%
 n = path + "Holder_Residual_1400_06_28" + ".parquet"
@@ -20,9 +20,8 @@ df = df[df.jalaliDate > 13930000]
 #%%
 df['Grouped'] = 1
 df.loc[df.uo.isnull(), "Grouped"] = 0
-sns.lineplot(data=df
-             , x="jalaliDate"
-             , y="5_Residual"
+df['jalaliDate'] = df.jalaliDate.astype(str)
+
              , hue="Grouped")
 
 

@@ -362,7 +362,7 @@ def MonthlyCorr(f):
                 "Residual_Bench_y",
             ]
         ]
-        .corr()
+        .corr(min_periods  = 5)
         .reset_index()
     )
 
@@ -512,7 +512,7 @@ def WeeklyCorr(f):
                 "Residual_Bench_y",
             ]
         ]
-        .corr()
+        .corr(min_periods  = 5)
         .reset_index()
     )
     for i in [

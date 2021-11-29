@@ -60,7 +60,7 @@
 	estadd loc Pairtypr "Yes" , replace
 
 
-	eststo v9: xi: quietly asreg monthlyρ_5_fstd NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 i.PairType , fmb newey(4)
+	eststo v9: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership gdummy0-gdummy47 i.PairType , fmb newey(4)
 	estadd loc GroupFE "Yes" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace

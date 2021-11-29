@@ -42,16 +42,15 @@ def prepare():
 
 
 df = prepare()
-df.head()
 
 # %%
-df[df.symbol == "فولاد"].id.iloc[0], df[df.symbol == "خودرو"].id.iloc[0]
+df[df.symbol == "سامان"].id.iloc[0], df[df.symbol == "ممسنی"].id.iloc[0]
 
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(167)
-S_g = gdata.get_group(157)
+g = gdata.get_group(238)
+S_g = gdata.get_group(490)
 
 
 #%%
@@ -78,16 +77,26 @@ data = pd.DataFrame()
 gg = df.groupby(["id"])
 counter = 0
 
-
 def genFile(df, path, g, i):
     S_gg = df.groupby(["id"])
     # data = data.append(S_gg.apply(FCAPf, g=g))
     pickle.dump(
         S_gg.apply(FCAPf, g=g, AllPair=False),
+        # parallel,
         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
     )
 
+import functools, multiprocessing
+from multiprocessing import Pool, cpu_count
+import pandas as pd
+import numpy as np
+import timeit
+import time
 
+
+
+
+#%%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
 for i in list(gg.groups.keys()):
