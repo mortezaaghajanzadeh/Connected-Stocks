@@ -1,33 +1,24 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{5}{c}}
+\begin{tabular}{l*{4}{c}}
 \hline\hline
-                &\multicolumn{5}{c}{Dependent Variable:  Future Pairs's co-movement}                           \\\cmidrule(lr){2-6}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                &\multicolumn{4}{c}{Dependent Variable:  Future Pairs's co-movement}        \\\cmidrule(lr){2-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
 \hline
-Same Group      &   0.0201\sym{***}&   0.0216\sym{***}&   0.0154\sym{***}&   0.0131\sym{***}&   0.0468\sym{***}\\
-                &   (8.47)         &   (8.35)         &   (5.04)         &   (4.30)         &   (5.23)         \\
+Same Group      &   0.0277\sym{***}&   0.0280\sym{***}&   0.0204\sym{***}&  -0.0301         \\
+                &   (4.88)         &   (5.32)         &   (3.50)         &  (-0.71)         \\
 [1em]
-LowResidualStd  &                  &  0.00227\sym{*}  &  0.00166         & 0.000546         &                  \\
-                &                  &   (2.04)         &   (1.47)         &   (0.30)         &                  \\
+LowResidualStd  &                  & -0.00160         & -0.00369         &  -0.0313         \\
+                &                  &  (-0.70)         &  (-1.56)         &  (-0.98)         \\
 [1em]
-$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ &                  &                  &   0.0155\sym{**} &   0.0175\sym{***}&                  \\
-                &                  &                  &   (3.36)         &   (4.10)         &                  \\
-[1em]
- $ {\text{Group Turnover std}\_1} $ &                  &                  &                  &                  & -0.00245         \\
-                &                  &                  &                  &                  &  (-1.31)         \\
-[1em]
- $ {\text{Group Turnover std}\_2} $ &                  &                  &                  &                  & -0.00105         \\
-                &                  &                  &                  &                  &  (-0.93)         \\
-[1em]
-$ {\text{Group Turnover std} } \times {\text{SameGroup} }  $ &                  &                  &                  &                  &  -0.0407\sym{**} \\
-                &                  &                  &                  &                  &  (-3.24)         \\
+$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ &                  &                  &   0.0182\sym{***}&   0.0190\sym{***}\\
+                &                  &                  &   (3.60)         &   (4.06)         \\
 \hline
-Group Size Effect&       No         &      Yes         &      Yes         &       No         &      Yes         \\
-Business Group FE&       No         &       No         &       No         &      Yes         &       No         \\
-Observations    &  1240895         &  1240895         &  1240895         &  1240895         &  1240895         \\
+Group Size Effect&       No         &      Yes         &      Yes         &       No         \\
+Business Group FE&       No         &       No         &       No         &      Yes         \\
+Observations    &   297874         &   297874         &   297874         &   297874         \\
 \hline\hline
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

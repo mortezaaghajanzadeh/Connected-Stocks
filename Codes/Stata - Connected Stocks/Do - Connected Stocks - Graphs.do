@@ -194,3 +194,10 @@ graph export Qmcorr5lrdbgsubsample.png,replace
 binscatter monthlyρ_5_f NMFCA if NMFCA >= 0.8659935 , ytitle("{&rho} {sub:ij,t+1}") nquantiles(40) note("This figure shows the stock return co-movement and common ownership." "Allow for discontinuity in fourth quarter") xtitle("MFCAP*")    
 graph export Qmcorr5subsample.eps,replace
 graph export Qmcorr5subsample.png,replace
+
+
+
+
+scatter monthlyρ_5 sbgperiod if becomesamebg == 1 & abs(sbgperiod)<20 , xline(0) msymbol(Oh) msize(vsmall) || mband monthlyρ_5 sbgperiod if becomesamebg == 1 & abs(sbgperiod)<20,legen(label(2 "Median") label(3  "Mean") order(2))
+
+

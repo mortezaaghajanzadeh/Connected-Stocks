@@ -105,7 +105,7 @@ tempt = tempt.drop(
         "Max. Block. Ownership",
         "No. of Firms not in Groups",
         "Med. of  Number of Members",
-        "Med. Number of Owners",
+        # "Med. Number of Owners",
         "Med. Block. Ownership",
     ]
 ).rename(
@@ -511,6 +511,7 @@ mlist = [
     "Monthlyρ_2",
     "Monthlyρ_4",
     "Monthlyρ_5",
+    "Monthlyρ_Residual_Bench",
     # "Monthlyρ_5Lag",
 ]
 # tempt = df2[df2.Monthlyρ_2<0.9]
@@ -524,6 +525,7 @@ latex = (
             "Monthlyρ_4": "4 Factor",
             "Monthlyρ_5": "4 Factor + Industry",
             "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
+            "Monthlyρ_Residual_Bench": "Benchmark",
         },
         columns={
             "50%": "median",
@@ -538,6 +540,7 @@ tempt.drop(columns=["count", "25%", "75%"]).rename(
         "Monthlyρ_4": "4 Factor",
         "Monthlyρ_5": "4 Factor + Industry",
         "Monthlyρ_5Lag": "4 Factor + Industry (With Lag)",
+        "Monthlyρ_Residual_Bench": "Benchmark",
     },
     columns={
         "50%": "median",
@@ -1214,4 +1217,12 @@ plt.title("Pairs in the forth quarter")
 plt.savefig(pathResult + "\\sameIBGinQuarter.eps", bbox_inches="tight")
 plt.savefig(pathResult + "\\sameIBGinQuarter.jpg", bbox_inches="tight")
 plt.show()
+# %%
+
+# %%
+
+# %%
+
+# %%
+
 # %%

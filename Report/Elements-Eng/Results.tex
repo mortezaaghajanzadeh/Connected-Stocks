@@ -8,7 +8,7 @@
 
 	in the following month. We empirically test the impact of current measured
 	common ownership on the next period’s co-movement
-	At the first step, we study the effects of business groups and common ownership on the co-movement. As it has shown in \ref{mcorr50},, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's co-movement on the considered variables.
+	At the first step, we study the effects of business groups and common ownership on the co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's co-movement on the considered variables.
 	\input{Elements/Model11}
 	
 	For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{MFCA}^*_{ij,t}$, $\textit{Same Group}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
@@ -25,10 +25,10 @@
 	
 	The estimated results are presented in tables \ref{mresult2part1}
 	and \ref{mresult2part2}.
-	In the two first columns table \ref{mresult2part1}, we estimate a simplified version of equation \ref{model1} with only common ownership measure($ MFCAP^*_{i,j}$). In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity.  We find that $ MFCAP^*_{i,j}$ is significant with a coefficient of $0.00112$ and a t-statistics of $2.11$ in the presence of control variables. 
+	In the two first columns table \ref{mresult2part1}, we estimate a simplified version of equation \ref{model1} with only common ownership measure($ MFCAP^*_{i,j}$). In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity.  We find that $ MFCAP^*_{i,j}$ is significant with a coefficient of $0.00324$ and a t-statistics of $4.8$ in the presence of control variables. 
 	
 	
-	In Columns 3 and 4 of that table, we use another simplified version of equation \ref{model1}, with only Same Group. The estimated coefficient in this specification, Same Group is highly statistically significant, with a coefficient of   $0.0153$ and a t-statistics of $7.9$. 
+	In Columns 3 and 4 of that table, we use another simplified version of equation \ref{model1}, with only Same Group. The estimated coefficient in this specification, Same Group is highly statistically significant, with a coefficient of   $0.0312$ and a t-statistics of $5.39$. 
 	There is a significant difference in the impact of same business groups and the common ownership, according to the results. 
 	
 	In the fifth specification of table \ref{mresult2part1}, we use both \textit{Same Group}  and $\text{MFCAP}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that pair in the same business group affects more than a higher level of common ownership
@@ -66,19 +66,6 @@
 \end{table}}
 
 
-% \begin{landscape}
-	%
-	%	{\begin{table}[p]
-			%	\centering
-			%	\caption{Connected Co-movement}
-			%	\label{mresult2}
-			%	\resizebox{1.2\textwidth}{!}{
-				%		
-					%			{\input{Output/mresult2-slide.tex}}
-					%		
-				%	}
-			%\end{table}}
-			% \end{landscape}
 		\FloatBarrier
 		
 		
@@ -120,78 +107,7 @@
 				\label{QarterSummary}
 			\end{figure}
 			
-		
-		%\begin{itemize}
-		%	\item 
-		%	با توجه به جدول 
-		%	\ref{measureResults}
-		%	گروه های کسب و کار به صورت مالکیت بالاتر نیز دارند 
-		%	\item
-		%	برای برطرف کردن این مسئله بررسی را محدود به مالکیت مشترک بالا کردیم
-		%	\item
-		%	با توجه به شکل 
-		%	\ref{Qmcorr5subsample}
-		%	بالاتر از کوارتر سوم داده به نظر می آید بیشترین تاثیر را در هم حرکتی دارد
-		%	
-		%	\begin{figure}[htbp]
-			%		\centering  
-			%		\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrd.eps"}
-			%		\caption{text}
-			%		\label{Qmcorr5lrd}
-			%	\end{figure}
-		%	\begin{figure}[htbp]
-			%		\centering  
-			%		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
-			%		\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
-			%		\caption{text}
-			%		\label{Qmcorr5subsample}
-			%	\end{figure}
-		%
-		%	\item
-		%	بررسی را محدود به جفت های دراای مالکیت زیاد کردیم و مدل 
-		%	\ref{model1}
-		%	را به شیوه گذشته برآورد کریدم
-		%	\item
-		%	نتایج در جدول 
-		%	 \ref{QTimemresult2subsample}
-		%	 نتایج را نشان داده است
-		%{
-				%			 \begin{table}[htbp]
-					%	 	\centering
-					%	 	\caption{\scriptsize Estimation results for high level of common ownership}
-					%	 	\label{QTimemresult2subsample}
-					%	 	\resizebox{\textwidth}{!}{
-						%	 		\input{Output/QTimemresult2subsample-slide.tex}
-						%	 	}
-					%	 \end{table}
-				%}
-				%	\begin{itemize}
-					%		\item 
-					%		همچنان نتایج گذشته تایید شده است
-					%		\item 
-					%	مالکیت مشترک صرفا در گروه های کسب و کار اهمیت دارد 
-					%		\item 
-					%		گروه های کسب و کار بیشترین تاثیر را در میان سطح زیاد مالیکت مشترک دارد
-					%		\item 
-					%		ممکن است جفت های دارای مالکیت بالا تفاوت بنیادی با دیگر جفت ها داشته باشند 
-					%		\begin{itemize}
-						%			\item 
-						%			در شکل 
-						%			\ref{QarterSummary}
-						%			متوسط کنترل های تعریف شده نشان داده شده است
-						%			\begin{figure}[htbp]
-							%				\centering  
-							%				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
-							%				\caption{Pairs' characteristics for the pairs with high level of common ownership}
-							%				\label{QarterSummary}
-							%			\end{figure}
-						%		\item
-						%		تفاوت چشمگیری نسبت به بقیه جامعه ندارند
-						%		\end{itemize}
-					%	\end{itemize}
-				%	
-				%	
-				%\end{itemize}
+
 				
 				
 				\FloatBarrier
@@ -203,7 +119,7 @@
 					
 					For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Controls are defined as before, and we use the same methodology as used for estimating equation \ref{model1}. We estimate equation \ref{model1}. 
 					
-					Table \ref{AllPairs} reports results of estimations for two models. These results suggest that pairs in the same group co-move more than stocks that are not in the same group. In addition, pairs with common ownership common does not co-move greater than others. In columns 3 , we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2-part1} that the \textit{Same Group} is critical for forecasting future co-movement, and common ownership does not matter for pairs. In the pairs with common ownership, pairs in the same group have a higher level of co-movement than the pairs no in the same group.
+					Table \ref{AllPairs} reports results of estimations for two models. These results suggest that pairs in the same group co-move more than stocks that are not in the same group. In addition, pairs with common ownership common does not co-move greater than others. In columns 3 , we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2part1} that the \textit{Same Group} is critical for forecasting future co-movement, and common ownership does not matter for pairs. In the pairs with common ownership, pairs in the same group have a higher level of co-movement than the pairs no in the same group.
 					
 					{\begin{table}[htbp]
 							%	\centering

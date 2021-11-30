@@ -39,7 +39,7 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 
 \subsection{{Pair composition} }
 
-	If two firms have at least one common block-holder, We consider them as a pair. By this definition, there are 75412  unique pairs in entire periods, which is \input{Elements/PairPercent.tex}of possible pairs (\input{Elements/TotalPairNumberCal.tex}). As we expected, stocks in pairs have concentrated ownership relative to the total sample, and pairs have one common owner.
+	If two firms have at least one common block-holder, We consider them as a pair. By this definition, there are \input{Elements/pairsnumber}  unique pairs in entire periods, which is \input{Elements/PairPercent.tex}of possible pairs (\input{Elements/TotalPairNumberCal.tex}). As we expected, stocks in pairs have concentrated ownership relative to the total sample, and pairs have one common owner.
 	
 	\normalcolor
 	
@@ -279,6 +279,11 @@ at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t}
 On each day, we measure common ownership by our proposed measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
 		\begin{table}[htbp]
 			%	\centering
+%			\toprule
+%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
+%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
+%			\midrule
 			\caption{ text}
 			\label{measureResults}
 			\resizebox{1\textwidth}{!}

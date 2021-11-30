@@ -25,7 +25,8 @@ df[["Residual_Bench", "5_Residual"]].describe()
 df = pd.read_parquet(path + "MonthlyNormalzedFCAP9.2.parquet")
 # %%
 t = df[df.becomeSameBG == 1]
-sns.lineplot(data=t, x="SBGperiod", y="Monthlyρ_5")
+sns.lineplot(data=t[
+    abs(t.SBGperiod)<19], x="SBGperiod", y="Monthlyρ_5")
 
 
 # %%
