@@ -22,7 +22,6 @@ df['Grouped'] = 1
 df.loc[df.uo.isnull(), "Grouped"] = 0
 df['jalaliDate'] = df.jalaliDate.astype(str)
 
-             , hue="Grouped")
 
 
 #%%
@@ -544,6 +543,12 @@ tempt.drop(columns=["count", "25%", "75%"]).rename(
         "50%": "median",
     },
 ).round(3)
+
+#%%
+df2[df2.Monthlyρ_5 == df2.Monthlyρ_5.max()][
+    ['symbol_x','symbol_y','Monthlyρ_5','jalaliDate']
+]
+df2.Monthlyρ_5.quantile(0.995)
 
 #%%
 df2["sBsgroup"] = df2["sgroup"] + df2["sBgroup"]

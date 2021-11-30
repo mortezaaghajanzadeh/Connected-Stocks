@@ -2,12 +2,12 @@
 
 
 
-binscatter monthlyρ_5_f NMFCA ,by(Grouphighbeta)
+binscatter monthlyρ_residual_bench NMFCA ,by(Grouphighbeta)
 
-xi: asreg monthlyρ_5_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup highbeta Grouphighbeta i.PairType  , fmb newey(4)
+xi: asreg monthlyρ_residual_bench NMFCA  sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup i.PairType  , fmb newey(4)
 
 
-xi: asreg monthlyρ_5_f monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType  , fmb newey(4)
+xi: asreg monthlyρ_residual_bench monthlyρ_turn_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup   i.PairType  , fmb newey(4)
 
 
 eststo v1: asreg monthlyρ_5_f NMFCAP  sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)

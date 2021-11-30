@@ -362,7 +362,7 @@ def MonthlyCorr(f):
                 "Residual_Bench_y",
             ]
         ]
-        .corr(min_periods  = 5)
+        .corr(min_periods  = 10)
         .reset_index()
     )
 

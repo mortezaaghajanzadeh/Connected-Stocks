@@ -184,7 +184,14 @@ for a in [Monthly]:
     a["GRank_y"] = a["id_y"].map(mapingdict)
     a["SameGRank"] = 0
     a.loc[a.GRank_x == a.GRank_y, "SameGRank"] = 1
+#%%
+Monthly.Monthlyρ_5.describe()
+Monthly[Monthly.Monthlyρ_5 == Monthly.Monthlyρ_5.max()][
+    ['symbol_x','symbol_y','Monthlyρ_5','jalaliDate']
+]
 
+
+#%%
 Monthly = Monthly[~Monthly.Monthlyρ_5.isnull()]
 n3 = path + "MonthlyNormalzedFCAP9.1"
 Monthly.to_parquet(n3 + ".parquet", index=False)
@@ -1138,3 +1145,4 @@ def lowdummy(g):
 
 a = gg.apply(lowdummy).reset_index()
 a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)
+#%%

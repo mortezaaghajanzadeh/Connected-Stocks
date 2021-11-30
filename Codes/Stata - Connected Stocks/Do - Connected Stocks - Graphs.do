@@ -1,10 +1,17 @@
-/*
+
 /***/
 summ MFCA monthlyfcap
 
 
 twoway kdensity MFCA if sbgroup == 0|| kdensity MFCA if sbgroup == 1
 
+twoway histogram monthlyρ_5 , by(sbgroup)
+
+ttest monthlyρ_5 , by(sbgroup)
+
+ttest monthlyρ_5== 0
+
+twoway kdensity monthlyρ_5 if sbgroup == 0|| kdensity monthlyρ_5 if sbgroup == 1
 
 
 /**/
@@ -43,7 +50,7 @@ twoway histogram lnMFCAP ,color(navy*.5) bin(20)  || kdensity lnMFCAP ,title("De
 graph export MHistlnFCAP.eps,replace
 graph export MHistlnFCAP.png,replace
 
-*/
+
 
 
 
