@@ -284,7 +284,7 @@ On each day, we measure common ownership by our proposed measure and then report
 %			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
 %			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
 %			\midrule
-			\caption{ text}
+			\caption{Calculation of common ownership with two measure}
 			\label{measureResults}
 			\resizebox{1\textwidth}{!}
 			{
@@ -307,8 +307,9 @@ On each day, we measure common ownership by our proposed measure and then report
 	
 	At the end of each month, we estimate our benchmark model base on the past three-month period (from two months before the end of the preceding month) and measure daily residuals.  After that, we calculate the monthly correlation of daily residuals during that month for the pair.
 	
-	We use other benchmarks for calculating a monthly correlation and report its summary in table \ref{tCorr}. 
-	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use these correlations for our analysis.
+	We use other benchmarks (CAPM, 4 Factor, and Benchmark\footnote{we follow \cite{daniel1997measuring} to control risk characteristics: abnormal returns are calculated using a stock’s daily return minus the average return of
+	the stock’s benchmark group, which is formed at every month’s end based on stocks’ capitalization and market-to-book ratio using the sample of all stocks}) for calculating a monthly correlation and report its summary in table \ref{tCorr}. 
+	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use this correlation for our analysis.
 	
 	
 {	\begin{table}[htbp]
@@ -332,7 +333,7 @@ We are interested in the effects of common ownership on pair's comovement.
 Our prediction of a higher correlation for a higher level of common ownership dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
 
 The first group of controls is pair controls. These controls include
-a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}. As shown in table \ref{SameGroupIndustry}, 10\% and 6\%  of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
+a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}. As shown in table \ref{SameGroupIndustry}, \input{Elements/sameindandsamebg}of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
 
 
 	{\begin{table}[htbp]

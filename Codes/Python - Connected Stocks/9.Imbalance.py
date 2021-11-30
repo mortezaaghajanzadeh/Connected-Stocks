@@ -12,8 +12,8 @@ from pandas_jalali.converter import get_gregorian_date_from_jalali_date
 path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 path = r"E:\RA_Aghajanzadeh\Data\PriceTradeData\\"
 
-pathR = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output\\"
-pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Final Report\Output\\"
+pathR = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output\\"
+pathR = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
 df = pd.read_parquet(path + "mergerdPriceAllData_cleaned.parquet")
 
 

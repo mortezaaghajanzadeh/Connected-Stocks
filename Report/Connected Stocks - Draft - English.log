@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  30 NOV 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  30 NOV 2021 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,7 +918,7 @@ ut line 81.
 (./Output/ImbalanceInsMeanSummary.tex)
 (./Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
-(epstopdf)                    date: 2021-11-18 20:12:31
+(epstopdf)                    date: 2021-11-30 18:20:33
 (epstopdf)                    size: 20623471 bytes
 (epstopdf)             Output file: <Output/GroupedInsSTD-eps-converted-to.pdf>
 
@@ -927,7 +927,13 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 125.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=Output/GroupedInsSTD-eps-converted-to.pdf Output/
+GroupedInsSTD.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/GroupedInsSTD-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2021-11-30 18:23:27
+(epstopdf)                    size: 286005 bytes.
 <Output/GroupedInsSTD-eps-converted-to.pdf, id=438, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
@@ -981,7 +987,7 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (27 pages, 1095061 b
+Output written on "Connected Stocks - Draft - English.pdf" (27 pages, 1093161 b
 ytes).
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
