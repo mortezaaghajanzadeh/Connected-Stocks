@@ -169,7 +169,7 @@ def genereate_id(s):
     return s.map(mapingdict)
 
 
-df["Holder_id"] = genereate_id(df.Holder)
+# df["Holder_id"] = genereate_id(df.Holder)
 
 df["id"] = genereate_id(df.symbol)
 

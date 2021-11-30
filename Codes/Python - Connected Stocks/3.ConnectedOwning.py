@@ -67,23 +67,23 @@ print(time.time() - n)
 
 
 #%%
-len(t1[t1.FCAPf > 0]), len(t2)
-t2[(
-    t2.jalaliDate > 13950400)&(
-    t2.jalaliDate < 13950500)][
-    ['Monthlyρ_5','jalaliDate']
-]
+# len(t1[t1.FCAPf > 0]), len(t2)
+# t2[(
+#     t2.jalaliDate > 13950400)&(
+#     t2.jalaliDate < 13950500)][
+#     ['Monthlyρ_5','jalaliDate']
+# ]
 
 #%%
-a = df[(df.symbol == "شیراز")&(
-    df.jalaliDate > 13950400)&(
-    df.jalaliDate < 13950500)][['5-Residual','jalaliDate','Holder_id']].drop_duplicates()
+# a = df[(df.symbol == "شیراز")&(
+#     df.jalaliDate > 13950400)&(
+#     df.jalaliDate < 13950500)][['5-Residual','jalaliDate','Holder_id']].drop_duplicates()
 
-b = df[(df.symbol == "خموتور")&(
-    df.jalaliDate > 13950400)&(
-    df.jalaliDate < 13950500    )][['5-Residual','jalaliDate','Holder_id']].drop_duplicates()
-t = a.merge(b, on=['jalaliDate','Holder_id'])
-t[['5-Residual_x','5-Residual_y']] .corr(method = 'pearson' ,min_periods  = 10)
+# b = df[(df.symbol == "خموتور")&(
+#     df.jalaliDate > 13950400)&(
+#     df.jalaliDate < 13950500    )][['5-Residual','jalaliDate','Holder_id']].drop_duplicates()
+# t = a.merge(b, on=['jalaliDate','Holder_id'])
+# t[['5-Residual_x','5-Residual_y']] .corr(method = 'pearson' ,min_periods  = 10)
 #%%
 data = pd.DataFrame()
 gg = df.groupby(["id"])
