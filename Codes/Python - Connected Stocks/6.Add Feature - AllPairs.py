@@ -42,42 +42,7 @@ result = pd.read_pickle(
         "Delta_Amihud_y",
     ]
 )
-result = result.append(
-    pd.read_pickle(path + "mergerd_first_step_monthly_all_part_{}.p".format(2)).drop(
-        columns=[
-            "Ret_x",
-            "Ret_y",
-            "SizeRatio",
-            "MarketCap_x",
-            "MarketCap_y",
-            "2-Residual_x",
-            "2-Residual_y",
-            "4-Residual_x",
-            "4-Residual_y",
-            "5-Residual_x",
-            "5-Residual_y",
-            "6-Residual_x",
-            "6-Residual_y",
-            "5Lag-Residual_x",
-            "5Lag-Residual_y",
-            "Percentile_Rank_x",
-            "Percentile_Rank_y",
-            "BookToMarket_x",
-            "BookToMarket_y",
-            "Amihud_x",
-            "volume_x",
-            "value_x",
-            "TurnOver_y",
-            "Amihud_y",
-            "volume_y",
-            "value_y",
-            "Delta_Trunover_x",
-            "Delta_Trunover_y",
-            "Delta_Amihud_x",
-            "Delta_Amihud_y",
-        ]
-    )
-)
+
 
 #%%
 

@@ -180,9 +180,51 @@ mapingdict = dict(zip(monthId.date, monthId.t_Month))
 
 # %%
 
+def firstStep(d, mapingdict):
+    # mapingdict = dict(zip(df.id, df.symbol))
+
+    d["symbol_x"] = d["id_x"].map(mapingdict)
+    d["symbol_y"] = d["id_y"].map(mapingdict)
+
+    d["month_of_year"] = d["month_of_year"].astype(str).apply(add)
+    d["week_of_year"] = d["week_of_year"].astype(str).apply(add)
+
+    d["year_of_year"] = d["year_of_year"].astype(str)
+
+    d["Year_Month_week"] = d["year_of_year"] + d["week_of_year"]
+    d["Year_Month"] = d["year_of_year"] + d["month_of_year"]
+
+    days = list(set(d.date))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t"] = d["date"].map(mapingdict)
+
+    days = list(set(d.Year_Month_week))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t_Week"] = d["Year_Month_week"].map(mapingdict)
+
+    days = list(set(d.Year_Month))
+    days.sort()
+    t = list(range(len(days)))
+    mapingdict = dict(zip(days, t))
+    d["t_Month"] = d["Year_Month"].map(mapingdict)
+
+    d["id_x"] = d.id_x.astype(str)
+    d["id_y"] = d.id_y.astype(str)
+    d["id"] = d["id_x"] + "-" + d["id_y"]
+    ids = list(set(d.id))
+    id = list(range(len(ids)))
+    mapingdict = dict(zip(ids, id))
+    d["id"] = d["id"].map(mapingdict)
+    return d
+
 result = pd.DataFrame()
 counter, counter_file = 0, 0
 # arr.remove("MonthlyAllPairs_1400_06_28.csv")
+arrs.remove("Old")
 for i, name in enumerate(arr):
     print(i, len(result))
     d = pd.read_pickle(path + name).reset_index(drop=True)
@@ -216,3 +258,5 @@ pickle.dump(
         )
 result = pd.DataFrame()
 
+
+# %%

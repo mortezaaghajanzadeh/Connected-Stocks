@@ -1,0 +1,127 @@
+\begin{table}
+
+\centering
+\caption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
+\label{t2-1}
+\resizebox{1\textwidth}{!}
+{
+\input{Output/summaryOfOwnership.tex}
+}
+
+\end{table}
+\begin{table}
+
+\centering
+\caption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
+\label{t2-2}
+\resizebox{1\textwidth}{!}
+{
+\input{Output/summaryOfPairs.tex}
+}
+
+\end{table}
+\begin{table}
+
+\centering
+\scriptsize
+\caption{ This table summarizes common ownership measurements in the literature.}
+\label{maasurmentsSummary}
+\resizebox{\textwidth}{!}{
+\input{Elements/MeasurmentLit.tex}
+}
+
+\end{table}
+\begin{table}
+
+% \centering
+% \toprule
+%  & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
+%  \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+%  &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
+% \midrule
+\caption{Calculation of common ownership with two measure}
+\label{measureResults}
+\resizebox{1\textwidth}{!}
+{
+{\input{Output/FCACal.tex}}
+}
+
+\end{table}
+\begin{table}
+
+\centering
+\caption{\footnotesize This table reports distribution of calculated correlation base on different models.}
+\label{tCorr}
+\resizebox{0.7\textwidth}{!}
+{
+\input{Output/CorrelationsResultsText.tex}
+}
+
+\end{table}
+\begin{table}
+
+\caption{\scriptsize This table reports the number of pairs in the same industry and business group.}
+\label{SameGroupIndustry}
+\centering \scriptsize
+{
+\input{Output/SameGroupSameIndustry.tex}
+}
+
+\end{table}
+\begin{table}
+
+ \caption{\scriptsize This table shows the summary statistics of specified controls in empirical studies.}
+ \label{ControlsSummary}
+               \centering
+               \scriptsize
+                 {
+    \input{Output/ControlsSummary.tex}
+                 }
+             
+\end{table}
+\begin{table}
+
+\centering
+\caption{Connected Co-movement}
+\label{mresult2part1}
+\resizebox{1\textwidth}{!}{
+
+{\input{Output/mresult2part1-slide.tex}}
+
+}
+
+\end{table}
+\begin{table}
+
+\centering
+\caption{Connected Co-movement}
+\label{mresult2part2}
+\resizebox{1\textwidth}{!}{
+
+{\input{Output/mresult2part2-slide.tex}}
+
+}
+
+\end{table}
+\begin{table}
+
+\centering
+\caption{\scriptsize Estimation results for high level of common ownership}
+\label{QTimemresult2subsample}
+{
+\input{Output/QTimemresult2subsample-slide.tex}
+}
+
+\end{table}
+\begin{table}
+
+% \centering
+\caption{Non-connected Co-movement}
+\label{AllPairs}
+\resizebox{1\textwidth}{!}{
+
+{ \input{Output/Q3mresultAllPairs.tex}
+}
+}
+
+\end{table}
