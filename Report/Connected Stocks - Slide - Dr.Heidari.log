@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  4 DEC 2021 08:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  4 DEC 2021 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1541,25 +1541,10 @@ le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex)
 ] (./Output/turncomovement.tex)
 [31
 
-] (./Output/ResidualTrunSummary.tex
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-3.
+] (./Output/ResidualTrunSummary.tex) [32
 
-(c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmss.fd
-File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
-3.
-LaTeX Font Info:    No file OMScmss.fd. on input line 3.
-
-
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 3.
-
-) [32
-
-] (./Output/ResidualTrunStdSummary.tex)
+]
+(./Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 (epstopdf)                    date: 2021-11-30 16:00:33
 (epstopdf)                    size: 20404351 bytes
@@ -1571,7 +1556,7 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 1321.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=572, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=571, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -1581,11 +1566,10 @@ ut line 1321.
 
  <./Output/GroupedResSTD-eps-converted-to.pdf>] (./Output/LowRes.tex) [34
 
-]
-(./Output/ImbalanceInsMeanSummary.tex) [35
+] (./Output/ImbalanceInsMeanSummary.tex)
+[35
 
-]
-(./Output/ImbalanceInsStdSummary.tex)
+] (./Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)                    date: 2021-11-30 18:20:33
 (epstopdf)                    size: 20623471 bytes
@@ -1597,7 +1581,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 1429.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=599, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=598, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -1634,12 +1618,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [44
 
 ]
-<Elements/1.png, id=710, 494.8086pt x 299.6796pt>
+<Elements/1.png, id=709, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
 Package pdftex.def Info: Elements/1.png  used on input line 1580.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<Elements/2.png, id=712, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=711, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
 Package pdftex.def Info: Elements/2.png  used on input line 1580.
@@ -1655,12 +1639,12 @@ Package pdftex.def Info: Elements/2.png  used on input line 1580.
 ] (./Elements/marketcap.tex) [48
 
 ]
-<Elements/3.png, id=740, 722.7pt x 360.3864pt>
+<Elements/3.png, id=739, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
 Package pdftex.def Info: Elements/3.png  used on input line 1665.
 (pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<Elements/4.png, id=741, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=740, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
 Package pdftex.def Info: Elements/4.png  used on input line 1665.
@@ -1717,17 +1701,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2333.
 Package rerunfilecheck Info: File `"Connected Stocks - Slide - Dr.Heidari".out'
  has not changed.
 (rerunfilecheck)             Checksum: E75C3CE527E238D3CCC590D2D5B68E54;1578.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
  ) 
 Here is how much of TeX's memory you used:
- 26062 strings out of 480608
- 519442 string characters out of 5907536
+ 26033 strings out of 480608
+ 518590 string characters out of 5907536
  813202 words of memory out of 5000000
- 41061 multiletter control sequences out of 15000+600000
- 548254 words of font info for 79 fonts, out of 8000000 for 9000
+ 41038 multiletter control sequences out of 15000+600000
+ 547909 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,67p,823b,1249s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{mainmeasure} has been referenced but does not exi
@@ -1736,34 +1716,32 @@ st, replaced by a fixed one
 pdfTeX warning (dest): name{Intuition} has been referenced but does not exist, 
 replaced by a fixed one
 
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2020/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2020/texmf
--dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.
-pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c:/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-supe
-r/sfss1095.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 108764
-6 bytes).
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2020/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmssi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.
+pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (61 pages, 108549
+4 bytes).
 PDF statistics:
- 984 PDF objects out of 1000 (max. 8388607)
- 833 compressed objects within 9 object streams
+ 979 PDF objects out of 1000 (max. 8388607)
+ 829 compressed objects within 9 object streams
  199 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -18,9 +18,6 @@ df = pd.read_parquet(n)
 df = df[df.jalaliDate < 13990000]
 df = df[df.jalaliDate > 13930000]
 #%%
-df['Grouped'] = 1
-df.loc[df.uo.isnull(), "Grouped"] = 0
-df['jalaliDate'] = df.jalaliDate.astype(str)
 
 
 
@@ -419,7 +416,15 @@ fig.tight_layout()
 plt.savefig(pathResult + "FCAtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "FCAtimeSeries.png", bbox_inches="tight")
 #%%
+Monthtime.tail(20)
+df2[df2.t_Month == 59].MonthlyFCA.max(), df2[df2.t_Month == 60].MonthlyFCA.max()
+df2[(df2.t_Month == 60)&(
+    df2.MonthlyFCA == df2[df2.t_Month == 60].MonthlyFCA.max()
+)][['symbol_x','symbol_y','Year_Month','numberCommonHolder']]
 
+
+
+#%%
 df2["PairType"] = "Hybrid"
 df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
 df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
