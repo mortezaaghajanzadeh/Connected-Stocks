@@ -177,8 +177,8 @@ result = gg.apply(quarter)
 #%%
 result.to_parquet(path + "MonthlyAllPairs_1400_06_28.parquet")
 #%%
-# del result
-# del gg
+del result
+del gg
 n1 = path + "MonthlyAllPairs_1400_06_28" + ".parquet"
 df1 = pd.read_parquet(n1)
 df1 = df1[df1.jalaliDate < 13990000]
@@ -563,10 +563,7 @@ for i in set(BGId.BGId.dropna()):
 # %%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-import pickle
-pickle.dump(t, open(path + "MonthlyNormalzedAllFCAP9.2.p", "wb"))
 
-#%%
 n1 = path + "MonthlyNormalzedAllFCAP9.2" + ".parquet"
 print(len(df1))
 df1.to_parquet(n1)

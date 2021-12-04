@@ -87,14 +87,14 @@
 	
 	\section{Motivation}
 	
-	\begin{frame}{Future Correlation and $ MFCAP $}
+	\begin{frame}{Co-movement and common ownership}
 		\begin{figure}
 			\centering  
 			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
 		\end{figure}
 	\end{frame}   
 	
-		\begin{frame}{Future Correlation and $ MFCAP $}
+		\begin{frame}{Co-movement and common ownership}
 			\begin{figure}
 				\centering  
 				\includegraphics[width=0.85\linewidth]{"Output/mcorr5bg.eps"}
@@ -287,7 +287,7 @@
 		
 		
 		%% common ownership
-		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common-ownership  \end{tabular}};
+		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common ownership  \end{tabular}};
 		\pause
 		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
 				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
@@ -322,7 +322,7 @@
 			\item 
 			We use daily records of block-holder ownership for firms
 			\item We are not restricted to mutual funds ownership
-			\item Furthermore, 85\% of market belongs to the business groups
+			\item 85\% of market belongs to the business groups
 			\begin{itemize}
 				\item Would business groups be able to raise the co-movement of stock returns?
 				\begin{itemize}
@@ -336,7 +336,7 @@
 					than fundamental factors such as related-party transactions
 				\end{itemize}
 			\item Common ownership or business group (indirect common ownership) ?
-			\item  Through which channel?
+			\item  Channel?
 			\end{itemize}
 			
 		\end{itemize}
@@ -429,10 +429,7 @@
 		
 		
 		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
-			\begin{columns}
-				\column{.5\textwidth}     
-				\centering
-				{}\\
+   
 				\resizebox{\textwidth}{!}{
 					\begin{tikzpicture}[node distance=2cm]
 						
@@ -472,12 +469,43 @@
 						
 						
 					\end{tikzpicture}
-				}
-				
-				\pause
-				\column{.5\textwidth}
-				\centering  
-				{}\\
+\pause
+\begin{tikzpicture}[node distance=2cm]
+							
+	
+	\node (start) [startstop] { $ \text{Ultimate Owner} $};
+	
+	
+	\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
+	
+	\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+	
+	\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+	
+	\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+	
+	\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+	
+	
+	
+	\draw [arrow] (start) --(end);
+	
+	\draw [arrow] (end) --(sur);
+	\draw [arrow] (end2) -- (sur2);
+	
+	\draw [dash dot,->] (start) -- (CH);
+	
+	\draw [arrow] (CH) -- (sur);
+	\draw [arrow] (CH) -- (sur2);
+	
+	\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+	
+	
+\end{tikzpicture}
+														
+			
+								}
+								\pause
 				\resizebox{\textwidth}{!}{
 					\begin{tikzpicture}[node distance=2cm]
 						
@@ -514,90 +542,44 @@
 						
 						
 					\end{tikzpicture}
+				\pause
+						\begin{tikzpicture}[node distance=2cm]
+							
+							
+							
+							\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+							
+							\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+							
+							\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+							
+							\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+							
+							\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+							
+							
+							\draw [arrow] (end) --(sur);
+							\draw [arrow] (end2) -- (sur2);
+							
+							
+							\draw [arrow] (CH) -- (sur);
+							\draw [arrow] (CH) -- (sur2);
+							
+							\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
+							
+							
+						\end{tikzpicture}
+							
 				} 
-				
-				\end{columns}
+
+						
+
 		\end{frame}
 		
 		
 		
 		
-		\begin{frame}{Pair Composition and Business Group}{Pair not in any of Business Groups }
-			\begin{columns}
-				\column{.5\textwidth}     
-				\centering
-				{}\\
-				
-				\resizebox{\textwidth}{!}{
-					\begin{tikzpicture}[node distance=2cm]
-						
-						
-						
-						\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-						
-						\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-						
-						\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-						
-						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-						
-						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-						
-						
-						\draw [arrow] (end) --(sur);
-						\draw [arrow] (end2) -- (sur2);
-						
-						
-						\draw [arrow] (CH) -- (sur);
-						\draw [arrow] (CH) -- (sur2);
-						
-						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-						
-						
-					\end{tikzpicture}
-				} 
-				
-				\column{.5\textwidth}
-				\centering  
-				{}\\
-				
-				\resizebox{\textwidth}{!}{
-					\begin{tikzpicture}[node distance=2cm]
-						
-						
-						\node (start) [startstop] { $ \text{Ultimate Owner} $};
-						
-						
-						\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-						
-						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-						
-						\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-						
-						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-						
-						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-						
-						
-						
-						\draw [arrow] (start) --(end);
-						
-						\draw [arrow] (end) --(sur);
-						\draw [arrow] (end2) -- (sur2);
-						
-						\draw [dash dot,->] (start) -- (CH);
-						
-						\draw [arrow] (CH) -- (sur);
-						\draw [arrow] (CH) -- (sur2);
-						
-						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-						
-						
-					\end{tikzpicture}
-				} 
-				
-			\end{columns}
-		\end{frame}
+
 		
 		
 		
@@ -628,8 +610,8 @@
 			
 				\item Pairs consist of two firms  with at least one common owner
 				\begin{itemize}
-					\item  93442 unique pairs which is 25\% of possible pairs 
-					\tiny ($ \frac{612*611}{2}= 373932 $)
+					\item  \input{Elements/pairsnumber} unique pairs which is \input{Elements/PairPercent.tex} of possible pairs 
+					\tiny (\input{Elements/TotalPairNumberCal})
 					\normalsize
 				\end{itemize}
 			\end{itemize}
@@ -796,10 +778,11 @@
 
 	\begin{frame}{Measuring Common-ownership}\label{measure}
 				\begin{columns}
+				\scriptsize
 			\column{.5\textwidth}    
 			\centering  
 						\cite{AntonPolk}
-								\begin{align*}
+								\begin{align*}\scriptsize
 									\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
 								\end{align*} 
 %			\pause
@@ -807,24 +790,73 @@
 			\centering
 			SQRT
 						\begin{align*}
-						\footnotesize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+						\scriptsize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
 						\end{align*}     				         
 		\end{columns}
 	\pause
-%		\begin{block}{Intuition}
-%			If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed indexes will be equal to n.
-%			\hyperlink{Proof}{\beamerbutton{Proof}}
-%		\end{block}
+
+\bigskip
+\begin{columns}\scriptsize
+\column{0.5\textwidth}
+					\begin{tikzpicture}[node distance=1cm]
+						
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm) ;
+						
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm2) ;
+						%
+						%\node() at (3,0)
+						%    {$ \alpha + \beta = 100 $}; 
+					\end{tikzpicture}
+\[
+\begin{array}{c}
+\text{FCAP} = \frac{50\% + 50\%}{100\% + 100\%} = 0.5\\\\
+\text{MFCAP} = \frac{\sqrt{50\%} + \sqrt{50\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.71
+\end{array}
+\]
+\column{0.5\textwidth}
+					\begin{tikzpicture}[node distance=1cm]
+						
+						
+						\node (Firm) [startstop3] {\tiny Firm X};
+						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+						\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
+						
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 10\% $} (Firm) ;
+						
+					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 90\% $} (Firm2) ;
+						%
+						%\node() at (3,0)
+						%    {$ \alpha + \beta = 100 $}; 
+					\end{tikzpicture}
+\[
+\begin{array}{c}
+\text{FCAP} = \frac{90\% + 10\%}{100\% + 100\%} = 0.5\\\\
+\text{MFCAP} = \frac{\sqrt{90\%} + \sqrt{10\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.63
+\end{array}
+\]
+\end{columns}
+		
+	
+
+						\hfill
+						\hyperlink{example}{\beamerbutton{More example}}
+	\end{frame}
+	
+	\begin{frame}{Measuring Common-ownership}
 		\begin{table}[htbp]
 								\centering
 								\resizebox{0.9\textwidth}{!}
 								{
 									\input{Output/FCACal.tex}  }          
 							\end{table}
-						\hfill
-						\hyperlink{example}{\beamerbutton{Example}}
+			
+				
 	\end{frame}
-	
 	
 %				\begin{frame}{MFCAP vs. FCAP Summary}
 %					\begin{table}[htbp]
@@ -1036,7 +1068,7 @@
 	
 	\subsection{Common ownership \& Co-movement}
 	
-	\begin{frame}{Correlation and Common Ownership}
+	\begin{frame}{Co-movement and Common Ownership}
 		\label{Monthly16} 
 		\begin{columns}
 			\column{.5\textwidth}  
@@ -1138,7 +1170,7 @@
 		
 	%
 	%
-		\begin{frame}{Correlation and Common Ownership}{High level of common ownership}\label{Monthly19}
+		\begin{frame}{Co-movement and Common Ownership}{High level of common ownership}\label{Monthly19}
 		
 		
 		
@@ -1199,7 +1231,7 @@
 \subsection{All pairs}
 
 
-\begin{frame}{All non-common owner pairs}
+\begin{frame}{All pairs}
 	\begin{table}[htbp]
 		\centering
 		\resizebox{1\textwidth}{!}{
