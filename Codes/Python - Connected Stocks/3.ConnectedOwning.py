@@ -1,6 +1,5 @@
 # %%
 import pickle
-
 from ConnectedOwnershipFunctions import *
 import time
 
