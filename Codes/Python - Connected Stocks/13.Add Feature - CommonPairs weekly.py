@@ -305,7 +305,6 @@ def removeSlash(row):
         X[1] = "0" + X[1]
     if len(X[2]) < 2:
         X[2] = "0" + X[2]
-
     return int(X[0] + X[1] + X[2])
 
 
@@ -1049,5 +1048,7 @@ df1.to_csv(n1)
 n1 = path + "WeeklyNormalzedFCAP9.2" + ".parquet"
 print(len(df1))
 df1.to_parquet(n1)
+
+# %%
 
 # %%

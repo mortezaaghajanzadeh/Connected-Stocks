@@ -166,10 +166,11 @@ pickle.dump(
 )
 Monthly = pd.DataFrame()
 # %%
+
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
-arrs.remove('Old')
+arr.remove('Old')
 df = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
 # %%
 result = pd.DataFrame()

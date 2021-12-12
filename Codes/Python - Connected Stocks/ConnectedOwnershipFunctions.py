@@ -1,5 +1,6 @@
 import pandas as pd
 import pickle
+import numpy as np
 
 
 def FCAPf(S_g, g, AllPair):
@@ -23,13 +24,13 @@ def Calculation(g, S_g, intersection, AllPair):
 
 
 def FirstCal(g, S_g, intersection):
-    intersection = list(set.intersection(set(S_g.date), set(g.date)))
+    # intersection = list(set.intersection(set(S_g.date), set(g.date)))
     t1 = pd.DataFrame()
     t1 = t1.append(g.loc[g.date.isin(intersection)])
-    t1["Holder"] = 1
+    t1["Holder"] = 0
     t2 = pd.DataFrame()
     t2 = t2.append(S_g.loc[S_g.date.isin(intersection)])
-    t2["Holder"] = 1
+    t2["Holder"] = 0
 
     a = t1.merge(
         t2,
@@ -42,6 +43,55 @@ def FirstCal(g, S_g, intersection):
             "year_of_year",
         ],
     )
+    a["Holder"] = 1
+    return a
+
+
+def FCalculation(a, g, S_g, AllPair):
+    if AllPair:
+        a = g.merge(
+            S_g,
+            on=[
+                "date",
+                "jalaliDate",
+                "week_of_year",
+                "month_of_year",
+                "year_of_year",
+            ],
+        )
+        a["FCAPf"] = 0
+        a["FCA"] = 0
+        tempt = pd.DataFrame()
+        tempt = tempt.append(a.loc[a.Holder_id_x == a.Holder_id_y])
+        tempt["FCAPf"] = (
+            tempt["nshares_x"] * tempt["close_price_x"]
+            + tempt["nshares_y"] * tempt["close_price_y"]
+        ) / (
+            tempt["shrout_x"] * tempt["close_price_x"]
+            + tempt["shrout_y"] * tempt["close_price_y"]
+        )
+        tempt["FCA"] = (
+            np.sqrt(tempt["nshares_x"] * tempt["close_price_x"])
+            + np.sqrt(tempt["nshares_y"] * tempt["close_price_y"])
+        ) / (
+            np.sqrt(tempt["shrout_x"] * tempt["close_price_x"])
+            + np.sqrt(tempt["shrout_y"] * tempt["close_price_y"])
+        )
+        a["Holder"] = 0
+        a.loc[a.Holder_id_x == a.Holder_id_y, "Holder"] = 1
+        a.loc[a.Holder_id_x == a.Holder_id_y, "FCAPf"] = tempt["FCAPf"]
+        a.loc[a.Holder_id_x == a.Holder_id_y, "FCA"] = tempt["FCA"]
+    else:
+        a["FCAPf"] = (
+            a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
+        ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
+        a["FCA"] = (
+            np.sqrt(a["nshares_x"] * a["close_price_x"])
+            + np.sqrt(a["nshares_y"] * a["close_price_y"])
+        ) / (
+            np.sqrt(a["shrout_x"] * a["close_price_x"])
+            + np.sqrt(a["shrout_y"] * a["close_price_y"])
+        )
     return a
 
 
@@ -50,23 +100,19 @@ def SecondCal(a):
     a["SizeRatio"] = (a["MarketCap_x"]) / (a["MarketCap_y"])
 
     f = (
-        a.groupby(
-            [
-                "date",
-                "jalaliDate",
-                "id_x",
-                "id_y",
-                "week_of_year",
-                "month_of_year",
-                "year_of_year",
-                "group_name_x",
-                "group_name_y",
-            ]
-        )[["FCAPf", "FCA", "Holder_act_y", "Holder_act_x", "Holder_x"]]
+        a.groupby(["date"])[["FCAPf", "FCA", "Holder_act_y", "Holder_act_x", "Holder"]]
         .sum()
         .reset_index()
     )
     mlist = [
+        "jalaliDate",
+        "id_x",
+        "id_y",
+        "week_of_year",
+        "month_of_year",
+        "year_of_year",
+        "group_name_x",
+        "group_name_y",
         "Ret_x",
         "Ret_y",
         "SizeRatio",
@@ -122,7 +168,7 @@ def SecondCal(a):
     else:
         f["Sametype"] = 0
 
-    f = f.rename(columns={"Holder_x": "numberCommonHolder"})
+    f = f.rename(columns={"Holder": "numberCommonHolder"})
 
     f["Holder_act"] = 0
     f.loc[f["Holder_act_y"] > 0, "Holder_act"] = 1
@@ -185,69 +231,6 @@ def AfterCal(f, g, S_g, intersection):
     f = WeeklyCalculation(f)
     return f
 
-
-def FCalculation(a, g, S_g, AllPair):
-    if AllPair:
-        a = g.merge(
-            S_g,
-            on=[
-                "date",
-                "jalaliDate",
-                "week_of_year",
-                "month_of_year",
-                "year_of_year",
-            ],
-        )
-        a["FCAPf"] = 0
-        a["FCA"] = 0
-        tempt = pd.DataFrame()
-        tempt = tempt.append(a.loc[a.Holder_id_x == a.Holder_id_y])
-        tempt["FCAPf"] = (
-            tempt["nshares_x"] * tempt["close_price_x"]
-            + tempt["nshares_y"] * tempt["close_price_y"]
-        ) / (
-            tempt["shrout_x"] * tempt["close_price_x"]
-            + tempt["shrout_y"] * tempt["close_price_y"]
-        )
-        tempt["FCA"] = (
-            (tempt["nshares_x"] * tempt["close_price_x"]) ** 0.5
-            + (tempt["nshares_y"] * tempt["close_price_y"]) ** 0.5
-        ) / (
-            (tempt["shrout_x"] * tempt["close_price_x"]) ** 0.5
-            + (tempt["shrout_y"] * tempt["close_price_y"]) ** 0.5
-        )
-        a.loc[a.Holder_id_x == a.Holder_id_x, "FCAPf"] = tempt["FCAPf"]
-        a.loc[a.Holder_id_x == a.Holder_id_x, "FCA"] = tempt["FCA"]
-    else:
-        a["FCAPf"] = (
-            a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
-        ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
-        a["FCA"] = (
-            (a["nshares_x"] * a["close_price_x"]) ** 0.5
-            + (a["nshares_y"] * a["close_price_y"]) ** 0.5
-        ) / (
-            (a["shrout_x"] * a["close_price_x"]) ** 0.5
-            + (a["shrout_y"] * a["close_price_y"]) ** 0.5
-        )
-    return a
-
-
-# def FCalculation(a):
-#     if len(a) == 0:
-#         a = pd.DataFrame()
-#         return a
-#     else:
-#         a["FCAPf"] = (
-#             a["nshares_x"] * a["close_price_x"] + a["nshares_y"] * a["close_price_y"]
-#         ) / (a["shrout_x"] * a["close_price_x"] + a["shrout_y"] * a["close_price_y"])
-#         a["FCA"] = (
-#             (a["nshares_x"] * a["close_price_x"]) ** 0.5
-#             + (a["nshares_y"] * a["close_price_y"]) ** 0.5
-#         ) / (
-#             (a["shrout_x"] * a["close_price_x"]) ** 0.5
-#             + (a["shrout_y"] * a["close_price_y"]) ** 0.5
-#         )
-#     return a
 
 
 def MonthlyCalculation(f):
@@ -362,7 +345,7 @@ def MonthlyCorr(f):
                 "Residual_Bench_y",
             ]
         ]
-        .corr(min_periods  = 10)
+        .corr(min_periods=10)
         .reset_index()
     )
 
@@ -512,7 +495,7 @@ def WeeklyCorr(f):
                 "Residual_Bench_y",
             ]
         ]
-        .corr(min_periods  = 5)
+        .corr(min_periods=5)
         .reset_index()
     )
     for i in [
