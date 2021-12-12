@@ -1,0 +1,110 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt, a4paper]{article}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{pdflscape}
+%\usepackage[nomarkers,figuresonly]{endfloat}
+%\usepackage[printfigures]{figcaps}
+
+\captionsetup{font=footnotesize,labelfont=footnotesize}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\usepackage{natbib}
+\usepackage[title]{appendix}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{startstop1} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=blue!30]
+
+\tikzstyle{startstop2} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=yellow!30]
+
+\tikzstyle{startstop3} = [rectangle , rounded corners, minimum width=0.5cm, minimum height=0.75cm,text centered,draw=black]
+
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=0.75cm, text centered, draw=black, fill=blue!30]
+
+
+
+\tikzstyle{process} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{decision} = [diamond, minimum width=0.75cm, minimum height=0.75cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi, \number \year} 
+
+
+
+\def\boxit#1{%
+  \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+  \llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
+
+
+\usepackage{lipsum}
+
+%\linespread{1.2}
+
+
+\input{Elements/Title}
+
+\begin{document}
+\maketitle
+
+
+
+\begin{abstract}
+
+  We link stocks through direct and indirect common owners, and we show that having common ownership and belonging to a business group (indirect common owner) affect the co-movement. Our analysis is based on the daily ownership of blockholders on the Tehran Stock Exchange. The study found that belonging to a business group had more impact than being a common owner, and a common owner influenced only movement within business groups. In addition, co-movement in business groups is explained by simultaneous trades in the same direction.
+
+\end{abstract}
+
+
+
+
+
+
+\input{Elements-Eng/Introduction}
+%\input{Elements-Eng/Data and Methodology}
+%\FloatBarrier
+%\input{Elements-Eng/Results}
+%\FloatBarrier
+%\input{Elements-Eng/Evidence for correlated tradingSample}
+%\input{Elements-Eng/Conclusion}
+%\input{appendices}
+\newpage
+	{
+	\footnotesize
+	\bibliographystyle{apalike}
+	\bibliography{Ref}
+}
+
+
+\end{document}
