@@ -129,9 +129,11 @@ Weekly = pd.DataFrame()
 time = pd.DataFrame()
 d = pd.DataFrame()
 arrs = os.listdir(path + "NormalzedFCAP9.1")
+arrs.remove('Old')
 counter_file = 0
+#%%
 for counter, i in enumerate(arrs):
-    print(counter, len(Monthly))
+    print(counter, len(Monthly),i)
     d = pd.read_pickle(path + "NormalzedFCAP9.1\\" + i)
     if len(d) == 0:
         continue
@@ -167,13 +169,14 @@ Monthly = pd.DataFrame()
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
+arrs.remove('Old')
 df = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
 # %%
 result = pd.DataFrame()
 counter, counter_file = 0, 0
 # arr.remove("MonthlyAllPairs_1400_06_28.csv")
 for i, name in enumerate(arr):
-    print(i, len(result))
+    print(i, len(result),name)
     d = pd.read_pickle(path + name).reset_index(drop=True)
     if len(d) < 1:
         continue
