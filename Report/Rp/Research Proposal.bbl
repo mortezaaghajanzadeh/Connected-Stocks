@@ -30,6 +30,11 @@ David, J.~M. and Simonovska, I. (2016).
 \newblock Correlated beliefs, returns, and stock market volatility.
 \newblock {\em Journal of International Economics}, 99:S58--S77.
 
+\bibitem[Fama and MacBeth, 1973]{FamaMacBeth}
+Fama, E.~F. and MacBeth, J.~D. (1973).
+\newblock Risk, return, and equilibrium: Empirical tests.
+\newblock {\em Journal of Political Economy}, 81(3):607--636.
+
 \bibitem[Grullon et~al., 2014]{grullon2014comovement}
 Grullon, G., Underwood, S., and Weston, J.~P. (2014).
 \newblock Comovement and investment banking networks.
@@ -65,6 +70,11 @@ Pantzalis, C. and Wang, B. (2017).
 Shiller, R.~J. (1989).
 \newblock Comovements in stock prices and comovements in dividends.
 \newblock {\em The Journal of Finance}, 44(3):719--729.
+
+\bibitem[Skoulakis, 2008]{skoulakis2008panel}
+Skoulakis, G. (2008).
+\newblock Panel data inference in finance: Least-squares vs fama-macbeth.
+\newblock {\em Available at SSRN 1108865}.
 
 \bibitem[Wu and Shamsuddin, 2014]{wu2014investor}
 Wu, Q. and Shamsuddin, A. (2014).

@@ -3,53 +3,53 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Research Proposal.aux
 The style file: apalike.bst
 Database file #1: ../Ref.bib
-Repeated entry---line 385 of file ../Ref.bib
+Repeated entry---line 397 of file ../Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 767 of file ../Ref.bib
+Repeated entry---line 779 of file ../Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
-You've used 14 entries,
+You've used 16 entries,
             1935 wiz_defined-function locations,
-            565 strings with 5631 characters,
-and the built_in function-call counts, 5619 in all, are:
-= -- 568
-> -- 201
-< -- 9
-+ -- 64
-- -- 64
-* -- 506
-:= -- 970
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 102
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 195
-empty$ -- 408
-format.name$ -- 94
-if$ -- 1091
+            578 strings with 5905 characters,
+and the built_in function-call counts, 6283 in all, are:
+= -- 633
+> -- 221
+< -- 11
++ -- 70
+- -- 70
+* -- 559
+:= -- 1089
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 115
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 222
+empty$ -- 458
+format.name$ -- 104
+if$ -- 1221
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 14
-newline$ -- 73
-num.names$ -- 42
-pop$ -- 67
+missing$ -- 16
+newline$ -- 83
+num.names$ -- 48
+pop$ -- 76
 preamble$ -- 1
-purify$ -- 102
+purify$ -- 115
 quote$ -- 0
-skip$ -- 150
+skip$ -- 172
 stack$ -- 0
-substring$ -- 481
-swap$ -- 14
+substring$ -- 526
+swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 96
 warning$ -- 0
-while$ -- 51
+while$ -- 56
 width$ -- 0
-write$ -- 183
+write$ -- 208
 (There were 2 error messages)
