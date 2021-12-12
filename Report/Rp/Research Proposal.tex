@@ -1,0 +1,147 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt, a4paper]{article}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usetikzlibrary{arrows}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{pdflscape}
+
+
+
+\title{\textbf{Research Proposal}}
+\author{}
+\date{}
+
+\newcommand{\namelistlabel}[1]{\mbox{#1}\hfil}
+\newenvironment{namelist}[1]{%1
+	\begin{list}{}
+		{
+			\let\makelabel\namelistlabel
+			\settowidth{\labelwidth}{#1}
+			\setlength{\leftmargin}{1.1\labelwidth}
+		}
+	}{%1
+\end{list}}
+
+\captionsetup{font=footnotesize,labelfont=footnotesize}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\usepackage{natbib}
+\usepackage[title]{appendix}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi, \number \year} 
+
+
+
+\def\boxit#1{%
+  \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+  \llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}
+
+
+\usepackage{lipsum}
+
+%\linespread{1.2}
+
+
+%\input{../Elements/Title}
+
+\begin{document}
+\maketitle
+\begin{namelist}{xxxxxxxxxxxx}
+	\item[{\bf Title:}]
+	\textit{Connected Stocks via Business Groups: Evidence from an Emerging Market }
+	\item[{\bf Author:}]
+	\textit{	Seyyed Morteza Aghajanzadeh}
+	\item[{\bf Supervisors:}]
+	\textit{	Dr. Mahdi Heidari, Dr. Mahdi Mohseni}
+	\item[{\bf Institution:}]
+	\textit{	Tehran Institute for Advanced Studies}
+\end{namelist}
+
+
+\section*{Research Objective}
+Extant literature points out 
+\section*{Motivation}
+	{The phenomenon of "co-movement" has been observed by researchers and analysts. There is an increase in interest in risk models, notably after the financial crisis of 2008. According to these models, price correlation plays a significant role in risk measurement. Companies' return co-movement was traditionally attributed to their fundamentals. (For example {\cite{shiller1989comovements}})} 
+	
+	Although, in recent years, it has been recognized that the co-movement rises from non-fundamental sources. {\cite{barberis2003style} and \cite{barberis2005comovement}} provided theoretical models for predicting a co-movement between fundamentally unrelated companies.
+	The following are some of the other sources of co-movement. Index inclusion ({\cite{barberis2005comovement}}), investors' attention to the companies ({\cite{wu2014investor}}), Investment banks' underwriting ({\cite{grullon2014comovement}}), correlated beliefs ({\cite{david2016correlated}}), shareholders' coordination ({\cite{pantzalis2017shareholder}}), and preference for companies' dividends ({\cite{HAMEED2019103}}) are among contributing factors to co-movement that have been identified by researchers.
+	
+	The common ownership concept has been observed in financial literature in recent years. There has been a surge in the popularity of index investing in the United States, which has led to an increase in common ownership. 
+			For instance, \cite{azar2018anticompetitive} claims that an increase in mutual ownership in airline companies leads to less competitive ticket pricing. However, this subject is controversial and many papers discuss whether mutual ownership affects companies' behavior. \cite{lewellen2021does} realized that in previous investigations, other effective factors have wrongly been replaced by mutual ownership effect.
+		{\cite{AntonPolk}} examined on the effect of common ownership on co-movement. 
+	This paper suggests that co-movement increases by increasing common ownership. Also, as the mutual fund ownership data was accessible to the author, it is shown in the paper that the  co-movement increases when there is a significant net flow, either in or out-flow in the months.
+	
+	In addition, according to {\cite{Liquidity2016}} companies show co-movement considering their owners' correlation in their liquidity needs. The author also adds that companies with higher mutual fund ownership have a more liquidity correlation than others. This paper contends that in order for companies to have co-movement, there is no need for common ownership. Plus, common ownership can explain companies'  liquidity correlation. 
+	
+			
+Additionally, there are business groups with a share of almost 85\% of the Iran stock market. Business groups are essential phenomena that can be seen in developed and developing countries. 
+This paper analyzes co-movement in business groups. Two papers are found in the literature debate this subject, considering co-movement in business groups.
+Although the co-movement in business groups is accepted, the co-movement channels remained undiscovered.
+Both {\cite{cho2015stock} and \cite{kim2015stock}} studied the South Korean market and suggested two different sources for the co-movement in business groups. The first paper attributed co-movement to the companies' fundamentals. However, the second paper presents that the investors' category/habitat behavior is responsible for co-movement.
+		
+\section*{Data}
+We  use our unique data set, including the daily ownership table that reports all end-of-the-days block-holders of listed firms with their changes in that day.  Block-holder is a shareholder who owns at least 1\% of the total shares outstanding. 
+	We also gathered industries index and stock returns, trading volume, and other relevant market and accounting data from the Codal website \footnote{\href{http://www.codal.ir}{www.codal.ir}}
+and the  Tehran Securities Exchange Technology Management Co (TSETMC)\footnote{\href{http://www.tsetmc.com}{www.tsetmc.com}} database.
+\section*{Methodology}
+
+\section*{Contribution}
+According to the restriction of data in the US that only fund ownership data is available, investigations in this area are limited to the fund ownership impact on co-movement. This type of owners perform particular types of behavior due to their needs and the fact that they are intermediates.
+	Nevertheless, in Iran, the block holders' daily ownership data, including mutual fund ownership, is publicly accessible. So research through this data can show whether common ownership other than mutual fund ownership can lead to co-movement or not.
+
+	
+		In this paper, we consider the co-movement of the companies in business groups. Best of our knowledge, it is the first study that compares direct and indirect common ownership.
+		A modified measurement is introduced in this paper to calculate the common ownership of the companies. 
+
+\section*{Policy Implication}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	
+
+
+	
+\newpage
+	{
+	\footnotesize
+	\bibliographystyle{apalike}
+	\bibliography{../Ref}
+}
+
+\end{document}
