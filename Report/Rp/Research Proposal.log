@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  13 DEC 2021 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  13 DEC 2021 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,12 +644,24 @@ Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count298
 \c@subtable=\count299
 )
+(c:/texlive/2020/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks36
+\SOUL@lasttoken=\toks37
+\SOUL@cmds=\toks38
+\SOUL@buffer=\toks39
+\SOUL@token=\toks40
+\SOUL@spaceskip=\skip72
+\SOUL@ttwidth=\dimen291
+\SOUL@uldp=\dimen292
+\SOUL@ulht=\dimen293
+)
 Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 
 (c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip72
-\bibsep=\skip73
+\bibhang=\skip73
+\bibsep=\skip74
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count300
 )
@@ -705,16 +717,16 @@ LaTeX Info: Redefining \selectfont on input line 73.
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count309
-\scratchdimen=\dimen291
+\scratchdimen=\dimen294
 \scratchbox=\box66
 \nofMPsegments=\count310
 \nofMParguments=\count311
-\everyMPshowfont=\toks36
+\everyMPshowfont=\toks41
 \MPscratchCnt=\count312
-\MPscratchDim=\dimen292
+\MPscratchDim=\dimen295
 \MPnumerator=\count313
 \makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks37
+\everyMPtoPDFconversion=\toks42
 ) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -756,21 +768,21 @@ LaTeX Info: Redefining \nameref on input line 73.
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./
 Research Proposal.bbl
 [5]) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./Research Proposal.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `"Research Proposal".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 19765 strings out of 480608
- 377991 string characters out of 5907536
- 794732 words of memory out of 5000000
- 35233 multiletter control sequences out of 15000+600000
- 539551 words of font info for 49 fonts, out of 8000000 for 9000
+ 19935 strings out of 480608
+ 380083 string characters out of 5907536
+ 801206 words of memory out of 5000000
+ 35398 multiletter control sequences out of 15000+600000
+ 539864 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,60p,815b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
@@ -780,10 +792,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist
 1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti12.pfb>
-Output written on "Research Proposal.pdf" (6 pages, 119832 bytes).
+Output written on "Research Proposal.pdf" (6 pages, 121567 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 175 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
