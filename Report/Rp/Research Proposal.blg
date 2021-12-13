@@ -11,45 +11,48 @@ Repeated entry---line 801 of file ../Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
-You've used 17 entries,
+Warning--empty note in azar2011new
+Warning--there's a number but no volume in freeman2019effects
+Warning--empty note in newham2018common
+You've used 25 entries,
             1935 wiz_defined-function locations,
-            585 strings with 6091 characters,
-and the built_in function-call counts, 6687 in all, are:
-= -- 675
-> -- 234
-< -- 12
-+ -- 74
-- -- 74
-* -- 596
-:= -- 1157
-add.period$ -- 51
-call.type$ -- 17
-change.case$ -- 122
-chr.to.int$ -- 17
-cite$ -- 17
-duplicate$ -- 236
-empty$ -- 488
-format.name$ -- 111
-if$ -- 1300
+            626 strings with 7388 characters,
+and the built_in function-call counts, 9664 in all, are:
+= -- 973
+> -- 346
+< -- 17
++ -- 114
+- -- 110
+* -- 856
+:= -- 1681
+add.period$ -- 73
+call.type$ -- 25
+change.case$ -- 180
+chr.to.int$ -- 25
+cite$ -- 28
+duplicate$ -- 344
+empty$ -- 689
+format.name$ -- 159
+if$ -- 1869
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 88
-num.names$ -- 51
-pop$ -- 80
+missing$ -- 23
+newline$ -- 126
+num.names$ -- 75
+pop$ -- 121
 preamble$ -- 1
-purify$ -- 122
+purify$ -- 180
 quote$ -- 0
-skip$ -- 183
+skip$ -- 271
 stack$ -- 0
-substring$ -- 563
-swap$ -- 17
-text.length$ -- 0
+substring$ -- 787
+swap$ -- 30
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 102
-warning$ -- 0
-while$ -- 60
+type$ -- 150
+warning$ -- 3
+while$ -- 87
 width$ -- 0
-write$ -- 221
+write$ -- 319
 (There were 2 error messages)

@@ -3,11 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: WrtingSample.aux
 The style file: apalike.bst
 Database file #1: Ref.bib
-Repeated entry---line 385 of file Ref.bib
+Repeated entry---line 419 of file Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 767 of file Ref.bib
+Repeated entry---line 801 of file Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
@@ -15,45 +15,45 @@ Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 29 entries,
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            646 strings with 7994 characters,
-and the built_in function-call counts, 11469 in all, are:
-= -- 1154
-> -- 423
-< -- 19
-+ -- 142
-- -- 136
-* -- 1021
-:= -- 1985
-add.period$ -- 84
-call.type$ -- 29
-change.case$ -- 213
-chr.to.int$ -- 29
-cite$ -- 33
-duplicate$ -- 405
-empty$ -- 808
-format.name$ -- 191
-if$ -- 2223
+            639 strings with 7852 characters,
+and the built_in function-call counts, 11065 in all, are:
+= -- 1112
+> -- 410
+< -- 18
++ -- 138
+- -- 132
+* -- 984
+:= -- 1917
+add.period$ -- 81
+call.type$ -- 28
+change.case$ -- 206
+chr.to.int$ -- 28
+cite$ -- 32
+duplicate$ -- 391
+empty$ -- 778
+format.name$ -- 184
+if$ -- 2144
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 145
-num.names$ -- 87
-pop$ -- 145
+missing$ -- 25
+newline$ -- 140
+num.names$ -- 84
+pop$ -- 141
 preamble$ -- 1
-purify$ -- 213
+purify$ -- 206
 quote$ -- 0
-skip$ -- 322
+skip$ -- 311
 stack$ -- 0
-substring$ -- 940
-swap$ -- 42
+substring$ -- 903
+swap$ -- 41
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
+type$ -- 168
 warning$ -- 4
-while$ -- 103
+while$ -- 99
 width$ -- 0
-write$ -- 369
+write$ -- 356
 (There were 2 error messages)
