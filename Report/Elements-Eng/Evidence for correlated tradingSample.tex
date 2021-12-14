@@ -100,176 +100,176 @@ We calculate standard error of monthly turn over residuals of firms in the busin
 
 %
 %
-%\subsection{{Institutional Imbalance}}
+\subsection{{Institutional Imbalance}}
+
+	Furthermore, we should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).\cite{seasholes2007predictable} 
+	We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, at first step, we calculate monthly institutional imbalances for firms. As we expected, firms in the business groups have a lower level of standard error in  imbalances (Table \ref{tab:ImbalanceInsMeanSummary}). In the second step, 	 we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  $12.9\%$ and significantly (with pvalue of 0) lower than ungrouped firms. 
+	
+	{\begin{table}[htbp]
+		\centering
+		\caption{text}
+		\resizebox{0.75\textwidth}{!}{
+			\input{Output/ImbalanceInsMeanSummary.tex}
+		}
+		\label{tab:ImbalanceInsMeanSummary}%
+	\end{table}}
+	{\begin{table}[htbp]
+		\centering
+		\caption{text}
+		\resizebox{0.75\textwidth}{!}{
+			\input{Output/ImbalanceInsStdSummary.tex}
+		}
+		\label{tab:ImbalanceInsStdSummary}%
+\end{table}}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
+		\label{fig:GroupedInsSTD}
+	\end{figure}
+	
+	According to the main hypothesis, we need to compare pairs in groups with low standard error and other pairs.
+	For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
+	So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.  We use the previous methodology for estimating that model this model:
+	\input{Elements/Model13}
+	
+	We expected pairs in the same business groups with a low standard error of buy-sell imbalance co-move more than other pairs. Table \ref{Imbalance} reports estimation results. In columns three and four, we use our defined dummy variable and the same group. These results show that pairs in the same group of low imbalance std will comove more than other pairs. Moreover, in the subsample of same business groups, pairs in the low imbalance std comove greater than others.  For detailed analysis, we use the interaction of three variables of interest. For using this triple interaction, we use all the interactions between variables. Columns seven and eight report our results. By increasing common ownership in the same groups, pairs in the same business group of low imbalance std will comove greater than others.
+	
+		{\begin{table}[htbp]
+			\centering
+			\caption{text}
+			\label{Imbalance}
+			\resizebox{\textwidth}{!}{
+				\input{Output/Imbalance.tex}
+			}
+	\end{table}}
+
 %
-%	Furthermore, we should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).\cite{seasholes2007predictable} 
-%	We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, at first step, we calculate monthly institutional imbalances for firms. As we expected, firms in the business groups have a lower level of standard error in  imbalances (Table \ref{tab:ImbalanceInsMeanSummary}). In the second step, 	 we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. As we expected grouped standard error is  $12.9\%$ and significantly (with pvalue of 0) lower than ungrouped firms. 
+%\begin{itemize}
 %	
-%	{\begin{table}[htbp]
-%		\centering
-%		\caption{text}
-%		\resizebox{0.75\textwidth}{!}{
-%			\input{Output/ImbalanceInsMeanSummary.tex}
-%		}
-%		\label{tab:ImbalanceInsMeanSummary}%
-%	\end{table}}
-%	{\begin{table}[htbp]
-%		\centering
-%		\caption{text}
-%		\resizebox{0.75\textwidth}{!}{
-%			\input{Output/ImbalanceInsStdSummary.tex}
-%		}
-%		\label{tab:ImbalanceInsStdSummary}%
-%\end{table}}
+%	
+%	
+%	
+%	\item 
+%	در قسمت قبل نشان دادیم که شرکت های درون گروه به همراه هم حرکت می شوند و این امر سبب می شود تا هم حرکتی قیمتی نیز با یدیگر داشته باشند
+%	\item
+%	حال بررسی می کنیم تا شرکت ها در یک جهت نیز معامله شوند
+%	\item
+%	یکی از ملاک های مورد استفاده در ادبیات برای بررسی رفتار معامله گران  ناترازی خرید و فروش است
+%	
+%	{\cite{seasholes2007predictable}}
+%	
+%	\begin{equation}
+%		Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
+%	\end{equation}
+%	
+%	\item 
+%	در سطح ماه ملاک ناترازی خرید و فروش را تعریف می کنیم
+%	\item 
+%	که در عبارت های ذکر شده مجموع خرید و فروش در سطح یک ماه در نظر گرفته شده است
+%	\item 
+%	مشخصات آماری ناترازی حقوقی در جدول 
+%	\ref{tab:ImbalanceInsMeanSummary}
+%	بیان شده است
+%	
+%		{\begin{table}[htbp]
+%				\centering
+%				\caption{text}
+%				\resizebox{0.75\textwidth}{!}{
+%					\input{Output/ImbalanceInsMeanSummary.tex}
+%				}
+%				\label{tab:ImbalanceInsMeanSummary}
+%		\end{table}}
+%	
+%	
+%\end{itemize}
+%\FloatBarrier
+%
+%\begin{itemize}
+%	\item 
+%	اگر شرکت های در یک گروه کسب و کار به همراه یکدیگر معامله شوند انتظار داریم تا انحراف معیار ناترازی خرید و فروش  حقوقی در گروه کمتر از شرکت های بیرون گروه باشد
+%	\item 
+%	انحراف معیار ناترازی حقوقی در شرکت های درون گروه و بیرون گروه را بررسی کرده ایم
+%	\item 
+%	جدول 
+%	\ref{tab:ImbalanceInsStdSummary}
+%	و
+%	نتایج را نشان می دهد
+%	
+%		{\begin{table}[htbp]
+%				\centering
+%				\caption{text}
+%				\resizebox{0.75\textwidth}{!}{
+%					\input{Output/ImbalanceInsStdSummary.tex}
+%				}
+%				\label{tab:ImbalanceInsStdSummary}%
+%		\end{table}}
+%	
+%	
+%	\item 
+%	به صورت متوسط انحراف معیار ناترازی در شرکت های درون گروه از شرکت های بیرون گروه کمتر است	
+%	
+%	\item 
+%	در شکل 
+%	\ref{fig:GroupedInsSTD}
+%	سری زمانی میانگین انحراف معیار ناترازی شرکت ها در گروه ها و بیرون گروه نشان داده شده است
 %	\begin{figure}[htbp]
 %		\centering
+%		\caption{text}
 %		\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
 %		\label{fig:GroupedInsSTD}
 %	\end{figure}
 %	
-%	According to the main hypothesis, we need to compare pairs in groups with low standard error and other pairs.
-%	For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. 
-%	So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group.  We use the previous methodology for estimating that model this model:
-%	\input{Elements/Model13}
+%	\item 
+%	به صورت متوسط انحراف معیار نا ترازی برای حقوقی ها 12\%
+%	از شرکت های بیرون گروه کمتر است. (از لحاظ آماری هم این اختلاف معنا دار است)
 %	
-%	We expected pairs in the same business groups with a low standard error of buy-sell imbalance co-move more than other pairs. Table \ref{Imbalance} reports estimation results. In columns three and four, we use our defined dummy variable and the same group. These results show that pairs in the same group of low imbalance std will comove more than other pairs. Moreover, in the subsample of same business groups, pairs in the low imbalance std comove greater than others.  For detailed analysis, we use the interaction of three variables of interest. For using this triple interaction, we use all the interactions between variables. Columns seven and eight report our results. By increasing common ownership in the same groups, pairs in the same business group of low imbalance std will comove greater than others.
+%\end{itemize}
+%
+%
+%\begin{itemize}
+%	\item 
+%	همانطور که انتظار داشتیم در گروه های کسب و کار انحراف معیار نا ترازی کم است
+%	\item 
+%	حال باید نشان دهیم که جفت های حاضر  در گروه های کسب و کار با انحراف معیار کمتر، هم حرکتی بالاتری نیز دارند
+%	\item 
+%	برای این هدف متغیر دامی 
+%	\textbf{Imbalance std}
+%	را برای گروه هایی که انحراف معیار ناترازی حقوقی برای آن ها از میانه کمتر است تعریف می کنیم
+%	%	\item 
+%	%	مدل زیر را با استفاده از روش مدل 
+%	%	\ref{model1}
+%	%	برآورد می کنیم
+%	%	\input{Model13}
+%	\item 
+%	انتظار داریم جفت های حاضر در گروه های با انحراف معیار کم هم حرکتی بیشتری داشته باشند
+%	
+%\end{itemize}
+%
+%\begin{itemize}
+%	\item 
+%	نتایج در جدول
+%	\ref{Imbalance}
+%	آورده شده است
 %	
 %		{\begin{table}[htbp]
-%			\centering
-%			\caption{text}
-%			\label{Imbalance}
-%			\resizebox{\textwidth}{!}{
-%				\input{Output/Imbalance.tex}
-%			}
-%	\end{table}}
-%
-%%
-%%\begin{itemize}
-%%	
-%%	
-%%	
-%%	
-%%	\item 
-%%	در قسمت قبل نشان دادیم که شرکت های درون گروه به همراه هم حرکت می شوند و این امر سبب می شود تا هم حرکتی قیمتی نیز با یدیگر داشته باشند
-%%	\item
-%%	حال بررسی می کنیم تا شرکت ها در یک جهت نیز معامله شوند
-%%	\item
-%%	یکی از ملاک های مورد استفاده در ادبیات برای بررسی رفتار معامله گران  ناترازی خرید و فروش است
-%%	
-%%	{\cite{seasholes2007predictable}}
-%%	
-%%	\begin{equation}
-%%		Imbalance_{ins} = \frac{Buy_{ins} - Sell_{ins}}{Buy_{ins} + Sell_{ins}}
-%%	\end{equation}
-%%	
-%%	\item 
-%%	در سطح ماه ملاک ناترازی خرید و فروش را تعریف می کنیم
-%%	\item 
-%%	که در عبارت های ذکر شده مجموع خرید و فروش در سطح یک ماه در نظر گرفته شده است
-%%	\item 
-%%	مشخصات آماری ناترازی حقوقی در جدول 
-%%	\ref{tab:ImbalanceInsMeanSummary}
-%%	بیان شده است
-%%	
-%%		{\begin{table}[htbp]
-%%				\centering
-%%				\caption{text}
-%%				\resizebox{0.75\textwidth}{!}{
-%%					\input{Output/ImbalanceInsMeanSummary.tex}
-%%				}
-%%				\label{tab:ImbalanceInsMeanSummary}
-%%		\end{table}}
-%%	
-%%	
-%%\end{itemize}
-%%\FloatBarrier
-%%
-%%\begin{itemize}
-%%	\item 
-%%	اگر شرکت های در یک گروه کسب و کار به همراه یکدیگر معامله شوند انتظار داریم تا انحراف معیار ناترازی خرید و فروش  حقوقی در گروه کمتر از شرکت های بیرون گروه باشد
-%%	\item 
-%%	انحراف معیار ناترازی حقوقی در شرکت های درون گروه و بیرون گروه را بررسی کرده ایم
-%%	\item 
-%%	جدول 
-%%	\ref{tab:ImbalanceInsStdSummary}
-%%	و
-%%	نتایج را نشان می دهد
-%%	
-%%		{\begin{table}[htbp]
-%%				\centering
-%%				\caption{text}
-%%				\resizebox{0.75\textwidth}{!}{
-%%					\input{Output/ImbalanceInsStdSummary.tex}
-%%				}
-%%				\label{tab:ImbalanceInsStdSummary}%
-%%		\end{table}}
-%%	
-%%	
-%%	\item 
-%%	به صورت متوسط انحراف معیار ناترازی در شرکت های درون گروه از شرکت های بیرون گروه کمتر است	
-%%	
-%%	\item 
-%%	در شکل 
-%%	\ref{fig:GroupedInsSTD}
-%%	سری زمانی میانگین انحراف معیار ناترازی شرکت ها در گروه ها و بیرون گروه نشان داده شده است
-%%	\begin{figure}[htbp]
-%%		\centering
-%%		\caption{text}
-%%		\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
-%%		\label{fig:GroupedInsSTD}
-%%	\end{figure}
-%%	
-%%	\item 
-%%	به صورت متوسط انحراف معیار نا ترازی برای حقوقی ها 12\%
-%%	از شرکت های بیرون گروه کمتر است. (از لحاظ آماری هم این اختلاف معنا دار است)
-%%	
-%%\end{itemize}
-%%
-%%
-%%\begin{itemize}
-%%	\item 
-%%	همانطور که انتظار داشتیم در گروه های کسب و کار انحراف معیار نا ترازی کم است
-%%	\item 
-%%	حال باید نشان دهیم که جفت های حاضر  در گروه های کسب و کار با انحراف معیار کمتر، هم حرکتی بالاتری نیز دارند
-%%	\item 
-%%	برای این هدف متغیر دامی 
-%%	\textbf{Imbalance std}
-%%	را برای گروه هایی که انحراف معیار ناترازی حقوقی برای آن ها از میانه کمتر است تعریف می کنیم
-%%	%	\item 
-%%	%	مدل زیر را با استفاده از روش مدل 
-%%	%	\ref{model1}
-%%	%	برآورد می کنیم
-%%	%	\input{Model13}
-%%	\item 
-%%	انتظار داریم جفت های حاضر در گروه های با انحراف معیار کم هم حرکتی بیشتری داشته باشند
-%%	
-%%\end{itemize}
-%%
-%%\begin{itemize}
-%%	\item 
-%%	نتایج در جدول
-%%	\ref{Imbalance}
-%%	آورده شده است
-%%	
-%%		{\begin{table}[htbp]
-%%				\centering
-%%				\caption{text}
-%%				\label{Imbalance}
-%%				\resizebox{\textwidth}{!}{
-%%					\input{Output/Imbalance.tex}
-%%				}
-%%		\end{table}}
-%%	
-%%	\begin{itemize}
-%%		\item 
-%%		همچنان جفت های در یک گروه کسب و کار هم حرکتی بیشتری دارند
-%%		\item 
-%%		اگر جفت های در یک گروه کسب و کار، در گروه های با انحراف معیار کم باشند $ 2.4\% $ هم حرکتی آن ها افزایش پیدا می کند
-%%		(میانگین هم حرکتی تقریبا $ 1.6 \%$ است )
-%%		
-%%		
-%%	\end{itemize}
-%%\end{itemize}
-%
-%\FloatBarrier
-%
+%				\centering
+%				\caption{text}
+%				\label{Imbalance}
+%				\resizebox{\textwidth}{!}{
+%					\input{Output/Imbalance.tex}
+%				}
+%		\end{table}}
+%	
+%	\begin{itemize}
+%		\item 
+%		همچنان جفت های در یک گروه کسب و کار هم حرکتی بیشتری دارند
+%		\item 
+%		اگر جفت های در یک گروه کسب و کار، در گروه های با انحراف معیار کم باشند $ 2.4\% $ هم حرکتی آن ها افزایش پیدا می کند
+%		(میانگین هم حرکتی تقریبا $ 1.6 \%$ است )
+%		
+%		
+%	\end{itemize}
+%\end{itemize}
+
+\FloatBarrier
+
