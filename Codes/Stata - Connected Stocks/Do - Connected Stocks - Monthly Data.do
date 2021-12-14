@@ -237,7 +237,7 @@ label variable PairType "PairType"
 
 
 drop if monthlyfcapf >1
-drop if fcapf >1
+/*drop if fcapf >1*/
 
 
 xtset id t_month  
@@ -392,3 +392,16 @@ label variable monthlyρ_5std " $ {\rho_t} / \sigma $ "
 label variable monthlyρ_turn_fstd " $ {\rho(\Delta \text{TurnOver})_t} / \sigma $ "
   
 summ sbgroupstd
+
+
+gen rankedFCA = 1
+
+replace rankedFCA = 2 if fcaperncentilerank >0.2
+
+replace rankedFCA = 3 if fcaperncentilerank >0.4
+
+replace rankedFCA = 4 if fcaperncentilerank >0.6
+
+replace rankedFCA = 5 if fcaperncentilerank >0.8
+
+
