@@ -276,12 +276,6 @@ esttab   v0 v1 v11 /*v111   v2*/ v21 v3 , nomtitle label   s( SubSample Control 
 	estadd loc FE "Yes" , replace
 	estadd loc GroupSizeFE "Yes" , replace
 	
-	eststo v6 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup   i.PairType gdummy0-gdummy47  , fmb newey(4)
-	estadd loc controll "Yes" , replace
-	estadd loc subsample "Total" , replace
-	estadd loc GroupFE "Yes" , replace
-	estadd loc FE "Yes" , replace
-	estadd loc GroupSizeFE "No" , replace
 	
 	
 		eststo v7 :  xi: quietly asreg monthlyρ_5_f /*NMFCA  NMFCAG*/ sgroup monthlysamesize monthlysamebm monthlycrossownership   lowimbalancestd    i.PairType  if sbgroup==1  , fmb newey(4)
@@ -300,15 +294,13 @@ esttab   v0 v1 v11 /*v111   v2*/ v21 v3 , nomtitle label   s( SubSample Control 
 
 
 
-	
-	esttab   v1 v2 v7 v8  v3 v6  /* v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA insimbalance_value_x insimbalance_value_y yy*/) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCAinsimbalance_value_x insimbalance_value_y yy*/) s( GroupSizeFE subsample GroupFE      N  ,  lab( "Group Size Effect" "Sub-sample" "Business Group FE" "Observations"))compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
-
+				esttab   v1 v2 v7 v8  /*v3 v6 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd /*ImbalanceSbgroup ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA insimbalance_value_x insimbalance_value_y yy*/) order(/*NMFCA */ sbgroup lowimbalancestd /*ImbalanceSbgroup NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCAinsimbalance_value_x insimbalance_value_y yy*/) s( /*GroupSizeFE*/ subsample /*GroupFE*/      N  ,  lab( /*"Group Size Effect"*/ "Sub-sample" /*"Business Group FE"*/ "Observations"))compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )
 
 	/**/
 	
 }
 
-		esttab   v1 v2 v7 v8  v3 v6  /* v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA insimbalance_value_x insimbalance_value_y yy*/) order(/*NMFCA */ sbgroup lowimbalancestd ImbalanceSbgroup /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCAinsimbalance_value_x insimbalance_value_y yy*/) s( GroupSizeFE subsample GroupFE      N  ,  lab( "Group Size Effect" "Sub-sample" "Business Group FE" "Observations"))compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
+		esttab   v1 v2 v7 v8  /*v3 v6 v4 v5*/, nomtitle  label  keep(/*NMFCA */ sbgroup lowimbalancestd /*ImbalanceSbgroup ImbalanceSbgroupFCA NMFCAG lowimbalancestdFCA insimbalance_value_x insimbalance_value_y yy*/) order(/*NMFCA */ sbgroup lowimbalancestd /*ImbalanceSbgroup NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCAinsimbalance_value_x insimbalance_value_y yy*/) s( /*GroupSizeFE*/ subsample /*GroupFE*/      N  ,  lab( /*"Group Size Effect"*/ "Sub-sample" /*"Business Group FE"*/ "Observations"))compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using Imbalance.tex ,replace
 
 summ  sbgroup lowimbalancestd ImbalanceSbgroup
  corr sbgroup lowimbalancestd ImbalanceSbgroup
@@ -364,11 +356,13 @@ summ  sbgroup lowimbalancestd ImbalanceSbgroup
 	
 	
 	
-	esttab   v1 v2  v7 v8 v3 v6 , nomtitle  label  keep(/*NMFCA */ sbgroup lowres Grouplowres/* trunresstd_x trunresstd_y xx */) order(/*NMFCA */ sbgroup lowres Grouplowres /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA trunresstd_x trunresstd_y xx*/ ) s( GroupSizeFE subsample GroupFE      N  ,  lab( "Group Size Effect" "Sub-sample""Business Group FE" "Observations")) compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))
+esttab   v1 v2  v7 v8 /*v3 v6 */, nomtitle  label  keep(/*NMFCA */ sbgroup lowres /*Grouplowres  trunresstd_x trunresstd_y xx */) order(/*NMFCA */ sbgroup lowres /*Grouplowres NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA trunresstd_x trunresstd_y xx*/ ) s( /*GroupSizeFE*/ subsample /*GroupFE*/      N  ,  lab( /*"Group Size Effect"*/ "Sub-sample" /*"Business Group FE"*/ "Observations")) compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))
 }
 
-esttab   v1 v2  v7 v8 v3 v6 , nomtitle  label  keep(/*NMFCA */ sbgroup lowres Grouplowres/* trunresstd_x trunresstd_y xx */) order(/*NMFCA */ sbgroup lowres Grouplowres /*NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA trunresstd_x trunresstd_y xx*/ ) s( GroupSizeFE subsample GroupFE      N  ,  lab( "Group Size Effect" "Sub-sample""Business Group FE" "Observations")) compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})),using LowRes.tex ,replace
+esttab   v1 v2  v7 v8 /*v3 v6 */, nomtitle  label  keep(/*NMFCA */ sbgroup lowres /*Grouplowres  trunresstd_x trunresstd_y xx */) order(/*NMFCA */ sbgroup lowres /*Grouplowres NMFCAG lowimbalancestdFCA ImbalanceSbgroupFCA trunresstd_x trunresstd_y xx*/ ) s( /*GroupSizeFE*/ subsample /*GroupFE*/      N  ,  lab( /*"Group Size Effect"*/ "Sub-sample" /*"Business Group FE"*/ "Observations")) compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})),using LowRes.tex ,replace
 
+
+corr sbgroup lowres Grouplowres
 
 { /*Turn on Co Movement*/
 
@@ -441,3 +435,6 @@ esttab   v1 v2 v3 v4 v5 /*v6 v7*/, nomtitle  label  keep(monthlyρ_turn_f monthl
 }
 
 esttab   v1 v2 v3 v4 v5 /*v6 v7*/, nomtitle  label  keep(monthlyρ_turn_f monthlyρ_5 /*sbgroup turnSbgroup*/ ) order(monthlyρ_turn_f) s( controll subsample   GroupFE   N  ,  lab( "Control" "Sub-sample" "Business Group FE" "Observations")) compress mgroups("Dependent Variable:  Future Pairs's co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))  ,using turncomovement.tex ,replace
+
+
+

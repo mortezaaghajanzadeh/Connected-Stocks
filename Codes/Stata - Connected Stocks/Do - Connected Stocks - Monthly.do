@@ -1,6 +1,14 @@
 
 ttest monthlyρ_5 ==0
 
+mean monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership, over(sbgroup) vce(bootstrap, dots(1))
+
+
+twoway kdensity monthlyρ_5  if sbgroup == 0|| kdensity monthlyρ_5 if sbgroup == 1
+
+
+
+
 
 xi: asreg monthlyρ_5_f i.rankedFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  , fmb newey(4)
 
@@ -703,3 +711,11 @@ esttab v1 v5 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Ob
 esttab v1 v5 v2 v3 v4 ,nomtitle label   s( N Controls FE subsample r2 ,  lab("Observations" "Controls" "Pari Size FE" "SubSample" "$ R^2$"))   keep(/*NMFCA*/ sbgroup /*NMFCAG*/ bigbusinessgroup /*  bigbusinessgroupFCA*/ bigbusinessgroupSgroup /*bigbusinessgroupSgroupFCA */ monthlyρ_turn monthlyρ_5 bigbusinessgroupTurn Turnsbgroup TurnSgroupbigbusinessgroup ) compress order(sbgroup /*NMFCA  NMFCAG*/ monthlyρ_turn monthlyρ_5 Turnsbgroup  bigbusinessgroup bigbusinessgroupSgroup  bigbusinessgroupTurn TurnSgroupbigbusinessgroup)  mgroups("Dependent Variable: Future Pairs's co-movement"  , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ),using mresult2-BigBusinessGroup.tex ,replace
 }
 
+
+
+xtset t_month id
+
+
+xtreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup gdummy0-gdummy47 i.PairType monthlyρ_5, fe robust
+
+xtreg monthlyρ_5_f sgroup monthlysamesize monthlysamebm monthlycrossownership  sbgroup lowimbalancestd ImbalanceSbgroup, fe robust

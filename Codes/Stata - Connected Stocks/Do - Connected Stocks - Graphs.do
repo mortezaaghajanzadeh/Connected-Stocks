@@ -54,7 +54,7 @@ graph export MHistlnFCAP.png,replace
 
 
 
-
+binscatter monthlyρ_5 t_month,  nq(25) line(none) by(sbgroup) legend(pos(1) ring(0) col(1) label(1 "Separate Group") label(2 "Same Group") ) msymbol(Th S)  xtitle("Month id") ytitle("{&rho} {sub:ij,t}")
  
 
  /*
