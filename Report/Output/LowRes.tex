@@ -1,24 +1,25 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{4}{c}}
+\begin{tabular}{l*{6}{c}}
 \hline\hline
-                &\multicolumn{4}{c}{Dependent Variable:  Future Pairs's co-movement}        \\\cmidrule(lr){2-5}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                &\multicolumn{6}{c}{Dependent Variable:  Future Pairs's co-movement}                                              \\\cmidrule(lr){2-7}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
-Same Group      &   0.0277\sym{***}&   0.0280\sym{***}&   0.0204\sym{***}&  -0.0301         \\
-                &   (4.88)         &   (5.32)         &   (3.50)         &  (-0.71)         \\
+Same Group      &   0.0277\sym{***}&   0.0280\sym{***}&                  &                  &   0.0204\sym{***}&  -0.0301         \\
+                &   (4.88)         &   (5.32)         &                  &                  &   (3.50)         &  (-0.71)         \\
 [1em]
-LowResidualStd  &                  & -0.00160         & -0.00369         &  -0.0313         \\
-                &                  &  (-0.70)         &  (-1.56)         &  (-0.98)         \\
+LowResidualStd  &                  & -0.00160         &   0.0151\sym{**} & -0.00258         & -0.00369         &  -0.0313         \\
+                &                  &  (-0.70)         &   (3.19)         &  (-1.61)         &  (-1.56)         &  (-0.98)         \\
 [1em]
-$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ &                  &                  &   0.0182\sym{***}&   0.0190\sym{***}\\
-                &                  &                  &   (3.60)         &   (4.06)         \\
+$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ &                  &                  &                  &                  &   0.0182\sym{***}&   0.0190\sym{***}\\
+                &                  &                  &                  &                  &   (3.59)         &   (4.06)         \\
 \hline
-Group Size Effect&       No         &      Yes         &      Yes         &       No         \\
-Business Group FE&       No         &       No         &       No         &      Yes         \\
-Observations    &   297874         &   297874         &   297874         &   297874         \\
+Group Size Effect&       No         &      Yes         &      Yes         &      Yes         &      Yes         &       No         \\
+Sub-sample      &    Total         &    Total         &SameGroup         &SameGroup         &    Total         &    Total         \\
+Business Group FE&       No         &       No         &       No         &       No         &       No         &      Yes         \\
+Observations    &   297885         &   297885         &    36069         &   261816         &   297885         &   297885         \\
 \hline\hline
-\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }
