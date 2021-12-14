@@ -2,6 +2,8 @@
 ttest monthlyρ_5 ==0
 
 
+xi: asreg monthlyρ_5_f i.rankedFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  , fmb newey(4)
+
 
 binscatter monthlyρ_residual_bench NMFCA ,by(Grouphighbeta)
 

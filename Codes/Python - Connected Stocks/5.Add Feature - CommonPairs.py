@@ -815,30 +815,14 @@ df1 =  gg.apply(changeBg)
 #             t.loc[t.index >= ind, "sameBgChange"] = 1
 #             t["becomeSameBG"] = 1
 #     return t
-
-
-
-
-
 #%%
+gg = df1.groupby(["t_Month"])
+df1['FcaPerncentileRank'] = gg.MonthlyFCA.rank(pct = True)
 df1["2rdQarter"] = 0
 df1["4rdQarter"] = 0
-gg = df1.groupby(["t_Month"])
-# g = gg.get_group(2)
+df1.loc[df1.FcaPerncentileRank >= 0.5, "2rdQarter"] = 1
+df1.loc[df1.FcaPerncentileRank >= 0.75, "4rdQarter"] = 1
 
-
-def quarter(g):
-    print(g.name)
-    q1 = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.75)
-    mt = g[g.MonthlyFCA > 0].MonthlyFCA.quantile(0.5)
-    g.loc[g.MonthlyFCA > q1, "4rdQarter"] = 1
-    g.loc[g.MonthlyFCA > mt, "2rdQarter"] = 1
-    return g
-
-
-del df1
-df1 = gg.apply(quarter)
-del gg
 #%%
 
 
@@ -1112,6 +1096,9 @@ df1.loc[df1.uo_x.isin(ll), "BigBusinessGroup"] = 1
 df1.loc[df1.uo_y.isin(ll), "BigBusinessGroup"] = 1
 
 #%%
+
+
+#%%
 df1 = df1.rename(columns={"4rdQarter": "ForthQuarter", "2rdQarter": "SecondQuarter"})
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 n1 = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
@@ -1146,3 +1133,4 @@ def lowdummy(g):
 a = gg.apply(lowdummy).reset_index()
 a.to_csv(path + "lowImbalanceUO-Annual.csv", index=False)
 #%%
+# %%

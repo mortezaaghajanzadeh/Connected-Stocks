@@ -72,6 +72,8 @@ asreg deltatrun deltamarket deltagroup deltaindustry lnmarketcap   lagdeltagroup
   
   
 
+esttab v1 v11 /*v2 v21*/ v3 v31, n r2 label s(  weight control N r2 ,  lab( "Portfo. Weight " "Control" "Observations" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket  deltaindustry deltagroup ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+
 esttab v1 v11 /*v2 v21*/ v3 v31, n r2 label s(  weight control N r2 ,  lab( "Portfo. Weight " "Control" "Observations" "$ R^2 $")) nomtitle keep(deltamarket deltagroup deltaindustry) order(deltamarket  deltaindustry deltagroup ) mgroups("Dependent Variable: $\Delta \text{TurnOver}_{i} $ "   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using turnover.tex ,replace
 
 

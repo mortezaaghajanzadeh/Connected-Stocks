@@ -262,7 +262,7 @@ gg = tempt.groupby("yearmonth")
 
 def high(g):
     print(g.name)
-    t = g.residual.median()
+    t = g.residual.quantile(0.5)
     print(len(g))
     g["LowRes"] = 0
     g.loc[g.residual < t, "LowRes"] = 1
