@@ -3,49 +3,56 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Research Proposal.aux
 The style file: apalike.bst
 Database file #1: ../Ref.bib
-Repeated entry---line 485 of file ../Ref.bib
+Repeated entry---line 541 of file ../Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-You've used 16 entries,
+Repeated entry---line 923 of file ../Ref.bib
+ : @article{azar2018anticompetitive
+ :                                 ,
+I'm skipping whatever remains of this entry
+Warning--empty note in azar2011new
+Warning--there's a number but no volume in freeman2019effects
+Warning--empty note in newham2018common
+You've used 29 entries,
             1935 wiz_defined-function locations,
-            584 strings with 6049 characters,
-and the built_in function-call counts, 6374 in all, are:
-= -- 639
-> -- 226
-< -- 11
-+ -- 72
-- -- 72
-* -- 576
-:= -- 1101
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 116
-chr.to.int$ -- 16
-cite$ -- 16
-duplicate$ -- 223
-empty$ -- 467
-format.name$ -- 106
-if$ -- 1243
+            652 strings with 7990 characters,
+and the built_in function-call counts, 11136 in all, are:
+= -- 1117
+> -- 396
+< -- 20
++ -- 132
+- -- 126
+* -- 986
+:= -- 1940
+add.period$ -- 85
+call.type$ -- 29
+change.case$ -- 208
+chr.to.int$ -- 29
+cite$ -- 32
+duplicate$ -- 399
+empty$ -- 798
+format.name$ -- 181
+if$ -- 2155
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 16
-newline$ -- 83
-num.names$ -- 48
-pop$ -- 75
+missing$ -- 27
+newline$ -- 146
+num.names$ -- 87
+pop$ -- 138
 preamble$ -- 1
-purify$ -- 116
+purify$ -- 208
 quote$ -- 0
-skip$ -- 172
+skip$ -- 315
 stack$ -- 0
-substring$ -- 537
-swap$ -- 16
-text.length$ -- 0
+substring$ -- 898
+swap$ -- 34
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
-warning$ -- 0
-while$ -- 56
+type$ -- 174
+warning$ -- 3
+while$ -- 99
 width$ -- 0
-write$ -- 209
-(There was 1 error message)
+write$ -- 371
+(There were 2 error messages)
