@@ -3,56 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Research Proposal.aux
 The style file: apalike.bst
 Database file #1: ../Ref.bib
-Repeated entry---line 419 of file ../Ref.bib
+Repeated entry---line 485 of file ../Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 801 of file ../Ref.bib
- : @article{azar2018anticompetitive
- :                                 ,
-I'm skipping whatever remains of this entry
-Warning--empty note in azar2011new
-Warning--there's a number but no volume in freeman2019effects
-Warning--empty note in newham2018common
-You've used 25 entries,
+You've used 16 entries,
             1935 wiz_defined-function locations,
-            626 strings with 7388 characters,
-and the built_in function-call counts, 9664 in all, are:
-= -- 973
-> -- 346
-< -- 17
-+ -- 114
-- -- 110
-* -- 856
-:= -- 1681
-add.period$ -- 73
-call.type$ -- 25
-change.case$ -- 180
-chr.to.int$ -- 25
-cite$ -- 28
-duplicate$ -- 344
-empty$ -- 689
-format.name$ -- 159
-if$ -- 1869
+            584 strings with 6049 characters,
+and the built_in function-call counts, 6374 in all, are:
+= -- 639
+> -- 226
+< -- 11
++ -- 72
+- -- 72
+* -- 576
+:= -- 1101
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 116
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 223
+empty$ -- 467
+format.name$ -- 106
+if$ -- 1243
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 126
-num.names$ -- 75
-pop$ -- 121
+missing$ -- 16
+newline$ -- 83
+num.names$ -- 48
+pop$ -- 75
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 116
 quote$ -- 0
-skip$ -- 271
+skip$ -- 172
 stack$ -- 0
-substring$ -- 787
-swap$ -- 30
-text.length$ -- 1
+substring$ -- 537
+swap$ -- 16
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
-warning$ -- 3
-while$ -- 87
+type$ -- 96
+warning$ -- 0
+while$ -- 56
 width$ -- 0
-write$ -- 319
-(There were 2 error messages)
+write$ -- 209
+(There was 1 error message)
