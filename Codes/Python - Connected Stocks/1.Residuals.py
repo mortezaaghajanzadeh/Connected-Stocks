@@ -134,8 +134,7 @@ PriceData = PriceData.append(
         ]
     ]
 )
-del df
-
+# del df
 
 #%%
 

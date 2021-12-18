@@ -66,14 +66,13 @@ print(time.time() - n)
 #%%
 
 
-
-
 #%%
 len(t1[t1.FCAPf > 0]), len(t2)
 #%%
 data = pd.DataFrame()
 gg = df.groupby(["id"])
 counter = 0
+
 
 def genFile(df, path, g, i):
     S_gg = df.groupby(["id"])
@@ -84,14 +83,13 @@ def genFile(df, path, g, i):
         open(path + "NormalzedFCAP9.1\\NormalzedFCAP9.1_{}.p".format(i), "wb"),
     )
 
+
 import functools, multiprocessing
 from multiprocessing import Pool, cpu_count
 import pandas as pd
 import numpy as np
 import timeit
 import time
-
-
 
 
 #%%

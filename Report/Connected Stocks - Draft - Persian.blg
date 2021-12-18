@@ -1,28 +1,55 @@
-This is 8-bit Big BibTeX version 0.99d
-Implementation:  Microsoft(R) C/C++ for Win32
-Release version: 3.71 (04 mar 2019)
-
-The 8-bit codepage and sorting file: 88591lat.csf
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft - Persian.aux
 The style file: apalike.bst
-Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
-Reallocated global_strs (elt_size=200001) to 10 items from 0.
-Reallocated glb_str_end (elt_size=4) to 10 items from 0.
 Database file #1: ../Report/Ref.bib
-Repeated entry---line 271 of file ../Report/Ref.bib
- : @article{pantzalis2017shareholder
- :                                  ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 462 of file ../Report/Ref.bib
+Repeated entry---line 923 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
-
-Here's how much of BibTeX's memory you used:
- Cites:                18 out of 750
- Fields:               77 out of 5000
- Hash table:       199850 out of 200000
- Strings:             587 out of 200000
- Free string pool:   6201 out of 65000
- Wizard functions:   1935 out of 3000
-(There were 2 error messages)
+Warning--empty note in Aliabadi2022
+Warning--empty note in azar2011new
+Warning--there's a number but no volume in freeman2019effects
+Warning--empty note in newham2018common
+You've used 14 entries,
+            1935 wiz_defined-function locations,
+            554 strings with 5931 characters,
+and the built_in function-call counts, 5266 in all, are:
+= -- 520
+> -- 204
+< -- 8
++ -- 72
+- -- 66
+* -- 465
+:= -- 934
+add.period$ -- 39
+call.type$ -- 14
+change.case$ -- 103
+chr.to.int$ -- 14
+cite$ -- 18
+duplicate$ -- 186
+empty$ -- 358
+format.name$ -- 88
+if$ -- 1004
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 70
+num.names$ -- 42
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 103
+quote$ -- 0
+skip$ -- 150
+stack$ -- 0
+substring$ -- 396
+swap$ -- 18
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 4
+while$ -- 45
+width$ -- 0
+write$ -- 174
+(There was 1 error message)

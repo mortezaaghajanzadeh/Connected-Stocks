@@ -327,6 +327,11 @@ df.isnull().sum()
 
 
 # %%
+df['Number_Change'] = df['Number_Change'].replace('-',0)
+df['Number_Change'] = df['Number_Change'].astype(float)
+df['Percent_Change'] = df['Percent_Change'].replace('-',0)
+df['Percent_Change'] = df['Percent_Change'].astype(float)
+
 df.drop(columns=["shamsi"]).to_parquet(
     path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
 )

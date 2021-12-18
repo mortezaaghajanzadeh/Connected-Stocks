@@ -3,100 +3,102 @@
 
 
 \subsection{داده}
-\begin{itemize}
-	\item 
-	داده های قیمت، حجم و دیگر مشخصات حسابداری و بازاری شرکت ها از سایت کدال و tsetmc
-	\item
-	داده منحصر به فرد مالکیت های بالای یک درصد روزانه شرکت ها بورسی از سایت 
-	tsetmc
-	\item 
-	حذف داده های صندوق های سرمایه گذاری معامله پذیر
-	\item 
-	از تاریخ 
-	1393/01 (2014/03)
-	 تا تاریخ 
-	 1398/12 (2020/03)
-	 
-
-	\item 
-	گروه های کسب و کار یکی از مشخصات بازار ایران است
-		\item 
-	داده های گروه های کسب و کار از مقاله
+در این پژوهش از مجموعه داده های فراهم شده در سایت شركت مديريت فناوري بورس تهران و کدال استفاده شده است. از این مجموعه داده سهام صندوق های سرمایه گذاری معامله پذیر حذف شده اند. برای بررسی گروه های کسب و کار از داده های مقاله 
 	\lr{\cite{Aliabadi2022}}
-	\begin{itemize}
-		\item 
-		داده های گروه های کسب و کار در ایران مشخص نیست
-		\item
-		با استفاده از الگوریتم 
+	استفاده شده است که با استفاده از الگوریم 
 		\lr{\cite{almeida2011structure}}
-		با آستانه 40\%
+		با آستانه 40 درصد گروه های کسب و کار تشکیل شده است. با توجه به محدودیت این داده به سال های 1393 الی 1398 مطالعات اصلی مقاله را نیز به این بازه محدود کرده ایم. 
+		خلاصه آماری متغییر های مورد استفاده در مقاله در جدول 
+		\ref{t2-1}
+		نشان داده شده است.
+			 \begin{table}[htbp]
+		        \centering
+		        \caption{ خلاصه آماری داده های مالکیت استفاده شده در مقاله.}
+		        \label{t2-1}
+		        \begin{LTR}
+		        		\lr{\resizebox{1\textwidth}{!}
+		        {
+		        \input{Output/summaryOfOwnership.tex}
+		         }}
+		         		\end{LTR}
+		      \end{table}
 		
-	\end{itemize}
-	\item
-	جدول 
-	\ref{t2-1}
-	مشخصات آماری داده های مالکیت
-\end{itemize}
-%داده های مالکیت، قیمت، حجم و دیگر متغیر های بازاری و حساب داری شرکت ها از سایت کدال و شركت مديريت فناوري بورس تهران جمع آوری شده است. علاوه بر این به داده های منحصر به فرد 
+%\begin{itemize}
+%	\item 
+%	داده های قیمت، حجم و دیگر مشخصات حسابداری و بازاری شرکت ها از سایت کدال و tsetmc
+%	\item
+%	داده منحصر به فرد مالکیت های بالای یک درصد روزانه شرکت ها بورسی از سایت 
+%	tsetmc
+%	\item 
+%	حذف داده های صندوق های سرمایه گذاری معامله پذیر
+%	\item 
+%	از تاریخ 
+%	1393/01 (2014/03)
+%	 تا تاریخ 
+%	 1398/12 (2020/03)
+%	 
+%
+%	\item 
+%	گروه های کسب و کار یکی از مشخصات بازار ایران است
+%		\item 
+%	داده های گروه های کسب و کار از مقاله
+%	\lr{\cite{Aliabadi2022}}
+%	\begin{itemize}
+%		\item 
+%		داده های گروه های کسب و کار در ایران مشخص نیست
+%		\item
+%		با استفاده از الگوریتم 
+%		\lr{\cite{almeida2011structure}}
+%		با آستانه 40\%
+%		
+%	\end{itemize}
+%	\item
+%	جدول 
+%	\ref{t2-1}
+%	مشخصات آماری داده های مالکیت
+%\end{itemize}
+%%داده های مالکیت، قیمت، حجم و دیگر متغیر های بازاری و حساب داری شرکت ها از سایت کدال و شركت مديريت فناوري بورس تهران جمع آوری شده است. علاوه بر این به داده های منحصر به فرد 
+%
+%
+%\begin{LTR}
+%\lr{	 \begin{table}[htbp]
+%        \centering
+%        \caption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
+%        \label{t2-1}
+%        \resizebox{1\textwidth}{!}
+%        {
+%        \input{Output/summaryOfOwnership.tex}
+%         }
+%      \end{table}}
+%\end{LTR}
 
 
-\begin{LTR}
-\lr{	 \begin{table}[htbp]
-        \centering
-        \caption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
-        \label{t2-1}
-        \resizebox{1\textwidth}{!}
-        {
-        \input{Output/summaryOfOwnership.tex}
-         }
-      \end{table}}
-\end{LTR}
 
-
-
-\subsection{\lr{Pair composition} }
-\begin{itemize}
-	\item 
-	حداقل یک مالک مشترک که 
-		\item 
-		612 شرکت حداقل یک مالک مشترک با دیگر شرکت ها داشتند
-	\item 
-	93442 جفت که 25 درصد از جفت های ممکن
-	$ (612*611)/2 = 373932$
-
-	\item 
-	جدول
-	 \ref{t2-2}
-	 خلاصه آماری جفت های تشکیل شده
-	\item 
-	برای قرار گرفتن شرکت ها در گروه های کسب و کار 
-	\begin{itemize}
-		\item
-		 چند حالت امکان دارد 
-		 \item
-		 در شکل 
-		 \ref{g2-1}
-		 حالت های مختلف بیان شده است
-	\end{itemize}
-	
-\end{itemize}
-
- 
-\begin{LTR}
-	\lr{  \begin{table}
-  \centering
-  \caption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
-  \label{t2-2}
-    \resizebox{1\textwidth}{!}
-          {
- \input{Output/summaryOfPairs.tex}
-   }
-    \end{table} }
-\end{LTR}
-
+\subsection{تشکیل جفت های بازار }
+اگر دو شرکت حداقل یک مالک مشترک داشته باشند آن ها را یک جفت در نظر می گیریم. با این تعریف   
+\input{Elements/pairsnumber} 
+جفت دارای حداقل یک مالک مشترک شناسایی شده است که 
+\input{Elements/PairPercent.tex}
+درصد از جفت های ممکن می باشد. جدول 
+  \ref{t2-2}
+ 	 خلاصه آماری جفت های تشکیل شده است. یکی از بررسی های انجام شده، حضور جفت در گروه کسب و کار است. در این راستا شکل 
+ 	 \ref{g2-1} 
+ 	 حالت های مختلف وجود جفت در گروه کسب و کار را بررسی کرده است.
+ 	  \begin{table}[htbp]
+ 	   \centering
+ 	   \caption{ خلاصه آماری جفت های شناسایی شده .}
+ 	   \label{t2-2}
+ 	    \begin{LTR}
+ 	     	 	\lr{  \resizebox{1\textwidth}{!}
+ 	           {
+ 	  \input{Output/summaryOfPairs.tex}
+ 	    }}
+ 	     	 \end{LTR}
+ 	     \end{table} 
+ 	     
 \begin{figure}[htbp]
 	\centering
-	\caption{ \lr{Three categories for pairs base on being in business groups}}
+	\caption{ حالت های مختلف عضویت جفت در گروه های کسب و کار}
 	\label{g2-1}
 	
 	\normalcolor
@@ -262,6 +264,49 @@
 	
 	
 \end{figure}  
+ 	     
+ 	     
+ 	     
+ 	     
+%\begin{itemize}
+%	\item 
+%	حداقل یک مالک مشترک که 
+%		\item 
+%		612 شرکت حداقل یک مالک مشترک با دیگر شرکت ها داشتند
+%	\item 
+%	93442 جفت که 25 درصد از جفت های ممکن
+%	$ (612*611)/2 = 373932$
+%
+%	\item 
+%	جدول
+%	 \ref{t2-2}
+%	 خلاصه آماری جفت های تشکیل شده
+%	\item 
+%	برای قرار گرفتن شرکت ها در گروه های کسب و کار 
+%	\begin{itemize}
+%		\item
+%		 چند حالت امکان دارد 
+%		 \item
+%		 در شکل 
+%		 \ref{g2-1}
+%		 حالت های مختلف بیان شده است
+%	\end{itemize}
+%	
+%\end{itemize}
+
+ 
+%\begin{LTR}
+%	\lr{  \begin{table}
+%  \centering
+%  \caption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
+%  \label{t2-2}
+%    \resizebox{1\textwidth}{!}
+%          {
+% \input{Output/summaryOfPairs.tex}
+%   }
+%    \end{table} }
+%\end{LTR}
+
 
 %
 % Figure \ref{g2-2} shows the time series of unique pairs' number in each month. The pattern shows that the portion of pairs that are in one business group is roughly stable. The number of pairs in each period is between 322 to 5101 pairs which, on average, there are 4325 pairs.
@@ -277,8 +322,8 @@
   \FloatBarrier
   
   
-\subsection{\lr{Measurement of common-ownership}}
-
+\subsection{اندازه گیری مالکیت مشترک}
+در ادبیات دو دسته ملاک برای اندازه گیری مالکیت مشترک وجود دارد. دسته اول ملاک ها با استفاده از ملاک های دارای پشتوانه مدل هستند که با توجه به 
 \begin{itemize}
 	\item 
 	جدول 
@@ -399,8 +444,9 @@
 \end{itemize}
 
   \FloatBarrier
-\subsection{\lr{Stock Return comovement}}
+\subsection{محاسبه هم حرکتی شرکت }
 \label{comovement}
+هم حرکتی شرکت ها را به صورت ماهانه محاسبه کرده ایم. برای این منظور، هم بستگی باقی مدل های چهار عاملی روزانه برای هر ماه را 
 \begin{itemize}
 	\item
 	هم حرکتی ماهانه شرکت ها را محاسبه کرده ایم
