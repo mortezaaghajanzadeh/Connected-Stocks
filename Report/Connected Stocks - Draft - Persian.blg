@@ -1,59 +1,28 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is 8-bit Big BibTeX version 0.99d
+Implementation:  Microsoft(R) C/C++ for Win32
+Release version: 3.71 (04 mar 2019)
+
+The 8-bit codepage and sorting file: 88591lat.csf
 The top-level auxiliary file: Connected Stocks - Draft - Persian.aux
 The style file: apalike.bst
-Database file #1: Ref.bib
-Repeated entry---line 541 of file Ref.bib
+Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
+Reallocated global_strs (elt_size=200001) to 10 items from 0.
+Reallocated glb_str_end (elt_size=4) to 10 items from 0.
+Database file #1: ../Report/Ref.bib
+Repeated entry---line 271 of file ../Report/Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 923 of file Ref.bib
+Repeated entry---line 462 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
-Warning--empty note in Aliabadi2022
-Warning--empty note in azar2011new
-Warning--there's a number but no volume in freeman2019effects
-Warning--empty note in newham2018common
-You've used 31 entries,
-            1935 wiz_defined-function locations,
-            660 strings with 8307 characters,
-and the built_in function-call counts, 12190 in all, are:
-= -- 1226
-> -- 444
-< -- 21
-+ -- 148
-- -- 142
-* -- 1085
-:= -- 2109
-add.period$ -- 90
-call.type$ -- 31
-change.case$ -- 226
-chr.to.int$ -- 31
-cite$ -- 35
-duplicate$ -- 433
-empty$ -- 864
-format.name$ -- 203
-if$ -- 2368
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 28
-newline$ -- 155
-num.names$ -- 93
-pop$ -- 152
-preamble$ -- 1
-purify$ -- 226
-quote$ -- 0
-skip$ -- 344
-stack$ -- 0
-substring$ -- 994
-swap$ -- 44
-text.length$ -- 2
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 186
-warning$ -- 4
-while$ -- 109
-width$ -- 0
-write$ -- 395
+
+Here's how much of BibTeX's memory you used:
+ Cites:                18 out of 750
+ Fields:               77 out of 5000
+ Hash table:       199850 out of 200000
+ Strings:             587 out of 200000
+ Free string pool:   6201 out of 65000
+ Wizard functions:   1935 out of 3000
 (There were 2 error messages)

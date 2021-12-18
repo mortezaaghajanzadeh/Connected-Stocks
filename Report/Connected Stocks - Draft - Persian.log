@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  17 DEC 2021 10:42
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  18 DEC 2021 09:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,8 +655,6 @@ Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count297
 \c@subtable=\count298
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 29.
-
 (c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip72
@@ -1056,7 +1054,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 79.
+Package hyperref Info: Link coloring OFF on input line 79.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1083,20 +1081,113 @@ LaTeX Info: Redefining \nameref on input line 79.
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/b/n' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 83.
 
-(./Elements-Fa/Introduction-Persian.tex
+(./Elements-Fa/Data and Methodology - Persian.tex
 (c:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
-) [1
+)
+
+Package natbib Warning: Citation `Aliabadi2022' on page 1 undefined on input li
+ne 25.
+
+[1
 
 ]
-[2] [3] [4]) (./Elements-Fa/Conclusion - Persian.tex [5]
+
+Package natbib Warning: Citation `almeida2011structure' on page 2 undefined on 
+input line 31.
+
+(./Output/summaryOfOwnership.tex) (./Output/summaryOfPairs.tex) [2] [3]
+
+Package natbib Warning: Citation `harford2011institutional' on page 4 undefined
+ on input line 302.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 4 undefined on input line
+ 302.
+
+
+Package natbib Warning: Citation `azar2011new' on page 4 undefined on input lin
+e 319.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 4 undefined on in
+put line 319.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 4 undefined 
+on input line 319.
+
+
+Package natbib Warning: Citation `he2017product' on page 4 undefined on input l
+ine 319.
+
+
+Package natbib Warning: Citation `he2019internalizing' on page 4 undefined on i
+nput line 319.
+
+
+Package natbib Warning: Citation `newham2018common' on page 4 undefined on inpu
+t line 319.
+
+
+LaTeX Warning: Reference `ModifiedMeasure' on page 4 undefined on input line 34
+9.
+
+(./Elements/MeasurmentLit.tex
+
+Package natbib Warning: Citation `harford2011institutional' on page 4 undefined
+ on input line 6.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 4 undefined on input line
+ 11.
+
+
+Package natbib Warning: Citation `he2017product' on page 4 undefined on input l
+ine 14.
+
+
+Package natbib Warning: Citation `he2019internalizing' on page 4 undefined on i
+nput line 15.
+
+Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;!
+
+Package natbib Warning: Citation `newham2018common' on page 4 undefined on inpu
+t line 17.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 4 undefined on in
+put line 22.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 4 undefined 
+on input line 23.
+
+) [4] (./Output/FCACal.tex) [5]
+
+Package natbib Warning: Citation `Carhart4Factor' on page 6 undefined on input 
+line 423.
+
+(./Output/CorrelationsResultsText.tex) [6]
+Overfull \hbox (0.68024pt too wide) in paragraph at lines 500--502
+[][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
+رکت شرکت کوچکتر []
+ []
+
+(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [7]
+[8]) (./Elements-Fa/Conclusion - Persian.tex [9]
 (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 12.
+(Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 6.
 
-[6] [7])) [8]
+[10]))
+
+Package natbib Warning: There were undefined citations.
+
+[11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
  (./Connected Stocks - Draft - Persian.aux)
@@ -1109,15 +1200,18 @@ s not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 27141 strings out of 479418
- 545486 string characters out of 5888105
- 965525 words of memory out of 5000000
- 44113 multiletter control sequences out of 15000+600000
- 537899 words of font info for 68 fonts, out of 8000000 for 9000
+ 27280 strings out of 479418
+ 548837 string characters out of 5888105
+ 977498 words of memory out of 5000000
+ 44221 multiletter control sequences out of 15000+600000
+ 539336 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,8n,74p,4854b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,78p,4854b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (8 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (11 pages).
