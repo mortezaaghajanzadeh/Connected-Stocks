@@ -398,6 +398,11 @@ plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 # plt.title("Number of unique pair in each month")
 plt.savefig(pathResult + "idMonth.eps", bbox_inches="tight")
 plt.savefig(pathResult + "idMonth.png", bbox_inches="tight")
+#%%
+df[df.jalaliDate >13980000]
+#%%
+idMonth[idMonth.index >60]
+
 
 #%%
 fig = plt.figure(figsize=(8, 4))
@@ -1224,10 +1229,3 @@ plt.savefig(pathResult + "\\sameIBGinQuarter.jpg", bbox_inches="tight")
 plt.show()
 # %%
 
-# %%
-
-# %%
-
-# %%
-
-# %%

@@ -74,9 +74,10 @@ n1 = path + "Cleaned_Stock_Prices_1400_06_29" + ".parquet"
 df1 = pd.read_parquet(n1)
 df = df1
 df = df.drop_duplicates()
+df[df.jalaliDate >13980100].groupby('jalaliDate').size().to_frame().head(20)
 
+#%%
 df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
-df = df.drop(df[(df["symbol"] == "وقوام") & (df["close_price"] == 1000)].index)
 symbols = [
     "سپرده",
     "هما",
@@ -113,6 +114,9 @@ symbols = [
 ]
 print(len(df))
 df = df[df.volume > 0]
+df[df.jalaliDate >13980100].groupby('jalaliDate').size().to_frame().head(20)
+
+#%%
 print(len(df))
 df = df[~(df["symbol"].isin(symbols))]
 df = df[df.group_name != "صندوق سرمایه گذاری قابل معامله"]
@@ -135,6 +139,7 @@ PriceData = PriceData.append(
     ]
 )
 # del df
+PriceData[PriceData.jalaliDate >13980100].groupby('jalaliDate').size().to_frame().head(20)
 
 #%%
 
@@ -360,7 +365,14 @@ PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 PriceData.to_csv(path + "Connected_Stocks\PriceData_1400_06_28.csv", index=False)
 
 # %%
+import pandas as pd
+path = r"E:\RA_Aghajanzadeh\Data\\"
+PriceData = pd.read_csv(path + "Connected_Stocks\PriceData_1400_06_28.csv")
+#%%
+PriceData[PriceData.jalaliDate >13980100].groupby('jalaliDate').size().to_frame().head(15)
 
+
+#%%
 
 def ResidualFactor(g):
     print(g.name)

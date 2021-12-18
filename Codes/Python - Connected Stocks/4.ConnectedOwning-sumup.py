@@ -131,6 +131,13 @@ mlist = [
 arrs = os.listdir(path + "NormalzedFCAP9.1")
 arrs.remove("Old")
 counter_file = 0
+# i = arrs[185]
+# d = pd.read_pickle(path + "NormalzedFCAP9.1\\" + i)
+# d = firstStep(d, df)
+# d[d.jalaliDate	>13980000]
+
+
+#%%
 for counter, i in enumerate(arrs):
     print(counter, len(Monthly))
     d = pd.read_pickle(path + "NormalzedFCAP9.1\\" + i)
@@ -142,7 +149,7 @@ for counter, i in enumerate(arrs):
     if len(d) == 0:
         continue
     d = firstStep(d, df)
-    m = d.drop_duplicates(["id", "t_Month"], keep="last")
+    m = d.drop_duplicates(["id", "Year_Month"], keep="last")
     Monthly = Monthly.append(m)
     d = pd.DataFrame()
     if len(Monthly) > 6e6:

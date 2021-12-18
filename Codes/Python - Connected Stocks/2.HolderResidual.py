@@ -69,6 +69,8 @@ a = df.groupby("date").size().to_frame().reset_index()
 a.plot(y=0, use_index=True)
 
 #%%
+
+#%%
 dropholders = [
     # "سایر سهامدارن",
     # "اعضا هیئت مدیره",
@@ -122,9 +124,16 @@ col = "symbol"
 HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
 re["date"] = re.date.astype(int)
 HolderData["date"] = HolderData.date.astype(int)
+#%%
+re[re.jalaliDate > 13980100][['5_Residual','date','jalaliDate']]
+HolderData[HolderData.jalaliDate > 13980100][['5_Residual','date','jalaliDate']]
+re[re.jalaliDate > 13980100].groupby('jalaliDate').size().to_frame().head(15)
+
 
 # %%
+residuals = pd.DateFrame()
 residuals = re[re.jalaliDate > 13880000]
+residuals["date"] = residuals.date.astype(int)
 del re
 for i in ["4_Residual", "6_Residual", "5_Residual", "2_Residual", "5Lag_Residual"]:
     fkey = zip(list(residuals.symbol), list(residuals.date))
@@ -141,7 +150,9 @@ for i in ["Ret", "volume", "value", "Amihud"]:
     print(i + " is done")
 
 HolderData.head()
-
+#%%
+HolderData[HolderData.jalaliDate >13980200][['5_Residual','date']]
+residuals[residuals.jalaliDate > 13980200][['5_Residual','date']]
 
 # %%
 df = HolderData
@@ -197,6 +208,10 @@ df["Month_of_year"] = df.Month_of_year.apply(func)
 
 
 # %%
+
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
+
+#%%
 df["MarketCap"] = df["close_price"] * df["shrout"]
 market = (
     df.groupby(["date", "symbol"])
@@ -211,6 +226,7 @@ mapingdict = dict(zip(fkey, market["Percentile_Rank"]))
 df["Percentile_Rank"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 
 df.head()
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
 
 
 # %%
@@ -246,6 +262,7 @@ df["BookToMarket"] = gg.BookToMarket.rank(pct=True)
 df.head()
 
 df.columns
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
 
 
 # %%
@@ -267,6 +284,7 @@ df["year"] = df.jalaliDate.astype(str)
 df["year"] = df.year.str[0:4]
 df["year"] = df["year"].astype(int)
 df.head()
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
 
 
 # %%
@@ -323,6 +341,7 @@ df['Residual_Bench'] = df['Ret'] - df['Benchmark_Ret']
 #%%
 df.isnull().sum()
 
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
 
 
 
@@ -336,3 +355,4 @@ df.drop(columns=["shamsi"]).to_parquet(
     path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
 )
 # %%
+df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()

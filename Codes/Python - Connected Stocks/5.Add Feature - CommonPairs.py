@@ -69,9 +69,10 @@ Monthly = pd.read_pickle(path + "mergerd_first_step_monthly_part_{}.p".format(1)
     ]
 )
 
+#%%
+Monthly[Monthly.t_Month >59][["t_Month", "Year_Month"]].drop_duplicates().sort_values(by=["t_Month"])
 
 #%%
-
 
 def add(row):
     if len(row) < 2:
@@ -118,8 +119,8 @@ def firstStep(d):
 
 Monthly = firstStep(Monthly)
 #%%
+Monthly[Monthly.t_Month >60][["t_Month", "Year_Month","Monthlyρ_5"]].drop_duplicates().sort_values(by=["t_Month"])
 
-Monthly[["t_Month", "Year_Month"]].drop_duplicates().sort_values(by=["t_Month"])
 #%%
 # Weekly = SecondStep(Weekly)
 
@@ -159,6 +160,9 @@ Monthly["m"] = Monthly.t_Month.map(mpingdict)
 Monthly["MonthlyFCA*"] = Monthly["MonthlyFCA*"] / Monthly.m
 Monthly = Monthly.drop(columns=["m"])
 print("Second step is done")
+Monthly[Monthly.t_Month >60][["t_Month", "Year_Month","Monthlyρ_5"]].drop_duplicates().sort_values(by=["t_Month"])
+
+
 #%%
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
@@ -184,15 +188,17 @@ for a in [Monthly]:
     a["GRank_y"] = a["id_y"].map(mapingdict)
     a["SameGRank"] = 0
     a.loc[a.GRank_x == a.GRank_y, "SameGRank"] = 1
+
 #%%
-Monthly.Monthlyρ_5.describe()
+Monthly.Monthlyρ_5.isnull().sum()
 Monthly[Monthly.Monthlyρ_5 == Monthly.Monthlyρ_5.max()][
     ['symbol_x','symbol_y','Monthlyρ_5','jalaliDate']
 ]
-
+Monthly2 = Monthly[~Monthly.Monthlyρ_5.isnull()]
+Monthly[Monthly.t_Month >60][["t_Month", "Year_Month","Monthlyρ_5"]].drop_duplicates().sort_values(by=["t_Month"])
 
 #%%
-Monthly = Monthly[~Monthly.Monthlyρ_5.isnull()]
+
 n3 = path + "MonthlyNormalzedFCAP9.1"
 Monthly.to_parquet(n3 + ".parquet", index=False)
 Pairs = Monthly[["id_x", "id_y", "id"]].drop_duplicates().reset_index(drop=True)
@@ -291,6 +297,7 @@ df1 = df1[df1.FCA > 0]
 
 df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
+
 #%%
 df["id"] = df.id.astype(int)
 mapdict = dict(zip(df.id, df.symbol))
