@@ -12,6 +12,8 @@ ttest monthlyρ_5 , by(sbgroup)
 ttest monthlyρ_5== 0
 
 twoway kdensity monthlyρ_5 if sbgroup == 0|| kdensity monthlyρ_5 if sbgroup == 1
+/**/
+
 
 
 /**/

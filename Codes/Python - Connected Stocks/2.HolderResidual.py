@@ -63,13 +63,14 @@ df = pd.read_csv(n).drop_duplicates().rename(columns={"name": "symbol"})
 df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
 a = df.groupby("date").size().to_frame().reset_index()
 a.plot(y=0, use_index=True)
-t = a[a[0] < 1000].date.to_list()
-df = df[~df.date.isin(t)]
-a = df.groupby("date").size().to_frame().reset_index()
-a.plot(y=0, use_index=True)
+# t = a[a[0] < 1000].date.to_list()
+# df = df[~df.date.isin(t)]
+# a = df.groupby("date").size().to_frame().reset_index()
+# a.plot(y=0, use_index=True)
 
 #%%
-
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 #%%
 dropholders = [
     # "سایر سهامدارن",
@@ -148,7 +149,8 @@ HolderData.head()
 #%%
 HolderData[HolderData.jalaliDate >13980200][['5_Residual','date']]
 residuals[residuals.jalaliDate > 13980200][['5_Residual','date']]
-
+a = HolderData.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 # %%
 df = HolderData
 df["marketCap"] = df.close_price * df.shrout
@@ -205,7 +207,8 @@ df["Month_of_year"] = df.Month_of_year.apply(func)
 # %%
 
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
-
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 #%%
 df["MarketCap"] = df["close_price"] * df["shrout"]
 market = (
@@ -222,7 +225,8 @@ df["Percentile_Rank"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 
 df.head()
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
-
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 
 # %%
 n2 = path + "\\balance sheet - 9811" + ".xlsx"
@@ -245,7 +249,8 @@ col = "symbol"
 df2[col] = df2[col].apply(lambda x: convert_ar_characters(x))
 
 df = DriveYearMonthDay(df)
-df = df.merge(df2, on=["symbol", "Year"], how="left")
+mapingdict = dict(zip(df2.set_index(["symbol", "Year"]).index, df2["BookValue"]))
+df["BookValue"] = df.set_index(["symbol", "Year"]).index.map(mapingdict)
 df["BookValue"] = df["BookValue"].fillna(method="ffill")
 df = df.drop(columns=["Year", "Month", "Day"])
 df["BookToMarket"] = df["MarketCap"] / 1e6 / df["BookValue"]
@@ -258,7 +263,8 @@ df.head()
 
 df.columns
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
-
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 
 # %%
 HolderData["Percent_Change"] = HolderData["Percent_Change"].replace("-", np.nan)
@@ -310,7 +316,9 @@ for i in ["BGId", "position", "uo"]:
 del mapingdict
 del gg
 len(df), list(df)
-
+#%%
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
 
 #%%
 variable = 'Percentile_Rank'

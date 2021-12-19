@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  18 DEC 2021 13:22
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  19 DEC 2021 11:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,37 +1081,38 @@ LaTeX Info: Redefining \nameref on input line 79.
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/b/n' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 83.
 
-(./Elements-Fa/Data and Methodology - Persian.tex
+(./Elements-Fa/Introduction-Persian.tex
 (c:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
-)
+) [1
+
+]
+[2]) (./Elements-Fa/Data and Methodology - Persian.tex
 (./Output/summaryOfOwnership.tex) (./Elements/pairsnumber.tex)
-(./Elements/PairPercent.tex) (./Output/summaryOfPairs.tex) [1
+(./Elements/PairPercent.tex) (./Output/summaryOfPairs.tex) [3] [4] [5]
 
-] [2] [3]
-
-LaTeX Warning: Reference `ModifiedMeasure' on page 4 undefined on input line 39
+LaTeX Warning: Reference `ModifiedMeasure' on page 6 undefined on input line 39
 4.
 
 (./Elements/MeasurmentLit.tex
 Missing character: There is no ‌ in font [lmroman10-regular]/OT:script=latn;lan
 guage=dflt;mapping=tex-text;!
-) (./Output/FCACal.tex) [4] [5]
-(./Output/CorrelationsResultsText.tex) [6]
+) (./Output/FCACal.tex) [6] [7]
+(./Output/CorrelationsResultsText.tex) [8]
 Overfull \hbox (0.68024pt too wide) in paragraph at lines 546--548
 [][]\TU/XBZar.ttf(0)/b/n/12 BookToMarket۲: نرمالایزد رنک ترنسفرد نسبت بوک تو ما
 رکت شرکت کوچکتر []
  []
 
-(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [7])
-(./Elements-Fa/Conclusion - Persian.tex [8]
+(./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [9])
+(./Elements-Fa/Conclusion - Persian.tex [10]
 (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 12.
 
-)) [9]
+[11])) [12]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
  (./Connected Stocks - Draft - Persian.aux)
@@ -1130,12 +1131,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 27272 strings out of 479418
- 548422 string characters out of 5888105
+ 27324 strings out of 479418
+ 549807 string characters out of 5888105
  975498 words of memory out of 5000000
- 44210 multiletter control sequences out of 15000+600000
- 539312 words of font info for 74 fonts, out of 8000000 for 9000
+ 44258 multiletter control sequences out of 15000+600000
+ 539320 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,17n,78p,4854b,1098s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,78p,4854b,1096s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (9 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (12 pages).

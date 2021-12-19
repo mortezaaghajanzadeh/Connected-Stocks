@@ -13,12 +13,29 @@ path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
 
 #%%
-n = path + "Holder_Residual_1400_06_28" + ".parquet"
-df = pd.read_parquet(n)
-df = df[df.jalaliDate < 13990000]
-df = df[df.jalaliDate > 13930000]
-#%%
+def prepare():
+    path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+    # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+    df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+    df["week_of_year"] = df.week_of_year.astype(int)
+    df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
+        df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
+    )
 
+    df = df[df.jalaliDate < 13990000]
+    df = df[df.jalaliDate > 13930000]
+    df = df[~df["5_Residual"].isnull()]
+    print(len(df))
+    df = df[df.volume > 0]
+    print(len(df))
+    try:
+        df = df.drop(columns=["Delta_Trunover"])
+    except:
+        1 + 2
+    return df
+
+
+df = prepare()
 
 
 #%%
@@ -122,7 +139,7 @@ tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
 #%%
 
-n = path + "MonthlyNormalzedFCAP9.2" + ".parquet"
+n = path + "MonthlyNormalzedFCAP9.3" + ".parquet"
 df2 = pd.read_parquet(n)
 #%%
 ff = df2[
@@ -399,11 +416,28 @@ plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 plt.savefig(pathResult + "idMonth.eps", bbox_inches="tight")
 plt.savefig(pathResult + "idMonth.png", bbox_inches="tight")
 #%%
-df[df.jalaliDate >13980000]
+df[df.jalaliDate > 13980000]
 #%%
-idMonth[idMonth.index >60]
+idMonth[idMonth.index > 60]
+#%%
 
-
+fig = plt.figure(figsize=(8, 4))
+palette = sns.color_palette()[:2]
+g = sns.lineplot(data=df2, x="t_Month", y="Monthlyρ_5", hue="sBgroup", palette=palette)
+labels = Monthtime.yearmonth.to_list()
+tickvalues = Monthtime.t_Month
+g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
+g.set_xticklabels(labels[::-5], rotation="vertical")
+plt.margins(x=0.01)
+plt.ylabel("")
+plt.xlabel("Year-Month")
+plt.legend(["Others", "In the same BG"])
+plt.margins(x=0.01)
+plt.title("Co-movement Time Series")
+fig.set_rasterized(True)
+fig.tight_layout()
+plt.savefig(pathResult + "ComovementtimeSeries.eps", rasterized=True, dpi=300)
+plt.savefig(pathResult + "ComovementtimeSeries.png", bbox_inches="tight")
 #%%
 fig = plt.figure(figsize=(8, 4))
 g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA")
@@ -421,13 +455,6 @@ fig.tight_layout()
 plt.savefig(pathResult + "FCAtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "FCAtimeSeries.png", bbox_inches="tight")
 #%%
-Monthtime.tail(20)
-df2[df2.t_Month == 59].MonthlyFCA.max(), df2[df2.t_Month == 60].MonthlyFCA.max()
-df2[(df2.t_Month == 60)&(
-    df2.MonthlyFCA == df2[df2.t_Month == 60].MonthlyFCA.max()
-)][['symbol_x','symbol_y','Year_Month','numberCommonHolder']]
-
-
 
 #%%
 df2["PairType"] = "Hybrid"
@@ -559,7 +586,7 @@ tempt.drop(columns=["count", "25%", "75%"]).rename(
 
 #%%
 df2[df2.Monthlyρ_5 == df2.Monthlyρ_5.max()][
-    ['symbol_x','symbol_y','Monthlyρ_5','jalaliDate']
+    ["symbol_x", "symbol_y", "Monthlyρ_5", "jalaliDate"]
 ]
 df2.Monthlyρ_5.quantile(0.995)
 
@@ -731,31 +758,31 @@ tempt.sort_values(by=["variable"])
 #%%
 tempt.reset_index()
 #%%
-a = tempt[tempt.variable == "MonthlyFCA"].merge(
-    tempt[tempt.variable == "MonthlyFCAPf"],
-    left_index=True,
-    right_index=True,
-).T
-a['variable'] = "MonthlyFCA"
-mlist = ['variable_y', 'mean_y', 'std_y', 'min_y', '25%_y', '50%_y',
-       '75%_y', 'max_y']
-a.loc[a.index.isin(mlist),'variable'] = "MonthlyFCAPf"
+a = (
+    tempt[tempt.variable == "MonthlyFCA"]
+    .merge(
+        tempt[tempt.variable == "MonthlyFCAPf"],
+        left_index=True,
+        right_index=True,
+    )
+    .T
+)
+a["variable"] = "MonthlyFCA"
+mlist = ["variable_y", "mean_y", "std_y", "min_y", "25%_y", "50%_y", "75%_y", "max_y"]
+a.loc[a.index.isin(mlist), "variable"] = "MonthlyFCAPf"
 a = a.reset_index()
-a['index'] =a['index'].apply(lambda x: x.split('_')[0])
-a = a[~a['index'].isin(['25%','75%'])]
-a.loc[a['index'] == '50%','index'] = 'median'
-a = a.set_index(
-    ['variable','index']
-    ).T.drop(
-        columns = [(  'MonthlyFCA', 'variable'),
-                   (  'MonthlyFCAPf', 'variable')]
-        ).replace(
-            "MonthlyFCAPf", "FCAP"
-            ).replace(
-                "MonthlyFCA", "MFCAP"
-                ).reset_index().rename(
-                    columns={"index": "subset"}
-                    ).set_index('subset')
+a["index"] = a["index"].apply(lambda x: x.split("_")[0])
+a = a[~a["index"].isin(["25%", "75%"])]
+a.loc[a["index"] == "50%", "index"] = "median"
+a = (
+    a.set_index(["variable", "index"])
+    .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")])
+    .replace("MonthlyFCAPf", "FCAP")
+    .replace("MonthlyFCA", "MFCAP")
+    .reset_index()
+    .rename(columns={"index": "subset"})
+    .set_index("subset")
+)
 a.to_latex(pathResult + "FCACal.tex")
 a
 
@@ -1228,4 +1255,3 @@ plt.savefig(pathResult + "\\sameIBGinQuarter.eps", bbox_inches="tight")
 plt.savefig(pathResult + "\\sameIBGinQuarter.jpg", bbox_inches="tight")
 plt.show()
 # %%
-

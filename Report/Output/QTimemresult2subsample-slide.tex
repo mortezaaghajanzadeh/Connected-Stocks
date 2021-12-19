@@ -1,22 +1,25 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{5}{c}}
+\begin{tabular}{l*{7}{c}}
 \hline\hline
-                &\multicolumn{5}{c}{Dependent Variable:  Future Pairs's co-movement}                           \\\cmidrule(lr){2-6}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                &\multicolumn{7}{c}{Dependent Variable:  Future Pairs's co-movement}                                                                 \\\cmidrule(lr){2-8}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
 \hline
-Same Group      &   0.0341\sym{***}&                  &   0.0331\sym{***}&                  &                  \\
-                &   (8.33)         &                  &   (8.30)         &                  &                  \\
+Same Group      &   0.0312\sym{***}&                  &   0.0302\sym{***}&                  &                  &  -0.0452\sym{*}  &  -0.0472\sym{*}  \\
+                &   (9.35)         &                  &   (9.15)         &                  &                  &  (-2.29)         &  (-2.53)         \\
 [1em]
-$ \text{MFCAP*} $&                  &   0.0340\sym{***}&  0.00934         &   0.0388\sym{**} & -0.00236         \\
-                &                  &   (4.76)         &   (1.28)         &   (2.89)         &  (-0.33)         \\
+$ \text{MFCAP*} $&                  &   0.0279\sym{***}&  0.00504         &   0.0373\sym{**} & -0.00629         & -0.00704         &  -0.0111\sym{*}  \\
+                &                  &   (5.78)         &   (1.02)         &   (3.16)         &  (-1.18)         &  (-1.33)         &  (-2.14)         \\
+[1em]
+ $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &   0.0477\sym{***}&   0.0481\sym{***}\\
+                &                  &                  &                  &                  &                  &   (3.52)         &   (3.75)         \\
 \hline
-Sub-sample      &      All         &      All         &      All         &SameGroup         &   Others         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-Business Group FE&       No         &       No         &       No         &       No         &       No         \\
-Observations    &    76572         &    76572         &    76572         &    26424         &    50148         \\
+Sub-sample      &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Business Group FE&       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
+Observations    &    91848         &    91848         &    91848         &    32469         &    59379         &    91848         &    91848         \\
 \hline\hline
-\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

@@ -42,14 +42,16 @@ df = prepare()
 
 
 #%%
-df[df.symbol == "شیراز"].id.iloc[0], df[df.symbol == "خموتور"].id.iloc[0]
+df[df.jalaliDate > 13980000].groupby(['year_of_year','month_of_year']).size()
+
+#%%
+df[df.symbol == "خودرو"].id.iloc[0], df[df.symbol == "خگستر"].id.iloc[0]
 
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(480)
-S_g = gdata.get_group(100)
-
+g = gdata.get_group(157)
+S_g = gdata.get_group(167)
 
 #%%
 
@@ -67,6 +69,10 @@ print(time.time() - n)
 
 #%%
 len(t1[t1.FCAPf > 0]), len(t2)
+#%%
+a = df.groupby(['symbol','jalaliDate'])[['Percent']].sum()
+a[a.Percent>100]
+
 #%%
 data = pd.DataFrame()
 gg = df.groupby(["id"])

@@ -3,6 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft - Persian.aux
 The style file: apalike.bst
 Database file #1: ../Report/Ref.bib
+Repeated entry---line 541 of file ../Report/Ref.bib
+ : @article{pantzalis2017shareholder
+ :                                  ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 923 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
@@ -11,45 +15,45 @@ Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 14 entries,
+You've used 27 entries,
             1935 wiz_defined-function locations,
-            554 strings with 5931 characters,
-and the built_in function-call counts, 5266 in all, are:
-= -- 520
-> -- 204
-< -- 8
-+ -- 72
-- -- 66
-* -- 465
-:= -- 934
-add.period$ -- 39
-call.type$ -- 14
-change.case$ -- 103
-chr.to.int$ -- 14
-cite$ -- 18
-duplicate$ -- 186
-empty$ -- 358
-format.name$ -- 88
-if$ -- 1004
+            631 strings with 7661 characters,
+and the built_in function-call counts, 10319 in all, are:
+= -- 1036
+> -- 370
+< -- 18
++ -- 126
+- -- 118
+* -- 915
+:= -- 1803
+add.period$ -- 78
+call.type$ -- 27
+change.case$ -- 194
+chr.to.int$ -- 27
+cite$ -- 31
+duplicate$ -- 367
+empty$ -- 732
+format.name$ -- 167
+if$ -- 1987
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 70
-num.names$ -- 42
-pop$ -- 73
+missing$ -- 24
+newline$ -- 135
+num.names$ -- 81
+pop$ -- 128
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 194
 quote$ -- 0
-skip$ -- 150
+skip$ -- 291
 stack$ -- 0
-substring$ -- 396
-swap$ -- 18
+substring$ -- 834
+swap$ -- 31
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 162
 warning$ -- 4
-while$ -- 45
+while$ -- 93
 width$ -- 0
-write$ -- 174
-(There was 1 error message)
+write$ -- 343
+(There were 2 error messages)
