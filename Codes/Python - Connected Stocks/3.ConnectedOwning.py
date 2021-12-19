@@ -40,25 +40,6 @@ def prepare():
 
 df = prepare()
 
-# %%
-path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
-df["week_of_year"] = df.week_of_year.astype(int)
-df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
-    df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
-)
-df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
-#%%
-df = df[df.jalaliDate < 13990000]
-
-df = df[df.jalaliDate > 13930000]
-df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
-#%%
-
-# df = df[~df["5_Residual"].isnull()]
-print(len(df))
-df[df.jalaliDate >13980200][['5_Residual','jalaliDate']]
 
 #%%
 df[df.symbol == "شیراز"].id.iloc[0], df[df.symbol == "خموتور"].id.iloc[0]
@@ -83,72 +64,6 @@ AllPair = False
 n = time.time()
 t2 = FCAPf(S_g, g, AllPair)
 print(time.time() - n)
-#%%
-g = gdata.get_group(480)
-S_g = gdata.get_group(100)
-intersection = list(set.intersection(set(S_g.date), set(g.date)))
-f = Calculation(g, S_g, intersection, AllPair)
-name1 = g.symbol.iloc[0]
-name2 = S_g.symbol.iloc[0]
-g = g[(g.date.isin(intersection)) & (g.Holder == name2)][["date", "Percent"]]
-S_g = S_g[S_g.date.isin(intersection) & (S_g.Holder == name1)][["date", "Percent"]]
-t = g.merge(S_g, on=["date"], how="outer")
-t["MaxCommon"] = t[["Percent_x", "Percent_y"]].max(1)
-mapdict = dict(zip(t.date, t.MaxCommon))
-f["CrossOwnership"] = f["date"].map(mapdict).fillna(0)
-#%%
-f[f.jalaliDate >13980200].groupby(["year_of_year", "month_of_year"]).size()
-
-
-#%%
-fc = (
-    f.groupby(["year_of_year", "month_of_year"])[
-        [
-            "2-Residual_x",
-            "2-Residual_y",
-            "4-Residual_x",
-            "4-Residual_y",
-            "5-Residual_x",
-            "5-Residual_y",
-            "6-Residual_x",
-            "6-Residual_y",
-            "5Lag-Residual_x",
-            "5Lag-Residual_y",
-            "Delta_Trunover_x",
-            "Delta_Trunover_y",
-            "Delta_Amihud_x",
-            "Delta_Amihud_y",
-            "Residual_Bench_x",
-            "Residual_Bench_y",
-        ]
-    ]
-    .corr(min_periods=0)
-    .reset_index()
-)
-
-for i in [
-    "2-Residual",
-    "4-Residual",
-    "5-Residual",
-    "6-Residual",
-    "5Lag-Residual",
-    "Residual_Bench",
-    ]:
-    cor = fc.loc[fc.level_2 == i + "_y"][
-        ["year_of_year", "month_of_year", i + "_x"]
-    ].rename(columns={i + "_x": "ρ_" + i.split("-")[0]})
-    TimeId = zip(list(cor.year_of_year), list(cor.month_of_year))
-    mapingdict = dict(zip(TimeId, list(cor["ρ_" + i.split("-")[0]])))
-    f["Monthly" + "ρ_" + i.split("-")[0]] = f.set_index(
-        ["year_of_year", "month_of_year"]
-    ).index.map(mapingdict)
-
-
-
-
-#%%
-f[f.jalaliDate >13980200][['jalaliDate','5-Residual_x',
- '5-Residual_y','Monthlyρ_5']]
 
 #%%
 len(t1[t1.FCAPf > 0]), len(t2)

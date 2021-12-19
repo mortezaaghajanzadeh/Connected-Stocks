@@ -124,14 +124,9 @@ col = "symbol"
 HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
 re["date"] = re.date.astype(int)
 HolderData["date"] = HolderData.date.astype(int)
-#%%
-re[re.jalaliDate > 13980100][['5_Residual','date','jalaliDate']]
-HolderData[HolderData.jalaliDate > 13980100][['5_Residual','date','jalaliDate']]
-re[re.jalaliDate > 13980100].groupby('jalaliDate').size().to_frame().head(15)
-
 
 # %%
-residuals = pd.DateFrame()
+residuals = pd.DataFrame()
 residuals = re[re.jalaliDate > 13880000]
 residuals["date"] = residuals.date.astype(int)
 del re
@@ -356,3 +351,4 @@ df.drop(columns=["shamsi"]).to_parquet(
 )
 # %%
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
+#%%
