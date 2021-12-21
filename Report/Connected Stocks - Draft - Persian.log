@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  20 DEC 2021 10:50
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.9.14)  21 DEC 2021 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,13 +1106,34 @@ Overfull \hbox (0.68024pt too wide) in paragraph at lines 546--548
  []
 
 (./Output/SameGroupSameIndustry.tex) (./Output/ControlsSummary.tex) [9])
-(./Elements-Fa/Conclusion - Persian.tex [10]
+(./Elements-Fa/Results-Persian.tex
+File: Output/mcorr50.eps Graphic file (type eps)
+<Output/mcorr50.eps>
+ (./Elements/Model11.tex [10]) [11]
+(./Output/mresult2part1-slide.tex) (./Output/mresult2part2-slide.tex) [12]
+[13]
+File: Output/Qmcorr5lrd.eps Graphic file (type eps)
+<Output/Qmcorr5lrd.eps>
+File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
+<Output/Qmcorr5lrdbgsubsample.eps>
+File: Output/Qmcorr5subsample.eps Graphic file (type eps)
+<Output/Qmcorr5subsample.eps>
+ (./Output/QTimemresult2subsample-slide.tex)
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 172--173
+[][] []
+ []
+
+[14]
+File: Output/QarterSummary.eps Graphic file (type eps)
+<Output/QarterSummary.eps>
+ [15] (./Output/Q3mresultAllPairs.tex) [16])
+(./Elements-Fa/Conclusion - Persian.tex [17]
 (./Connected Stocks - Draft - Persian.bbl
 
 LaTeX Font Warning: Font shape `TU/XBZar.ttf(0)/m/it' undefined
 (Font)              using `TU/XBZar.ttf(0)/m/n' instead on input line 12.
 
-[11])) [12]
+[18])) [19]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
  (./Connected Stocks - Draft - Persian.aux)
@@ -1131,12 +1152,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 27324 strings out of 479418
- 549807 string characters out of 5888105
- 975498 words of memory out of 5000000
- 44258 multiletter control sequences out of 15000+600000
- 539320 words of font info for 75 fonts, out of 8000000 for 9000
+ 27406 strings out of 479418
+ 551967 string characters out of 5888105
+ 976498 words of memory out of 5000000
+ 44312 multiletter control sequences out of 15000+600000
+ 540039 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,17n,78p,4854b,1096s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Connected Stocks - Draft - Persian.pdf (12 pages).
+Output written on Connected Stocks - Draft - Persian.pdf (19 pages).
