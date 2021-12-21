@@ -100,7 +100,7 @@ import time
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
-for i in list(gg.groups.keys()):
+for i in list(gg.groups.keys())[0:1]:
     n = time.time()
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
@@ -133,7 +133,7 @@ def genFile(df, path, g, i):
 
 
 threads = {}
-for i in list(gg.groups.keys()):
+for i in list(gg.groups.keys())[50::]:
     n = time.time()
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
