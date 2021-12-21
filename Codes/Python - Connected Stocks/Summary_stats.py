@@ -11,7 +11,7 @@ pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output\\"
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
-
+pathWord = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Elements\Word\\"
 #%%
 def prepare():
     path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
@@ -137,6 +137,27 @@ tempt = tempt.set_index("Year").transpose().astype(int)
 
 tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
+#%%
+
+import docx
+import pandas as pd
+
+
+doc = docx.Document(pathWord + 'test.docx')
+
+t = doc.add_table(tempt.shape[0]+1, tempt.shape[1])
+
+for j in range(tempt.shape[-1]):
+    t.cell(0,j).text = tempt.columns[j]
+
+for i in range(tempt.shape[0]):
+    for j in range(tempt.shape[-1]):
+        t.cell(i+1,j).text = str(tempt.values[i,j])
+
+doc.save(pathWord+'/test.docx')
+
+
+
 #%%
 
 n = path + "MonthlyNormalzedFCAP9.3" + ".parquet"

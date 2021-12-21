@@ -232,7 +232,7 @@ result = pd.DataFrame()
 counter, counter_file = 0, 0
 # arr.remove("MonthlyAllPairs_1400_06_28.csv")
 arrs.remove("Old")
-for i, name in enumerate(arr):
+for i, name in enumerate(arrs):
     print(i, len(result))
     d = pd.read_pickle(path + name).reset_index(drop=True)
     if len(d) < 1:
