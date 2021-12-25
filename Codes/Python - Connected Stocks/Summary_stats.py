@@ -139,22 +139,22 @@ tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
 #%%
 
-import docx
-import pandas as pd
+# import docx
+# import pandas as pd
 
 
-doc = docx.Document(pathWord + 'test.docx')
+# doc = docx.Document(pathWord + 'test.docx')
 
-t = doc.add_table(tempt.shape[0]+1, tempt.shape[1])
+# t = doc.add_table(tempt.shape[0]+1, tempt.shape[1])
 
-for j in range(tempt.shape[-1]):
-    t.cell(0,j).text = tempt.columns[j]
+# for j in range(tempt.shape[-1]):
+#     t.cell(0,j).text = tempt.columns[j]
 
-for i in range(tempt.shape[0]):
-    for j in range(tempt.shape[-1]):
-        t.cell(i+1,j).text = str(tempt.values[i,j])
+# for i in range(tempt.shape[0]):
+#     for j in range(tempt.shape[-1]):
+#         t.cell(i+1,j).text = str(tempt.values[i,j])
 
-doc.save(pathWord+'/test.docx')
+# doc.save(pathWord+'/test.docx')
 
 
 
@@ -804,7 +804,7 @@ a = (
     .rename(columns={"index": "subset"})
     .set_index("subset")
 )
-a.to_latex(pathResult + "FCACal.tex")
+# a.to_latex(pathResult + "FCACal.tex")
 a
 
 # %%
