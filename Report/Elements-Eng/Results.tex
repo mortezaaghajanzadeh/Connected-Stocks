@@ -9,17 +9,17 @@
 	In the following month, we empirically test the impact of current measured
 	common ownership on the next period’s co-movement
 	At the first step, we study the effects of business groups and common ownership on the co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's co-movement on the considered variables.
-	\input{Elements/Model11}
+	\begin{figure}[htbp]
+	\centering  
+	\centering
+	\includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
+	\caption{Future monthly correlation for different level of common ownership at this period }
+	\label{mcorr50}
+\end{figure}
 	
 	For this purpose, we estimate the cross-sectional regressions forecasting within-month realized correlation ($\rho_{i,j,t+1}$) of each pair of stocks abnormal return. By abnormal return, we mean daily four-factor plus industry residuals of estimated model (Specific details and reasons for using this model described in the section \ref{comovement}). We use $\textit{MFCA}^*_{ij,t}$, $\textit{Same Group}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
-	
-	\begin{figure}[htbp]
-		\centering  
-		\centering
-		\includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
-		\caption{Future monthly correlation for different level of common ownership at this period }
-		\label{mcorr50}
-	\end{figure}
+		\input{Elements/Model11}
+
 	
 	We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
 	
