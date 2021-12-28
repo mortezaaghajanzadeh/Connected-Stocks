@@ -265,7 +265,7 @@ We re-weight this formula to capture the difference between ownership distributi
 \end{equation}
 
 where $ S^f_{i,t}$ is the number of shares held by owner f
-at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t} $, and similarly for stock j. Modified measure represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed index will be equal to number of holders.\footnote{ \tiny
+at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t} $, and similarly for stock j. Modified measure represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed index will be equal to number of holders.\footnote{ 
 	Each holder owns $ 1/n $ of each firm ,Firm's market cap is $ \alpha_1 $ and $ \alpha_2 $, So for each holder of firms we have $ S^f_{i,t}P_{i,t} = \alpha_i/n $\\
 	$
 	[  \frac{\sum_{f=1}^{n} \sqrt{\alpha_1/n}+\sum_{f=1}^{n} \sqrt{\alpha_2/n}}{\sqrt{\alpha_1} + \sqrt{\alpha_2}}]^2 
@@ -291,6 +291,11 @@ On each day, we measure common ownership by our proposed measure and then report
 					{\input{Output/FCACal.tex}}
 			}
 		\end{table}
+%		
+%		\multirow{2}[3]{*}{variable} & \multicolumn{5}{c}{MFCAP} & \multicolumn{5}{c}{FCAP} \\
+%		 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+%		 &       mean &   std &   min & median &   max &         mean &   std &  min & median &   max \\
+		
 \FloatBarrier
 \subsection{{Stock Return comovement}}
 \label{comovement}
@@ -316,7 +321,7 @@ On each day, we measure common ownership by our proposed measure and then report
 		\centering
 		\caption{\footnotesize This table reports distribution of calculated correlation base on different models.}
 		\label{tCorr}
-		\resizebox{0.7\textwidth}{!}
+%		\resizebox{0.7\textwidth}{!}
 		{
 			\input{Output/CorrelationsResultsText.tex}
 		}
@@ -341,7 +346,7 @@ a dummy variable for whether two stocks are in the same industry, \textbf{SameIn
 	{\begin{table}[htbp]
 			\caption{\scriptsize This table reports the number of pairs in the same industry and business group.}
 			\label{SameGroupIndustry}
-			\centering \scriptsize
+			\centering 
 			{
 				\input{Output/SameGroupSameIndustry.tex}
 			}
@@ -362,7 +367,7 @@ We calculate our controls daily and then report the average of these variables f
  \caption{\scriptsize This table shows the summary statistics of specified controls in empirical studies.}
  \label{ControlsSummary}
                \centering 
-               \scriptsize
+               
                  {
     \input{Output/ControlsSummary.tex}
                  }
