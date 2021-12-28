@@ -126,10 +126,10 @@ tempt = tempt.drop(
     columns={
         "No. of Holders": "No. of Blockholders",
         "Avg. Number of Members": "Ave. Number of group Members",
-        "Av. Holder Percent": "Ave. ownership of each Blockholders",
+        "Av. Holder Percent": "Ave. ownership of each Blockholders (%)",
         "Av. Number of Owners": "Ave. Number of Owners",
-        "Av. Block. Ownership": "Ave. Block. Ownership",
-        "Med. of Owners' Percent": "Med. ownership of each Blockholders",
+        "Av. Block. Ownership": "Ave. Block. Ownership (%)",
+        "Med. of Owners' Percent": "Med. ownership of each Blockholders (%)",
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
@@ -476,8 +476,6 @@ fig.tight_layout()
 plt.savefig(pathResult + "FCAtimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "FCAtimeSeries.png", bbox_inches="tight")
 #%%
-
-#%%
 df2["PairType"] = "Hybrid"
 df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
 df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
@@ -701,7 +699,7 @@ t = (
 )
 t["index"] = "All"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t.round(3))
+tempt = tempt.append(t.round(2))
 t = (
     df2[df2.sBgroup == 1][
         [
@@ -715,7 +713,7 @@ t = (
 )
 t["index"] = "Same Group"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t.round(3))
+tempt = tempt.append(t.round(2))
 t = (
     df2[df2.sBgroup == 0][
         [
@@ -729,7 +727,7 @@ t = (
 )
 t["index"] = "Not Same Group"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t.round(3))
+tempt = tempt.append(t.round(2))
 t = (
     df2[df2.sgroup == 1][
         [
@@ -743,7 +741,7 @@ t = (
 )
 t["index"] = "Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t.round(3))
+tempt = tempt.append(t.round(2))
 t = (
     df2[df2.sgroup == 0][
         [
@@ -757,27 +755,7 @@ t = (
 )
 t["index"] = "Not Same Industry"
 t = t.reset_index().set_index("index").rename(columns={"level_0": "variable"})
-tempt = tempt.append(t.round(3))
-#%%
-tempt.sort_values(by=["variable"])
-#%%
-# a = (
-#     tempt.replace("MonthlyFCAPf", "FCAP")
-#     .replace("MonthlyFCA", "MFCAP")
-#     .sort_values(by=["variable"])
-#     .reset_index()
-#     .rename(columns={"index": "subset"})
-#     .set_index(
-#         [
-#             "variable",
-#             "subset",
-#         ]
-#     )
-#     .round(3)
-#     .T
-# )
-#%%
-tempt.reset_index()
+tempt = tempt.append(t.round(2))
 #%%
 a = (
     tempt[tempt.variable == "MonthlyFCA"]
@@ -797,14 +775,14 @@ a = a[~a["index"].isin(["25%", "75%"])]
 a.loc[a["index"] == "50%", "index"] = "median"
 a = (
     a.set_index(["variable", "index"])
-    .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")])
-    .replace("MonthlyFCAPf", "FCAP")
-    .replace("MonthlyFCA", "MFCAP")
-    .reset_index()
+    .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")]
+            ).replace("MonthlyFCAPf", "FCAP"
+                      ).replace("MonthlyFCA", "MFCAP"
+                                ).reset_index()
     .rename(columns={"index": "subset"})
     .set_index("subset")
 )
-# a.to_latex(pathResult + "FCACal.tex")
+a.to_latex(pathResult + "FCACal.tex")
 a
 
 # %%
