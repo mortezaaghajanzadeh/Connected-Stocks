@@ -2,31 +2,24 @@
 
 
 	In the previous sections, we have provided evidence consistent with the hypothesis that the presence of firms in the business groups can raise firms' co-movement. Although we don't have definitive insight into the specific channel that business groups can promote commonality, our analysis provides a useful overview.
-	We claim that this relationship exists because the business group is an important proxy for the likelihood that trading in these stocks will be correlated. To gain a clearer understanding of how the business group is able to generate co-movement in firms' return, we now refine our basic analysis to consider other proxy measures for business group trading.
+	We claim that this relationship exists because the business group is an important proxy for the likelihood that trading in these stocks will be correlated. To better understand how the business group can generate co-movement in firms' returns, we now refine our basic analysis to consider other proxy measures for business group trading.
 	We employ two proxies for business group trading that are designed to capture different trading motivations: turnover and institutional imbalance. While the first could be due to buying or selling of business groups, the latter reflects buying.
 %	We employ one proxy for business group trading that is designed to capture  trading motivations: turnover which could be due to buying or selling of business groups.
-	
-	
 
-
-
-%\begin{itemize}
-%	\item 
-%	به نظر می آید در شرکت های عضو گروه های کسب و کار به همراه یکدیگر معامله می شوند
-%	\item
-%	از ملاک های اندازه گیری معاملات برای این هدف استفاده کرده یم
-%\end{itemize}
 
 
 \subsection{{Turnover}}
 
 
-	First of all, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{TurnOver}_{i,t} $, on changes in market turnover,$ \Delta\text{TurnOver}_{Market,t}   $ , changes in the industry and business group portfolio's turnover,$ \Delta\text{TurnOver}_{Ind,t} $ and  $\Delta \text{TurnOver}_{Group,t} $ and  ,as well as control variables.
-We compute the daily change of turnover by this definition $ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $. 
-We estimate the following regression for each stock across trading days in given year separately and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
-
-	\input{Elements/turnoverModel}
-  We control for lead and lag changes in the two portfolios and the firm's measures and size. We estimate that model with \cite{FamaMacBeth} method and adjust its standard errors with \cite{newey1987hypothesis} for seven periods.  As shown in Table \ref{turnover}, firms' change in turnover comes from market reaction and group's change. (This result is robust to the different methods of weighting for portfolios) This observation shows that firms in one group trade together each day. We use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{TurnOver} $ for founded pairs and examine its relation with our variables. Table \ref{mresult2-turnover} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study effect of  correlation of $ \Delta \text{TurnOver} $ on co-movement for founded pairs in table \ref{turncomovement}. These results suggest that business groups yield to future co-movement through correlated trading in that month.
+	First, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{TurnOver}_{i,t} $, on changes in market turnover,$ \Delta\text{TurnOver}_{Market,t}   $ , changes in the industry and business group portfolio's turnover,$ \Delta\text{TurnOver}_{Ind,t} $ and  $\Delta \text{TurnOver}_{Group,t} $ and  ,as well as control variables.
+	We compute the daily change of turnover by this definition $ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $. 
+	We estimate the following regression for each stock across trading days in a given year separately, and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
+	
+		\input{Elements/turnoverModel}
+	  We control for lead and lag changes in the two portfolios and the firm's measures and size. We estimate that model with \cite{FamaMacBeth} method and adjust its standard errors with \cite{newey1987hypothesis} for seven periods.  As shown in Table \ref{turnover}, firms' change in turnover comes from market reaction and group's change (This result is robust to the different methods of weighting for portfolios). This observation shows that firms in one group trade together each day. 
+	
+	We use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{TurnOver} $ for founded pairs and examine its relation with our variables. Table \ref{mresult2-turnover} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study effect of  correlation of $ \Delta \text{TurnOver} $ on co-movement for founded pairs in table \ref{turncomovement}. These results suggest that business groups yield to future co-movement through correlated trading in that month.
+  
 {\begin{table}[htbp]
 	\centering
 	\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
