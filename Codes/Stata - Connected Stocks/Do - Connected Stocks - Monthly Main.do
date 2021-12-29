@@ -140,16 +140,14 @@ esttab    v1 v2 v3 v4 /*v5*/ v6 v61   ,nomtitle label   s(  /*SubSample GroupFE*
 
 
 
+label define median 0 "Others" 1 "Forth Quarter"
 
-tabout median using table13.tex, ///
-c(mean sbgroup mean monthlysamebm mean sgroup  mean monthlysamesize  mean monthlycrossownershippercent ) ///
-clab( SameGroup "SameB/M" SameInd. "SameSize"  "CrossOwner."  ) ///
-sum npos(lab) ///
-h2("") ///
-h1("title here for") ///
-rep ///
-style(tex)  cl2(2-6) cltr2(.75em 1.5em) ///
-topf(top.tex) botf(bot.tex) topstr(\textwidth) botstr(auto.dta)
+
+capture drop Pairs
+gen Pairs = median
+label values Pairs median
+
+tabout Pairs sbgroup using table13.tex, c( mean monthlysamebm mean sgroup  mean monthlysamesize  mean monthlycrossownershippercent ) clab( "SameB/M" SameInd. "SameSize"  "CrossOwner."  ) sum npos(lab) f(2c 2c 2c 2c 2p) rep style(tex)  cl2(2-5) cltr2(.75em 1.5em) topf(top.tex) botf(bot.tex) topstr(\textwidth) botstr(auto.dta) 
 
 
 
