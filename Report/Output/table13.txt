@@ -1,0 +1,18 @@
+\begin{center}
+\footnotesize
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\begin{tabularx} {14cm} {@{} l Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y@{}} \\
+\toprule
+\cmidrule(l{.75em}){2-7} 
+\textbf{median}&Mean wage&SE \\
+\midrule
+0 (n=323,046)&0.01&(0.00) \\
+1 (n=107,741)&0.02&(0.00) \\
+\textbf{Total} (n=430,787)&0.01&(0.00) \\
+\bottomrule
+\addlinespace[.75ex]
+\end{tabularx}
+\par
+\scriptsize{\emph{Source: }nlsw88}
+\normalsize
+\end{center}

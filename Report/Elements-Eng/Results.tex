@@ -78,7 +78,7 @@
 		
 		\subsection{{High level of common ownership}}
 		
-			In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' co-movement. As shown in table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, the previous results could be driven by a high level of common ownership. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{MFCAP}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future co-movement and current measurement of common ownership for that pairs. As you can see in the left panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' co-movement although for a high level of common ownership.
+			In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' co-movement. As shown in table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, the previous results could be driven by a high level of common ownership. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{MFCAP}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} \hl{shows the relation between future co-movement and current measurement of common ownership for that pairs. As you can see in the left panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' co-movement although for a high level of common ownership.}
 			
 			\begin{figure}[htbp]
 				\centering  
@@ -86,12 +86,17 @@
 				\caption{Future monthly correlation for different level of common ownership at this period}
 				\label{Qmcorr5lrd}
 			\end{figure}
+						\begin{figure}[htbp]
+							\centering 
+							\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5subsample.eps"}
+							\caption{\hl{Monthly correlation for different level of common ownership at this period for high level of common ownership}}
+							\label{Qmcorr5subsample}
+						\end{figure}
 			\begin{figure}[htbp]
 				\centering  
-				\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
-				\includegraphics[width=0.45\linewidth]{"Output/Qmcorr5subsample.eps"}
-				\caption{Future monthly correlation for different level of common ownership at this period for high level of common ownership}
-				\label{Qmcorr5subsample}
+				\includegraphics[width=0.6\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+				\caption{\hl{Monthly correlation for different level of common ownership at this period for high level of common ownership}}
+				\label{Qmcorr5subsamplebg}
 			\end{figure}
 			
 			
@@ -101,8 +106,8 @@
 			{\begin{table}[htbp]
 					\centering
 					\caption{\scriptsize Estimation results for high level of common ownership}
-					\subcaption{heading}
 					\label{QTimemresult2subsample}
+					\subcaption{\hl{heading}}
 					{
 						\resizebox{\textwidth}{!}{
 						\input{Output/QTimemresult2subsample-slide.tex}
@@ -110,14 +115,21 @@
 					}
 			\end{table}}
 			
-			\begin{figure}[htbp]
-				\centering  
-				\includegraphics[width=0.75\linewidth]{"Output/QarterSummary.eps"}
-				\caption{Pairs' characteristics for the pairs with high level of common ownership}
-				\label{QarterSummary}
-			\end{figure}
-			
+%			\begin{figure}[htbp]
+%				\centering  
+%				\includegraphics[width=1\linewidth]{"Output/QarterSummary.eps"}
+%				\caption{Pairs' characteristics for the pairs with high level of common ownership}
+%				\label{QarterSummary}
+%			\end{figure}
+		
+\begin{table}
+\centering
+					\caption{\scriptsize Estimation results for high level of common ownership}
+					\label{QarterSummary}
+					\subcaption{\hl{heading}}
+	\input{"Output/table13.tex"}
 
+\end{table}
 				
 				
 				\FloatBarrier
@@ -132,9 +144,10 @@ We restrict our investigations to firms with at least one common owner in the fo
 					
 					{\begin{table}[htbp]
 							%	\centering
+							
 							\caption{Non-connected Co-movement}
-							\subcaption{heading}
 							\label{AllPairs}
+							\subcaption{\hl{heading}}							
 							\resizebox{1\textwidth}{!}{
 								
 									{	\input{Output/Q3mresultAllPairs.tex}

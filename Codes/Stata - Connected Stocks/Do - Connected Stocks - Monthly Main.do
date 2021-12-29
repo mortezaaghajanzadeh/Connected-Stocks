@@ -130,6 +130,30 @@ esttab    v1 v2 v3 v4 /*v5*/ v6 v61   ,nomtitle label   s(  /*SubSample GroupFE*
 }
 
 
+
+ foreach v of varlist   monthlycrossownership monthlyρ_5 {
+	
+	capture drop  `v'percent
+	gen `v'percent = `v' * 100
+
+}
+
+
+
+
+tabout median using table13.tex, ///
+c(mean sbgroup mean monthlysamebm mean sgroup  mean monthlysamesize  mean monthlycrossownershippercent ) ///
+clab( SameGroup "SameB/M" SameInd. "SameSize"  "CrossOwner."  ) ///
+sum npos(lab) ///
+h2("") ///
+h1("title here for") ///
+rep ///
+style(tex)  cl2(2-6) cltr2(.75em 1.5em) ///
+topf(top.tex) botf(bot.tex) topstr(\textwidth) botstr(auto.dta)
+
+
+
+
 {/*NMFCA Just after Q3*/
 
 	eststo v0: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1 , fmb newey(4) 

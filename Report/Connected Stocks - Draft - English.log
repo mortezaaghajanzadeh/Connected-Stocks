@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  28 DEC 2021 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  29 DEC 2021 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,20 +644,56 @@ Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count298
 \c@subtable=\count299
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+(c:/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen291
+\TX@old@table=\dimen292
+\TX@old@col=\dimen293
+\TX@target=\dimen294
+\TX@delta=\dimen295
+\TX@cols=\count300
+\TX@ftn=\toks36
+)
+(c:/texlive/2020/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks37
+\SOUL@lasttoken=\toks38
+\SOUL@cmds=\toks39
+\SOUL@buffer=\toks40
+\SOUL@token=\toks41
+\SOUL@spaceskip=\skip72
+\SOUL@ttwidth=\dimen296
+\SOUL@uldp=\dimen297
+\SOUL@ulht=\dimen298
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
 
 (c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip72
-\bibsep=\skip73
+\bibhang=\skip73
+\bibsep=\skip74
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count300
+\c@NAT@ctr=\count301
 )
 (c:/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count301
-\c@@ppsavesec=\count302
-\c@@ppsaveapp=\count303
+\c@@pps=\count302
+\c@@ppsavesec=\count303
+\c@@ppsaveapp=\count304
 )
 (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarypatterns.code.tex
@@ -677,15 +713,15 @@ Package: expl3 2020-03-06 L3 programming layer (loader)
 
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count304
+\l__kernel_color_stack_int=\count305
 \l__pdf_internal_box=\box65
 ))
 (c:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2020-03-06 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count305
-\g__xparse_grabber_int=\count306
-\l__xparse_m_args_int=\count307
-\l__xparse_v_nesting_int=\count308
+\l__xparse_current_arg_int=\count306
+\g__xparse_grabber_int=\count307
+\l__xparse_m_args_int=\count308
+\l__xparse_v_nesting_int=\count309
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -695,39 +731,39 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 (./Elements/Title.tex) (./Connected Stocks - Draft - English.aux)
 \openout1 = `"Connected Stocks - Draft - English.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 78.
+LaTeX Info: Redefining \selectfont on input line 80.
 
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
-\scratchdimen=\dimen291
+\scratchcounter=\count310
+\scratchdimen=\dimen299
 \scratchbox=\box66
-\nofMPsegments=\count310
-\nofMParguments=\count311
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count312
-\MPscratchDim=\dimen292
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks37
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen300
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks43
 ) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -743,7 +779,7 @@ Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 78.
+Package hyperref Info: Link coloring ON on input line 80.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -754,11 +790,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count315
+\c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
 
 (./Connected Stocks - Draft - English.out)
 (./Connected Stocks - Draft - English.out)
@@ -856,25 +892,6 @@ File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
 line 85.
 (pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
-Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2021-12-19 14:38:48
-(epstopdf)                    size: 30141 bytes
-(epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
--to.pdf>
-(epstopdf)                    date: 2021-12-19 14:41:37
-(epstopdf)                    size: 14810 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
-le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 91.
-Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=366, 397.485pt x 289.08p
-t>
-File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
-Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 91.
-(pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
 (epstopdf)                    date: 2021-12-19 14:38:49
 (epstopdf)                    size: 23718 bytes
@@ -884,64 +901,82 @@ df>
 (epstopdf)                    size: 16166 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 92.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=367, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=366, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 92.
-(pdftex.def)             Requested size: 175.49881pt x 127.63669pt.
- [13 <./Output/Qmcorr5lrd-eps-converted-to.pdf> <./Output/Qmcorr5lrdbgsubsample
--eps-converted-to.pdf> <./Output/Qmcorr5subsample-eps-converted-to.pdf>]
+input line 91.
+(pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
+Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
+(epstopdf)                    date: 2021-12-19 14:38:48
+(epstopdf)                    size: 30141 bytes
+(epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2021-12-19 14:41:37
+(epstopdf)                    size: 14810 bytes
+(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
+le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
+(epstopdf)             \includegraphics on input line 97.
+Package epstopdf Info: Output file is already uptodate.
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=367, 397.485pt x 289.08p
+t>
+File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
+Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
+d on input line 97.
+(pdftex.def)             Requested size: 234.00238pt x 170.1896pt.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 104.
+(caption)                outside box or environment on input line 110.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 104.
+(caption)                outside box or environment on input line 110.
 See the caption package documentation for explanation.
 
 (./Output/QTimemresult2subsample-slide.tex)
-Package epstopdf Info: Source file: <Output/QarterSummary.eps>
-(epstopdf)                    date: 2021-12-19 13:18:14
-(epstopdf)                    size: 53213275 bytes
-(epstopdf)             Output file: <Output/QarterSummary-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2021-12-27 07:07:52
-(epstopdf)                    size: 157169 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/QarterSummary-eps-c
-onverted-to.pdf Output/QarterSummary.eps>
-(epstopdf)             \includegraphics on input line 115.
-Package epstopdf Info: Output file is already uptodate.
-<Output/QarterSummary-eps-converted-to.pdf, id=409, 1084.05pt x 722.7pt>
-File: Output/QarterSummary-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/QarterSummary-eps-converted-to.pdf>
-Package pdftex.def Info: Output/QarterSummary-eps-converted-to.pdf  used on inp
-ut line 115.
-(pdftex.def)             Requested size: 292.5pt x 194.99927pt.
- [14]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 136.
+(caption)                outside box or environment on input line 129.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 136.
+(caption)                outside box or environment on input line 129.
 See the caption package documentation for explanation.
 
-(./Output/Q3mresultAllPairs.tex) [15 <./Output/QarterSummary-eps-converted-to.p
-df>]) (./Elements-Eng/Evidence for correlated trading.tex
+(./Output/table13.tex
+Overfull \hbox (1.50015pt too wide) in paragraph at lines 22--22
+ []|\OT1/cmr/m/n/10 CrossOwner.| 
+ []
+
+) [13 <./Output/Qmcorr5lrd-eps-converted-to.pdf>] [14 <./Output/Qmcorr5subsampl
+e-eps-converted-to.pdf> <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>]
+[15]
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 150.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 150.
+See the caption package documentation for explanation.
+
+(./Output/Q3mresultAllPairs.tex))
+(./Elements-Eng/Evidence for correlated trading.tex [16]
 Overfull \hbox (13.60088pt too wide) in paragraph at lines 14--17
 \OT1/cmr/m/n/12 , changes in the in-dus-try and busi-ness group port-fo-lio's t
 urnover,$^^A[][]$
  []
 
-(./Elements/turnoverModel.tex [16]) (./Output/turnover.tex)
-(./Output/mresult2-turnover.tex) (./Output/turncomovement.tex) [17] [18]
+(./Elements/turnoverModel.tex) [17] (./Output/turnover.tex)
+(./Output/mresult2-turnover.tex) (./Output/turncomovement.tex) [18]
 (./Output/ResidualTrunSummary.tex) (./Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 (epstopdf)                    date: 2021-12-19 13:12:50
@@ -954,7 +989,7 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=455, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=452, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -974,7 +1009,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=475, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=472, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -984,11 +1019,11 @@ ut line 125.
 [21 <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Output/Imbalance.tex))
 (./Elements-Eng/Conclusion.tex [22] (./Connected Stocks - Draft - English.bbl
 [23])) [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
  (./Connected Stocks - Draft - English.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 681053A848AF205F9A584DA035EB4786;951.
@@ -996,16 +1031,16 @@ s not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:
- 20430 strings out of 480608
- 394348 string characters out of 5907536
- 820982 words of memory out of 5000000
- 35704 multiletter control sequences out of 15000+600000
- 542322 words of font info for 56 fonts, out of 8000000 for 9000
+ 22277 strings out of 480608
+ 434494 string characters out of 5907536
+ 857022 words of memory out of 5000000
+ 37536 multiletter control sequences out of 15000+600000
+ 542635 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,17n,61p,2307b,1073s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,61p,2307b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dis
@@ -1029,11 +1064,11 @@ fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type
 msfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (24 pages, 1099777 b
-ytes).
+Output written on "Connected Stocks - Draft - English.pdf" (24 pages, 948659 by
+tes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 521 compressed objects within 6 object streams
- 110 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
