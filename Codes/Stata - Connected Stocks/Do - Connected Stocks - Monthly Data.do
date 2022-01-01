@@ -99,7 +99,7 @@ gen lowimbalancestdFCA = lowimbalancestd * nmfca
 label variable lowimbalancestdFCA  " $ \text{LowImbalanceStd} \times (\text{MFCAP}^*)  $ "
 
 
-label variable sbgroup "Same Group"
+label variable sbgroup "SameGroup"
 
 rename nmfca NMFCA
 
