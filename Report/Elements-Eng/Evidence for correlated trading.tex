@@ -6,7 +6,8 @@
 	We employ two proxies for business group trading that are designed to capture different trading motivations: turnover and institutional imbalance. While the first could be due to buying or selling of business groups, the latter reflects buying.
 %	We employ one proxy for business group trading that is designed to capture  trading motivations: turnover which could be due to buying or selling of business groups.
 
-
+		\captionsetup[subtable]{labelformat=parens}
+			\renewcommand{\thesubtable}{\Alph{subtable}}
 
 \subsection{{Turnover}}
 
@@ -27,9 +28,9 @@
   
 {\begin{table}[htbp]
 	\centering
-	\caption{$\Delta \text{TurnOver}$ of firm and Business group}
-	\label{turnover}
-	\subcaption{This table reports \cite{FamaMacBeth} estimates of daily change in turnover ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) for all the firms in the market. The independent variables are change in turnover for Market, Insudtry, and Business group for that day. We exclude firm's change from associated groups to prevent spurious correlations. We calculate \cite{newey1987hypothesis} standard errors (seveb lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. }
+	\caption{$\Delta \text{TurnOver}$ of firm and Business group\\
+	This table reports \cite{FamaMacBeth} estimates of daily change in turnover ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) for all the firms in the market. The independent variables are change in turnover for Market, Insudtry, and Business group for that day. We exclude firm's change from associated groups to prevent spurious correlations. We calculate \cite{newey1987hypothesis} standard errors (seveb lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. }
+		\label{turnover}
 	\resizebox{!}{!}{
 		\input{Output/turnover.tex}
 	} 
@@ -38,17 +39,18 @@
 %\newgeometry{top=5mm, bottom=20mm}
 	\begin{table}[htbp]
 		\centering
-		\caption{Simultaneous trade and Co-movement}
+		\caption{Simultaneous trade and Co-movement\\
+		This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel \subref{mresult2-turnover}. Panel \subref{turncomovement} shows the estimation result for investigating the effect of commonality in liquidity and co-movement. }
+		
+\subcaption{Correlation of $ \Delta \text{TurnOver} $ and interested variables}
 		\label{mresult2-turnover}
-			\subcaption{This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel A. Panel B shows the estimation result for investigating the effect of commonality in liquidity and co-movement. }
-		
-
-		
 		
 		\resizebox{\textwidth}{!}{
 			\centering
 			\input{Output/mresult2-turnover.tex}
 		}
+		\bigskip
+		\subcaption{Correlation of $ \Delta \text{TurnOver} $ and Co-movement }
 		\label{turncomovement}
 		\resizebox{\textwidth}{!}{
 			\centering
@@ -69,14 +71,14 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 {			\begin{table}[htbp]
 \caption{Summary statistics}
 	\centering
-	\subcaption{Panel A: Frims' Monthly residuals}
+	\subcaption{Frims' Monthly residuals}
 	\label{tab:ResidualTrunSummary}
 	\resizebox{0.8\textwidth}{!}{
 		\input{Output/ResidualTrunSummary.tex}
 	}
 	\bigskip
 			\centering
-			\subcaption{Panel B: Groups' Monthly residuals' standard erros}
+			\subcaption{Groups' Monthly residuals' standard erros}
 			\label{tab:ResidualTrunStdSummary}
 			\resizebox{0.8\textwidth}{!}{
 				\input{Output/ResidualTrunStdSummary.tex}
@@ -96,15 +98,16 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 
 		\begin{table}[htbp]
 			\centering
-			\caption{Turnover and Imblance and Co-mivement}
-			\label{Turnovercrosssection}	
-				\subcaption{This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t.
+			\caption{Turnover and Imblance and Co-mivement\\
+			This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t.
 				We also define two dummy variables for the presence of the firm in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).  We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel A and Panel B.}
+				\subcaption{Low Turnover residual std groups and Co-movement}
+				\label{Turnovercrosssection}	
 			\resizebox{\textwidth}{!}{
 				\centering
 				\input{Output/LowRes.tex}
 			}			
-			
+			\subcaption{Low Imbalance std groups and Co-movement }
 			\label{Imbalance}
 			\resizebox{\textwidth}{!}{
 				\input{Output/Imbalance.tex}

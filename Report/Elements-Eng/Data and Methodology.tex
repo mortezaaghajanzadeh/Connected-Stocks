@@ -210,21 +210,29 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 	\end{figure}  
 	
 	
+
 	
+\DeclareRobustCommand{\myname}{\input{Elements/pairsnumber.tex}}
+
+
 	
-	
-	
+				
+		\captionsetup[subtable]{labelformat=parens}
+			\renewcommand{\thesubtable}{\Alph{subtable}}
 			 \begin{table}[htbp]
-			 \caption{\hl{text}}
+			 \caption{ Summary Statistics \\ 
+			 This table reports summary statistics of ownership features for all TSE stocks from 2014 to 2019. Panel \subref{t2-1} lists the total number of firms and Business groups and other features at the end of the fourth quarter of each year. Panel \subref{t2-2} reports the number of unique pairs in groups and outside for the fourth quarter of each year. The number of unique stock pairs is $ n(n-1)/2 $, where n is the number of stocks. We have \myname pairs in our sample.  }
 			\centering
-			\subcaption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
+			\subcaption{ Ownership features for listed firms}
 			\label{t2-1}
 			\resizebox{1\textwidth}{!}
 			{
 				\input{Output/summaryOfOwnership.tex}
 			}
+			
 		\centering
-		\subcaption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
+	\bigskip
+			\subcaption{Number of Pairs, in, and outside the Business Groups }
 		\label{t2-2}
 		\resizebox{1\textwidth}{!}
 		{
@@ -232,7 +240,7 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 		}
 	\end{table}
 	
-	
+	\captionsetup[subtable]{labelformat=empty}
 
 	
 	
@@ -252,7 +260,7 @@ In addition to model-based measures, some ad hoc common ownership measures are u
 	{\begin{table}[htbp]
 			\centering
 			\scriptsize
-			\caption{ This table summarizes common ownership measurements in the literature.}
+			\caption{ Common ownership measurements in the literature.}
 			\label{maasurmentsSummary}
 			\resizebox{\textwidth}{!}{
 				\input{Elements/MeasurmentLit.tex}
@@ -361,38 +369,42 @@ a dummy variable for whether two stocks are in the same industry, \textbf{SameIn
 
 
 Another group of controls are firm-specific controls.  We define these variables base on  \cite{AntonPolk} methodology. One of these is size control based on the normalized rank-transform of the percentile market capitalization of the two stocks, \textbf{Size1} and \textbf{Size2} (where we label the
-larger stock in the pair as the first stock). The other one is a book to market ratio based on the normalized rank-transform of the percentile book to market of the two stocks, \textbf{BookToMarket1} and \textbf{BookToMarket2}.
-We also control these characteristics on a pair level. Our measures of similarity, \textbf{SameSize}, and \textbf{SameBookToMarket}, are the negative of the absolute difference in percentile ranking for a particular characteristic across a pair.
+larger stock in the pair as the first stock). The other one is a book to market ratio based on the normalized rank-transform of the percentile book to market of the two stocks, \textbf{BM1} and \textbf{BM2}.
+We also control these characteristics on a pair level. Our measures of similarity, \textbf{SameSize}, and \textbf{SameBM}, are the negative of the absolute difference in percentile ranking for a particular characteristic across a pair.
 
 
 We calculate our controls daily and then report the average of these variables for the entire period at the end of each month. Table \ref{ControlsSummary} shows the summary statistics of specified controls in this section.
 
 
-
+	\captionsetup[subtable]{labelformat=parens}
 			\begin{table}[htbp]
+			\caption{Summary Statistics of Pairs' Features\\
+			This table reports summary statistics for all the founded pairs from 2014 to 2019. Panel \subref{measureResults} reports snapshots from the calculation of common ownership for our measurement of common ownership (MFCAP) and \cite{AntonPolk} measure (FCAP). Panel \subref{tCorr} shows the distribution of calculated correlation of residuals for different models. Panel\subref{ControlsSummary} depicts Control variables' distribution.
+			}
 				%	\centering
 	%			\toprule
 	%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
 	%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
 	%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
 	%			\midrule
-				\subcaption{Calculation of common ownership with two measure}
+				\subcaption{Common Ownership with for two measures}
 				\label{measureResults}
 				\resizebox{1\textwidth}{!}
 				{
 						{\input{Output/FCACal.tex}}
 				}
-				
+				\bigskip
 		\centering
-		\subcaption{ This table reports distribution of calculated correlation base on different models.}
+		\subcaption{ Distribution of Correlation base on Different models}
 		\label{tCorr}
 		\resizebox{1\textwidth}{!}
 		{
 			\input{Output/CorrelationsResultsText.tex}
 		}
 		
+						\bigskip
 					
- \subcaption{This table shows the summary statistics of specified controls in empirical studies.}
+ \subcaption{Distribution of specified Controls}
  \label{ControlsSummary}
                \centering 
                	\resizebox{1\textwidth}{!}
@@ -404,12 +416,11 @@ We calculate our controls daily and then report the average of these variables f
 
 \begin{table}
 \centering
-					\caption{\scriptsize Estimation results for high level of common ownership}
+					\caption{Summary Statistics of Sub-samples\\
+					This table reports the mean of control variables for the three subsamples, for the pairs in the same business group, same industry, and high level of common ownership, which is in the fourth quarter of each period.}
 					\label{QarterSummary}
-					\subcaption{\hl{heading}}
-
                  {	
                  \input{"Output/table13.tex"}
 }
 \end{table}
-
+	\captionsetup[subtable]{labelformat=empty}

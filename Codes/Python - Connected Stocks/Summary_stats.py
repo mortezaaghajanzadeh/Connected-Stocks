@@ -680,8 +680,10 @@ tempt = (
         }
     )
 ).T
-
-
+tempt.index = tempt.reset_index()['index'].apply(
+    lambda x: x.replace("BookToMarket","BM")
+    )
+tempt.index.name = None
 tempt.to_latex(pathResult + "ControlsSummary.tex")
 tempt
 # %%

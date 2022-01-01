@@ -84,19 +84,19 @@ gen NMFCAPA = holder_act * NMFCAP
 label variable NMFCAPA " $ (\text{FCAP}^*) \times {\text{ActiveHolder} }  $ "
 
 
-label variable lowimbalancestd "Low Imbalance std"
+label variable lowimbalancestd "LowImbalanceStd"
 
 gen ImbalanceSbgroup = lowimbalancestd * sbgroup
 
-label variable ImbalanceSbgroup  " $ \text{Low Imbalance std} \times {\text{SameGroup} } $ "
+label variable ImbalanceSbgroup  " $ \text{LowImbalanceStd} \times {\text{SameGroup} } $ "
 
 gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
-label variable ImbalanceSbgroupFCA  " $ \text{Low Imbalance std} \times {\text{SameGroup} } \times (\text{MFCAP}^*)  $ "
+label variable ImbalanceSbgroupFCA  " $ \text{LowImbalanceStd} \times {\text{SameGroup} } \times (\text{MFCAP}^*)  $ "
 
 
 gen lowimbalancestdFCA = lowimbalancestd * nmfca
-label variable lowimbalancestdFCA  " $ \text{Low Imbalance std} \times (\text{MFCAP}^*)  $ "
+label variable lowimbalancestdFCA  " $ \text{LowImbalanceStd} \times (\text{MFCAP}^*)  $ "
 
 
 label variable sbgroup "Same Group"
@@ -108,7 +108,7 @@ label variable NMFCA "$ \text{MFCAP*} $"
 
 gen ImbalanceNMFCA = lowimbalancestd * NMFCA
 
-label variable ImbalanceNMFCA  " $ \text{Low Imbalance std} \times {\text{MFCAP}^* } $ "
+label variable ImbalanceNMFCA  " $ \text{LowImbalanceStd} \times {\text{MFCAP}^* } $ "
 
 
 
@@ -349,10 +349,10 @@ replace lowres = 1 if lowres_x == 1
 replace lowres = 1 if lowres_y == 1
 
 
-label variable lowres "LowTurnOverStd"
+label variable lowres "LowTurnoverStd"
 
 gen Grouplowres = lowres * sbgroup
-label variable Grouplowres "$ {\text{LowTurnOverStd} } \times {\text{SameGroup} }  $ "
+label variable Grouplowres "$ {\text{LowTurnoverStd} } \times {\text{SameGroup} }  $ "
 
 
 

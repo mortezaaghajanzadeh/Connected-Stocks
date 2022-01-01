@@ -1,11 +1,14 @@
-{ \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}  \begin{tabular}{l*{4}{c}}   \addlinespace[2ex]  \multicolumn{5}{c}{Panel B: The relation between common ownership and business group}\\ \hline \addlinespace[1ex]
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
                 &\multicolumn{4}{c}{Dependent Variable:  Future Pairs's co-movement}        \\\cmidrule(lr){2-5}
                 &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
 \hline
 $ \text{MFCAP*} $&  0.00899\sym{***}&0.0000371         &0.0000148         & 0.000509         \\
                 &   (6.01)         &   (0.06)         &   (0.03)         &   (0.89)         \\
 [1em]
-Same Group      &                  &                  &  0.00784\sym{**} &  0.00521         \\
+SameGroup       &                  &                  &  0.00784\sym{**} &  0.00521         \\
                 &                  &                  &   (2.72)         &   (1.68)         \\
 [1em]
  $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ &                  &                  &   0.0122\sym{***}&   0.0120\sym{***}\\

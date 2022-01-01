@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  1 JAN 2022 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  1 JAN 2022 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,25 +768,25 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 (./Elements/Title.tex) (./Connected Stocks - Draft - English.aux)
 \openout1 = `"Connected Stocks - Draft - English.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 81.
+LaTeX Info: Redefining \selectfont on input line 84.
 
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -821,7 +821,7 @@ Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 84.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -834,9 +834,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count324
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 84.
+LaTeX Info: Redefining \pageref on input line 84.
+LaTeX Info: Redefining \nameref on input line 84.
 
 (./Connected Stocks - Draft - English.out)
 (./Connected Stocks - Draft - English.out)
@@ -883,64 +883,54 @@ LaTeX Info: Redefining \nameref on input line 81.
 {c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
 (./Elements-Eng/Data and Methodology.tex [3] (./Elements/pairsnumber.tex)
 (./Elements/PairPercent.tex) (./Elements/TotalPairNumberCal.tex)
-(./Elements/SameBGpercent.tex)
+(./Elements/SameBGpercent.tex) (./Elements/pairsnumber.tex)
+(./Elements/pairsnumber.tex)
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 220.
+(caption)                outside box or environment on input line 226.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 220.
+(caption)                outside box or environment on input line 226.
 See the caption package documentation for explanation.
 
 (./Output/summaryOfOwnership.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 227.
+(caption)                outside box or environment on input line 235.
 See the caption package documentation for explanation.
 
 (./Output/summaryOfPairs.tex) [4] [5] (./Elements/MeasurmentLit.tex) [6]
 [7]
 
 LaTeX Warning: Reference `SameGroupIndustry' on page 8 undefined on input line 
-350.
+358.
 
 (./Elements/sameindandsamebg.tex) [8]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 379.
+(caption)                outside box or environment on input line 390.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 379.
+(caption)                outside box or environment on input line 390.
 See the caption package documentation for explanation.
 
 (./Output/FCACal.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 387.
+(caption)                outside box or environment on input line 398.
 See the caption package documentation for explanation.
 
 (./Output/CorrelationsResultsText.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 395.
+(caption)                outside box or environment on input line 407.
 See the caption package documentation for explanation.
 
-(./Output/ControlsSummary.tex)
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 409.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 409.
-See the caption package documentation for explanation.
-
-(./Output/table13.tex
+(./Output/ControlsSummary.tex) (./Output/table13.tex
 Overfull \hbox (4.57999pt too wide) in paragraph at lines 27--27
  []|\OT1/cmr/m/n/10 SameGroup| 
  []
@@ -950,7 +940,7 @@ Overfull \hbox (9.09384pt too wide) in paragraph at lines 27--27
  []|\OT1/cmr/m/n/10 CrossOwner.| 
  []
 
-)) [9] (./Elements-Eng/Results.tex
+)) [9] [10] (./Elements-Eng/Results.tex
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
 (epstopdf)                    date: 2021-12-19 14:38:34
 (epstopdf)                    size: 22059 bytes
@@ -961,38 +951,29 @@ Package epstopdf Info: Source file: <Output/mcorr50.eps>
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=285, 397.485pt x 289.08pt>
+<Output/mcorr50-eps-converted-to.pdf, id=303, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
 e 15.
 (pdftex.def)             Requested size: 292.77629pt x 212.93219pt.
- (./Elements/Model11.tex) [10]
-
-LaTeX Warning: Reference `mresult2part2' on page 11 undefined on input line 27.
-
-
-[11 <./Output/mcorr50-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `mresult2part2' on page 12 undefined on input line 35.
-
-
-[12]
+ (./Elements/Model11.tex [11]) [12 <./Output/mcorr50-eps-converted-to.pdf>] [13
+]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(14.22636pt, 773.91498pt, 56.9055pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=773.91498pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-95.04362pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -1013,15 +994,25 @@ LaTeX Warning: Reference `mresult2part2' on page 12 undefined on input line 35.
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 45.
+(caption)                outside box or environment on input line 49.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 45.
+(caption)                outside box or environment on input line 49.
 See the caption package documentation for explanation.
 
-(./Output/mresult2part1-slide.tex) (./Output/mresult2part2-slide.tex) [13]
+(./Output/mresult2part1-slide.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 56.
+See the caption package documentation for explanation.
+
+(./Output/mresult2part2-slide.tex)
+
+LaTeX Warning: Float too large for page by 32.86047pt on input line 64.
+
+[14]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
 (epstopdf)                    date: 2021-12-19 14:38:21
 (epstopdf)                    size: 27904 bytes
@@ -1030,13 +1021,13 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
 (epstopdf)                    size: 15916 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrd-eps-conv
 erted-to.pdf Output/Qmcorr5lrd.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrd-eps-converted-to.pdf, id=362, 397.485pt x 289.08pt>
+<Output/Qmcorr5lrd-eps-converted-to.pdf, id=386, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
-line 84.
+line 88.
 (pdftex.def)             Requested size: 334.60422pt x 243.35486pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
 (epstopdf)                    date: 2022-01-01 08:38:31
@@ -1047,13 +1038,13 @@ df>
 (epstopdf)                    size: 16076 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 94.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=363, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=387, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 90.
+input line 94.
 (pdftex.def)             Requested size: 334.60422pt x 243.35486pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)                    date: 2022-01-01 08:38:47
@@ -1064,88 +1055,65 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)                    size: 14648 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 96.
+(epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=364, 397.485pt x 289.08p
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=388, 397.485pt x 289.08p
 t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 96.
+d on input line 100.
 (pdftex.def)             Requested size: 334.60422pt x 243.35486pt.
-
-[14
-
-
- <./Output/Qmcorr5lrd-eps-converted-to.pdf>] [15 <./Output/Qmcorr5subsample-eps
--converted-to.pdf> <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>]
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 109.
-See the caption package documentation for explanation.
+ [15
 
 
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 109.
-See the caption package documentation for explanation.
-
-(./Output/QTimemresult2subsample-slide.tex) [16]
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 142.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 142.
-See the caption package documentation for explanation.
-
-(./Output/Q3mresultAllPairs.tex))
-(./Elements-Eng/Evidence for correlated trading.tex [17]
-Overfull \hbox (19.52458pt too wide) in paragraph at lines 14--17
+ <./Output/Qmcorr5lrd-eps-converted-to.pdf>] [16 <./Output/Qmcorr5subsample-eps
+-converted-to.pdf> <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>] (./Ou
+tput/QTimemresult2subsample-slide.tex) [17]
+(./Output/Q3mresultAllPairs.tex) [18] [19])
+(./Elements-Eng/Evidence for correlated trading.tex
+Overfull \hbox (19.52458pt too wide) in paragraph at lines 15--18
 \OT1/cmr/m/n/12 in-dus-try and busi-ness group port-fo-lio's turnover,$^^A[][]$
  and $^^A[][]$
  []
 
-(./Elements/turnoverModel.tex)
+(./Elements/turnoverModel.tex) [20] (./Output/turnover.tex)
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 32.
+(caption)                outside box or environment on input line 45.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 32.
+(caption)                outside box or environment on input line 45.
 See the caption package documentation for explanation.
 
-(./Output/turnover.tex)
+(./Output/mresult2-turnover.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 53.
+See the caption package documentation for explanation.
+
+(./Output/turncomovement.tex)
+
+LaTeX Warning: Float too large for page by 55.18091pt on input line 60.
+
+[21] [22]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 43.
+(caption)                outside box or environment on input line 74.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 43.
-See the caption package documentation for explanation.
-
-(./Output/mresult2-turnover.tex) (./Output/turncomovement.tex) [18] [19]
-[20]
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 72.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 72.
+(caption)                outside box or environment on input line 74.
 See the caption package documentation for explanation.
 
 (./Output/ResidualTrunSummary.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 79.
+(caption)                outside box or environment on input line 81.
 See the caption package documentation for explanation.
 
 (./Output/ResidualTrunStdSummary.tex)
@@ -1158,42 +1126,52 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 (epstopdf)                    size: 264938 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=521, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=551, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
-ut line 90.
+ut line 92.
 (pdftex.def)             Requested size: 355.51817pt x 177.75778pt.
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 101.
+(caption)                outside box or environment on input line 104.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 101.
+(caption)                outside box or environment on input line 104.
 See the caption package documentation for explanation.
 
-(./Output/LowRes.tex) (./Output/Imbalance.tex) [21
+(./Output/LowRes.tex)
 
-] [22]
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 110.
+See the caption package documentation for explanation.
+
+(./Output/Imbalance.tex)
+
+LaTeX Warning: Float too large for page by 100.1488pt on input line 117.
+
+[23
+
+] [24]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 131.
+(caption)                outside box or environment on input line 134.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 131.
+(caption)                outside box or environment on input line 134.
 See the caption package documentation for explanation.
 
 (./Output/ImbalanceInsMeanSummary.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 138.
+(caption)                outside box or environment on input line 141.
 See the caption package documentation for explanation.
 
 (./Output/ImbalanceInsStdSummary.tex)
@@ -1206,23 +1184,23 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)                    size: 286005 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
-(epstopdf)             \includegraphics on input line 146.
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=558, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=588, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 146.
+ut line 149.
 (pdftex.def)             Requested size: 355.51817pt x 177.75778pt.
- [23 <./Output/GroupedResSTD-eps-converted-to.pdf>]) (./Elements-Eng/Conclusion
-.tex [24 <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Connected Stocks - D
-raft - English.bbl [25])) [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+ [25 <./Output/GroupedResSTD-eps-converted-to.pdf>]) (./Elements-Eng/Conclusion
+.tex [26 <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Connected Stocks - D
+raft - English.bbl [27])) [28]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
 
 (./Connected Stocks - Draft - English.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 681053A848AF205F9A584DA035EB4786;951.
@@ -1230,16 +1208,16 @@ s not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 22853 strings out of 480608
- 442919 string characters out of 5907536
- 865488 words of memory out of 5000000
- 38111 multiletter control sequences out of 15000+600000
- 542635 words of font info for 57 fonts, out of 8000000 for 9000
+ 22873 strings out of 480608
+ 443313 string characters out of 5907536
+ 866492 words of memory out of 5000000
+ 38125 multiletter control sequences out of 15000+600000
+ 543821 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,17n,61p,1821b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,61p,1931b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dis
@@ -1258,17 +1236,16 @@ s/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/tex
-live/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (26 pages, 959534 by
+fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on "Connected Stocks - Draft - English.pdf" (28 pages, 950049 by
 tes).
 PDF statistics:
- 695 PDF objects out of 1000 (max. 8388607)
- 561 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
+ 107 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
