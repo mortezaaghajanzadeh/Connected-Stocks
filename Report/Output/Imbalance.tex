@@ -1,22 +1,19 @@
-{
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{6}{c}}
-\hline\hline
-                &\multicolumn{6}{c}{Dependent Variable:  Future Pairs's co-movement}                                              \\\cmidrule(lr){2-7}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+{\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi} \begin{tabular}{l*{6}{c}} \hline   \addlinespace[1ex]  \multicolumn{7}{c}{Panel B: Low Imbalance std groups and Co-movement } \\   \addlinespace[1ex] \hline  \addlinespace[1ex]
+                    &\multicolumn{6}{c}{Dependent Variable:  Future Pairs's co-movement}                                                                \\\cmidrule(lr){2-7}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
-Same Group      &   0.0208\sym{***}&   0.0205\sym{***}&                  &                  &  0.00614         &  0.00630\sym{*}  \\
-                &   (7.91)         &   (7.61)         &                  &                  &   (1.80)         &   (2.04)         \\
+Same Group          &      0.0208\sym{***}&      0.0206\sym{***}&                     &                     &     0.00619         &     0.00630\sym{*}  \\
+                    &      (7.91)         &      (7.94)         &                     &                     &      (1.95)         &      (2.04)         \\
 [1em]
-Low Imbalance std&                  & -0.00129         &   0.0282\sym{***}& -0.00724\sym{***}& -0.00597\sym{***}& -0.00267         \\
-                &                  &  (-1.03)         &   (6.06)         &  (-5.74)         &  (-4.61)         &  (-1.85)         \\
+Low Imbalance std   &                     &    -0.00144         &      0.0282\sym{***}&    -0.00724\sym{***}&    -0.00610\sym{***}&    -0.00267         \\
+                    &                     &     (-1.15)         &      (6.06)         &     (-5.74)         &     (-4.87)         &     (-1.85)         \\
 [1em]
- $ \text{Low Imbalance std} \times {\text{SameGroup} } $ &                  &                  &                  &                  &   0.0362\sym{***}&   0.0325\sym{***}\\
-                &                  &                  &                  &                  &   (8.78)         &   (7.48)         \\
+ $ \text{Low Imbalance std} \times {\text{SameGroup} } $ &                     &                     &                     &                     &      0.0358\sym{***}&      0.0325\sym{***}\\
+                    &                     &                     &                     &                     &      (8.57)         &      (7.48)         \\
 \hline
-Sub-sample      &    Total         &    Total         &SameGroup         &   Others         &    Total         &    Total         \\
-Business Group FE&       No         &       No         &       No         &       No         &       No         &      Yes         \\
-Observations    &   354209         &   354209         &    43274         &   310935         &   354209         &   354209         \\
+Sub-sample          &       Total         &       Total         &   SameGroup         &      Others         &       Total         &       Total         \\
+Business Group FE   &          No         &          No         &          No         &          No         &          No         &         Yes         \\
+Observations        &      354209         &      354209         &       43274         &      310935         &      354209         &      354209         \\
 \hline\hline
 \multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
 \multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\

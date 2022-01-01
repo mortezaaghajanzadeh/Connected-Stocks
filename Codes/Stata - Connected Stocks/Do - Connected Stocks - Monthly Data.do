@@ -349,10 +349,10 @@ replace lowres = 1 if lowres_x == 1
 replace lowres = 1 if lowres_y == 1
 
 
-label variable lowres "LowResidualStd"
+label variable lowres "LowTurnOverStd"
 
 gen Grouplowres = lowres * sbgroup
-label variable Grouplowres "$ {\text{LowResidualStd} } \times {\text{SameGroup} }  $ "
+label variable Grouplowres "$ {\text{LowTurnOverStd} } \times {\text{SameGroup} }  $ "
 
 
 
