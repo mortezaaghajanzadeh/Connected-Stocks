@@ -67,24 +67,22 @@ Furthermore, we have to directly show that firms with a higher level of group tu
 We calculate the standard error of firms' monthly turnover residuals in each business group. Groups' standard errors description is shown in table \ref{tab:ResidualTrunStdSummary} and time series in in figure \ref{fig:GroupedResSTD}. On average, the affiliated firms' standard error is lower than unaffiliated ones. For finding the relation between the standard error of monthly turnover residuals, we define a dummy variable for groups in the low level of standard error, which is lower than the median. For analysis, we restrict our investigations to a subsample of \textit{Same Group} and others and estimate our desired variable.   For further study, we use the interaction of \textit{Same Group} with our dummy variable for the full sample, which confirmed our prior results. As shown in table \ref{Turnovercrosssection}, pairs in the business groups of low dispersion have a higher level of co-movement than other firms.
 
 
-
 {			\begin{table}[htbp]
 \caption{Summary statistics}
 	\centering
 	\subcaption{Frims' Monthly residuals}
 	\label{tab:ResidualTrunSummary}
-	\resizebox{0.8\textwidth}{!}{
+	\resizebox{0.75\textwidth}{!}{
 		\input{Output/ResidualTrunSummary.tex}
 	}
 	\bigskip
 			\centering
 			\subcaption{Groups' Monthly residuals' standard erros}
 			\label{tab:ResidualTrunStdSummary}
-			\resizebox{0.8\textwidth}{!}{
+			\resizebox{0.75\textwidth}{!}{
 				\input{Output/ResidualTrunStdSummary.tex}
 			}
 		\end{table}
-		
 		
 		
 \begin{figure}[htbp]
@@ -98,9 +96,9 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 
 		\begin{table}[htbp]
 			\centering
-			\caption{Turnover and Imblance and Co-mivement\\
-			This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t.
-				We also define two dummy variables for the presence of the firm in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).  We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel A and Panel B.}
+	\caption{Turnover and Imbalance and Co-mivement\\ 
+				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly .
+					We also define two dummy variables for the presence of the firm in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).  We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
 				\subcaption{Low Turnover residual std groups and Co-movement}
 				\label{Turnovercrosssection}	
 			\resizebox{\textwidth}{!}{
