@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  1 JAN 2022 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  1 JAN 2022 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,47 +900,42 @@ LaTeX Info: Redefining \nameref on input line 84.
 (./Elements/pairsnumber.tex)
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 226.
+(caption)                outside box or environment on input line 227.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 226.
+(caption)                outside box or environment on input line 227.
 See the caption package documentation for explanation.
 
 (./Output/summaryOfOwnership.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 235.
+(caption)                outside box or environment on input line 236.
 See the caption package documentation for explanation.
 
 (./Output/summaryOfPairs.tex) [4] [5] (./Elements/MeasurmentLit.tex) [6]
-[7]
-
-LaTeX Warning: Reference `SameGroupIndustry' on page 8 undefined on input line 
-358.
-
-(./Elements/sameindandsamebg.tex) [8]
+[7] (./Elements/sameindandsamebg.tex) [8]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 390.
+(caption)                outside box or environment on input line 391.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 390.
+(caption)                outside box or environment on input line 391.
 See the caption package documentation for explanation.
 
 (./Output/FCACal.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 398.
+(caption)                outside box or environment on input line 399.
 See the caption package documentation for explanation.
 
 (./Output/CorrelationsResultsText.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 407.
+(caption)                outside box or environment on input line 408.
 See the caption package documentation for explanation.
 
 (./Output/ControlsSummary.tex) (./Output/table13.tex
@@ -1207,30 +1202,30 @@ ut line 147.
 (pdftex.def)             Requested size: 355.51817pt x 177.75778pt.
  [25 <./Output/GroupedResSTD-eps-converted-to.pdf>]) (./Elements-Eng/Conclusion
 .tex [26 <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Connected Stocks - D
-raft - English.bbl [27])) [28]
+raft - English.bbl [27]))
+
+Package caption Warning: Unused \captionsetup[subfigure] on input line 214.
+See the caption package documentation for explanation.
+
+[28]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
-
-(./Connected Stocks - Draft - English.aux)
+ (./Connected Stocks - Draft - English.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
 s not changed.
 (rerunfilecheck)             Checksum: 681053A848AF205F9A584DA035EB4786;951.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
  22979 strings out of 480608
- 444656 string characters out of 5907536
+ 444665 string characters out of 5907536
  868280 words of memory out of 5000000
  38225 multiletter control sequences out of 15000+600000
  543821 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,17n,61p,1815b,1085s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,61p,1782b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texl
 ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dis
@@ -1254,7 +1249,7 @@ fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type
 msfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (28 pages, 949637 by
+Output written on "Connected Stocks - Draft - English.pdf" (28 pages, 949387 by
 tes).
 PDF statistics:
  722 PDF objects out of 1000 (max. 8388607)
