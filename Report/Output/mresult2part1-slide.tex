@@ -1,4 +1,4 @@
-{\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi} \begin{tabular}{l*{6}{c}} \hline   \addlinespace[1ex]  \multicolumn{7}{c}{Panel A: Somwthing} \\   \addlinespace[1ex] \hline
+{\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi} \begin{tabular}{l*{6}{c}} \hline   \addlinespace[1ex]  \multicolumn{7}{c}{Panel A: The main analysis   } \\   \addlinespace[1ex] \hline  \addlinespace[1ex]
                 &\multicolumn{6}{c}{Dependent Variable:  Future Pairs's co-movement}                                              \\\cmidrule(lr){2-7}
                 &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
 \hline
@@ -7,8 +7,19 @@ $ \text{MFCAP*} $&  0.00507\sym{***}&  0.00335\sym{***}&                  &     
 [1em]
 Same Group      &                  &                  &   0.0291\sym{***}&   0.0239\sym{***}&   0.0227\sym{***}&   0.0196\sym{***}\\
                 &                  &                  &  (12.16)         &   (9.41)         &   (8.88)         &   (7.36)         \\
+[1em]
+SameIndustry    &                  &   0.0147\sym{***}&                  &  0.00992\sym{***}&  0.00949\sym{***}&  0.00971\sym{***}\\
+                &                  &   (6.61)         &                  &   (4.76)         &   (4.64)         &   (4.78)         \\
+[1em]
+SameSize        &                  &   0.0138\sym{***}&                  &   0.0159\sym{***}&   0.0154\sym{***}&   0.0293\sym{***}\\
+                &                  &   (3.95)         &                  &   (4.41)         &   (4.40)         &   (6.23)         \\
+[1em]
+SameBM          &                  &   0.0210\sym{***}&                  &   0.0199\sym{***}&   0.0201\sym{***}&   0.0176\sym{***}\\
+                &                  &   (7.29)         &                  &   (6.92)         &   (6.95)         &   (6.15)         \\
+[1em]
+CrossOwnership  &                  &   0.0390\sym{**} &                  &   0.0112         &   0.0129         &   0.0216         \\
+                &                  &   (3.24)         &                  &   (0.83)         &   (0.94)         &   (1.55)         \\
 \hline
-Controls        &       No         &      Yes         &       No         &      Yes         &      Yes         &      Yes         \\
 PairType Control&       No         &       No         &       No         &       No         &       No         &      Yes         \\
 Observations    &   354209         &   354209         &   354209         &   354209         &   354209         &   354209         \\
 \hline\hline

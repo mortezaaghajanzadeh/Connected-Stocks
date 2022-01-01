@@ -27,27 +27,24 @@
   
 {\begin{table}[htbp]
 	\centering
-	\caption{cross-sectional average of the time-series coefficients for daily changes in turnover }
+	\caption{$\Delta \text{TurnOver}$ of firm and Business group}
+	\label{turnover}
+	\subcaption{This table reports \cite{FamaMacBeth} estimates of daily change in turnover ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) for all the firms in the market. The independent variables are change in turnover for Market, Insudtry, and Business group for that day. We exclude firm's change from associated groups to prevent spurious correlations. We calculate \cite{newey1987hypothesis} standard errors (seveb lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. }
 	\resizebox{!}{!}{
 		\input{Output/turnover.tex}
-	} \label{turnover}
+	} 
 \end{table}}
 
 
 	\begin{table}[htbp]
 		\centering
-		\caption{Estimation results for effect of variables on  co-movement $ \Delta \text{TurnOver} $}
+		\caption{Simultaneous trade and Co-movement}
 		\label{mresult2-turnover}
+			\subcaption{This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix.}
 		\resizebox{\textwidth}{!}{
 			\centering
 			\input{Output/mresult2-turnover.tex}
 		}
-	\end{table}
-
-
-	\begin{table}[htbp]
-		\centering
-		\caption{Estimation results for effect of correlation in $ \Delta \text{TurnOver} $ on  co-movement }
 		\label{turncomovement}
 		\resizebox{\textwidth}{!}{
 			\centering
@@ -65,21 +62,24 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 
 
 {			\begin{table}[htbp]
+\caption{\hl{heading}}
 	\centering
-	\caption{Frims' Monthly residuals' summary statistics}
+	\subcaption{Panel A: Frims' Monthly residuals' summary statistics}
 	\label{tab:ResidualTrunSummary}
 	\resizebox{0.8\textwidth}{!}{
 		\input{Output/ResidualTrunSummary.tex}
 	}
-\end{table}	
-		\begin{table}[htbp]
+
 			\centering
-			\caption{Gtoups' Monthly residuals' standard erros' summary statistics}
+			\subcaption{Panel B: Gtoups' Monthly residuals' standard erros' summary statistics}
 			\label{tab:ResidualTrunStdSummary}
 			\resizebox{0.8\textwidth}{!}{
 				\input{Output/ResidualTrunStdSummary.tex}
 			}
 		\end{table}
+		
+		
+		
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
@@ -87,10 +87,13 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 	\caption{Average of standard errors in residuals for groups}
 	\label{fig:GroupedResSTD}
 \end{figure}
+
+
 		\begin{table}[htbp]
 			\centering
 			\caption{Estimation results for the relation between low residual std groups and co-movement}
-			\label{Turnovercrosssection}
+			\label{Turnovercrosssection}			
+				\subcaption{\hl{heading}}
 			\resizebox{\textwidth}{!}{
 				\centering
 				\input{Output/LowRes.tex}
@@ -110,20 +113,20 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 		We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate monthly institutional imbalances for firms at the first step. As we expected, firms in the business groups have a lower level of standard error in  imbalances (Table\ref{tab:ImbalanceInsMeanSummary}). Then, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. The standard error is  $12.2\%$ and significantly (with a p-value of 0) lower than ungrouped firms. 
 		
 	{\begin{table}[htbp]
+	\caption{\hl{heading}}
 		\centering
-		\caption{Frims' Monthly Imbalances' summary statistics}
+		\subcaption{Panel A: Frims' Monthly Imbalances' summary statistics}
+			\label{tab:ImbalanceInsMeanSummary}%
 		\resizebox{0.75\textwidth}{!}{
 			\input{Output/ImbalanceInsMeanSummary.tex}
 		}
-		\label{tab:ImbalanceInsMeanSummary}%
-	\end{table}}
-	{\begin{table}[htbp]
-		\centering
-		\caption{Gtoups' Monthly Imbalances' standard erros' summary statistics}
+	
+
+		\subcaption{Panel B: Gtoups' Monthly Imbalances' standard erros' summary statistics}
+				\label{tab:ImbalanceInsStdSummary}%
 		\resizebox{0.75\textwidth}{!}{
 			\input{Output/ImbalanceInsStdSummary.tex}
 		}
-		\label{tab:ImbalanceInsStdSummary}%
 \end{table}}
 	\begin{figure}[htbp]
 		\centering
@@ -138,6 +141,7 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 			\centering
 			\caption{Estimation results for the relation between low imbalance std groups and co-movement}
 			\label{Imbalance}
+			\subcaption{\hl{heading}}
 			\resizebox{\textwidth}{!}{
 				\input{Output/Imbalance.tex}
 			}

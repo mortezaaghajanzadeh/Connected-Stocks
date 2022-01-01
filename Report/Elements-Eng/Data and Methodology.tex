@@ -24,15 +24,7 @@ They use \cite{almeida2011structure} algorithm with a 40\% threshold for definin
 
 Table \ref{t2-1} reports summary statistics of ownership data and business groups. As shown in the table, 494 firms on average have five block-holders that own 73 percent of them. There are 43 business groups on average, with seven members which own 314 (63\%) firms. 
 
-	{	 \begin{table}[htbp]
-		\centering
-		\caption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
-		\label{t2-1}
-		\resizebox{1\textwidth}{!}
-		{
-			\input{Output/summaryOfOwnership.tex}
-		}
-\end{table}}
+
 
 
 
@@ -217,15 +209,28 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 		
 	\end{figure}  
 	
-	\begin{table}
+	
+	
+	
+	
+	
+			 \begin{table}[htbp]
+			 \caption{\hl{text}}
+			\centering
+			\subcaption{ This table reports summary statistics of ownership features for all the listed firms. At this table by group, we mean business groups.}
+			\label{t2-1}
+			\resizebox{1\textwidth}{!}
+			{
+				\input{Output/summaryOfOwnership.tex}
+			}
 		\centering
-		\caption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
+		\subcaption{ This table reports summary statistics of ownership features for total pairs. At this table by group, we mean business groups.}
 		\label{t2-2}
 		\resizebox{1\textwidth}{!}
 		{
 			\input{Output/summaryOfPairs.tex}
 		}
-	\end{table}% 
+	\end{table}
 	
 	
 
@@ -277,20 +282,20 @@ at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t}
 }
 
 On each day, we measure common ownership by our proposed measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
-		\begin{table}[htbp]
-			%	\centering
-%			\toprule
-%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
-%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
-%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
-%			\midrule
-			\caption{Calculation of common ownership with two measure}
-			\label{measureResults}
-			\resizebox{1\textwidth}{!}
-			{
-					{\input{Output/FCACal.tex}}
-			}
-		\end{table}
+%		\begin{table}[htbp]
+%			%	\centering
+%%			\toprule
+%%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
+%%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+%%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
+%%			\midrule
+%			\caption{Calculation of common ownership with two measure}
+%			\label{measureResults}
+%			\resizebox{1\textwidth}{!}
+%			{
+%					{\input{Output/FCACal.tex}}
+%			}
+%		\end{table}
 %		
 %		\multirow{2}[3]{*}{variable} & \multicolumn{5}{c}{MFCAP} & \multicolumn{5}{c}{FCAP} \\
 %		 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
@@ -317,15 +322,17 @@ On each day, we measure common ownership by our proposed measure and then report
 	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use this correlation for our analysis.
 	
 	
-{	\begin{table}[htbp]
-		\centering
-		\caption{\footnotesize This table reports distribution of calculated correlation base on different models.}
-		\label{tCorr}
-%		\resizebox{0.7\textwidth}{!}
-		{
-			\input{Output/CorrelationsResultsText.tex}
-		}
-	\end{table}}
+	
+	
+%{	\begin{table}[htbp]
+%		\centering
+%		\caption{\footnotesize This table reports distribution of calculated correlation base on different models.}
+%		\label{tCorr}
+%%		\resizebox{0.7\textwidth}{!}
+%		{
+%			\input{Output/CorrelationsResultsText.tex}
+%		}
+%	\end{table}}
 
 
 
@@ -343,14 +350,14 @@ a dummy variable for whether two stocks are in the same industry, \textbf{SameIn
 . As shown in table \ref{SameGroupIndustry}, \input{Elements/sameindandsamebg}of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
 
 
-	{\begin{table}[htbp]
-			\caption{\scriptsize This table reports the number of pairs in the same industry and business group.}
-			\label{SameGroupIndustry}
-			\centering 
-			{
-				\input{Output/SameGroupSameIndustry.tex}
-			}
-	\end{table}}
+%	{\begin{table}[htbp]
+%			\caption{\scriptsize This table reports the number of pairs in the same industry and business group.}
+%			\label{SameGroupIndustry}
+%			\centering 
+%			{
+%				\input{Output/SameGroupSameIndustry.tex}
+%			}
+%	\end{table}}
 
 
 Another group of controls are firm-specific controls.  We define these variables base on  \cite{AntonPolk} methodology. One of these is size control based on the normalized rank-transform of the percentile market capitalization of the two stocks, \textbf{Size1} and \textbf{Size2} (where we label the
@@ -362,17 +369,47 @@ We calculate our controls daily and then report the average of these variables f
 
 
 
-
- \begin{table}[htbp]
- \caption{\scriptsize This table shows the summary statistics of specified controls in empirical studies.}
+			\begin{table}[htbp]
+				%	\centering
+	%			\toprule
+	%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
+	%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+	%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
+	%			\midrule
+				\subcaption{Calculation of common ownership with two measure}
+				\label{measureResults}
+				\resizebox{1\textwidth}{!}
+				{
+						{\input{Output/FCACal.tex}}
+				}
+				
+		\centering
+		\subcaption{ This table reports distribution of calculated correlation base on different models.}
+		\label{tCorr}
+		\resizebox{1\textwidth}{!}
+		{
+			\input{Output/CorrelationsResultsText.tex}
+		}
+		
+					
+ \subcaption{This table shows the summary statistics of specified controls in empirical studies.}
  \label{ControlsSummary}
                \centering 
-               
+               	\resizebox{1\textwidth}{!}
                  {
     \input{Output/ControlsSummary.tex}
                  }
              \end{table}
 
 
+\begin{table}
+\centering
+					\caption{\scriptsize Estimation results for high level of common ownership}
+					\label{QarterSummary}
+					\subcaption{\hl{heading}}
 
+                 {	
+                 \input{"Output/table13.tex"}
+}
+\end{table}
 

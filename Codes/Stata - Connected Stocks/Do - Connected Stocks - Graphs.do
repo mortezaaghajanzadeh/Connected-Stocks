@@ -189,11 +189,11 @@ graph export BigNMFCAHist.png,replace
 
 
 
-binscatter monthlyρ_5_f NMFCA if NMFCA >= 0.8659935 , ytitle("{&rho} {sub:ij,t+1}") nquantiles(20) note("This figure shows the stock return co-movement and common ownership." "Allow for discontinuity in fourth quarter") xtitle("MFCAP*")   by(sbgroup)  legend( ring(1) col(2) label(1 "Separate Group") label(2 "Same Group") ) msymbol(Th S) 
+binscatter monthlyρ_5_f NMFCA if forthquarter == 1 , ytitle("{&rho} {sub:ij,t+1}") nquantiles(20) note("This figure shows the stock return co-movement and common ownership for the pairs in" "the fourth quarter.") xtitle("MFCAP*")   by(sbgroup)  legend( ring(1) col(2) label(1 "Separate Group") label(2 "Same Group") ) msymbol(Th S) 
 graph export Qmcorr5lrdbgsubsample.eps,replace
 graph export Qmcorr5lrdbgsubsample.png,replace
 
-binscatter monthlyρ_5_f NMFCA if NMFCA >= 0.8659935 , ytitle("{&rho} {sub:ij,t+1}") nquantiles(40) note("This figure shows the stock return co-movement and common ownership." "Allow for discontinuity in fourth quarter") xtitle("MFCAP*")    
+binscatter monthlyρ_5_f NMFCA if forthquarter == 1 , ytitle("{&rho} {sub:ij,t+1}") nquantiles(40) note("This figure shows the stock return co-movement and common ownership for the pairs in" "the fourth quarter.") xtitle("MFCAP*")    
 graph export Qmcorr5subsample.eps,replace
 graph export Qmcorr5subsample.png,replace
 

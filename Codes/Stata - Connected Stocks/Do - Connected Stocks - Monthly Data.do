@@ -128,11 +128,11 @@ label variable lnMFCA "$\ln(MFCAP)$"
 
 generate msbm1bm2 =  monthlybm1 * monthlybm2
 
-label variable msbm1bm2 "$ BookToMarketMarket_1 \times BookToMarketMarket_2 $"
-label variable monthlysamebm "SameBookToMarket"
-label variable monthlybm1 "$ BookToMarketMarket_1 $"
+label variable msbm1bm2 "$ BM_1 \times BMt_2 $"
+label variable monthlysamebm "SameBM"
+label variable monthlybm1 "$ BM_1 $"
 
-label variable monthlybm2 "$ BookToMarketMarket_2 $"
+label variable monthlybm2 "$ BM_2 $"
 
 gen median = 0
 
