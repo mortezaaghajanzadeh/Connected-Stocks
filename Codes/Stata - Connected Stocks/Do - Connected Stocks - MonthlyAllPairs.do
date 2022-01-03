@@ -164,7 +164,7 @@
 		label variable sbgroupM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{SameGroup} }  $ "
 
 		gen NMFCAG = sbgroup * NMFCA
-		label variable NMFCAG " $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
+		label variable NMFCAG " $ \text{MFCAP}^* \times {\text{SameGroup} }  $ "
 
 		gen NMFCAGM = sbgroup  * median
 		label variable NMFCAGM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times  {\text{SameGroup} }  $ "

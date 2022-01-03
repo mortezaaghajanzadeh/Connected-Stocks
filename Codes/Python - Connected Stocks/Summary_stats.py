@@ -778,15 +778,15 @@ a.loc[a["index"] == "50%", "index"] = "median"
 a = (
     a.set_index(["variable", "index"])
     .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")]
-            ).replace("MonthlyFCAPf", "FCAP"
-                      ).replace("MonthlyFCA", "MFCAP"
-                                ).reset_index()
+            ).reset_index()
     .rename(columns={"index": "subset"})
     .set_index("subset")
 )
+
+a = a.T.reset_index().replace("MonthlyFCAPf", "FCAP").replace("MonthlyFCA", "MFCAP")
+a = a.rename(columns = {'index': 'stats'}).set_index(['variable', 'stats']).T
 a.to_latex(pathResult + "FCACal.tex")
 a
-
 # %%
 
 clist = [

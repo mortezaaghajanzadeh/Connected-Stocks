@@ -70,7 +70,7 @@ def vv3(row):
 path = r"E:\RA_Aghajanzadeh\Data\\"
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 #%%
-n1 = path + "Cleaned_Stock_Prices_1400_06_29" + ".parquet"
+n1 = path + "Cleaned_Stock_Prices_14001006" + ".parquet"
 df1 = pd.read_parquet(n1)
 df = df1
 df = df.drop_duplicates()
@@ -202,7 +202,7 @@ df["year"] = round(df.jalaliDate / 10000, 0)
 df["year"] = df["year"].astype(int)
 
 #%%
-df2 = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
+df2 = pd.read_csv(path + "SymbolShrout_1400_10_06.csv")
 mapingdict = dict(zip(df2.set_index(["name", "date"]).index, df2.shrout))
 df["shrout"] = df.set_index(["symbol", "date"]).index.map(mapingdict)
 df["shrout"] = df.groupby("symbol")["shrout"].fillna(method="ffill")
@@ -294,7 +294,7 @@ PriceData["EUoPR"] = PriceData.UoPR - PriceData.RiskFree
 
 # %%
 
-n1 = path + "IndustryIndexes_1400_06_28.csv"
+n1 = path + "IndustryIndexes_1400_10_06.csv"
 df1 = pd.read_csv(n1)
 df1 = df1[df1.industry_size > 2]
 df1.group_id = df1.group_id.astype(int)
@@ -323,7 +323,7 @@ PriceData.head()
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
-n = path + "SymbolShrout_1400_06_28.csv"
+n = path + "SymbolShrout_1400_10_06.csv"
 df3 = pd.read_csv(n)
 col = "name"
 df3[col] = df3[col].apply(lambda x: convert_ar_characters(x))
@@ -362,12 +362,12 @@ PriceData["EgReturn"] = PriceData["gReturn"] - PriceData["RiskFree"]
 
 #%%
 
-PriceData.to_csv(path + "Connected_Stocks\PriceData_1400_06_28.csv", index=False)
+PriceData.to_csv(path + "Connected_Stocks\PriceData_1400_10_06.csv", index=False)
 
 # %%
 import pandas as pd
 path = r"E:\RA_Aghajanzadeh\Data\\"
-PriceData = pd.read_csv(path + "Connected_Stocks\PriceData_1400_06_28.csv")
+PriceData = pd.read_csv(path + "Connected_Stocks\PriceData_1400_10_06.csv")
 #%%
 PriceData[PriceData.jalaliDate >13980100].groupby('jalaliDate').size().to_frame().head(15)
 
@@ -602,6 +602,6 @@ re = re.reset_index(drop=True)
 col = "symbol"
 re[col] = re[col].apply(lambda x: convert_ar_characters(x))
 #%%
-re.to_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv", index=False)
+re.to_csv(path + "Connected_Stocks\\residuals_1400_10_06.csv", index=False)
 
 # %%

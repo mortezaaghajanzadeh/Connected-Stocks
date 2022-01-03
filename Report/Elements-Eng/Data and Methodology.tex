@@ -11,7 +11,7 @@ We  use our unique data set, including the daily ownership table that reports al
 and the  Tehran Securities Exchange Technology Management Co (TSETMC)\footnote{\href{http://www.tsetmc.com}{www.tsetmc.com}} database.
 
 We exclude ETFs from our listed firms because they have a different return and ownership patterns compared to other firms in our study.
-We restrict our empirical analysis to 2015/03-2020/03(1393/01-1398/12 Persian calendar) due to the availability of daily ownership data and the special events \footnote{
+We restrict our empirical analysis to 2015/03-2020/03 (1393/01-1398/12 Persian calendar) due to the availability of daily ownership data and the special events \footnote{
 	The Tehran Stock Exchange's main index (TEPIX) raised exponentially to quadruple value and then fell sharply due to the gigantic entrance of new individual investors that seems to be a bubble period from that period.} that happened after 2020/03, which may affect our results. 
 
 Business groups - groups of listed firms with interconnected ownership structures controlled by an ultimate common owner - are the principal organizational structure in many parts of the world.
@@ -22,7 +22,7 @@ For defining business groups, we use data provided by {\cite{Aliabadi2022}}.
 They use \cite{almeida2011structure} algorithm with a 40\% threshold for defining groups. 
 
 
-Table \ref{t2-1} reports summary statistics of ownership data and business groups. As shown in the table, 494 firms on average have five block-holders that own 73 percent of them. There are 43 business groups on average, with seven members which own 314 (63\%) firms. 
+Panel \subref{t2-1} table \ref{st1} reports summary statistics of ownership data and business groups. As shown in the table, 494 firms on average have five block-holders that own 73 percent of them. There are 43 business groups on average, with seven members which own 314 (63\%) firms. 
 
 
 
@@ -38,9 +38,9 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 	As one of our empirical studies, we study the impact of being in the same business group relative to being in two distinct groups on pair's correlation. 
 %	(Further explanations about business groups are in section \ref{BGDef} )
 	For assigning one pair to a group, both firms should belong to one ultimate owner. Another possibility is that each firm belongs to a different ultimate owner or one of them, or both of them do not belong to any groups, which all of them illustrated in figure \ref{g2-1}.
-	By classifying pairs, on average, \input{Elements/SameBGpercent.tex}of them  belong to one business group. We report summary statistics of ownership features for all pairs in table \ref{t2-2}.
+	By classifying pairs, on average, \input{Elements/SameBGpercent.tex}of them  belong to one business group. We report summary statistics of ownership features for all pairs in panel \subref{t2-2} table \ref{st1}.
 	
-	\captionsetup[subfigure]{labelformat=parens}
+	\captionsetup[subfigure]{labelformat=parens,font=footnotesize}
 			\renewcommand{\thesubfigure}{\Alph{subfigure}}	
 	\begin{figure}[htbp]
 		\centering
@@ -115,6 +115,7 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 			\caption{ Pair not in the business group}
 		\end{subfigure}
 		\bigskip
+		\bigskip
 		\begin{subfigure}[t]{.49\linewidth}
 			\centering
 			\tiny
@@ -123,19 +124,19 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 				\begin{tikzpicture}[node distance=2cm]
 					
 					
-					\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-					\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
+					\node (start) [startstop] { \normalsize$ \text{Ultimate Owner A} $};
+					\node (start2) [startstop,right of = start,xshift=5cm] {\normalsize$ \text{Ultimate Owner B} $};
 					
 					
-					\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
+					\node (CH) [process, below of = start2,xshift=-3.5cm] {\normalsize Common Owner};
 					
-					\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
+					\node (end) [startstop1,below of = start ] {\normalsize $ \text{Firm A} $};
 					
-					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
+					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm B} $};
 					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm X} $};
 					
-					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm Y} $};
 					
 					
 					
@@ -166,22 +167,22 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 				\begin{tikzpicture}[node distance=2cm]
 					
 					
-					\node (start) [startstop] {Ultimate Owner};
+					\node (start) [startstop] {\normalsize Ultimate Owner};
 					
 					
 					
-					\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
-					\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
+					\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {\normalsize $ \text{Firm A} $};
+					\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {\normalsize $ \text{Firm B} $};
 					
 					
 					
-					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm X} $};
 					
 					
-					\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+					\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm Y} $};
 					
 					
-					\node (CH) [process, below of = start ,xshift=0] {Common Owner};
+					\node (CH) [process, below of = start ,xshift=0] {\normalsize Common Owner};
 					
 					
 					\draw [arrow] (start) --(end);
@@ -221,10 +222,11 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 		\captionsetup[subtable]{labelformat=parens}
 			\renewcommand{\thesubtable}{\Alph{subtable}}
 			 \begin{table}[htbp]
-			 \caption{ Summary Statistics \\ 
+			 \caption{ Summary Statistics \\ \small
 			 This table reports summary statistics of ownership features for all TSE stocks from 2014 to 2019. Panel \subref{t2-1} lists the total number of firms and Business groups and other features at the end of the fourth quarter of each year. Panel \subref{t2-2} reports the number of unique pairs in groups and outside for the fourth quarter of each year. The number of unique stock pairs is $ n(n-1)/2 $, where n is the number of stocks. We have \myname pairs in our sample.  }
+			\label{st1}
 			\centering
-			\subcaption{ Ownership features for listed firms}
+			\subcaption{ Ownership Characteristics for listed firms}
 			\label{t2-1}
 			\resizebox{1\textwidth}{!}
 			{
@@ -257,7 +259,7 @@ Table \ref{t2-1} reports summary statistics of ownership data and business group
 In table \ref{maasurmentsSummary} we summarize common ownership measurements which are used in literature. There are two groups of measurement for common ownership.
 First of all, model-based measures that capture common ownership base on a proper  model. These measures have a better economic interpretation, but most of them are bi-directional or industry-level measures.(e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s})
 
-In addition to model-based measures, some ad hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})
+In addition to model-based measures, some ad-hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.(e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{he2019internalizing}; \cite{lewellen2021does}; \cite{newham2018common})
 	{\begin{table}[htbp]
 			\centering
 			\scriptsize
@@ -290,7 +292,7 @@ at time t trading at price $ P{i,t} $ with total shares outstanding of $ S_{i,t}
 	$
 }
 
-On each day, we measure common ownership by our proposed measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Table \ref{measureResults} report snapshots of the distribution of common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
+On each day, we measure common ownership by our proposed measure and then report an average of these daily calculations for the entire period at the end of each month. We also calculate Anton's measure in this way. Panel \subref{measureResults} table \ref{st2} report snapshots of the distribution of common ownership measure for both methods. As we expected, the modified measure creates higher values for a high level of common ownership than Anton's measure. The average common ownership measure is five and three times larger, respectively, in business groups and industries.
 %		\begin{table}[htbp]
 %			%	\centering
 %%			\toprule
@@ -327,8 +329,8 @@ On each day, we measure common ownership by our proposed measure and then report
 	At the end of each month, we estimate our benchmark model base on the past three-month period (from two months before the end of the preceding month) and measure daily residuals.  After that, we calculate the monthly correlation of daily residuals during that month for the pair.
 	
 	We use other benchmarks (CAPM, 4 Factor, and Benchmark\footnote{we follow \cite{daniel1997measuring} to control risk characteristics: abnormal returns are calculated using a stock’s daily return minus the average return of
-	the stock’s benchmark group, which is formed at every month’s end based on stocks’ capitalization and market-to-book ratio using the sample of all stocks}) for calculating a monthly correlation and report its summary in table \ref{tCorr}. 
-	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use this correlation for our analysis.
+	the stock’s benchmark group, which is formed at every month’s end based on stocks’ capitalization and market-to-book ratio using the sample of all stocks}) for calculating a monthly correlation and report its summary in panel \subref{tCorr} table \ref{st2}. 
+	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use this correlation for our analysis but our results are robust for other models.
 	
 	
 	
@@ -350,12 +352,11 @@ On each day, we measure common ownership by our proposed measure and then report
 
 \subsection{Controls}
 
-We are interested in the effects of common ownership on pair's comovement.
-Our prediction of a higher correlation for a higher level of common ownership dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
+We are interested in the effects of common ownership and business group on pair's comovement.
+Our prediction of a higher correlation for a connection dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
 
 The first group of controls is pair controls. These controls include
-a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}.
-%; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}
+a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}.
 \input{Elements/sameindandsamebg}of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
 
 
@@ -374,20 +375,21 @@ larger stock in the pair as the first stock). The other one is a book to market 
 We also control these characteristics on a pair level. Our measures of similarity, \textbf{SameSize}, and \textbf{SameBM}, are the negative of the absolute difference in percentile ranking for a particular characteristic across a pair.
 
 
-We calculate our controls daily and then report the average of these variables for the entire period at the end of each month. Table \ref{ControlsSummary} shows the summary statistics of specified controls in this section.
+We calculate our controls daily and then report the average of these variables for the entire period at the end of each month. Panel \subref{ControlsSummary} table \ref{st2} shows the summary statistics of specified controls in this section. In addition
 
 
 	\captionsetup[subtable]{labelformat=parens}
 			\begin{table}[htbp]
-			\caption{Summary Statistics of Pairs' Features\\
-			This table reports summary statistics for all the founded pairs from 2014 to 2019. Panel \subref{measureResults} reports snapshots from the calculation of common ownership for our measurement of common ownership (MFCAP) and \cite{AntonPolk} measure (FCAP). Panel \subref{tCorr} shows the distribution of calculated correlation of residuals for different models. Panel\subref{ControlsSummary} depicts Control variables' distribution.
+			\caption{Summary Statistics of Pairs' Features\\ \small
+			This table reports summary statistics for all the founded pairs from 2014 to 2019. Panel \subref{measureResults} reports snapshots from the calculation of common ownership for our measurement of common ownership (MFCAP) and \cite{AntonPolk} measure (FCAP). Panel \subref{tCorr} shows the distribution of calculated correlation of residuals for different models. Panel \subref{ControlsSummary} depicts Control variables' distribution.
 			}
+			\label{st2}
 				%	\centering
-	%			\toprule
-	%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
-	%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
-	%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
-	%			\midrule
+%\toprule
+%\multirow{2}{*}{Subset}& \multicolumn{5}{c}{MFCAP} & \multicolumn{5}{c}{FCAP} \\
+%\cmidrule(lr){2-6} \cmidrule(lr){7-11}
+%&       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
+%\midrule
 				\subcaption{Common Ownership with for two measures}
 				\label{measureResults}
 				\resizebox{1\textwidth}{!}
@@ -398,7 +400,7 @@ We calculate our controls daily and then report the average of these variables f
 		\centering
 		\subcaption{ Distribution of Correlation base on Different models}
 		\label{tCorr}
-		\resizebox{1\textwidth}{!}
+%		\resizebox{1\textwidth}{!}
 		{
 			\input{Output/CorrelationsResultsText.tex}
 		}
@@ -408,20 +410,20 @@ We calculate our controls daily and then report the average of these variables f
  \subcaption{Distribution of specified Controls}
  \label{ControlsSummary}
                \centering 
-               	\resizebox{1\textwidth}{!}
+%               	\resizebox{1\textwidth}{!}
                  {
     \input{Output/ControlsSummary.tex}
                  }
              \end{table}
 
 
-\begin{table}
-\centering
-					\caption{Summary Statistics of Sub-samples\\
-					This table reports the mean of control variables for the three subsamples, for the pairs in the same business group, same industry, and high level of common ownership, which is in the fourth quarter of each period.}
-					\label{QarterSummary}
-                 {	
-                 \input{"Output/table13.tex"}
+\begin{table}[htbp]
+\centerfloat
+\caption{Summary Statistics of Sub-samples\\ \small
+This table reports the mean of control variables for the three subsamples, for the pairs in the same business group, same industry, and high level of common ownership, which is in the fourth quarter of each period.}
+\label{QarterSummary}
+\resizebox{\textwidth}{!}{	
+\input{"Output/table13.tex"}
 }
 \end{table}
 	\captionsetup[subtable]{labelformat=empty}

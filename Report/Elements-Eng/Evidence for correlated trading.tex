@@ -1,25 +1,25 @@
 \section{{Evidence for correlated trading} }
 
 
-	In the previous sections, we have provided evidence consistent with the hypothesis that the presence of firms in the business groups can raise firms' co-movement. Although we don't have definitive insight into the specific channel that business groups can promote commonality, our analysis provides a useful overview.
-	We claim that this relationship exists because the business group is an important proxy for the likelihood that trading in these stocks will be correlated. To better understand how the business group can generate co-movement in firms' returns, we now refine our basic analysis to consider other proxy measures for business group trading.
+	In the previous sections, we have provided evidence consistent with the hypothesis that the presence of firms in the business groups can raise firms' comovement. Although we don't have definitive insight into the specific channel that business groups can promote commonality, our analysis provides a useful overview.
+	We claim that this relationship exists because the business group is an important proxy for the likelihood that trading in these stocks will be correlated. To better understand how the business group can generate comovement in firms' returns, we now refine our basic analysis to consider other proxy measures for business group trading.
 	We employ two proxies for business group trading that are designed to capture different trading motivations: turnover and institutional imbalance. While the first could be due to buying or selling of business groups, the latter reflects buying.
 %	We employ one proxy for business group trading that is designed to capture  trading motivations: turnover which could be due to buying or selling of business groups.
 
-		\captionsetup[subtable]{labelformat=parens}
+		\captionsetup[subtable]{labelformat=parens, font = small}
 			\renewcommand{\thesubtable}{\Alph{subtable}}
 
 \subsection{{Turnover}}
 
 
-	First, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{TurnOver}_{i,t} $, on changes in market turnover,$ \Delta\text{TurnOver}_{Market,t}   $ , changes in the industry and business group portfolio's turnover,$ \Delta\text{TurnOver}_{Ind,t} $ and  $\Delta \text{TurnOver}_{Group,t} $ and  ,as well as control variables.
+	First, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm, we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{TurnOver}_{i,t} $, on changes in market turnover, $ \Delta\text{TurnOver}_{Market,t}   $ , changes in the industry and business group portfolio's turnover, $ \Delta\text{TurnOver}_{Ind,t} $ and  $\Delta \text{TurnOver}_{Group,t} $ and  ,as well as control variables.
 	We compute the daily change of turnover by this definition $ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $. 
 	We estimate the following regression for each stock across trading days in a given year separately, and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
 	
 		\input{Elements/turnoverModel}
 	  We control for lead and lag changes in the two portfolios and the firm's measures and size. We estimate that model with \cite{FamaMacBeth} method and adjust its standard errors with \cite{newey1987hypothesis} for seven periods.  As shown in Table \ref{turnover}, firms' change in turnover comes from market reaction and group's change (This result is robust to the different methods of weighting for portfolios). This observation shows that firms in one group trade together each day. 
 	
-	We use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{TurnOver} $ for founded pairs and examine its relation with our variables. Table \ref{mresult2-turnover} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study effect of  correlation of $ \Delta \text{TurnOver} $ on co-movement for founded pairs in table \ref{turncomovement}. These results suggest that business groups yield to future co-movement through correlated trading in that month.
+	Furthermore, we use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{TurnOver} $ for founded pairs and examine its relation with our variables. Panel \subref{mresult2-turnover} table \ref{re3} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study the effect of correlation of liquidity change on comovement for founded pairs in  panel \subref{turncomovement} table \ref{re3}. These results suggest that business groups yield to future comovement through correlated trading in that month.
   
   
   
@@ -39,9 +39,9 @@
 %\newgeometry{top=5mm, bottom=20mm}
 	\begin{table}[htbp]
 		\centering
-		\caption{Simultaneous trade and Co-movement\\
-		This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel \subref{mresult2-turnover}. Panel \subref{turncomovement} shows the estimation result for investigating the effect of commonality in liquidity and co-movement. }
-		
+		\caption{Simultaneous trade and Comovement\\ \small
+			This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as same as in the table \ref{re1}. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel \subref{mresult2-turnover}. Panel \subref{turncomovement} shows the estimation result for investigating the effect of commonality in liquidity and comovement. }
+		\label{re3}
 \subcaption{Correlation of $ \Delta \text{TurnOver} $ and interested variables}
 		\label{mresult2-turnover}
 		
@@ -50,7 +50,7 @@
 			\input{Output/mresult2-turnover.tex}
 		}
 		\bigskip
-		\subcaption{Correlation of $ \Delta \text{TurnOver} $ and Co-movement }
+		\subcaption{Correlation of $ \Delta \text{TurnOver} $ and Comovement }
 		\label{turncomovement}
 		\resizebox{\textwidth}{!}{
 			\centering
@@ -61,25 +61,23 @@
 \restoregeometry
 
 
-Furthermore, we have to directly show that firms with a higher level of group turnover have a higher level of co-movement. So, we extract the annual average level of firms and monthly turnover for each month. We assume that the residual of the model belongs to the business groups. We expect firms in the groups to have a lower dispersion in their residuals than firms out of the groups. We calculate firms' residuals by the mentioned hypothesis. Its summary stats is in table \ref{tab:ResidualTrunSummary}. As we expected, residuals in business groups have a lower dispersion than others.
-
-
-We calculate the standard error of firms' monthly turnover residuals in each business group. Groups' standard errors description is shown in table \ref{tab:ResidualTrunStdSummary} and time series in in figure \ref{fig:GroupedResSTD}. On average, the affiliated firms' standard error is lower than unaffiliated ones. For finding the relation between the standard error of monthly turnover residuals, we define a dummy variable for groups in the low level of standard error, which is lower than the median. For analysis, we restrict our investigations to a subsample of \textit{Same Group} and others and estimate our desired variable.   For further study, we use the interaction of \textit{Same Group} with our dummy variable for the full sample, which confirmed our prior results. As shown in table \ref{Turnovercrosssection}, pairs in the business groups of low dispersion have a higher level of co-movement than other firms.
+Besides, we have to directly show that firms within correlated turnover groups have a higher level of comovement. So, we extract the annual average level of firms and monthly turnover for each month. We assume that the residual of the model belongs to the business groups. We expect firms in the groups to have a lower dispersion in their residuals than other firms, and firms in the low dispersion groups comove more than others. We calculate firms' residuals by the mentioned hypothesis. Its summary stats is in panel \subref{tab:ResidualTrunSummary} table \ref{st3}. After that, we calculate the standard error of calculated residuals in each business group. Groups' standard errors description is shown in  panel \subref{tab:ResidualTrunStdSummary} table \ref{st3} and time series in in figure \ref{fig:GroupedResSTD}. On average, the affiliated firms' standard error is lower than unaffiliated ones. As we expected, residuals in business groups have a lower dispersion than others. For finding the relation between these groups and comovement, we define a dummy variable for groups in the low level of standard error, which is lower than the median of each period. We use this dummy variable to study our connection. Panel \subref{Turnovercrosssection} table \ref{re4} reports our estimation result and shows that pairs in the business groups of low dispersion have a higher level of comovement than other firms. For analysis, we restrict our investigations to a subsample of \textit{Same Group} and others and estimate our desired variable.   Also, we use the interaction of \textit{Same Group} with our dummy variable for the full sample, which confirmed our prior results. 
 
 
 {			\begin{table}[htbp]
 \caption{Summary statistics}
+\label{st3}
 	\centering
 	\subcaption{Frims' Monthly residuals}
 	\label{tab:ResidualTrunSummary}
-	\resizebox{0.75\textwidth}{!}{
+	\resizebox{\textwidth}{!}{
 		\input{Output/ResidualTrunSummary.tex}
 	}
 	\bigskip
 			\centering
 			\subcaption{Groups' Monthly residuals' standard erros}
 			\label{tab:ResidualTrunStdSummary}
-			\resizebox{0.75\textwidth}{!}{
+			\resizebox{\textwidth}{!}{
 				\input{Output/ResidualTrunStdSummary.tex}
 			}
 		\end{table}
@@ -94,25 +92,6 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 \end{figure}
 
 
-		\begin{table}[htbp]
-			\centering
-	\caption{Turnover and Imbalance and Co-mivement\\ 
-				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly .
-					We also define two dummy variables for the presence of the firm in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $).  We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
-				\subcaption{Low Turnover residual std groups and Co-movement}
-				\label{Turnovercrosssection}	
-			\resizebox{\textwidth}{!}{
-				\centering
-				\input{Output/LowRes.tex}
-			}			
-			\subcaption{Low Imbalance std groups and Co-movement}
-			\label{Imbalance}
-			\resizebox{\textwidth}{!}{
-				\input{Output/Imbalance.tex}
-			}
-			
-			
-		\end{table}}
 
 
 
@@ -123,22 +102,22 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 %
 \subsection{{Institutional Imbalance}}
 
-	We should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $ [\cite{seasholes2007predictable}]).
-		We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate monthly institutional imbalances for firms at the first step. As we expected, firms in the business groups have a lower level of standard error in  imbalances (Table\ref{tab:ImbalanceInsMeanSummary}). Then, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. The standard error is  $12.2\%$ and significantly (with a p-value of 0) lower than ungrouped firms. 
+Although we provide evidence for simultaneous trade in the last section, we should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $ [\cite{seasholes2007predictable}]). We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate monthly institutional imbalances for firms at the first step. As we expected, firms in the business groups have a lower level of standard error in imbalances (Panel \subref{tab:ImbalanceInsStdSummary} table\ref{st4}). Then, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. The standard error is  $12.2\%$ and significantly (with a p-value of 0) lower than ungrouped firms. 
 		
 	{\begin{table}[htbp]
 	\caption{Summary statistics}
+	\label{st4}
 		\centering
 		\subcaption{Panel A: Frims' Monthly Imbalances}
 			\label{tab:ImbalanceInsMeanSummary}%
-		\resizebox{0.75\textwidth}{!}{
+		\resizebox{\textwidth}{!}{
 			\input{Output/ImbalanceInsMeanSummary.tex}
 		}
 	
-
+\bigskip
 		\subcaption{Panel B: Groups' Monthly Imbalances' standard erros}
 				\label{tab:ImbalanceInsStdSummary}%
-		\resizebox{0.75\textwidth}{!}{
+		\resizebox{\textwidth}{!}{
 			\input{Output/ImbalanceInsStdSummary.tex}
 		}
 \end{table}}
@@ -149,11 +128,11 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 		\label{fig:GroupedInsSTD}
 	\end{figure}
 	
-	According to the main hypothesis, we need to compare pairs in groups with low standard error and other pairs. For this purpose, we define \textbf{Low Imbalance std} dummy for groups whose average standard errors are lower than half of the sample. So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group. We expect pairs in the same business groups with a low standard imbalance error to comove more than others. Table \ref{Imbalance} reports estimation results and confirms that pairs in the low imbalance std comove greater than others. 
+	According to the main hypothesis, we need to compare pairs in groups with low standard error and other pairs. For this purpose, we define a dummy for groups whose average standard errors are lower than half of the sample;\textbf{LowImbalancestd}. So, this dummy is equal to one if at least one pair's firms belong to the low imbalance std business group. We expect pairs in the same business groups with a low standard imbalance error to move more than others. Panel \subref{Imbalance} table \ref{re4} reports estimation results and confirms that pairs in that group comove greater than others. 
 	
 %		{\begin{table}[htbp]
 %			\centering
-%			\caption{Estimation results for the relation between low imbalance std groups and co-movement}
+%			\caption{Estimation results for the relation between low imbalance std groups and comovement}
 %			\label{Imbalance}
 %			\subcaption{\hl{heading}}
 %			\resizebox{\textwidth}{!}{
@@ -163,5 +142,25 @@ We calculate the standard error of firms' monthly turnover residuals in each bus
 
 
 
+		\begin{table}[htbp]
+			\centering
+	\caption{Turnover and Imbalance and Comovement\\ \small
+				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the comovement for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as in the table \ref{re1}. We also define two dummy variables for the firm's presence in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
+				\label{re4}
+				\subcaption{Low Turnover residual std groups and Comovement}
+				\label{Turnovercrosssection}	
+			\resizebox{\textwidth}{!}{
+				\centering
+				\input{Output/LowRes.tex}
+			}	
+			\bigskip		
+			\subcaption{Low Imbalance std groups and Comovement}
+			\label{Imbalance}
+			\resizebox{\textwidth}{!}{
+				\input{Output/Imbalance.tex}
+			}
+			
+			
+		\end{table}}
 \FloatBarrier
 

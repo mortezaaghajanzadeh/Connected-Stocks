@@ -24,6 +24,16 @@
 \usepackage{rotating,tabularx,natbib,ragged2e,booktabs,caption}
 %\captionsetup{font=footnotesize,labelfont=footnotesize}
 
+\makeatletter
+\newcommand*{\centerfloat}{%
+  \parindent \z@
+  \leftskip \z@ \@plus 1fil \@minus \textwidth
+  \rightskip\leftskip
+  \parfillskip \z@skip}
+\makeatother
+
+
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,

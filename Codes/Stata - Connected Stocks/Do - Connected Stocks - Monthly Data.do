@@ -92,11 +92,11 @@ label variable ImbalanceSbgroup  " $ \text{LowImbalanceStd} \times {\text{SameGr
 
 gen ImbalanceSbgroupFCA = lowimbalancestd * sbgroup * nmfca
 
-label variable ImbalanceSbgroupFCA  " $ \text{LowImbalanceStd} \times {\text{SameGroup} } \times (\text{MFCAP}^*)  $ "
+label variable ImbalanceSbgroupFCA  " $ \text{LowImbalanceStd} \times {\text{SameGroup} } \times \text{MFCAP}^*  $ "
 
 
 gen lowimbalancestdFCA = lowimbalancestd * nmfca
-label variable lowimbalancestdFCA  " $ \text{LowImbalanceStd} \times (\text{MFCAP}^*)  $ "
+label variable lowimbalancestdFCA  " $ \text{LowImbalanceStd} \times \text{MFCAP}^*  $ "
 
 
 label variable sbgroup "SameGroup"
@@ -113,7 +113,7 @@ label variable ImbalanceNMFCA  " $ \text{LowImbalanceStd} \times {\text{MFCAP}^*
 
 
 generate msize1size2 =  monthlysize1 * monthlysize2
-label variable msize1size2 "$ Size1 \times Size2 $"
+label variable msize1size2 "$ \text{Size1} \times \text{Size2} $"
 
 
 rename nmfca2 NMFCA2
@@ -147,10 +147,10 @@ gen sbgroupM = sbgroup * median
 label variable sbgroupM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times {\text{SameGroup} }  $ "
 
 gen NMFCAG = sbgroup * NMFCA
-label variable NMFCAG " $ (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
+label variable NMFCAG " $ \text{MFCAP}^* \times {\text{SameGroup} }  $ "
 
 generate Down = NMFCA * bearish * sbgroup
-label variable Down "$ (\text{MFCAP}^*) \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ "
+label variable Down "$ \text{MFCAP}^* \times {\text{Bearish Market}} \times {\text{SameGroup} }  $ "
 
 
 
@@ -159,7 +159,7 @@ label variable Down "$ (\text{MFCAP}^*) \times {\text{Bearish Market}} \times {\
 
 generate Up = NMFCA * bullish * sbgroup
 
-label variable Up "$ (\text{MFCAP}^*) \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ "
+label variable Up "$ \text{MFCAP}^* \times {\text{Bullish Market}} \times {\text{SameGroup} }  $ "
 
 
 
@@ -167,14 +167,14 @@ label variable bearish "Bearish Market"
 label variable bullish "Bullish Market"
 
 gen NMFCAGM = sbgroup * NMFCA * median
-label variable NMFCAGM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times  (\text{MFCAP}^*) \times {\text{SameGroup} }  $ "
+label variable NMFCAGM " $ (\text{MFCAP}^* > Median[\text{MFCAP}^*]) \times  \text{MFCAP}^* \times {\text{SameGroup} }  $ "
 
 
 
 
 gen NMFCAA = holder_act * NMFCA
 
-label variable NMFCAA " $ (\text{MFCAP}^*) \times {\text{ActiveHolder} }  $ "
+label variable NMFCAA " $ \text{MFCAP}^* \times {\text{ActiveHolder} }  $ "
 
 
 gen holder_actM = holder_act * median
@@ -195,17 +195,17 @@ generate lnMFCAP = ln(monthlyfcap)
 label variable lnMFCAP "$\ln(FCAP)$"
 
 generate lnMFCAG = lnMFCA * sbgroup
-label variable lnMFCAG "$ (\ln(MFCAP)) \times {\text{SameGroup} }  $ "
+label variable lnMFCAG "$ \ln(MFCAP) \times {\text{SameGroup} }  $ "
 
 
 generate lnMFCAA = lnMFCA * holder_act
-label variable lnMFCAA "$ (\ln(MFCAP)) \times {\text{ActiveHolder} }  $ "
+label variable lnMFCAA "$ \ln(MFCAP) \times {\text{ActiveHolder} }  $ "
 
 generate lnDown = lnMFCA * bearish * sbgroup
-label variable lnDown "$ (\ln(MFCAP)) \times {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
+label variable lnDown "$ \ln(MFCAP) \times {\text{Bearish Market} } \times {\text{SameGroup} }  $ "
 
 generate lnUp = lnMFCA * bullish * sbgroup
-label variable lnUp "$ (\ln(MFCAP)) \times {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
+label variable lnUp "$ \ln(MFCAP) \times {\text{Bullish Market} } \times {\text{SameGroup} }  $ "
 
 
 generate sDown = bearish * sbgroup
@@ -403,5 +403,20 @@ replace rankedFCA = 3 if fcaperncentilerank >0.4
 replace rankedFCA = 4 if fcaperncentilerank >0.6
 
 replace rankedFCA = 5 if fcaperncentilerank >0.8
+
+
+
+foreach var in samesize2 samesize3 size12 size22 samesize1222 samesize1122 samesize1221{
+	capture drop    `var'
+}
+
+
+gen samesize2 = monthlysamesize * monthlysamesize
+gen samesize3 = samesize2 * monthlysamesize
+gen size12 = monthlysize1 * monthlysize1
+gen size22 = monthlysize2 * monthlysize2
+gen samesize1222 = size12 * size22
+gen samesize1122 = monthlysize1 * size22
+gen samesize1221 = size12 * monthlysize2
 
 

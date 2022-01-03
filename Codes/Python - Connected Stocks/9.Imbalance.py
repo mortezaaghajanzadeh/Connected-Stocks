@@ -234,7 +234,7 @@ tt = (
 )
 tt["count"] = tt["count"].astype(int)
 tt = tt.rename(columns={"count": "Group $\times$ Month"})
-tt.to_latex(pathR + "\\ImbalanceInsMeanSummary.tex")
+tt.to_latex(pathR + "\\ImbalanceInsMeanSummary.tex", column_format='lcccccccc',multicolumn = False,index_names = False)
 tt
 #%%
 tt = (
@@ -249,7 +249,7 @@ tt = (
     .T.round(3)
 )
 tt[("IndImbalance_value", "count")] = tt[("IndImbalance_value", "count")].astype(int)
-tt.to_latex(pathR + "\\ImbalanceIndMeanSummary.tex")
+tt.to_latex(pathR + "\\ImbalanceIndMeanSummary.tex", column_format='lcccccccc',multicolumn = False,index = None)
 tt
 #%%
 result["yearMonth"] = result.yearMonth.astype(str)
@@ -320,7 +320,7 @@ tt = (
 )
 tt["count"] = tt["count"].astype(int)
 tt = tt.rename(columns={"count": "Group $\times$ Month"})
-tt.to_latex(pathR + "\\ImbalanceInsStdSummary.tex")
+tt.to_latex(pathR + "\\ImbalanceInsStdSummary.tex", column_format='lcccccccc',multicolumn = False,index_names = False)
 tt
 #%%
 ff = df[(df.name == "سامان") & (df.yearMonth == 139301)]
@@ -342,7 +342,7 @@ tt = (
     .T.round(3)
 )
 tt[("IndImbalance_value", "count")] = tt[("IndImbalance_value", "count")].astype(int)
-tt.to_latex(pathR + "\\ImbalanceIndStdSummary.tex")
+tt.to_latex(pathR + "\\ImbalanceIndStdSummary.tex", column_format='lcccccccc',multicolumn = False,index_names = False)
 tt
 
 # %%

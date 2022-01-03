@@ -3,17 +3,16 @@
 
 
 
-\subsection{{Forecasting Co-movement}}
-\label{Forecasting Co-movement}
+\subsection{{Forecasting Comovement}}
+\label{Forecasting Comovement}
 
-	In the following month, we empirically test the impact of current measured
-	common ownership on the next period’s co-movement
-	At the first step, we study the effects of business groups and common ownership on the co-movement. As it has shown in figure \ref{mcorr50}, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's co-movement on the considered variables.
+	In the following month, we empirically test the impact of current measured 	common ownership on the next period’s comovement.
+	At the first step, we study the effects of business groups and common ownership on the comovement. As it has shown in figure \ref{mcorr50}, a higher level of common	ownership in the current period is associated with a higher level of correlation. In the following we examine the following period's comovement on the considered variables.
 	\begin{figure}[htbp]
 	\centering  
 	\centering
 	\includegraphics[width=0.7\linewidth]{"Output/mcorr50.eps"} 
-	\caption{Co-movement for different level of common ownership }
+	\caption{Comovement for different level of common ownership }
 	\label{mcorr50}
 \end{figure}
 	
@@ -23,37 +22,42 @@
 	
 	We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
 	
-	The estimated results are presented in tables \ref{mresult2part1}
-		and \ref{mresult2part2}.
-		In the two first columns table \ref{mresult2part1}, we estimate a simplified version of equation \ref{model1} with only common ownership measure ($ MFCAP^*_{i,j}$) to investigate the relationship between common ownership and co-movement. In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity.  We find that $ MFCAP^*_{i,j}$ is significant with a coefficient of $0.00335$ and a t-statistics of $5.27$ in the presence of control variables. 
+	
+The estimated results are presented in panel table \ref{re1}. Panel \subref{mresult2part1} reports results from forcasting cross-sectional variation in comovement.
+In the two first columns, we estimate a simplified version of equation \ref{model1} with only common ownership measure ($ MFCAP^*_{i,j}$) to investigate the relationship between common ownership and comovement. In the first column, we estimate the model without control variables. Recall that our control variables are \textit{Same Industry}, \textit{Same Size}, \textit{Same Book to Market}, and \textit{Cross-Ownership}. The \textit{Same Size} and the \textit{Same Book to Market} are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity. We find that $ MFCAP^*_{i,j}$ is significant with a coefficient of $0.00335$ and a t-statistics of $5.27$ in the presence of control variables. 
 		
 		
 		In Columns 3 and 4 of that table, we use another simplified version of equation \ref{model1}, with only Same Group. The estimated coefficient in this specification, Same Group is highly statistically significant, with a coefficient of   $0.0239$ and a t-statistics of $9.41$. According to the results, there is a significant difference in the impact of the same business groups and the common ownership. 
 		
-		In the fifth specification of table \ref{mresult2part1}, we use both \textit{Same Group}  and $\text{MFCAP}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that common ownership affects the firms through the same business group. In the last column of table \ref{mresult2part1}, we control for pairs size type (Pairs is large or small if both firms are large or small . If one firm is large and the other is small, we call it a hybrid.), which seems important for investigating firms' co-movement.	\cite{AntonPolk} restrict their analysis to large firms, but we do not restrict our investigation, and our result may be driven due to this difference. Estimation results in table \ref{mresult2part1} shows that by controlling pairs' type \textit{Same Group} significantly increases co-movement rather than common ownership.
+		In the fifth specification of panel \subref{mresult2part1}, we use both \textit{Same Group}  and $\text{MFCAP}^*_{ij,t}$ as a forecasting variable. In this specification, only  \textit{Same Group} has a significant effect on our estimation. It suggests that common ownership affects the firms through the same business group. In the last column, we control for pairs size type (Pairs is large or small if both firms are large or small . If one firm is large and the other is small, we call it a hybrid.), which seems important for investigating firms' comovement.	\cite{AntonPolk} restrict their analysis to large firms, but we do not restrict our investigation, and our result may be driven due to this difference. Estimation result shows that by controlling pairs' type \textit{Same Group} significantly increases comovement rather than common ownership.
 	
-	In Table  \ref{mresult2part2}, we examine the effect of common ownership in the business groups. In the two first columns, we restrict our investigation to two sub-samples. In the first one, we run our model for the pairs in the same business group and others who do not belong to the same one in the second one. It provides evidence that common ownership only matters for the pairs in the same business groups.	
-	Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{MFCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. In these specifications, the economic effect of \textit{Same Group} is not significant anymore, which cannot be reliable due to the high correlation of interaction term with \textit{Same Group}($\rho = 0.75$). These results aver that $\text{MFCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects co-movement through indirect common ownership, which arises due to the same ultimate owner. 
-	
+	In panel \subref{mresult2part1}, we report estimation with our control variables. Recall that these control variables (Except CrossOwnership and dummy variables) are normalized to have a standard deviation of one and are transformed so that higher values indicate greater style similarity. The presence of two firms in the same industry, SameIndustry, forecasts an abnormal return correlation with a statistically significant coefficient of 0.009 (t-statistic of 4.64). The similarity in book-to-market has an effect as the coefficient on SameBM is 0.02 (t-statistic of 6.98). Of course, one should consider the fact that we are already controlling for exposure to the book-to-market factor, HML, and industry return by forecasting the correlation of four-factor plus industry residuals rather than the correlation of raw returns. We find that stocks with a similar size; the coefficient on SameSize is 0.0154 (t-statistic of 4.4). 
 	
 	
-				
-		\captionsetup[subtable]{labelformat=parens}
+	
+	In panel \subref{mresult2part2}, we examine the effect of common ownership in the business groups. In the two first columns, we restrict our investigation to two sub-samples. In the first one, we run our model for the pairs in the same business group and others who do not belong to the same one. It provides evidence that common ownership only matters for the pairs in the same business groups.	
+	Now for the main analysis, we include the interaction of \textit{Same Group} and $\text{MFCA}^*_{ij,t}$. We include the business group fixed effects to capture the group's characteristics for the last column. In these specifications, the economic effect of \textit{Same Group} is not significant anymore, which cannot be reliable due to the high correlation of interaction term with \textit{Same Group}($\rho = 0.75$). These results aver that $\text{MFCA}^*_{ij,t}$ has a larger effect for the pairs in the same business group. It puts forward that the \textit{Same Group}  affects comovement through indirect common ownership, which arises due to the same ultimate owner. 
+	
+	
+	
+	
+		\captionsetup[subtable]{labelformat=parens,font=small}
 			\renewcommand{\thesubtable}{\Alph{subtable}}
-\newgeometry{top=20mm, bottom=20mm}
+\newgeometry{top=20mm, bottom=30mm}
 {\begin{table}[p]
 		\centering
-		\caption{Connected Co-movement\\
-		This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{t2-2}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCA}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are then rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses.
+		\centerfloat
+		\caption{Connected Comovement\\ \small
+		This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the sample of stocks defined in Table \ref{st1}. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCA}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are then rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses.
 		We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel \subref{mresult2part1}. Panel \subref{mresult2part2} shows the estimation result for investigating the effect of common ownership in the business groups. }
+		\label{re1}
 		\subcaption{The main analysis}
 		\label{mresult2part1}
 		\resizebox{0.9\textwidth}{!}{
 				{\input{Output/mresult2part1-slide.tex}}
-			
 		}
 		\bigskip
-		\subcaption{The relation between common ownership and business group}
+		\subcaption{Common Ownership and Business Group}
 		\label{mresult2part2}
 		\resizebox{0.9\textwidth}{!}{
 					
@@ -65,7 +69,7 @@
 \restoregeometry
 %{\begin{table}[p]
 %		\centering
-%		\caption{Connected Co-movement}
+%		\caption{Connected Comovement}
 %		\label{mresult2part2}
 %		\resizebox{1\textwidth}{!}{
 %			
@@ -85,46 +89,48 @@
 		
 		
 		
-		
-		
 		\subsection{{High level of common ownership}}
 		
-			In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' co-movement. As shown in table \ref{measureResults}, pairs in the same business group have a higher level of common ownership than others. So, the previous results could be driven by a high level of common ownership. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{MFCAP}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future co-movement and current measurement of common ownership for that pairs. As you can see in figure \ref{Qmcorr5subsamplebg}, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' co-movement although for a high level of common ownership.
+			In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a higher level of common ownership affects more on the firms' comovement. As shown in panel  \subref{measureResults} table \ref{st2}, pairs in the same business group have a higher level of common ownership than others. So, the previous results could be driven by a high level of common ownership. For detailed analysis, we restrict our sample to the higher level of common ownership, which we define as the pairs with $\text{MFCAP}_{ij,t}$ in the fourth quarter in each period. Figure \ref{Qmcorr5subsample} shows the relation between future comovement and current measurement of common ownership for that pairs. As you can see in right panel, in line with the last explanation, common ownership only affects the pairs in the same group, and common ownership without the same group will not affect pairs' comovement although for a high level of common ownership.
 			
 			\begin{figure}[htbp]
 				\centering  
-				\includegraphics[width=0.8\linewidth]{"Output/Qmcorr5lrd.eps"}
-				\caption{ Co-movement for different level of common ownership}
+				\includegraphics[width=0.65\linewidth]{"Output/Qmcorr5lrd.eps"}
+				\caption{ Comovement for different level of common ownership}
 				\label{Qmcorr5lrd}
 			\end{figure}
+			
+			
 						\begin{figure}[htbp]
-							\centering 
-							\includegraphics[width=0.8\linewidth]{"Output/Qmcorr5subsample.eps"}
-							\caption{Co-movement for different level of common ownership for pairs in the fourth quarter}
-							\label{Qmcorr5subsample}
+							\centerfloat
+							\includegraphics[width=0.55\linewidth]{"Output/Qmcorr5subsample.eps"}
+							\includegraphics[width=0.55\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+%							\label{Qmcorr5subsamplebg}
+							\caption{Comovement for different level of common ownership for pairs in the fourth quarter}
+								\label{Qmcorr5subsample}
 						\end{figure}
-			\begin{figure}[htbp]
-				\centering  
-				\includegraphics[width=0.8\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
-				\caption{Co-movement for different level of common ownership for pairs in the fourth quarter}
-				\label{Qmcorr5subsamplebg}
-			\end{figure}
+%			\begin{figure}[htbp]
+%				\centering  
+%				\includegraphics[width=0.65\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
+%				\caption{Comovement for different level of common ownership for pairs in the fourth quarter}
+%				\label{Qmcorr5subsamplebg}
+%			\end{figure}
 			
 			
 	
-	We estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Co-movement}  for the sub-sample of a high level of common ownership. Table \ref{QTimemresult2subsample} reports estimations results. As expected, firms in the same business group have a high statistical and economically significant effect on forecasting future co-movements. Columns three to seven confirm our prior explanations for the importance of business groups compared to common ownership in pairs with a higher level of common ownership. Pairs in the fourth quarter may have different characteristics that affect our results.  In figure \ref{QarterSummary}, we summarized our control variables which shows that pairs' attributes do not look significantly different than other pairs except the presence of the pairs in the same group, which we want to examine this feature.
+	We estimate the equation \ref{model1} with the same methodology in section \ref{Forecasting Comovement}  for the sub-sample of a high level of common ownership. Panel \subref{QTimemresult2subsample} of table \ref{re2}  reports estimations results. As expected, firms in the same business group have a high statistical and economically significant effect on forecasting future comovements. Columns three to seven confirm our prior explanations for the importance of business groups compared to common ownership in pairs with a higher level of common ownership. Pairs in the fourth quarter may have different characteristics that affect our results.  In table \ref{QarterSummary}, we summarized our control variables which shows that pairs' attributes do not look significantly different than other pairs except the presence of the pairs in the same group, which we want to examine this feature.
 	
-			{\begin{table}[htbp]
-					\centering
-					\caption{High level of common ownership\\
-					This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the pairs with the high level of common ownership. This means that our estimation is limited to the subsample of stocks defined in Table \ref{t2-2} with common ownership, which is in the fourth quarter of each period. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are then rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix.}
-					\label{QTimemresult2subsample}
-					{
-						\resizebox{\textwidth}{!}{
-						\input{Output/QTimemresult2subsample-slide.tex}
-						}
-					}
-			\end{table}}
+%			{\begin{table}[htbp]
+%					\centering
+%					\caption{High level of common ownership\\ \small
+%					This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for the pairs with the high level of common ownership. This means that our estimation is limited to the subsample of stocks defined in Table \ref{t2-2} with common ownership, which is in the fourth quarter of each period. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCAP}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are then rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix.}
+%					\label{QTimemresult2subsample}
+%					{
+%						\resizebox{\textwidth}{!}{
+%						\input{Output/QTimemresult2subsample-slide.tex}
+%						}
+%					}
+%			\end{table}}
 			
 %			\begin{figure}[htbp]
 %				\centering  
@@ -140,23 +146,23 @@
 				
 				\subsection{All Pairs}
 				
-We restrict our investigations to firms with at least one common owner in the former analyses. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect co-movement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' co-movement, it would affect all the firms in the same business groups. 	So, we extend our investigations by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problems. 
+We restrict our investigations to firms with at least one common owner in the former analyses. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business groups. 	So, we extend our investigations by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problems. 
 	
-	For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Controls are defined as before, and we use equation \ref{model1} by the same methodology as used in section \ref{Forecasting Co-movement}.
+	For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Controls are defined as before, and we use equation \ref{model1} by the same methodology as used in section \ref{Forecasting Comovement}.
 	
-	Table \ref{AllPairs} reports results of estimations. These results suggest that pairs in the same group co-move more than stocks not in the same group. In addition, pairs with common ownership common do not co-move greater than others. In column three, we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{mresult2part1}. The \textit{Same Group} is critical for forecasting future co-movement, and common ownership matters for the pairs in the same business group.
+	Panel \subref{AllPairs} table \ref{re2} reports results of estimations. These results suggest that pairs in the same group comove more than stocks not in the same group. In addition, pairs with common ownership common do not comove greater than others. In column three, we use variables of common ownership and the same business group together. Results supported our previous explanation of table \ref{re1}. The \textit{Same Group} is critical for forecasting future comovement, and common ownership matters for the pairs in the same business group.
 					
-					{\begin{table}[htbp]
-							%	\centering
-							
-							\caption{Non-connected Co-movement\\
-							This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for all the pairs in the market. This means that our estimation is extended to the pairs with stocks that have at least two months in common and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCA}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix.}			
-							\label{AllPairs}				
-							\resizebox{1\textwidth}{!}{
-									{	\input{Output/Q3mresultAllPairs.tex}
-									}
-							}
-					\end{table}}
+%					{\begin{table}[htbp]
+%							%	\centering
+%							
+%							\caption{Non-connected Comovement\\ \small
+%							This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the correlation of daily \cite{fama1993differences}–\cite{Carhart4Factor} plus industry residuals in month t + 1 for all the pairs in the market. This means that our estimation is extended to the pairs with stocks that have at least two months in common and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. The independent variables are updated monthly include our measure of institutional connectedness, the number of equal percents held block-holder, $\text{MFCA}^*_{ij,t}$, and a series of controls at time t. We measure the negative of the absolute value of the difference in size and book-to-market ratio (BE/ME) percentile ranking across the two stocks in the pair (SameSize, and SameBM, respectively). All independent variables, excluding dummy variables, are rank-transformed and normalized to have a unit standard deviation. We calculate \cite{newey1987hypothesis} standard errors (four lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix.}			
+%							\label{AllPairs}				
+%							\resizebox{1\textwidth}{!}{
+%									{	\input{Output/Q3mresultAllPairs.tex}
+%									}
+%							}
+%					\end{table}}
 					
 				
 					
@@ -164,6 +170,29 @@ We restrict our investigations to firms with at least one common owner in the fo
 %					
 %					In conclusion , these results show that same business group is more important than common ownership. In fact, when we talk about the presence of two stocks in the same business group, we talk about a high level of invisible common ownership between two stocks that we cannot measure that by mutual stockholders.
 					
+{\begin{table}[htbp]
+		\centerfloat
+			\caption{Connected Comovement\\ \small
+				Panel \subref{QTimemresult2subsample} represents the estimates of monthly cross-sectional regressions forecasting the comovement for the high level of common ownership. This means that our estimation is limited to the subsample of stocks defined in Table \ref{st1} with common ownership, which is in the fourth quarter of each period. Panel \subref{AllPairs} shows the results for the estimation of that feature for all the pairs in the market, which means that the pairs with stocks that have at least two months in common and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Other methods and definitions of variables are as the table \ref{re1}.  }
+				\label{re2}
+		\subcaption{High level of Common Ownership}
+						\label{QTimemresult2subsample}
+						{
+							\resizebox{\textwidth}{!}{
+							\input{Output/QTimemresult2subsample-slide.tex}
+							}
+						}
+						\bigskip
+						\subcaption{All the Pairs}
+\label{AllPairs}				
+		\resizebox{\textwidth}{!}{
+				{	\input{Output/Q3mresultAllPairs.tex}
+				}
+		}		
+		
+	\end{table}}
+
+
 					
 					\FloatBarrier
 
