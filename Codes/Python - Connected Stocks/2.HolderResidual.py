@@ -58,7 +58,7 @@ path = r"E:\RA_Aghajanzadeh\Data\\"
 
 # %%
 
-n = path + "Cleaned_Stocks_Holders_1400_06_28.csv"
+n = path + "Cleaned_Stocks_Holders_1400_10_06.csv"
 df = pd.read_csv(n).drop_duplicates().rename(columns={"name": "symbol"})
 df[(df.symbol == "آرمان") & (df.date >= 20170325)].sort_values(by="date").head()
 a = df.groupby("date").size().to_frame().reset_index()
@@ -120,7 +120,7 @@ t2 = df[df.date == 20170327]
 
 set(t2.symbol) - set(t1.symbol)
 #%%
-re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_06_28.csv")
+re = pd.read_csv(path + "Connected_Stocks\\residuals_1400_10_06.csv")
 col = "symbol"
 HolderData[col] = HolderData[col].apply(lambda x: convert_ar_characters(x))
 re["date"] = re.date.astype(int)
@@ -355,7 +355,7 @@ df['Percent_Change'] = df['Percent_Change'].replace('-',0)
 df['Percent_Change'] = df['Percent_Change'].astype(float)
 
 df.drop(columns=["shamsi"]).to_parquet(
-    path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
+    path + "Connected_Stocks\\Holder_Residual_1400_10_06.parquet"
 )
 # %%
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()

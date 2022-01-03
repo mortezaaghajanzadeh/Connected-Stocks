@@ -16,7 +16,7 @@ pathWord = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Elements\Word\\"
 def prepare():
     path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
     # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-    df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+    df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
     df["week_of_year"] = df.week_of_year.astype(int)
     df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
         df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
@@ -778,15 +778,15 @@ a.loc[a["index"] == "50%", "index"] = "median"
 a = (
     a.set_index(["variable", "index"])
     .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")]
-            ).replace("MonthlyFCAPf", "FCAP"
-                      ).replace("MonthlyFCA", "MFCAP"
-                                ).reset_index()
+            ).reset_index()
     .rename(columns={"index": "subset"})
     .set_index("subset")
 )
+
+a = a.T.reset_index().replace("MonthlyFCAPf", "FCAP").replace("MonthlyFCA", "MFCAP")
+a = a.rename(columns = {'index': 'stats'}).set_index(['variable', 'stats']).T
 a.to_latex(pathResult + "FCACal.tex")
 a
-
 # %%
 
 clist = [

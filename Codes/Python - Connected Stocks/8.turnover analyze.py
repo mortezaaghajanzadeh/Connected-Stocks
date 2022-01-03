@@ -379,8 +379,8 @@ tt = (
     .T.round(3)
 )
 tt["count"] = tt["count"].astype(int)
-tt = tt.rename(columns={"count": "Firm$\times$ Month"})
-tt.to_latex(pathR + "\\ResidualTrunSummary.tex")
+tt = tt.rename(columns={"count": "Firm $ \times $ Month"})
+tt.to_latex(pathR + "\\ResidualTrunSummary.tex", column_format='lcccccccc',multicolumn = False,index_names = False)
 tt
 #%%
 rr["uo"] = rr.uo.fillna("None")
@@ -402,8 +402,8 @@ tt = (
     .T.round(3)
 )
 tt["count"] = tt["count"].astype(int)
-tt = tt.rename(columns={"count": "Group $\times$ Month"})
-tt.to_latex(pathR + "\\ResidualTrunStdSummary.tex")
+tt = tt.rename(columns={"count": "Group $ \times $ Month"})
+tt.to_latex(pathR + "\\ResidualTrunStdSummary.tex", column_format='lcccccccc',multicolumn = False,index_names = False)
 tt
 
 
