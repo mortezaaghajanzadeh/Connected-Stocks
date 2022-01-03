@@ -7,7 +7,7 @@ import time
 def prepare():
     path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
     # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-    df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+    df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
     df["week_of_year"] = df.week_of_year.astype(int)
     df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
         df.loc[df.week_of_year % 2 == 1]["week_of_year"] - 1
@@ -50,8 +50,8 @@ df[df.symbol == "خودرو"].id.iloc[0], df[df.symbol == "خگستر"].id.iloc[
 
 # %%
 gdata = df.groupby(["id"])
-g = gdata.get_group(157)
-S_g = gdata.get_group(167)
+g = gdata.get_group(156)
+S_g = gdata.get_group(166)
 
 #%%
 
@@ -100,7 +100,7 @@ import time
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 
-for i in list(gg.groups.keys())[0:1]:
+for i in list(gg.groups.keys())[::]:
     n = time.time()
     g = gg.get_group(i)
     F_id = g.id.iloc[0]
@@ -133,7 +133,7 @@ def genFile(df, path, g, i):
 
 
 threads = {}
-for i in list(gg.groups.keys())[50::]:
+for i in list(gg.groups.keys())[::]:
     n = time.time()
     g = gg.get_group(i)
     F_id = g.id.iloc[0]

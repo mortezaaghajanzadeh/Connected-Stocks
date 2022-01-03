@@ -355,7 +355,7 @@ df['Percent_Change'] = df['Percent_Change'].replace('-',0)
 df['Percent_Change'] = df['Percent_Change'].astype(float)
 
 df.drop(columns=["shamsi"]).to_parquet(
-    path + "Connected_Stocks\\Holder_Residual_1400_06_28.parquet"
+    path + "Connected_Stocks\\Holder_Residual_1400_10_06.parquet"
 )
 # %%
 df[df.jalaliDate >13980200].groupby(["year_of_year", "Month_of_year"]).size()
