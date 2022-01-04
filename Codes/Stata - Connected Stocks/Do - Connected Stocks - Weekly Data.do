@@ -68,11 +68,11 @@ label variable NWFCAPG " $ (\text{FCAP}^*) \times {\text{SameGroup} }  $ "
 
 gen NWFCAPA = holder_act * NWFCAP
 
-label variable NWFCAPA " $ (\text{FCAP}^*) \times {\text{ActiveHolder} }  $ "
+label variable NWFCAPA " $ \text{FCAP}^* \times {\text{ActiveHolder} }  $ "
 
 gen NWFCAG = sbgroup * nwfca
 
-label variable NWFCAPA " $ (\text{MFCAP}^*) \times {\text{ActSameGroupiveHolder} }  $ "
+label variable NWFCAG " $ \text{MFCAP}^* \times {\text{ActSameGroupiveHolder} }  $ "
 
 
 
@@ -205,11 +205,13 @@ estadd loc GroupFE "No" , replace
 
 
 
-esttab  v4 v9  v10 v7 v71 v3 v8 ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab("Controls"  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order(sbgroup vv NWFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  
+esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  
 
 
-esttab  v4 v9  v10 v7 v71 v3 v8 ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab("Controls"  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order(sbgroup vv NWFCAG median mvv )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  ,using wresult.tex ,replace
+esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )   ,using wresult.tex ,replace
 
  }
 
 
+ 
+ xi: asreg weeklyρ_5_f vv sbgroup  sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType , fmb newey(4)

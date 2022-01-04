@@ -4,7 +4,7 @@ import pandas as pd
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 #%%
-result = pd.read_csv(path + "TurnOver_1400_06_28.csv")
+result = pd.read_csv(path + "TurnOver_1400_10_06.csv")
 df = pd.read_stata(path + "FirstStageAmihud.dta")
 [
     [
@@ -144,7 +144,7 @@ tt.loc[tt.Coef_deltagroup_y.isnull(), "Coef_deltagroup_y"] = 0
 
 
 # %%
-result = pd.read_csv(path + "TurnOver_1400_06_28.csv")
+result = pd.read_csv(path + "TurnOver_1400_10_06.csv")
 
 # import math
 # def func(x):

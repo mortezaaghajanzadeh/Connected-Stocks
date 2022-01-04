@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  4 JAN 2022 08:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  4 JAN 2022 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,12 +893,8 @@ LaTeX Info: Redefining \nameref on input line 94.
 
 (./Elements-Eng/Abstract.tex) (./Elements-Eng/Introduction.tex [1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `edmans2014 governance' on page 2 undefined on
- input line 12.
-
-[2]) (./Elements-Eng/Data and Methodology.tex [3] (./Elements/pairsnumber.tex)
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
+(./Elements-Eng/Data and Methodology.tex [3] (./Elements/pairsnumber.tex)
 (./Elements/PairPercent.tex) (./Elements/TotalPairNumberCal.tex)
 (./Elements/SameBGpercent.tex) (./Elements/pairsnumber.tex)
 (./Elements/pairsnumber.tex)
@@ -959,7 +955,7 @@ Package epstopdf Info: Source file: <Output/mcorr50.eps>
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 14.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=311, 397.485pt x 289.08pt>
+<Output/mcorr50-eps-converted-to.pdf, id=314, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
@@ -1018,7 +1014,7 @@ See the caption package documentation for explanation.
 
 (./Output/mresult2part2-slide.tex)
 
-LaTeX Warning: Float too large for page by 30.25548pt on input line 68.
+LaTeX Warning: Float too large for page by 42.77312pt on input line 68.
 
 [14]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
@@ -1031,7 +1027,7 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
 erted-to.pdf Output/Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrd-eps-converted-to.pdf, id=390, 397.485pt x 289.08pt>
+<Output/Qmcorr5lrd-eps-converted-to.pdf, id=393, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
@@ -1046,13 +1042,13 @@ df>
 (epstopdf)                    size: 16074 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=391, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=394, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 106.
+input line 108.
 (pdftex.def)             Requested size: 230.04079pt x 167.30481pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)                    date: 2022-01-03 14:57:09
@@ -1063,15 +1059,15 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)                    size: 14646 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=392, 397.485pt x 289.08p
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=395, 397.485pt x 289.08p
 t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 107.
+d on input line 108.
 (pdftex.def)             Requested size: 230.04079pt x 167.30481pt.
  [15
 
@@ -1079,18 +1075,18 @@ d on input line 107.
  <./Output/Qmcorr5lrd-eps-converted-to.pdf>]
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 178.
+(caption)                outside box or environment on input line 179.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 178.
+(caption)                outside box or environment on input line 179.
 See the caption package documentation for explanation.
 
 (./Output/QTimemresult2subsample-slide.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 186.
+(caption)                outside box or environment on input line 187.
 See the caption package documentation for explanation.
 
 (./Output/Q3mresultAllPairs.tex) [16 <./Output/Qmcorr5subsample-eps-converted-t
@@ -1137,17 +1133,17 @@ See the caption package documentation for explanation.
 
 (./Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
-(epstopdf)                    date: 2022-01-03 10:07:37
+(epstopdf)                    date: 2022-01-04 09:33:32
 (epstopdf)                    size: 20404351 bytes
 (epstopdf)             Output file: <Output/GroupedResSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-01-03 10:08:23
-(epstopdf)                    size: 263704 bytes
+(epstopdf)                    date: 2022-01-04 11:01:16
+(epstopdf)                    size: 271950 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=512, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=515, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -1184,7 +1180,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=524, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=527, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -1220,9 +1216,6 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[subfigure] on input line 215.
 See the caption package documentation for explanation.
 
-
-Package natbib Warning: There were undefined citations.
-
 [27]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
@@ -1237,7 +1230,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
 Here is how much of TeX's memory you used:
  23000 strings out of 480608
  444930 string characters out of 5907536
- 868298 words of memory out of 5000000
+ 869298 words of memory out of 5000000
  38248 multiletter control sequences out of 15000+600000
  543821 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1265,11 +1258,11 @@ fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type
 msfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (27 pages, 928022 by
+Output written on "Connected Stocks - Draft - English.pdf" (27 pages, 938081 by
 tes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
+ 682 PDF objects out of 1000 (max. 8388607)
+ 562 compressed objects within 6 object streams
  105 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

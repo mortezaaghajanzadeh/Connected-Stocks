@@ -68,7 +68,7 @@ def SecondStep(a):
 
 
 #%%
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
 SData = (
@@ -171,7 +171,7 @@ path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\NormalzedFCAP9.1_AllPairs\\"
 path2 = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 arr = os.listdir(path)
 arr.remove('Old')
-df = pd.read_parquet(path2 + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path2 + "Holder_Residual_1400_10_06.parquet")
 # %%
 result = pd.DataFrame()
 counter, counter_file = 0, 0

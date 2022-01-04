@@ -201,7 +201,7 @@ Monthly["WeeklyFCA*"] = Monthly["WeeklyFCA*"] / Monthly.m
 Monthly = Monthly.drop(columns=["m"])
 print("Second step is done",len(Monthly))
 #%%
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
 SData = (
@@ -264,7 +264,7 @@ df1 = pd.read_parquet(n1)
 df1 = df1[df1.jalaliDate < 13990000]
 df1 = df1[df1.jalaliDate > 13930000]
 
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
 #%%
 df["id"] = df.id.astype(int)
@@ -573,7 +573,7 @@ df1["year"] = df1["year"].astype(int)
 
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-n = path + "Holder_Residual_1400_06_28.parquet"
+n = path + "Holder_Residual_1400_10_06.parquet"
 df = pd.read_parquet(n)
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
@@ -874,7 +874,7 @@ df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 #%%
 # del result ,a
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 t = (
     df.drop_duplicates(subset=["symbol"])
     .groupby(["uo"])

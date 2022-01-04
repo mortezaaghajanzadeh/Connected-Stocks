@@ -2,7 +2,7 @@ cls
 clear
 // import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\TurnOver_1400_06_28.csv", encoding(UTF-8) 
 
-import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\TurnOver_1400_06_28.csv", encoding(UTF-8) 
+import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\TurnOver_1400_10_06.csv", encoding(UTF-8) 
 
 
 // cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report"
