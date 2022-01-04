@@ -164,7 +164,7 @@ Monthly[Monthly.t_Month >60][["t_Month", "Year_Month","Monthlyρ_5"]].drop_dupli
 
 
 #%%
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
 SData = (
@@ -205,7 +205,7 @@ Pairs = Monthly[["id_x", "id_y", "id"]].drop_duplicates().reset_index(drop=True)
 del Monthly
 
 # %%
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
 SData = (
@@ -295,7 +295,7 @@ df1 = df1[df1.jalaliDate < 13990000]
 df1 = df1[df1.jalaliDate > 13930000]
 df1 = df1[df1.FCA > 0]
 
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 time = df[["date", "jalaliDate"]].drop_duplicates()
 
 #%%
@@ -586,7 +586,7 @@ BG["shrOut"] = BG.set_index(["symbol", "year"]).index.map(mapdict)
 
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\\"
-price = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
+price = pd.read_parquet(path + "Cleaned_Stock_Prices_14001006.parquet")
 
 price = price[["jalaliDate", "date", "name", "close_price"]]
 
@@ -714,7 +714,7 @@ del t
 
 #%%
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-n = path + "Holder_Residual_1400_06_28.parquet"
+n = path + "Holder_Residual_1400_10_06.parquet"
 df = pd.read_parquet(n)
 SId = df[["id", "symbol"]].drop_duplicates().reset_index(drop=True)
 
@@ -1088,7 +1088,7 @@ df1["InsImbalance_value_y"] = df1.uo_y.map(mapdict)
 #%%
 # del result ,a
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
-df = pd.read_parquet(path + "Holder_Residual_1400_06_28.parquet")
+df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
 t = (
     df.drop_duplicates(subset=["symbol"])
     .groupby(["uo"])

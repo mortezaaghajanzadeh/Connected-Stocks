@@ -3,11 +3,11 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft - English.aux
 The style file: apalike.bst
 Database file #1: ../Report/Ref.bib
-Repeated entry---line 561 of file ../Report/Ref.bib
+Repeated entry---line 575 of file ../Report/Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 943 of file ../Report/Ref.bib
+Repeated entry---line 957 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
@@ -15,45 +15,45 @@ Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 32 entries,
+You've used 33 entries,
             1935 wiz_defined-function locations,
-            665 strings with 8506 characters,
-and the built_in function-call counts, 12532 in all, are:
-= -- 1261
-> -- 455
+            669 strings with 8657 characters,
+and the built_in function-call counts, 12860 in all, are:
+= -- 1293
+> -- 473
 < -- 22
-+ -- 154
-- -- 146
-* -- 1112
-:= -- 2172
-add.period$ -- 93
-call.type$ -- 32
-change.case$ -- 233
-chr.to.int$ -- 32
-cite$ -- 36
-duplicate$ -- 446
-empty$ -- 887
-format.name$ -- 206
-if$ -- 2427
++ -- 160
+- -- 152
+* -- 1138
+:= -- 2237
+add.period$ -- 96
+call.type$ -- 33
+change.case$ -- 242
+chr.to.int$ -- 33
+cite$ -- 37
+duplicate$ -- 457
+empty$ -- 905
+format.name$ -- 213
+if$ -- 2487
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 29
-newline$ -- 160
-num.names$ -- 96
-pop$ -- 156
+newline$ -- 165
+num.names$ -- 99
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 241
 quote$ -- 0
-skip$ -- 356
+skip$ -- 364
 stack$ -- 0
-substring$ -- 1022
+substring$ -- 1034
 swap$ -- 45
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
+type$ -- 198
 warning$ -- 4
-while$ -- 113
+while$ -- 115
 width$ -- 0
-write$ -- 408
+write$ -- 421
 (There were 2 error messages)

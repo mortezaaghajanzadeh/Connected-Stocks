@@ -32,7 +32,7 @@ def _multiple_replace(mapping, text):
 # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 path = r"E:\RA_Aghajanzadeh\Data\\"
 # %%
-df = pd.read_parquet(path + "Cleaned_Stock_Prices_1400_06_29.parquet")
+df = pd.read_parquet(path + "Cleaned_Stock_Prices_14001006.parquet")
 df = df[df.group_name != "صندوق سرمایه گذاری قابل معامله"]
 df = df.sort_values(by=["name", "jalaliDate"]).rename(columns={"name": "symbol"})
 df["stock_id"] = df.stock_id.astype(float)
@@ -44,7 +44,7 @@ df = df[~df.title.str.startswith("ح .")]
 df = df[~df.title.str.startswith("ح.")]
 
 # %%
-sdf = pd.read_csv(path + "SymbolShrout_1400_06_28.csv")
+sdf = pd.read_csv(path + "SymbolShrout_1400_10_06.csv")
 sdf = sdf.set_index(["date", "name"])
 mapdict = dict(zip(sdf.index, sdf.shrout))
 df["date"] = df.date.astype(int)
@@ -326,5 +326,5 @@ result = result.rename(
 )
 
 #%%
-result.to_csv(path + "\Connected_Stocks\TurnOver_1400_06_28.csv", index=False)
+result.to_csv(path + "\Connected_Stocks\TurnOver_1400_10_06.csv", index=False)
 #%%
