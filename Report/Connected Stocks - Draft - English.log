@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 JAN 2022 07:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 JAN 2022 07:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,31 +884,31 @@ See the caption package documentation for explanation.
 
 (./Output/summaryOfPairs.tex) [4] [5] [6] (./Elements/MeasurmentLit.tex)
 [7] [8] (./Elements/sameindandsamebg.tex)
-Overfull \hbox (11.09674pt too wide) in paragraph at lines 348--351
+Overfull \hbox (11.09674pt too wide) in paragraph at lines 347--350
 \OT1/cmr/m/n/12 dummy vari-able for whether two stocks are in the same busi-nes
 s group, \OT1/cmr/bx/n/12 SameGroup\OT1/cmr/m/n/12 .
  []
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 383.
+(caption)                outside box or environment on input line 382.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 383.
+(caption)                outside box or environment on input line 382.
 See the caption package documentation for explanation.
 
 (./Output/FCACal.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 391.
+(caption)                outside box or environment on input line 390.
 See the caption package documentation for explanation.
 
 (./Output/CorrelationsResultsText.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 400.
+(caption)                outside box or environment on input line 399.
 See the caption package documentation for explanation.
 
 (./Output/ControlsSummary.tex) (./Output/table13.tex)) [9] [10]
@@ -923,7 +923,7 @@ Package epstopdf Info: Source file: <Output/mcorr50.eps>
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 14.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=321, 397.485pt x 289.08pt>
+<Output/mcorr50-eps-converted-to.pdf, id=322, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
@@ -995,7 +995,7 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
 erted-to.pdf Output/Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrd-eps-converted-to.pdf, id=401, 397.485pt x 289.08pt>
+<Output/Qmcorr5lrd-eps-converted-to.pdf, id=402, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
@@ -1012,7 +1012,7 @@ df>
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=402, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=403, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
@@ -1029,7 +1029,7 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=403, 397.485pt x 289.08p
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=404, 397.485pt x 289.08p
 t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1111,7 +1111,7 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=523, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=524, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -1148,7 +1148,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=535, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=536, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -1180,23 +1180,23 @@ See the caption package documentation for explanation.
 [23 <./Output/GroupedInsSTD-eps-converted-to.pdf>] [24])
 (./Elements-Eng/Conclusion.tex [25] (./Connected Stocks - Draft - English.bbl
 [26])) (./Elements-Eng/appendices.tex [27] [28]
-<Elements/1.png, id=608, 494.8086pt x 299.6796pt>
+<Elements/1.png, id=609, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
 Package pdftex.def Info: Elements/1.png  used on input line 63.
 (pdftex.def)             Requested size: 196.57973pt x 119.06033pt.
-<Elements/2.png, id=610, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=611, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
 Package pdftex.def Info: Elements/2.png  used on input line 64.
 (pdftex.def)             Requested size: 196.57973pt x 119.36626pt.
  (./Elements/Example2.tex)
-<Elements/3.png, id=616, 722.7pt x 360.3864pt>
+<Elements/3.png, id=617, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
 Package pdftex.def Info: Elements/3.png  used on input line 129.
 (pdftex.def)             Requested size: 355.51817pt x 177.28375pt.
-<Elements/4.png, id=617, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=618, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
 Package pdftex.def Info: Elements/4.png  used on input line 135.
@@ -1272,11 +1272,11 @@ m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1077463 b
+Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1077497 b
 ytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 630 compressed objects within 7 object streams
+ 767 PDF objects out of 1000 (max. 8388607)
+ 631 compressed objects within 7 object streams
  124 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
