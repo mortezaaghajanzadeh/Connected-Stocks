@@ -15,45 +15,45 @@ Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 33 entries,
+You've used 35 entries,
             1935 wiz_defined-function locations,
-            669 strings with 8657 characters,
-and the built_in function-call counts, 12860 in all, are:
-= -- 1293
-> -- 473
-< -- 22
-+ -- 160
-- -- 152
-* -- 1138
-:= -- 2237
-add.period$ -- 96
-call.type$ -- 33
-change.case$ -- 242
-chr.to.int$ -- 33
-cite$ -- 37
-duplicate$ -- 457
-empty$ -- 905
-format.name$ -- 213
-if$ -- 2487
-int.to.chr$ -- 1
+            681 strings with 8979 characters,
+and the built_in function-call counts, 13655 in all, are:
+= -- 1370
+> -- 504
+< -- 23
++ -- 171
+- -- 162
+* -- 1212
+:= -- 2375
+add.period$ -- 102
+call.type$ -- 35
+change.case$ -- 257
+chr.to.int$ -- 34
+cite$ -- 39
+duplicate$ -- 485
+empty$ -- 963
+format.name$ -- 227
+if$ -- 2644
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 165
-num.names$ -- 99
-pop$ -- 163
+missing$ -- 31
+newline$ -- 175
+num.names$ -- 105
+pop$ -- 173
 preamble$ -- 1
-purify$ -- 241
+purify$ -- 256
 quote$ -- 0
-skip$ -- 364
+skip$ -- 384
 stack$ -- 0
-substring$ -- 1034
-swap$ -- 45
+substring$ -- 1094
+swap$ -- 47
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
+type$ -- 210
 warning$ -- 4
-while$ -- 115
+while$ -- 121
 width$ -- 0
-write$ -- 421
+write$ -- 447
 (There were 2 error messages)

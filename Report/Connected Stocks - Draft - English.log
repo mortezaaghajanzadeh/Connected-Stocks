@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 JAN 2022 07:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 JAN 2022 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,7 +923,7 @@ Package epstopdf Info: Source file: <Output/mcorr50.eps>
 ed-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 14.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=322, 397.485pt x 289.08pt>
+<Output/mcorr50-eps-converted-to.pdf, id=325, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
@@ -995,7 +995,7 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
 erted-to.pdf Output/Qmcorr5lrd.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrd-eps-converted-to.pdf, id=402, 397.485pt x 289.08pt>
+<Output/Qmcorr5lrd-eps-converted-to.pdf, id=405, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
@@ -1012,7 +1012,7 @@ df>
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=403, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=406, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
@@ -1029,7 +1029,7 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=404, 397.485pt x 289.08p
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=407, 397.485pt x 289.08p
 t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1111,7 +1111,7 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 onverted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=524, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=527, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
@@ -1148,7 +1148,7 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 onverted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=536, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=539, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
@@ -1179,50 +1179,39 @@ See the caption package documentation for explanation.
 (./Output/Imbalance.tex) [22 <./Output/GroupedResSTD-eps-converted-to.pdf>]
 [23 <./Output/GroupedInsSTD-eps-converted-to.pdf>] [24])
 (./Elements-Eng/Conclusion.tex [25] (./Connected Stocks - Draft - English.bbl
-[26])) (./Elements-Eng/appendices.tex [27] [28]
-<Elements/1.png, id=609, 494.8086pt x 299.6796pt>
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 63.
-(pdftex.def)             Requested size: 196.57973pt x 119.06033pt.
-<Elements/2.png, id=611, 494.3268pt x 300.1614pt>
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 64.
-(pdftex.def)             Requested size: 196.57973pt x 119.36626pt.
- (./Elements/Example2.tex)
-<Elements/3.png, id=617, 722.7pt x 360.3864pt>
-File: Elements/3.png Graphic file (type png)
-<use Elements/3.png>
-Package pdftex.def Info: Elements/3.png  used on input line 129.
-(pdftex.def)             Requested size: 355.51817pt x 177.28375pt.
-<Elements/4.png, id=618, 723.1818pt x 359.9046pt>
-File: Elements/4.png Graphic file (type png)
-<use Elements/4.png>
-Package pdftex.def Info: Elements/4.png  used on input line 135.
-(pdftex.def)             Requested size: 355.51817pt x 176.93141pt.
-
-(./Elements/marketcap.tex) (./Output/mresult2Polk-slide.tex) [29 <./Elements/1.
-png> <./Elements/2.png>] [30 <./Elements/3.png>] [31 <./Elements/4.png>]
-Overfull \hbox (32.25809pt too wide) in paragraph at lines 165--165
+[26] [27])) (./Elements-Eng/appendices.tex
+Overfull \hbox (33.11809pt too wide) in paragraph at lines 6--6
 []\OT1/cmr/bx/n/17.28 Overview of Busi-ness Groups in Tehran
  []
 
-
-Package natbib Warning: Citation `Khanna2007' on page 32 undefined on input lin
-e 167.
-
-
-Package natbib Warning: Citation `FirmInterlock' on page 32 undefined on input 
-line 169.
-
-[32])
+[28]
+<Elements/1.png, id=613, 494.8086pt x 299.6796pt>
+File: Elements/1.png Graphic file (type png)
+<use Elements/1.png>
+Package pdftex.def Info: Elements/1.png  used on input line 107.
+(pdftex.def)             Requested size: 196.57973pt x 119.06033pt.
+<Elements/2.png, id=615, 494.3268pt x 300.1614pt>
+File: Elements/2.png Graphic file (type png)
+<use Elements/2.png>
+Package pdftex.def Info: Elements/2.png  used on input line 108.
+(pdftex.def)             Requested size: 196.57973pt x 119.36626pt.
+ [29] (./Elements/Example2.tex)
+<Elements/3.png, id=636, 722.7pt x 360.3864pt>
+File: Elements/3.png Graphic file (type png)
+<use Elements/3.png>
+Package pdftex.def Info: Elements/3.png  used on input line 173.
+(pdftex.def)             Requested size: 355.51817pt x 177.28375pt.
+<Elements/4.png, id=637, 723.1818pt x 359.9046pt>
+File: Elements/4.png Graphic file (type png)
+<use Elements/4.png>
+Package pdftex.def Info: Elements/4.png  used on input line 179.
+(pdftex.def)             Requested size: 355.51817pt x 176.93141pt.
+ (./Elements/marketcap.tex) [30 <./Elements/1.png> <./Elements/2.png>] [31 <./E
+lements/3.png>] [32 <./Elements/4.png>]
+(./Output/mresult2Polk-slide.tex))
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 216.
 See the caption package documentation for explanation.
-
-
-Package natbib Warning: There were undefined citations.
 
 [33]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
@@ -1230,53 +1219,69 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
  (./Connected Stocks - Draft - English.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
-Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
-s not changed.
-(rerunfilecheck)             Checksum: 2713F3C5D4C2E919C9CCC2E23ADC39AA;1104.
 
+
+Package rerunfilecheck Warning: File `"Connected Stocks - Draft - English".out'
+ has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Connected Stocks - Draft - English
+".out':
+(rerunfilecheck)             Before: 2713F3C5D4C2E919C9CCC2E23ADC39AA;1104
+(rerunfilecheck)             After:  017FF457D762125E7BF63AFF113AFD51;1104.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
  ) 
 Here is how much of TeX's memory you used:
- 22406 strings out of 480608
- 436611 string characters out of 5907536
- 864400 words of memory out of 5000000
- 37630 multiletter control sequences out of 15000+600000
+ 22418 strings out of 480608
+ 436814 string characters out of 5907536
+ 852401 words of memory out of 5000000
+ 37636 multiletter control sequences out of 15000+600000
  544158 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,17n,61p,1809b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/tex
-live/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publ
-ic/amsfonts/cmextra/cmex7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
-sfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
-fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
-xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1077497 b
+pdfTeX warning (dest): name{equation.1.A.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.1.A.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.1.A.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texli
+ve/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public
+/amsfonts/cmextra/cmex7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texl
+ive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1078116 b
 ytes).
 PDF statistics:
- 767 PDF objects out of 1000 (max. 8388607)
- 631 compressed objects within 7 object streams
- 124 named destinations out of 1000 (max. 500000)
+ 780 PDF objects out of 1000 (max. 8388607)
+ 644 compressed objects within 7 object streams
+ 130 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

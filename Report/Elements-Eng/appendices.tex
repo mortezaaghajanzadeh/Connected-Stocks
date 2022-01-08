@@ -1,5 +1,48 @@
 
 \begin{appendices}
+
+	
+	
+	\section{{Overview of Business Groups in Tehran Stock Exchange}} \label{BGDef}
+	There is no difference between emerging markets (such as  Chile, India, Indonesia, South Korea, Pakistan, and many more) and developed ones (like Italy and Sweden); business groups present everywhere. However, group-affiliated firms are relatively large and economically important in emerging markets. 
+	These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
+	There is a complex ownership network in TSE as an emerging market. 
+	This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
+	
+	
+	
+	
+	The reason for many of these business groups back to the 1979 Iran revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
+	some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s. (IDRO was a state-owned holding company for investing in capital-intensive industries) 
+	
+	The business groups are formed from mentioned ancestors due to two related forces; A multi-phased privatization by the state and the development of the domestic stock market. In the first wave of privatization, more than 300 companies were fully or partially privatized. In the second one, approximately  \$150 billion ownership of State-Owned Enterprises (SOEs) and assets were transferred.  
+	Pension funds, military institutions, cultural and religious foundations, and revolutionary foundations (pseudo-government groups) primary customers in the second wave of privatization. These waves of privatization transferred control of hundreds of SOEs to semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s intensifies this effect. The government tried to develop the stock market as a tool for better privatization. 
+	(\cite{Aliabadi2022})
+	
+	In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and create large business groups that govern primary  industries.
+	
+	
+
+%			\begin{figure}[htbp]
+%				\caption{}
+%				\label{sameIndustryinBG}
+%				\centering
+%				\includegraphics[width=0.48\linewidth]{Output/sameIndustryinBG.eps}
+%				\includegraphics[width=0.48\linewidth]{Output/sameIndustryNoinBG.eps}
+%			\end{figure}
+%		
+%			\begin{figure}[htbp]
+%				\caption{}
+%				\label{BGSummary}
+%				\centering
+%				\includegraphics[width=0.85\linewidth]{Output/BGSummary.eps}
+%			\end{figure}
+%	
+	
+	
+	\FloatBarrier
+
+
 	\section{{Modified Anton's measure}}
 	\label{ModifiedMeasure}
 We reformulate mentioned Anton's measure in table \ref{maasurmentsSummary}. This factor measure common ownership as the total value of
@@ -33,28 +76,29 @@ We re-weight this formula to capture the difference between ownership distributi
 		\end{equation}
 
 
-For the first example, two firms (X and Y) have one common owner who has $ \alpha $ and $ \beta $ from each market capitalization, respectively. (illustrated in figure \ref{gExample1}) 
-for better illustration, assume that the sum of holders' ownership equals to 100 percent ($ \alpha + \beta  = 100$), and two firms' market caps have equal amounts. 
+For the first example, two firms (X and Y) have one common owner who has $ \alpha $ and $ \beta $ from each market capitalization, respectively (illustrated in figure \ref{gExample1}).  
+For better illustration, assume that the sum of holders' ownership equals to 100 percent ($ \alpha + \beta  = 100$), and two firms' market caps have equal amounts. 
 				\begin{figure}[htbp]
 					\centering
 					\caption{{ Numeric example 1} }
 					\label{gExample1}
-					\begin{tikzpicture}[node distance=1cm]
-						
-						\node (Firm) [startstop3] {\tiny Firm X};
-						\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
-						\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
-						
-						
-						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
-						
-						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
-						%
-						%\node() at (3,0)
-						%    {$ \alpha + \beta = 100 $}; 
-					\end{tikzpicture}
-				\end{figure}\bigskip
-			
+					\resizebox{0.65\textwidth}{!}{
+										\begin{tikzpicture}[node distance=1cm]
+											
+											\node (Firm) [startstop3] {\tiny Firm X};
+											\node (Firm2) [startstop3,right of = Firm  , xshift=-5.5cm ] {\tiny Firm Y};
+											\node (Owner) [startstop3,right of = Firm , yshift=1cm , xshift=-3.25cm ] {\tiny Common owner };
+											
+											
+											\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \alpha $} (Firm) ;
+											
+											\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ \beta $} (Firm2) ;
+											%
+											%\node() at (3,0)
+											%    {$ \alpha + \beta = 100 $}; 
+										\end{tikzpicture}
+									}
+									\end{figure}		
 We  calculate common ownership measures based on equations \ref{Sum} (Sum), \ref{sqrt} (SQRT), and \ref{Quadratic} (Quadratic) for different ownership distributions. Figure \ref{example1Results}  reports calculations results. As we expected, Anton's measure is constant at a fixed level of aggregated common ownership, but SQRT and Quadratic vary from concentrated to dispersed ownership.  Concentrated ownership (50-50) has a greater common ownership measure than dispersed (10-90).
 				
 				\begin{figure}[htbp]
@@ -64,7 +108,7 @@ We  calculate common ownership measures based on equations \ref{Sum} (Sum), \ref
 					\includegraphics[width=0.47\linewidth]{Elements/2.png}
 				\end{figure}
 
-For the second example, assume that there are three common owners for the two mentioned firms. First holder's ownership from firm X and Y are respectively $\alpha_1$ and $\beta_1$. It is similar for other holders. (illustrated in figure \ref{gExample2}). As before, the firm's market cap is equal. We calculate measures for concentrated or disparate ownerships, and ownerships that are less than the sum of the firm's market cap. Table \ref{Example2} reports calculation results. For ownerships that consist of total market cap,  results are consistent with the first example. Although, when total ownership decreases, the Quadratic measure denotes unrealistic numbers. We conclude that our Quadratic measure is not suitable for lower levels of common ownership.
+For the second example, assume that there are three common owners for the two mentioned firms. First holder's ownership from firm X and Y are respectively $\alpha_1$ and $\beta_1$. It is similar for other holders (illustrated in figure \ref{gExample2}). As before, the firm's market cap is equal. We calculate measures for concentrated or disparate ownerships, and ownerships that are less than the sum of the market caps. Table \ref{Example2} reports calculation results. For ownerships that consist of total market cap,  results are consistent with the first example. Although, when total ownership decreases, the Quadratic measure denotes unrealistic numbers. We conclude that our Quadratic measure is not suitable for lower levels of common ownership.
 				
 				\begin{figure}[htbp]  \centering
 					\caption{ Numeric example 2}
@@ -138,7 +182,7 @@ A fundamental assumption in previous examples, is the equality of firms' market 
 							\centering
 							\caption{text }
 							\label{marketcap}
-							\resizebox{!}{!}
+							\resizebox{0.9\textwidth}{!}
 							{
 								\input{Elements/marketcap}
 							}
@@ -160,45 +204,4 @@ In conclusion, We use the SQRT measure for our main study. This measure has an a
 	
 	\FloatBarrier
 	
-	
-	
-	\section{{Overview of Business Groups in Tehran Stock Exchange}} \label{BGDef}
-	There is no difference between emerging markets (such as  Chile, India, Indonesia, South Korea, Pakistan, and many more) and developed ones (like Italy and Sweden); business groups present everywhere. However, group-affiliated firms are relatively large and economically important in emerging markets. 
-	These groups principally consist of legally independent firms grouped by persistent formal (e.g., equity) and informal (e.g., family) links.(\cite{Khanna2007}) 
-	There is a complex ownership network in TSE as an emerging market. 
-	This complicated ownership creates a vast number of business groups in which an ultimate owner controls them through a multi-layer of ownership. (\cite{FirmInterlock})
-	
-	
-	
-	
-	The reason for many of these business groups back to the 1979 Iran revolution. After the revolution, due to social sentiment, critical sectors of the economy nationalized, and their ownership transferred to the government or other pseudo-government foundations. Also,
-	some other groups of firms in heavy industries were established and controlled by the Industrial Development and Renovation Organization (IDRO) during the 1960s and 1970s. (IDRO was a state-owned holding company for investing in capital-intensive industries) 
-	
-	The business groups are formed from mentioned ancestors due to two related forces; A multi-phased privatization by the state and the development of the domestic stock market. In the first wave of privatization, more than 300 companies were fully or partially privatized. In the second one, approximately  \$150 billion ownership of State-Owned Enterprises (SOEs) and assets were transferred.  
-	Pension funds, military institutions, cultural and religious foundations, and revolutionary foundations (pseudo-government groups) primary customers in the second wave of privatization. These waves of privatization transferred control of hundreds of SOEs to semi-governmental groups and were the main driver of the formation of business groups in Iran. In addition, the developing stock market from the early 2000s intensifies this effect. The government tried to develop the stock market as a tool for better privatization. 
-	(\cite{Aliabadi2022})
-	
-	In conclusion, the multiple waves of privatization with the development of the stock market changed ownership structure in pre-revolutionary holding companies and post-revolutionary foundations and create large business groups that govern primary  industries.
-	
-	
-
-%			\begin{figure}[htbp]
-%				\caption{}
-%				\label{sameIndustryinBG}
-%				\centering
-%				\includegraphics[width=0.48\linewidth]{Output/sameIndustryinBG.eps}
-%				\includegraphics[width=0.48\linewidth]{Output/sameIndustryNoinBG.eps}
-%			\end{figure}
-%		
-%			\begin{figure}[htbp]
-%				\caption{}
-%				\label{BGSummary}
-%				\centering
-%				\includegraphics[width=0.85\linewidth]{Output/BGSummary.eps}
-%			\end{figure}
-%	
-	
-	
-	\FloatBarrier
-
 \end{appendices}
