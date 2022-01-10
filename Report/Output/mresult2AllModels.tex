@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{ CAPM + Industry}&\multicolumn{1}{c}{ 4Factor }&\multicolumn{1}{c}{ 4Factor + Industry}&\multicolumn{1}{c}{ Benchmark}\\
+\hline
+$ \text{MFCAP*} $   &     0.00142         &   -0.000406         &     0.00104         &     0.00289\sym{***}\\
+                    &      (1.86)         &     (-0.54)         &      (1.68)         &      (5.08)         \\
+[1em]
+SameGroup           &      0.0270\sym{***}&      0.0474\sym{***}&      0.0242\sym{***}&      0.0362\sym{***}\\
+                    &      (8.96)         &     (12.51)         &      (8.21)         &     (10.37)         \\
+[1em]
+SameIndustry        &      0.0180\sym{***}&       0.107\sym{***}&      0.0212\sym{***}&       0.101\sym{***}\\
+                    &      (4.88)         &     (22.17)         &      (6.72)         &     (21.99)         \\
+[1em]
+SameSize            &      0.0188\sym{***}&      0.0262\sym{***}&      0.0138\sym{***}&     0.00757         \\
+                    &      (4.28)         &      (5.00)         &      (3.71)         &      (1.86)         \\
+[1em]
+SameBM              &      0.0302\sym{***}&      0.0422\sym{***}&      0.0214\sym{***}&      0.0166\sym{***}\\
+                    &      (7.28)         &     (10.34)         &      (6.16)         &      (5.48)         \\
+[1em]
+CrossOwnership      &      0.0286\sym{*}  &      0.0714\sym{***}&      0.0316\sym{*}  &      0.0947\sym{***}\\
+                    &      (2.09)         &      (5.34)         &      (2.48)         &      (7.09)         \\
+[1em]
+Constant            &      0.0264\sym{***}&      0.0343\sym{***}&      0.0188\sym{***}&     0.00454\sym{*}  \\
+                    &      (9.63)         &      (9.76)         &      (8.04)         &      (2.00)         \\
+\hline
+Observations        &      389591         &      389591         &      389591         &      389591         \\
+$ R^2 $             &     0.00629         &      0.0329         &     0.00540         &      0.0255         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

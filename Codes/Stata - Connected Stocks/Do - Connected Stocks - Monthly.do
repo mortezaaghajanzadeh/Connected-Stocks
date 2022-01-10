@@ -1,4 +1,7 @@
 
+
+xi: asreg monthlyρ_4_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4) 
+
 ttest monthlyρ_5 ==0
 
 mean monthlyρ_5 sgroup monthlysamesize monthlysamebm monthlycrossownership, over(sbgroup) vce(bootstrap, dots(1))

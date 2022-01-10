@@ -70,16 +70,18 @@ gen NWFCAPA = holder_act * NWFCAP
 
 label variable NWFCAPA " $ \text{FCAP}^* \times {\text{ActiveHolder} }  $ "
 
-gen NWFCAG = sbgroup * nwfca
+gen NWFCAGA = sbgroup * nwfca
 
-label variable NWFCAG " $ \text{MFCAP}^* \times {\text{ActSameGroupiveHolder} }  $ "
-
+label variable NWFCAGA " $ \text{MFCAP}^* \times {\text{ActSameGroupiveHolder} }  $ "
 
 
 
 rename nwfca NWFCA
 
 
+gen NWFCAG = sbgroup * NWFCA
+
+label variable NWFCAG " $ \text{MFCAP}^* \times {\text{SameGroup} }  $ "
 
 generate wsize1size2 =  weeklysize1 * weeklysize2
 label variable wsize1size2 "$ Size1 \times Size2 $"
@@ -88,7 +90,7 @@ label variable wsize1size2 "$ Size1 \times Size2 $"
 generate NWFCA2 = NWFCA * NWFCA
 
 
-label variable NWFCA "$ \text{MFCAP}^*} $"
+label variable NWFCA "$ \text{MFCAP}^* $"
 
 
 label variable NWFCA2 "$ { \text{MFCAP}^* } ^ 2$"
@@ -98,11 +100,11 @@ label variable lnWFCA "$\ln(FCA)$"
 
 generate wsbm1bm2 =  weeklybm1 * weeklybm2
 
-label variable wsbm1bm2 "$ BookToMarketMarket_1 \times BookToMarketMarket_2 $"
-label variable weeklysamebm "SameBookToMarket"
-label variable weeklybm1 "$ BookToMarketMarket_1 $"
+label variable wsbm1bm2 "$BM_1 \times BM_2 $"
+label variable weeklysamebm "SameBM"
+label variable weeklybm1 "$ BM_1 $"
 
-label variable weeklybm2 "$ BookToMarketMarket_2 $"
+label variable weeklybm2 "$ BM_2 $"
 
 
 
@@ -156,6 +158,20 @@ replace weeklycrossownership = weeklycrossownership/100
  
 
  
+ 
+capture drop weeklyρ_5_f
+gen weeklyρ_5_f = f.weeklyρ_5
+
+
+capture drop weeklyρ_4_f
+gen weeklyρ_4_f = f.weeklyρ_4
+
+
+capture drop weeklyρ_turn_f
+gen weeklyρ_turn_f = f.weeklyρ_turn
+ 
+ 
+ 
  {
  
 
@@ -205,13 +221,13 @@ estadd loc GroupFE "No" , replace
 
 
 
-esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  
+esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv sbgroup   sgroup weeklysamesize weeklysamebm weeklycrossownership) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )  
 
 
-esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv ) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )   ,using wresult.tex ,replace
 
  }
 
+esttab  v9 v4   v10 v7 v71 v3 v8 ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab(/*"Controls"*/  "Sub-Sample" "Business Group FE" "Observations" )) keep( NWFCAG sbgroup vv sbgroup   sgroup weeklysamesize weeklysamebm weeklycrossownership) order( vv sbgroup NWFCAG /*median mvv*/ )  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) )     ,using wresult.tex ,replace
 
  
  xi: asreg weeklyρ_5_f vv sbgroup  sgroup weeklysamesize weeklysamebm weeklycrossownership  i.PairType , fmb newey(4)

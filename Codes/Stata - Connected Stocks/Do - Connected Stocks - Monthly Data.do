@@ -37,7 +37,6 @@ replace sameGRank = 1 if grank_x == grank_y
 label variable sameGRank "SameGRank"
 
 
-
 label values  sametype sgroup 
 label variable sametype "SameType"
  
@@ -420,3 +419,13 @@ gen samesize1122 = monthlysize1 * size22
 gen samesize1221 = size12 * monthlysize2
 
 
+capture drop monthlyρ_5_f
+gen monthlyρ_5_f = f.monthlyρ_5
+
+
+capture drop monthlyρ_4_f
+gen monthlyρ_4_f = f.monthlyρ_4
+
+
+capture drop monthlyρ_turn_f
+gen monthlyρ_turn_f = f.monthlyρ_turn

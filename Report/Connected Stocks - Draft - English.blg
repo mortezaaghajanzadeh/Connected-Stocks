@@ -7,53 +7,54 @@ Repeated entry---line 597 of file ../Report/Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 979 of file ../Report/Ref.bib
+Repeated entry---line 957 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Khanna2007"
 Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 35 entries,
+You've used 34 entries,
             1935 wiz_defined-function locations,
-            681 strings with 8979 characters,
-and the built_in function-call counts, 13655 in all, are:
-= -- 1370
-> -- 504
-< -- 23
-+ -- 171
-- -- 162
-* -- 1212
-:= -- 2375
-add.period$ -- 102
-call.type$ -- 35
-change.case$ -- 257
+            678 strings with 8883 characters,
+and the built_in function-call counts, 13261 in all, are:
+= -- 1331
+> -- 491
+< -- 22
++ -- 166
+- -- 158
+* -- 1176
+:= -- 2308
+add.period$ -- 99
+call.type$ -- 34
+change.case$ -- 250
 chr.to.int$ -- 34
-cite$ -- 39
-duplicate$ -- 485
-empty$ -- 963
-format.name$ -- 227
-if$ -- 2644
-int.to.chr$ -- 2
+cite$ -- 38
+duplicate$ -- 471
+empty$ -- 933
+format.name$ -- 220
+if$ -- 2565
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 175
-num.names$ -- 105
-pop$ -- 173
+missing$ -- 30
+newline$ -- 170
+num.names$ -- 102
+pop$ -- 169
 preamble$ -- 1
-purify$ -- 256
+purify$ -- 249
 quote$ -- 0
-skip$ -- 384
+skip$ -- 374
 stack$ -- 0
-substring$ -- 1094
-swap$ -- 47
+substring$ -- 1061
+swap$ -- 46
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 210
+type$ -- 204
 warning$ -- 4
-while$ -- 121
+while$ -- 118
 width$ -- 0
-write$ -- 447
+write$ -- 434
 (There were 2 error messages)
