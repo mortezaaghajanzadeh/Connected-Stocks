@@ -208,6 +208,17 @@ mapingdict = dict(zip(tempt.level_1, tempt.mTurnOver))
 mresult["mTurnOver_annual_avg"] = mresult.index.map(mapingdict)
 mresult
 #%%
+tempt = mresult.groupby(['yearmonth','group_name'])[['MarketCap']].sum()
+mapingdict = dict(zip(tempt.index, tempt.MarketCap))
+mresult["weight"] = mresult.set_index(['yearmonth','group_name']).index.map(mapingdict)
+mresult["weight"] = mresult["MarketCap"]/mresult["weight"]
+mresult["mTurnOver_industry"] = mresult.weight*mresult.mTurnOver
+tempt = mresult.groupby(['yearmonth','group_name'])[['mTurnOver_industry']].sum()
+mapingdict = dict(zip(tempt.index, tempt.mTurnOver_industry))
+mresult["mTurnOver_industry"] = mresult.set_index(['yearmonth','group_name']).index.map(mapingdict)
+mresult["mTurnOver_industry"] = (mresult["mTurnOver_industry"] - mresult["weight"]*mresult.mTurnOver)/(1-mresult["weight"])
+mresult = mresult.drop(columns = ['weight'])
+#%%
 from sklearn.linear_model import LinearRegression
 
 mresult = mresult[(mresult.year > 1392) & (mresult.year < 1399)]
@@ -221,6 +232,7 @@ def trunreg(g):
             "mTurnOver_annual_avg",
             "mTurnOver",
             "mTurnOver_market",
+            "mTurnOver_industry",
         ]
     ].dropna()
     print(g.name, len(tem))
@@ -228,20 +240,21 @@ def trunreg(g):
         return
     g = tem
     y = g["mTurnOver"]
-    x = g[["mTurnOver_market", "mTurnOver_annual_avg"]]
+    x = g[["mTurnOver_market", "mTurnOver_annual_avg","mTurnOver_industry"]]
     OLSReg = LinearRegression(fit_intercept=True).fit(x, y)
-    beta1, beta2 = OLSReg.coef_
+    beta1, beta2, beta3 = OLSReg.coef_
     alpha = OLSReg.intercept_
     g["alpha"] = alpha
     g["beta1"] = beta1
     g["beta2"] = beta2
+    g["beta3"] = beta3
     return g
 
 
 rr = mresult.groupby("symbol").apply(trunreg).reset_index().drop(columns="level_1")
 #%%
 rr["residual"] = rr.mTurnOver - (
-    rr.alpha + rr.mTurnOver_market * rr.beta1 + rr.mTurnOver_annual_avg * rr.beta2
+    rr.alpha + rr.mTurnOver_market * rr.beta1 + rr.mTurnOver_annual_avg * rr.beta2 + rr.mTurnOver_industry * rr.beta3
 )
 #%%
 mapingdict = dict(zip(result.set_index(["symbol", "yearmonth"]).index, result.uo))
@@ -408,3 +421,5 @@ tt
 
 
 #%%
+
+# %%

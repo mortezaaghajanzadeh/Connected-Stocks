@@ -1287,11 +1287,13 @@
 
 \begin{frame}{Residual of Monthly Turnover}
 \begin{itemize}
-\item $ \text{Turnover}_{i,t} = \alpha_0 +\alpha_1 \times \text{Turnover}_{i,avg} +\alpha_2 \times \text{Turnover}_{m,t} + \boxed{\varepsilon_{i,t}} $
+
+\item $ \text{Turnover}_{i,t} = \alpha_0 +\alpha_1 \times \text{Turnover}_{i,avg} +\alpha_2 \times \text{Turnover}_{m,t}  +\alpha_3 \times \text{Turnover}_{ind,t} + \boxed{\varepsilon_{i,t}} $
 \begin{itemize}\scriptsize
 \item $ \text{Turnover}_{i,t}$: Monthly Turnover (Average of daily turnovers in each month)
 \item $ \text{Turnover}_{i,avg}$: Annual average of monthly turnover
-\item $ \text{Turnover}_{m,t}$: Market's turnover 
+\item $ \text{Turnover}_{m,t}$: Market turnover 
+\item $ \text{Turnover}_{ind,t}$: Industry turnover 
 
 \end{itemize}
 \item Assign residuals to the business groups
