@@ -5,17 +5,21 @@
                 &\multicolumn{7}{c}{Dependent Variable:  Future Pairs's Comovement}                                                                  \\\cmidrule(lr){2-8}
                 &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
 \hline
-SameGroup       &   0.0519\sym{***}&                  &   0.0463\sym{***}&                  &                  &   0.0262         &  0.00826         \\
-                &  (11.31)         &                  &  (10.15)         &                  &                  &   (1.03)         &   (0.34)         \\
+SameGroup       &   0.0254\sym{***}&                  &   0.0249\sym{***}&                  &                  &  0.00477         &  0.00252         \\
+                &   (8.45)         &                  &   (8.21)         &                  &                  &   (1.32)         &   (0.66)         \\
 [1em]
-$ \text{MFCAP*} $&                  &   0.0609\sym{***}&   0.0265\sym{***}&   0.0341\sym{*}  &   0.0290\sym{***}&   0.0289\sym{***}&   0.0301\sym{***}\\
-                &                  &   (9.60)         &   (4.02)         &   (2.28)         &   (4.15)         &   (4.00)         &   (3.60)         \\
+$ (\text{MFCAP} > Q3[\text{MFCAP}]) $ &                  &  0.00660\sym{***}& 0.000777         &   0.0230\sym{***}& -0.00258\sym{*}  & -0.00157         &-0.000513         \\
+                &                  &   (5.48)         &   (0.73)         &   (7.09)         &  (-2.00)         &  (-1.29)         &  (-0.46)         \\
 [1em]
- $ \text{MFCAP}^* \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &  0.00858         &   0.0129         \\
-                &                  &                  &                  &                  &                  &   (0.44)         &   (0.67)         \\
+ $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{SameGroup}} $ &                  &                  &                  &                  &                  &   0.0248\sym{***}&   0.0237\sym{***}\\
+                &                  &                  &                  &                  &                  &   (7.24)         &   (7.34)         \\
 \hline
 Sub-sample      &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
 Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
 Business Group FE&       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
-Observations    &   101317         &   101317         &   101317         &    35661         &    65656         &   101317         &   101317         \\
-\hline\hline  \end{tabular}}
+Observations    &   389591         &   389591         &   389591         &    47076         &   342515         &   389591         &   389591         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
