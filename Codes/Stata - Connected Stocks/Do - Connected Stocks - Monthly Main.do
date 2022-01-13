@@ -3,9 +3,6 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 
 xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  monthlysize1 monthlysize2 msize1size2  , fmb newey(4) 
 
-
-
-
 /*NMFCA*/
 {
 	eststo clear
@@ -121,6 +118,8 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 
 	replace NMFCAM = NMFCA * median
 
+	label variable median "$ (\text{MFCAP} > Q3[\text{MFCAP}]) $ "
+	
 	label variable NMFCAM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{MFCAP} ^*}  $ "
 
 	replace sbgroupM = sbgroup * median
@@ -168,24 +167,21 @@ tabout  sbgroup sgroup Pairs using table13.tex, c(mean monthlyρ_5percent mean s
 
 
 
+{/*NMFCA Dummy*/
 
-
-
-{/*NMFCA Just after Q3*/
-
-	eststo v0: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1 , fmb newey(4) 
+	eststo v0: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4) 
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
 	estadd loc SubSample "All" , replace
 
-	eststo v1: quietly asreg monthlyρ_5_f NMFCA sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1, fmb newey(4)
+	eststo v1: quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
 	estadd loc SubSample "All" , replace
 	
-		eststo v11: quietly asreg monthlyρ_5_f NMFCA sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership if forthquarter == 1, fmb newey(4)
+		eststo v11: quietly asreg monthlyρ_5_f median sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
@@ -205,25 +201,25 @@ tabout  sbgroup sgroup Pairs using table13.tex, c(mean monthlyρ_5percent mean s
 	estadd loc Pairtypr "Yes" , replace
 	*/
 
-	eststo v21: xi: quietly asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership if (forthquarter == 1) & (sbgroup == 1 ), fmb newey(4) 
+	eststo v21: xi: quietly asreg monthlyρ_5_f median   sgroup monthlysamesize monthlysamebm monthlycrossownership if (sbgroup == 1 ), fmb newey(4) 
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
 	estadd loc SubSample "SameGroup" , replace
 	
-		eststo v3: xi: quietly asreg monthlyρ_5_f NMFCA   sgroup monthlysamesize monthlysamebm monthlycrossownership if (forthquarter == 1) & (sbgroup == 0 ), fmb newey(4)
+		eststo v3: xi: quietly asreg monthlyρ_5_f median   sgroup monthlysamesize monthlysamebm monthlycrossownership if (sbgroup == 0 ), fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
 	estadd loc SubSample "Others" , replace
 
-	eststo v4: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType  if forthquarter == 1, fmb newey(4)
+	eststo v4: xi: quietly asreg monthlyρ_5_f median sbgroup sbgroupM  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
 	estadd loc SubSample "All" , replace
 	
-		eststo v5: xi: quietly asreg monthlyρ_5_f NMFCA  sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType gdummy0-gdummy47 if forthquarter == 1, fmb newey(4)
+		eststo v5: xi: quietly asreg monthlyρ_5_f median  sbgroup sbgroupM  sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType gdummy0-gdummy47 , fmb newey(4)
 	estadd loc GroupFE "Yes" , replace
 	estadd loc Pairtypr "Yes" , replace
 	estadd loc Control "Yes" , replace
@@ -231,15 +227,21 @@ tabout  sbgroup sgroup Pairs using table13.tex, c(mean monthlyρ_5percent mean s
 
 
 
-esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/))  keep(sbgroup NMFCA  NMFCAG) order(sbgroup NMFCA  NMFCAG  ) compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))
+esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/))  keep(sbgroup median  sbgroupM) order(sbgroup median  sbgroupM) compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}))
 
 
 }
 
-esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/))  keep(sbgroup NMFCA  NMFCAG) order(sbgroup NMFCA  NMFCAG  ) postfoot("\hline\hline  \end{tabular}}") compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ,using QTimemresult2subsample-slide.tex ,replace
+esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/))  keep(sbgroup median  sbgroupM) order(sbgroup median  sbgroupM) compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})),using QTimemresult2subsample-slide.tex ,replace
+
+corr sbgroup median  sbgroupM
+
+esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/)) keep(NMFCA sbgroup NMFCAG   sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ _cons) order(sbgroup NMFCA  NMFCAG ) compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ,using QTimemresult2subsample-Appendix.tex ,replace
 
 
-esttab   v0 v1 v11/* v111   v2*/ v21 v3 v4 v5, nomtitle label   s( SubSample Control GroupFE /*Pairtypr*/ N  /*r2*/ ,  lab("Sub-sample" "Controls" "Business Group FE" "Observations" /*"PairType Control" "$ R^2 $"*/))  keep(NMFCA sbgroup NMFCAG   sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ _cons) order(sbgroup NMFCA  NMFCAG ) compress mgroups("Dependent Variable:  Future Pairs's Comovement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ,using QTimemresult2subsample-Appendix.tex ,replace
+
+
+
 
 
 corr sbgroup NMFCA  NMFCAG if forthquarter == 1 
