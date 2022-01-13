@@ -134,7 +134,7 @@ tempt = tempt.drop(
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
 tempt['Average'] = tempt.mean(axis=1).astype(int)
-tempt.to_latex(pathResult + "summaryOfOwnership.tex")
+tempt.to_latex(pathResult + "summaryOfOwnership.tex", column_format='lccccccc')
 tempt
 #%%
 
@@ -340,7 +340,7 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year": "Year"})
 
 tempt["Year"] = tempt["Year"].astype(int)
-tempt["Year"] = tempt.Year + 621
+tempt["Year"] = tempt.Year + 622
 tempt = tempt.drop(
     columns=[
         "Max. Number of Common owner",
@@ -378,8 +378,20 @@ mlist = [
     # "Average Block. Ownership",
     # "Med. Block. Ownership",
 ]
-tempt = tempt[mlist].set_index("Year").T.astype(int)
-tempt.to_latex(pathResult + "summaryOfPairs.tex")
+tempt = tempt[mlist].set_index("Year")
+tempt['Ave. Number of Common owner'] = tempt['Ave. Number of Common owner'].astype(float).round(2)
+tempt = tempt.T
+tempt['Average'] = tempt.mean(axis=1)
+tempt = tempt.T
+
+
+tempt['Ave. Number of Common owner'] = tempt['Ave. Number of Common owner'].astype(float).round(2)
+tempt = tempt.T
+for n,i in enumerate( tempt.Average):
+    if n <4:
+        tempt.iloc[n,-1] = int(i)
+    print(i)
+tempt.to_latex(pathResult + "summaryOfPairs.tex", column_format='lccccccc')
 tempt
 #%%
 
