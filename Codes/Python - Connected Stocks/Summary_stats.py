@@ -111,7 +111,7 @@ tempt = a1.append(a2).drop_duplicates()
 tempt = tempt.T.rename(columns={"year_of_year": "Year"})
 
 tempt.Year = tempt.Year.astype(int)
-tempt["Year"] = tempt.Year + 621
+tempt["Year"] = tempt.Year + 622
 tempt = tempt.drop(
     columns=[
         "Max. Number of Members",
@@ -133,8 +133,7 @@ tempt = tempt.drop(
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
-
-
+tempt['Average'] = tempt.mean(axis=1).astype(int)
 tempt.to_latex(pathResult + "summaryOfOwnership.tex")
 tempt
 #%%
