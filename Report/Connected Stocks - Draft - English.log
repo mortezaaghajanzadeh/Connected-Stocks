@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  13 JAN 2022 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  13 JAN 2022 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,14 +891,7 @@ LaTeX Info: Redefining \selectfont on input line 92.
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]) (.
 /Elements-Eng/Data and Methodology.tex
-[3]
-
-Package natbib Warning: Citation `???' on page 4 undefined on input line 14.
-
-
-Package natbib Warning: Citation `???' on page 4 undefined on input line 14.
-
-(./Elements/pairsnumber.tex) (./Elements/PairPercent.tex)
+[3] (./Elements/pairsnumber.tex) (./Elements/PairPercent.tex)
 (./Elements/TotalPairNumberCal.tex) (./Elements/SameBGpercent.tex) [4]
 (./Elements/pairsnumber.tex) (./Elements/pairsnumber.tex)
 
@@ -1247,9 +1240,6 @@ Package pdftex.def Info: Elements/4.png  used on input line 179.
 Package caption Warning: Unused \captionsetup[subfigure] on input line 213.
 See the caption package documentation for explanation.
 
-
-Package natbib Warning: There were undefined citations.
-
 [33] (./Connected Stocks - Draft - English.aux)
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1294,7 +1284,7 @@ st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2021/texmf-dist
 /fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2021/texmf-dist/f
 onts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1102206 b
+Output written on "Connected Stocks - Draft - English.pdf" (33 pages, 1101213 b
 ytes).
 PDF statistics:
  776 PDF objects out of 1000 (max. 8388607)
