@@ -180,7 +180,8 @@
 
 
 
-
+capture drop monthlyρ_5_f
+gen monthlyρ_5_f = f.monthlyρ_4
 
 {
 rename NMFCA vv
