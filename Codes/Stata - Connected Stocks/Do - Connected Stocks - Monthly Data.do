@@ -419,7 +419,7 @@ gen samesize1221 = size12 * monthlysize2
 
 
 capture drop monthlyρ_5_f
-gen monthlyρ_5_f = f.monthlyρ_4
+gen monthlyρ_5_f = f.monthlyρ_5
 
 
 capture drop monthlyρ_4_f
@@ -432,3 +432,9 @@ label variable monthlyρ_turn " $ {\rho(\Delta \text{TurnOver})_t} $ "
 label variable monthlyρ_turn_f " $ {\rho(\Delta \text{TurnOver})_{t+1}} $ "
 
 
+
+
+gen m2 = forthquarter * sbgroup
+
+
+corr m2 forthquarter sbgroup
