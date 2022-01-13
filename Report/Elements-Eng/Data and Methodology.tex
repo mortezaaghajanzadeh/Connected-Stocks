@@ -1,3 +1,4 @@
+% !TeX spellcheck = <none>
 
 \section{{Data and Methodology}}
 
@@ -7,20 +8,20 @@
 
 
 
-Our data has several unique features which distiguishes our paper from the existing literature. Stock ownership data for Iranian public firms is available with daily frequncy reprted at the end of each trading day. This data includes all blockholders, defined as having at least one percent of the outstanding shares in a firm for all investor types- institutional as well as individualsis- and is automatically reported by a central authority in charge of (who?), which eliminates potential issues present in self-reported data (such as those exisiting in US institutional holding data, known as 13F filings). \textit{(DROP: We use our unique data set, including the daily ownership table that reports all end-of-the-days block-holders of listed firms with their changes in that day.  Block-holder is a shareholder who owns at least 1\% of the total shares outstanding. }  In order to put together our dataset, we compile daily stock ownerhip tables which are publicaly available starting from March 2015. Our sample ends in March 2020
-	We also gathered industries index and stock returns, trading volume, and other relevant market and accounting data from the Codal website \footnote{\href{http://www.codal.ir}{www.codal.ir}}
-and the  Tehran Securities Exchange Technology Management Co (TSETMC)\footnote{\href{http://www.tsetmc.com}{www.tsetmc.com}} database.
+Our data has several unique features which distiguishes our paper from the existing literature. Stock ownership data for Iranian public firms is available with daily frequncy reprted at the end of each trading day. This data includes all blockholders, defined as having at least one percent of the outstanding shares in a firm for all investor types- institutional as well as individuals- and is automatically reported by a central authority named Tehran Securities Exchange Technology Managament Corporation (TSETMC), which is a subsidiary of Tehran Stcok Exchange. This eliminates potential issues present in self-reported data (such as those exisiting in US institutional holding data, known as 13F filings). In order to put together our dataset, we compile daily stock ownerhip tables (available in a separate table for each firm) which are publicaly available starting from March 2010.
 
-We exclude ETFs from our listed firms because they have a different return and ownership patterns compared to other firms in our study.
+
+We also collect data on business groups, defined as groups of listed firms with interconnected ownership structures controlled by an ultimate owner. Business groups are common organizational structure in corporate ownership in Iran as well as many other parts of the world. Around three quarters of Iranian public firms are part of complex interlinked ownership networks each governed by an ultimate owner, which sits at the top of a multi-layer pyramid ownership structure ({\cite{Aliabadi2022}}). Unlike countries like South Korea, Japan, and India that formally announce business groups, we do not have officially defined business groups in Iran. We use data provided by {\cite{Aliabadi2022}} which builds a comprehensive data of all Iraninan business groups using the methodology introduced in \cite{almeida2011structure} with a 40\% threshold for control rights. \footnote{For further discussion see appendix \ref{BGDef}} This data covers March 2015 to March 2020. 
+
+
+
+	We also gather stock returns, trading volume, firm-level trading data and accounting information from Codal (equvalent to SEC's EDGAR) \footnote{\href{http://www.codal.ir}{www.codal.ir}}
+and TSETMC's website \footnote{\href{http://www.tsetmc.com}{www.tsetmc.com}}.
+
+We exclude ETFs. 
 We restrict our empirical analysis to 2015/03-2020/03 (1393/01-1398/12 Persian calendar) due to the availability of daily ownership data and the special events \footnote{
 	The Tehran Stock Exchange's main index (TEPIX) raised exponentially to quadruple value and then fell sharply due to the gigantic entrance of new individual investors that seems to be a bubble period from that period.} that happened after 2020/03, which may affect our results. 
 
-Business groups - groups of listed firms with interconnected ownership structures controlled by an ultimate common owner - are the principal organizational structure in many parts of the world.
-Business groups seem to be a central feature of corporate ownership in Iran. 
-Most Iranian listed firms present in a complex interlinked shareholders' network that an ultimate owner governs this group through many layers of ownership({\cite{Aliabadi2022}}).  
-We do not have pre-specified Iranian business groups despite other countries like South Korea, Japan, and India that their groups are announced formally.
-For defining business groups, we use data provided by {\cite{Aliabadi2022}}.
-They use \cite{almeida2011structure} algorithm with a 40\% threshold for defining groups. \footnote{For further discussion appendix \ref{BGDef}}
 
 
 Panel \subref{t2-1} table \ref{st1} reports summary statistics of ownership data and business groups. As shown in the table, 494 firms on average have five block-holders that own 73 percent of them. There are 43 business groups on average, with seven members which own 314 (63\%) firms. 
