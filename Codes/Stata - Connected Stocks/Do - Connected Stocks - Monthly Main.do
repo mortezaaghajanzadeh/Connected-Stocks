@@ -118,17 +118,17 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 
 	replace NMFCAM = NMFCA * median
 
-	label variable median "$ (\text{MFCAP} > Q3[\text{MFCAP}]) $ "
+	label variable median "$ (\text{MFCAP} > \text{75th Percentile}) $ "
 	
-	label variable NMFCAM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{MFCAP} ^*}  $ "
+	label variable NMFCAM " $ (\text{MFCAP} > \text{75th Percentile}) \times {\text{MFCAP} ^*}  $ "
 
 	replace sbgroupM = sbgroup * median
-	label variable sbgroupM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times {\text{SameGroup}} $ "
+	label variable sbgroupM " $ (\text{MFCAP} > \text{75th Percentile}) \times {\text{SameGroup}} $ "
 
 
 
 	replace NMFCAGM = sbgroup * NMFCA * median
-	label variable NMFCAGM " $ (\text{MFCAP} > Q3[\text{MFCAP}]) \times  (\text{MFCAP}^*) \times {\text{SameGroup}} $ "
+	label variable NMFCAGM " $ (\text{MFCAP} > \text{75th Percentile}) \times  (\text{MFCAP}^*) \times {\text{SameGroup}} $ "
 
 
 	replace holder_actM = holder_act * median
