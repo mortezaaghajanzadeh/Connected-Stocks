@@ -3,58 +3,57 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Connected Stocks - Draft - English.aux
 The style file: apalike.bst
 Database file #1: ../Report/Ref.bib
-Repeated entry---line 597 of file ../Report/Ref.bib
+Repeated entry---line 629 of file ../Report/Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 957 of file ../Report/Ref.bib
+Repeated entry---line 989 of file ../Report/Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Khanna2007"
 Warning--empty note in Aliabadi2022
 Warning--empty note in azar2011new
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 34 entries,
+You've used 36 entries,
             1935 wiz_defined-function locations,
-            678 strings with 8883 characters,
-and the built_in function-call counts, 13261 in all, are:
-= -- 1331
-> -- 491
-< -- 22
-+ -- 166
-- -- 158
-* -- 1176
-:= -- 2308
-add.period$ -- 99
-call.type$ -- 34
-change.case$ -- 250
-chr.to.int$ -- 34
-cite$ -- 38
-duplicate$ -- 471
-empty$ -- 933
-format.name$ -- 220
-if$ -- 2565
+            688 strings with 9310 characters,
+and the built_in function-call counts, 14067 in all, are:
+= -- 1408
+> -- 532
+< -- 23
++ -- 182
+- -- 172
+* -- 1248
+:= -- 2452
+add.period$ -- 105
+call.type$ -- 36
+change.case$ -- 267
+chr.to.int$ -- 36
+cite$ -- 40
+duplicate$ -- 498
+empty$ -- 983
+format.name$ -- 238
+if$ -- 2716
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 170
-num.names$ -- 102
-pop$ -- 169
+missing$ -- 32
+newline$ -- 180
+num.names$ -- 108
+pop$ -- 183
 preamble$ -- 1
-purify$ -- 249
+purify$ -- 266
 quote$ -- 0
-skip$ -- 374
+skip$ -- 395
 stack$ -- 0
-substring$ -- 1061
-swap$ -- 46
+substring$ -- 1112
+swap$ -- 48
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
+type$ -- 216
 warning$ -- 4
-while$ -- 118
+while$ -- 124
 width$ -- 0
-write$ -- 434
+write$ -- 459
 (There were 2 error messages)
