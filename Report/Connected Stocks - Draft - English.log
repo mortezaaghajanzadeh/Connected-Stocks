@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  6 FEB 2022 18:32
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.11.6)  6 FEB 2022 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,9 +825,6 @@ LaTeX Info: Redefining \nameref on input line 92.
 \openout4 = `"Connected Stocks - Draft - English.out"'.
 
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -911,4 +908,7 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 219.
 See the caption package documentation for explanation.
 
-(./Output/F
+(./Output/FCACal.tex)
+
+Package caption Warning: \subcaption
+(caption)  
