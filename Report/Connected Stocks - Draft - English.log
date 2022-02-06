@@ -911,4 +911,234 @@ See the caption package documentation for explanation.
 (./Output/FCACal.tex)
 
 Package caption Warning: \subcaption
-(caption)  
+(caption)                outside box or environment on input line 227.
+See the caption package documentation for explanation.
+
+(./Output/CorrelationsResultsText.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 236.
+See the caption package documentation for explanation.
+
+(./Output/ControlsSummary.tex) (./Output/table13.tex)) [9] [10]
+(./Elements-Eng/Results.tex
+File: Output/mcorr50.eps Graphic file (type eps)
+<Output/mcorr50.eps>
+ (./Elements/Model11.tex) [11] [12] [13]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=702.78308pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 54.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 54.
+See the caption package documentation for explanation.
+
+(./Output/mresult2part1-slide.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 60.
+See the caption package documentation for explanation.
+
+(./Output/mresult2part2-slide.tex)
+
+LaTeX Warning: Float too large for page by 44.90395pt on input line 68.
+
+[14]
+File: Output/Qmcorr5lrd.eps Graphic file (type eps)
+<Output/Qmcorr5lrd.eps>
+File: Output/Qmcorr5subsample.eps Graphic file (type eps)
+<Output/Qmcorr5subsample.eps>
+File: Output/Qmcorr5lrdbgsubsample.eps Graphic file (type eps)
+<Output/Qmcorr5lrdbgsubsample.eps>
+ [15
+
+
+]
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 179.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 179.
+See the caption package documentation for explanation.
+
+(./Output/QTimemresult2subsample-slide.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 187.
+See the caption package documentation for explanation.
+
+(./Output/Q3mresultAllPairs.tex) [16] [17])
+(./Elements-Eng/Evidence for correlated trading.tex
+Overfull \hbox (22.44019pt too wide) in paragraph at lines 15--18
+\TU/lmr/m/n/12 industry and business group portfolio’s turnover, $\OT1/cmr/m/n/
+12 ^^A[][]$ \TU/lmr/m/n/12 and $\OT1/cmr/m/n/12 ^^A[][]$
+ []
+
+(./Elements/turnoverModel.tex) [18] (./Output/turnover.tex)
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 45.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 45.
+See the caption package documentation for explanation.
+
+(./Output/mresult2-turnover.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 53.
+See the caption package documentation for explanation.
+
+(./Output/turncomovement.tex) [19] [20]
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 71.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 71.
+See the caption package documentation for explanation.
+
+(./Output/ResidualTrunSummary.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 78.
+See the caption package documentation for explanation.
+
+(./Output/ResidualTrunStdSummary.tex)
+File: Output/GroupedResSTD.eps Graphic file (type eps)
+<Output/GroupedResSTD.eps>
+ [21
+
+]
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 111.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 111.
+See the caption package documentation for explanation.
+
+(./Output/ImbalanceInsMeanSummary.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 118.
+See the caption package documentation for explanation.
+
+(./Output/ImbalanceInsStdSummary.tex)
+File: Output/GroupedInsSTD.eps Graphic file (type eps)
+<Output/GroupedInsSTD.eps>
+
+Overfull \hbox (6.47836pt too wide) in paragraph at lines 131--132
+\TU/lmr/m/n/12 whose average standard errors are lower than half of the sample;
+\TU/lmr/bx/n/12 LowImbalancestd\TU/lmr/m/n/12 .
+ []
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 150.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 150.
+See the caption package documentation for explanation.
+
+(./Output/LowRes.tex)
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 157.
+See the caption package documentation for explanation.
+
+(./Output/Imbalance.tex) [22] [23] [24]) (./Elements-Eng/Conclusion.tex
+[25] (./Connected Stocks - Draft - English.bbl [26] [27]))
+(./Elements-Eng/appendices.tex
+Overfull \hbox (31.0609pt too wide) in paragraph at lines 6--6
+[]\TU/lmr/bx/n/17.28 Overview of Business Groups in Tehran
+ []
+
+[28] [29]
+File: Elements/1.png Graphic file (type bmp)
+<Elements/1.png>
+File: Elements/2.png Graphic file (type bmp)
+<Elements/2.png>
+ (./Elements/Example2.tex)
+File: Elements/3.png Graphic file (type bmp)
+<Elements/3.png>
+ [30] [31]
+File: Elements/4.png Graphic file (type bmp)
+<Elements/4.png>
+ (./Elements/marketcap.tex)
+(./Output/mresult2Polk-slide.tex) [32] [33])
+
+Package caption Warning: Unused \captionsetup[subfigure] on input line 54.
+See the caption package documentation for explanation.
+
+[34]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
+ (./Connected Stocks - Draft - English.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 116.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
+Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
+s not changed.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
+ ) 
+Here is how much of TeX's memory you used:
+ 25384 strings out of 479418
+ 475676 string characters out of 5888105
+ 888635 words of memory out of 5000000
+ 42325 multiletter control sequences out of 15000+600000
+ 541734 words of font info for 73 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 60i,17n,62p,1809b,1079s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Connected Stocks - Draft - English.pdf (34 pages).
