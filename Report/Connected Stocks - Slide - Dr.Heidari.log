@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  10 JAN 2022 07:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  7 FEB 2022 07:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,10 +1160,10 @@ ocks - Slide - Dr.Heidari.toc)
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2022-01-03 14:56:55
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 22057 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 14:57:24
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 13230 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
 ed-to.pdf Output/mcorr50.eps>
@@ -1179,10 +1179,10 @@ e 96.
 
  <./Output/mcorr50-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2022-01-03 14:56:29
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 29497 bytes
 (epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:54:59
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 14973 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
@@ -1305,10 +1305,10 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 428.
 
 ]
 Package epstopdf Info: Source file: <Output/idMonth.eps>
-(epstopdf)                    date: 2022-01-03 18:02:34
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 58092 bytes
 (epstopdf)             Output file: <Output/idMonth-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:54:59
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 19628 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/idMonth-eps-convert
 ed-to.pdf Output/idMonth.eps>
@@ -1324,11 +1324,11 @@ e 646.
 
  <./Output/idMonth-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/FCAtimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:02:45
+(epstopdf)                    date: 2022-01-03 20:17:48
 (epstopdf)                    size: 15451045 bytes
 (epstopdf)             Output file: <Output/FCAtimeSeries-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-01-10 07:55:00
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 143378 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeries-eps-c
 onverted-to.pdf Output/FCAtimeSeries.eps>
@@ -1344,11 +1344,11 @@ ut line 658.
 
  <./Output/FCAtimeSeries-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Output/FCAtimeSeriesBG.eps>
-(epstopdf)                    date: 2022-01-03 18:02:59
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 15451047 bytes
 (epstopdf)             Output file: <Output/FCAtimeSeriesBG-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2022-01-10 07:55:00
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 128402 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeriesBG-eps
 -converted-to.pdf Output/FCAtimeSeriesBG.eps>
@@ -1361,11 +1361,11 @@ Package pdftex.def Info: Output/FCAtimeSeriesBG-eps-converted-to.pdf  used on i
 nput line 677.
 (pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
 Package epstopdf Info: Source file: <Output/FCAtimeSeriesPairType.eps>
-(epstopdf)                    date: 2022-01-03 18:02:53
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 15451053 bytes
 (epstopdf)             Output file: <Output/FCAtimeSeriesPairType-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 299791 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeriesPairTy
 pe-eps-converted-to.pdf Output/FCAtimeSeriesPairType.eps>
@@ -1380,11 +1380,11 @@ Package pdftex.def Info: Output/FCAtimeSeriesPairType-eps-converted-to.pdf  use
 d on input line 677.
 (pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
 Package epstopdf Info: Source file: <Output/FCAComparetimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:03:08
+(epstopdf)                    date: 2022-01-03 20:17:48
 (epstopdf)                    size: 15451052 bytes
 (epstopdf)             Output file: <Output/FCAComparetimeSeries-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 202119 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/FCAComparetimeSerie
 s-eps-converted-to.pdf Output/FCAComparetimeSeries.eps>
@@ -1398,11 +1398,11 @@ Package pdftex.def Info: Output/FCAComparetimeSeries-eps-converted-to.pdf  used
  on input line 677.
 (pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
 Package epstopdf Info: Source file: <Output/ComovementtimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:02:40
+(epstopdf)                    date: 2022-01-03 20:17:48
 (epstopdf)                    size: 15444356 bytes
 (epstopdf)             Output file: <Output/ComovementtimeSeries-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 381458 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/ComovementtimeSerie
 s-eps-converted-to.pdf Output/ComovementtimeSeries.eps>
@@ -1447,10 +1447,10 @@ Overfull \hbox (1.80852pt too wide) detected at line 850
 
 ]
 Package epstopdf Info: Source file: <Output/MHistFCA.eps>
-(epstopdf)                    date: 2022-01-03 14:55:42
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21374 bytes
 (epstopdf)             Output file: <Output/MHistFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:06
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 8640 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
@@ -1463,10 +1463,10 @@ Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
 ne 903.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
-(epstopdf)                    date: 2022-01-03 14:55:50
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21406 bytes
 (epstopdf)             Output file: <Output/MHistFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:07
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 9350 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
@@ -1479,10 +1479,10 @@ Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
 ine 903.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
-(epstopdf)                    date: 2022-01-03 14:56:13
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21565 bytes
 (epstopdf)             Output file: <Output/MHistlnFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:09
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 9504 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
@@ -1495,10 +1495,10 @@ Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input
 line 903.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
-(epstopdf)                    date: 2022-01-03 14:56:21
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21189 bytes
 (epstopdf)             Output file: <Output/MHistlnFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:11
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 9399 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
@@ -1511,10 +1511,10 @@ Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
  line 903.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
-(epstopdf)                    date: 2022-01-03 14:55:58
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21337 bytes
 (epstopdf)             Output file: <Output/MHistNFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:13
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 8343 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
@@ -1527,10 +1527,10 @@ Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
 ine 903.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
-(epstopdf)                    date: 2022-01-03 14:56:05
+(epstopdf)                    date: 2021-12-19 19:59:41
 (epstopdf)                    size: 21334 bytes
 (epstopdf)             Output file: <Output/MHistNFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:29:15
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 8290 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
@@ -1561,10 +1561,10 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 96
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2022-01-03 14:56:29
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 29497 bytes
 (epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:54:59
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 14973 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
@@ -1576,10 +1576,10 @@ Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
 ne 1089.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
-(epstopdf)                    date: 2022-01-03 14:56:33
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 21895 bytes
 (epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:54:59
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 13181 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
@@ -1603,11 +1603,11 @@ e 1089.
 
 ]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2022-01-03 14:57:09
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 30126 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2022-01-03 14:57:29
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 14646 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
@@ -1622,11 +1622,11 @@ Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
 d on input line 1198.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2022-01-03 14:57:10
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 23704 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
-(epstopdf)                    date: 2022-01-03 14:57:27
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 16074 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
@@ -1662,11 +1662,11 @@ le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex)
 ]
 (./Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
-(epstopdf)                    date: 2022-01-10 07:21:22
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 20404351 bytes
 (epstopdf)             Output file: <Output/GroupedResSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-01-10 07:29:19
+(epstopdf)                    date: 2022-01-10 08:21:14
 (epstopdf)                    size: 295077 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
@@ -1687,11 +1687,11 @@ ut line 1326.
 
 ] (./Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
-(epstopdf)                    date: 2022-01-03 10:04:36
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 20623471 bytes
 (epstopdf)             Output file: <Output/GroupedInsSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-01-03 10:04:50
+(epstopdf)                    date: 2022-01-03 20:17:49
 (epstopdf)                    size: 270309 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
@@ -1853,8 +1853,8 @@ exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/202
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (64 pages, 226096
-5 bytes).
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (64 pages, 226161
+3 bytes).
 PDF statistics:
  1059 PDF objects out of 1200 (max. 8388607)
  860 compressed objects within 9 object streams
