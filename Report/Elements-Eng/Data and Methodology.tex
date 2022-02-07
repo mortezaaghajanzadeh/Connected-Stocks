@@ -142,7 +142,7 @@ To construct a monthly measure of common ownership for each firm pair, we calcul
 \subsection{{Stock Return comovement}}
 \label{comovement}
 
-	We calculate the monthly correlation of each pair from stocks' daily abnormal returns. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return due to the importance of industries on stocks' return in the Tehran stock exchange (TSE) :
+	To measure the monthly stock return comovement for each firm pair at the end of each month, we first estimate our benchmark model using the past three months. Using the estimated coeffcients (betas), we then measure daily residuals and calculate the correlation of daily residuals (i.e. abnormal return) from equation (2) during each month. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return:
 	\begin{equation}
 		\begin{split}
 			R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \\
@@ -150,13 +150,13 @@ To construct a monthly measure of common ownership for each firm pair, we calcul
 		\end{split}
 		\label{e5Factor}
 	\end{equation}
-	where $ R_{i,t} $, $ R_{M,t} $ and $ R_{Ind,t} $ are excess daily return of respectivly  firm, market and firm's industry from bank deposit's daily rate(risk free). Other variabales difinition is base on Carhart four-factor model [\cite{Carhart4Factor}].
+	where $ R_{i,t} $, $ R_{M,t} $ and $ R_{Ind,t} $ are firm, market and firm's industry excess daily, respectivly. Our proxy for risk free rate is bank deposit's daily rate. Other variabales difinition is based on Carhart four-factor model [\cite{Carhart4Factor}].
 	
-	At the end of each month, we estimate our benchmark model base on the past three-month period (from two months before the end of the preceding month) and measure daily residuals.  After that, we calculate the monthly correlation of daily residuals during that month for the pair.
+	.
 	
 	We use other benchmarks (CAPM, 4 Factor, and Benchmark\footnote{we follow \cite{daniel1997measuring} to control risk characteristics: abnormal returns are calculated using a stock’s daily return minus the average return of
 	the stock’s benchmark group, which is formed at every month’s end based on stocks’ capitalization and market-to-book ratio using the sample of all stocks}) for calculating a monthly correlation and report its summary in panel \subref{tCorr} table \ref{st2}. 
-	As we expected,  models that include industry returns remove pairs' correlation. According to the results, it seems that our selected benchmark (4 Factor + Industry) almost captures all the pairs' comovement because it is nearly a zero mean variable. We use this correlation for our analysis but our results are robust for other models.
+	Our results are robust to using the other benchmark models.
 	
 	
 	
