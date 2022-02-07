@@ -418,8 +418,13 @@ gen samesize1122 = monthlysize1 * size22
 gen samesize1221 = size12 * monthlysize2
 
 
+// replace monthlyρ_5 = monthlyρ_residual_bench
+
 capture drop monthlyρ_5_f
 gen monthlyρ_5_f = f.monthlyρ_5
+
+
+
 
 
 capture drop monthlyρ_4_f
