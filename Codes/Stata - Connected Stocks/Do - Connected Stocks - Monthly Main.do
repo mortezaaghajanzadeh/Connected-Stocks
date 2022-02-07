@@ -3,6 +3,10 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 
 xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  monthlysize1 monthlysize2 msize1size2  , fmb newey(4) 
 
+
+// replace NMFCA = NMFCAP
+// replace NMFCAG = NMFCAPG
+
 /*NMFCA*/
 {
 	eststo clear
@@ -388,6 +392,7 @@ esttab   v1 v2  v4 v5 v3/*v6 v7*/, nomtitle  label  keep(monthlyρ_turn_f monthl
 	
 	
 	
+
 {/*LowRes*/
 
 	eststo clear
