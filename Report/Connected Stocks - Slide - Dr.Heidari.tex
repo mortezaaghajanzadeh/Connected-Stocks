@@ -74,6 +74,9 @@
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+
+
+
 \title[Connected Stocks  via Business Groups]{Connected Stocks via Business Groups:}
 \subtitle{Evidence from an Emerging Market}
 %\subtitle{}
@@ -227,91 +230,7 @@
 		\subsection{Main Effect}
 	\begin{frame}{Main effect}\label{Grapgh}
 		\resizebox{\textwidth}{!}{
-	\begin{tikzpicture}[node distance=1cm][every text node part/.style={align=center}]
-		
-		
-		
-		\node (comovement) [startstop1] {Comovement};
-		
-		\pause
-		
-				\node (Fundumental) [startstop3,above of = comovement , yshift=0.5cm , xshift=0cm ] { \begin{tabular}{c}
-				\scriptsize	Fundumentals	\\ \tiny\cite{shiller1989comovements}
-		\end{tabular} };
-		
-		
-		\draw (Fundumental) -> (comovement);
-		
-		
-		\pause
-		
-		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
-				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}\\ \tiny\cite{barberis2003style}
-		\end{tabular} };
-		
-		
-		\draw (categoryhabitat) -> (comovement);
-		
-		\pause
-		\node (belief) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
-				Correlated beliefs	\\
-				\tiny\cite{david2016correlated}
-		\end{tabular}};
-		
-		\draw (belief) -> (comovement);
-		
-		\pause
-		
-		\node (investmentbanking) [startstop3,below of = comovement , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
-				Investment Bank Network \\
-				\tiny\cite{grullon2014comovement}
-		\end{tabular}};
-		
-		\draw (investmentbanking) -> (comovement);
-		
-		
-		
-		\pause
-		\node (information) [startstop3,below of = investmentbanking , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
-				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}\\
-				\tiny\cite{HAMEED2019103}
-		\end{tabular}};
-		
-		\draw (information) -> (investmentbanking);
-		
-		\pause
-		
-		
-		
-		
-		
-		
-		
-		%% common ownership
-		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common ownership  \end{tabular}};
-		\pause
-		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
-				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
-		\end{tabular} };
-		
-		\draw (commonownership) -> (trading);
-		\draw (trading) -> (comovement);
-		\pause
-		\node (liquidity) [startstop3,below of = trading , yshift=-1cm , xshift=0cm] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
-		
-		\draw (commonownership) -> (liquidity);
-		\draw (liquidity) -> (comovement);
-		
-
-		
-		
-%		\node (corporate) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
-%				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
-%		\end{tabular}};
-%		
-%		\draw (commonownership) -> (corporate);
-%		\draw (corporate) -> (comovement);
-	\end{tikzpicture}
+\input{Elements/Literature}
 }
 		
 %		\hfill
@@ -435,151 +354,20 @@
 
 		
 		
+		\input{Elements/tikzisetting.tex}
 		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
    
 				\resizebox{\textwidth}{!}{
-		\begin{tikzpicture}[node distance=2cm]
-			
-			
-			\node (start) [startstop] {Ultimate Owner};
-			
-			
-			
-			\node (end) [startstop1,below of = start , yshift=0cm , xshift=-3.5cm ] {$ \text{Firm A} $};
-			\node (end2) [startstop1,below of = start , yshift=0cm , xshift=3.5cm ] {$ \text{Firm B} $};
-			
-			
-			
-			\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-			
-			
-			\node (sur2) [startstop2 ,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-			
-			
-			\node (CH) [process, below of = start ,xshift=0] {Common Owner};
-			
-			
-			\draw [arrow] (start) --(end);
-			\draw [arrow] (end) --(sur);
-			
-			\draw [arrow] (start) --(end2);
-			
-			\draw [arrow] (end) --(sur);
-			\draw [arrow] (end2) -- (sur2);
-			
-			
-			\draw [arrow] (CH) -- (sur);
-			\draw [arrow] (CH) -- (sur2);
-			\draw [dashed ,->] (start) --(CH);
-			
-			\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair in the same Group} (sur2);
-			
-			
-		\end{tikzpicture}
-	
+\input{Elements/SBGShape.tex}	
 %\pause
-					\begin{tikzpicture}[node distance=2cm]
-						
-						
-						\node (start) [startstop] { $ \text{Ultimate Owner A} $};
-						\node (start2) [startstop,right of = start,xshift=5cm] {$ \text{Ultimate Owner B} $};
-						
-						
-						\node (CH) [process, below of = start2,xshift=-3.5cm] {Common Owner};
-						
-						\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-						
-						\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {$ \text{Firm B} $};
-						
-						\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-						
-						\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-						
-						
-						
-						\draw [arrow] (start) --(end);
-						\draw [arrow] (start2) -- (end2);
-						
-						\draw [arrow] (end) --(sur);
-						\draw [arrow] (end2) -- (sur2);
-						
-						\draw [dash dot,->] (start) -- (CH);
-						\draw [dash dot,->] (start2) -- (CH);
-						
-						\draw [arrow] (CH) -- (sur);
-						\draw [arrow] (CH) -- (sur2);
-						
-						\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in the same Group} (sur2);
-						
-						
-					\end{tikzpicture}
-			
+\input{Elements/DBGShape.tex}
 								}
 								\pause
 				\resizebox{\textwidth}{!}{
 %				\pause
-\begin{tikzpicture}[node distance=2cm]
-							
-	
-	\node (start) [startstop] { $ \text{Ultimate Owner} $};
-	
-	
-	\node (CH) [process, below of = start,xshift=3.5cm] {Common Owner};
-	
-	\node (end) [startstop1,below of = start ] {$ \text{Firm A} $};
-	
-	\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-	
-	\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-	
-	\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-	
-	
-	
-	\draw [arrow] (start) --(end);
-	
-	\draw [arrow] (end) --(sur);
-	\draw [arrow] (end2) -- (sur2);
-	
-	\draw [dash dot,->] (start) -- (CH);
-	
-	\draw [arrow] (CH) -- (sur);
-	\draw [arrow] (CH) -- (sur2);
-	
-	\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-	
-	
-\end{tikzpicture}
-														
+	\input{Elements/No1BGShape.tex}												
 
-			\begin{tikzpicture}[node distance=2cm]
-				
-				
-				
-				\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
-				
-				\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
-				
-				\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
-				
-				\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
-				
-				\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
-				
-				
-				\draw [arrow] (end) --(sur);
-				\draw [arrow] (end2) -- (sur2);
-				
-				
-				\draw [arrow] (CH) -- (sur);
-				\draw [arrow] (CH) -- (sur2);
-				
-				\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] { Pair not in Groups} (sur2);
-				
-				
-			\end{tikzpicture}
-	
-		
+	\input{Elements/No2BGShape.tex}
 				} 
 
 						
@@ -650,7 +438,7 @@
 	
 		\begin{frame}{Number of Pairs}
 			\begin{figure}[htbp]
-				\includegraphics[width=0.9\linewidth]{Output/idMonth.eps}
+				\includegraphics[width=0.95\linewidth]{Output/idMonth}
 			\end{figure}
 		\end{frame}
 	%	
@@ -1666,11 +1454,13 @@
 						\item Two Firms with different market caps.
 					\end{itemize}
 				\end{itemize}
-				\resizebox{0.7\textwidth}{!}
-				{
-					\input{Elements/marketcap}
-				}
 				
+				\begin{table}[htbp]
+		\centering
+				\resizebox{0.7\textwidth}{!}
+								{
+					\input{Elements/marketcap}
+				}								\end{table}
 				
 			\end{frame}
 			

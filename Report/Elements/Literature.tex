@@ -1,0 +1,86 @@
+\tikzstyle{startstop1} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.75cm,text centered, draw=black, fill=blue!30]
+	\begin{tikzpicture}[node distance=1cm][every text node part/.style={align=center}]
+		
+		
+		
+		\node (comovement) [startstop1] {Comovement};
+		
+		\pause
+		
+				\node (Fundumental) [startstop3,above of = comovement , yshift=0.5cm , xshift=0cm ] { \begin{tabular}{c}
+				\scriptsize	Fundumentals	\\ \tiny\cite{shiller1989comovements}
+		\end{tabular} };
+		
+		
+		\draw (Fundumental) -> (comovement);
+		
+		
+		\pause
+		
+		\node (categoryhabitat) [startstop3,above of = comovement , yshift=0cm , xshift=4.5cm ] { \begin{tabular}{c}
+				\scriptsize	Category/Habitat	\\ \tiny\cite{barberis2005comovement}\\ \tiny\cite{barberis2003style}
+		\end{tabular} };
+		
+		
+		\draw (categoryhabitat) -> (comovement);
+		
+		\pause
+		\node (belief) [startstop3,below of = comovement , yshift=0cm , xshift=4.5cm ] {\begin{tabular}{c}\scriptsize
+				Correlated beliefs	\\
+				\tiny\cite{david2016correlated}
+		\end{tabular}};
+		
+		\draw (belief) -> (comovement);
+		
+		\pause
+		
+		\node (investmentbanking) [startstop3,below of = comovement , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Investment Bank Network \\
+				\tiny\cite{grullon2014comovement}
+		\end{tabular}};
+		
+		\draw (investmentbanking) -> (comovement);
+		
+		
+		
+		\pause
+		\node (information) [startstop3,below of = investmentbanking , yshift=-1cm , xshift=0cm ] {\begin{tabular}{c}\scriptsize
+				Information Diffusion	\\\tiny\cite{pantzalis2017shareholder}\\
+				\tiny\cite{HAMEED2019103}
+		\end{tabular}};
+		
+		\draw (information) -> (investmentbanking);
+		
+		\pause
+		
+		
+		
+		
+		
+		
+		
+		%% common ownership
+		\node (commonownership) [startstop2,left of = comovement , yshift=0cm , xshift=-7cm ] {\begin{tabular}{c}\scriptsize Common ownership  \end{tabular}};
+		\pause
+		\node (trading) [startstop3,right of = comovement , yshift=2cm , xshift=-5cm ] { \begin{tabular}{c}
+				\scriptsize	Trading needs\\ \tiny \cite{greenwood2011stock} \\  \tiny \cite{AntonPolk}
+		\end{tabular} };
+		
+		\draw (commonownership) -> (trading);
+		\draw (trading) -> (comovement);
+		\pause
+		\node (liquidity) [startstop3,below of = trading , yshift=-1cm , xshift=0cm] {\begin{tabular}{c} \scriptsize Liquidity demand \\ \tiny \cite{Liquidity2016}  \end{tabular}};
+		
+		\draw (commonownership) -> (liquidity);
+		\draw (liquidity) -> (comovement);
+		
+
+		
+		
+%		\node (corporate) [startstop3,below of = liquidity , yshift=-1cm , xshift=0cm ] {  \begin{tabular}{c}
+%				\scriptsize	Poor corporate governance	\\ \tiny \cite{khanna2009synchronicity}
+%		\end{tabular}};
+%		
+%		\draw (commonownership) -> (corporate);
+%		\draw (corporate) -> (comovement);
+	\end{tikzpicture}
