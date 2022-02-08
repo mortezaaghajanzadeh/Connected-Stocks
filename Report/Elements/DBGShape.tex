@@ -1,0 +1,36 @@
+		\begin{tikzpicture}[node distance=2cm]
+					
+					
+					\node (start) [startstop] { \normalsize$ \text{Ultimate Owner A} $};
+					\node (start2) [startstop,right of = start,xshift=5cm] {\normalsize$ \text{Ultimate Owner B} $};
+					
+					
+					\node (CH) [process, below of = start2,xshift=-3.5cm] {\normalsize Common Owner};
+					
+					\node (end) [startstop1,below of = start ] {\normalsize $ \text{Firm A} $};
+					
+					\node (end2) [startstop1,below of = start2 ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm B} $};
+					
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm X} $};
+					
+					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {\normalsize $ \text{Firm Y} $};
+					
+					
+					
+					\draw [arrow] (start) --(end);
+					\draw [arrow] (start2) -- (end2);
+					
+					\draw [arrow] (end) --(sur);
+					\draw [arrow] (end2) -- (sur2);
+					
+					\draw [dash dot,->] (start) -- (CH);
+					\draw [dash dot,->] (start2) -- (CH);
+					
+					\draw [arrow] (CH) -- (sur);
+					\draw [arrow] (CH) -- (sur2);
+					
+					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+					
+					
+				\end{tikzpicture}
+		

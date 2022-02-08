@@ -1,0 +1,27 @@
+	\begin{tikzpicture}[node distance=2cm]
+					
+					
+					
+					\node (CH) [process,yshift = -2cm ,xshift=3.5cm] {Common Owner};
+					
+					\node (end) [startstop1,left of = CH ,xshift=-1.5cm ] {$ \text{Firm A} $};
+					
+					\node (end2) [startstop1,right of = CH ,yshift=0cm,xshift=1.5cm] {$ \text{Firm B} $};
+					
+					\node (sur) [startstop2 ,below of = end ,yshift=0cm,xshift=0cm] {$ \text{Firm X} $};
+					
+					\node (sur2) [startstop2,below of = end2 ,yshift=0cm,xshift=0cm] {$ \text{Firm Y} $};
+					
+					
+					\draw [arrow] (end) --(sur);
+					\draw [arrow] (end2) -- (sur2);
+					
+					
+					\draw [arrow] (CH) -- (sur);
+					\draw [arrow] (CH) -- (sur2);
+					
+					\draw [latex'-latex'] (sur) to [bend right =0]  node[sloped, anchor=center, below] {} (sur2);
+					
+					
+				\end{tikzpicture}
+		

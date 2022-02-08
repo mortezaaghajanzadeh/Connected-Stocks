@@ -88,19 +88,19 @@
 	
 	\section{Motivation}
 	
-	\begin{frame}{Co-movement and common ownership}
-		\begin{figure}
-			\centering  
-			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
-		\end{figure}
-	\end{frame}   
-	
-		\begin{frame}{Co-movement and common ownership}
-			\begin{figure}
-				\centering  
-				\includegraphics[width=0.85\linewidth]{"Output/mcorr5bg.eps"}
-			\end{figure}
-		\end{frame}   
+%	\begin{frame}{Co-movement and common ownership}
+%		\begin{figure}
+%			\centering  
+%			\includegraphics[width=0.85\linewidth]{"Output/mcorr50.eps"}
+%		\end{figure}
+%	\end{frame}   
+%	
+%		\begin{frame}{Co-movement and common ownership}
+%			\begin{figure}
+%				\centering  
+%				\includegraphics[width=0.85\linewidth]{"Output/mcorr5bg.eps"}
+%			\end{figure}
+%		\end{frame}   
 	
 	\begin{frame}{Motivation}
 		
@@ -323,7 +323,7 @@
 			\item 
 			We use daily records of block-holder ownership for firms
 			\item We are not restricted to mutual funds ownership
-			\item 85\% of market belongs to the business groups
+			\item 70\% of market belongs to the business groups
 			\begin{itemize}
 				\item Would business groups be able to raise the co-movement of stock returns?
 				\begin{itemize}
@@ -368,17 +368,11 @@
 					\end{tikzpicture}
 				\end{figure}
 			\bigskip
+			\pause
 				\item  Business group
+								\pause
 				\begin{columns}
-				\column{0.5\textwidth}
-				\pause
-				\begin{itemize}
-				
-				
-				\item In a business group, how can one pair be defined?			
-								
-				\end{itemize}
-				
+			
 				\column{0.5\textwidth}
 				\begin{figure}[htbp]
 					\centering
@@ -423,6 +417,17 @@
 				\end{tikzpicture}
 			}
 			\end{figure}
+			
+							\column{0.5\textwidth}
+							\pause
+							\begin{itemize}
+							
+							
+							\item In a business group, how can one pair be defined?			
+											
+							\end{itemize}
+							
+							
 				\end{columns}
 				
 			\end{itemize}
@@ -652,11 +657,199 @@
 		
 		
 		
+		\subsection{Measuring Common-ownership}
+	%	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
+	%			\begin{columns}[t]
+	%				\column{0.5\textwidth}  
+	%				\centering
+	%				Model based measures
+	%				\\
+	%				
+	%				\begin{itemize}
+	%					\item \color{blue} \scriptsize $
+	%					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
+	%					\normalcolor
+	%					\tiny 
+	%					
+	%					\cite{harford2011institutional}
+	%					
+	%					
+	%					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
+	%					
+	%					\cite{azar2018anticompetitive}
+	%					
+	%					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
+	%					
+	%					\cite{anton2020common} 
+	%					
+	%					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
+	%					
+	%					\cite{backus2020theory}
+	%					
+	%					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
+	%					
+	%					\cite{gilje2020s} , \cite{Lewellen2021}
+	%					
+	%					
+	%					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
+	%					
+	%					\cite{LEWELLEN2021b}
+	%					\normalsize
+	%					
+	%					
+	%					
+	%				\end{itemize}
+	%				
+	%				
+	%				\pause
+	%				\column{0.5\textwidth}
+	%				\centering
+	%				Ad-hoc measures
+	%				\begin{itemize}
+	%					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
+	%					\tiny\cite{AntonPolk} \\ 
+	%					
+	%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
+	%					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
+	%					
+	%					
+	%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
+	%					\tiny \cite{newham2018common}  \\ 
+	%					
+	%					
+	%					
+	%					
+	%					
+	%					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
+	%					
+	%					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
+	%					
+	%				\end{itemize}
+	%				
+	%			\end{columns}
+	%			\pause
+	%			\begin{block}{\scriptsize Selected measure }
+	%				\scriptsize
+	%				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
+	%			\end{block}
+	%			\hfill
+	%			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
+	%		\end{frame}
+	
+		\begin{frame}[t]{Measuring Common-ownership}\label{measure}
+					\begin{columns}
+					\scriptsize
+				\column{.5\textwidth}    
+				\centering  
+				\vspace{-1em}
+				\cite{AntonPolk}		
+				\vspace{0.5em}					
+									\begin{align*}\scriptsize
+										\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
+									\end{align*} 
+				\pause
+				\column{.5\textwidth}
+				\vspace{-1em}
+				\centering
+				SQRT
+								\vspace{0.2em}
+							\begin{align*}
+							\scriptsize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
+							\end{align*}     				         
+			\end{columns}
+		\pause
+	
+	\bigskip
+	\begin{columns}\scriptsize
+	\column{0.5\textwidth}
+						\begin{tikzpicture}[node distance=1cm]
+							
+							
+							\node (Firm) [startstop3] {\tiny Firm X};
+							\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+							\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
+							
+							\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm) ;
+							
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm2) ;
+							%
+							%\node() at (3,0)
+							%    {$ \alpha + \beta = 100 $}; 
+						\end{tikzpicture}
+	\[
+	\begin{array}{c}
+	\text{FCAP} = \frac{50\% + 50\%}{100\% + 100\%} = 0.5\\\\
+	\pause
+	\text{MFCAP} = \frac{\sqrt{50\%} + \sqrt{50\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.71
+	\end{array}
+	\]
+	\column{0.5\textwidth}
+						\begin{tikzpicture}[node distance=1cm]
+							
+							
+							\node (Firm) [startstop3] {\tiny Firm X};
+							\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
+							\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
+							
+							\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 10\% $} (Firm) ;
+							
+						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 90\% $} (Firm2) ;
+							%
+							%\node() at (3,0)
+							%    {$ \alpha + \beta = 100 $}; 
+						\end{tikzpicture}
+	\[
+	\begin{array}{c}
+	\text{FCAP} = \frac{90\% + 10\%}{100\% + 100\%} = 0.5\\\\
+	\text{MFCAP} = \frac{\sqrt{90\%} + \sqrt{10\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.63
+	\end{array}
+	\]
+	\end{columns}
+			
+		
+	
+							\hfill
+							\hyperlink{example}{\beamerbutton{More example}}
+		\end{frame}
+		
+		\begin{frame}{Measuring Common-ownership}
+			\begin{table}[htbp]
+									\centering
+									\resizebox{0.9\textwidth}{!}
+									{
+										\input{Output/FCACal.tex}  }          
+								\end{table}
+				
+					
+		\end{frame}
+		
+	%				\begin{frame}{MFCAP vs. FCAP Summary}
+	%					\begin{table}[htbp]
+	%						\centering
+	%						\resizebox{\textwidth}{!}
+	%						{
+	%							\input{Output/FCACal.tex}  }          
+	%					\end{table}%
+	%					\begin{block}{Results}
+	%						\small
+	%						\begin{itemize}
+	%							\item By the proposed measurement, common ownership increases
+	%							\item Common ownership is greater in pairs that  are in the same business group and insutry
+	%						\end{itemize}
+	%					\end{block}
+	%				\end{frame}
+			
+
+				
+				
+		
+
+		
 		
 		\begin{frame}{FCA's time series}
 			\begin{figure}
 				\centering  
-				\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries.eps"}
+				\includegraphics[width=0.9\linewidth]{"Output/FCAtimeSeries"}
 				
 			\end{figure} 
 		\end{frame}
@@ -666,14 +859,17 @@
 				\column{.5\textwidth}  
 				\begin{figure}
 					\centering  
-					\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG.eps"}
-					\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType.eps"}
+					\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesBG"}
+					\pause
+					\includegraphics[width=\linewidth]{"Output/FCAtimeSeriesPairType"}
+										\pause
 				\end{figure}    
 				\column{.5\textwidth}
 				\begin{figure}
 					\centering  
-					\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries.eps"}
-					\includegraphics[width=\linewidth]{"Output/ComovementtimeSeries.eps"}
+					\includegraphics[width=\linewidth]{"Output/FCAComparetimeSeries"}
+										\pause
+					\includegraphics[width=\linewidth]{"Output/ComovementtimeSeries"}
 				\end{figure}
 	          
 			\end{columns}
@@ -698,216 +894,34 @@
 	%\end{columns}
 	%\end{frame}
 	
-	
-	
-	
-		
-	
-	\subsection{Measuring Common-ownership}
-%	\begin{frame}{Common-ownership measurements}\label{mainmeasure}
-%			\begin{columns}[t]
-%				\column{0.5\textwidth}  
-%				\centering
-%				Model based measures
-%				\\
-%				
-%				\begin{itemize}
-%					\item \color{blue} \scriptsize $
-%					\text{HJL}_I^A(A,B) = \sum_{i\in I^{A,B}}\frac{\alpha_{i,B}}{\alpha_{i,A} + \alpha_{i,B}}     $  
-%					\normalcolor
-%					\tiny 
-%					
-%					\cite{harford2011institutional}
-%					
-%					
-%					\item \color{blue} \scriptsize$   \text{MHHI} = \sum_{j} \sum_k s_j s_k \frac{\sum_i \mu_{ij} \nu_{ik}}{\sum_i \mu_{ij} \nu_{ij}}   $ \tiny   \normalcolor
-%					
-%					\cite{azar2018anticompetitive}
-%					
-%					\item \color{blue} \scriptsize $   \text{Top5}_j = \frac{1}{n-1}\sum_i^5 \sum_{j\neq k} \nu_{ik}   $ \tiny \normalcolor 
-%					
-%					\cite{anton2020common} 
-%					
-%					\item \color{blue} \scriptsize $   \kappa_{ij} = \cos(\nu_i,\nu_j) . \sqrt{\frac{IHHI_j}{IHHI_i}}   $ \tiny \normalcolor 
-%					
-%					\cite{backus2020theory}
-%					
-%					\item \color{blue} \scriptsize$   \text{GGL}^A(A,B) = \sum_{i = 1}^{I} \alpha_{i,A}g(\beta_{i,A})\alpha_{i,B}   $ \tiny \normalcolor 
-%					
-%					\cite{gilje2020s} , \cite{Lewellen2021}
-%					
-%					
-%					\item \color{blue} \scriptsize $   \text{MHHI}_\text{Delta}= \sum_{j = 1}^{J} \sum_{k\neq j}^{K} \frac{\sum_{i = 1}^{N} w_j * w_k * \mu_{i,j} * \mu_{i,k}}{\sum_{i = 1}^{N}  \mu_{i,j} * \mu_{i,k} }  $ \tiny \normalcolor 
-%					
-%					\cite{LEWELLEN2021b}
-%					\normalsize
-%					
-%					
-%					
-%				\end{itemize}
-%				
-%				
-%				\pause
-%				\column{0.5\textwidth}
-%				\centering
-%				Ad-hoc measures
-%				\begin{itemize}
-%					\item \scriptsize \color{orange}  $   \text{Overlap}_{AP}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A}\frac{\bar{\nu}_A}{\bar{\nu}_A +\bar{\nu}_B } + \alpha_{i,B}\frac{\bar{\nu}_B}{\bar{\nu}_A +\bar{\nu}_B } $  \normalcolor\\
-%					\tiny\cite{AntonPolk} \\ 
-%					
-%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Count}{{(A,B)}}= \sum_{i\in I^{A,B}} 1 $  \normalcolor\\
-%					\tiny \cite{he2017product},\cite{he2019internalizing} \\ 
-%					
-%					
-%					\item \scriptsize\color{orange}  $   \text{Overlap}_{Min}(A,B)= \sum_{i\in I^{A,B}} min\{\alpha_{i,A},\alpha_{i,B}\} $  \normalcolor\\
-%					\tiny \cite{newham2018common}  \\ 
-%					
-%					
-%					
-%					
-%					
-%					\item \scriptsize\color{orange}  $   \text{Overlap}_{HL}(A,B)= \sum_{i\in I^{A,B}} \alpha_{i,A} \times \sum_{i\in I^{A,B}} \alpha_{i,B} $  \normalcolor\\
-%					
-%					\tiny \cite{hansen1996externalities} , \cite{freeman2019effects} \\ 
-%					
-%				\end{itemize}
-%				
-%			\end{columns}
-%			\pause
-%			\begin{block}{\scriptsize Selected measure }
-%				\scriptsize
-%				We need a pair-level measure, which is bi-directional, so we use the AP measure. 
-%			\end{block}
-%			\hfill
-%			\hyperlink{measuredetail}{\beamerbutton{Measues' detail}}
-%		\end{frame}
-
-	\begin{frame}{Measuring Common-ownership}\label{measure}
-				\begin{columns}
-				\scriptsize
-			\column{.5\textwidth}    
-			\centering  
-						\cite{AntonPolk}
-								\begin{align*}\scriptsize
-									\boxed{FCAP_{ij,t} = \frac{\sum_{f = 1}^{F} (S^f_{i,t}P_{i,t}+S^f_{j,t}P_{j,t})}{S_{i,t}P{i,t} + S_{j,t}P{j,t}}}
-								\end{align*} 
-%			\pause
-			\column{.5\textwidth}
-			\centering
-			SQRT
-						\begin{align*}
-						\scriptsize	\boxed{    MFCAP_{ij,t} =           [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P{i,t}} + \sqrt{S_{j,t}P{j,t}}}]^2 }
-						\end{align*}     				         
-		\end{columns}
-	\pause
-
-\bigskip
-\begin{columns}\scriptsize
-\column{0.5\textwidth}
-					\begin{tikzpicture}[node distance=1cm]
-						
-						
-						\node (Firm) [startstop3] {\tiny Firm X};
-						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
-						\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
-						
-						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm) ;
-						
-					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 50\% $} (Firm2) ;
-						%
-						%\node() at (3,0)
-						%    {$ \alpha + \beta = 100 $}; 
-					\end{tikzpicture}
-\[
-\begin{array}{c}
-\text{FCAP} = \frac{50\% + 50\%}{100\% + 100\%} = 0.5\\\\
-\text{MFCAP} = \frac{\sqrt{50\%} + \sqrt{50\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.71
-\end{array}
-\]
-\column{0.5\textwidth}
-					\begin{tikzpicture}[node distance=1cm]
-						
-						
-						\node (Firm) [startstop3] {\tiny Firm X};
-						\node (Firm2) [startstop3,right of = Firm , yshift=0cm , xshift=-5.5cm ] {\tiny Firm Y};
-						\node (Owner) [startstop3,right of = Firm , yshift=+1.5cm , xshift=-3.25cm ] {\tiny Common owner };
-						
-						\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 10\% $} (Firm) ;
-						
-					\draw[arrow] (Owner) -- node[sloped, anchor=center, above] {\tiny $ 90\% $} (Firm2) ;
-						%
-						%\node() at (3,0)
-						%    {$ \alpha + \beta = 100 $}; 
-					\end{tikzpicture}
-\[
-\begin{array}{c}
-\text{FCAP} = \frac{90\% + 10\%}{100\% + 100\%} = 0.5\\\\
-\text{MFCAP} = \frac{\sqrt{90\%} + \sqrt{10\%}}{\sqrt{100\%} + \sqrt{100\%}} = 0.63
-\end{array}
-\]
-\end{columns}
-		
-	
-
-						\hfill
-						\hyperlink{example}{\beamerbutton{More example}}
-	\end{frame}
-	
-	\begin{frame}{Measuring Common-ownership}
-		\begin{table}[htbp]
+					
+					\begin{frame}{MFCAP vs. FCAP Distributions}{Monthly}
+						\label{Monthly1}
+						\begin{columns}
+							\column{.33\textwidth}  
+							\begin{figure}
+								\centering  
+								\includegraphics[width=\linewidth]{"Output/MHistFCA.eps"}\\
+								\includegraphics[width=\linewidth]{"Output/MHistFCAP.eps"}
+							\end{figure}  
+						\pause   
+							\column{.33\textwidth}
+							\begin{figure}
+								\centering  
+								\includegraphics[width=\linewidth]{"Output/MHistlnFCA.eps"}\\
+								\includegraphics[width=\linewidth]{"Output/MHistlnFCAP.eps"}
+							\end{figure}
+						\pause
+							\column{.33\textwidth}
+							\begin{figure}   
 								\centering
-								\resizebox{0.9\textwidth}{!}
-								{
-									\input{Output/FCACal.tex}  }          
-							\end{table}
-			
-				
-	\end{frame}
+								\includegraphics[width=\linewidth]{"Output/MHistNFCA.eps"}  \\
+								\includegraphics[width=\linewidth]{"Output/MHistNFCAP.eps"}   \end{figure}            
+						\end{columns}
+					\end{frame}
 	
-%				\begin{frame}{MFCAP vs. FCAP Summary}
-%					\begin{table}[htbp]
-%						\centering
-%						\resizebox{\textwidth}{!}
-%						{
-%							\input{Output/FCACal.tex}  }          
-%					\end{table}%
-%					\begin{block}{Results}
-%						\small
-%						\begin{itemize}
-%							\item By the proposed measurement, common ownership increases
-%							\item Common ownership is greater in pairs that  are in the same business group and insutry
-%						\end{itemize}
-%					\end{block}
-%				\end{frame}
+	
 		
-			
-			\begin{frame}{MFCAP vs. FCAP Distributions}{Monthly}
-				\label{Monthly1}
-				\begin{columns}
-					\column{.33\textwidth}  
-					\begin{figure}
-						\centering  
-						\includegraphics[width=\linewidth]{"Output/MHistFCA.eps"}\\
-						\includegraphics[width=\linewidth]{"Output/MHistFCAP.eps"}
-					\end{figure}  
-				\pause   
-					\column{.33\textwidth}
-					\begin{figure}
-						\centering  
-						\includegraphics[width=\linewidth]{"Output/MHistlnFCA.eps"}\\
-						\includegraphics[width=\linewidth]{"Output/MHistlnFCAP.eps"}
-					\end{figure}
-				\pause
-					\column{.33\textwidth}
-					\begin{figure}   
-						\centering
-						\includegraphics[width=\linewidth]{"Output/MHistNFCA.eps"}  \\
-						\includegraphics[width=\linewidth]{"Output/MHistNFCAP.eps"}   \end{figure}            
-				\end{columns}
-			\end{frame}
-			
-			
-	
 	\subsection{Correlation Calculation}
 	\begin{frame}{Correlation Calculation}{4 Factor + Industry}
 		

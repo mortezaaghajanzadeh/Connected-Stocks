@@ -455,7 +455,7 @@ idMonth[idMonth.index > 60]
 
 fig = plt.figure(figsize=(8, 4))
 palette = sns.color_palette()[:2]
-g = sns.lineplot(data=df2, x="t_Month", y="Monthlyρ_5", hue="sBgroup", palette=palette)
+g = sns.lineplot(data=df2, x="t_Month", y="Monthlyρ_5", hue="sBgroup", palette=palette ,style="sBgroup")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -463,7 +463,10 @@ g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
 plt.ylabel("")
 plt.xlabel("Year-Month")
-plt.legend(["Others", "In the same BG"])
+new_labels = ["Others", "In the same BG"]
+# plt.legend(labels = new_labels)
+leg_handles = g.get_legend_handles_labels()[0]
+g.legend(leg_handles, new_labels , title='' )
 plt.margins(x=0.01)
 plt.title("Co-movement Time Series")
 fig.set_rasterized(True)
@@ -492,7 +495,7 @@ df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
 df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="PairType")
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="PairType",style="PairType")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -509,12 +512,15 @@ plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup", palette="tab10")
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup", palette="tab10",style="sBgroup")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
-plt.legend(["Others", "In the same BG"])
+new_labels = ["Others", "In the same BG"]
+# plt.legend(labels = new_labels)
+leg_handles = g.get_legend_handles_labels()[0]
+g.legend(leg_handles, new_labels , title='' ,loc='center left')
 plt.margins(x=0.01)
 plt.ylabel("")
 plt.xlabel("Year-Month")
@@ -526,8 +532,8 @@ plt.savefig(pathResult + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
 #%%
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA")
-sns.lineplot(data=df2, x="t_Month", y="MonthlyFCAPf")
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA",label = 'MFCAP')
+sns.lineplot(data=df2, x="t_Month", y="MonthlyFCAPf", linestyle="dashed", label = 'FCAP')
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -536,9 +542,9 @@ plt.margins(x=0.01)
 plt.ylabel("")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
-plt.legend(["FCA", "FCAP"])
 fig.set_rasterized(True)
 fig.tight_layout()
+# plt.legend(["MFCAP", "FCAP"])
 plt.savefig(pathResult + "\\FCAComparetimeSeries.eps", rasterized=True, dpi=300)
 plt.savefig(pathResult + "\\FCAComparetimeSeries.png", bbox_inches="tight")
 #%%
@@ -578,7 +584,7 @@ mlist = [
     "Monthlyρ_2",
     "Monthlyρ_4",
     "Monthlyρ_5",
-    "Monthlyρ_Residual_Bench",
+    # "Monthlyρ_Residual_Bench",
     # "Monthlyρ_5Lag",
 ]
 # tempt = df2[df2.Monthlyρ_2<0.9]

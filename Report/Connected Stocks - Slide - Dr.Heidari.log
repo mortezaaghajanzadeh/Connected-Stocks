@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  7 FEB 2022 08:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.9.14)  8 FEB 2022 09:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,44 +1159,6 @@ ocks - Slide - Dr.Heidari.toc)
 [2
 
 ]
-Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2022-01-03 14:56:55
-(epstopdf)                    size: 22057 bytes
-(epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 14:57:24
-(epstopdf)                    size: 13230 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
-ed-to.pdf Output/mcorr50.eps>
-(epstopdf)             \includegraphics on input line 96.
-Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=223, 397.485pt x 289.08pt>
-File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/mcorr50-eps-converted-to.pdf>
-Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
-e 96.
-(pdftex.def)             Requested size: 290.9531pt x 211.60889pt.
- [3
-
- <./Output/mcorr50-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2022-01-03 14:56:29
-(epstopdf)                    size: 29497 bytes
-(epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:54:59
-(epstopdf)                    size: 14973 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
-ted-to.pdf Output/mcorr5bg.eps>
-(epstopdf)             \includegraphics on input line 103.
-Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5bg-eps-converted-to.pdf, id=261, 397.485pt x 289.08pt>
-File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/mcorr5bg-eps-converted-to.pdf>
-Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
-ne 103.
-(pdftex.def)             Requested size: 290.9531pt x 211.60889pt.
- [4
-
- <./Output/mcorr5bg-eps-converted-to.pdf>]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 121
 .
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1215,11 +1177,95 @@ ut line 121.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[5
+[3
 
-] [6
+] [4
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [7
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [5
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+ [6
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+ [7
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1345,7 +1391,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ] in font nullfont!
- [10
+
+[10
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1429,8 +1476,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ] in font nullfont!
-
-[12
+ [12
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1516,145 +1562,115 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no ] in font nullfont!
  [14
 
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
- [15
-
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
- [16
-
-] [17
+] [15
 
 ] (./Connected Stocks - Slide - Dr.Heidari.toc)
+[16
+
+]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+[17
+
+]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
+
+
 [18
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 [19
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 434.
 
 
 [20
@@ -1672,139 +1688,95 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 429.
 
 ]
 Package epstopdf Info: Source file: <Output/idMonth.eps>
-(epstopdf)                    date: 2022-01-03 18:02:34
-(epstopdf)                    size: 58092 bytes
+(epstopdf)                    date: 2022-02-08 09:45:19
+(epstopdf)                    size: 58522 bytes
 (epstopdf)             Output file: <Output/idMonth-eps-converted-to.pdf>
 (epstopdf)                    date: 2022-01-10 07:54:59
 (epstopdf)                    size: 19628 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/idMonth-eps-convert
 ed-to.pdf Output/idMonth.eps>
-(epstopdf)             \includegraphics on input line 650.
-Package epstopdf Info: Output file is already uptodate.
-<Output/idMonth-eps-converted-to.pdf, id=1011, 904.37875pt x 511.9125pt>
+(epstopdf)             \includegraphics on input line 655.
+runsystem(repstopdf --outfile=Output/idMonth-eps-converted-to.pdf Output/idMont
+h.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Output/idMonth-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-01-10 07:54:59
+(epstopdf)                    size: 19628 bytes.
+<Output/idMonth-eps-converted-to.pdf, id=989, 904.37875pt x 511.9125pt>
 File: Output/idMonth-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/idMonth-eps-converted-to.pdf>
 Package pdftex.def Info: Output/idMonth-eps-converted-to.pdf  used on input lin
-e 650.
+e 655.
 (pdftex.def)             Requested size: 308.06367pt x 174.3682pt.
  [25
 
  <./Output/idMonth-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Output/FCAtimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:02:45
-(epstopdf)                    size: 15451045 bytes
-(epstopdf)             Output file: <Output/FCAtimeSeries-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-01-10 07:55:00
-(epstopdf)                    size: 143378 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeries-eps-c
-onverted-to.pdf Output/FCAtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 662.
-Package epstopdf Info: Output file is already uptodate.
-<Output/FCAtimeSeries-eps-converted-to.pdf, id=1083, 578.16pt x 289.08pt>
-File: Output/FCAtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/FCAtimeSeries-eps-converted-to.pdf>
-Package pdftex.def Info: Output/FCAtimeSeries-eps-converted-to.pdf  used on inp
-ut line 662.
-(pdftex.def)             Requested size: 308.06367pt x 154.0321pt.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+Overfull \hbox (1.80852pt too wide) detected at line 813
+[]
+ []
+
 [26
 
- <./Output/FCAtimeSeries-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Output/FCAtimeSeriesBG.eps>
-(epstopdf)                    date: 2022-01-03 18:02:59
-(epstopdf)                    size: 15451047 bytes
-(epstopdf)             Output file: <Output/FCAtimeSeriesBG-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2022-01-10 07:55:00
-(epstopdf)                    size: 128402 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeriesBG-eps
--converted-to.pdf Output/FCAtimeSeriesBG.eps>
-(epstopdf)             \includegraphics on input line 681.
-Package epstopdf Info: Output file is already uptodate.
-<Output/FCAtimeSeriesBG-eps-converted-to.pdf, id=1114, 578.16pt x 289.08pt>
-File: Output/FCAtimeSeriesBG-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/FCAtimeSeriesBG-eps-converted-to.pdf>
-Package pdftex.def Info: Output/FCAtimeSeriesBG-eps-converted-to.pdf  used on i
-nput line 681.
-(pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
-Package epstopdf Info: Source file: <Output/FCAtimeSeriesPairType.eps>
-(epstopdf)                    date: 2022-01-03 18:02:53
-(epstopdf)                    size: 15451053 bytes
-(epstopdf)             Output file: <Output/FCAtimeSeriesPairType-eps-converted
--to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
-(epstopdf)                    size: 299791 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/FCAtimeSeriesPairTy
-pe-eps-converted-to.pdf Output/FCAtimeSeriesPairType.eps>
-(epstopdf)             \includegraphics on input line 681.
-Package epstopdf Info: Output file is already uptodate.
-<Output/FCAtimeSeriesPairType-eps-converted-to.pdf, id=1115, 578.16pt x 289.08p
-t>
-File: Output/FCAtimeSeriesPairType-eps-converted-to.pdf Graphic file (type pdf)
+]
 
-<use Output/FCAtimeSeriesPairType-eps-converted-to.pdf>
-Package pdftex.def Info: Output/FCAtimeSeriesPairType-eps-converted-to.pdf  use
-d on input line 681.
-(pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
-Package epstopdf Info: Source file: <Output/FCAComparetimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:03:08
-(epstopdf)                    size: 15451052 bytes
-(epstopdf)             Output file: <Output/FCAComparetimeSeries-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
-(epstopdf)                    size: 202119 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/FCAComparetimeSerie
-s-eps-converted-to.pdf Output/FCAComparetimeSeries.eps>
-(epstopdf)             \includegraphics on input line 681.
-Package epstopdf Info: Output file is already uptodate.
-<Output/FCAComparetimeSeries-eps-converted-to.pdf, id=1116, 578.16pt x 289.08pt
->
-File: Output/FCAComparetimeSeries-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/FCAComparetimeSeries-eps-converted-to.pdf>
-Package pdftex.def Info: Output/FCAComparetimeSeries-eps-converted-to.pdf  used
- on input line 681.
-(pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
-Package epstopdf Info: Source file: <Output/ComovementtimeSeries.eps>
-(epstopdf)                    date: 2022-01-03 18:02:40
-(epstopdf)                    size: 15444356 bytes
-(epstopdf)             Output file: <Output/ComovementtimeSeries-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2022-01-10 07:55:00
-(epstopdf)                    size: 381458 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/ComovementtimeSerie
-s-eps-converted-to.pdf Output/ComovementtimeSeries.eps>
-(epstopdf)             \includegraphics on input line 681.
-Package epstopdf Info: Output file is already uptodate.
-<Output/ComovementtimeSeries-eps-converted-to.pdf, id=1117, 578.16pt x 289.08pt
->
-File: Output/ComovementtimeSeries-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/ComovementtimeSeries-eps-converted-to.pdf>
-Package pdftex.def Info: Output/ComovementtimeSeries-eps-converted-to.pdf  used
- on input line 681.
-(pdftex.def)             Requested size: 171.14764pt x 85.5734pt.
- [27
-
- <./Output/FCAtimeSeriesBG-eps-converted-to.pdf> <./Output/FCAtimeSeriesPairTyp
-e-eps-converted-to.pdf> <./Output/FCAComparetimeSeries-eps-converted-to.pdf> <.
-/Output/ComovementtimeSeries-eps-converted-to.pdf>]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-Overfull \hbox (1.80852pt too wide) detected at line 854
+Overfull \hbox (1.80852pt too wide) detected at line 813
+[]
+ []
+
+[27
+
+]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
+
+
+
+Overfull \hbox (1.80852pt too wide) detected at line 813
 []
  []
 
@@ -1812,29 +1784,130 @@ Overfull \hbox (1.80852pt too wide) detected at line 854
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 854.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 813.
 
 
 
-Overfull \hbox (1.80852pt too wide) detected at line 854
+Overfull \hbox (1.80852pt too wide) detected at line 813
 []
  []
 
 [29
 
 ] (./Output/FCACal.tex) [30
+
+]
+<Output/FCAtimeSeries.png, id=1217, 570.13pt x 281.05pt>
+File: Output/FCAtimeSeries.png Graphic file (type png)
+<use Output/FCAtimeSeries.png>
+Package pdftex.def Info: Output/FCAtimeSeries.png  used on input line 855.
+(pdftex.def)             Requested size: 308.06367pt x 151.85907pt.
+ [31
+
+ <./Output/FCAtimeSeries.png>]
+<Output/FCAtimeSeriesBG.png, id=1249, 570.13pt x 281.05pt>
+File: Output/FCAtimeSeriesBG.png Graphic file (type png)
+<use Output/FCAtimeSeriesBG.png>
+Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 877.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+<Output/FCAtimeSeriesPairType.png, id=1250, 570.13pt x 281.05pt>
+File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
+<use Output/FCAtimeSeriesPairType.png>
+Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 8
+77.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+<Output/FCAComparetimeSeries.png, id=1251, 570.13pt x 281.05pt>
+File: Output/FCAComparetimeSeries.png Graphic file (type png)
+<use Output/FCAComparetimeSeries.png>
+Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+<Output/ComovementtimeSeries.png, id=1252, 570.13pt x 281.05pt>
+File: Output/ComovementtimeSeries.png Graphic file (type png)
+<use Output/ComovementtimeSeries.png>
+Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+ [32
+
+ <./Output/FCAtimeSeriesBG.png> <./Output/FCAtimeSeriesPairType.png> <./Output/
+FCAComparetimeSeries.png> <./Output/ComovementtimeSeries.png>]
+File: Output/FCAtimeSeriesBG.png Graphic file (type png)
+<use Output/FCAtimeSeriesBG.png>
+Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 877.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
+<use Output/FCAtimeSeriesPairType.png>
+Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 8
+77.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAComparetimeSeries.png Graphic file (type png)
+<use Output/FCAComparetimeSeries.png>
+Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/ComovementtimeSeries.png Graphic file (type png)
+<use Output/ComovementtimeSeries.png>
+Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+ [33
+
+]
+File: Output/FCAtimeSeriesBG.png Graphic file (type png)
+<use Output/FCAtimeSeriesBG.png>
+Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 877.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
+<use Output/FCAtimeSeriesPairType.png>
+Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 8
+77.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAComparetimeSeries.png Graphic file (type png)
+<use Output/FCAComparetimeSeries.png>
+Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/ComovementtimeSeries.png Graphic file (type png)
+<use Output/ComovementtimeSeries.png>
+Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+ [34
+
+]
+File: Output/FCAtimeSeriesBG.png Graphic file (type png)
+<use Output/FCAtimeSeriesBG.png>
+Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 877.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
+<use Output/FCAtimeSeriesPairType.png>
+Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 8
+77.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/FCAComparetimeSeries.png Graphic file (type png)
+<use Output/FCAComparetimeSeries.png>
+Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+File: Output/ComovementtimeSeries.png Graphic file (type png)
+<use Output/ComovementtimeSeries.png>
+Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 87
+7.
+(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
+ [35
 
 ]
 Package epstopdf Info: Source file: <Output/MHistFCA.eps>
@@ -1845,13 +1918,13 @@ Package epstopdf Info: Source file: <Output/MHistFCA.eps>
 (epstopdf)                    size: 8640 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCA-eps-converted-to.pdf, id=1254, 397.485pt x 289.08pt>
+<Output/MHistFCA-eps-converted-to.pdf, id=1370, 397.485pt x 289.08pt>
 File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 907.
+ne 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:55:50
@@ -1861,13 +1934,13 @@ Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    size: 9350 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCAP-eps-converted-to.pdf, id=1255, 397.485pt x 289.08pt>
+<Output/MHistFCAP-eps-converted-to.pdf, id=1371, 397.485pt x 289.08pt>
 File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:56:13
@@ -1877,13 +1950,13 @@ Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    size: 9504 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCA-eps-converted-to.pdf, id=1256, 397.485pt x 289.08pt>
+<Output/MHistlnFCA-eps-converted-to.pdf, id=1372, 397.485pt x 289.08pt>
 File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:21
@@ -1893,13 +1966,13 @@ Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    size: 9399 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCAP-eps-converted-to.pdf, id=1257, 397.485pt x 289.08pt>
+<Output/MHistlnFCAP-eps-converted-to.pdf, id=1373, 397.485pt x 289.08pt>
 File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 907.
+ line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:55:58
@@ -1909,13 +1982,13 @@ Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    size: 8343 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCA-eps-converted-to.pdf, id=1258, 397.485pt x 289.08pt>
+<Output/MHistNFCA-eps-converted-to.pdf, id=1374, 397.485pt x 289.08pt>
 File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:05
@@ -1925,15 +1998,15 @@ Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    size: 8290 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCAP-eps-converted-to.pdf, id=1259, 397.485pt x 289.08pt>
+<Output/MHistNFCAP-eps-converted-to.pdf, id=1375, 397.485pt x 289.08pt>
 File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [31
+ [36
 
  <./Output/MHistFCA-eps-converted-to.pdf> <./Output/MHistFCAP-eps-converted-to.
 pdf> <./Output/MHistlnFCA-eps-converted-to.pdf> <./Output/MHistlnFCAP-eps-conve
@@ -1947,12 +2020,12 @@ Package epstopdf Info: Source file: <Output/MHistFCA.eps>
 (epstopdf)                    size: 8640 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 907.
+ne 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:55:50
@@ -1962,12 +2035,12 @@ Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    size: 9350 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:56:13
@@ -1977,12 +2050,12 @@ Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    size: 9504 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:21
@@ -1992,12 +2065,12 @@ Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    size: 9399 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 907.
+ line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:55:58
@@ -2007,12 +2080,12 @@ Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    size: 8343 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:05
@@ -2022,14 +2095,14 @@ Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    size: 8290 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [32
+ [37
 
 ]
 Package epstopdf Info: Source file: <Output/MHistFCA.eps>
@@ -2040,12 +2113,12 @@ Package epstopdf Info: Source file: <Output/MHistFCA.eps>
 (epstopdf)                    size: 8640 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 907.
+ne 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:55:50
@@ -2055,12 +2128,12 @@ Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
 (epstopdf)                    size: 9350 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:56:13
@@ -2070,12 +2143,12 @@ Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
 (epstopdf)                    size: 9504 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:21
@@ -2085,12 +2158,12 @@ Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
 (epstopdf)                    size: 9399 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 907.
+ line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    date: 2022-01-03 14:55:58
@@ -2100,12 +2173,12 @@ Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
 (epstopdf)                    size: 8343 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 907.
+ine 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    date: 2022-01-03 14:56:05
@@ -2115,26 +2188,26 @@ Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
 (epstopdf)                    size: 8290 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 907.
+(epstopdf)             \includegraphics on input line 921.
 Package epstopdf Info: Output file is already uptodate.
 File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 907.
+line 921.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [33
+ [38
 
 ]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 96
-5.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 97
+9.
 
-(./Output/CorrelationsResultsText.tex) [34
+(./Output/CorrelationsResultsText.tex) [39
 
-] [35
+] [40
 
 ]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [36
+(./Connected Stocks - Slide - Dr.Heidari.toc) [41
 
 ]
 Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
@@ -2145,12 +2218,13 @@ Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
 (epstopdf)                    size: 14973 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
 ted-to.pdf Output/mcorr5bg.eps>
-(epstopdf)             \includegraphics on input line 1093.
+(epstopdf)             \includegraphics on input line 1107.
 Package epstopdf Info: Output file is already uptodate.
+<Output/mcorr5bg-eps-converted-to.pdf, id=1596, 397.485pt x 289.08pt>
 File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5bg-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
-ne 1093.
+ne 1107.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
 (epstopdf)                    date: 2022-01-03 14:56:33
@@ -2160,23 +2234,24 @@ Package epstopdf Info: Source file: <Output/mcorr5l.eps>
 (epstopdf)                    size: 13181 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
-(epstopdf)             \includegraphics on input line 1093.
+(epstopdf)             \includegraphics on input line 1107.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5l-eps-converted-to.pdf, id=1480, 397.485pt x 289.08pt>
+<Output/mcorr5l-eps-converted-to.pdf, id=1597, 397.485pt x 289.08pt>
 File: Output/mcorr5l-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5l-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5l-eps-converted-to.pdf  used on input lin
-e 1093.
+e 1107.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
- [37
+ [42
 
- <./Output/mcorr5l-eps-converted-to.pdf>] (./Elements/Model11.tex) [38
+ <./Output/mcorr5bg-eps-converted-to.pdf> <./Output/mcorr5l-eps-converted-to.pd
+f>]
+(./Elements/Model11.tex) [43
+
+] (./Output/mresult2part1-slide.tex) [44
 
 ]
-(./Output/mresult2part1-slide.tex) [39
-
-] (./Output/mresult2part2-slide.tex)
-[40
+(./Output/mresult2part2-slide.tex) [45
 
 ]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
@@ -2188,15 +2263,15 @@ Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
 (epstopdf)                    size: 14646 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 1202.
+(epstopdf)             \includegraphics on input line 1216.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=1615, 397.485pt x 289.08
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=1743, 397.485pt x 289.08
 pt>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 1202.
+d on input line 1216.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
 (epstopdf)                    date: 2022-01-03 14:57:10
@@ -2207,34 +2282,35 @@ df>
 (epstopdf)                    size: 16074 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
 s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 1202.
+(epstopdf)             \includegraphics on input line 1216.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=1616, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=1744, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 1202.
+input line 1216.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
- [41
+ [46
 
  <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf> <./Output/Qmcorr5subsamp
-le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex)
-[42
-
-] (./Output/Q3mresultAllPairs.tex) [43
+le-eps-converted-to.pdf>]
+(./Output/QTimemresult2subsample-slide.tex) [47
 
 ]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [44
+(./Output/Q3mresultAllPairs.tex) [48
+
+]
+(./Connected Stocks - Slide - Dr.Heidari.toc) [49
 
 ] (./Output/turnover.tex)
-[45
+[50
 
-] (./Output/mresult2-turnover.tex) [46
+] (./Output/mresult2-turnover.tex) [51
 
 ] (./Output/turncomovement.tex)
-[47
+[52
 
-] (./Output/ResidualTrunSummary.tex) [48
+] (./Output/ResidualTrunSummary.tex) [53
 
 ]
 (./Output/ResidualTrunStdSummary.tex)
@@ -2247,20 +2323,20 @@ Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
 (epstopdf)                    size: 295077 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
-(epstopdf)             \includegraphics on input line 1330.
+(epstopdf)             \includegraphics on input line 1344.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=1885, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=2012, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
-ut line 1330.
+ut line 1344.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
- [49
+ [54
 
- <./Output/GroupedResSTD-eps-converted-to.pdf>] (./Output/LowRes.tex) [50
+ <./Output/GroupedResSTD-eps-converted-to.pdf>] (./Output/LowRes.tex) [55
 
 ] (./Output/ImbalanceInsMeanSummary.tex)
-[51
+[56
 
 ] (./Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
@@ -2272,141 +2348,141 @@ Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
 (epstopdf)                    size: 270309 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
-(epstopdf)             \includegraphics on input line 1438.
+(epstopdf)             \includegraphics on input line 1452.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=1979, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=2106, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 1438.
+ut line 1452.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
- [52
+ [57
 
- <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Output/Imbalance.tex) [53
+ <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Output/Imbalance.tex) [58
 
 ]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [54
+(./Connected Stocks - Slide - Dr.Heidari.toc) [59
 
-] [55
+] [60
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1473.
+(hyperref)                removing `\translate ' on input line 1487.
 
 (./Connected Stocks - Slide - Dr.Heidari.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1.
 
-) [56
-
-] [57
-
-
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [58
-
-] [59
-
-] [60
-
-]
-[61
+) [61
 
 ] [62
 
-]
-<Elements/1.png, id=2349, 494.8086pt x 299.6796pt>
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<Elements/2.png, id=2351, 494.3268pt x 300.1614pt>
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [63
 
- <./Elements/1.png> <./Elements/2.png>]
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [64
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [63
+
+] [64
+
+] [65
 
 ]
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1589.
-(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [65
-
-] [66
+[66
 
 ] [67
 
 ]
-[68
+<Elements/1.png, id=2477, 494.8086pt x 299.6796pt>
+File: Elements/1.png Graphic file (type png)
+<use Elements/1.png>
+Package pdftex.def Info: Elements/1.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
+<Elements/2.png, id=2478, 494.3268pt x 300.1614pt>
+File: Elements/2.png Graphic file (type png)
+<use Elements/2.png>
+Package pdftex.def Info: Elements/2.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
+ [68
 
-] [69
-
-] (./Elements/Example2.tex) [70
-
-] (./Elements/marketcap.tex) [71
+ <./Elements/1.png> <./Elements/2.png>]
+File: Elements/1.png Graphic file (type png)
+<use Elements/1.png>
+Package pdftex.def Info: Elements/1.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
+File: Elements/2.png Graphic file (type png)
+<use Elements/2.png>
+Package pdftex.def Info: Elements/2.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
+ [69
 
 ]
-<Elements/3.png, id=2611, 722.7pt x 360.3864pt>
-File: Elements/3.png Graphic file (type png)
-<use Elements/3.png>
-Package pdftex.def Info: Elements/3.png  used on input line 1674.
-(pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<Elements/4.png, id=2612, 723.1818pt x 359.9046pt>
-File: Elements/4.png Graphic file (type png)
-<use Elements/4.png>
-Package pdftex.def Info: Elements/4.png  used on input line 1674.
-(pdftex.def)             Requested size: 160.8792pt x 80.06342pt.
+File: Elements/1.png Graphic file (type png)
+<use Elements/1.png>
+Package pdftex.def Info: Elements/1.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
+File: Elements/2.png Graphic file (type png)
+<use Elements/2.png>
+Package pdftex.def Info: Elements/2.png  used on input line 1603.
+(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
+ [70
 
-[72
+] [71
 
- <./Elements/3.png> <./Elements/4.png>] (./Output/mresult2Polk-slide.tex)
+] [72
+
+]
 [73
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [74
+] [74
 
-] [75
+] (./Elements/Example2.tex) [75
 
-] [76
+] (./Elements/marketcap.tex) [76
+
+]
+<Elements/3.png, id=2737, 722.7pt x 360.3864pt>
+File: Elements/3.png Graphic file (type png)
+<use Elements/3.png>
+Package pdftex.def Info: Elements/3.png  used on input line 1688.
+(pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
+<Elements/4.png, id=2738, 723.1818pt x 359.9046pt>
+File: Elements/4.png Graphic file (type png)
+<use Elements/4.png>
+Package pdftex.def Info: Elements/4.png  used on input line 1688.
+(pdftex.def)             Requested size: 160.8792pt x 80.06342pt.
+
+[77
+
+ <./Elements/3.png> <./Elements/4.png>] (./Output/mresult2Polk-slide.tex)
+[78
+
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [79
+
+] [80
+
+] [81
 
 ]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
-85.
+99.
 
-[77
+[82
 
-] [78
-
-] [79
-
-] [80
-
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [81
-
-] [82
-
-]
-[83
+] [83
 
 ] [84
+
+] [85
+
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [86
+
+] [87
+
+]
+[88
+
+] [89
 
 ]
 \tf@nav=\write7
@@ -2418,24 +2494,24 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 17
 \tf@snm=\write9
 \openout9 = `"Connected Stocks - Slide - Dr.Heidari.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2342.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2342.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2356.
  (./Connected Stocks - Slide - Dr.Heidari.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2342.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2356.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Slide - Dr.Heidari".out'
  has not changed.
-(rerunfilecheck)             Checksum: A111CBA4A065E751B4E0EE4C5FA10712;1578.
+(rerunfilecheck)             Checksum: B773CFCBE1B484E66A11AC574C4C9571;1578.
  ) 
 Here is how much of TeX's memory you used:
- 26131 strings out of 480608
- 520982 string characters out of 5907536
- 818484 words of memory out of 5000000
- 41084 multiletter control sequences out of 15000+600000
+ 26134 strings out of 480608
+ 520455 string characters out of 5907536
+ 819316 words of memory out of 5000000
+ 41078 multiletter control sequences out of 15000+600000
  547909 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,21n,67p,823b,1214s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,21n,67p,823b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{mainmeasure} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2463,11 +2539,11 @@ exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/202
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (84 pages, 240562
-7 bytes).
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (89 pages, 143065
+5 bytes).
 PDF statistics:
- 3147 PDF objects out of 3580 (max. 8388607)
- 2907 compressed objects within 30 object streams
- 245 named destinations out of 1000 (max. 500000)
- 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3276 PDF objects out of 3580 (max. 8388607)
+ 3033 compressed objects within 31 object streams
+ 255 named destinations out of 1000 (max. 500000)
+ 407 words of extra memory for PDF output out of 10000 (max. 10000000)
 
