@@ -15,11 +15,11 @@
 	\label{mcorr50}
 \end{figure}
 	
-	We estimate a series of cross-sectional regression models in which the dependent variable is the within-month realized correlation ($\rho_{i,j,t+1}$) of abnormal returns of pairs of stocks. As explained in section \ref{comovement}, abnormal returns are the daily residuals of a model consisting of Fama-French four factors plus industry returns. We use $\textit{MFCA}^*_{ij,t}$, $\textit{Same Group}_{ij} $, and their interaction for our main analysis and other pair characteristics as controls:
+	We estimate a series of cross-sectional regression models in which the dependent variable is within-month realized correlation ($\rho_{i,j,t+1}$) of abnormal returns of stock pairs. As explained in section \ref{comovement}, abnormal returns are the daily residuals of a model consisting of Fama-French four factors plus industry returns. The main independent vairable of interest is our measure of common ownership, $\textit{MFCAP}^*_{ij,t}$. We are also interested in the effect of being part of the same business group,  $\textit{Same Group}_{ij} $, on stock return comovement.
 		\input{Elements/Model11}
 
 	
-	We estimate these regressions for each month and report the time-series average as in \cite{FamaMacBeth} to don't have any problem with cross-correlation in the residuals. We then use  \cite{newey1987hypothesis} to calculate standard errors of the Fama-MacBeth that take into account autocorrelation in the time series of cross-sectional estimates for four lags ($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
+	To mitigate the autocorrelation problem, we estimate the cross sectional regressions each month and report the time-series average as in \cite{FamaMacBeth}. We then use  \cite{newey1987hypothesis} to calculate standard errors of our Fama-MacBeth regressions by taking into account autocorrelation in the time series of cross-sectional estimates for four lags \textit{ paranthesis is not necessary }($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
 	
 	
 The estimated results are presented in panel table \ref{re1}. Panel \subref{mresult2part1} reports results from forcasting cross-sectional variation in comovement.
