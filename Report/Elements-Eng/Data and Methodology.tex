@@ -34,7 +34,7 @@ Panel \subref{t2-1} table \ref{st1} reports summary statistics for ownership and
 	
 	\normalcolor
 	
-	An important feature of common ownership in Iranian public sector is that its main driver seems to be ownership by business groups. This is in contrast to US data in which the rise in common ownership is generally attributed to passively managed funds such as index funds \textit{(add a sentence about the prevalnece of index funds in Iran}). We, therefore, also identify pairs based on whether the two firms belong to any and/or the same business groups. 
+	An important feature of common ownership in Iranian public sector is that its main driver seems to be ownership by business groups. This is in contrast to US data in which the rise in common ownership is generally attributed to passively managed funds such as index funds. Asset management industry, specially in the form of mutual funds or ETFs, is generally a young but growing industry in Iran and does not have a large presence in firms' ownership structure. We, therefore, also identify pairs based on whether the two firms belong to the same business groups. 
 	
 	If both firms in a pair belong to the same ultimate owner, we identify that firm pair as being in the same business group. The two firms in a pair could also belong to different business groups, or not be part of any business groups. Figure \ref{g2-1} illustrates all possibilities based on whether firm pairs belong to the same, different, or any business groups. In about one third of our pairs, neither of the two firms belong to any business groups, while in about 10 percent of our pairs, the two firms are part of the same business group. Panel \subref{t2-2} of table \ref{st1} reports summary statistics for firm pairs.
 	
@@ -118,7 +118,7 @@ where $ S^f_{i,t}$ is the number of shares held by owner \textit{f} in firm \tex
 
 %Modified measure represent the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed index will be equal to number of holders.
 
-To construct a monthly measure of common ownership for each firm pair, we calculate the measure introduced in equation \ref{sqrt} every trading day and take the average of the daily values over a month. We repeat the same process for constructing the measure in  (\cite{AntonPolk}. Panel \subref{measureResults} table \ref{st2} compares the distribution of common ownership measures for both methods. As we expected, the modified measure generates a wider distribution of values between the two common ownerhsip measures. The average common ownership measure is five times larger for firms that are in the same business group. This is consistent with our prior understadning of the ownerhisp structure in Iranian public sector in which business groups are one of the main drivers of common ownership. In addition, the average common ownership measure is three times larger for firms that are in the same industry. It is worth noting that firms that belong to the same business group tend to be in the same industry.
+To construct a monthly measure of common ownership for each firm pair, we calculate the measure introduced in equation \ref{sqrt} every trading day and take the average of the daily values over a month. We repeat the same process for constructing the measure in  (\cite{AntonPolk}. Panel \subref{measureResults} table \ref{st2} compares the distribution of common ownership measures for both methods. As we expected, the modified measure generates a wider distribution of values between the two common ownerhsip measures. The average common ownership measure is five times larger for firms that are in the same business group. This is consistent with our prior understadning of the ownerhisp structure in Iranian public sector in which business groups are one of the main drivers of common ownership. In addition, the average common ownership measure is three times larger for firms that are in the same industry. It is worth noting that firms that belong to the same business group tend to be in the same industry. Hence, as part of our analyses, we also study the impact of business groups on stock return comovement, which is to the best of our knowledge a novel contribution of our paper to the literature.
 %		\begin{table}[htbp]
 %			%	\centering
 %%			\toprule
@@ -142,7 +142,7 @@ To construct a monthly measure of common ownership for each firm pair, we calcul
 \subsection{{Stock Return comovement}}
 \label{comovement}
 
-	To measure the monthly stock return comovement for each firm pair at the end of each month, we first estimate our benchmark model using the past three months. Using the estimated coeffcients (betas), we then measure daily residuals and calculate the correlation of daily residuals (i.e. abnormal return) from equation (2) during each month. Benchmark for calculating abnormal return is the following equation which is a four-factor model plus industry return:
+	Since we are interested in studying the impact of common ownership as well as business groups on stcok return comovement and that firms in the same business groups in Iran tend to be from the same industry, we would ideally want to subtract the impact of industry return in calculating abnormal returns. In addition, we know from prior literature that stocks from the same industry tend to comove together(cite?). Therefore, we use Fama-French four-factor model plus industry return to calculate abnormal returns, as shown below in equation (2). To measure the monthly stock return comovement for each firm pair at the end of each month, we first estimate our benchmark model using the past three months. Using the estimated coeffcients (betas), we then measure daily residuals and calculate the correlation of daily residuals from equation (2) during each month. 
 	\begin{equation}
 		\begin{split}
 			R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \\
@@ -150,13 +150,7 @@ To construct a monthly measure of common ownership for each firm pair, we calcul
 		\end{split}
 		\label{e5Factor}
 	\end{equation}
-	where $ R_{i,t} $, $ R_{M,t} $ and $ R_{Ind,t} $ are firm, market and firm's industry excess daily, respectivly. Our proxy for risk free rate is bank deposit's daily rate. Other variabales difinition is based on Carhart four-factor model [\cite{Carhart4Factor}].
-	
-	.
-	
-	We use other benchmarks (CAPM, 4 Factor, and Benchmark\footnote{we follow \cite{daniel1997measuring} to control risk characteristics: abnormal returns are calculated using a stock’s daily return minus the average return of
-	the stock’s benchmark group, which is formed at every month’s end based on stocks’ capitalization and market-to-book ratio using the sample of all stocks}) for calculating a monthly correlation and report its summary in panel \subref{tCorr} table \ref{st2}. 
-	Our results are robust to using the other benchmark models.
+	where $ R_{i,t} $, $ R_{M,t} $ and $ R_{Ind,t} $ are firm, market and firm's industry excess daily, respectivly. Our proxy for risk free rate is bank deposit's daily rate. Other variabales difinition is based on Carhart four-factor model [\cite{Carhart4Factor}].Using other benchmark models (e.g. CAPM and Fama French four factor model) in calculating monthly correlations generate similar results and are reported in panel \subref{tCorr} table \ref{st2}. 
 	
 	
 	
@@ -178,12 +172,13 @@ To construct a monthly measure of common ownership for each firm pair, we calcul
 
 \subsection{Controls}
 
-We are interested in the effects of common ownership and business group on pair's comovement.
-Our prediction of a higher correlation for a connection dominates by stocks' intrinsic similarity, and these similarities motivate block-holders to hold these stocks simultaneously. These related stocks will comove regardless of who owns them.
+ Return comovement may be driven by stocks' intrinsinc similarities. We follow the literature (e.g. \cite{AntonPolk}) to control for potential drivers of stock return comovements which can be firm-specific as well as pair characteristitics. We separately control for size and book to market of both firms in a pair. Following \cite{AntonPolk}, we use the normalized rank-transform of the percentile market capitalization of the two stocks, \textbf{Size1} and \textbf{Size2}, where we label the
+larger stock in a pair as the first stock. Similarly, we control for the normalized rank-transform of the percentile book to market of the two stocks, \textbf{BM1} and \textbf{BM2}.
+We also control for whether firms in a pair are similar in size and book to market: \textbf{SameSize}, and \textbf{SameBM} are the negative of the absolute difference in percentile ranking of size and book to market, respetively, of the two stocks in a pair.
 
-The first group of controls is pair controls. These controls include
-a dummy variable for whether two stocks are in the same industry, \textbf{SameIndustry}; a dummy variable for whether two stocks are in the same business group, \textbf{SameGroup}.
-\input{Elements/sameindandsamebg}of pairs are in the same industry and business group. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between two firms in the following month.
+
+In addtition, we control for whether the two stocks are in the same industry and business group, \textbf{SameIndustry}, \textbf{SameGroup}, respectively. (\textit{I believe we mention somewhere earlier that about ten percent of our pairs are in the same group?})About
+\input{Elements/sameindandsamebg}of pairs are in the same industry and business group,  respectively. Furthermore, we control for cross-ownership between two stocks and define  \textbf{CrossOwnership} as the maximum percent of cross-ownership between the two firms in the following month\textit{ is there a particular reason for why this vairable is defined as forward looking?}.
 
 
 %	{\begin{table}[htbp]
@@ -196,12 +191,8 @@ a dummy variable for whether two stocks are in the same industry, \textbf{SameIn
 %	\end{table}}
 
 
-Another group of controls are firm-specific controls.  We define these variables base on  \cite{AntonPolk} methodology. One of these is size control based on the normalized rank-transform of the percentile market capitalization of the two stocks, \textbf{Size1} and \textbf{Size2} (where we label the
-larger stock in the pair as the first stock). The other one is a book to market ratio based on the normalized rank-transform of the percentile book to market of the two stocks, \textbf{BM1} and \textbf{BM2}.
-We also control these characteristics on a pair level. Our measures of similarity, \textbf{SameSize}, and \textbf{SameBM}, are the negative of the absolute difference in percentile ranking for a particular characteristic across a pair.
 
-
-We calculate our controls daily and then report the average of these variables for the entire period at the end of each month. Panel \subref{ControlsSummary} table \ref{st2} shows the summary statistics of specified controls in this section. In addition
+We construct our control variables daily and take the monthly averages as the value of each variable at the end of each month. Panel \subref{ControlsSummary} table \ref{st2} reports the summary statistics of our control variables.
 
 
 	\captionsetup[subtable]{labelformat=parens}
