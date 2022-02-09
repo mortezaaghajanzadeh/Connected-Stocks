@@ -306,13 +306,13 @@ label variable bigbusinessgroupSgroupFCA "$ {\text{BigGroup} } \times {\text{Sam
 
 
 gen bigbusinessgroupTurn = bigbusinessgroup * monthlyρ_turn
-label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times{\rho(\Delta \text{TurnOver})_t}  $ "
+label variable bigbusinessgroupTurn "$ {\text{BigGroup} } \times{\rho(\Delta \text{Turnover})_t}  $ "
 
 gen Turnsbgroup = sbgroup * monthlyρ_turn
-label variable Turnsbgroup "$ {\text{SameGroup} \times {\rho(\Delta \text{TurnOver})_t}$ "
+label variable Turnsbgroup "$ {\text{SameGroup} \times {\rho(\Delta \text{Turnover})_t}$ "
 
 gen TurnSgroupbigbusinessgroup = bigbusinessgroup * sbgroup * monthlyρ_turn
-label variable TurnSgroupbigbusinessgroup "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho(\Delta \text{TurnOver})_t} $ "
+label variable TurnSgroupbigbusinessgroup "$ {\text{BigGroup}}\times{\text{SameGroup}}\times  {\rho(\Delta \text{Turnover})_t} $ "
 
 summ sbgroup if bigbusinessgroupSgroup == 1
 
@@ -376,7 +376,7 @@ label variable gsize_y " $ {\text{Group Size}_2} $ "
  
 
 gen turnSbgroup = monthlyρ_turn_f * sbgroup
-label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{TurnOver})_{t+1}} $ "
+label variable turnSbgroup " $ \text{SameGroup} \times {\rho(\Delta \text{Turnover})_{t+1}} $ "
 
 
 
@@ -387,7 +387,7 @@ foreach var of varlist NMFCA sbgroup NMFCAG monthlyρ_5 monthlyρ_5_f monthlyρ_
   }
 
 label variable monthlyρ_5std " $ {\rho_t} / \sigma $ "
-label variable monthlyρ_turn_fstd " $ {\rho(\Delta \text{TurnOver})_t} / \sigma $ "
+label variable monthlyρ_turn_fstd " $ {\rho(\Delta \text{Turnover})_t} / \sigma $ "
   
 summ sbgroupstd
 
@@ -433,8 +433,8 @@ gen monthlyρ_4_f = f.monthlyρ_4
 
 capture drop monthlyρ_turn_f
 gen monthlyρ_turn_f = f.monthlyρ_turn
-label variable monthlyρ_turn " $ {\rho(\Delta \text{TurnOver})_t} $ "
-label variable monthlyρ_turn_f " $ {\rho(\Delta \text{TurnOver})_{t+1}} $ "
+label variable monthlyρ_turn " $ {\rho(\Delta \text{Turnover})_t} $ "
+label variable monthlyρ_turn_f " $ {\rho(\Delta \text{Turnover})_{t+1}} $ "
 
 
 

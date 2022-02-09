@@ -12,14 +12,14 @@
 \subsection{{Turnover}}
 
 
-	First, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm, we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{TurnOver}_{i,t} $, on changes in market turnover, $ \Delta\text{TurnOver}_{Market,t}   $ , changes in the industry and business group portfolio's turnover, $ \Delta\text{TurnOver}_{Ind,t} $ and  $\Delta \text{TurnOver}_{Group,t} $ and  ,as well as control variables.
-	We compute the daily change of turnover by this definition $ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $. 
+	First, we should show that stocks in groups have a similar daily trading behavior. Accordingly, We use the turnover measure as a daily trading measures. For each firm, we run time-series regressions of the firm's daily change in turnover, $ \Delta \text{Turnover}_{i,t} $, on changes in market turnover, $ \Delta\text{Turnover}_{Market,t}   $ , changes in the industry and business group portfolio's turnover, $ \Delta\text{Turnover}_{Ind,t} $ and  $\Delta \text{Turnover}_{Group,t} $ and  ,as well as control variables.
+	We compute the daily change of turnover by this definition $ \Delta \text{Turnover}_{i,t} = \ln(\frac{\text{Turnover}_{i,t}}{\text{Turnover}_{i,t-1}}) $. 
 	We estimate the following regression for each stock across trading days in a given year separately, and cross-sectional averages of the estimated coefficients are reported, with t-statistics in parentheses :
 	
 		\input{Elements/turnoverModel}
 	  We control for lead and lag changes in the two portfolios and the firm's measures and size. We estimate that model with \cite{FamaMacBeth} method and adjust its standard errors with \cite{newey1987hypothesis} for seven periods.  As shown in Table \ref{turnover}, firms' change in turnover comes from market reaction and group's change (This result is robust to the different methods of weighting for portfolios). This observation shows that firms in one group trade together each day. 
 	
-	Furthermore, we use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{TurnOver} $ for founded pairs and examine its relation with our variables. Panel \subref{mresult2-turnover} table \ref{re3} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study the effect of correlation of liquidity change on comovement for founded pairs in  panel \subref{turncomovement} table \ref{re3}. These results suggest that business groups yield to future comovement through correlated trading in that month.
+	Furthermore, we use our previous methodology to investigate these results. We calculate correlation of $ \Delta \text{Turnover} $ for founded pairs and examine its relation with our variables. Panel \subref{mresult2-turnover} table \ref{re3} reports the estimation result, which confirms that pairs in the business groups lead to correlated trade. In addition, we study the effect of correlation of liquidity change on comovement for founded pairs in  panel \subref{turncomovement} table \ref{re3}. These results suggest that business groups yield to future comovement through correlated trading in that month.
   
   
   
@@ -28,8 +28,8 @@
   
 {\begin{table}[htbp]
 	\centering
-	\caption{$\Delta \text{TurnOver}$ of firm and Business group\\
-	This table reports \cite{FamaMacBeth} estimates of daily change in turnover ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) for all the firms in the market. The independent variables are change in turnover for Market, Insudtry, and Business group for that day. We exclude firm's change from associated groups to prevent spurious correlations. We calculate \cite{newey1987hypothesis} standard errors (seveb lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. }
+	\caption{$\Delta \text{Turnover}$ of firm and Business group\\
+	This table reports \cite{FamaMacBeth} estimates of daily change in turnover ($ \Delta \text{Turnover}_{i,t} = \ln(\frac{\text{Turnover}_{i,t}}{\text{Turnover}_{i,t-1}}) $) for all the firms in the market. The independent variables are change in turnover for Market, Insudtry, and Business group for that day. We exclude firm's change from associated groups to prevent spurious correlations. We calculate \cite{newey1987hypothesis} standard errors (seveb lags) of the \cite{FamaMacBeth} estimates that take into account autocorrelation in the cross-sectional slopes. We report the associated t-statistics in parentheses. }
 		\label{turnover}
 	\resizebox{!}{!}{
 		\input{Output/turnover.tex}
@@ -42,7 +42,7 @@
 		\caption{Simultaneous trade and Comovement\\ \small
 			This table reports \cite{FamaMacBeth} estimates of the pairwise correlation in liquidity for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as same as in the table \ref{re1}. We report the associated t-statistics in parentheses. Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of common ownership and business group in Panel \subref{mresult2-turnover}. Panel \subref{turncomovement} shows the estimation result for investigating the effect of commonality in liquidity and comovement. }
 		\label{re3}
-\subcaption{Correlation of $ \Delta \text{TurnOver} $ and interested variables}
+\subcaption{Correlation of $ \Delta \text{Turnover} $ and interested variables}
 		\label{mresult2-turnover}
 		
 		\resizebox{\textwidth}{!}{
@@ -50,7 +50,7 @@
 			\input{Output/mresult2-turnover.tex}
 		}
 		\bigskip
-		\subcaption{Correlation of $ \Delta \text{TurnOver} $ and Comovement }
+		\subcaption{Correlation of $ \Delta \text{Turnover} $ and Comovement }
 		\label{turncomovement}
 		\resizebox{\textwidth}{!}{
 			\centering
@@ -145,7 +145,7 @@ Although we provide evidence for simultaneous trade in the last section, we shou
 		\begin{table}[htbp]
 			\centering
 	\caption{Turnover and Imbalance and Comovement\\ \small
-				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the comovement for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as in the table \ref{re1}. We also define two dummy variables for the firm's presence in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{TurnOver}$ ($ \Delta \text{TurnOver}_{i,t} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) $) is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
+				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the comovement for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as in the table \ref{re1}. We also define two dummy variables for the firm's presence in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{Turnover}$ ($ \Delta \text{Turnover}_{i,t} = \ln(\frac{\text{Turnover}_{i,t}}{\text{Turnover}_{i,t-1}}) $) is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
 				\label{re4}
 				\subcaption{Low Turnover residual std groups and Comovement}
 				\label{Turnovercrosssection}	
