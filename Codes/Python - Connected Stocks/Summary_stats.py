@@ -461,7 +461,7 @@ tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-plt.ylabel("")
+plt.ylabel(r'$\rho$')
 plt.xlabel("Year-Month")
 new_labels = ["Others", "In the same BG"]
 # plt.legend(labels = new_labels)
@@ -482,7 +482,7 @@ g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
 
-plt.ylabel("")
+plt.ylabel("MFCAP")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
@@ -501,7 +501,7 @@ tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-plt.ylabel("")
+plt.ylabel("MFCAP")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
@@ -522,7 +522,7 @@ new_labels = ["Others", "In the same BG"]
 leg_handles = g.get_legend_handles_labels()[0]
 g.legend(leg_handles, new_labels , title='' ,loc='center left')
 plt.margins(x=0.01)
-plt.ylabel("")
+plt.ylabel("MFCAP")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
@@ -539,7 +539,7 @@ tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-plt.ylabel("")
+plt.ylabel("Common Ownership")
 plt.xlabel("Year-Month")
 plt.title("Common Ownership Time Series")
 fig.set_rasterized(True)
