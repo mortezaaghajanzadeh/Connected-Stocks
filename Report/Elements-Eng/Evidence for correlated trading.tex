@@ -61,21 +61,21 @@
 \restoregeometry
 
 
-Besides, we have to directly show that firms within correlated turnover groups have a higher level of comovement. So, we extract the annual average level of firms and monthly turnover for each month. We assume that the residual of the model belongs to the business groups. We expect firms in the groups to have a lower dispersion in their residuals than other firms, and firms in the low dispersion groups comove more than others. We calculate firms' residuals by the mentioned hypothesis. Its summary stats is in panel \subref{tab:ResidualTrunSummary} table \ref{st3}. After that, we calculate the standard error of calculated residuals in each business group. Groups' standard errors description is shown in  panel \subref{tab:ResidualTrunStdSummary} table \ref{st3} and time series in in figure \ref{fig:GroupedResSTD}. On average, the affiliated firms' standard error is lower than unaffiliated ones. As we expected, residuals in business groups have a lower dispersion than others. For finding the relation between these groups and comovement, we define a dummy variable for groups in the low level of standard error, which is lower than the median of each period. We use this dummy variable to study our connection. Panel \subref{Turnovercrosssection} table \ref{re4} reports our estimation result and shows that pairs in the business groups of low dispersion have a higher level of comovement than other firms. For analysis, we restrict our investigations to a subsample of \textit{Same Group} and others and estimate our desired variable.   Also, we use the interaction of \textit{Same Group} with our dummy variable for the full sample, which confirmed our prior results. 
+Besides, we have to directly show that firms within correlated turnover groups have a higher level of comovement. So, we extract the annual average level of firms and monthly turnover for each month and also a monthly average of industry turnover. We assume that the model's residual (abnormal turnover) belongs to the business groups. We expect firms in the groups to have a lower dispersion in their abnormal turnover than other firms, and firms in the low dispersion groups comove more than others. We calculate firms' abnormal turnover by the mentioned hypothesis. Its summary stats is in panel \subref{tab:ResidualTrunSummary} table \ref{st3}. After that, we calculate the standard error of calculated abnormal turnover in each business group. Groups' standard errors description is shown in  panel \subref{tab:ResidualTrunStdSummary} table \ref{st3} and time series in in figure \ref{fig:GroupedResSTD}. On average, the affiliated firms' standard error is lower than unaffiliated ones. As expected, abnormal turnover in business groups has a lower dispersion than others. For finding the relation between these groups and comovement, we define a dummy variable for groups in the low level of standard error, which is lower than the median of each period. We use this dummy variable to study our connection. Panel \subref{Turnovercrosssection} table \ref{re4} reports our estimation result and shows that pairs in the business groups of low dispersion have a higher level of comovement than other firms. For analysis, we restrict our investigations to a subsample of \textit{Same Group} and others and estimate our desired variable.   Also, we use the interaction of \textit{Same Group} with our dummy variable for the full sample, which confirmed our prior results. 
 
 
 {			\begin{table}[htbp]
 \caption{Summary statistics}
 \label{st3}
 	\centering
-	\subcaption{Frims' Monthly residuals}
+	\subcaption{Frims' Monthly Abnormal Turnover}
 	\label{tab:ResidualTrunSummary}
 	\resizebox{\textwidth}{!}{
 		\input{Output/ResidualTrunSummary.tex}
 	}
 	\bigskip
 			\centering
-			\subcaption{Groups' Monthly residuals' standard erros}
+			\subcaption{Groups' Monthly Abnormal Turnover' standard erros}
 			\label{tab:ResidualTrunStdSummary}
 			\resizebox{\textwidth}{!}{
 				\input{Output/ResidualTrunStdSummary.tex}
@@ -87,7 +87,7 @@ Besides, we have to directly show that firms within correlated turnover groups h
 	\centering
 	\includegraphics[width=0.85\linewidth]{Output/GroupedResSTD.eps}
 
-	\caption{Time series of standard errors in residuals of Turnover for groups}
+	\caption{Time series of standard errors in abnormal turnover for groups}
 	\label{fig:GroupedResSTD}
 \end{figure}
 
@@ -102,7 +102,7 @@ Besides, we have to directly show that firms within correlated turnover groups h
 %
 \subsection{{Institutional Imbalance}}
 
-Although we provide evidence for simultaneous trade in the last section, we should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $ [\cite{seasholes2007predictable}]). We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate monthly institutional imbalances for firms at the first step. As we expected, firms in the business groups have a lower level of standard error in imbalances (Panel \subref{tab:ImbalanceInsStdSummary} table\ref{st4}). Then, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. The standard error is  $12.2\%$ and significantly (with a p-value of 0) lower than ungrouped firms. 
+Although we provide evidence for simultaneous trade in the last section, we should show that stocks in groups that trade together are traded in the same direction. So, for each firm, we calculate daily institutional imbalances, which is the net buying value of institutional investors relative to total traded value on that day ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $ [\cite{seasholes2007predictable}]). We expect that institutional imbalances have a lower variation in groups due to the correlated tradings that the ultimate owner ordered to do. So, we calculate monthly institutional imbalances for firms at the first step. As we expected, firms in the business groups have a lower level of standard error in imbalances (Panel \subref{tab:ImbalanceInsStdSummary} table\ref{st4}). Then, we calculate the monthly standard deviation of the group's imbalances and compare them to unaffiliated ones. The standard error is  $12.2\%$ and significantly (with a t-stats of 4.2) lower than ungrouped firms. 
 		
 	{\begin{table}[htbp]
 	\caption{Summary statistics}
@@ -124,7 +124,7 @@ Although we provide evidence for simultaneous trade in the last section, we shou
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.85\linewidth]{Output/GroupedInsSTD.eps}
-				\caption{Time series of standard errors in Imbalance for groups}
+				\caption{Time series of standard errors in imbalance for groups}
 		\label{fig:GroupedInsSTD}
 	\end{figure}
 	
@@ -147,7 +147,7 @@ Although we provide evidence for simultaneous trade in the last section, we shou
 	\caption{Turnover and Imbalance and Comovement\\ \small
 				This table reports \cite{FamaMacBeth} estimates of monthly cross-sectional regressions forecasting the comovement for the sample of stocks defined in Table \ref{st1}. Other methods and definitions of variables are as in the table \ref{re1}. We also define two dummy variables for the firm's presence in the particular group. LowTurnoverStd is a dummy variable for groups in which the standard error of $\Delta \text{Turnover}$ ($ \Delta \text{Turnover}_{i,t} = \ln(\frac{\text{Turnover}_{i,t}}{\text{Turnover}_{i,t-1}}) $) is lower than the median of each period and LowImbalanceStd for a group with low dispersion in institutional imbalances ($ \text{InsImb} = \frac{\text{Buy}_{\text{value}} - \text{Sell}_{\text{value}}}{\text{Buy}_{\text{value}} + \text{Sell}_{\text{value}}} $). Controls not shown here are reported in the Internet Appendix. We report estimates of regressions using variables to investigate the effect of Turnover and Imbalance in Panel \subref{Turnovercrosssection} and Panel \subref{Imbalance}.}
 				\label{re4}
-				\subcaption{Low Turnover residual std groups and Comovement}
+				\subcaption{Low Abnormal Turnover std groups and Comovement}
 				\label{Turnovercrosssection}	
 			\resizebox{\textwidth}{!}{
 				\centering

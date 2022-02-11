@@ -48,12 +48,6 @@ Carhart, M.~M. (1997).
 \newblock On persistence in mutual fund performance.
 \newblock {\em The Journal of Finance}, 52(1):57--82.
 
-\bibitem[Daniel et~al., 1997]{daniel1997measuring}
-Daniel, K., Grinblatt, M., Titman, S., and Wermers, R. (1997).
-\newblock Measuring mutual fund performance with characteristic-based
-  benchmarks.
-\newblock {\em The Journal of finance}, 52(3):1035--1058.
-
 \bibitem[David and Simonovska, 2016]{david2016correlated}
 David, J.~M. and Simonovska, I. (2016).
 \newblock Correlated beliefs, returns, and stock market volatility.
@@ -146,6 +140,11 @@ Khanna, T. and Yafeh, Y. (2007).
 \newblock Business groups in emerging markets: Paragons or parasites?
 \newblock {\em Journal of Economic literature}, 45(2):331--372.
 
+\bibitem[King, 1966]{king1966market}
+King, B.~F. (1966).
+\newblock Market and industry factors in stock price behavior.
+\newblock {\em the Journal of Business}, 39(1):139--190.
+
 \bibitem[Koch et~al., 2016]{Liquidity2016}
 Koch, A., Ruenzi, S., and Starks, L. (2016).
 \newblock {Commonality in Liquidity: A Demand-Side Explanation}.
@@ -155,6 +154,12 @@ Koch, A., Ruenzi, S., and Starks, L. (2016).
 Lewellen, K. and Lowry, M. (2021).
 \newblock Does common ownership really increase firm coordination?
 \newblock {\em Journal of Financial Economics}.
+
+\bibitem[Meyers, 1973]{meyers1973re}
+Meyers, S.~L. (1973).
+\newblock A re-examination of market and industry factors in stock price
+  behavior.
+\newblock {\em The Journal of Finance}, 28(3):695--705.
 
 \bibitem[Newey and West, 1987]{newey1987hypothesis}
 Newey, W.~K. and West, K.~D. (1987).
