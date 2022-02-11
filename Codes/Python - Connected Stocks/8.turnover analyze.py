@@ -367,9 +367,9 @@ g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
 
-plt.ylabel("")
+plt.ylabel("Standard error")
 plt.xlabel("Year-Month")
-plt.title("Monthly standard error of residual of monthly turnover")
+plt.title("Monthly standard error of abnormal monthly turnover")
 plt.legend(
     [
         "Ungrouped",
