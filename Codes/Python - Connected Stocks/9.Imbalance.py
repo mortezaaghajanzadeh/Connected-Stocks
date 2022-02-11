@@ -361,7 +361,7 @@ plt.margins(x=0.01)
 
 plt.ylabel("Standard error")
 plt.xlabel("Year-Month")
-plt.title("Monthly standard errors' Time Series of Abnormal Institutional Imbalance")
+plt.title("Monthly standard errors' Time Series of Institutional Imbalance")
 plt.legend(["Ungrouped", "Grouped"])
 fig.set_rasterized(True)
 plt.savefig(pathR + "\\GroupedInsSTD.eps", rasterized=True, dpi=300)
