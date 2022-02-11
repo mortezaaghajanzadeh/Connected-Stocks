@@ -432,18 +432,25 @@ labels = idMonth.yearmonth.to_list()
 tickvalues = idMonth.t_Month
 
 idMonth = idMonth.rename(
-    columns={0: "Not Same Group", 1: "Same Group", 3: "Not in Groups"}
+    columns={0: "In two distinct group", 1: "In the Same Group", 3: "Not in Groups"}
 )
 
+idMonth = idMonth.reset_index(
+    drop = True
+    ).drop(
+        columns = ['level_1']
+        )
 idMonth = idMonth.set_index("t_Month")
+idMonth.index.names = [None]
+
 idMonth.plot.area(
-    y=["Same Group", "Not Same Group", "Not in Groups"], figsize=(15, 8), stacked=True
+    y=["In the Same Group", "In two distinct group", "Not in Groups"], figsize=(15, 8), stacked=True
 )
 plt.margins(x=0.001)
 plt.xticks(ticks=tickvalues[::-2], labels=labels[::-2], rotation="vertical")
 plt.ylabel("Number")
 plt.xlabel("Year-Month")
-plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
+# plt.legend(["In the Same Group", "In two distinct group", "Not in Groups"])
 # plt.title("Number of unique pair in each month")
 plt.savefig(pathResult + "idMonth.eps", bbox_inches="tight")
 plt.savefig(pathResult + "idMonth.png", bbox_inches="tight")
