@@ -392,15 +392,13 @@ label variable monthlyρ_turn_fstd " $ {\rho(\Delta \text{Turnover})_t} / \sigma
 summ sbgroupstd
 
 
-gen rankedFCA = 1
+gen rankedFCA = 0
 
-replace rankedFCA = 2 if fcaperncentilerank >0.2
+replace rankedFCA = 1 if fcaperncentilerank >0.25
 
-replace rankedFCA = 3 if fcaperncentilerank >0.4
+replace rankedFCA = 2 if fcaperncentilerank >0.5
 
-replace rankedFCA = 4 if fcaperncentilerank >0.6
-
-replace rankedFCA = 5 if fcaperncentilerank >0.8
+replace rankedFCA = 3 if fcaperncentilerank >0.75
 
 
 

@@ -133,8 +133,8 @@ tempt = tempt.drop(
     }
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
-tempt['Average'] = tempt.mean(axis=1).astype(int)
-tempt.to_latex(pathResult + "summaryOfOwnership.tex", column_format='lccccccc')
+tempt["Average"] = tempt.mean(axis=1).astype(int)
+tempt.to_latex(pathResult + "summaryOfOwnership.tex", column_format="lccccccc")
 tempt
 #%%
 
@@ -154,7 +154,6 @@ tempt
 #         t.cell(i+1,j).text = str(tempt.values[i,j])
 
 # doc.save(pathWord+'/test.docx')
-
 
 
 #%%
@@ -379,19 +378,23 @@ mlist = [
     # "Med. Block. Ownership",
 ]
 tempt = tempt[mlist].set_index("Year")
-tempt['Ave. Number of Common owner'] = tempt['Ave. Number of Common owner'].astype(float).round(2)
+tempt["Ave. Number of Common owner"] = (
+    tempt["Ave. Number of Common owner"].astype(float).round(2)
+)
 tempt = tempt.T
-tempt['Average'] = tempt.mean(axis=1)
+tempt["Average"] = tempt.mean(axis=1)
 tempt = tempt.T
 
 
-tempt['Ave. Number of Common owner'] = tempt['Ave. Number of Common owner'].astype(float).round(2)
+tempt["Ave. Number of Common owner"] = (
+    tempt["Ave. Number of Common owner"].astype(float).round(2)
+)
 tempt = tempt.T
-for n,i in enumerate( tempt.Average):
-    if n <4:
-        tempt.iloc[n,-1] = int(i)
+for n, i in enumerate(tempt.Average):
+    if n < 4:
+        tempt.iloc[n, -1] = int(i)
     print(i)
-tempt.to_latex(pathResult + "summaryOfPairs.tex", column_format='lccccccc')
+tempt.to_latex(pathResult + "summaryOfPairs.tex", column_format="lccccccc")
 tempt
 #%%
 
@@ -435,22 +438,20 @@ idMonth = idMonth.rename(
     columns={0: "In two distinct group", 1: "In the Same Group", 3: "Not in Groups"}
 )
 
-idMonth = idMonth.reset_index(
-    drop = True
-    ).drop(
-        columns = ['level_1']
-        )
+idMonth = idMonth.reset_index(drop=True).drop(columns=["level_1"])
 idMonth = idMonth.set_index("t_Month")
 idMonth.index.names = [None]
 
 idMonth.plot.area(
-    y=["In the Same Group", "In two distinct group", "Not in Groups"], figsize=(15, 8), stacked=True
+    y=["In the Same Group", "In two distinct group", "Not in Groups"],
+    figsize=(15, 8),
+    stacked=True,
 )
 plt.margins(x=0.001)
 plt.xticks(ticks=tickvalues[::-2], labels=labels[::-2], rotation="vertical")
 plt.ylabel("Number")
 plt.xlabel("Year-Month")
-plt.legend(title = "")
+plt.legend(title="")
 # plt.title("Number of unique pair in each month")
 plt.savefig(pathResult + "idMonth.eps", bbox_inches="tight")
 plt.savefig(pathResult + "idMonth.png", bbox_inches="tight")
@@ -462,18 +463,25 @@ idMonth[idMonth.index > 60]
 
 fig = plt.figure(figsize=(8, 4))
 palette = sns.color_palette()[:2]
-g = sns.lineplot(data=df2, x="t_Month", y="Monthlyρ_5", hue="sBgroup", palette=palette ,style="sBgroup")
+g = sns.lineplot(
+    data=df2,
+    x="t_Month",
+    y="Monthlyρ_5",
+    hue="sBgroup",
+    palette=palette,
+    style="sBgroup",
+)
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
 g.set_xticklabels(labels[::-5], rotation="vertical")
 plt.margins(x=0.01)
-plt.ylabel(r'$\rho$')
+plt.ylabel(r"$\rho$")
 plt.xlabel("Year-Month")
 new_labels = ["Others", "In the same BG"]
 # plt.legend(labels = new_labels)
 leg_handles = g.get_legend_handles_labels()[0]
-g.legend(leg_handles, new_labels , title='' )
+g.legend(leg_handles, new_labels, title="")
 plt.margins(x=0.01)
 plt.title("Co-movement Time Series")
 fig.set_rasterized(True)
@@ -502,7 +510,9 @@ df2.loc[(df2.GRank_x < 5) & (df2.GRank_y < 5), "PairType"] = "Small"
 df2.loc[(df2.GRank_x >= 5) & (df2.GRank_y >= 5), "PairType"] = "Large"
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="PairType",style="PairType")
+g = sns.lineplot(
+    data=df2, x="t_Month", y="MonthlyFCA", hue="PairType", style="PairType"
+)
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -519,7 +529,14 @@ plt.savefig(pathResult + "\\FCAtimeSeriesPairType.png", bbox_inches="tight")
 
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", hue="sBgroup", palette="tab10",style="sBgroup")
+g = sns.lineplot(
+    data=df2,
+    x="t_Month",
+    y="MonthlyFCA",
+    hue="sBgroup",
+    palette="tab10",
+    style="sBgroup",
+)
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -527,7 +544,7 @@ g.set_xticklabels(labels[::-5], rotation="vertical")
 new_labels = ["Others", "In the same BG"]
 # plt.legend(labels = new_labels)
 leg_handles = g.get_legend_handles_labels()[0]
-g.legend(leg_handles, new_labels , title='' ,loc='center left')
+g.legend(leg_handles, new_labels, title="", loc="center left")
 plt.margins(x=0.01)
 plt.ylabel("MFCAP")
 plt.xlabel("Year-Month")
@@ -539,8 +556,8 @@ plt.savefig(pathResult + "\\FCAtimeSeriesBG.png", bbox_inches="tight")
 #%%
 fig = plt.figure(figsize=(8, 4))
 
-g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA",label = 'MFCAP')
-sns.lineplot(data=df2, x="t_Month", y="MonthlyFCAPf", linestyle="dashed", label = 'FCAP')
+g = sns.lineplot(data=df2, x="t_Month", y="MonthlyFCA", label="MFCAP")
+sns.lineplot(data=df2, x="t_Month", y="MonthlyFCAPf", linestyle="dashed", label="FCAP")
 labels = Monthtime.yearmonth.to_list()
 tickvalues = Monthtime.t_Month
 g.set_xticks(range(len(tickvalues))[::-5])  # <--- set the ticks first
@@ -704,9 +721,9 @@ tempt = (
         }
     )
 ).T
-tempt.index = tempt.reset_index()['index'].apply(
-    lambda x: x.replace("BookToMarket","BM")
-    )
+tempt.index = tempt.reset_index()["index"].apply(
+    lambda x: x.replace("BookToMarket", "BM")
+)
 tempt.index.name = None
 tempt.to_latex(pathResult + "ControlsSummary.tex")
 tempt
@@ -801,14 +818,14 @@ a = a[~a["index"].isin(["25%", "75%"])]
 a.loc[a["index"] == "50%", "index"] = "median"
 a = (
     a.set_index(["variable", "index"])
-    .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")]
-            ).reset_index()
+    .T.drop(columns=[("MonthlyFCA", "variable"), ("MonthlyFCAPf", "variable")])
+    .reset_index()
     .rename(columns={"index": "subset"})
     .set_index("subset")
 )
 
 a = a.T.reset_index().replace("MonthlyFCAPf", "FCAP").replace("MonthlyFCA", "MFCAP")
-a = a.rename(columns = {'index': 'stats'}).set_index(['variable', 'stats']).T
+a = a.rename(columns={"index": "stats"}).set_index(["variable", "stats"]).T
 a.to_latex(pathResult + "FCACal.tex")
 a
 # %%
