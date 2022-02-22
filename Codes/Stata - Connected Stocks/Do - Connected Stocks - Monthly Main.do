@@ -1,5 +1,5 @@
 
-xi: asreg monthlyρ_5_f i.rankedFCA   /*sgroup monthlysamesize monthlysamebm monthlycrossownership */  , fmb newey(4) 
+
 
 xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4) 
 

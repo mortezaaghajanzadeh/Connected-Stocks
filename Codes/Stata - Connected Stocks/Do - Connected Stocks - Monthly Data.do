@@ -441,3 +441,8 @@ gen m2 = forthquarter * sbgroup
 
 
 corr m2 forthquarter sbgroup
+
+
+
+
+summ MFCA if forthquarter == 1
