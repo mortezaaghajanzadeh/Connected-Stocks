@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  21 FEB 2022 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  25 JUL 2022 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,525 +1159,120 @@ ocks - Slide - Dr.Heidari.toc)
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124
-.
- (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+Package epstopdf Info: Source file: <Output/mcorr5l.eps>
+(epstopdf)                    date: 2022-01-03 21:17:49
+(epstopdf)                    size: 21895 bytes
+(epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-01-10 09:21:14
+(epstopdf)                    size: 13181 bytes
+(epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
+ed-to.pdf Output/mcorr5l.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<Output/mcorr5l-eps-converted-to.pdf, id=178, 397.485pt x 289.08pt>
+File: Output/mcorr5l-eps-converted-to.pdf Graphic file (type pdf)
+<use Output/mcorr5l-eps-converted-to.pdf>
+Package pdftex.def Info: Output/mcorr5l-eps-converted-to.pdf  used on input lin
+e 132.
+(pdftex.def)             Requested size: 171.14764pt x 124.474pt.
+ [3
+
+ <./Output/mcorr5l-eps-converted-to.pdf>] [4
+
+]
+(./Connected Stocks - Slide - Dr.Heidari.toc) [5
+
+] (./Elements/Literature.tex
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ] in font nullfont!
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 124.
+ut line 10.
 
 (c:/texlive/2020/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-)
-[3
+))
+[6
 
-] [4
+] [7
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [5
-
-]
-(./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [6
-
-] (./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [7
-
-]
-(./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [8
-
-] (./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [9
-
-]
-(./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [10
-
-] (./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [11
-
-]
-(./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [12
-
-] (./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [13
-
-]
-(./Elements/Literature.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ] in font nullfont!
-) [14
-
-] [15
-
-]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [16
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [8
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 
-[17
-
-]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-[18
-
-]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-[19
-
-]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 353.
-
-
-[20
+[9
 
 ] (./Elements/tikzisetting.tex
 (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
@@ -1691,801 +1286,440 @@ File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)) (./Elements/SBGShape.tex) (./Elements/DBGShape.tex) (./Elements/No1BGShape.t
-ex) (./Elements/No2BGShape.tex) [21
+)) (./Elements/SBGShape.tex) [10
 
 ]
-(./Elements/SBGShape.tex) (./Elements/DBGShape.tex) (./Elements/No1BGShape.tex)
-(./Elements/No2BGShape.tex) [22
+(./Elements/DBGShape.tex) (./Elements/No1BGShape.tex)
+(./Elements/No2BGShape.tex) [11
 
-] (./Output/summaryOfOwnership.tex) [23
+] (./Output/summaryOfOwnership.tex) [12
 
 ]
 (./Elements/pairsnumber.tex) (./Elements/PairPercent.tex)
 (./Elements/TotalPairNumberCal.tex) (./Output/numberofPairs.tex)
-(./Output/summaryOfPairs.tex) [24
+(./Output/summaryOfPairs.tex) [13
 
 ]
-<Output/idMonth.png, id=991, 904.37875pt x 509.905pt>
+<Output/idMonth.png, id=313, 904.37875pt x 509.905pt>
 File: Output/idMonth.png Graphic file (type png)
 <use Output/idMonth.png>
-Package pdftex.def Info: Output/idMonth.png  used on input line 443.
+Package pdftex.def Info: Output/idMonth.png  used on input line 372.
 (pdftex.def)             Requested size: 325.17949pt x 183.34001pt.
- [25
+ [14
 
  <./Output/idMonth.png>]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 530.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 530.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 530.
 
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 530.
 
 
 
-Overfull \hbox (1.80852pt too wide) detected at line 601
+Overfull \hbox (1.80852pt too wide) detected at line 530
 []
  []
 
-[26
+[15
+
+] (./Output/FCACal.tex) [16
 
 ]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-Overfull \hbox (1.80852pt too wide) detected at line 601
-[]
- []
-
-[27
-
-]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-Overfull \hbox (1.80852pt too wide) detected at line 601
-[]
- []
-
-[28
-
-]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 601.
-
-
-
-Overfull \hbox (1.80852pt too wide) detected at line 601
-[]
- []
-
-[29
-
-] (./Output/FCACal.tex) [30
-
-]
-<Output/FCAtimeSeries.png, id=1180, 570.13pt x 281.05pt>
+<Output/FCAtimeSeries.png, id=343, 570.13pt x 281.05pt>
 File: Output/FCAtimeSeries.png Graphic file (type png)
 <use Output/FCAtimeSeries.png>
-Package pdftex.def Info: Output/FCAtimeSeries.png  used on input line 643.
+Package pdftex.def Info: Output/FCAtimeSeries.png  used on input line 572.
 (pdftex.def)             Requested size: 308.06367pt x 151.85907pt.
- [31
+ [17
 
  <./Output/FCAtimeSeries.png>]
-<Output/FCAtimeSeriesBG.png, id=1211, 570.13pt x 281.05pt>
+<Output/FCAtimeSeriesBG.png, id=351, 570.13pt x 281.05pt>
 File: Output/FCAtimeSeriesBG.png Graphic file (type png)
 <use Output/FCAtimeSeriesBG.png>
-Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 665.
+Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 594.
 (pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-<Output/FCAtimeSeriesPairType.png, id=1212, 570.13pt x 281.05pt>
+<Output/FCAtimeSeriesPairType.png, id=352, 570.13pt x 281.05pt>
 File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
 <use Output/FCAtimeSeriesPairType.png>
-Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 6
-65.
+Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 5
+94.
 (pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-<Output/FCAComparetimeSeries.png, id=1213, 570.13pt x 281.05pt>
+<Output/FCAComparetimeSeries.png, id=353, 570.13pt x 281.05pt>
 File: Output/FCAComparetimeSeries.png Graphic file (type png)
 <use Output/FCAComparetimeSeries.png>
-Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 66
-5.
+Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 59
+4.
 (pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-<Output/ComovementtimeSeries.png, id=1214, 570.13pt x 281.05pt>
+<Output/ComovementtimeSeries.png, id=354, 570.13pt x 281.05pt>
 File: Output/ComovementtimeSeries.png Graphic file (type png)
 <use Output/ComovementtimeSeries.png>
-Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 66
-5.
+Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 59
+4.
 (pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
- [32
+ [18
 
  <./Output/FCAtimeSeriesBG.png> <./Output/FCAtimeSeriesPairType.png> <./Output/
 FCAComparetimeSeries.png> <./Output/ComovementtimeSeries.png>]
-File: Output/FCAtimeSeriesBG.png Graphic file (type png)
-<use Output/FCAtimeSeriesBG.png>
-Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 665.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
-<use Output/FCAtimeSeriesPairType.png>
-Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 6
-65.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAComparetimeSeries.png Graphic file (type png)
-<use Output/FCAComparetimeSeries.png>
-Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/ComovementtimeSeries.png Graphic file (type png)
-<use Output/ComovementtimeSeries.png>
-Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
- [33
-
-]
-File: Output/FCAtimeSeriesBG.png Graphic file (type png)
-<use Output/FCAtimeSeriesBG.png>
-Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 665.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
-<use Output/FCAtimeSeriesPairType.png>
-Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 6
-65.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAComparetimeSeries.png Graphic file (type png)
-<use Output/FCAComparetimeSeries.png>
-Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/ComovementtimeSeries.png Graphic file (type png)
-<use Output/ComovementtimeSeries.png>
-Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
- [34
-
-]
-File: Output/FCAtimeSeriesBG.png Graphic file (type png)
-<use Output/FCAtimeSeriesBG.png>
-Package pdftex.def Info: Output/FCAtimeSeriesBG.png  used on input line 665.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAtimeSeriesPairType.png Graphic file (type png)
-<use Output/FCAtimeSeriesPairType.png>
-Package pdftex.def Info: Output/FCAtimeSeriesPairType.png  used on input line 6
-65.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/FCAComparetimeSeries.png Graphic file (type png)
-<use Output/FCAComparetimeSeries.png>
-Package pdftex.def Info: Output/FCAComparetimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
-File: Output/ComovementtimeSeries.png Graphic file (type png)
-<use Output/ComovementtimeSeries.png>
-Package pdftex.def Info: Output/ComovementtimeSeries.png  used on input line 66
-5.
-(pdftex.def)             Requested size: 171.14764pt x 84.3671pt.
- [35
-
-]
 Package epstopdf Info: Source file: <Output/MHistFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21374 bytes
 (epstopdf)             Output file: <Output/MHistFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 8640 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
 ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCA-eps-converted-to.pdf, id=1332, 397.485pt x 289.08pt>
+<Output/MHistFCA-eps-converted-to.pdf, id=365, 397.485pt x 289.08pt>
 File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 709.
+ne 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21406 bytes
 (epstopdf)             Output file: <Output/MHistFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 9350 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
 rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistFCAP-eps-converted-to.pdf, id=1333, 397.485pt x 289.08pt>
+<Output/MHistFCAP-eps-converted-to.pdf, id=366, 397.485pt x 289.08pt>
 File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 709.
+ine 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21565 bytes
 (epstopdf)             Output file: <Output/MHistlnFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 9504 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
 erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCA-eps-converted-to.pdf, id=1334, 397.485pt x 289.08pt>
+<Output/MHistlnFCA-eps-converted-to.pdf, id=367, 397.485pt x 289.08pt>
 File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 709.
+line 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21189 bytes
 (epstopdf)             Output file: <Output/MHistlnFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 9399 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
 verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistlnFCAP-eps-converted-to.pdf, id=1335, 397.485pt x 289.08pt>
+<Output/MHistlnFCAP-eps-converted-to.pdf, id=368, 397.485pt x 289.08pt>
 File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistlnFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 709.
+ line 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21337 bytes
 (epstopdf)             Output file: <Output/MHistNFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 8343 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
 rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCA-eps-converted-to.pdf, id=1336, 397.485pt x 289.08pt>
+<Output/MHistNFCA-eps-converted-to.pdf, id=369, 397.485pt x 289.08pt>
 File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCA-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 709.
+ine 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
 Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
+(epstopdf)                    date: 2021-12-19 20:59:41
 (epstopdf)                    size: 21334 bytes
 (epstopdf)             Output file: <Output/MHistNFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 8290 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
 erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
-<Output/MHistNFCAP-eps-converted-to.pdf, id=1337, 397.485pt x 289.08pt>
+<Output/MHistNFCAP-eps-converted-to.pdf, id=370, 397.485pt x 289.08pt>
 File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/MHistNFCAP-eps-converted-to.pdf>
 Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 709.
+line 638.
 (pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [36
+ [19
 
  <./Output/MHistFCA-eps-converted-to.pdf> <./Output/MHistFCAP-eps-converted-to.
 pdf> <./Output/MHistlnFCA-eps-converted-to.pdf> <./Output/MHistlnFCAP-eps-conve
 rted-to.pdf> <./Output/MHistNFCA-eps-converted-to.pdf> <./Output/MHistNFCAP-eps
 -converted-to.pdf>]
-Package epstopdf Info: Source file: <Output/MHistFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21374 bytes
-(epstopdf)             Output file: <Output/MHistFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8640 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
-ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21406 bytes
-(epstopdf)             Output file: <Output/MHistFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9350 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
-rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21565 bytes
-(epstopdf)             Output file: <Output/MHistlnFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9504 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
-erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistlnFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21189 bytes
-(epstopdf)             Output file: <Output/MHistlnFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9399 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
-verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistlnFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21337 bytes
-(epstopdf)             Output file: <Output/MHistNFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8343 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
-rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistNFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21334 bytes
-(epstopdf)             Output file: <Output/MHistNFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8290 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
-erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistNFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [37
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 67
+8.
+
+(./Output/CorrelationsResultsText.tex) [20
+
+] [21
 
 ]
-Package epstopdf Info: Source file: <Output/MHistFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21374 bytes
-(epstopdf)             Output file: <Output/MHistFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8640 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistFCA-eps-conver
-ted-to.pdf Output/MHistFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistFCA-eps-converted-to.pdf  used on input li
-ne 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21406 bytes
-(epstopdf)             Output file: <Output/MHistFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9350 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistFCAP-eps-conve
-rted-to.pdf Output/MHistFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistFCAP-eps-converted-to.pdf  used on input l
-ine 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistlnFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21565 bytes
-(epstopdf)             Output file: <Output/MHistlnFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9504 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCA-eps-conv
-erted-to.pdf Output/MHistlnFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistlnFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistlnFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistlnFCA-eps-converted-to.pdf  used on input 
-line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistlnFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21189 bytes
-(epstopdf)             Output file: <Output/MHistlnFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 9399 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistlnFCAP-eps-con
-verted-to.pdf Output/MHistlnFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistlnFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistlnFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistlnFCAP-eps-converted-to.pdf  used on input
- line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistNFCA.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21337 bytes
-(epstopdf)             Output file: <Output/MHistNFCA-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8343 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCA-eps-conve
-rted-to.pdf Output/MHistNFCA.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistNFCA-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistNFCA-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistNFCA-eps-converted-to.pdf  used on input l
-ine 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
-Package epstopdf Info: Source file: <Output/MHistNFCAP.eps>
-(epstopdf)                    date: 2021-12-19 19:59:41
-(epstopdf)                    size: 21334 bytes
-(epstopdf)             Output file: <Output/MHistNFCAP-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 8290 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/MHistNFCAP-eps-conv
-erted-to.pdf Output/MHistNFCAP.eps>
-(epstopdf)             \includegraphics on input line 709.
-Package epstopdf Info: Output file is already uptodate.
-File: Output/MHistNFCAP-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/MHistNFCAP-eps-converted-to.pdf>
-Package pdftex.def Info: Output/MHistNFCAP-eps-converted-to.pdf  used on input 
-line 709.
-(pdftex.def)             Requested size: 112.95807pt x 82.15045pt.
- [38
+(./Connected Stocks - Slide - Dr.Heidari.toc) [22
 
 ]
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 76
-7.
-
-(./Output/CorrelationsResultsText.tex) [39
-
-] [40
-
-]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [41
-
-]
-Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
-(epstopdf)                    size: 29497 bytes
-(epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
-(epstopdf)                    size: 14973 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
-ted-to.pdf Output/mcorr5bg.eps>
-(epstopdf)             \includegraphics on input line 895.
-Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5bg-eps-converted-to.pdf, id=1558, 397.485pt x 289.08pt>
-File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/mcorr5bg-eps-converted-to.pdf>
-Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
-ne 895.
-(pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/mcorr5l.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 21895 bytes
 (epstopdf)             Output file: <Output/mcorr5l-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-10 08:21:14
+(epstopdf)                    date: 2022-01-10 09:21:14
 (epstopdf)                    size: 13181 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/mcorr5l-eps-convert
 ed-to.pdf Output/mcorr5l.eps>
-(epstopdf)             \includegraphics on input line 895.
+(epstopdf)             \includegraphics on input line 807.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr5l-eps-converted-to.pdf, id=1559, 397.485pt x 289.08pt>
 File: Output/mcorr5l-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr5l-eps-converted-to.pdf>
 Package pdftex.def Info: Output/mcorr5l-eps-converted-to.pdf  used on input lin
-e 895.
+e 807.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
- [42
+Package epstopdf Info: Source file: <Output/mcorr5bg.eps>
+(epstopdf)                    date: 2022-01-03 21:17:49
+(epstopdf)                    size: 29497 bytes
+(epstopdf)             Output file: <Output/mcorr5bg-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-01-10 09:21:14
+(epstopdf)                    size: 14973 bytes
+(epstopdf)             Command: <repstopdf --outfile=Output/mcorr5bg-eps-conver
+ted-to.pdf Output/mcorr5bg.eps>
+(epstopdf)             \includegraphics on input line 807.
+Package epstopdf Info: Output file is already uptodate.
+<Output/mcorr5bg-eps-converted-to.pdf, id=448, 397.485pt x 289.08pt>
+File: Output/mcorr5bg-eps-converted-to.pdf Graphic file (type pdf)
+<use Output/mcorr5bg-eps-converted-to.pdf>
+Package pdftex.def Info: Output/mcorr5bg-eps-converted-to.pdf  used on input li
+ne 807.
+(pdftex.def)             Requested size: 171.14764pt x 124.474pt.
+ [23
 
- <./Output/mcorr5bg-eps-converted-to.pdf> <./Output/mcorr5l-eps-converted-to.pd
-f>]
-(./Elements/Model11.tex) [43
-
-] (./Output/mresult2part1-slide.tex) [44
+ <./Output/mcorr5bg-eps-converted-to.pdf>] (./Elements/Model11.tex) [24
 
 ]
-(./Output/mresult2part2-slide.tex) [45
+(./Output/mresult2part1-slide.tex) [25
+
+] (./Output/mresult2part2-slide.tex)
+[26
 
 ]
+Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
+(epstopdf)                    date: 2022-01-03 21:17:49
+(epstopdf)                    size: 23704 bytes
+(epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
+df>
+(epstopdf)                    date: 2022-01-03 21:17:49
+(epstopdf)                    size: 16074 bytes
+(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
+s-converted-to.pdf Output/Qmcorr5subsample.eps>
+(epstopdf)             \includegraphics on input line 917.
+Package epstopdf Info: Output file is already uptodate.
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=494, 397.485pt x 289.08pt>
+File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
+<use Output/Qmcorr5subsample-eps-converted-to.pdf>
+Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
+input line 917.
+(pdftex.def)             Requested size: 171.14764pt x 124.474pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 30126 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 14646 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
 le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 1004.
+(epstopdf)             \includegraphics on input line 917.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=1705, 397.485pt x 289.08
-pt>
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=495, 397.485pt x 289.08p
+t>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
 Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 1004.
+d on input line 917.
 (pdftex.def)             Requested size: 171.14764pt x 124.474pt.
-Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
-(epstopdf)                    size: 23704 bytes
-(epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
-df>
-(epstopdf)                    date: 2022-01-03 20:17:49
-(epstopdf)                    size: 16074 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
-s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 1004.
-Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=1706, 397.485pt x 289.08pt>
-File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
-<use Output/Qmcorr5subsample-eps-converted-to.pdf>
-Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 1004.
-(pdftex.def)             Requested size: 171.14764pt x 124.474pt.
- [46
+ [27
 
- <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf> <./Output/Qmcorr5subsamp
-le-eps-converted-to.pdf>]
-(./Output/QTimemresult2subsample-slide.tex) [47
+ <./Output/Qmcorr5subsample-eps-converted-to.pdf> <./Output/Qmcorr5lrdbgsubsamp
+le-eps-converted-to.pdf>] (./Output/QTimemresult2subsample-slide.tex)
+[28
+
+] (./Output/Q3mresultAllPairs.tex) [29
 
 ]
-(./Output/Q3mresultAllPairs.tex) [48
-
-]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [49
+(./Connected Stocks - Slide - Dr.Heidari.toc) [30
 
 ] (./Output/turnover.tex)
-[50
+[31
 
-] (./Output/mresult2-turnover.tex) [51
+] (./Output/mresult2-turnover.tex) [32
 
 ] (./Output/turncomovement.tex)
-[52
+[33
 
-] (./Output/ResidualTrunSummary.tex) [53
+] (./Output/ResidualTrunSummary.tex) [34
 
 ]
 (./Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
-(epstopdf)                    date: 2022-02-11 14:07:35
+(epstopdf)                    date: 2022-02-11 15:07:35
 (epstopdf)                    size: 20926867 bytes
 (epstopdf)             Output file: <Output/GroupedResSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-02-11 14:25:52
+(epstopdf)                    date: 2022-02-11 15:25:52
 (epstopdf)                    size: 296315 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
 onverted-to.pdf Output/GroupedResSTD.eps>
-(epstopdf)             \includegraphics on input line 1132.
+(epstopdf)             \includegraphics on input line 1045.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=1974, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=583, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
-ut line 1132.
+ut line 1045.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
- [54
+ [35
 
- <./Output/GroupedResSTD-eps-converted-to.pdf>] (./Output/LowRes.tex) [55
+ <./Output/GroupedResSTD-eps-converted-to.pdf>] (./Output/LowRes.tex) [36
 
 ] (./Output/ImbalanceInsMeanSummary.tex)
-[56
+[37
 
 ] (./Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
-(epstopdf)                    date: 2022-02-11 14:34:08
+(epstopdf)                    date: 2022-02-11 15:34:08
 (epstopdf)                    size: 21145985 bytes
 (epstopdf)             Output file: <Output/GroupedInsSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-02-11 14:34:20
+(epstopdf)                    date: 2022-02-11 15:34:20
 (epstopdf)                    size: 271722 bytes
 (epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
 onverted-to.pdf Output/GroupedInsSTD.eps>
-(epstopdf)             \includegraphics on input line 1240.
+(epstopdf)             \includegraphics on input line 1153.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=2068, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=611, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
 Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 1240.
+ut line 1153.
 (pdftex.def)             Requested size: 290.9531pt x 145.47478pt.
- [57
+ [38
 
- <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Output/Imbalance.tex) [58
+ <./Output/GroupedInsSTD-eps-converted-to.pdf>] (./Output/Imbalance.tex) [39
 
 ]
-(./Connected Stocks - Slide - Dr.Heidari.toc) [59
+(./Connected Stocks - Slide - Dr.Heidari.toc) [40
 
-] [60
+] [41
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1275.
+(hyperref)                removing `\translate ' on input line 1188.
 
 (./Connected Stocks - Slide - Dr.Heidari.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\translate ' on input line 1.
 
-) [61
+) [42
 
-] [62
+] [43
 
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [63
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [44
 
-] [64
+] [45
 
-] [65
-
-]
-[66
-
-] [67
+] [46
 
 ]
-<Elements/1.png, id=2439, 494.8086pt x 299.6796pt>
+<Elements/1.png, id=721, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1391.
+Package pdftex.def Info: Elements/1.png  used on input line 1304.
 (pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-<Elements/2.png, id=2440, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=722, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1391.
+Package pdftex.def Info: Elements/2.png  used on input line 1304.
 (pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [68
 
- <./Elements/1.png> <./Elements/2.png>]
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1391.
-(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1391.
-(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [69
+[47
+
+ <./Elements/1.png> <./Elements/2.png>] [48
+
+] (./Elements/Example2.tex)
+[49
+
+] (./Elements/marketcap.tex) [50
 
 ]
-File: Elements/1.png Graphic file (type png)
-<use Elements/1.png>
-Package pdftex.def Info: Elements/1.png  used on input line 1391.
-(pdftex.def)             Requested size: 160.8792pt x 97.43585pt.
-File: Elements/2.png Graphic file (type png)
-<use Elements/2.png>
-Package pdftex.def Info: Elements/2.png  used on input line 1391.
-(pdftex.def)             Requested size: 160.8792pt x 97.68869pt.
- [70
-
-] [71
-
-] [72
-
-]
-[73
-
-] [74
-
-] (./Elements/Example2.tex) [75
-
-] (./Elements/marketcap.tex) [76
-
-]
-<Elements/3.png, id=2699, 722.7pt x 360.3864pt>
+<Elements/3.png, id=751, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
-Package pdftex.def Info: Elements/3.png  used on input line 1478.
+Package pdftex.def Info: Elements/3.png  used on input line 1391.
 (pdftex.def)             Requested size: 160.8792pt x 80.22559pt.
-<Elements/4.png, id=2700, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=752, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
-Package pdftex.def Info: Elements/4.png  used on input line 1478.
+Package pdftex.def Info: Elements/4.png  used on input line 1391.
 (pdftex.def)             Requested size: 160.8792pt x 80.06342pt.
+ [51
 
-[77
+ <./Elements/3.png> <./Elements/4.png>] (./Output/mresult2Polk-slide.tex) [52
 
- <./Elements/3.png> <./Elements/4.png>] (./Output/mresult2Polk-slide.tex)
-[78
+]
+(./Connected Stocks - Slide - Dr.Heidari.toc) [53
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [79
+] [54
 
-] [80
-
-] [81
+] [55
 
 ]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 15
-89.
+02.
 
-[82
+[56
 
-] [83
+] [57
 
-] [84
+] [58
 
-] [85
+] [59
 
-] (./Connected Stocks - Slide - Dr.Heidari.toc) [86
+] (./Connected Stocks - Slide - Dr.Heidari.toc) [60
 
-] [87
+] [61
 
 ]
-[88
+[62
 
-] [89
+] [63
 
 ]
 \tf@nav=\write7
@@ -2497,24 +1731,24 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 15
 \tf@snm=\write9
 \openout9 = `"Connected Stocks - Slide - Dr.Heidari.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2146.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2146.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2059.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2059.
  (./Connected Stocks - Slide - Dr.Heidari.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2059.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2059.
 
 Package rerunfilecheck Info: File `"Connected Stocks - Slide - Dr.Heidari".out'
  has not changed.
-(rerunfilecheck)             Checksum: 91382143427CD8DE7DF0FDEF9CAE241D;1585.
+(rerunfilecheck)             Checksum: 1A55A125DA2261FC3AAB590EBF53CA19;1584.
  ) 
 Here is how much of TeX's memory you used:
- 26336 strings out of 480608
- 526194 string characters out of 5907536
- 806688 words of memory out of 5000000
- 41229 multiletter control sequences out of 15000+600000
+ 26249 strings out of 480608
+ 524843 string characters out of 5907536
+ 781750 words of memory out of 5000000
+ 41220 multiletter control sequences out of 15000+600000
  547909 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,21n,67p,823b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,21n,67p,823b,1043s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{mainmeasure} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2542,11 +1776,11 @@ exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/202
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (89 pages, 145525
-6 bytes).
+Output written on "Connected Stocks - Slide - Dr.Heidari.pdf" (63 pages, 129083
+9 bytes).
 PDF statistics:
- 3238 PDF objects out of 3580 (max. 8388607)
- 3027 compressed objects within 31 object streams
- 255 named destinations out of 1000 (max. 500000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 827 compressed objects within 9 object streams
+ 201 named destinations out of 1000 (max. 500000)
  415 words of extra memory for PDF output out of 10000 (max. 10000000)
 

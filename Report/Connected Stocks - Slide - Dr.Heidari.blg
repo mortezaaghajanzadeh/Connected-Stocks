@@ -7,51 +7,51 @@ Repeated entry---line 669 of file Ref.bib
  : @article{pantzalis2017shareholder
  :                                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1029 of file Ref.bib
+Repeated entry---line 1027 of file Ref.bib
  : @article{azar2018anticompetitive
  :                                 ,
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in freeman2019effects
 Warning--empty note in newham2018common
-You've used 23 entries,
+You've used 21 entries,
             1935 wiz_defined-function locations,
-            618 strings with 7126 characters,
-and the built_in function-call counts, 9281 in all, are:
-= -- 940
-> -- 337
-< -- 14
-+ -- 110
-- -- 108
-* -- 840
-:= -- 1597
-add.period$ -- 68
-call.type$ -- 23
-change.case$ -- 169
-chr.to.int$ -- 23
-cite$ -- 25
-duplicate$ -- 323
-empty$ -- 665
-format.name$ -- 153
-if$ -- 1800
+            605 strings with 6803 characters,
+and the built_in function-call counts, 8471 in all, are:
+= -- 857
+> -- 306
+< -- 13
++ -- 100
+- -- 98
+* -- 767
+:= -- 1457
+add.period$ -- 62
+call.type$ -- 21
+change.case$ -- 154
+chr.to.int$ -- 21
+cite$ -- 23
+duplicate$ -- 295
+empty$ -- 608
+format.name$ -- 139
+if$ -- 1644
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 117
-num.names$ -- 69
-pop$ -- 113
+missing$ -- 20
+newline$ -- 107
+num.names$ -- 63
+pop$ -- 103
 preamble$ -- 1
-purify$ -- 169
+purify$ -- 154
 quote$ -- 0
-skip$ -- 250
+skip$ -- 229
 stack$ -- 0
-substring$ -- 790
-swap$ -- 29
+substring$ -- 722
+swap$ -- 27
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 126
 warning$ -- 2
-while$ -- 86
+while$ -- 78
 width$ -- 0
-write$ -- 298
+write$ -- 272
 (There were 2 error messages)

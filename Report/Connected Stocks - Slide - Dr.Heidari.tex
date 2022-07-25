@@ -1,5 +1,5 @@
-%\documentclass[handout]{beamer}
-\documentclass{beamer}
+\documentclass[handout]{beamer}
+%\documentclass{beamer}
 \usetheme{Madrid}
 \usepackage{comment}
 \usepackage{ragged2e}
@@ -108,19 +108,27 @@
 	\begin{frame}{Motivation}
 		
 		\begin{itemize}
-			\item\textbf{Does direct or indirect common ownership cause stock return co-movement?}
-			\begin{itemize}
-				\item common ownership:
+			\item\textbf{Does common ownership raise stock return co-movement?}
 				\begin{itemize}
-					\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
-					\item We connect stocks through the ultimate owner for indirect common ownership
+					\item We use daily records of block-holder ownership for firms (not restricted to mutual funds ownership)
 				\end{itemize}
-				\item We focus on excess return co-movement for a pair of the stocks
-				\item We use common ownership (direct or indirect) to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
-				\item We demonstrate that correlated trading can be a channel of co-movement
-			\end{itemize}
+			\item Would business groups be able to raise the co-movement of stock returns?
+			\item What is the mechanism?
+%			\begin{itemize}
+%				\item common ownership:
+%				\begin{itemize}
+%					\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
+%					\item We connect stocks through the ultimate owner for indirect common ownership
+%				\end{itemize}
+%				\item We focus on excess return co-movement for a pair of the stocks
+%				\item We use common ownership (direct or indirect) to forecast cross-sectional variation in the realized correlation of four-factor + industry residuals
+%				\item We demonstrate that correlated trading can be a channel of co-movement
+%			\end{itemize}
 		\end{itemize}
-		
+					\begin{figure}
+			\centering  
+			\includegraphics[width=0.5\linewidth]{"Output/mcorr5l.eps"}
+		\end{figure}
 	\end{frame}
 	
 	\begin{frame}{Why does it matter?}
@@ -168,63 +176,7 @@
 	
 	\normalsize
 	
-	
-	%\begin{frame}{Connected Stocks}
-	%\begin{itemize}
-	%\item[]In September 2003, 25 large mutual fund families settled allegations of illegal
-	%trading
-	%\begin{itemize}
-	%\item Those families lost 14.1\% of their capital within one year, and 24.3\% within two years
-	%\item We instrument FCAP from 2004-2006 with
-	%RATIO = FCAPScandal/FCAP as of September 2003
-	%\end{itemize}
-	%\end{itemize}
-	%
-	%
-	%\begin{figure}[htbp]
-	%\includegraphics[width=0.7\linewidth]{NSlide.png}
-	%\end{figure}
-	%\end{frame}
-	%
-	%
-	%\begin{frame}{Connected Stocks}
-	%\begin{itemize}
-	%\item PFLOAT = The total float capitalizstion of the two stocks in the pair
-	%\item PFLOW = The absolute value
-	%of the total net flow into the common funds
-	%\end{itemize}
-	%
-	%
-	%
-	%\begin{figure}[htbp]
-	%\includegraphics[width=0.65\linewidth]{N2Slide.png}
-	%\end{figure}
-	%\begin{itemize}
-	%\item Prices are more subject to non-fundamental comovement when pressure
-	%from net mutual fund trading is high and especially so when the stocks in
-	%question have low float and are thus less liquid
-	%\end{itemize}
-	%\end{frame}
-	%
-	%
-	%
-	%\begin{frame}{Connected Stocks}
-	%\begin{itemize}
-	%\item[]Buy (sell) stocks that have gone down (up) if their connected stocks have gone
-	%down (up) as well. The connected return is a confirming signal that the own
-	%return will revert
-	%\end{itemize}
-	%
-	%
-	%
-	%\begin{figure}[htbp]
-	%\includegraphics[width=0.5\linewidth]{N3Slide.png}
-	%\end{figure}
-	%\begin{itemize}
-	%\item  low (high) own-return and low (high) connected-return
-	%portfolio $ \rightarrow $ low (high) portfolio
-	%\end{itemize}
-	%\end{frame}
+
 	
 	
 		\subsection{Related Literature}
@@ -232,34 +184,16 @@
 		\resizebox{\textwidth}{!}{
 \input{Elements/Literature}
 }
-		
-%		\hfill
-%		\hyperlink{maineffect}{\beamerbutton{Papers}}
 	\end{frame}
 	
 	\begin{frame}{Our work}
 		\begin{itemize}
-			\item 
-			We use daily records of block-holder ownership for firms
-			\item We are not restricted to mutual funds ownership
-			\item 70\% of market belongs to the business groups
-			\begin{itemize}
-				\item Would business groups be able to raise the co-movement of stock returns?
-				\begin{itemize}
-					\tiny
-					\item \cite{cho2015stock}: \\
-					The strong co-movement between group returns and
-					firm returns is explained by correlated fundamentals. 
-					\item \cite{kim2015stock}:\\
-					The increase in correlation appears to be driven
-					more by non-fundamental factors such as correlated trading, rather
-					than fundamental factors such as related-party transactions
-				\end{itemize}
+		\item We connect stocks through the common ownership by blockholders (ownership $ > $ 1\%) for direct common ownership
+		\item We connect stocks through the ultimate owner for indirect common ownership
+							
 			\item Common ownership or business group (indirect common ownership) ?
-			\item  Channel?
-			\end{itemize}
-			
-		\end{itemize}
+\end{itemize}		
+
 	\end{frame}
 	
 	\normalsize
@@ -270,7 +204,7 @@
 		\subsection{Pair composition}
 		\begin{frame}{Pair composition}
 			\begin{itemize}
-				\item Firms with at least one common owner\\
+				\item Firms with at least one common owner:\\
 				\bigskip
 								\begin{figure}[htbp]
 					\centering
@@ -288,14 +222,12 @@
 				\end{figure}
 			\bigskip
 			\pause
-				\item  Business group
+				\item  Pair in the Business Group:
 								\pause
-				\begin{columns}
-			
-				\column{0.5\textwidth}
+
 				\begin{figure}[htbp]
 					\centering
-			\resizebox{\textwidth}{!}{
+			\resizebox{0.5\textwidth}{!}{
 				\begin{tikzpicture}[node distance=2cm]
 					
 					
@@ -337,17 +269,7 @@
 			}
 			\end{figure}
 			
-							\column{0.5\textwidth}
-							\pause
-							\begin{itemize}
-							
-							
-							\item In a business group, how can one pair be defined?			
-											
-							\end{itemize}
-							
-							
-				\end{columns}
+
 				
 			\end{itemize}
 		\end{frame}
@@ -355,11 +277,18 @@
 		
 		
 		\input{Elements/tikzisetting.tex}
-		\begin{frame}{Pair Composition and Business Group}{Pair in the Business Group }
-   
-				\resizebox{\textwidth}{!}{
-\input{Elements/SBGShape.tex}	
-%\pause
+		\begin{frame}{Pair Composition and Business Group}{Pair in the  Same Business Group }
+			\centering
+			\resizebox{0.5\textwidth}{!}{
+			\input{Elements/SBGShape.tex}	
+		}
+		\end{frame}
+			
+			
+			\begin{frame}{Pair Composition and Business Group}{Pair in the Separate Business Group }
+   \centering
+				\resizebox{0.5\textwidth}{!}{
+					\centering
 \input{Elements/DBGShape.tex}
 								}
 								\pause
@@ -393,7 +322,7 @@
 			
 			\begin{table}[htbp]
 				\centering
-				\resizebox{0.8\textwidth}{!}
+				\resizebox{1\textwidth}{!}
 				{
 					\input{Output/summaryOfOwnership.tex}
 				}
@@ -425,7 +354,7 @@
 			
 			
 			\begin{table}
-				\resizebox{0.8\textwidth}{!}
+				\resizebox{0.9\textwidth}{!}
 				{
 					\input{Output/summaryOfPairs.tex}
 				}
@@ -603,7 +532,7 @@
 		\begin{frame}{Measuring Common-ownership}
 			\begin{table}[htbp]
 									\centering
-									\resizebox{0.9\textwidth}{!}
+									\resizebox{1\textwidth}{!}
 									{
 										\input{Output/FCACal.tex}  }          
 								\end{table}
@@ -683,7 +612,7 @@
 	%\end{frame}
 	
 					
-					\begin{frame}{MFCAP vs. FCAP Distributions}{Monthly}
+					\begin{frame}{MFCAP vs. FCAP Distributions}
 						\label{Monthly1}
 						\begin{columns}
 							\column{.33\textwidth}  
@@ -716,24 +645,7 @@
 		\begin{enumerate}\footnotesize
 			\item Frist Step:\\
 			\scriptsize
-			Estimate this model on periods of three month (From two months earlier):
-			\begin{itemize}
-%				\item CAPM + Industry (2 Factor): 
-%				\begin{equation*}
-%					\begin{split}
-%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \beta_{Ind,i}{\mathit {R}}_{Ind,t} + \boxed{\varepsilon_{i,t}}
-%					\end{split}
-%					\label{e12}
-%				\end{equation*}
-%				\item 4 Factor : 
-%				\begin{equation*}
-%					\begin{split}
-%						R_{i,t} =\alpha _{i}&+\beta _{mkt,i}{\mathit {R}}_{M,t} + \\
-%						&+\beta _{HML,i}{\mathit {HML}}_{t}+\beta _{SMB,i}{\mathit {SMB}}_{t}+\beta _{UMD,i}{\mathit {UMD}}_{t}+ \boxed{\varepsilon_{i,t}}
-%					\end{split}
-%					\label{e11}
-%				\end{equation*}
-				
+			\begin{itemize}				
 				\item 4 Factor + Industry : 
 				\begin{equation*}\footnotesize
 					\begin{split}
@@ -747,7 +659,6 @@
 			\item Second Step:\\
 			\scriptsize
 			Calculate monthly correlation of each stock pair’s daily abnormal returns (residuals)
-			
 		\end{enumerate}
 		
 			\begin{table}[htbp]
@@ -880,15 +791,16 @@
 	\begin{frame}{Co-movement and Common Ownership}
 		\label{Monthly16} 
 		\begin{columns}
-			\column{.5\textwidth}  
-			\begin{figure}   
-				\centering
-				\includegraphics[width=\linewidth]{"Output/mcorr5bg.eps"}     \end{figure}            
 			\column{.5\textwidth}
 			\begin{figure}
 				\centering  
 				\includegraphics[width=\linewidth]{"Output/mcorr5l.eps"}
 			\end{figure}
+			\column{.5\textwidth}  
+			\begin{figure}   
+				\centering
+				\includegraphics[width=\linewidth]{"Output/mcorr5bg.eps"}     \end{figure}            
+
 		\end{columns}
 		
 		
@@ -898,17 +810,17 @@
 	
 	\begin{frame}{Estimation model}\label{Estimation}
 		\begin{itemize}
-			\item Use Fama-MacBeth to estimate this model
+			\item Estimation Model:
 			\input{Elements/Model11}
 			
-			\item Estimate the model on a monthly frequency 
+			\item We use Fama-MacBeth method
 			\item Adjust standard errors by Newey and West adjustment with 4 lags ($ 4(70/100)^{\frac{2}{9}} = 3.69 \sim 4 $)
 		\end{itemize}
 				\hfill
 				\hyperlink{Methood}{\beamerbutton{Methodology}}
 	\end{frame}
 	
-	\begin{frame}{Model Estimation}{Normalized Rank-Transformed}
+	\begin{frame}{Model Estimation}%{Normalized Rank-Transformed}
 			\label{mresult2part1} 
 			\begin{table}[htbp]
 				\centering
@@ -986,15 +898,16 @@
 		
 		
 		\begin{columns}
+						\column{.5\textwidth}  
+			\begin{figure}   
+				\centering
+				\includegraphics[width=\linewidth]{"Output/Qmcorr5subsample.eps"}     \end{figure}
 				\column{.5\textwidth}
 				\begin{figure}
 					\centering  
 					\includegraphics[width=\linewidth]{"Output/Qmcorr5lrdbgsubsample.eps"}
 				\end{figure}
-			\column{.5\textwidth}  
-			\begin{figure}   
-				\centering
-				\includegraphics[width=\linewidth]{"Output/Qmcorr5subsample.eps"}     \end{figure}            
+            
 
 		\end{columns}
 		\centering
@@ -1031,7 +944,7 @@
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{0.8\textwidth}{!}{
+	\resizebox{1\textwidth}{!}{
 		\input{Output/QTimemresult2subsample-slide.tex}
 	}
 \end{table}	
@@ -1054,9 +967,9 @@
 	
 	\section{Evidence for correlated trading}
  \subsection{Turnover}
-	\begin{frame}{TrunOver}{\cite{Liquidity2016}}
+	\begin{frame}{Turnover}{\cite{Liquidity2016}}
 		\begin{equation*}
-			\Delta \text{TurnOver} = \ln(\frac{\text{TurnOver}_{i,t}}{\text{TurnOver}_{i,t-1}}) = 
+			\Delta \text{Turnover} = \ln(\frac{\text{Turnover}_{i,t}}{\text{Turnover}_{i,t-1}}) = 
 			\ln({\frac{\text{volume}_{i,t}}{\text{MarketCap}_{i,t}}}) - \ln({\frac{\text{volume}_{i,t-1}}{\text{MarketCap}_{i,t-1}}})
 		\end{equation*}
 
@@ -1217,7 +1130,7 @@
 \end{frame}
 
 
-\begin{frame}{Ins Imbalance std}{Standard error}
+\begin{frame}{Institutional Imbalance std}{Standard error}
 %\begin{columns}
 %	\column{0.5\linewidth}
 	\begin{table}[htbp]
@@ -1238,7 +1151,7 @@
 \end{figure}
 %\end{columns}
 \end{frame}
-\begin{frame}{Low Ins Imbalance Group}
+\begin{frame}{Low Institutional Imbalance Group}
 
 
 				\begin{table}[htbp]
