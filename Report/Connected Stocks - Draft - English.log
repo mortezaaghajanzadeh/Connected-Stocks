@@ -1,206 +1,173 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.9)  25 JUL 2022 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.11.6)  2 AUG 2022 15:28
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**"Connected Stocks - Draft - English.tex"
-(./Connected Stocks - Draft - English.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18>
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+**"d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Connected Stocks - Draft - English.tex"
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Connected Stocks - Draft - English.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> (c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(c:/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen138
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+\bibindent=\dimen134
+) (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
-\ex@=\dimen139
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\ex@=\dimen135
+)) (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen140
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen136
+) (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count187
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count188
-\leftroot@=\count189
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count190
-\DOTSCASE@=\count191
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
-\big@size=\dimen141
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
+\inf@bad=\count175
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count176
+\leftroot@=\count177
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count178
+\DOTSCASE@=\count179
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count180
+\c@MaxMatrixCols=\count181
 \dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
+\c@parentequation=\count182
+\dspbrk@lvl=\count183
 \tag@help=\toks16
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
+\row@=\count184
+\column@=\count185
+\maxfields@=\count186
 \andhelp@=\toks17
-\eqnshift@=\dimen142
-\alignsep@=\dimen143
-\tagshift@=\dimen144
-\tagwidth@=\dimen145
-\totwidth@=\dimen146
-\lineht@=\dimen147
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
 \@envbody=\toks18
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (c:/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (c:/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
-\captionmargin=\dimen148
-\captionmargin@=\dimen149
-\captionwidth=\dimen150
-\caption@tempdima=\dimen151
-\caption@indent=\dimen152
-\caption@parindent=\dimen153
-\caption@hangindent=\dimen154
+\captionmargin=\dimen144
+\captionmargin@=\dimen145
+\captionwidth=\dimen146
+\caption@tempdima=\dimen147
+\caption@indent=\dimen148
+\caption@parindent=\dimen149
+\caption@hangindent=\dimen150
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count199
-\c@continuedfloat=\count266
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+\c@caption@flags=\count187
+\c@continuedfloat=\count188
+) (c:/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks21
-\pgfutil@tempdima=\dimen155
-\pgfutil@tempdimb=\dimen156
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box49
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+\pgfutil@tempdima=\dimen151
+\pgfutil@tempdimb=\dimen152
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box47
+ (c:/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 ))
-Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+) (c:/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks22
 \pgfkeys@temptoks=\toks23
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks24
 ))
-\pgf@x=\dimen159
-\pgf@y=\dimen160
-\pgf@xa=\dimen161
-\pgf@ya=\dimen162
-\pgf@xb=\dimen163
-\pgf@yb=\dimen164
-\pgf@xc=\dimen165
-\pgf@yc=\dimen166
-\pgf@xd=\dimen167
-\pgf@yd=\dimen168
+\pgf@x=\dimen155
+\pgf@y=\dimen156
+\pgf@xa=\dimen157
+\pgf@ya=\dimen158
+\pgf@xb=\dimen159
+\pgf@yb=\dimen160
+\pgf@xc=\dimen161
+\pgf@yc=\dimen162
+\pgf@xd=\dimen163
+\pgf@yd=\dimen164
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count267
-\c@pgf@countb=\count268
-\c@pgf@countc=\count269
-\c@pgf@countd=\count270
+\c@pgf@counta=\count189
+\c@pgf@countb=\count190
+\c@pgf@countc=\count191
+\c@pgf@countd=\count192
 \t@pgf@toka=\toks25
 \t@pgf@tokb=\toks26
 \t@pgf@tokc=\toks27
-\pgf@sys@id@count=\count271
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@sys@id@count=\count193
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
-File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
-File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
-File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count272
-\pgfsyssoftpath@bigbuffer@items=\count273
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
-File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+))) (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count194
+\pgfsyssoftpath@bigbuffer@items=\count195
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (c:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -213,439 +180,308 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen169
-\pgfmath@count=\count274
-\pgfmath@box=\box50
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen165
+\pgfmath@count=\count196
+\pgfmath@box=\box48
 \pgfmath@toks=\toks28
 \pgfmath@stack@operand=\toks29
 \pgfmath@stack@operation=\toks30
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count275
-)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
-File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@picminx=\dimen170
-\pgf@picmaxx=\dimen171
-\pgf@picminy=\dimen172
-\pgf@picmaxy=\dimen173
-\pgf@pathminx=\dimen174
-\pgf@pathmaxx=\dimen175
-\pgf@pathminy=\dimen176
-\pgf@pathmaxy=\dimen177
-\pgf@xx=\dimen178
-\pgf@xy=\dimen179
-\pgf@yx=\dimen180
-\pgf@yy=\dimen181
-\pgf@zx=\dimen182
-\pgf@zy=\dimen183
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@path@lastx=\dimen184
-\pgf@path@lasty=\dimen185
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
-File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@shorten@end@additional=\dimen186
-\pgf@shorten@start@additional=\dimen187
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
-File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfpic=\box51
-\pgf@hbox=\box52
-\pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count276
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
-File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgflinewidth=\dimen188
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
-File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@pt@x=\dimen189
-\pgf@pt@y=\dimen190
-\pgf@pt@temp=\dimen191
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
-File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
-File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
-File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowsep=\dimen192
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
-File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@max=\dimen193
-\pgf@sys@shading@range@num=\count277
-\pgf@shadingcount=\count278
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
-File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
-File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfexternal@startupbox=\box54
-))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
-File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
-File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
-File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
-File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
-File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box55
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
-File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
-Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen194
-\pgf@nodesepend=\dimen195
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
-Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen196
-\pgffor@skip=\dimen197
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count197
+)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen166
+\pgf@picmaxx=\dimen167
+\pgf@picminy=\dimen168
+\pgf@picmaxy=\dimen169
+\pgf@pathminx=\dimen170
+\pgf@pathmaxx=\dimen171
+\pgf@pathminy=\dimen172
+\pgf@pathmaxy=\dimen173
+\pgf@xx=\dimen174
+\pgf@xy=\dimen175
+\pgf@yx=\dimen176
+\pgf@yy=\dimen177
+\pgf@zx=\dimen178
+\pgf@zy=\dimen179
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen180
+\pgf@path@lasty=\dimen181
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen182
+\pgf@shorten@start@additional=\dimen183
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box49
+\pgf@hbox=\box50
+\pgf@layerbox@main=\box51
+\pgf@picture@serial@count=\count198
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen184
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen185
+\pgf@pt@y=\dimen186
+\pgf@pt@temp=\dimen187
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen188
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen189
+\pgf@sys@shading@range@num=\count199
+\pgf@shadingcount=\count266
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box52
+)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box53
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (c:/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen190
+\pgf@nodesepend=\dimen191
+) (c:/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen192
+\pgffor@skip=\dimen193
 \pgffor@stack=\toks31
 \pgffor@toks=\toks32
-))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
-Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count279
-\pgfplotmarksize=\dimen198
+)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count267
+\pgfplotmarksize=\dimen194
 )
-\tikz@lastx=\dimen199
-\tikz@lasty=\dimen256
-\tikz@lastxsaved=\dimen257
-\tikz@lastysaved=\dimen258
-\tikz@lastmovetox=\dimen259
-\tikz@lastmovetoy=\dimen260
-\tikzleveldistance=\dimen261
-\tikzsiblingdistance=\dimen262
-\tikz@figbox=\box56
-\tikz@figbox@bg=\box57
-\tikz@tempbox=\box58
-\tikz@tempbox@bg=\box59
-\tikztreelevel=\count280
-\tikznumberofchildren=\count281
-\tikznumberofcurrentchild=\count282
-\tikz@fig@count=\count283
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
-File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count284
-\pgfmatrixcurrentcolumn=\count285
-\pgf@matrix@numberofcolumns=\count286
+\tikz@lastx=\dimen195
+\tikz@lasty=\dimen196
+\tikz@lastxsaved=\dimen197
+\tikz@lastysaved=\dimen198
+\tikz@lastmovetox=\dimen199
+\tikz@lastmovetoy=\dimen256
+\tikzleveldistance=\dimen257
+\tikzsiblingdistance=\dimen258
+\tikz@figbox=\box54
+\tikz@figbox@bg=\box55
+\tikz@tempbox=\box56
+\tikz@tempbox@bg=\box57
+\tikztreelevel=\count268
+\tikznumberofchildren=\count269
+\tikznumberofcurrentchild=\count270
+\tikz@fig@count=\count271
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count272
+\pgfmatrixcurrentcolumn=\count273
+\pgf@matrix@numberofcolumns=\count274
 )
-\tikz@expandcount=\count287
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+\tikz@expandcount=\count275
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (c:/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen263
-\lightrulewidth=\dimen264
-\cmidrulewidth=\dimen265
-\belowrulesep=\dimen266
-\belowbottomsep=\dimen267
-\aboverulesep=\dimen268
-\abovetopsep=\dimen269
-\cmidrulesep=\dimen270
-\cmidrulekern=\dimen271
-\defaultaddspace=\dimen272
-\@cmidla=\count288
-\@cmidlb=\count289
-\@aboverulesep=\dimen273
-\@belowrulesep=\dimen274
-\@thisruleclass=\count290
-\@lastruleclass=\count291
-\@thisrulewidth=\dimen275
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty
+\heavyrulewidth=\dimen259
+\lightrulewidth=\dimen260
+\cmidrulewidth=\dimen261
+\belowrulesep=\dimen262
+\belowbottomsep=\dimen263
+\aboverulesep=\dimen264
+\abovetopsep=\dimen265
+\cmidrulesep=\dimen266
+\cmidrulekern=\dimen267
+\defaultaddspace=\dimen268
+\@cmidla=\count276
+\@cmidlb=\count277
+\@aboverulesep=\dimen269
+\@belowrulesep=\dimen270
+\@thisruleclass=\count278
+\@lastruleclass=\count279
+\@thisrulewidth=\dimen271
+) (c:/texlive/2020/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-code.tex
-File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen276
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen272
+)) (c:/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+ (c:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-)
-\@linkdim=\dimen277
-\Hy@linkcounter=\count292
-\Hy@pagecounter=\count293
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen273
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
+ (c:/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
-nguages
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (c:/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count294
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+\Hy@SavedSpaceFactor=\count282
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count295
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count283
+ (c:/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen278
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen274
+ (c:/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (c:/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count296
-\Field@Width=\dimen279
-\Fld@charsize=\dimen280
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring OFF on input line 6095.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
+\Fld@menulength=\count284
+\Field@Width=\dimen275
+\Fld@charsize=\dimen276
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+ (c:/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count297
-\c@Item=\count298
-\c@Hfootnote=\count299
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
-with kernel methods
+ (c:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+ (c:/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count300
-\c@bookmark@seq@number=\count301
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
+ (c:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (c:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip52
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+) (c:/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip53
-\multirow@cntb=\count302
+\multirow@cntb=\count290
 \multirow@dima=\skip54
-\bigstrutjot=\dimen281
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count303
-\c@subtable=\count304
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+\bigstrutjot=\dimen277
+) (c:/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count291
+\c@subtable=\count292
+) (c:/texlive/2020/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen282
-\ar@mcellbox=\box60
-\extrarowheight=\dimen283
+ (c:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen278
+\ar@mcellbox=\box58
+\extrarowheight=\dimen279
 \NC@list=\toks33
 \extratabsurround=\skip55
 \backup@length=\skip56
-\ar@cellbox=\box61
+\ar@cellbox=\box59
 )
-\TX@col@width=\dimen284
-\TX@old@table=\dimen285
-\TX@old@col=\dimen286
-\TX@target=\dimen287
-\TX@delta=\dimen288
-\TX@cols=\count305
+\TX@col@width=\dimen280
+\TX@old@table=\dimen281
+\TX@old@col=\dimen282
+\TX@target=\dimen283
+\TX@delta=\dimen284
+\TX@cols=\count293
 \TX@ftn=\toks34
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (c:/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count306
-\Gm@cntv=\count307
-\c@Gm@tempcnt=\count308
-\Gm@bindingoffset=\dimen289
-\Gm@wd@mp=\dimen290
-\Gm@odd@mp=\dimen291
-\Gm@even@mp=\dimen292
-\Gm@layoutwidth=\dimen293
-\Gm@layoutheight=\dimen294
-\Gm@layouthoffset=\dimen295
-\Gm@layoutvoffset=\dimen296
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen285
+\Gm@wd@mp=\dimen286
+\Gm@odd@mp=\dimen287
+\Gm@even@mp=\dimen288
+\Gm@layoutwidth=\dimen289
+\Gm@layoutheight=\dimen290
+\Gm@layouthoffset=\dimen291
+\Gm@layoutvoffset=\dimen292
 \Gm@dimlist=\toks35
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -658,8 +494,7 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks36
 \SOUL@lasttoken=\toks37
@@ -667,54 +502,46 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks39
 \SOUL@token=\toks40
 \SOUL@spaceskip=\skip57
-\SOUL@ttwidth=\dimen297
-\SOUL@uldp=\dimen298
-\SOUL@ulht=\dimen299
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/longtable.sty
+\SOUL@ttwidth=\dimen293
+\SOUL@uldp=\dimen294
+\SOUL@ulht=\dimen295
+) (c:/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip58
 \LTright=\skip59
 \LTpre=\skip60
 \LTpost=\skip61
-\LTchunksize=\count309
-\LTcapwidth=\dimen300
-\LT@head=\box62
-\LT@firsthead=\box63
-\LT@foot=\box64
-\LT@lastfoot=\box65
-\LT@cols=\count310
-\LT@rows=\count311
-\c@LT@tables=\count312
-\c@LT@chunks=\count313
+\LTchunksize=\count297
+\LTcapwidth=\dimen296
+\LT@head=\box60
+\LT@firsthead=\box61
+\LT@foot=\box62
+\LT@lastfoot=\box63
+\LT@cols=\count298
+\LT@rows=\count299
+\c@LT@tables=\count300
+\c@LT@chunks=\count301
 \LT@p@ftn=\toks41
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/rotating.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count314
+\c@r@tfl@t=\count302
 \rotFPtop=\skip62
 \rotFPbot=\skip63
-\rot@float@box=\box66
+\rot@float@box=\box64
 \rot@mess@toks=\toks42
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/natbib.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip64
 \bibsep=\skip65
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count315
-)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2021/02/05 v3.0 ragged2e Package
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel.sty
-Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty)
+\c@NAT@ctr=\count303
+) (c:/texlive/2020/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+ (c:/texlive/2020/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip66
 \RaggedLeftLeftskip=\skip67
@@ -732,51 +559,34 @@ Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 \JustifyingParindent=\skip79
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 41.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/appendix/appendix.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count316
-\c@@ppsavesec=\count317
-\c@@ppsaveapp=\count318
+\c@@pps=\count304
+\c@@ppsavesec=\count305
+\c@@ppsaveapp=\count306
+) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/tikzisetting.tex (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (c:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty (c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+ (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count307
+\l__pdf_internal_box=\box65
+)) (c:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count308
+\g__xparse_grabber_int=\count309
+\l__xparse_m_args_int=\count310
+\l__xparse_v_nesting_int=\count311
 )
-(./Elements/tikzisetting.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypatterns.code.tex
-File: tikzlibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
-s.code.tex
-File: pgflibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count319
-\l__pdf_internal_box=\box67
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
-01.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
-tex)))
-Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
- (/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
-File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
-))
-(./Elements/Title.tex) (./Connected Stocks - Draft - English.aux
-
-LaTeX Warning: Label `sqrt' multiply defined.
-
-
-LaTeX Warning: Label `sqrt@cref' multiply defined.
-
-)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+ (c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+)) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/Title.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Connected Stocks - Draft - English.aux)
 \openout1 = `"Connected Stocks - Draft - English.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
@@ -795,58 +605,47 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+ (c:/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ ABD: EveryShipout initializing macros (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count320
-\scratchdimen=\dimen301
-\scratchbox=\box68
-\nofMPsegments=\count321
-\nofMParguments=\count322
+\scratchcounter=\count312
+\scratchdimen=\dimen297
+\scratchbox=\box66
+\nofMPsegments=\count313
+\nofMParguments=\count314
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count323
-\MPscratchDim=\dimen302
-\MPnumerator=\count324
-\makeMPintoPDFobject=\count325
+\MPscratchCnt=\count315
+\MPscratchDim=\dimen298
+\MPnumerator=\count316
+\makeMPintoPDFobject=\count317
 \everyMPtoPDFconversion=\toks44
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+\AtBeginShipoutBox=\box67
 Package hyperref Info: Link coloring ON on input line 75.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ (c:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+) (c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count326
+\c@section@level=\count318
 )
 LaTeX Info: Redefining \ref on input line 75.
 LaTeX Info: Redefining \pageref on input line 75.
 LaTeX Info: Redefining \nameref on input line 75.
- (./Connected Stocks - Draft - English.out)
-(./Connected Stocks - Draft - English.out)
 \@outlinefile=\write4
 \openout4 = `"Connected Stocks - Draft - English.out"'.
 
@@ -887,17 +686,140 @@ LaTeX Info: Redefining \nameref on input line 75.
 
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 75.
- (./Elements-Eng/Abstract.tex)
-(./Elements-Eng/Introduction.tex [1
+ (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Abstract.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Introduction.tex
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]) (.
-/Elements-Eng/Data and Methodology.tex
-[3] (./Elements/pairsnumber.tex) (./Elements/PairPercent.tex)
-(./Elements/TotalPairNumberCal.tex) (./Elements/numberofcommonowner.tex)
-[4] (./Elements/FirmPairBGShape.tex (./Elements/SBGShape.tex)
-(./Elements/DBGShape.tex) (./Elements/No1BGShape.tex)
-(./Elements/No2BGShape.tex)) (./Elements/pairsnumber.tex)
-(./Elements/pairsnumber.tex)
+Package natbib Warning: Citation `shiller1989comovements' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `barberis2003style' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `barberis2005comovement' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `azar2018anticompetitive' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `barberis2005comovement' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `wu2014investor' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `grullon2014comovement' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `david2016correlated' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `pantzalis2017shareholder' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `HAMEED2019103' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Liquidity2016' on page 1 undefined on input line 5.
+
+[1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `holderness2003survey' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `edmans2014blockholders' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `edmans2017blockholders' on page 2 undefined on input line 7.
+
+
+Package natbib Warning: Citation `edmans2014governance' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 2 undefined on input line 8.
+
+
+Package natbib Warning: Citation `khanna2007business' on page 2 undefined on input line 12.
+
+[2]
+
+Package natbib Warning: Citation `AntonPolk' on page 3 undefined on input line 30.
+
+) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Data and Methodology.tex
+
+Package natbib Warning: Citation `Aliabadi2022' on page 3 undefined on input line 13.
+
+
+Package natbib Warning: Citation `Aliabadi2022' on page 3 undefined on input line 13.
+
+
+Package natbib Warning: Citation `almeida2011structure' on page 3 undefined on input line 13.
+
+
+Package natbib Warning: Citation `aminadav2011rebuilding' on page 3 undefined on input line 13.
+
+
+Package natbib Warning: Citation `shapley1954method' on page 3 undefined on input line 13.
+
+
+Package natbib Warning: Citation `Aliabadi2022' on page 3 undefined on input line 13.
+
+
+LaTeX Warning: Reference `BGDef' on page 3 undefined on input line 13.
+
+[3]
+
+LaTeX Warning: Hyper reference `t2-1' on page 4 undefined on input line 22.
+
+
+LaTeX Warning: Reference `sub@t2-1' on page 4 undefined on input line 22.
+
+
+LaTeX Warning: Reference `st1' on page 4 undefined on input line 22.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/pairsnumber.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/PairPercent.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/TotalPairNumberCal.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/numberofcommonowner.tex)
+
+LaTeX Warning: Reference `g2-1' on page 4 undefined on input line 35.
+
+
+LaTeX Warning: Hyper reference `t2-2' on page 4 undefined on input line 35.
+
+
+LaTeX Warning: Reference `sub@t2-2' on page 4 undefined on input line 35.
+
+
+LaTeX Warning: Reference `st1' on page 4 undefined on input line 35.
+
+[4] (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/FirmPairBGShape.tex (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/SBGShape.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/DBGShape.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/No1BGShape.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/No2BGShape.tex))
+
+LaTeX Warning: Hyper reference `t2-1' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Reference `sub@t2-1' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Hyper reference `t2-2' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Reference `sub@t2-2' on page 5 undefined on input line 61.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/pairsnumber.tex)
+
+LaTeX Warning: Hyper reference `t2-1' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Reference `sub@t2-1' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Hyper reference `t2-2' on page 5 undefined on input line 61.
+
+
+LaTeX Warning: Reference `sub@t2-2' on page 5 undefined on input line 61.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/pairsnumber.tex)
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
 (caption)                outside box or environment on input line 64.
@@ -908,14 +830,176 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 64.
 See the caption package documentation for explanation.
 
-(./Output/summaryOfOwnership.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/summaryOfOwnership.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 73.
 See the caption package documentation for explanation.
 
-(./Output/summaryOfPairs.tex) [5] [6] (./Elements/MeasurmentLit.tex) [7]
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/summaryOfPairs.tex) [5] [6]
+
+LaTeX Warning: Reference `maasurmentsSummary' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `harford2011institutional' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `azar2018anticompetitive' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `azar2011new' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `he2017product' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `lewellen2021does' on page 7 undefined on input line 94.
+
+
+Package natbib Warning: Citation `newham2018common' on page 7 undefined on input line 94.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/MeasurmentLit.tex
+
+Package natbib Warning: Citation `harford2011institutional' on page 7 undefined on input line 6.
+
+
+Package natbib Warning: Citation `azar2018anticompetitive' on page 7 undefined on input line 9.
+
+
+Package natbib Warning: Citation `gilje2020s' on page 7 undefined on input line 11.
+
+
+Package natbib Warning: Citation `he2017product' on page 7 undefined on input line 14.
+
+
+Package natbib Warning: Citation `he2019internalizing' on page 7 undefined on input line 15.
+
+
+Package natbib Warning: Citation `newham2018common' on page 7 undefined on input line 17.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 19.
+
+
+Package natbib Warning: Citation `freeman2019effects' on page 7 undefined on input line 22.
+
+
+Package natbib Warning: Citation `hansen1996externalities' on page 7 undefined on input line 23.
+
+)
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 108.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 7 undefined on input line 108.
+
+
+LaTeX Warning: Reference `ModifiedMeasure' on page 7 undefined on input line 113.
+
+[7]
+
+LaTeX Warning: Hyper reference `measureResults' on page 8 undefined on input line 117.
+
+
+LaTeX Warning: Reference `sub@measureResults' on page 8 undefined on input line 117.
+
+
+LaTeX Warning: Reference `st2' on page 8 undefined on input line 117.
+
+
+Package natbib Warning: Citation `king1966market' on page 8 undefined on input line 142.
+
+
+Package natbib Warning: Citation `meyers1973re' on page 8 undefined on input line 142.
+
+
+LaTeX Warning: Reference `e5Factor' on page 8 undefined on input line 142.
+
+
+LaTeX Warning: Reference `e5Factor' on page 8 undefined on input line 142.
+
+
+Package natbib Warning: Citation `Carhart4Factor' on page 8 undefined on input line 150.
+
+
+LaTeX Warning: Hyper reference `tCorr' on page 8 undefined on input line 150.
+
+
+LaTeX Warning: Reference `sub@tCorr' on page 8 undefined on input line 150.
+
+
+LaTeX Warning: Reference `st2' on page 8 undefined on input line 150.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 8 undefined on input line 172.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 8 undefined on input line 172.
+
 [8]
+
+LaTeX Warning: Hyper reference `ControlsSummary' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Reference `sub@ControlsSummary' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Reference `st2' on page 9 undefined on input line 189.
+
+
+LaTeX Warning: Hyper reference `measureResults' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@measureResults' on page 9 undefined on input line 196.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Hyper reference `tCorr' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@tCorr' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Hyper reference `ControlsSummary' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@ControlsSummary' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Hyper reference `measureResults' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@measureResults' on page 9 undefined on input line 196.
+
+
+Package natbib Warning: Citation `AntonPolk' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Hyper reference `tCorr' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@tCorr' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Hyper reference `ControlsSummary' on page 9 undefined on input line 196.
+
+
+LaTeX Warning: Reference `sub@ControlsSummary' on page 9 undefined on input line 196.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
 (caption)                outside box or environment on input line 204.
@@ -926,38 +1010,66 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 204.
 See the caption package documentation for explanation.
 
-(./Output/FCACal.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/FCACal.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 212.
 See the caption package documentation for explanation.
 
-(./Output/CorrelationsResultsText.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/CorrelationsResultsText.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 221.
 See the caption package documentation for explanation.
 
-(./Output/ControlsSummary.tex) (./Output/table13.tex)) [9] [10]
-(./Elements-Eng/Results.tex
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/ControlsSummary.tex) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/table13.tex)) [9] [10] (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Results.tex
+
+LaTeX Warning: Reference `mcorr50' on page 11 undefined on input line 9.
+
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 22057 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 13230 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-convert
-ed-to.pdf Output/mcorr50.eps>
+(epstopdf)             Command: <repstopdf --outfile=Output/mcorr50-eps-converted-to.pdf Output/mcorr50.eps>
 (epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
-<Output/mcorr50-eps-converted-to.pdf, id=328, 397.485pt x 289.08pt>
+<Output/mcorr50-eps-converted-to.pdf, id=99, 397.485pt x 289.08pt>
 File: Output/mcorr50-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/mcorr50-eps-converted-to.pdf>
-Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input lin
-e 13.
+Package pdftex.def Info: Output/mcorr50-eps-converted-to.pdf  used on input line 13.
 (pdftex.def)             Requested size: 292.77629pt x 212.93219pt.
- (./Elements/Model11.tex) [11] [12 <./Output/mcorr50-eps-converted-to.pdf>] [13
-] [14]
+
+LaTeX Warning: Reference `comovement' on page 11 undefined on input line 18.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/Model11.tex)
+
+Package natbib Warning: Citation `FamaMacBeth' on page 11 undefined on input line 22.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 11 undefined on input line 22.
+
+
+LaTeX Warning: Hyper reference `mresult2part1' on page 11 undefined on input line 25.
+
+
+LaTeX Warning: Reference `sub@mresult2part1' on page 11 undefined on input line 25.
+
+
+LaTeX Warning: Reference `re1' on page 11 undefined on input line 25.
+
+
+LaTeX Warning: Reference `control' on page 11 undefined on input line 28.
+
+[11] [12 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/mcorr50-eps-converted-to.pdf>]
+
+LaTeX Warning: Hyper reference `mresult2part2' on page 13 undefined on input line 48.
+
+
+LaTeX Warning: Reference `sub@mresult2part2' on page 13 undefined on input line 48.
+
+[13]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -992,107 +1104,330 @@ e 13.
 
 
 
+Package natbib Warning: Citation `FamaMacBeth' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `fama1993differences' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `Carhart4Factor' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `st1' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `mresult2part1' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sub@mresult2part1' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `mresult2part2' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sub@mresult2part2' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `fama1993differences' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `Carhart4Factor' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `st1' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 14 undefined on input line 62.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `mresult2part1' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sub@mresult2part1' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `mresult2part2' on page 14 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sub@mresult2part2' on page 14 undefined on input line 62.
+
+
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 66.
+(caption)                outside box or environment on input line 64.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 66.
+(caption)                outside box or environment on input line 64.
 See the caption package documentation for explanation.
 
-(./Output/mresult2part1-slide.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/mresult2part1-slide.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 72.
+(caption)                outside box or environment on input line 70.
 See the caption package documentation for explanation.
 
-(./Output/mresult2part2-slide.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/mresult2part2-slide.tex)
 
-LaTeX Warning: Float too large for page by 45.9731pt on input line 80.
+LaTeX Warning: Float too large for page by 33.41032pt on input line 78.
 
-[15]
+[14]
+
+LaTeX Warning: Reference `Qmcorr5lrd' on page 15 undefined on input line 104.
+
+
+LaTeX Warning: Hyper reference `measureResults' on page 15 undefined on input line 104.
+
+
+LaTeX Warning: Reference `sub@measureResults' on page 15 undefined on input line 104.
+
+
+LaTeX Warning: Reference `st2' on page 15 undefined on input line 104.
+
+
+LaTeX Warning: Reference `Qmcorr5subsample' on page 15 undefined on input line 104.
+
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 27902 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrd-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 15914 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrd-eps-conv
-erted-to.pdf Output/Qmcorr5lrd.eps>
-(epstopdf)             \includegraphics on input line 111.
+(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrd-eps-converted-to.pdf Output/Qmcorr5lrd.eps>
+(epstopdf)             \includegraphics on input line 109.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrd-eps-converted-to.pdf, id=408, 397.485pt x 289.08pt>
+<Output/Qmcorr5lrd-eps-converted-to.pdf, id=134, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrd-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5lrd-eps-converted-to.pdf>
-Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input 
-line 111.
+Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input line 109.
 (pdftex.def)             Requested size: 271.86234pt x 197.72305pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 23704 bytes
-(epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
-df>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 16074 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-ep
-s-converted-to.pdf Output/Qmcorr5subsample.eps>
-(epstopdf)             \includegraphics on input line 121.
+(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5subsample-eps-converted-to.pdf Output/Qmcorr5subsample.eps>
+(epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5subsample-eps-converted-to.pdf, id=409, 397.485pt x 289.08pt>
+<Output/Qmcorr5subsample-eps-converted-to.pdf, id=135, 397.485pt x 289.08pt>
 File: Output/Qmcorr5subsample-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/Qmcorr5subsample-eps-converted-to.pdf>
-Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on 
-input line 121.
+Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on input line 119.
 (pdftex.def)             Requested size: 230.04079pt x 167.30481pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 30126 bytes
-(epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
--to.pdf>
-(epstopdf)                    date: 2022-01-03 11:47:49
+(epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-01-03 21:17:49
 (epstopdf)                    size: 14646 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsamp
-le-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)             \includegraphics on input line 121.
+(epstopdf)             Command: <repstopdf --outfile=Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
+(epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
-<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=410, 397.485pt x 289.08p
-t>
+<Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf, id=136, 397.485pt x 289.08pt>
 File: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf Graphic file (type pdf)
-
 <use Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>
-Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  use
-d on input line 121.
+Package pdftex.def Info: Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf  used on input line 119.
 (pdftex.def)             Requested size: 230.04079pt x 167.30481pt.
- [16
+
+LaTeX Warning: Reference `model1' on page 15 undefined on input line 133.
 
 
- <./Output/Qmcorr5lrd-eps-converted-to.pdf>]
+LaTeX Warning: Reference `Forecasting Comovement' on page 15 undefined on input line 133.
+
+
+LaTeX Warning: Hyper reference `QTimemresult2subsample' on page 15 undefined on input line 133.
+
+
+LaTeX Warning: Reference `sub@QTimemresult2subsample' on page 15 undefined on input line 133.
+
+
+LaTeX Warning: Reference `re2' on page 15 undefined on input line 133.
+
+
+LaTeX Warning: Reference `QarterSummary' on page 15 undefined on input line 133.
+
+[15
+
+
+ <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/Qmcorr5lrd-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `model1' on page 16 undefined on input line 163.
+
+
+LaTeX Warning: Reference `Forecasting Comovement' on page 16 undefined on input line 163.
+
+
+LaTeX Warning: Hyper reference `AllPairs' on page 16 undefined on input line 165.
+
+
+LaTeX Warning: Reference `sub@AllPairs' on page 16 undefined on input line 165.
+
+
+LaTeX Warning: Reference `re2' on page 16 undefined on input line 165.
+
+
+LaTeX Warning: Reference `re1' on page 16 undefined on input line 165.
+
+
+LaTeX Warning: Hyper reference `QTimemresult2subsample' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `sub@QTimemresult2subsample' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `st1' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Hyper reference `AllPairs' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `sub@AllPairs' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `re1' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Hyper reference `QTimemresult2subsample' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `sub@QTimemresult2subsample' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `st1' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Hyper reference `AllPairs' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `sub@AllPairs' on page 16 undefined on input line 188.
+
+
+LaTeX Warning: Reference `re1' on page 16 undefined on input line 188.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 192.
+(caption)                outside box or environment on input line 190.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 192.
+(caption)                outside box or environment on input line 190.
 See the caption package documentation for explanation.
 
-(./Output/QTimemresult2subsample-slide.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/QTimemresult2subsample-slide.tex)
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 200.
+(caption)                outside box or environment on input line 198.
 See the caption package documentation for explanation.
 
-(./Output/Q3mresultAllPairs.tex) [17 <./Output/Qmcorr5subsample-eps-converted-t
-o.pdf> <./Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>] [18])
-(./Elements-Eng/Evidence for correlated trading.tex
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/Q3mresultAllPairs.tex) [16 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/Qmcorr5subsample-eps-converted-to.pdf> <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/Qmcorr5lrdbgsubsample-eps-converted-to.pdf>] [17]) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Evidence for correlated trading.tex
 Overfull \hbox (5.42473pt too wide) in paragraph at lines 15--18
-\OT1/cmr/m/n/12 dus-try and busi-ness group port-fo-lio's turnover, $^^A[][]$ a
-nd $^^A[][]$
+\OT1/cmr/m/n/12 dus-try and busi-ness group port-fo-lio's turnover, $^^A[][]$ and $^^A[][]$
  []
 
-(./Elements/turnoverModel.tex) [19] (./Output/turnover.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/turnoverModel.tex)
+
+Package natbib Warning: Citation `FamaMacBeth' on page 18 undefined on input line 20.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 18 undefined on input line 20.
+
+
+LaTeX Warning: Reference `turnover' on page 18 undefined on input line 20.
+
+
+LaTeX Warning: Hyper reference `mresult2-turnover' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Reference `sub@mresult2-turnover' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Reference `re3' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Hyper reference `turncomovement' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Reference `sub@turncomovement' on page 18 undefined on input line 22.
+
+
+LaTeX Warning: Reference `re3' on page 18 undefined on input line 22.
+
+[18]
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 32.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 19 undefined on input line 32.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 32.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 32.
+
+
+Package natbib Warning: Citation `newey1987hypothesis' on page 19 undefined on input line 32.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 32.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/turnover.tex)
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `st1' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `re1' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Hyper reference `mresult2-turnover' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `sub@mresult2-turnover' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Hyper reference `turncomovement' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `sub@turncomovement' on page 19 undefined on input line 43.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `st1' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `re1' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Hyper reference `mresult2-turnover' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `sub@mresult2-turnover' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Hyper reference `turncomovement' on page 19 undefined on input line 43.
+
+
+LaTeX Warning: Reference `sub@turncomovement' on page 19 undefined on input line 43.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
 (caption)                outside box or environment on input line 45.
@@ -1103,13 +1438,43 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 45.
 See the caption package documentation for explanation.
 
-(./Output/mresult2-turnover.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/mresult2-turnover.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 53.
 See the caption package documentation for explanation.
 
-(./Output/turncomovement.tex) [20] [21]
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/turncomovement.tex) [19] [20]
+
+LaTeX Warning: Hyper reference `tab:ResidualTrunSummary' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `sub@tab:ResidualTrunSummary' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `st3' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Hyper reference `tab:ResidualTrunStdSummary' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `sub@tab:ResidualTrunStdSummary' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `st3' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `fig:GroupedResSTD' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Hyper reference `Turnovercrosssection' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `sub@Turnovercrosssection' on page 21 undefined on input line 64.
+
+
+LaTeX Warning: Reference `re4' on page 21 undefined on input line 64.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
 (caption)                outside box or environment on input line 71.
@@ -1120,33 +1485,42 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 71.
 See the caption package documentation for explanation.
 
-(./Output/ResidualTrunSummary.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/ResidualTrunSummary.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 78.
 See the caption package documentation for explanation.
 
-(./Output/ResidualTrunStdSummary.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
-(epstopdf)                    date: 2022-02-11 05:37:35
+(epstopdf)                    date: 2022-02-11 15:07:35
 (epstopdf)                    size: 20926867 bytes
 (epstopdf)             Output file: <Output/GroupedResSTD-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2022-02-11 05:55:52
+(epstopdf)                    date: 2022-02-11 15:25:52
 (epstopdf)                    size: 296315 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-c
-onverted-to.pdf Output/GroupedResSTD.eps>
+(epstopdf)             Command: <repstopdf --outfile=Output/GroupedResSTD-eps-converted-to.pdf Output/GroupedResSTD.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedResSTD-eps-converted-to.pdf, id=530, 722.7pt x 361.35pt>
+<Output/GroupedResSTD-eps-converted-to.pdf, id=202, 722.7pt x 361.35pt>
 File: Output/GroupedResSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedResSTD-eps-converted-to.pdf>
-Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on inp
-ut line 88.
+Package pdftex.def Info: Output/GroupedResSTD-eps-converted-to.pdf  used on input line 88.
 (pdftex.def)             Requested size: 355.51817pt x 177.75778pt.
- [22
+ [21
 
 ]
+
+Package natbib Warning: Citation `seasholes2007predictable' on page 22 undefined on input line 105.
+
+
+LaTeX Warning: Hyper reference `tab:ImbalanceInsStdSummary' on page 22 undefined on input line 105.
+
+
+LaTeX Warning: Reference `sub@tab:ImbalanceInsStdSummary' on page 22 undefined on input line 105.
+
+
+LaTeX Warning: Reference `st4' on page 22 undefined on input line 105.
+
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
 (caption)                outside box or environment on input line 111.
@@ -1157,35 +1531,83 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 111.
 See the caption package documentation for explanation.
 
-(./Output/ImbalanceInsMeanSummary.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/ImbalanceInsMeanSummary.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 118.
 See the caption package documentation for explanation.
 
-(./Output/ImbalanceInsStdSummary.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
-(epstopdf)                    date: 2022-02-11 06:04:08
+(epstopdf)                    date: 2022-02-11 15:34:08
 (epstopdf)                    size: 21145985 bytes
 (epstopdf)             Output file: <Output/GroupedInsSTD-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2022-02-11 06:04:20
+(epstopdf)                    date: 2022-02-11 15:34:20
 (epstopdf)                    size: 271722 bytes
-(epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-c
-onverted-to.pdf Output/GroupedInsSTD.eps>
+(epstopdf)             Command: <repstopdf --outfile=Output/GroupedInsSTD-eps-converted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
-<Output/GroupedInsSTD-eps-converted-to.pdf, id=542, 722.7pt x 361.35pt>
+<Output/GroupedInsSTD-eps-converted-to.pdf, id=208, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
-Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on inp
-ut line 126.
+Package pdftex.def Info: Output/GroupedInsSTD-eps-converted-to.pdf  used on input line 126.
 (pdftex.def)             Requested size: 355.51817pt x 177.75778pt.
 
+
+LaTeX Warning: Hyper reference `Imbalance' on page 22 undefined on input line 131.
+
+
+LaTeX Warning: Reference `sub@Imbalance' on page 22 undefined on input line 131.
+
+
+LaTeX Warning: Reference `re4' on page 22 undefined on input line 131.
+
+
 Overfull \hbox (6.39854pt too wide) in paragraph at lines 131--132
-\OT1/cmr/m/n/12 whose av-er-age stan-dard er-rors are lower than half of the sa
-m-ple;\OT1/cmr/bx/n/12 LowImbalancestd\OT1/cmr/m/n/12 .
+\OT1/cmr/m/n/12 whose av-er-age stan-dard er-rors are lower than half of the sam-ple;\OT1/cmr/bx/n/12 LowImbalancestd\OT1/cmr/m/n/12 .
  []
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `st1' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `re1' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Hyper reference `Turnovercrosssection' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `sub@Turnovercrosssection' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Hyper reference `Imbalance' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `sub@Imbalance' on page 22 undefined on input line 148.
+
+
+Package natbib Warning: Citation `FamaMacBeth' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `st1' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `re1' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Hyper reference `Turnovercrosssection' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `sub@Turnovercrosssection' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Hyper reference `Imbalance' on page 22 undefined on input line 148.
+
+
+LaTeX Warning: Reference `sub@Imbalance' on page 22 undefined on input line 148.
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
@@ -1197,98 +1619,145 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 150.
 See the caption package documentation for explanation.
 
-(./Output/LowRes.tex)
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/LowRes.tex)
 
 Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 157.
 See the caption package documentation for explanation.
 
-(./Output/Imbalance.tex) [23 <./Output/GroupedResSTD-eps-converted-to.pdf>]
-[24 <./Output/GroupedInsSTD-eps-converted-to.pdf>] [25])
-(./Elements-Eng/Conclusion.tex [26] (./Connected Stocks - Draft - English.bbl
-[27] [28])) (./Elements-Eng/appendices.tex
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/Imbalance.tex) [22 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/GroupedResSTD-eps-converted-to.pdf>] [23 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/GroupedInsSTD-eps-converted-to.pdf>] [24]) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/Conclusion.tex
+
+Package natbib Warning: Citation `AntonPolk' on page 25 undefined on input line 3.
+
+[25]
+No file "Connected Stocks - Draft - English".bbl.
+) (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements-Eng/appendices.tex
 Overfull \hbox (33.11809pt too wide) in paragraph at lines 6--6
 []\OT1/cmr/bx/n/17.28 Overview of Busi-ness Groups in Tehran
  []
 
-[29] [30]
-<Elements/1.png, id=626, 494.8086pt x 299.6796pt>
+
+Package natbib Warning: Citation `khanna2007business' on page 26 undefined on input line 8.
+
+
+Package natbib Warning: Citation `FirmInterlock' on page 26 undefined on input line 10.
+
+
+Package natbib Warning: Citation `Aliabadi2022' on page 26 undefined on input line 20.
+
+
+LaTeX Warning: Reference `maasurmentsSummary' on page 26 undefined on input line 48.
+
+[26]
+
+LaTeX Warning: Reference `Sum' on page 27 undefined on input line 57.
+
+
+LaTeX Warning: Reference `sqrt' on page 27 undefined on input line 59.
+
+
+LaTeX Warning: Reference `Quadratic' on page 27 undefined on input line 59.
+
+
+LaTeX Warning: Reference `gExample1' on page 27 undefined on input line 79.
+
+
+LaTeX Warning: Reference `Sum' on page 27 undefined on input line 102.
+
+
+LaTeX Warning: Reference `sqrt' on page 27 undefined on input line 102.
+
+
+LaTeX Warning: Reference `Quadratic' on page 27 undefined on input line 102.
+
+
+LaTeX Warning: Reference `example1Results' on page 27 undefined on input line 102.
+
+<Elements/1.png, id=246, 494.8086pt x 299.6796pt>
 File: Elements/1.png Graphic file (type png)
 <use Elements/1.png>
 Package pdftex.def Info: Elements/1.png  used on input line 107.
 (pdftex.def)             Requested size: 196.57973pt x 119.06033pt.
-<Elements/2.png, id=628, 494.3268pt x 300.1614pt>
+<Elements/2.png, id=248, 494.3268pt x 300.1614pt>
 File: Elements/2.png Graphic file (type png)
 <use Elements/2.png>
 Package pdftex.def Info: Elements/2.png  used on input line 108.
 (pdftex.def)             Requested size: 196.57973pt x 119.36626pt.
- (./Elements/Example2.tex) [31 <./Elements/1.png> <./Elements/2.png>]
-[32]
-<Elements/3.png, id=649, 722.7pt x 360.3864pt>
+
+LaTeX Warning: Reference `gExample2' on page 27 undefined on input line 111.
+
+
+LaTeX Warning: Reference `Example2' on page 27 undefined on input line 111.
+
+[27] (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/Example2.tex)
+
+LaTeX Warning: Reference `marketcap' on page 28 undefined on input line 165.
+
+
+LaTeX Warning: Reference `sqrtMarket' on page 28 undefined on input line 165.
+
+
+LaTeX Warning: Reference `sumMarket' on page 28 undefined on input line 165.
+
+[28 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/1.png> <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/2.png>]
+<Elements/3.png, id=268, 722.7pt x 360.3864pt>
 File: Elements/3.png Graphic file (type png)
 <use Elements/3.png>
 Package pdftex.def Info: Elements/3.png  used on input line 173.
 (pdftex.def)             Requested size: 355.51817pt x 177.28375pt.
-<Elements/4.png, id=650, 723.1818pt x 359.9046pt>
+<Elements/4.png, id=269, 723.1818pt x 359.9046pt>
 File: Elements/4.png Graphic file (type png)
 <use Elements/4.png>
 Package pdftex.def Info: Elements/4.png  used on input line 179.
 (pdftex.def)             Requested size: 355.51817pt x 176.93141pt.
- (./Elements/marketcap.tex) (./Output/mresult2Polk-slide.tex) [33 <./Elements/3
-.png>] [34 <./Elements/4.png>])
+ (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/marketcap.tex)
+
+LaTeX Warning: Reference `mresult2Polk' on page 29 undefined on input line 193.
+
+(d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Output/mresult2Polk-slide.tex) [29 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/3.png>] [30 <d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Elements/4.png>])
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 50.
 See the caption package documentation for explanation.
 
-[35] (./Connected Stocks - Draft - English.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+Package natbib Warning: There were undefined citations.
 
-Package rerunfilecheck Info: File `"Connected Stocks - Draft - English".out' ha
-s not changed.
-(rerunfilecheck)             Checksum: 7B1EAF9FD6E7CDAF2ED6C00D030F5ED3;2753.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+ (d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Connected Stocks - Draft - English.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+
+
+Package rerunfilecheck Warning: File `"Connected Stocks - Draft - English".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Connected Stocks - Draft - English".out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  017FF457D762125E7BF63AFF113AFD51;1104.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 24929 strings out of 478994
- 472492 string characters out of 5858185
- 909566 words of memory out of 5000000
- 41720 multiletter control sequences out of 15000+600000
- 415250 words of font info for 65 fonts, out of 8000000 for 9000
+ 22278 strings out of 480608
+ 438542 string characters out of 5907536
+ 851427 words of memory out of 5000000
+ 37524 multiletter control sequences out of 15000+600000
+ 546164 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,17n,116p,2043b,1115s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (35 pages, 1106496 b
-ytes).
+ 60i,17n,64p,2153b,1100s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "d:/Dropbox/Connected Stocks/Connected-Stocks/Report/Connected Stocks - Draft - English.pdf" (31 pages, 1094418 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 128 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

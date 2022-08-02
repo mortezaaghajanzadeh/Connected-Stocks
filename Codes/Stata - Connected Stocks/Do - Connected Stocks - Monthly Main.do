@@ -70,6 +70,7 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 	estadd loc SubSample "All" , replace
 	estadd loc Pairtypr "Yes" , replace
 
+	
 
 	eststo v9: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ gdummy0-gdummy47 i.PairType , fmb newey(4)
 	estadd loc GroupFE "Yes" , replace
