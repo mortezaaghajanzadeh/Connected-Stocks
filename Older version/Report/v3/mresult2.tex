@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+ & \multicolumn{6}{c}{Dependent Variable: Monthly Correlation of 4F Residuals}                 \\
+ \cline{2-7}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+MonthlyFCA*         &      0.0184\sym{***}&      0.0160\sym{***}&     0.00534\sym{***}&     0.00370\sym{***}&     0.00389\sym{***}&     0.00462\sym{***}\\
+                    &     (15.12)         &     (14.94)         &      (6.04)         &      (4.47)         &      (4.68)         &      (5.47)         \\
+[1em]
+MCorr               &                     &       0.118\sym{***}&       0.103\sym{***}&      0.0954\sym{***}&      0.0942\sym{***}&      0.0928\sym{***}\\
+                    &                     &     (12.21)         &     (11.48)         &     (12.84)         &     (12.89)         &     (12.93)         \\
+[1em]
+sgroup              &                     &                     &       0.112\sym{***}&       0.108\sym{***}&       0.107\sym{***}&       0.105\sym{***}\\
+                    &                     &                     &     (22.85)         &     (22.36)         &     (22.15)         &     (22.12)         \\
+[1em]
+MSamesize           &                     &                     &      0.0459\sym{***}&                     &       0.106\sym{***}&                     \\
+                    &                     &                     &      (7.17)         &                     &      (7.15)         &                     \\
+[1em]
+MSize1              &                     &                     &                     &      -0.130\sym{***}&                     &     -0.0496\sym{***}\\
+                    &                     &                     &                     &     (-7.02)         &                     &     (-3.52)         \\
+[1em]
+MSize2              &                     &                     &                     &      0.0144\sym{**} &                     &       0.271\sym{***}\\
+                    &                     &                     &                     &      (3.10)         &                     &      (7.01)         \\
+[1em]
+msize1size2         &                     &                     &                     &                     &      -0.110\sym{***}&      -0.298\sym{***}\\
+                    &                     &                     &                     &                     &     (-7.35)         &     (-7.13)         \\
+\hline
+Observations        &      506541         &      501846         &      501846         &      501846         &      501846         &      501846         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

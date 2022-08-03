@@ -1,0 +1,35 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+ & \multicolumn{6}{c}{Dependent Variable: Weekly Correlation of 4F Residuals}                 \\
+ \cline{2-7}
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+WeeklyFCA*          &      0.0191\sym{***}&      0.0154\sym{***}&     0.00558\sym{***}&     0.00431\sym{***}&     0.00448\sym{***}&     0.00497\sym{***}\\
+                    &     (24.84)         &     (20.83)         &      (9.18)         &      (7.50)         &      (7.74)         &      (8.58)         \\
+[1em]
+WCorr               &                     &       0.190\sym{***}&       0.186\sym{***}&       0.183\sym{***}&       0.183\sym{***}&       0.183\sym{***}\\
+                    &                     &     (11.15)         &     (10.85)         &     (10.71)         &     (10.70)         &     (10.68)         \\
+[1em]
+sgroup              &                     &                     &       0.101\sym{***}&      0.0971\sym{***}&      0.0963\sym{***}&      0.0955\sym{***}\\
+                    &                     &                     &     (29.09)         &     (28.32)         &     (28.14)         &     (27.98)         \\
+[1em]
+WSamesize           &                     &                     &      0.0502\sym{***}&                     &      0.0940\sym{***}&                     \\
+                    &                     &                     &     (13.23)         &                     &     (12.87)         &                     \\
+[1em]
+WSize1              &                     &                     &                     &      -0.112\sym{***}&                     &     -0.0557\sym{***}\\
+                    &                     &                     &                     &    (-12.20)         &                     &     (-6.61)         \\
+[1em]
+WSize2              &                     &                     &                     &      0.0277\sym{***}&                     &       0.203\sym{***}\\
+                    &                     &                     &                     &      (7.96)         &                     &      (9.68)         \\
+[1em]
+wsize1size2         &                     &                     &                     &                     &     -0.0789\sym{***}&      -0.204\sym{***}\\
+                    &                     &                     &                     &                     &     (-9.86)         &     (-8.51)         \\
+\hline
+Observations        &     2280984         &     2189145         &     2189145         &     2189145         &     2189145         &     2189145         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

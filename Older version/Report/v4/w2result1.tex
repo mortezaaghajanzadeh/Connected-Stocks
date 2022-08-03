@@ -1,0 +1,48 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+\hline
+$ \text{FCA}^* $    &     0.00844\sym{***}&     0.00839\sym{***}&     0.00638\sym{***}&     0.00404\sym{***}&     0.00375\sym{***}&     0.00386\sym{***}&     0.00377\sym{***}\\
+                    &     (10.22)         &     (10.31)         &     (10.37)         &      (7.43)         &      (6.95)         &      (7.14)         &      (7.02)         \\
+[1em]
+ $ { \text{FCA} ^ * } ^2 $&                     &     0.00844\sym{***}&     0.00653\sym{***}&     0.00495\sym{***}&     0.00563\sym{***}&     0.00563\sym{***}&     0.00563\sym{***}\\
+                    &                     &      (9.37)         &      (9.58)         &      (7.86)         &      (9.01)         &      (9.03)         &      (9.03)         \\
+[1em]
+$ \rho_t $          &                     &                     &       0.251\sym{***}&       0.250\sym{***}&       0.250\sym{***}&       0.250\sym{***}&       0.250\sym{***}\\
+                    &                     &                     &    (206.77)         &    (206.71)         &    (206.21)         &    (206.33)         &    (206.22)         \\
+[1em]
+sgroup              &                     &                     &                     &      0.0220\sym{***}&      0.0205\sym{***}&      0.0203\sym{***}&      0.0205\sym{***}\\
+                    &                     &                     &                     &      (8.36)         &      (7.78)         &      (7.66)         &      (7.68)         \\
+[1em]
+Samesize            &                     &                     &                     &     -0.0193\sym{***}&                     &     -0.0331\sym{***}&                     \\
+                    &                     &                     &                     &     (-8.96)         &                     &    (-14.26)         &                     \\
+[1em]
+Size1               &                     &                     &                     &                     &     -0.0410\sym{***}&                     &     -0.0399\sym{***}\\
+                    &                     &                     &                     &                     &    (-15.32)         &                     &     (-9.47)         \\
+[1em]
+Size2               &                     &                     &                     &                     &     0.00953\sym{***}&                     &      0.0130         \\
+                    &                     &                     &                     &                     &      (3.89)         &                     &      (1.21)         \\
+[1em]
+$ Size1 \times Size2 $&                     &                     &                     &                     &                     &     -0.0273\sym{***}&    -0.00413         \\
+                    &                     &                     &                     &                     &                     &    (-10.58)         &     (-0.32)         \\
+[1em]
+Constant            &      0.0136\sym{***}&     0.00524\sym{***}&     0.00404\sym{***}&     0.00829\sym{***}&      0.0281\sym{***}&      0.0216\sym{***}&      0.0272\sym{***}\\
+                    &     (19.11)         &      (5.62)         &      (5.73)         &      (8.96)         &     (14.21)         &     (14.17)         &      (8.72)         \\
+\hline
+Observations        &     1405850         &     1405850         &     1380194         &     1380194         &     1380194         &     1380194         &     1380194         \\
+\(R^{2}\)           &       0.000         &       0.001         &       0.064         &       0.064         &       0.064         &       0.064         &       0.064         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize This table reports OLS estimates of fortnightly cross-sectional}\\
+\multicolumn{8}{l}{\footnotesize  regressions forecasting the correlation of daily CAPM+Industry residuals in fortnight t + 1 for each pairs.}\\
+\multicolumn{8}{l}{\footnotesize The independent variables are updated fortnightly and include our measure of institutional connectedness,}\\
+\multicolumn{8}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{8}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{8}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{8}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{8}{l}{\footnotesize  We calculate standard errors by clustering on each pair}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -1,0 +1,46 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+\hline
+$\ln(FCA)$          &     0.00799\sym{***}&     0.00799\sym{***}&     0.00552\sym{***}&     0.00351\sym{***}&     0.00318\sym{***}&     0.00324\sym{***}&     0.00317\sym{***}\\
+                    &      (9.40)         &      (9.40)         &     (10.19)         &      (8.12)         &      (8.26)         &      (8.39)         &      (8.29)         \\
+[1em]
+$ \rho\_t $          &                     &                     &       0.279\sym{***}&       0.278\sym{***}&       0.277\sym{***}&       0.277\sym{***}&       0.277\sym{***}\\
+                    &                     &                     &     (15.87)         &     (15.86)         &     (15.92)         &     (15.91)         &     (15.92)         \\
+[1em]
+sgroup              &                     &                     &                     &      0.0205\sym{***}&      0.0192\sym{***}&      0.0190\sym{***}&      0.0193\sym{***}\\
+                    &                     &                     &                     &      (8.84)         &      (8.69)         &      (8.63)         &      (8.68)         \\
+[1em]
+Samesize            &                     &                     &                     &     -0.0176\sym{***}&                     &     -0.0310\sym{***}&                     \\
+                    &                     &                     &                     &     (-6.08)         &                     &     (-5.13)         &                     \\
+[1em]
+Size1               &                     &                     &                     &                     &     -0.0384\sym{***}&                     &     -0.0398\sym{***}\\
+                    &                     &                     &                     &                     &     (-4.82)         &                     &     (-4.15)         \\
+[1em]
+Size2               &                     &                     &                     &                     &      0.0102\sym{***}&                     &     0.00618         \\
+                    &                     &                     &                     &                     &      (4.54)         &                     &      (0.58)         \\
+[1em]
+$ Size1 \times Size2 $&                     &                     &                     &                     &                     &     -0.0238\sym{***}&     0.00469         \\
+                    &                     &                     &                     &                     &                     &     (-3.93)         &      (0.39)         \\
+[1em]
+Constant            &      0.0345\sym{***}&      0.0345\sym{***}&      0.0242\sym{***}&      0.0211\sym{***}&      0.0396\sym{***}&      0.0336\sym{***}&      0.0406\sym{***}\\
+                    &      (9.60)         &      (9.60)         &     (10.90)         &      (9.55)         &      (5.82)         &      (6.52)         &      (4.95)         \\
+\hline
+Observations        &     1405333         &     1405333         &     1379678         &     1379678         &     1379678         &     1379678         &     1379678         \\
+\(R^{2}\)           &       0.001         &       0.001         &       0.239         &       0.240         &       0.241         &       0.241         &       0.242         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{8}{l}{\footnotesize This table reports Fama and MacBeth (1973) estimates of fortnightly cross-sectional}\\
+\multicolumn{8}{l}{\footnotesize  regressions forecasting the correlation of daily 4Factor+Industry residuals in fortnight t + 1 for each pairs.}\\
+\multicolumn{8}{l}{\footnotesize The independent variables are updated fortnightly and include our measure of institutional connectedness,}\\
+\multicolumn{8}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{8}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{8}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{8}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{8}{l}{\footnotesize  We calculate Newey and West (1987) standard errors (four lags) of the Fama and MacBeth (1973) estimates }\\
+\multicolumn{8}{l}{\footnotesize  that take into account autocorrelation in the cross-sectional slopes}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

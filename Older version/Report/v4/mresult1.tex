@@ -1,0 +1,45 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         \\
+\hline
+$ \text{FCA*} $     &     0.00758\sym{***}&     0.00732\sym{***}&     0.00533\sym{***}&     0.00498\sym{***}&     0.00511\sym{***}&     0.00468\sym{***}\\
+                    &      (9.67)         &      (9.83)         &      (7.94)         &      (7.49)         &      (7.68)         &      (7.69)         \\
+[1em]
+$ { \text{FCA}^ * } ^ 2$&     0.00597\sym{***}&     0.00573\sym{***}&     0.00453\sym{***}&     0.00540\sym{***}&     0.00542\sym{***}&     0.00493\sym{***}\\
+                    &      (7.12)         &      (7.18)         &      (5.98)         &      (7.11)         &      (7.14)         &      (8.71)         \\
+[1em]
+ $ \rho\_t $         &                     &      0.0476\sym{***}&      0.0471\sym{***}&      0.0465\sym{***}&      0.0465\sym{***}&      0.0477\sym{***}\\
+                    &                     &     (20.77)         &     (20.51)         &     (20.19)         &     (20.21)         &      (8.16)         \\
+[1em]
+sgroup              &                     &                     &      0.0190\sym{***}&      0.0172\sym{***}&      0.0168\sym{***}&      0.0154\sym{***}\\
+                    &                     &                     &      (5.81)         &      (5.28)         &      (5.16)         &      (5.03)         \\
+[1em]
+Samesize            &                     &                     &      0.0204\sym{***}&                     &      0.0372\sym{***}&                     \\
+                    &                     &                     &      (7.66)         &                     &     (12.73)         &                     \\
+[1em]
+Size1               &                     &                     &                     &     -0.0464\sym{***}&                     &     -0.0527\sym{**} \\
+                    &                     &                     &                     &    (-13.80)         &                     &     (-3.17)         \\
+[1em]
+Size2               &                     &                     &                     &     0.00815\sym{**} &                     &      0.0123         \\
+                    &                     &                     &                     &      (2.77)         &                     &      (1.04)         \\
+[1em]
+$ Size1 \times Size2 $&                     &                     &                     &                     &     -0.0337\sym{***}&    -0.00371         \\
+                    &                     &                     &                     &                     &    (-11.16)         &     (-0.28)         \\
+\hline
+Observations        &      479631         &      475166         &      475166         &      475166         &      475166         &      475166         \\
+\(R^{2}\)           &       0.001         &       0.003         &       0.004         &       0.004         &       0.004         &       0.008         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize This table reports OLS estimates of monthly cross-sectional}\\
+\multicolumn{7}{l}{\footnotesize  regressions forecasting the correlation of daily 4Factor+Industry residuals in month t + 1 for each pairs.}\\
+\multicolumn{7}{l}{\footnotesize The independent variables are updated monthly and include our measure of institutional connectedness,}\\
+\multicolumn{7}{l}{\footnotesize  FCA and a series of controls at time t.}\\
+\multicolumn{7}{l}{\footnotesize We measure the negative of the absolute value of the difference in size ranking across the two stocks in the pair $ \text{Samesize}\_{ij,t} $.}\\
+\multicolumn{7}{l}{\footnotesize We also capture the similarity in business group by dummy of sgroup.}\\
+\multicolumn{7}{l}{\footnotesize Independent variables which  we denote with * are rank-transformed and normalized to have unit standard deviation.}\\
+\multicolumn{7}{l}{\footnotesize  We calculate standard errors by clustering on each pair}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
