@@ -19,7 +19,8 @@
 		\input{Elements/Model11}
 
 	
-	To mitigate the autocorrelation problem, we estimate the cross-sectional regressions each month and report the time-series average coefficients as in \cite{FamaMacBeth}. Standard errors are calculated using  \cite{newey1987hypothesis} to correct for potential autocorrelation in the time series of cross-sectional estimates for up to four lags. % \textit{ parenthesis His not necessary }($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $).
+	To mitigate the autocorrelation problem, we estimate the cross-sectional regressions each month and report the time-series average coefficients as in \cite{FamaMacBeth}. Standard errors are calculated using  \cite{newey1987hypothesis} to correct for potential autocorrelation in the time series of cross-sectional estimates for up to four lags. % \textit{ parenthesis His not necessary }($ 4(71/100)^{\frac{2}{9}} = 3.71 \sim 4 $). 
+	\info{Base on \cite{AntonPolk} method}
 	
 	
 The results of our Fama McBeth regressions are presented in Panel \subref{mresult2part1} of Table \ref{re1}.
@@ -30,14 +31,16 @@ Column 1 reports the results of univariate regressions showing stock return como
 		
 		As discussed earlier, anecdotal evidence seems to suggest common ownership in the Iranian public sector is mainly driven by business groups. The average common ownership measure, $ MFCAP^*_{i,j}$, for pairs in the same business group is five times larger than the rest.
 		%we need to show this statistics somewhere.
-		Hence in Column 3, we separately estimate univariate regressions of an indicator variable for whether firms in a pair are part of the same business groups on stock return comovement. We find firms that belong to the same business groups have significantly higher stock return comovement. The magnitude of this effect is economically large.
+		Hence in Column 3, we separately estimate univariate regressions of an indicator variable for whether firms in a pair are part of the same business groups on stock return comovement. We find firms that belong to the same business groups have significantly higher stock return comovement. The magnitude of this effect is economically large.\unsure{Can we say this?}
 %		(\textit{add discussion for magnitude})
 The estimated coefficient for \textit{SameGroup} in Column 3 is $0.036$, which is more than three times larger than the coefficient for the constant term, and is statistically significant, suggesting that return comovement in our sample is almost four times larger for firm pairs that are in the same business groups, compared to the those that are not. This result is robust to the addition of control variables as reported in Column 4. 
 %According to the results, there is a significant difference in the impact of the same business groups and the common ownership
 % (\textit{we can't make this claim until we discuss magnitudes earlier})
 	 In Column 5, once we include both our measure of common ownership, $\textit{MFCAP}^*_{i,j}$, and \textit{Same Group} indicator in our regression model, the coefficient estimate for  \textit{Same Group} remains statistically significant and very similar in magniture compared to that in Column 4. However, the coefficent estimate on common ownership measure, $\textit{MFCAP}$, is no longer significant. This suggests that common ownership affects stock return comovement among our sample firms mostly through business group affiliations. It is also worth noting that firms in the same industry have siginificantly higher stock return comovement, as is the case for firms closer in size and book-to-market. This is in spite of
 	 the fact that we already account for industry return, size and book-to-market in measuring daily residuals from equation 2. 
-	  In the last column, we control for additional pair level fixed effects based on the size of the firms in a pair. Pairs are categorized into large or small if both firms are large or small. If one firm in a pair is large and the other is small, we categorize the pair as hybrid. Our results are robust to the addition of pair type fixed effects.
+	  In the last column, we control for additional pair level fixed effects based on the size of the firms in a pair. Pairs are categorized into large or small if both firms are large or small. If one firm in a pair is large and the other is small, we categorize the pair as hybrid. Our results are robust to the addition of pair type fixed effects.\info{\cite{AntonPolk} restrict their investigation to large firms}
+	  \improvement[inline]{We can add BG fixed effect to this table to tell that our main results are consistence with this fixed effect. I add this column. }
+	  \improvement[inline]{Talk about the effect of BG fixed effect of our results}
 	  %\cite{AntonPolk} restrict their analysis to only large firms.
 	 %why they do that, why we dont, and what happens if we do?.
 	 
@@ -45,7 +48,7 @@ The estimated coefficient for \textit{SameGroup} in Column 3 is $0.036$, which i
 	
 	
 	
-	In panel \subref{mresult2part2} of Table 5, we examine the interaction effect of common ownership and business groups on return comovement. In Column 1, we restrict our sample only to pairs that are in the same business groups. The coefficient estimate on common ownership measure, $\textit{MFCAP}^*$, remains positive and highly significant. This suggest that variations in common ownership among firms in the same business group significantly impact their respective stock return comovement. In Column 2, however, we restrict our sample to firm pairs that are either not part of the same business group or do not belong to any business groups. The coefficient estimate on $\textit{MFCAP}^*$ here is both economically small and statistically insignificant, suggesting that measure of common ownership does not seem to be associated with return comovement among firm pairs that are not affiliated with the same business groups. As described before, this is likely due to the fact that common ownership in Iran's public firms is mostly driven by business groups, hence \textit{Same Group} indicator largely acts as a proxy for common ownership. Using the full sample in Column 3, we estimate our regression model by including both $\textit{MFCAP}^*$ and \textit{Same Group} as well as their interaction term. We find that being part of the same business group significantly increases stock return comovement between two stocks. Moreover, for firms affiliated with the same business group, higher common ownership is associated with higher return comovement. The coefficient estimate on $\textit{MFCAP}^*$ is statistically insignificant, which is consistent with our findings in Column 2. Including business group fixed effects in Column 4 allows us to focus on expoliting within-business group variations in return comovements. The positive estimated coeffcient on the interaction term suggests, within each business group, firm pairs with higher common ownership observe higher return comovements.   
+	In panel \subref{mresult2part2} of Table 5, we examine the interaction effect of common ownership and business groups on return comovement. In Column 1, we restrict our sample only to pairs that are in the same business groups. The coefficient estimate on common ownership measure, $\textit{MFCAP}^*$, remains positive and highly significant. This suggest that variations in common ownership among firms in the same business group significantly impact their respective stock return comovement. In Column 2, however, we restrict our sample to firm pairs that are either not part of the same business group or do not belong to any business groups. The coefficient estimate on $\textit{MFCAP}^*$ here is both economically small and statistically insignificant, suggesting that measure of common ownership does not seem to be associated with return comovement among firm pairs that are not affiliated with the same business groups. As described before, this is likely due to the fact that common ownership in Iran's public firms is mostly driven by business groups, hence \textit{Same Group} indicator largely acts as a proxy for common ownership. Using the full sample in Column 3, we estimate our regression model by including both $\textit{MFCAP}^*$ and \textit{Same Group} as well as their interaction term. We find that being part of the same business group significantly increases stock return comovement between two stocks. Moreover, for firms affiliated with the same business group, higher common ownership is associated with higher return comovement. The coefficient estimate on $\textit{MFCAP}^*$ is statistically insignificant, which is consistent with our findings in Column 2. Including business group fixed effects in Column 4 allows us to focus on expoliting within-business group variations in return comovements. The positive estimated coeffcient on the interaction term suggests, within each business group, firm pairs with higher common ownership observe higher return comovements.   \improvement{We should talk more about the effect of BG fixed effect on our results}
 	
 	
 	
@@ -63,7 +66,7 @@ The estimated coefficient for \textit{SameGroup} in Column 3 is $0.036$, which i
 		\label{re1}
 		\subcaption{The main analysis}
 		\label{mresult2part1}
-		\resizebox{0.9\textwidth}{!}{
+		\resizebox{.95\textwidth}{!}{
 				{\input{Output/mresult2part1-slide.tex}}
 		}
 		\bigskip
@@ -158,7 +161,7 @@ In line with the previous estimations, figure \ref{Qmcorr5lrd} provides that a h
 				
 				\subsection{All Pairs}
 				
-We restrict our investigations to firms with at least one common owner in the former analyses. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business groups. 	So, we extend our investigations by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problems. 
+\change{Until now} We restrict our investigations to firms with at least one common owner in the former analyses. By this analysis, we cannot separate the effect of the business group and common ownership; both of them can affect comovement. Furthermore, this restriction limits our result to commonly held firms, but if belonging to the same business group can increase stocks' comovement, it would affect all the firms in the same business groups. 	So, we extend our investigations by constructing all the pairs in the market to separate the effect of direct common ownership and business group and solve the mentioned problems. 
 	
 	For this purpose, we include stocks in one pair if they have at least two months in common. By this definition, we do not restrict our investigation to commonly held stocks and set $\text{MFCA}_{ij,t}$ to zero for a pair without any common owner. Controls are defined as before, and we use equation \ref{model1} by the same methodology as used in section \ref{Forecasting Comovement}.
 	

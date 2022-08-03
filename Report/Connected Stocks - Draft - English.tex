@@ -7,7 +7,6 @@
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage{booktabs}
-%\usepackage{tabu}
 \usepackage{placeins}
 \usetikzlibrary{arrows}
 \usepackage{hyperref}
@@ -21,6 +20,23 @@
 \usepackage{longtable}
 \usepackage{rotating,tabularx,natbib,ragged2e,booktabs,caption}
 %\captionsetup{font=footnotesize,labelfont=footnotesize}
+
+\usepackage{lipsum}                     % Dummytext
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\usepackage{xcolor}  % Coloured text etc.
+% 
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
+%\usepackage[colorinlistoftodos,prependcaption,textsize=tiny,disable]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=ao(english),backgroundcolor=ao(english)!25,bordercolor=ao(english),#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=amethyst,backgroundcolor=amethyst!25,bordercolor=amethyst,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+%
 
 \makeatletter
 \newcommand*{\centerfloat}{%
@@ -69,12 +85,15 @@ December\fi, \number \year}
 \captionsetup[subtable]{labelformat=empty}
 \input{Elements/Title}
 
-
+\setlength{\marginparwidth}{2cm}
 
 
 \begin{document}
+	\listoftodos[Notes]
+	
 \maketitle
-
+\info{The message is unclear}
+\info{Are you replicating a study?\\“An Emerging Market”!}
 \begin{center}
 $\textbf{\textit{Preliminary and Incomplete}}$
  \end{center}

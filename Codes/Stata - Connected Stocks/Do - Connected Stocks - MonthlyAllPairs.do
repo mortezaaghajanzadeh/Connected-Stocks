@@ -1,11 +1,10 @@
 { /*Data*/
 		cls
 		clear
-		import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
-		// import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
-
-		cd "E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output" 
-		// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
+// 		import delimited "E:\RA_Aghajanzadeh\Data\Connected_Stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
+		import delimited "G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\MonthlyNormalzedAllFCAP9.2.csv", encoding(UTF-8) 
+// cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Final Report\Output"
+cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output" 
 
 		label define sgroup 0 "No" 1 "Yes"
 
@@ -290,7 +289,7 @@ rename NMFCAGM mvv
 
 }
 
-	esttab  v4 v9  v10 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab( "Controls" "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) ,using Q3mresultAllPairs.tex ,replace
+	esttab  v4 v9  v10 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab( "Controls" "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 	,using Q3mresultAllPairs.tex ,replace
 	
 	
 rename  vv NMFCA

@@ -10,7 +10,7 @@
 
 Our data have several unique features which distinguish our paper from the existing literature. Stock ownership data for Iranian public firms is available with daily frequency reported at the end of each trading day. This data includes all blockholders, defined as having at least one percent of the outstanding shares in a firm for all investor types- institutional as well as individuals- and is automatically reported by a central authority named Tehran Securities Exchange Technology Management Corporation (TSETMC), which is a subsidiary of Tehran Stock Exchange. This eliminates potential issues in self-reported data (such as those existing in US institutional holding data, known as 13F filings). In order to put together our dataset, we compile daily stock ownership tables (available in separate tables for each firm), which are publicly available starting from 2010.
 
-We use data on business groups, defined as a group of listed firms with interconnected ownership structures controlled by an ultimate owner. Business groups are a common organizational structure in corporate ownership in Iran as well as many other parts of the world. Two-thirds of Iranian public firms are part of complex interlinked ownership networks, each governed by an ultimate owner, which sits at the top of a multi-layer pyramid ownership structure ({\cite{Aliabadi2022}}). Unlike countries like South Korea, Japan, and India that formally announce business groups, we do not have officially-defined business groups in Iran. We use data provided by {\cite{Aliabadi2022}} which builds a comprehensive dataset of all Iranian business groups. Using either of the two different methodologies, one introduced by \cite{almeida2011structure} with a 40\% threshold for control rights, and the other by \cite{aminadav2011rebuilding} which is based on Shapley-Shubik index (\cite{shapley1954method}) generates the same business group definitions in Iranian public sector({\cite{Aliabadi2022}}).\footnote{For further discussion see appendix \ref{BGDef}} Our business group data covers the period 2015-2020.  
+We use data on business groups, defined as a group of listed firms with interconnected ownership structures controlled by an ultimate owner. Business groups are a common organizational structure in corporate ownership in Iran as well as many other parts of the world. Two-thirds of Iranian public firms are part of complex interlinked ownership networks, each governed by an ultimate owner, which sits at the top of a multi-layer pyramid ownership structure ({\cite{Aliabadi2022}}). Unlike countries like South Korea, Japan, and India that formally announce business groups, we do not have officially-defined business groups in Iran. We use data provided by {\cite{Aliabadi2022}} which builds a comprehensive dataset of all Iranian business groups. Using either of the two different methodologies, one introduced by \cite{almeida2011structure} with a 40\% threshold for control rights, and the other by \cite{aminadav2011rebuilding} which is based on Shapley-Shubik index (\cite{shapley1954method}) generates the same business group definitions in Iranian public sector({\cite{Aliabadi2022}}).\footnote{For further discussion see appendix \ref{BGDef}} \info{I think that we should talk more about the creation of BG. There is a great concern that they are endogenous.} Our business group data covers the period 2015-2020.  
 
 
 
@@ -28,11 +28,11 @@ Panel \subref{t2-1} table \ref{st1} reports summary statistics for ownership and
 
 \subsection{{Pair composition} }
 
-	If any two firms have at least one common blockholder, we consider them a commonly held firm pair. By this definition, there are \input{Elements/pairsnumber}  unique pairs in our entire sample period, which is \input{Elements/PairPercent.tex}of all possible pairs (\input{Elements/TotalPairNumberCal.tex}). Firm pairs in our sample have on average \input{Elements/numberofcommonowner.tex}common owners. 
+	If any two firms have at least one common blockholder in a month, we consider them a commonly held firm pair. By this definition, there are \input{Elements/pairsnumber}  unique pairs in our entire sample period, which is \input{Elements/PairPercent.tex}of all possible pairs (\input{Elements/TotalPairNumberCal.tex}). Firm pairs in our sample have on average \input{Elements/numberofcommonowner.tex}common owners. 
 	
 	An important feature of common ownership in the Iranian public sector is that business groups are the main driver of common ownership, in contrast to US data in which the rise in common ownership is generally attributed to passively managed funds such as index funds. The asset management industry, especially in the form of mutual funds or ETFs, is generally a young but growing industry in Iran and does not have a large presence in firms' ownership structures. We, therefore, also identify pairs based on whether the two firms belong to the same business groups. 
 		
-		If both firms in a pair belong to the same ultimate owner, we identify them as being in the same business group. The two firms in a pair could also belong to different business groups or not be part of any business groups. Figure \ref{g2-1} illustrates all possibilities based on whether firm pairs belong to the same, different, or any business groups. In about one-third of our pairs, neither of the two firms belong to any business group, while in about 10 percent of our pairs, firms are part of the same business group. Panel \subref{t2-2} of table \ref{st1} reports summary statistics for firm pairs.
+		If both firms in a pair belong to the same ultimate owner, we identify them as being in the same business group. The two firms in a pair could also belong to different business groups or not be part of any business groups. Figure \ref{g2-1} illustrates all possibilities based on whether firm pairs belong to the same, different, or any business groups. In about one-third of our pairs, neither of the two firms belong to any business group, while in about 11 percent of our pairs, firms are part of the same business group. Panel \subref{t2-2} of table \ref{st1} reports summary statistics for firm pairs.
 	
 	\captionsetup[subfigure]{labelformat=parens,font=footnotesize}
 			\renewcommand{\thesubfigure}{\Alph{subfigure}}	
@@ -94,6 +94,7 @@ Panel \subref{t2-1} table \ref{st1} reports summary statistics for ownership and
 There are a number of different measures for common ownrship used in the literature. Table \ref{maasurmentsSummary} summarizes all the major common ownership measures, which can be categorized into two groups; model-based (e.g, \cite{harford2011institutional}; \cite{azar2018anticompetitive}; \cite{gilje2020s}) as well as ad hoc measures (e.g, \cite{AntonPolk}; \cite{azar2011new}; \cite{freeman2019effects}; \cite{hansen1996externalities};  \cite{he2017product}; \cite{lewellen2021does}; \cite{newham2018common}). 
 
 %In addition to model-based measures, some ad-hoc common ownership measures are used in the empirical literature. There is significant doubt on how these measures capture common ownership's impact on the management, and many of them have unappealing properties.
+
 	{\begin{table}[htbp]
 			\centering
 			\scriptsize
@@ -104,8 +105,9 @@ There are a number of different measures for common ownrship used in the literat
 			}
 		\end{table}
 	}
+\unsure[inline]{Check this table. Is is percise?} 
 	
-Since we want to estimate the impact of common ownership on stock return comovement in our primary analysis, we need a pair-level measure of common ownership. (\cite{AntonPolk}) study the impact of common ownership on US stock return comovements using a measure that captures the total value held by the common owners of the two stocks, scaled by the total market capitalization, hereafter \textit{FCAP}. This measure is straightforward to construct, is not bi-directional, and provides a meaningful economic interpretation, which are all features we would like our measure of common ownership to have. One shortcoming of this measure, however, is that it does not capture the distributional impact of ownership by each of the common owners (e.g., \textit{FCAP} yields the same values if common owners each hold 5 percent of a firm's stocks; versus if one holds 1 percent and the other 9 percent of the firm's stocks). As a result, we propose a modification to \textit{FCAP} that allows us to capture the extent of ownership by each of the common owners, , \textit{MFCAP}, although we replicate our entire analysis with the measure introduced in (\cite{AntonPolk}), \textit{FCAP}. Our proposed measure is
+Since we want to estimate the impact of common ownership on stock return comovement in our primary analysis, we need a pair-level measure of common ownership. \cite{AntonPolk} study the impact of common ownership on US stock return comovements using a measure that captures the total value held by the common owners of the two stocks, scaled by the total market capitalization, hereafter \textit{FCAP}. This measure is straightforward to construct, is not bi-directional, and provides a meaningful economic interpretation, which are all features we would like our measure of common ownership to have. One shortcoming of this measure, however, is that it does not capture the distributional impact of ownership by each of the common owners (e.g., \textit{FCAP} yields the same values if common owners each hold 5 percent of a firm's stocks; versus if one holds 1 percent and the other 9 percent of the firm's stocks).\unsure[inline]{Is it important? Our modification is true? We have a grater measures at a firm with 3 common owners than a pair with 2 common owner. Which one is more connected?!} As a result, we propose a modification to \textit{FCAP} that allows us to capture the extent of ownership by each of the common owners, , \textit{MFCAP}, although we replicate our entire analysis with the measure introduced in \cite{AntonPolk}, \textit{FCAP}. Our proposed measure is
 \begin{equation}
 	MFCAP(i, j) =  [\frac{\sum_{f =1}^{F}(\sqrt{S^f_{i,t}P_{i,t}}+\sqrt{S^f_{j,t}P_{j,t}})}{\sqrt{S_{i,t}P_{i,t}} + \sqrt{S_{j,t}P_{j,t}}}]^2 
 	\label{sqrt}
@@ -114,27 +116,9 @@ where $ S^f_{i,t}$ is the number of shares held by owner \textit{f} in firm \tex
 
 %Modified measure represents the number of equal percents held block-holder. In other words, If for a pair of stocks with n mutual owners, all owners have even shares of each firm's market cap, then the proposed index will be equal to the number of holders.
 
-To construct a monthly measure of common ownership for each firm pair, we calculate the \textit{MFCAP} and \textit{FCAP} every trading day and take the average of the daily values over a month. Panel \subref{measureResults} table \ref{st2} compares the distribution of common ownership measures for both methods. As expected, the modified measure generates a wider distribution of values between the two common ownership measures. The average common ownership measure is five times larger for firms in the same business group. This is consistent with our prior understanding of the ownership structure in the Iranian public sector, in which business groups are one of the main drivers of common ownership. In addition, the average common ownership measure is three times larger for firms that are in the same industry. It is worth noting that firms that belong to the same business group tend to be in the same industry. Hence, as part of our analyses, we also study the impact of business groups on stock return comovement, which is to the best of our knowledge a novel contribution of our paper to the literature.
+To construct a monthly measure of common ownership for each firm pair, we calculate the \textit{MFCAP} and \textit{FCAP} every trading day and take the average of the daily values over a month. Panel \subref{measureResults} table \ref{st2} compares the distribution of common ownership measures for both methods. As expected, the modified measure generates a wider distribution of values between the two common ownership measures. The average common ownership measure is five times larger for firms in the same business group. This is consistent with our prior understanding of the ownership structure in the Iranian public sector, in which business groups are one of the main drivers of common ownership. In addition, the average common ownership measure is three times larger for firms that are in the same industry. It is worth noting that firms that belong to the same business group tend to be in the same industry. \info[inline]{Business groups might consist of firms which are similar in fundamentals. So, our result comes from this fundumental connection and it is endogenous!} Hence, as part of our analyses, we also study the impact of business groups on stock return comovement, which is to the best of our knowledge a novel contribution of our paper to the literature.
 
-%		\begin{table}[htbp]
-%			%	\centering
-%%			\toprule
-%%			 & \multicolumn{5}{c}{MonthlyFCA} & \multicolumn{5}{c}{MonthlyFCAPf} \\
-%%			 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
-%%			 &       mean &    std &    min & median &    max &         mean &    std &    min & median &    max \\
-%%			\midrule
-%			\caption{Calculation of common ownership with two measure}
-%			\label{measureResults}
-%			\resizebox{1\textwidth}{!}
-%			{
-%					{\input{Output/FCACal.tex}}
-%			}
-%		\end{table}
-%		
-%		\multirow{2}[3]{*}{variable} & \multicolumn{5}{c}{MFCAP} & \multicolumn{5}{c}{FCAP} \\
-%		 \cmidrule(lr){2-6} \cmidrule(lr){7-11}
-%		 &       mean &   std &   min & median &   max &         mean &   std &  min & median &   max \\
-		
+	
 \FloatBarrier
 \subsection{{Stock Return comovement}}
 \label{comovement}
@@ -187,7 +171,7 @@ Since we are interested in studying the impact of common ownership and business 
 
 
 We construct our control variables daily and take the monthly averages as the value of each variable at the end of each month. Panel \subref{ControlsSummary} of table \ref{st2} reports the summary statistics of our control variables.
-
+\info[inline]{We can use the calculated correlation in the regression as a latend variable to control for omitted variable biase. It can capture our fundumental correlation from definition of BGs in the similar frims. }
 
 	\captionsetup[subtable]{labelformat=parens}
 			\begin{table}[htbp]
