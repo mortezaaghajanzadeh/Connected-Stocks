@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.8.2)  3 AUG 2022 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.8.2)  14 AUG 2022 06:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,10 +1042,10 @@ See the caption package documentation for explanation.
 (Output/ControlsSummary.tex) (Output/table13.tex)) [12] [13]
 (Elements-Eng/Results.tex
 Package epstopdf Info: Source file: <Output/mcorr50.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 22057 bytes
 (epstopdf)             Output file: <Output/mcorr50-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 13230 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/mcorr50-eps-c
 onverted-to.pdf Output/mcorr50.eps>
@@ -1114,10 +1114,10 @@ LaTeX Warning: Float too large for page by 35.82567pt on input line 81.
 
 [18]
 Package epstopdf Info: Source file: <Output/Qmcorr5lrd.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 27902 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrd-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 15914 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/Qmcorr5lrd-ep
 s-converted-to.pdf Output/Qmcorr5lrd.eps>
@@ -1130,11 +1130,11 @@ Package pdftex.def Info: Output/Qmcorr5lrd-eps-converted-to.pdf  used on input
 line 112.
 (pdftex.def)             Requested size: 271.86234pt x 197.72305pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5subsample.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 23704 bytes
 (epstopdf)             Output file: <Output/Qmcorr5subsample-eps-converted-to.p
 df>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 16074 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/Qmcorr5subsam
 ple-eps-converted-to.pdf Output/Qmcorr5subsample.eps>
@@ -1147,11 +1147,11 @@ Package pdftex.def Info: Output/Qmcorr5subsample-eps-converted-to.pdf  used on
 input line 122.
 (pdftex.def)             Requested size: 230.04079pt x 167.30481pt.
 Package epstopdf Info: Source file: <Output/Qmcorr5lrdbgsubsample.eps>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 30126 bytes
 (epstopdf)             Output file: <Output/Qmcorr5lrdbgsubsample-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2022-01-03 20:17:49
+(epstopdf)                    date: 2022-08-03 13:17:28
 (epstopdf)                    size: 14646 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/Qmcorr5lrdbgs
 ubsample-eps-converted-to.pdf Output/Qmcorr5lrdbgsubsample.eps>
@@ -1229,11 +1229,11 @@ See the caption package documentation for explanation.
 
 (Output/ResidualTrunStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedResSTD.eps>
-(epstopdf)                    date: 2022-02-11 14:07:35
+(epstopdf)                    date: 2022-08-03 13:17:27
 (epstopdf)                    size: 20926867 bytes
 (epstopdf)             Output file: <Output/GroupedResSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-02-11 14:25:52
+(epstopdf)                    date: 2022-08-03 13:17:27
 (epstopdf)                    size: 296315 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/GroupedResSTD
 -eps-converted-to.pdf Output/GroupedResSTD.eps>
@@ -1266,16 +1266,20 @@ See the caption package documentation for explanation.
 
 (Output/ImbalanceInsStdSummary.tex)
 Package epstopdf Info: Source file: <Output/GroupedInsSTD.eps>
-(epstopdf)                    date: 2022-02-11 14:34:08
+(epstopdf)                    date: 2022-08-03 13:17:27
 (epstopdf)                    size: 21145985 bytes
 (epstopdf)             Output file: <Output/GroupedInsSTD-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2022-02-11 14:34:20
-(epstopdf)                    size: 271722 bytes
+(epstopdf)                    date: 2022-08-14 06:23:10
+(epstopdf)                    size: 271462 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Output/GroupedInsSTD
 -eps-converted-to.pdf Output/GroupedInsSTD.eps>
 (epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Output/GroupedInsSTD-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <Output/GroupedInsSTD-eps-converted-to.pdf, id=656, 722.7pt x 361.35pt>
 File: Output/GroupedInsSTD-eps-converted-to.pdf Graphic file (type pdf)
 <use Output/GroupedInsSTD-eps-converted-to.pdf>
@@ -1352,7 +1356,7 @@ s not changed.
 Here is how much of TeX's memory you used:
  27217 strings out of 478338
  539540 string characters out of 2835757
- 925933 words of memory out of 3000000
+ 925932 words of memory out of 3000000
  44887 multiletter control sequences out of 15000+600000
  482777 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1388,7 +1392,7 @@ ts/cm/cmsy7.pfb><C:/Users/Morteza/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb><C:/Users/Morteza/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Morteza/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Connected Stocks - Draft - English.pdf" (38 pages, 1261666 b
+Output written on "Connected Stocks - Draft - English.pdf" (38 pages, 1261673 b
 ytes).
 PDF statistics:
  933 PDF objects out of 1000 (max. 8388607)

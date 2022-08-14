@@ -5,14 +5,18 @@ xi: asreg monthlyρ_5_f NMFCA monthlyρ_5 sbgroup  sgroup monthlysamesize monthl
 xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  monthlysize1 monthlysize2 msize1size2  , fmb newey(4) 
 
 
-// replace NMFCA = NMFCAP
-// replace NMFCAG = NMFCAPG
+replace NMFCA = NMFCAP
+replace NMFCAG = NMFCAPG
 
+
+
+
+// there is lagged correlation in estimations
 /*NMFCA*/
 {
 	eststo clear
 
-	eststo v1: quietly asreg monthlyρ_5_f  NMFCA , fmb newey(4)
+	eststo v1: quietly asreg monthlyρ_5_f  NMFCA  , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
@@ -64,13 +68,13 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 	estadd loc Pairtypr "Yes" , replace
 	
 
-	eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG, fmb newey(4)
+	eststo v7: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG monthlyρ_5, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "No" , replace
 	estadd loc SubSample "All" , replace
 	estadd loc Pairtypr "No" , replace
 
-	eststo v8: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ i.PairType , fmb newey(4)
+	eststo v8: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ i.PairType monthlyρ_5 , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
@@ -78,7 +82,7 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 
 	
 
-	eststo v9: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ gdummy0-gdummy47 i.PairType , fmb newey(4)
+	eststo v9: xi: quietly asreg monthlyρ_5_f NMFCA sbgroup NMFCAG  sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ gdummy0-gdummy47 i.PairType monthlyρ_5 , fmb newey(4)
 	estadd loc GroupFE "Yes" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "All" , replace
@@ -86,13 +90,13 @@ xi: asreg monthlyρ_5_f NMFCA sbgroup  sgroup monthlysamesize monthlysamebm mont
 	
 
 
-	eststo v10: xi: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ i.PairType if sbgroup == 1 , fmb newey(4)
+	eststo v10: xi: quietly asreg monthlyρ_5_f NMFCA     sgroup monthlysamesize monthlysamebm monthlycrossownership /*monthlysize1 monthlysize2 msize1size2*/ i.PairType monthlyρ_5 if sbgroup == 1 , fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "SameGroup" , replace
 	estadd loc Pairtypr "Yes" , replace
 	
-	eststo v11: xi: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType /*monthlysize1 monthlysize2 msize1size2*/ if sbgroup == 0, fmb newey(4)
+	eststo v11: xi: quietly asreg monthlyρ_5_f NMFCA    sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType /*monthlysize1 monthlysize2 msize1size2*/ monthlyρ_5 if sbgroup == 0, fmb newey(4)
 	estadd loc GroupFE "No" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc SubSample "Others" , replace
