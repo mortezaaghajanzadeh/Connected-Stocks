@@ -1,40 +1,43 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{7}{c}}
+\begin{tabular}{l*{8}{c}}
 \hline\hline
-                &\multicolumn{7}{c}{Dependent Variable:  Future Pairs's Comovement}                                                                  \\\cmidrule(lr){2-8}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+                &\multicolumn{8}{c}{Dependent Variable:  Future Pairs's Comovement}                                                                                     \\\cmidrule(lr){2-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
 \hline
-SameGroup       &   0.0254\sym{***}&                  &   0.0249\sym{***}&                  &                  &  0.00477         &  0.00252         \\
-                &   (8.45)         &                  &   (8.21)         &                  &                  &   (1.32)         &   (0.66)         \\
+SameGroup       &   0.0254\sym{***}&                  &   0.0249\sym{***}&   0.0198\sym{***}&                  &                  &  0.00477         &  0.00252         \\
+                &   (8.45)         &                  &   (8.21)         &   (5.78)         &                  &                  &   (1.32)         &   (0.66)         \\
 [1em]
-$ \text{MFCAP*} $&                  &                  &                  &                  &                  &                  &                  \\
-                &                  &                  &                  &                  &                  &                  &                  \\
+$ \text{MFCAP*} $&                  &                  &                  &                  &                  &                  &                  &                  \\
+                &                  &                  &                  &                  &                  &                  &                  &                  \\
 [1em]
- $ \text{MFCAP}^* \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &                  &                  \\
-                &                  &                  &                  &                  &                  &                  &                  \\
+ $ \text{MFCAP}^* \times {\text{SameGroup} }  $ &                  &                  &                  &                  &                  &                  &                  &                  \\
+                &                  &                  &                  &                  &                  &                  &                  &                  \\
 [1em]
-SameIndustry    &   0.0216\sym{***}&   0.0268\sym{***}&   0.0214\sym{***}&   0.0200\sym{***}&   0.0210\sym{***}&   0.0215\sym{***}&   0.0223\sym{***}\\
-                &   (6.81)         &   (7.33)         &   (6.76)         &   (4.34)         &   (5.86)         &   (6.74)         &   (6.73)         \\
+SameIndustry    &   0.0216\sym{***}&   0.0268\sym{***}&   0.0214\sym{***}&   0.0221\sym{***}&   0.0200\sym{***}&   0.0210\sym{***}&   0.0215\sym{***}&   0.0223\sym{***}\\
+                &   (6.81)         &   (7.33)         &   (6.76)         &   (6.92)         &   (4.34)         &   (5.86)         &   (6.74)         &   (6.73)         \\
 [1em]
-SameSize        &   0.0143\sym{***}&   0.0129\sym{***}&   0.0142\sym{***}&   0.0298\sym{*}  &   0.0112\sym{***}&   0.0252\sym{***}&   0.0252\sym{***}\\
-                &   (3.85)         &   (3.45)         &   (3.83)         &   (2.56)         &   (3.54)         &   (5.50)         &   (5.26)         \\
+SameSize        &   0.0143\sym{***}&   0.0129\sym{***}&   0.0142\sym{***}&   0.0163\sym{***}&   0.0298\sym{*}  &   0.0112\sym{***}&   0.0252\sym{***}&   0.0252\sym{***}\\
+                &   (3.85)         &   (3.45)         &   (3.83)         &   (4.10)         &   (2.56)         &   (3.54)         &   (5.50)         &   (5.26)         \\
 [1em]
-SameBM          &   0.0213\sym{***}&   0.0224\sym{***}&   0.0214\sym{***}&   0.0827\sym{***}&   0.0144\sym{***}&   0.0198\sym{***}&   0.0207\sym{***}\\
-                &   (6.09)         &   (6.34)         &   (6.12)         &   (9.59)         &   (3.91)         &   (5.66)         &   (5.52)         \\
+SameBM          &   0.0213\sym{***}&   0.0224\sym{***}&   0.0214\sym{***}&   0.0216\sym{***}&   0.0827\sym{***}&   0.0144\sym{***}&   0.0198\sym{***}&   0.0207\sym{***}\\
+                &   (6.09)         &   (6.34)         &   (6.12)         &   (6.22)         &   (9.59)         &   (3.91)         &   (5.66)         &   (5.52)         \\
 [1em]
-CrossOwnership  &   0.0300\sym{*}  &   0.0590\sym{***}&   0.0307\sym{*}  &   0.0378\sym{**} &   0.0682\sym{*}  &   0.0494\sym{***}&   0.0484\sym{***}\\
-                &   (2.36)         &   (5.42)         &   (2.40)         &   (3.13)         &   (2.31)         &   (3.87)         &   (3.72)         \\
+CrossOwnership  &   0.0300\sym{*}  &   0.0590\sym{***}&   0.0307\sym{*}  &   0.0371\sym{*}  &   0.0378\sym{**} &   0.0682\sym{*}  &   0.0494\sym{***}&   0.0484\sym{***}\\
+                &   (2.36)         &   (5.42)         &   (2.40)         &   (2.64)         &   (3.13)         &   (2.31)         &   (3.87)         &   (3.72)         \\
 [1em]
-Constant        &   0.0187\sym{***}&   0.0190\sym{***}&   0.0186\sym{***}&   0.0464\sym{***}&   0.0164\sym{***}&   0.0280\sym{***}&   0.0341\sym{***}\\
-                &   (7.99)         &   (7.93)         &   (7.81)         &   (9.14)         &   (6.98)         &   (9.46)         &   (8.66)         \\
+ $ {\rho\_t} $   &                  &                  &                  &   0.0374\sym{***}&                  &                  &                  &                  \\
+                &                  &                  &                  &  (11.80)         &                  &                  &                  &                  \\
+[1em]
+Constant        &   0.0187\sym{***}&   0.0190\sym{***}&   0.0186\sym{***}&   0.0274\sym{***}&   0.0464\sym{***}&   0.0164\sym{***}&   0.0280\sym{***}&   0.0341\sym{***}\\
+                &   (7.99)         &   (7.93)         &   (7.81)         &   (7.58)         &   (9.14)         &   (6.98)         &   (9.46)         &   (8.66)         \\
 \hline
-Sub-sample      &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-Business Group FE&       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
-Observations    &   389591         &   389591         &   389591         &    47076         &   342515         &   389591         &   389591         \\
+Sub-sample      &      All         &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
+Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
+Business Group FE&       No         &       No         &       No         &      Yes         &       No         &       No         &       No         &      Yes         \\
+Observations    &   389591         &   389591         &   389591         &   349481         &    47076         &   342515         &   389591         &   389591         \\
 \hline\hline
-\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{9}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

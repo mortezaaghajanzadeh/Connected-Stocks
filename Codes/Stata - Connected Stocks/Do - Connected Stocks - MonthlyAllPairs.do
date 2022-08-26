@@ -181,33 +181,36 @@ cd "D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output"
 
 capture drop monthlyρ_5_f
 gen monthlyρ_5_f = f.monthlyρ_5
-
-{
 rename NMFCA vv
 rename NMFCAGM mvv
 
+
+
+{
+
+
 	/*
 	eststo v1 : quietly asreg monthlyρ_5_f median   monthlyρ_5 sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 	*/
 
 	 /*
 	eststo v3 : xi: quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 	*/
 
-	eststo v4 : xi: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	eststo v4 : xi: quietly asreg monthlyρ_5_f  sbgroup sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType monthlyρ_5 , fmb newey(4)
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
 	/*
 	eststo v5 : quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
@@ -227,69 +230,75 @@ rename NMFCAGM mvv
 	estadd loc GroupFE "No" , replace
 	*/
 
-	eststo v7: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 1   , fmb newey(4) 
+	eststo v7: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType monthlyρ_5 if sbgroup == 1   , fmb newey(4) 
 	estadd loc subSample "SameGroups" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
-	eststo v71: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType if sbgroup == 0   , fmb newey(4) 
+	eststo v71: xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType  monthlyρ_5  if sbgroup == 0   , fmb newey(4) 
 	estadd loc subSample "Others" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 	/*
 	eststo v8 : xi: quietly asreg monthlyρ_5_f vv  NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType gdummy0-gdummy47 , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "Yes" , replace
 	*/
 
-	eststo v9 : xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType, fmb newey(4)
-	estadd loc subSample "Total" , replace
+	eststo v9 : xi: quietly asreg monthlyρ_5_f vv sgroup monthlysamesize monthlysamebm monthlycrossownership i.PairType monthlyρ_5, fmb newey(4)
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
 
-	eststo v10 : xi: quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	eststo v10 : xi: quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType monthlyρ_5 , fmb newey(4)
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
-
 
 	
-	eststo v11 : quietly asreg monthlyρ_5_f vv NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	
+		eststo v101 : xi: quietly asreg monthlyρ_5_f vv sbgroup  sgroup monthlysamesize monthlysamebm monthlycrossownership  i.PairType gdummy0-gdummy47 monthlyρ_5 , fmb newey(4)
+	estadd loc subSample "All" , replace
+	estadd loc controll "Yes" , replace
+	estadd loc GroupFE "Yes" , replace
+
+	/*
+	eststo v11 : quietly asreg monthlyρ_5_f vv NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership monthlyρ_5  , fmb newey(4)
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
 
-	eststo v12: quietly asreg monthlyρ_5_f  vv NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	eststo v12: quietly asreg monthlyρ_5_f  vv NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 monthlyρ_5, fmb newey(4)
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "Yes" , replace
 	
-	 /*
+	 
 	eststo v11 : quietly asreg monthlyρ_5_f median vv NMFCAG  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 
 
 	eststo v12: quietly asreg monthlyρ_5_f median  vv mvv  sbgroup   sgroup monthlysamesize monthlysamebm monthlycrossownership   gdummy0-gdummy47 , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "Yes" , replace
 
 	eststo v13 : quietly asreg monthlyρ_5_f median sgroup monthlysamesize monthlysamebm monthlycrossownership , fmb newey(4)
-	estadd loc subSample "Total" , replace
+	estadd loc subSample "All" , replace
 	estadd loc controll "Yes" , replace
 	estadd loc GroupFE "No" , replace
 	*/
 
-	esttab  v4 v9  v10 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab( "Controls" "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
+	esttab  v4 v9  v10 v101 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab( /*"Controls"*/ "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 
 
 }
 
-	esttab  v4 v9  v10 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( controll subSample GroupFE  N  ,  lab( "Controls" "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 	,using Q3mresultAllPairs.tex ,replace
+	esttab  v4 v9  v10 v101 v7 v71 /*v3 v8  v13 v1 v5  v6 v61*/ v11  v12  ,  nomtitle  label  s( /*controll*/ subSample GroupFE  N  ,  lab( /*"Controls"*/ "Sub-Sample" "Business Group FE"  "Observations" )) keep(/*median mvv */  sbgroup vv NMFCAG) order(sbgroup vv NMFCAG /*median mvv */)  compress  mgroups("Dependent Variable: Future Pairs' co-movement"   , pattern(1 ) prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span}) ) 	,using Q3mresultAllPairs.tex ,replace
 	
 	
 rename  vv NMFCA

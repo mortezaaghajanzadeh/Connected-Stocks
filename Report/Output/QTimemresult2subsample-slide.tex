@@ -1,25 +1,24 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{7}{c}}
+\begin{tabular}{l*{8}{c}}
 \hline\hline
-                &\multicolumn{7}{c}{Dependent Variable:  Future Pairs's Comovement}                                                                  \\\cmidrule(lr){2-8}
-                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         \\
+                &\multicolumn{8}{c}{Dependent Variable:  Future Pairs's Comovement}                                                                                     \\\cmidrule(lr){2-9}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
 \hline
-SameGroup       &   0.0254\sym{***}&                  &   0.0249\sym{***}&                  &                  &  0.00477         &  0.00252         \\
-                &   (8.45)         &                  &   (8.21)         &                  &                  &   (1.32)         &   (0.66)         \\
+SameGroup       &   0.0254\sym{***}&                  &   0.0249\sym{***}&   0.0198\sym{***}&                  &                  &  0.00477         &  0.00252         \\
+                &   (8.45)         &                  &   (8.21)         &   (5.78)         &                  &                  &   (1.32)         &   (0.66)         \\
 [1em]
-$ (\text{MFCAP} > \text{75th Percentile}) $ &                  &  0.00660\sym{***}& 0.000777         &   0.0230\sym{***}& -0.00258\sym{*}  & -0.00157         &-0.000513         \\
-                &                  &   (5.48)         &   (0.73)         &   (7.09)         &  (-2.00)         &  (-1.29)         &  (-0.46)         \\
+$ (\text{MFCAP} > \text{75th Percentile}) $ &                  &  0.00660\sym{***}& 0.000777         &  0.00208         &   0.0230\sym{***}& -0.00258\sym{*}  & -0.00157         &-0.000513         \\
+                &                  &   (5.48)         &   (0.73)         &   (1.58)         &   (7.09)         &  (-2.00)         &  (-1.29)         &  (-0.46)         \\
 [1em]
- $ (\text{MFCAP} > \text{75th Percentile}) \times {\text{SameGroup}} $ &                  &                  &                  &                  &                  &   0.0248\sym{***}&   0.0237\sym{***}\\
-                &                  &                  &                  &                  &                  &   (7.24)         &   (7.34)         \\
+ $ (\text{MFCAP} > \text{75th Percentile}) \times {\text{SameGroup}} $ &                  &                  &                  &                  &                  &                  &   0.0248\sym{***}&   0.0237\sym{***}\\
+                &                  &                  &                  &                  &                  &                  &   (7.24)         &   (7.34)         \\
 \hline
-Sub-sample      &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
-Controls        &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         &      Yes         \\
-Business Group FE&       No         &       No         &       No         &       No         &       No         &       No         &      Yes         \\
-Observations    &   389591         &   389591         &   389591         &    47076         &   342515         &   389591         &   389591         \\
+Sub-sample      &      All         &      All         &      All         &      All         &SameGroup         &   Others         &      All         &      All         \\
+Business Group FE&       No         &       No         &       No         &      Yes         &       No         &       No         &       No         &      Yes         \\
+Observations    &   389591         &   389591         &   389591         &   349481         &    47076         &   342515         &   389591         &   389591         \\
 \hline\hline
-\multicolumn{8}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{9}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
 \end{tabular}
 }

@@ -8,6 +8,7 @@ import re as ree
 import numpy as np
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
 
 
 # %%

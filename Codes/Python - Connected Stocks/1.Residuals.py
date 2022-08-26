@@ -68,7 +68,7 @@ def vv3(row):
 
 # %%
 path = r"E:\RA_Aghajanzadeh\Data\\"
-# path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\\"
 #%%
 n1 = path + "Cleaned_Stock_Prices_14001006" + ".parquet"
 df1 = pd.read_parquet(n1)

@@ -6,16 +6,17 @@ import re as ree
 import numpy as np
 from matplotlib.ticker import FuncFormatter
 
-path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
-pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output\\"
 
 path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
 pathResult = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Output\\"
 pathWord = r"E:\RA_Aghajanzadeh\GitHub\Connected-Stocks\Report\Elements\Word\\"
+path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+pathResult = r"D:\Dropbox\Connected Stocks\Connected-Stocks\Report\Output\\"
 #%%
-def prepare():
-    path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
+def prepare(path):
+    # path = r"E:\RA_Aghajanzadeh\Data\Connected_Stocks\\"
     # path = r"G:\Economics\Finance(Prof.Heidari-Aghajanzadeh)\Data\Connected stocks\\"
+    
     df = pd.read_parquet(path + "Holder_Residual_1400_10_06.parquet")
     df["week_of_year"] = df.week_of_year.astype(int)
     df.loc[df.week_of_year % 2 == 1, "week_of_year"] = (
@@ -35,7 +36,7 @@ def prepare():
     return df
 
 
-df = prepare()
+df = prepare(path)
 
 
 #%%
@@ -134,7 +135,7 @@ tempt = tempt.drop(
 )
 tempt = tempt.set_index("Year").transpose().astype(int)
 tempt["Average"] = tempt.mean(axis=1).astype(int)
-tempt.to_latex(pathResult + "summaryOfOwnership.tex", column_format="lccccccc")
+# tempt.to_latex(pathResult + "summaryOfOwnership.tex", column_format="lccccccc")
 tempt
 #%%
 
@@ -394,7 +395,7 @@ for n, i in enumerate(tempt.Average):
     if n < 4:
         tempt.iloc[n, -1] = int(i)
     print(i)
-tempt.to_latex(pathResult + "summaryOfPairs.tex", column_format="lccccccc")
+# tempt.to_latex(pathResult + "summaryOfPairs.tex", column_format="lccccccc")
 tempt
 #%%
 

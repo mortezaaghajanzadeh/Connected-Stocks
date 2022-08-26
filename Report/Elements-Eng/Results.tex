@@ -36,11 +36,12 @@ Column 1 reports the results of univariate regressions showing stock return como
 The estimated coefficient for \textit{SameGroup} in Column 3 is $0.036$, which is more than three times larger than the coefficient for the constant term, and is statistically significant, suggesting that return comovement in our sample is almost four times larger for firm pairs that are in the same business groups, compared to the those that are not. This result is robust to the addition of control variables as reported in Column 4. 
 %According to the results, there is a significant difference in the impact of the same business groups and the common ownership
 % (\textit{we can't make this claim until we discuss magnitudes earlier})
-	 In Column 5, once we include both our measure of common ownership, $\textit{MFCAP}^*_{i,j}$, and \textit{Same Group} indicator in our regression model, the coefficient estimate for  \textit{Same Group} remains statistically significant and very similar in magniture compared to that in Column 4. However, the coefficent estimate on common ownership measure, $\textit{MFCAP}$, is no longer significant. This suggests that common ownership affects stock return comovement among our sample firms mostly through business group affiliations. It is also worth noting that firms in the same industry have siginificantly higher stock return comovement, as is the case for firms closer in size and book-to-market. This is in spite of
+	 Once we include our measure of common ownership, $\textit{MFCAP}^*_{i,j}$, and \textit{Same Group} indicator in our regression model in Column 5, the coefficient estimate for  \textit{Same Group} remains statistically significant and very similar in magniture compared to that in Column 4. However, the coefficent estimate on common ownership measure, $\textit{MFCAP}$, is no longer significant. This suggests that common ownership affects stock return comovement among our sample firms mostly through business group affiliations. It is also worth noting that firms in the same industry have siginificantly higher stock return comovement, as is the case for firms closer in size and book-to-market. This is in spite of
 	 the fact that we already account for industry return, size and book-to-market in measuring daily residuals from equation 2. 
 	  In the last column, we control for additional pair level fixed effects based on the size of the firms in a pair. Pairs are categorized into large or small if both firms are large or small. If one firm in a pair is large and the other is small, we categorize the pair as hybrid. Our results are robust to the addition of pair type fixed effects.\info{\cite{AntonPolk} restrict their investigation to large firms}
 	  \improvement[inline]{We can add BG fixed effect to this table to tell that our main results are consistence with this fixed effect. I add this column. }
 	  \improvement[inline]{Talk about the effect of BG fixed effect of our results}
+	  \improvement{I added lagged correlation as control variable.}
 	  %\cite{AntonPolk} restrict their analysis to only large firms.
 	 %why they do that, why we dont, and what happens if we do?.
 	 
@@ -56,7 +57,7 @@ The estimated coefficient for \textit{SameGroup} in Column 3 is $0.036$, which i
 	
 		\captionsetup[subtable]{labelformat=parens,font=small}
 			\renewcommand{\thesubtable}{\Alph{subtable}}
-\newgeometry{top=20mm, bottom=30mm}
+\newgeometry{top=15mm, bottom=15mm}
 {\begin{table}[p]
 		\centering
 		\centerfloat
